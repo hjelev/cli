@@ -18,6 +18,27 @@ export const CATEGORIES = [
 	'Utilities/Other',
 ] as const;
 
+export const INSTALL_METHODS = [
+	'cargo',
+	'brew',
+	'apt',
+	'dnf',
+	'pacman',
+	'npm',
+	'pip',
+	'go',
+	'gem',
+	'docker',
+	'script',
+	'binary',
+	'other',
+] as const;
+
+const installMethodSchema = z.object({
+	method: z.enum(INSTALL_METHODS),
+	command: z.string().min(1),
+});
+
 export const toolSchema = z.object({
 	name: z.string(),
 	category: z.enum(CATEGORIES),
@@ -28,7 +49,7 @@ export const toolSchema = z.object({
 	author: z.string(),
 	license: z.string(),
 	language: z.string(),
-	installation: z.string(),
+	installation: z.array(installMethodSchema).min(1),
 	platforms: z.array(z.string()),
 	tags: z.array(z.string()),
 	media: z.url().optional(),

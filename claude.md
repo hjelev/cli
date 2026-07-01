@@ -20,7 +20,7 @@ Please execute the following development plan step-by-step. Keep me updated on y
    - `author` — string, required
    - `license` — string, required
    - `language` — string, required
-   - `installation` — string, required
+   - `installation` — array of `{ method, command }`, required (min 1 entry). `method` is a fixed enum (`cargo`, `brew`, `apt`, `dnf`, `pacman`, `npm`, `pip`, `go`, `gem`, `docker`, `script`, `binary`, `other`); `command` is free-form text. Supports tools installable via multiple methods.
    - `platforms` — string array, required
    - `tags` — string array, required
    - `media` — url, optional
@@ -43,7 +43,9 @@ Please execute the following development plan step-by-step. Keep me updated on y
    author: "Hristo"
    license: MIT
    language: Rust
-   installation: cargo install sb
+   installation:
+     - method: cargo
+       command: cargo install sb
    platforms: [Linux, macOS, Windows]
    tags: [tui, file-manager, productivity]
    media: "https://example.com/demo.gif"

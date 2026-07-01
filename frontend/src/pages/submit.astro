@@ -65,10 +65,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<input name="language" required placeholder="Rust" />
 			</label>
 
-			<label class="field">
-				<span class="flag">--installation <span class="type">&lt;string&gt;</span></span>
-				<input name="installation" required placeholder="cargo install your-tool" />
-			</label>
+			<div class="field">
+				<span class="flag">--installation <span class="type">&lt;method,command&gt;[]</span></span>
+				<div id="installation-rows"></div>
+				<button type="button" id="add-installation-row">+ add install method</button>
+			</div>
 
 			<label class="field">
 				<span class="flag">--platforms <span class="type">&lt;csv&gt;</span></span>
@@ -99,13 +100,60 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	<script>
 		import { getStoredToken, redirectToGitHubSignIn, signOut, fetchGitHubUser } from '../lib/github-auth';
 		import { submitTool, type ToolFormData } from '../lib/github-submit';
-		import { toolSchema } from '../lib/schema';
+		import { toolSchema, INSTALL_METHODS } from '../lib/schema';
 
 		const signedOutSection = document.getElementById('signed-out') as HTMLElement;
 		const signedInSection = document.getElementById('signed-in') as HTMLElement;
 		const signedInAs = document.getElementById('signed-in-as') as HTMLElement;
 		const form = document.getElementById('submit-form') as HTMLFormElement;
 		const formStatus = document.getElementById('form-status') as HTMLElement;
+		const installationRows = document.getElementById('installation-rows') as HTMLElement;
+		const addInstallationRowBtn = document.getElementById('add-installation-row') as HTMLButtonElement;
+
+		function createInstallationRow(): HTMLElement {
+			const row = document.createElement('div');
+			row.className = 'install-row';
+
+			const select = document.createElement('select');
+			select.name = 'installation_method';
+			select.required = true;
+			select.innerHTML =
+				'<option value="" disabled selected>method</option>' +
+				INSTALL_METHODS.map((m) => `<option value="${m}">${m}</option>`).join('');
+
+			const input = document.createElement('input');
+			input.name = 'installation_command';
+			input.required = true;
+			input.placeholder = 'cargo install your-tool';
+
+			const removeBtn = document.createElement('button');
+			removeBtn.type = 'button';
+			removeBtn.className = 'remove-row-btn';
+			removeBtn.textContent = '−';
+			removeBtn.setAttribute('aria-label', 'Remove install method');
+			removeBtn.addEventListener('click', () => {
+				row.remove();
+				updateRemoveButtons();
+			});
+
+			row.append(select, input, removeBtn);
+			return row;
+		}
+
+		function updateRemoveButtons() {
+			const rows = installationRows.querySelectorAll('.install-row');
+			rows.forEach((row) => {
+				(row.querySelector('.remove-row-btn') as HTMLButtonElement).disabled = rows.length <= 1;
+			});
+		}
+
+		addInstallationRowBtn?.addEventListener('click', () => {
+			installationRows.appendChild(createInstallationRow());
+			updateRemoveButtons();
+		});
+
+		installationRows.appendChild(createInstallationRow());
+		updateRemoveButtons();
 
 		document.getElementById('sign-in-btn')?.addEventListener('click', () => {
 			redirectToGitHubSignIn('/submit');
@@ -153,6 +201,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			if (!token) return;
 
 			const formData = new FormData(form);
+			const installMethods = formData.getAll('installation_method').map(String);
+			const installCommands = formData.getAll('installation_command').map(String);
+			const installation = installMethods
+				.map((method, i) => ({ method, command: (installCommands[i] ?? '').trim() }))
+				.filter((entry) => entry.command);
 			const candidate: ToolFormData = {
 				name: String(formData.get('name') ?? '').trim(),
 				category: String(formData.get('category') ?? ''),
@@ -163,7 +216,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				author: String(formData.get('author') ?? '').trim(),
 				license: String(formData.get('license') ?? '').trim(),
 				language: String(formData.get('language') ?? '').trim(),
-				installation: String(formData.get('installation') ?? '').trim(),
+				installation,
 				platforms: splitList(String(formData.get('platforms') ?? '')),
 				tags: splitList(String(formData.get('tags') ?? '')),
 				media: optional(String(formData.get('media') ?? '')),
@@ -183,6 +236,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				const { prUrl } = await submitTool(token, candidate);
 				formStatus.innerHTML = `Submitted! <a href="${prUrl}" target="_blank" rel="noopener">View your pull request</a>.`;
 				form.reset();
+				installationRows.innerHTML = '';
+				installationRows.appendChild(createInstallationRow());
+				updateRemoveButtons();
 			} catch (error) {
 				formStatus.textContent = error instanceof Error ? error.message : 'Submission failed.';
 			} finally {

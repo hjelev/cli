@@ -13,7 +13,7 @@ export interface ToolFormData {
 	author: string;
 	license: string;
 	language: string;
-	installation: string;
+	installation: Array<{ method: string; command: string }>;
 	platforms: string[];
 	tags: string[];
 	media?: string;

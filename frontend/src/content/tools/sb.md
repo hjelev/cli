@@ -10,7 +10,13 @@ website: https://masoko.net/sb/
 author: "Masoko"
 license: MIT
 language: Rust
-installation: cargo install sb
+installation:
+  - method: cargo
+    command: cargo install sb
+  - method: brew
+    command: cargo install sb
+  - method: script
+    command: Prebuilt binaries and an auto-installer script are available in GitHub Releases
 platforms: [Linux, macOS]
 tags: [tui, file-manager, productivity]
 media: "https://masoko.net/sb/images/screenshot-1.png"

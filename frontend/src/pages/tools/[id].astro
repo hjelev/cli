@@ -38,7 +38,14 @@ const { Content } = await render(tool);
 
 	<section class="man-section">
 		<h2>INSTALLATION</h2>
-		<pre class="code"><code>$ {data.installation}</code></pre>
+		<div class="install-list">
+			{data.installation.map((entry) => (
+				<div class="install-entry">
+					<span class="badge">{entry.method}</span>
+					<pre class="code"><code>$ {entry.command}</code></pre>
+				</div>
+			))}
+		</div>
 	</section>
 
 	<section class="man-section">

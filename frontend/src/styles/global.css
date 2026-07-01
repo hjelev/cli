@@ -422,6 +422,17 @@ textarea {
 	color: var(--accent-green);
 }
 
+.install-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.install-entry .badge {
+	display: inline-block;
+	margin-bottom: 0.35rem;
+}
+
 dl {
 	display: grid;
 	grid-template-columns: max-content 1fr;
@@ -519,6 +530,54 @@ dd {
 	font-family: var(--font-body);
 }
 
+.install-row {
+	display: grid;
+	grid-template-columns: 140px 1fr auto;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.install-row + .install-row {
+	margin-top: 0.5rem;
+}
+
+.remove-row-btn {
+	background: transparent;
+	border: 1px solid var(--border);
+	color: var(--fg-dim);
+	border-radius: var(--radius);
+	padding: 0.5rem 0.7rem;
+	font-family: var(--font-display);
+	cursor: pointer;
+}
+
+.remove-row-btn:hover {
+	color: var(--fg);
+	border-color: var(--accent-rust);
+}
+
+.remove-row-btn:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+#add-installation-row {
+	align-self: flex-start;
+	background: transparent;
+	border: 1px dashed var(--border);
+	color: var(--fg-dim);
+	border-radius: var(--radius);
+	padding: 0.5rem 0.9rem;
+	font-family: var(--font-display);
+	cursor: pointer;
+	margin-top: 0.5rem;
+}
+
+#add-installation-row:hover {
+	color: var(--fg);
+	border-color: var(--accent-rust);
+}
+
 #form-status {
 	color: var(--fg-dim);
 	min-height: 1.4em;
@@ -601,6 +660,10 @@ button[type='submit']:disabled {
 	}
 
 	dl {
+		grid-template-columns: 1fr;
+	}
+
+	.install-row {
 		grid-template-columns: 1fr;
 	}
 }
