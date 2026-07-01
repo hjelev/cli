@@ -916,6 +916,7 @@ button[type='submit']:disabled {
 .stars {
 	color: var(--accent-amber);
 	letter-spacing: 0.05em;
+	font-size: 1.05rem;
 }
 
 .card-rating {
@@ -946,7 +947,7 @@ button[type='submit']:disabled {
 }
 
 .stars.big {
-	font-size: 1.35rem;
+	font-size: 1.85rem;
 }
 
 .rate-widget {
@@ -969,7 +970,7 @@ button[type='submit']:disabled {
 	background: transparent;
 	border: none;
 	padding: 0 0.1rem;
-	font-size: 1.35rem;
+	font-size: 1.85rem;
 	line-height: 1;
 	color: var(--accent-amber);
 	cursor: pointer;
