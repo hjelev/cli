@@ -27,4 +27,5 @@ installation:
 platforms: [Linux, macOS, Windows]
 tags: [ls-replacement, file-listing, cli, rust]
 logo: "https://avatars.githubusercontent.com/u/141388427?v=4"
+media: "https://github.com/eza-community/eza/raw/main/docs/images/screenshots.png"
 ---

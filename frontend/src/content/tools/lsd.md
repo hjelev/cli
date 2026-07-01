@@ -24,5 +24,6 @@ installation:
     command: Prebuilt binaries for Linux, macOS, and Windows are available on the GitHub Releases page.
 platforms: [Linux, macOS, Windows]
 tags: [ls-replacement, file-listing, cli, rust]
-logo: "https://avatars.githubusercontent.com/u/77716111?v=4"
+logo: "https://github.com/TabbyML/pochi/raw/main/packages/vscode/assets/icons/logo128.png?raw=true"
+media: "https://raw.githubusercontent.com/lsd-rs/lsd/assets/screen_lsd.png"
 ---

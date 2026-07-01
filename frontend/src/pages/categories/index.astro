@@ -9,6 +9,7 @@ const counts = new Map<string, number>();
 for (const tool of tools) {
 	counts.set(tool.data.category, (counts.get(tool.data.category) ?? 0) + 1);
 }
+const nonEmptyCategories = CATEGORIES.filter((category) => (counts.get(category) ?? 0) > 0);
 ---
 
 <BaseLayout title="Categories — CLI Tools Directory" command="ls categories/">
@@ -24,10 +25,10 @@ for (const tool of tools) {
 
 	<ul class="links">
 		{
-			CATEGORIES.map((category) => (
+			nonEmptyCategories.map((category) => (
 				<li>
 					<a href={`/categories/${slugify(category)}`}>
-						{category} <span class="count">({counts.get(category) ?? 0})</span>
+						{category} <span class="count">({counts.get(category)})</span>
 					</a>
 				</li>
 			))

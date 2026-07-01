@@ -6,6 +6,7 @@ description: |
   logo-ls is an ls replacement written in Go that displays file and folder
   icons similar to those used in VS Code, along with git status integration.
 repository_url: https://github.com/Yash-Handa/logo-ls
+website: https://eza.rocks/
 author: "Yash Handa"
 license: MIT
 language: Go
@@ -19,4 +20,5 @@ installation:
 platforms: [Linux, macOS]
 tags: [ls-replacement, file-listing, cli, go]
 logo: "https://avatars.githubusercontent.com/u/32840183?v=4"
+media: "https://github.com/Yash-Handa/logo-ls/raw/master/.github/images/ls-R.png"
 ---
