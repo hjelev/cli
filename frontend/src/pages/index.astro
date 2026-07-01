@@ -1,0 +1,94 @@
+---
+import { getCollection } from 'astro:content';
+import { CATEGORIES } from '../lib/schema';
+
+const tools = await getCollection('tools');
+const languages = [...new Set(tools.map((tool) => tool.data.language))].sort();
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>CLI Tools Directory</title>
+	</head>
+	<body>
+		<header>
+			<h1>CLI Tools Directory</h1>
+			<a href="/submit">Submit a tool</a>
+		</header>
+
+		<section id="filters">
+			<input id="search" type="search" placeholder="Search tools…" />
+
+			<select id="category-filter">
+				<option value="">All categories</option>
+				{CATEGORIES.map((category) => <option value={category}>{category}</option>)}
+			</select>
+
+			<select id="language-filter">
+				<option value="">All languages</option>
+				{languages.map((language) => <option value={language}>{language}</option>)}
+			</select>
+		</section>
+
+		<p id="empty-state" hidden>No tools match your filters.</p>
+
+		<ul id="tool-grid">
+			{
+				tools.map((tool) => (
+					<li
+						class="tool-card"
+						data-category={tool.data.category}
+						data-language={tool.data.language}
+						data-search={`${tool.data.name} ${tool.data.short_description} ${tool.data.tags.join(' ')}`.toLowerCase()}
+					>
+						<a href={`/tools/${tool.id}`}>
+							{tool.data.logo && <img src={tool.data.logo} alt="" width="32" height="32" />}
+							<h2>{tool.data.name}</h2>
+							<p>{tool.data.short_description}</p>
+							<span class="badge">{tool.data.language}</span>
+							<span class="badge">{tool.data.category}</span>
+							<ul class="tags">
+								{tool.data.tags.map((tag) => (
+									<li>{tag}</li>
+								))}
+							</ul>
+						</a>
+					</li>
+				))
+			}
+		</ul>
+
+		<script>
+			const search = document.getElementById('search') as HTMLInputElement;
+			const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
+			const languageFilter = document.getElementById('language-filter') as HTMLSelectElement;
+			const cards = Array.from(document.querySelectorAll<HTMLLIElement>('.tool-card'));
+			const emptyState = document.getElementById('empty-state') as HTMLElement;
+
+			function applyFilters() {
+				const query = search.value.trim().toLowerCase();
+				const category = categoryFilter.value;
+				const language = languageFilter.value;
+				let visibleCount = 0;
+
+				for (const card of cards) {
+					const matchesQuery = !query || card.dataset.search!.includes(query);
+					const matchesCategory = !category || card.dataset.category === category;
+					const matchesLanguage = !language || card.dataset.language === language;
+					const visible = matchesQuery && matchesCategory && matchesLanguage;
+					card.hidden = !visible;
+					if (visible) visibleCount++;
+				}
+
+				emptyState.hidden = visibleCount > 0;
+			}
+
+			search.addEventListener('input', applyFilters);
+			categoryFilter.addEventListener('change', applyFilters);
+			languageFilter.addEventListener('change', applyFilters);
+		</script>
+	</body>
+</html>

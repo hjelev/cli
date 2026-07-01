@@ -1,0 +1,74 @@
+---
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+	const tools = await getCollection('tools');
+	return tools.map((tool) => ({ params: { id: tool.id }, props: { tool } }));
+}
+
+const { tool } = Astro.props;
+const { data } = tool;
+const { Content } = await render(tool);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{data.name} — CLI Tools Directory</title>
+	</head>
+	<body>
+		<a href="/">&larr; Back to directory</a>
+
+		<header>
+			{data.logo && <img src={data.logo} alt="" width="64" height="64" />}
+			<h1>{data.name}</h1>
+			<p>{data.short_description}</p>
+			<span class="badge">{data.category}</span>
+			<span class="badge">{data.language}</span>
+		</header>
+
+		<section>
+			<p>{data.description}</p>
+			<Content />
+		</section>
+
+		<dl>
+			<dt>Installation</dt>
+			<dd><code>{data.installation}</code></dd>
+
+			<dt>Author</dt>
+			<dd>{data.author}</dd>
+
+			<dt>License</dt>
+			<dd>{data.license}</dd>
+
+			<dt>Platforms</dt>
+			<dd>{data.platforms.join(', ')}</dd>
+
+			<dt>Repository</dt>
+			<dd><a href={data.repository_url} target="_blank" rel="noopener">{data.repository_url}</a></dd>
+
+			{
+				data.website && (
+					<>
+						<dt>Website</dt>
+						<dd>
+							<a href={data.website} target="_blank" rel="noopener">
+								{data.website}
+							</a>
+						</dd>
+					</>
+				)
+			}
+		</dl>
+
+		<ul class="tags">
+			{data.tags.map((tag) => (
+				<li>{tag}</li>
+			))}
+		</ul>
+
+		{data.media && <img src={data.media} alt={`${data.name} demo`} />}
+	</body>
+</html>

@@ -1,0 +1,27 @@
+---
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Signing in… — CLI Tools Directory</title>
+	</head>
+	<body>
+		<p id="status">Signing you in…</p>
+
+		<script>
+			import { handleOAuthCallback } from '../../lib/github-auth';
+
+			const statusEl = document.getElementById('status')!;
+
+			handleOAuthCallback().then((result) => {
+				if (result.ok) {
+					window.location.replace(result.returnTo);
+				} else {
+					statusEl.textContent = `Sign-in failed: ${result.error}`;
+				}
+			});
+		</script>
+	</body>
+</html>

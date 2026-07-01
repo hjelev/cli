@@ -1,0 +1,14 @@
+{
+  "name": "cli-directory-worker",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.105.0",
+    "@cloudflare/workers-types": "^4.20260701.1",
+    "typescript": "^6.0.3"
+  }
+}

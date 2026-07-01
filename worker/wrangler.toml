@@ -1,0 +1,13 @@
+name = "cli-directory-worker"
+main = "src/index.ts"
+compatibility_date = "2026-07-01"
+
+[vars]
+# Not secret — the frontend embeds the same client ID in its public OAuth
+# redirect URL, so there's no confidentiality benefit to storing it as a
+# Wrangler secret. Replace with the Client ID from the GitHub OAuth App.
+GITHUB_CLIENT_ID = "Ov23liltbUqUJHmV7NIN"
+
+# GITHUB_CLIENT_SECRET is NOT set here — it's sensitive and must only be
+# provisioned via `wrangler secret put GITHUB_CLIENT_SECRET` (prod) or
+# worker/.dev.vars (local dev, gitignored). Never commit it.
