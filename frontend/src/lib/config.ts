@@ -7,4 +7,4 @@ export const OAUTH_SCOPE = 'public_repo';
 
 export const TARGET_OWNER = 'hjelev';
 export const TARGET_REPO = 'cli';
-export const TARGET_BRANCH = 'main';
+export const TARGET_BRANCH = 'master';

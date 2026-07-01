@@ -60,14 +60,14 @@ Please execute the following development plan step-by-step. Keep me updated on y
 ## Phase 3: Directory UI & Web Form
 1. **Sign in with GitHub:** Add a "Sign in with GitHub" flow — redirect to GitHub's OAuth authorize URL, handle the callback redirect back to the static site, POST the returned `code` to the Worker's `/auth/github/token` route, and hold the resulting access token in memory/`sessionStorage` for the page session only (never persisted server-side).
 2. **Build the Web Form:** Build a client-side HTML/JS submission form covering all schema fields (including `category` as a `<select>` populated from the shared predefined list, `website`, `description`, and `logo`). Add client-side validation (using the shared Zod schema) before proceeding.
-3. **Client-side submission logic:** Using the signed-in user's own access token, call the GitHub REST API directly from the browser (which supports CORS for authenticated requests) to: check for / create a fork of the target repo, get the default branch SHA, create a new branch, commit the new Markdown file (formatted from the form data into the schema's frontmatter structure) via the Contents API under `src/content/tools/`, and open a PR from the fork targeting upstream `main`.
+3. **Client-side submission logic:** Using the signed-in user's own access token, call the GitHub REST API directly from the browser (which supports CORS for authenticated requests) to: check for / create a fork of the target repo, get the default branch SHA, create a new branch, commit the new Markdown file (formatted from the form data into the schema's frontmatter structure) via the Contents API under `src/content/tools/`, and open a PR from the fork targeting upstream `master` (this repo's default branch).
 4. **Build the Landing Page:** Create a grid/list layout displaying the tools with their `name`, `logo` (if present), `short_description`, `language` badge, `category`, and `tags`.
 5. **Implement Detail Pages:** Set up dynamic routing to generate individual pages for each tool, rendering `logo` (if present), `description`, `website` (if present), and installation commands.
 6. **Implement Filtering:** Add client-side filtering so users can filter the directory by `category`, `tags`, `language`, or a text search query.
 
 ## Phase 4: CI/CD Workflows
 1. **PR Validation Action:** Create `.github/workflows/validate-pr.yml` to run on pull requests. It should parse the submitted file and validate that all frontmatter fields adhere to the shared schema (including the `category` enum), and that URLs (`repository_url`, `website` if present, `media` if present, `logo` if present) return 200 OK statuses.
-2. **Deployment Action:** Create `.github/workflows/deploy.yml` to build the static site and deploy it to GitHub Pages when a PR is merged into `main`.
+2. **Deployment Action:** Create `.github/workflows/deploy.yml` to build the static site and deploy it to GitHub Pages when a PR is merged into `master` (this repo's default branch).
 
 ---
 
