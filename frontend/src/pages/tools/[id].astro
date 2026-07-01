@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { slugify } from '../../lib/slug';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
@@ -104,7 +105,7 @@ const { Content } = await render(tool);
 			<dd>{data.license}</dd>
 
 			<dt>Category</dt>
-			<dd>{data.category}</dd>
+			<dd><a href={`/categories/${slugify(data.category)}`}>{data.category}</a></dd>
 
 			<dt>Language</dt>
 			<dd>{data.language}</dd>
@@ -136,7 +137,9 @@ const { Content } = await render(tool);
 		<h2>TAGS</h2>
 		<ul class="tags">
 			{data.tags.map((tag) => (
-				<li>{tag}</li>
+				<li>
+					<a href={`/tags/${slugify(tag)}`}>{tag}</a>
+				</li>
 			))}
 		</ul>
 	</section>

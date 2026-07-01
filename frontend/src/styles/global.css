@@ -214,6 +214,13 @@ textarea {
 	filter: brightness(1.1);
 }
 
+.browse-links {
+	display: inline-flex;
+	gap: 1rem;
+	margin-left: 1rem;
+	color: var(--fg-dim);
+}
+
 /* ---------- filters ---------- */
 
 .filters {
@@ -358,6 +365,15 @@ textarea {
 
 .tags li::before {
 	content: '#';
+}
+
+.tags a {
+	color: inherit;
+}
+
+.count {
+	color: var(--fg-dim);
+	font-size: 0.85em;
 }
 
 /* ---------- man page (tool detail) ---------- */

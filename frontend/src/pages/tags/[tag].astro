@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import { slugify } from '../../lib/slug';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ToolCard from '../../components/ToolCard.astro';
+
+export async function getStaticPaths() {
+	const tools = await getCollection('tools');
+	const tagBySlug = new Map<string, string>();
+	for (const tool of tools) {
+		for (const tag of tool.data.tags) {
+			tagBySlug.set(slugify(tag), tag);
+		}
+	}
+	return [...tagBySlug.entries()].map(([slug, tag]) => ({
+		params: { tag: slug },
+		props: { tag, tools: tools.filter((tool) => tool.data.tags.includes(tag)) },
+	}));
+}
+
+const { tag, tools } = Astro.props;
+---
+
+<BaseLayout title={`#${tag} — CLI Tools Directory`} command={`ls tags/${slugify(tag)}`}>
+	<a class="back" href="/tags">&larr; cd ..</a>
+
+	<header class="hero">
+		<h1>#{tag}</h1>
+		<p class="tagline"># {tools.length} tool{tools.length === 1 ? '' : 's'} tagged {tag}</p>
+	</header>
+
+	<ul id="tool-grid">{tools.map((tool) => <ToolCard tool={tool} />)}</ul>
+</BaseLayout>

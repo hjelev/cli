@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/schema';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ToolCard from '../components/ToolCard.astro';
 
 const tools = await getCollection('tools');
 const languages = [...new Set(tools.map((tool) => tool.data.language))].sort();
@@ -13,6 +14,10 @@ const languages = [...new Set(tools.map((tool) => tool.data.language))].sort();
 		<h1>CLI Tools Directory</h1>
 		<p class="tagline"># command-line tools, submitted by the people who use them</p>
 		<a class="btn" href="/submit">$ ./submit-a-tool</a>
+		<nav class="browse-links">
+			<a href="/categories">ls categories/</a>
+			<a href="/tags">ls tags/</a>
+		</nav>
 	</header>
 
 	<section id="filters" class="filters">
@@ -35,31 +40,7 @@ const languages = [...new Set(tools.map((tool) => tool.data.language))].sort();
 		<p id="empty-state" hidden>No tools match your filters.</p>
 
 		<ul id="tool-grid">
-			{
-				tools.map((tool) => (
-					<li
-						class="tool-card"
-						data-category={tool.data.category}
-						data-language={tool.data.language}
-						data-search={`${tool.data.name} ${tool.data.short_description} ${tool.data.tags.join(' ')}`.toLowerCase()}
-					>
-						<a href={`/tools/${tool.id}`}>
-							<div class="tool-name">
-								{tool.data.logo && <img src={tool.data.logo} alt="" width="32" height="32" />}
-								<h2>{tool.data.name}</h2>
-							</div>
-							<p>{tool.data.short_description}</p>
-							<span class="badge">{tool.data.language}</span>
-							<span class="badge">{tool.data.category}</span>
-							<ul class="tags">
-								{tool.data.tags.map((tag) => (
-									<li>{tag}</li>
-								))}
-							</ul>
-						</a>
-					</li>
-				))
-			}
+			{tools.map((tool) => <ToolCard tool={tool} />)}
 		</ul>
 
 		<script>

@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import { slugify } from '../../lib/slug';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const tools = await getCollection('tools');
+const counts = new Map<string, number>();
+for (const tool of tools) {
+	for (const tag of tool.data.tags) {
+		counts.set(tag, (counts.get(tag) ?? 0) + 1);
+	}
+}
+const tags = [...counts.keys()].sort();
+---
+
+<BaseLayout title="Tags — CLI Tools Directory" command="ls tags/">
+	<a class="back" href="/">&larr; cd ..</a>
+
+	<header class="hero">
+		<h1>Tags</h1>
+		<p class="tagline"># browse tools by tag</p>
+		<nav class="browse-links">
+			<a href="/categories">ls categories/</a>
+		</nav>
+	</header>
+
+	<ul class="links">
+		{
+			tags.map((tag) => (
+				<li>
+					<a href={`/tags/${slugify(tag)}`}>
+						#{tag} <span class="count">({counts.get(tag)})</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</BaseLayout>
