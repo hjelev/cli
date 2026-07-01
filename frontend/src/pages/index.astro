@@ -44,8 +44,10 @@ const languages = [...new Set(tools.map((tool) => tool.data.language))].sort();
 						data-search={`${tool.data.name} ${tool.data.short_description} ${tool.data.tags.join(' ')}`.toLowerCase()}
 					>
 						<a href={`/tools/${tool.id}`}>
-							{tool.data.logo && <img src={tool.data.logo} alt="" width="32" height="32" />}
-							<h2>{tool.data.name}</h2>
+							<div class="tool-name">
+								{tool.data.logo && <img src={tool.data.logo} alt="" width="32" height="32" />}
+								<h2>{tool.data.name}</h2>
+							</div>
 							<p>{tool.data.short_description}</p>
 							<span class="badge">{tool.data.language}</span>
 							<span class="badge">{tool.data.category}</span>

@@ -292,8 +292,15 @@ textarea {
 	text-decoration: none;
 }
 
-.tool-card img {
-	display: none;
+.tool-name {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.tool-name img {
+	flex-shrink: 0;
+	border-radius: var(--radius);
 }
 
 .tool-card h2 {

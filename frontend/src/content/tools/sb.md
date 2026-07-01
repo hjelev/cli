@@ -20,4 +20,5 @@ installation:
 platforms: [Linux, macOS]
 tags: [tui, file-manager, productivity]
 media: "https://masoko.net/sb/images/screenshot-1.png"
+logo: "http://masoko.net/sb/images/favicon.png"
 ---
