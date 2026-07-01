@@ -4,9 +4,11 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	command: string;
+	mode?: string;
+	status?: string;
 }
 
-const { title, command } = Astro.props;
+const { title, command, mode = 'NORMAL', status } = Astro.props;
 ---
 
 <html lang="en">
@@ -25,6 +27,16 @@ const { title, command } = Astro.props;
 			<div class="term-body">
 				<slot />
 			</div>
+			<footer class="statusline">
+				<span class="mode">{mode}</span>
+				<span class="seg path">~/cli-tools</span>
+				{status && <span class="seg">{status}</span>}
+				<span class="seg right">
+					<a href="/submit">submit</a>
+					<span class="sep">·</span>
+					<a href="https://github.com/hjelev/cli" target="_blank" rel="noopener">github</a>
+				</span>
+			</footer>
 		</div>
 	</body>
 </html>

@@ -3,9 +3,11 @@ import type { CollectionEntry } from 'astro:content';
 
 interface Props {
 	tool: CollectionEntry<'tools'>;
+	index?: number;
 }
 
-const { tool } = Astro.props;
+const { tool, index } = Astro.props;
+const marker = index != null ? String(index).padStart(2, '0') : '·';
 ---
 
 <li
@@ -15,13 +17,16 @@ const { tool } = Astro.props;
 	data-search={`${tool.data.name} ${tool.data.short_description} ${tool.data.tags.join(' ')}`.toLowerCase()}
 >
 	<a href={`/tools/${tool.id}`}>
+		<span class="tool-index" aria-hidden="true">{marker}</span>
 		<div class="tool-name">
 			{tool.data.logo && <img src={tool.data.logo} alt="" width="32" height="32" />}
 			<h2>{tool.data.name}</h2>
 		</div>
 		<p>{tool.data.short_description}</p>
-		<span class="badge">{tool.data.language}</span>
-		<span class="badge">{tool.data.category}</span>
+		<div class="badges">
+			<span class="badge">{tool.data.language}</span>
+			<span class="badge">{tool.data.category}</span>
+		</div>
 		<ul class="tags">
 			{tool.data.tags.map((tag) => (
 				<li>{tag}</li>
