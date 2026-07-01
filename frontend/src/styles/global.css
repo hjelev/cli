@@ -400,7 +400,7 @@ textarea {
 .tool-card > a {
 	display: grid;
 	grid-template-columns: 2.25rem minmax(130px, 190px) 1fr auto;
-	align-items: baseline;
+	align-items: center;
 	gap: 0.35rem 1.25rem;
 	padding: 0.85rem 0.5rem;
 	color: var(--fg);
