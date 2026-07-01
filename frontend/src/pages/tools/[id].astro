@@ -18,7 +18,7 @@ const { Content } = await render(tool);
 	<header class="man-header">
 		{data.logo && <img src={data.logo} alt="" width="48" height="48" />}
 		<div>
-			<h1>{data.name}<span class="num">(1)</span></h1>
+			<h1>{data.name}<span class="num"></span></h1>
 			<p class="tagline">{data.short_description}</p>
 		</div>
 	</header>
@@ -38,13 +38,59 @@ const { Content } = await render(tool);
 
 	<section class="man-section">
 		<h2>INSTALLATION</h2>
-		<div class="install-list">
-			{data.installation.map((entry) => (
-				<div class="install-entry">
-					<span class="badge">{entry.method}</span>
-					<pre class="code"><code>$ {entry.command}</code></pre>
-				</div>
-			))}
+		<div class="install-tabs">
+			{
+				data.installation.length > 1 && (
+					<div class="tab-list" role="tablist">
+						{data.installation.map((entry, i) => (
+							<button
+								type="button"
+								role="tab"
+								id={`tab-${i}`}
+								aria-controls={`panel-${i}`}
+								aria-selected={i === 0}
+								class={`tab-btn${i === 0 ? ' active' : ''}`}
+							>
+								{entry.method}
+							</button>
+						))}
+					</div>
+				)
+			}
+			{
+				data.installation.map((entry, i) => (
+					<div
+						class="tab-panel"
+						role="tabpanel"
+						id={`panel-${i}`}
+						aria-labelledby={`tab-${i}`}
+						hidden={i !== 0}
+					>
+						<pre class="code"><code>$ {entry.command}</code></pre>
+						<button
+							type="button"
+							class="copy-btn"
+							data-command={entry.command}
+							aria-label="Copy command to clipboard"
+						>
+							<svg class="icon-copy" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+								<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z" />
+								<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z" />
+							</svg>
+							<svg
+								class="icon-check"
+								viewBox="0 0 16 16"
+								width="16"
+								height="16"
+								fill="currentColor"
+								style="display: none"
+							>
+								<path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z" />
+							</svg>
+						</button>
+					</div>
+				))
+			}
 		</div>
 	</section>
 
@@ -97,3 +143,51 @@ const { Content } = await render(tool);
 
 	{data.media && <img class="media" src={data.media} alt={`${data.name} demo`} />}
 </BaseLayout>
+
+<script>
+	document.querySelectorAll<HTMLElement>('.install-tabs').forEach((container) => {
+		const tabs = container.querySelectorAll<HTMLButtonElement>('[role="tab"]');
+		const panels = container.querySelectorAll<HTMLElement>('.tab-panel');
+
+		tabs.forEach((tab) => {
+			tab.addEventListener('click', () => {
+				tabs.forEach((t) => {
+					t.setAttribute('aria-selected', 'false');
+					t.classList.remove('active');
+				});
+				panels.forEach((panel) => {
+					panel.hidden = true;
+				});
+
+				tab.setAttribute('aria-selected', 'true');
+				tab.classList.add('active');
+				const panel = container.querySelector<HTMLElement>(`#${tab.getAttribute('aria-controls')}`);
+				if (panel) panel.hidden = false;
+			});
+		});
+
+		container.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach((btn) => {
+			let revertTimer: ReturnType<typeof setTimeout>;
+
+			btn.addEventListener('click', async () => {
+				const command = btn.dataset.command;
+				if (!command) return;
+
+				await navigator.clipboard.writeText(command);
+
+				const copyIcon = btn.querySelector<HTMLElement>('.icon-copy');
+				const checkIcon = btn.querySelector<HTMLElement>('.icon-check');
+				if (copyIcon) copyIcon.style.display = 'none';
+				if (checkIcon) checkIcon.style.display = '';
+				btn.classList.add('copied');
+
+				clearTimeout(revertTimer);
+				revertTimer = setTimeout(() => {
+					if (copyIcon) copyIcon.style.display = '';
+					if (checkIcon) checkIcon.style.display = 'none';
+					btn.classList.remove('copied');
+				}, 1500);
+			});
+		});
+	});
+</script>
