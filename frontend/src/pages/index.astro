@@ -6,18 +6,32 @@ import ToolCard from '../components/ToolCard.astro';
 
 const tools = await getCollection('tools');
 const languages = [...new Set(tools.map((tool) => tool.data.language))].sort();
+const categoryCount = new Set(tools.map((tool) => tool.data.category)).size;
 ---
 
-<BaseLayout title="CLI Tools Directory" command="browse --all">
+<BaseLayout
+	title="CLI Tools Directory"
+	command="browse --all"
+	status={`${tools.length} tools indexed`}
+>
 	<header class="hero">
 		<p class="prompt"><span class="user">visitor@cli-tools</span>:~$ <span class="hero-cmd">browse --all</span></p>
 		<h1>CLI Tools Directory</h1>
 		<p class="tagline"># command-line tools, submitted by the people who use them</p>
-		<a class="btn" href="/submit">$ ./submit-a-tool</a>
-		<nav class="browse-links">
-			<a href="/categories">ls categories/</a>
-			<a href="/tags">ls tags/</a>
-		</nav>
+		<p class="hero-stats">
+			<span><b>{tools.length}</b> tools</span>
+			<span class="sep">·</span>
+			<span><b>{categoryCount}</b> categories</span>
+			<span class="sep">·</span>
+			<span><b>{languages.length}</b> languages</span>
+		</p>
+		<div class="hero-actions">
+			<a class="btn" href="/submit">$ ./submit-a-tool</a>
+			<nav class="browse-links">
+				<a href="/categories">ls categories/</a>
+				<a href="/tags">ls tags/</a>
+			</nav>
+		</div>
 	</header>
 
 	<section id="filters" class="filters">
@@ -40,7 +54,7 @@ const languages = [...new Set(tools.map((tool) => tool.data.language))].sort();
 		<p id="empty-state" hidden>No tools match your filters.</p>
 
 		<ul id="tool-grid">
-			{tools.map((tool) => <ToolCard tool={tool} />)}
+			{tools.map((tool, i) => <ToolCard tool={tool} index={i + 1} />)}
 		</ul>
 
 		<script>

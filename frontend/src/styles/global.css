@@ -1,16 +1,21 @@
 @import '@fontsource/ibm-plex-mono/500.css';
 @import '@fontsource/ibm-plex-mono/600.css';
+@import '@fontsource/ibm-plex-mono/700.css';
 @import '@fontsource/jetbrains-mono/400.css';
 @import '@fontsource/jetbrains-mono/500.css';
 
 :root {
-	--bg: #16181c;
-	--panel: #1e2126;
-	--border: #2e333b;
-	--fg: #e7e4dc;
-	--fg-dim: #8b8f96;
+	--bg: #14151a;
+	--bg-deep: #0f1013;
+	--panel: #1c1e24;
+	--panel-hi: #23262e;
+	--border: #2c3038;
+	--fg: #e8e5dd;
+	--fg-dim: #8b9098;
+	--fg-faint: #565c66;
 	--accent-rust: #f74c00;
 	--accent-green: #6fcf87;
+	--accent-amber: #e0a83a;
 	--radius: 3px;
 	--font-display: 'IBM Plex Mono', ui-monospace, 'Courier New', monospace;
 	--font-body: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
@@ -28,7 +33,7 @@ html {
 
 body {
 	margin: 0;
-	background: var(--bg);
+	background: var(--bg-deep);
 	color: var(--fg);
 	font-family: var(--font-body);
 	font-size: 15px;
@@ -78,8 +83,9 @@ textarea {
 
 .term {
 	max-width: 920px;
-	margin: 2rem auto;
-	padding: 0 1rem 4rem;
+	margin: 2.5rem auto 3.5rem;
+	padding: 0 1rem;
+	filter: drop-shadow(0 28px 60px rgba(0, 0, 0, 0.55));
 }
 
 .term-bar {
@@ -95,15 +101,27 @@ textarea {
 
 .term-dots {
 	display: flex;
-	gap: 0.4rem;
+	gap: 0.45rem;
 	flex-shrink: 0;
 }
 
 .term-dots span {
-	width: 10px;
-	height: 10px;
+	width: 11px;
+	height: 11px;
 	border-radius: 50%;
 	background: var(--border);
+}
+
+.term-dots span:nth-child(1) {
+	background: #ff5f56;
+}
+
+.term-dots span:nth-child(2) {
+	background: #ffbd2e;
+}
+
+.term-dots span:nth-child(3) {
+	background: #27c93f;
 }
 
 .term-title {
@@ -121,8 +139,63 @@ textarea {
 .term-body {
 	background: var(--bg);
 	border: 1px solid var(--border);
+	border-bottom: none;
+	border-radius: 0;
+	padding: 2.25rem 1.75rem 2.5rem;
+}
+
+/* ---------- statusline footer (tmux/vim vernacular) ---------- */
+
+.statusline {
+	display: flex;
+	align-items: stretch;
+	background: var(--bg-deep);
+	border: 1px solid var(--border);
+	border-top: none;
 	border-radius: 0 0 var(--radius) var(--radius);
-	padding: 2rem 1.5rem 2.5rem;
+	font-family: var(--font-display);
+	font-size: 0.75rem;
+	overflow: hidden;
+}
+
+.statusline .mode {
+	background: var(--accent-amber);
+	color: var(--bg-deep);
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	padding: 0.4rem 0.85rem;
+	clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+	padding-right: 1.1rem;
+}
+
+.statusline .seg {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.4rem 0.85rem;
+	color: var(--fg-dim);
+}
+
+.statusline .seg.path {
+	color: var(--accent-green);
+}
+
+.statusline .seg.right {
+	margin-left: auto;
+	gap: 0.9rem;
+}
+
+.statusline .seg a {
+	color: var(--fg-dim);
+}
+
+.statusline .seg a:hover {
+	color: var(--accent-rust);
+	text-decoration: none;
+}
+
+.statusline .sep {
+	color: var(--fg-faint);
 }
 
 .caret {
@@ -149,13 +222,13 @@ textarea {
 /* ---------- hero (home page) ---------- */
 
 .hero {
-	margin-bottom: 2.5rem;
+	margin-bottom: 3rem;
 }
 
 .hero .prompt {
 	font-size: 0.85rem;
 	color: var(--fg-dim);
-	margin-bottom: 0.75rem;
+	margin-bottom: 1.1rem;
 }
 
 .hero .prompt .user {
@@ -163,39 +236,70 @@ textarea {
 }
 
 .hero-cmd {
-	display: inline-block;
-	overflow: hidden;
-	white-space: nowrap;
-	vertical-align: bottom;
-	border-right: 2px solid var(--accent-green);
-	width: 13ch;
-	animation:
-		typing 1s steps(13, end) 0.2s both,
-		blink-caret 0.8s step-end infinite 1.2s;
+	color: var(--fg);
 }
 
-@keyframes typing {
-	from {
-		width: 0;
+/* solid block cursor — robust to any command length, unlike a steps() width hack */
+.hero-cmd::after {
+	content: '';
+	display: inline-block;
+	width: 0.6em;
+	height: 1.05em;
+	margin-left: 0.15em;
+	vertical-align: -0.15em;
+	background: var(--accent-green);
+	animation: block-blink 1.1s step-end infinite;
+}
+
+@keyframes block-blink {
+	50% {
+		opacity: 0;
 	}
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.hero-cmd {
+	.hero-cmd::after {
 		animation: none;
-		border-right: none;
 	}
 }
 
 .hero h1 {
-	font-size: 1.9rem;
-	letter-spacing: -0.01em;
-	margin-bottom: 0.5rem;
+	font-size: clamp(2.4rem, 6vw, 3.6rem);
+	font-weight: 700;
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+	margin-bottom: 0.75rem;
 }
 
 .hero .tagline {
 	color: var(--fg-dim);
-	margin-bottom: 1.25rem;
+	margin-bottom: 1rem;
+}
+
+.hero-stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 0.75rem;
+	font-family: var(--font-display);
+	font-size: 0.8rem;
+	color: var(--fg-dim);
+	margin-bottom: 1.75rem;
+}
+
+.hero-stats b {
+	color: var(--fg);
+	font-weight: 600;
+}
+
+.hero-stats .sep {
+	color: var(--fg-faint);
+}
+
+.hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.9rem 1.5rem;
 }
 
 .btn {
@@ -216,9 +320,17 @@ textarea {
 
 .browse-links {
 	display: inline-flex;
-	gap: 1rem;
-	margin-left: 1rem;
+	gap: 1.25rem;
 	color: var(--fg-dim);
+}
+
+.browse-links a {
+	color: var(--fg-dim);
+}
+
+.browse-links a:hover {
+	color: var(--accent-rust);
+	text-decoration: none;
 }
 
 /* ---------- filters ---------- */
@@ -287,16 +399,29 @@ textarea {
 
 .tool-card > a {
 	display: grid;
-	grid-template-columns: minmax(140px, 200px) 1fr auto;
+	grid-template-columns: 2.25rem minmax(130px, 190px) 1fr auto;
 	align-items: baseline;
 	gap: 0.35rem 1.25rem;
 	padding: 0.85rem 0.5rem;
 	color: var(--fg);
+	position: relative;
 }
 
 .tool-card > a:hover {
-	background: var(--panel);
+	background: var(--panel-hi);
 	text-decoration: none;
+}
+
+.tool-index {
+	font-family: var(--font-display);
+	font-size: 0.8rem;
+	color: var(--fg-faint);
+	font-variant-numeric: tabular-nums;
+	text-align: right;
+}
+
+.tool-card > a:hover .tool-index {
+	color: var(--accent-rust);
 }
 
 .tool-name {
@@ -327,7 +452,22 @@ textarea {
 
 @media (min-width: 640px) {
 	.tool-card p {
-		grid-column: 2;
+		grid-column: 3;
+	}
+}
+
+.badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.15rem 0.75rem;
+	grid-column: 1 / -1;
+}
+
+@media (min-width: 640px) {
+	.badges {
+		grid-column: 4;
+		flex-direction: column;
+		align-items: flex-end;
 	}
 }
 
@@ -359,7 +499,7 @@ textarea {
 
 @media (min-width: 640px) {
 	.tags {
-		grid-column: 2;
+		grid-column: 3;
 	}
 }
 
@@ -396,7 +536,9 @@ textarea {
 }
 
 .man-header h1 {
-	font-size: 1.5rem;
+	font-size: clamp(1.7rem, 4vw, 2.1rem);
+	font-weight: 700;
+	letter-spacing: -0.015em;
 	display: inline;
 }
 
@@ -415,10 +557,16 @@ textarea {
 }
 
 .man-section h2 {
-	font-size: 0.8rem;
-	letter-spacing: 0.08em;
+	font-size: 0.72rem;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
 	color: var(--accent-green);
 	margin-bottom: 0.75rem;
+}
+
+.man-section h2::before {
+	content: '# ';
+	color: var(--fg-faint);
 }
 
 .man-section p {
@@ -732,6 +880,21 @@ button[type='submit']:disabled {
 
 	.tool-card > a {
 		grid-template-columns: 1fr;
+	}
+
+	.tool-index {
+		display: none;
+	}
+
+	.statusline {
+		flex-wrap: wrap;
+		font-size: 0.7rem;
+	}
+
+	.statusline .seg.right {
+		width: 100%;
+		margin-left: 0;
+		border-top: 1px solid var(--border);
 	}
 
 	.man-header {
