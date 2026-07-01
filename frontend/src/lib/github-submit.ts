@@ -147,7 +147,7 @@ export async function submitTool(token: string, data: ToolFormData): Promise<{ p
 	await createBranch(token, login, branch, sha);
 
 	const content = buildToolFileContent(data);
-	await commitToolFile(token, login, branch, `src/content/tools/${slug}.md`, content, `Add ${data.name} to the directory`);
+	await commitToolFile(token, login, branch, `frontend/src/content/tools/${slug}.md`, content, `Add ${data.name} to the directory`);
 
 	const prUrl = await openPullRequest(
 		token,

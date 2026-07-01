@@ -14,7 +14,7 @@ const ALLOWED_ORIGINS = new Set(['https://cli.masoko.net', 'http://localhost:432
 const REPO_OWNER = 'hjelev';
 const REPO_NAME = 'cli';
 const REPO_BRANCH = 'master';
-const TOOLS_DIR = 'src/content/tools';
+const TOOLS_DIR = 'frontend/src/content/tools';
 const MAX_COMMENT_LENGTH = 2000;
 
 function corsHeaders(origin: string | null): HeadersInit {

@@ -5,6 +5,9 @@ import matter from 'gray-matter';
 import { toolSchema } from '../src/lib/schema.ts';
 
 const repoRoot = path.resolve(import.meta.dirname, '..');
+// `git diff --name-only` prints paths relative to the git top-level, even when
+// run from frontend/ — so resolve changed files against the repo root, not here.
+const gitRoot = path.resolve(import.meta.dirname, '../..');
 const baseSha = process.env.BASE_SHA;
 const headSha = process.env.HEAD_SHA;
 
@@ -46,7 +49,7 @@ async function checkUrl(url: string): Promise<boolean> {
 let hasErrors = false;
 
 for (const relativePath of changedFiles) {
-	const fullPath = path.resolve(repoRoot, relativePath);
+	const fullPath = path.resolve(gitRoot, relativePath);
 	const raw = fs.readFileSync(fullPath, 'utf8');
 	const { data } = matter(raw);
 	const result = toolSchema.safeParse(data);
