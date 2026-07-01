@@ -9,7 +9,7 @@ description: |
   plugin system, and integrations with ripgrep, fd, fzf, and zoxide.
 repository_url: https://github.com/sxyazi/yazi
 website: https://yazi-rs.github.io
-author: "sxyazi"
+author: sxyazi
 license: MIT
 language: Rust
 installation:
@@ -30,7 +30,18 @@ installation:
     command: sudo pacman -S yazi
   - method: binary
     command: Prebuilt binaries for Linux, macOS, and Windows are available on the GitHub Releases page.
-platforms: [Linux, macOS, Windows]
-tags: [tui, file-manager, async, rust]
-logo: "https://avatars.githubusercontent.com/u/17523360?v=4"
+platforms:
+  - Linux
+  - macOS
+  - Windows
+tags:
+  - tui
+  - file-manager
+  - async
+  - rust
+logo: https://avatars.githubusercontent.com/u/17523360?v=4
+ratings:
+  - user: hjelev
+    value: 5
+    date: '2026-07-01T21:53:11.252Z'
 ---
