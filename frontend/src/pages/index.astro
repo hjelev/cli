@@ -1,26 +1,25 @@
 ---
 import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/schema';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const tools = await getCollection('tools');
 const languages = [...new Set(tools.map((tool) => tool.data.language))].sort();
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<title>CLI Tools Directory</title>
-	</head>
-	<body>
-		<header>
-			<h1>CLI Tools Directory</h1>
-			<a href="/submit">Submit a tool</a>
-		</header>
+<BaseLayout title="CLI Tools Directory" command="browse --all">
+	<header class="hero">
+		<p class="prompt"><span class="user">visitor@cli-tools</span>:~$ <span class="hero-cmd">browse --all</span></p>
+		<h1>CLI Tools Directory</h1>
+		<p class="tagline"># command-line tools, submitted by the people who use them</p>
+		<a class="btn" href="/submit">$ ./submit-a-tool</a>
+	</header>
 
-		<section id="filters">
+	<section id="filters" class="filters">
+		<label class="search-field">
+			<span class="caret" aria-hidden="true">$</span>
 			<input id="search" type="search" placeholder="Search tools…" />
+		</label>
 
 			<select id="category-filter">
 				<option value="">All categories</option>
@@ -90,5 +89,4 @@ const languages = [...new Set(tools.map((tool) => tool.data.language))].sort();
 			categoryFilter.addEventListener('change', applyFilters);
 			languageFilter.addEventListener('change', applyFilters);
 		</script>
-	</body>
-</html>
+</BaseLayout>

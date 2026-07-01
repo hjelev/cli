@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
 	const tools = await getCollection('tools');
@@ -11,64 +12,81 @@ const { data } = tool;
 const { Content } = await render(tool);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{data.name} — CLI Tools Directory</title>
-	</head>
-	<body>
-		<a href="/">&larr; Back to directory</a>
+<BaseLayout title={`${data.name} — CLI Tools Directory`} command={`man ${tool.id}`}>
+	<a class="back" href="/">&larr; cd ..</a>
 
-		<header>
-			{data.logo && <img src={data.logo} alt="" width="64" height="64" />}
-			<h1>{data.name}</h1>
-			<p>{data.short_description}</p>
-			<span class="badge">{data.category}</span>
-			<span class="badge">{data.language}</span>
-		</header>
+	<header class="man-header">
+		{data.logo && <img src={data.logo} alt="" width="48" height="48" />}
+		<div>
+			<h1>{data.name}<span class="num">(1)</span></h1>
+			<p class="tagline">{data.short_description}</p>
+		</div>
+	</header>
 
-		<section>
-			<p>{data.description}</p>
+	<section class="man-section">
+		<h2>NAME</h2>
+		<p>{data.name} — {data.short_description}</p>
+	</section>
+
+	<section class="man-section">
+		<h2>DESCRIPTION</h2>
+		<p>{data.description}</p>
+		<div class="content">
 			<Content />
-		</section>
+		</div>
+	</section>
 
+	<section class="man-section">
+		<h2>INSTALLATION</h2>
+		<pre class="code"><code>$ {data.installation}</code></pre>
+	</section>
+
+	<section class="man-section">
+		<h2>DETAILS</h2>
 		<dl>
-			<dt>Installation</dt>
-			<dd><code>{data.installation}</code></dd>
-
 			<dt>Author</dt>
 			<dd>{data.author}</dd>
 
 			<dt>License</dt>
 			<dd>{data.license}</dd>
 
+			<dt>Category</dt>
+			<dd>{data.category}</dd>
+
+			<dt>Language</dt>
+			<dd>{data.language}</dd>
+
 			<dt>Platforms</dt>
 			<dd>{data.platforms.join(', ')}</dd>
+		</dl>
+	</section>
 
-			<dt>Repository</dt>
-			<dd><a href={data.repository_url} target="_blank" rel="noopener">{data.repository_url}</a></dd>
-
+	<section class="man-section">
+		<h2>SEE ALSO</h2>
+		<ul class="links">
+			<li>
+				<a href={data.repository_url} target="_blank" rel="noopener">Repository &nearr;</a>
+			</li>
 			{
 				data.website && (
-					<>
-						<dt>Website</dt>
-						<dd>
-							<a href={data.website} target="_blank" rel="noopener">
-								{data.website}
-							</a>
-						</dd>
-					</>
+					<li>
+						<a href={data.website} target="_blank" rel="noopener">
+							Website &nearr;
+						</a>
+					</li>
 				)
 			}
-		</dl>
+		</ul>
+	</section>
 
+	<section class="man-section">
+		<h2>TAGS</h2>
 		<ul class="tags">
 			{data.tags.map((tag) => (
 				<li>{tag}</li>
 			))}
 		</ul>
+	</section>
 
-		{data.media && <img src={data.media} alt={`${data.name} demo`} />}
-	</body>
-</html>
+	{data.media && <img class="media" src={data.media} alt={`${data.name} demo`} />}
+</BaseLayout>

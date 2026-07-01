@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	command: string;
+}
+
+const { title, command } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="term">
+			<div class="term-bar">
+				<div class="term-dots"><span></span><span></span><span></span></div>
+				<p class="term-title"><span class="user">visitor@cli-tools</span>:~$ {command}</p>
+			</div>
+			<div class="term-body">
+				<slot />
+			</div>
+		</div>
+	</body>
+</html>

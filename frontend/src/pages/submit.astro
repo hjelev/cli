@@ -1,201 +1,195 @@
 ---
 import { CATEGORIES } from '../lib/schema';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Submit a tool — CLI Tools Directory</title>
-	</head>
-	<body>
-		<a href="/">&larr; Back to directory</a>
-		<h1>Submit a tool</h1>
+<BaseLayout title="Submit a tool — CLI Tools Directory" command="submit --new">
+	<a class="back" href="/">&larr; cd ..</a>
+	<h1>Submit a tool</h1>
+	<p class="form-note">Sign in with GitHub to submit a tool. Submitting opens a pull request from your own fork.</p>
 
-		<section id="signed-out">
-			<p>Sign in with GitHub to submit a tool. Submitting opens a pull request from your own fork.</p>
-			<button id="sign-in-btn" type="button">Sign in with GitHub</button>
-		</section>
+	<section id="signed-out">
+		<button id="sign-in-btn" type="button">Sign in with GitHub</button>
+	</section>
 
-		<section id="signed-in" hidden>
-			<p id="signed-in-as"></p>
-			<button id="sign-out-btn" type="button">Sign out</button>
+	<section id="signed-in" hidden>
+		<p id="signed-in-as"></p>
+		<button id="sign-out-btn" type="button">Sign out</button>
 
-			<form id="submit-form">
-				<label>
-					Name
-					<input name="name" required />
-				</label>
+		<form id="submit-form">
+			<label class="field">
+				<span class="flag">--name <span class="type">&lt;string&gt;</span></span>
+				<input name="name" required />
+			</label>
 
-				<label>
-					Category
-					<select name="category" required>
-						<option value="" disabled selected>Choose a category</option>
-						{CATEGORIES.map((category) => <option value={category}>{category}</option>)}
-					</select>
-				</label>
+			<label class="field">
+				<span class="flag">--category <span class="type">&lt;enum&gt;</span></span>
+				<select name="category" required>
+					<option value="" disabled selected>Choose a category</option>
+					{CATEGORIES.map((category) => <option value={category}>{category}</option>)}
+				</select>
+			</label>
 
-				<label>
-					Short description
-					<input name="short_description" required maxlength="140" />
-				</label>
+			<label class="field">
+				<span class="flag">--short-description <span class="type">&lt;string&gt;</span></span>
+				<input name="short_description" required maxlength="140" />
+			</label>
 
-				<label>
-					Description
-					<textarea name="description" required rows="6"></textarea>
-				</label>
+			<label class="field">
+				<span class="flag">--description <span class="type">&lt;text&gt;</span></span>
+				<textarea name="description" required rows="6"></textarea>
+			</label>
 
-				<label>
-					Repository URL
-					<input name="repository_url" type="url" required placeholder="https://github.com/you/tool" />
-				</label>
+			<label class="field">
+				<span class="flag">--repository-url <span class="type">&lt;url&gt;</span></span>
+				<input name="repository_url" type="url" required placeholder="https://github.com/you/tool" />
+			</label>
 
-				<label>
-					Website (optional)
-					<input name="website" type="url" placeholder="https://example.com" />
-				</label>
+			<label class="field optional">
+				<span class="flag">--website <span class="type">&lt;url&gt;</span></span>
+				<input name="website" type="url" placeholder="https://example.com" />
+			</label>
 
-				<label>
-					Author
-					<input name="author" required />
-				</label>
+			<label class="field">
+				<span class="flag">--author <span class="type">&lt;string&gt;</span></span>
+				<input name="author" required />
+			</label>
 
-				<label>
-					License
-					<input name="license" required placeholder="MIT" />
-				</label>
+			<label class="field">
+				<span class="flag">--license <span class="type">&lt;string&gt;</span></span>
+				<input name="license" required placeholder="MIT" />
+			</label>
 
-				<label>
-					Language
-					<input name="language" required placeholder="Rust" />
-				</label>
+			<label class="field">
+				<span class="flag">--language <span class="type">&lt;string&gt;</span></span>
+				<input name="language" required placeholder="Rust" />
+			</label>
 
-				<label>
-					Installation command
-					<input name="installation" required placeholder="cargo install your-tool" />
-				</label>
+			<label class="field">
+				<span class="flag">--installation <span class="type">&lt;string&gt;</span></span>
+				<input name="installation" required placeholder="cargo install your-tool" />
+			</label>
 
-				<label>
-					Platforms (comma-separated)
-					<input name="platforms" required placeholder="Linux, macOS, Windows" />
-				</label>
+			<label class="field">
+				<span class="flag">--platforms <span class="type">&lt;csv&gt;</span></span>
+				<input name="platforms" required placeholder="Linux, macOS, Windows" />
+			</label>
 
-				<label>
-					Tags (comma-separated)
-					<input name="tags" required placeholder="tui, productivity" />
-				</label>
+			<label class="field">
+				<span class="flag">--tags <span class="type">&lt;csv&gt;</span></span>
+				<input name="tags" required placeholder="tui, productivity" />
+			</label>
 
-				<label>
-					Media URL (optional demo GIF/screenshot)
-					<input name="media" type="url" />
-				</label>
+			<label class="field optional">
+				<span class="flag">--media <span class="type">&lt;url&gt;</span></span>
+				<input name="media" type="url" />
+			</label>
 
-				<label>
-					Logo URL (optional)
-					<input name="logo" type="url" />
-				</label>
+			<label class="field optional">
+				<span class="flag">--logo <span class="type">&lt;url&gt;</span></span>
+				<input name="logo" type="url" />
+			</label>
 
-				<button type="submit">Submit for review</button>
-			</form>
+			<button type="submit">Submit for review</button>
+		</form>
 
-			<p id="form-status" role="status"></p>
-		</section>
+		<p id="form-status" role="status"></p>
+	</section>
 
-		<script>
-			import { getStoredToken, redirectToGitHubSignIn, signOut, fetchGitHubUser } from '../lib/github-auth';
-			import { submitTool, type ToolFormData } from '../lib/github-submit';
-			import { toolSchema } from '../lib/schema';
+	<script>
+		import { getStoredToken, redirectToGitHubSignIn, signOut, fetchGitHubUser } from '../lib/github-auth';
+		import { submitTool, type ToolFormData } from '../lib/github-submit';
+		import { toolSchema } from '../lib/schema';
 
-			const signedOutSection = document.getElementById('signed-out') as HTMLElement;
-			const signedInSection = document.getElementById('signed-in') as HTMLElement;
-			const signedInAs = document.getElementById('signed-in-as') as HTMLElement;
-			const form = document.getElementById('submit-form') as HTMLFormElement;
-			const formStatus = document.getElementById('form-status') as HTMLElement;
+		const signedOutSection = document.getElementById('signed-out') as HTMLElement;
+		const signedInSection = document.getElementById('signed-in') as HTMLElement;
+		const signedInAs = document.getElementById('signed-in-as') as HTMLElement;
+		const form = document.getElementById('submit-form') as HTMLFormElement;
+		const formStatus = document.getElementById('form-status') as HTMLElement;
 
-			document.getElementById('sign-in-btn')?.addEventListener('click', () => {
-				redirectToGitHubSignIn('/submit');
-			});
+		document.getElementById('sign-in-btn')?.addEventListener('click', () => {
+			redirectToGitHubSignIn('/submit');
+		});
 
-			document.getElementById('sign-out-btn')?.addEventListener('click', () => {
+		document.getElementById('sign-out-btn')?.addEventListener('click', () => {
+			signOut();
+			window.location.reload();
+		});
+
+		function splitList(value: string): string[] {
+			return value
+				.split(',')
+				.map((item) => item.trim())
+				.filter(Boolean);
+		}
+
+		function optional(value: string): string | undefined {
+			return value.trim() ? value.trim() : undefined;
+		}
+
+		async function init() {
+			const token = getStoredToken();
+			if (!token) {
+				signedOutSection.hidden = false;
+				signedInSection.hidden = true;
+				return;
+			}
+
+			try {
+				const user = await fetchGitHubUser(token);
+				signedInAs.textContent = `Signed in as @${user.login}`;
+				signedOutSection.hidden = true;
+				signedInSection.hidden = false;
+			} catch {
 				signOut();
-				window.location.reload();
-			});
+				signedOutSection.hidden = false;
+				signedInSection.hidden = true;
+			}
+		}
 
-			function splitList(value: string): string[] {
-				return value
-					.split(',')
-					.map((item) => item.trim())
-					.filter(Boolean);
+		form?.addEventListener('submit', async (event) => {
+			event.preventDefault();
+			const token = getStoredToken();
+			if (!token) return;
+
+			const formData = new FormData(form);
+			const candidate: ToolFormData = {
+				name: String(formData.get('name') ?? '').trim(),
+				category: String(formData.get('category') ?? ''),
+				short_description: String(formData.get('short_description') ?? '').trim(),
+				description: String(formData.get('description') ?? '').trim(),
+				repository_url: String(formData.get('repository_url') ?? '').trim(),
+				website: optional(String(formData.get('website') ?? '')),
+				author: String(formData.get('author') ?? '').trim(),
+				license: String(formData.get('license') ?? '').trim(),
+				language: String(formData.get('language') ?? '').trim(),
+				installation: String(formData.get('installation') ?? '').trim(),
+				platforms: splitList(String(formData.get('platforms') ?? '')),
+				tags: splitList(String(formData.get('tags') ?? '')),
+				media: optional(String(formData.get('media') ?? '')),
+				logo: optional(String(formData.get('logo') ?? '')),
+			};
+
+			const validation = toolSchema.safeParse(candidate);
+			if (!validation.success) {
+				formStatus.textContent = `Please fix: ${validation.error.issues.map((issue) => issue.message).join(', ')}`;
+				return;
 			}
 
-			function optional(value: string): string | undefined {
-				return value.trim() ? value.trim() : undefined;
+			formStatus.textContent = 'Submitting — forking, committing, and opening a pull request…';
+			(form.querySelector('button[type="submit"]') as HTMLButtonElement).disabled = true;
+
+			try {
+				const { prUrl } = await submitTool(token, candidate);
+				formStatus.innerHTML = `Submitted! <a href="${prUrl}" target="_blank" rel="noopener">View your pull request</a>.`;
+				form.reset();
+			} catch (error) {
+				formStatus.textContent = error instanceof Error ? error.message : 'Submission failed.';
+			} finally {
+				(form.querySelector('button[type="submit"]') as HTMLButtonElement).disabled = false;
 			}
+		});
 
-			async function init() {
-				const token = getStoredToken();
-				if (!token) {
-					signedOutSection.hidden = false;
-					signedInSection.hidden = true;
-					return;
-				}
-
-				try {
-					const user = await fetchGitHubUser(token);
-					signedInAs.textContent = `Signed in as @${user.login}`;
-					signedOutSection.hidden = true;
-					signedInSection.hidden = false;
-				} catch {
-					signOut();
-					signedOutSection.hidden = false;
-					signedInSection.hidden = true;
-				}
-			}
-
-			form?.addEventListener('submit', async (event) => {
-				event.preventDefault();
-				const token = getStoredToken();
-				if (!token) return;
-
-				const formData = new FormData(form);
-				const candidate: ToolFormData = {
-					name: String(formData.get('name') ?? '').trim(),
-					category: String(formData.get('category') ?? ''),
-					short_description: String(formData.get('short_description') ?? '').trim(),
-					description: String(formData.get('description') ?? '').trim(),
-					repository_url: String(formData.get('repository_url') ?? '').trim(),
-					website: optional(String(formData.get('website') ?? '')),
-					author: String(formData.get('author') ?? '').trim(),
-					license: String(formData.get('license') ?? '').trim(),
-					language: String(formData.get('language') ?? '').trim(),
-					installation: String(formData.get('installation') ?? '').trim(),
-					platforms: splitList(String(formData.get('platforms') ?? '')),
-					tags: splitList(String(formData.get('tags') ?? '')),
-					media: optional(String(formData.get('media') ?? '')),
-					logo: optional(String(formData.get('logo') ?? '')),
-				};
-
-				const validation = toolSchema.safeParse(candidate);
-				if (!validation.success) {
-					formStatus.textContent = `Please fix: ${validation.error.issues.map((issue) => issue.message).join(', ')}`;
-					return;
-				}
-
-				formStatus.textContent = 'Submitting — forking, committing, and opening a pull request…';
-				(form.querySelector('button[type="submit"]') as HTMLButtonElement).disabled = true;
-
-				try {
-					const { prUrl } = await submitTool(token, candidate);
-					formStatus.innerHTML = `Submitted! <a href="${prUrl}" target="_blank" rel="noopener">View your pull request</a>.`;
-					form.reset();
-				} catch (error) {
-					formStatus.textContent = error instanceof Error ? error.message : 'Submission failed.';
-				} finally {
-					(form.querySelector('button[type="submit"]') as HTMLButtonElement).disabled = false;
-				}
-			});
-
-			init();
-		</script>
-	</body>
-</html>
+		init();
+	</script>
+</BaseLayout>
