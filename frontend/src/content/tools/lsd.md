@@ -1,6 +1,6 @@
 ---
 name: lsd
-category: File Management
+category: File Listing Utilities
 short_description: The next gen ls command, with colors and icons.
 description: |
   lsd (LSDeluxe) is a rewrite of GNU ls with colorful output, file type
