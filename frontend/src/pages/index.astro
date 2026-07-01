@@ -6,7 +6,9 @@ import ToolCard from '../components/ToolCard.astro';
 
 const tools = await getCollection('tools');
 const languages = [...new Set(tools.map((tool) => tool.data.language))].sort();
-const categoryCount = new Set(tools.map((tool) => tool.data.category)).size;
+const usedCategories = new Set(tools.map((tool) => tool.data.category));
+const categories = CATEGORIES.filter((category) => usedCategories.has(category));
+const categoryCount = usedCategories.size;
 ---
 
 <BaseLayout
@@ -42,7 +44,7 @@ const categoryCount = new Set(tools.map((tool) => tool.data.category)).size;
 
 			<select id="category-filter">
 				<option value="">All categories</option>
-				{CATEGORIES.map((category) => <option value={category}>{category}</option>)}
+				{categories.map((category) => <option value={category}>{category}</option>)}
 			</select>
 
 			<select id="language-filter">
