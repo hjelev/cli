@@ -9,7 +9,7 @@ description: |
   contents like local files, mouse support, and a built-in editor and viewer.
 repository_url: https://github.com/MidnightCommander/mc
 website: https://midnight-commander.org
-author: "MidnightCommander"
+author: MidnightCommander
 license: GPL-3.0
 language: C
 installation:
@@ -21,7 +21,18 @@ installation:
     command: sudo dnf install mc
   - method: pacman
     command: sudo pacman -S mc
-platforms: [Linux, macOS, Windows]
-tags: [tui, file-manager, orthodox, classic]
-logo: "https://avatars.githubusercontent.com/u/1191610?v=4"
+platforms:
+  - Linux
+  - macOS
+  - Windows
+tags:
+  - tui
+  - file-manager
+  - orthodox
+  - classic
+logo: https://avatars.githubusercontent.com/u/1191610?v=4
+ratings:
+  - user: hjelev
+    value: 5
+    date: '2026-07-01T21:57:58.716Z'
 ---
