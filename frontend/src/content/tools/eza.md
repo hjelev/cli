@@ -8,7 +8,7 @@ description: |
   improvements over the standard ls command.
 repository_url: https://github.com/eza-community/eza
 website: https://eza.rocks
-author: "eza-community"
+author: eza-community
 license: EUPL-1.2
 language: Rust
 installation:
@@ -24,8 +24,19 @@ installation:
     command: pacman -S eza
   - method: binary
     command: wget -c https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz -O - | tar xz
-platforms: [Linux, macOS, Windows]
-tags: [ls-replacement, file-listing, cli, rust]
-logo: "https://avatars.githubusercontent.com/u/141388427?v=4"
-media: "https://eza.rocks/demo.gif"
+platforms:
+  - Linux
+  - macOS
+  - Windows
+tags:
+  - ls-replacement
+  - file-listing
+  - cli
+  - rust
+logo: https://avatars.githubusercontent.com/u/141388427?v=4
+media: https://eza.rocks/demo.gif
+ratings:
+  - user: hjelev
+    value: 4
+    date: '2026-07-01T21:37:11.517Z'
 ---
