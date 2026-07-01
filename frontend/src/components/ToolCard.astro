@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { ratingSummary, stars } from '../lib/ratings';
 
 interface Props {
 	tool: CollectionEntry<'tools'>;
@@ -8,6 +9,7 @@ interface Props {
 
 const { tool, index } = Astro.props;
 const marker = index != null ? String(index).padStart(2, '0') : '·';
+const { count: ratingCount, average: ratingAverage } = ratingSummary(tool.data.ratings);
 ---
 
 <li
@@ -23,6 +25,12 @@ const marker = index != null ? String(index).padStart(2, '0') : '·';
 			<h2>{tool.data.name}</h2>
 		</div>
 		<p>{tool.data.short_description}</p>
+		{ratingCount > 0 && (
+			<div class="card-rating" title={`${ratingAverage.toFixed(1)} out of 5 from ${ratingCount} rating${ratingCount === 1 ? '' : 's'}`}>
+				<span class="stars">{stars(ratingAverage)}</span>
+				<span class="rating-meta">{ratingAverage.toFixed(1)} ({ratingCount})</span>
+			</div>
+		)}
 		<div class="badges">
 			<span class="badge">{tool.data.language}</span>
 			<span class="badge">{tool.data.category}</span>

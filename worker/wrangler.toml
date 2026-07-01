@@ -11,3 +11,8 @@ GITHUB_CLIENT_ID = "Ov23liltbUqUJHmV7NIN"
 # GITHUB_CLIENT_SECRET is NOT set here — it's sensitive and must only be
 # provisioned via `wrangler secret put GITHUB_CLIENT_SECRET` (prod) or
 # worker/.dev.vars (local dev, gitignored). Never commit it.
+#
+# GITHUB_BOT_TOKEN (used by /feedback to commit ratings & comments) is also
+# secret — provision via `wrangler secret put GITHUB_BOT_TOKEN` (prod) or
+# worker/.dev.vars (local dev). A fine-grained PAT scoped to hjelev/cli with
+# Contents: read/write is sufficient.

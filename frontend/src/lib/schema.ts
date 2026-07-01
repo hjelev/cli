@@ -40,6 +40,21 @@ const installMethodSchema = z.object({
 	command: z.string().min(1),
 });
 
+// User-contributed feedback, appended to a tool's .md frontmatter by the
+// Worker (see worker/src/index.ts). `user` is the commenter's verified GitHub
+// login, `date` an ISO-8601 timestamp.
+export const ratingSchema = z.object({
+	user: z.string(),
+	value: z.number().int().min(1).max(5),
+	date: z.string(),
+});
+
+export const commentSchema = z.object({
+	user: z.string(),
+	body: z.string(),
+	date: z.string(),
+});
+
 export const toolSchema = z.object({
 	name: z.string(),
 	category: z.enum(CATEGORIES),
@@ -55,4 +70,6 @@ export const toolSchema = z.object({
 	tags: z.array(z.string()),
 	media: z.url().optional(),
 	logo: z.url().optional(),
+	ratings: z.array(ratingSchema).optional().default([]),
+	comments: z.array(commentSchema).optional().default([]),
 });

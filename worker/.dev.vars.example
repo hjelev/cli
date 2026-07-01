@@ -1,1 +1,4 @@
 GITHUB_CLIENT_SECRET=paste_the_oauth_app_client_secret_here
+# Fine-grained PAT (or GitHub App installation token) with contents:read/write
+# on hjelev/cli. Used to commit user ratings & comments into tool .md files.
+GITHUB_BOT_TOKEN=paste_the_bot_token_with_contents_write_here
