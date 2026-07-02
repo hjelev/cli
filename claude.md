@@ -23,7 +23,7 @@ Please execute the following development plan step-by-step. Keep me updated on y
    - `installation` — array of `{ method, command }`, required (min 1 entry). `method` is a fixed enum (`cargo`, `brew`, `apt`, `dnf`, `pacman`, `npm`, `pip`, `go`, `gem`, `docker`, `script`, `binary`, `other`); `command` is free-form text. Supports tools installable via multiple methods.
    - `platforms` — string array, required
    - `tags` — string array, required
-   - `media` — url, optional
+   - `media` — url, optional. Accepts image URLs (gif/png/…) or video URLs (`.webm`/`.mp4`); the detail page renders videos as an autoplaying muted `<video>` loop with controls.
    - `logo` — url, optional. When absent, the UI must render without a logo slot (fallback/no image) rather than a broken image link — the listing card and detail page components need an explicit conditional for this, not a naive `<img src={logo}>`.
 
    **Predefined `category` list (starter set, editable later):**
