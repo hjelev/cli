@@ -18,7 +18,7 @@ installation:
   - method: other
     command: yay -S tetro-tui
 platforms: [Linux, macOS, Windows]
-tags: [tui, terminal-game, tetris, puzzle, rust]
+tags: [tui, terminal-game, tetris, puzzle, game]
 logo: "https://github.com/Strophox/tetro-tui/blob/b66590cb461d34c95e988ef41b6d8b7d7783f37b/demo_assets/tetro_logo_glow.png?raw=true"
 media: "https://github.com/Strophox/tetro-tui/blob/15d6f8a13d146d2655f80559e0aee0430527f1c9/demo_assets/tetro-tui-v3.5.0_demo.gif?raw=true"
 ---
