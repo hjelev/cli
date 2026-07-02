@@ -6,7 +6,7 @@ description: |
   Suvadu replaces your shell history with a SQLite-backed store. Every command gets structured context — exit code, duration, directory, executor, session. AI agents can query it via MCP. 100% local.
 repository_url: https://github.com/AppachiTech/suvadu
 website: https://suvadu.sh
-author: "AppachiTech"
+author: AppachiTech
 license: MIT
 language: Rust
 installation:
@@ -16,8 +16,18 @@ installation:
     command: brew install AppachiTech/suvadu/suvadu
   - method: script
     command: curl -fsSL https://downloads.appachi.tech/suvadu/install.sh | bash
-platforms: [Linux, macOS]
-tags: [tui, history, ai-agent-monitoring, shell-history]
-logo: "https://github.com/AppachiTech/suvadu/raw/main/assets/suvadu-logo.svg"
-media: "https://suvadu.sh/demo/suvadu-search.webm"
+platforms:
+  - Linux
+  - macOS
+tags:
+  - tui
+  - history
+  - ai-agent-monitoring
+  - shell-history
+logo: https://github.com/AppachiTech/suvadu/raw/main/assets/suvadu-logo.svg
+media: https://suvadu.sh/demo/suvadu-search.webm
+ratings:
+  - user: hjelev
+    value: 5
+    date: '2026-07-02T19:42:50.422Z'
 ---
