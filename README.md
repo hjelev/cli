@@ -11,6 +11,7 @@ Curated CLI/TUI tools list
 | [mc](https://midnight-commander.org) | GNU Midnight Commander, a text-mode full-screen file manager. | C | [Repo](https://github.com/MidnightCommander/mc), [Website](https://midnight-commander.org) |
 | [nnn](https://github.com/jarun/nnn) | n³ The unorthodox terminal file manager | C | [Repo](https://github.com/jarun/nnn) |
 | [sb](https://masoko.net/sb/) | A terminal-based file manager built for speed and efficiency. | Rust | [Repo](https://github.com/hjelev/sb), [Website](https://masoko.net/sb/) |
+| [superfile](https://superfile.dev) | Pretty fancy and modern terminal file manager | Go | [Repo](https://github.com/yorukot/superfile), [Website](https://superfile.dev) |
 | [yazi](https://yazi-rs.github.io) | Blazing fast terminal file manager written in Rust, based on async I/O. | Rust | [Repo](https://github.com/sxyazi/yazi), [Website](https://yazi-rs.github.io) |
 
 ### Shell History
