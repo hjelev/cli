@@ -34,7 +34,7 @@ export const INSTALL_METHODS = [
 	'script',
 	'snap',
 	'binary',
-	'winget'
+	'winget',
 	'other',
 ] as const;
 
