@@ -9,8 +9,15 @@ Curated CLI/TUI tools list
 |------|-------------|----------|-------|
 | [elio](https://elio-fm.github.io/) | Snappy, batteries-included terminal file manager with rich previews. | Rust | [Repo](https://github.com/elio-fm/elio), [Website](https://elio-fm.github.io/) |
 | [mc](https://midnight-commander.org) | GNU Midnight Commander, a text-mode full-screen file manager. | C | [Repo](https://github.com/MidnightCommander/mc), [Website](https://midnight-commander.org) |
-| [sb](https://masoko.net/sb/) | A terminal-based file manager built for speed and efficiency. | Rust | [Repo](https://github.com/hristo/sb), [Website](https://masoko.net/sb/) |
+| [sb](https://masoko.net/sb/) | A terminal-based file manager built for speed and efficiency. | Rust | [Repo](https://github.com/hjelev/sb), [Website](https://masoko.net/sb/) |
 | [yazi](https://yazi-rs.github.io) | Blazing fast terminal file manager written in Rust, based on async I/O. | Rust | [Repo](https://github.com/sxyazi/yazi), [Website](https://yazi-rs.github.io) |
+
+### Shell History
+
+| Name | Description | Language | Links |
+|------|-------------|----------|-------|
+| [atuin](https://atuin.sh/) | ✨ Making your shell magical | Rust | [Repo](https://github.com/atuinsh/atuin), [Website](https://atuin.sh/) |
+| [suvadu](https://suvadu.sh) | Shell history replacement with AI agent tracking and MCP server. Built in Rust, 100% local. | Rust | [Repo](https://github.com/AppachiTech/suvadu), [Website](https://suvadu.sh) |
 
 ### File Listing Utilities
 
