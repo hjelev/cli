@@ -31,6 +31,7 @@ tags:
   - orthodox
   - classic
 logo: https://avatars.githubusercontent.com/u/1191610?v=4
+media: https://midnight-commander.org/img/mc-screenshot-cropped.png
 ratings:
   - user: hjelev
     value: 5
