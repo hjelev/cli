@@ -27,7 +27,7 @@ installation:
     command: cargo install fresh-editor
   - method: npm
     command: npm install -g @fresh-editor/fresh-editor
-  - method: other
+  - method: winget
     command: winget install fresh-editor
   - method: brew
     command: brew install fresh-editor
@@ -40,4 +40,5 @@ tags:
   - IDE
   - editor
 media: https://raw.githubusercontent.com/sinelaw/fresh/master/docs/fresh-demo2.gif
+logo: https://avatars.githubusercontent.com/u/84020?v=4
 ---

@@ -1,5 +1,5 @@
 ---
-name: Ascii Patrol
+name: ascii patrol
 category: Games & Fun
 short_description: >-
   Ascii Patrol is an ASCII game project. It was mainly inspired by "Moon
