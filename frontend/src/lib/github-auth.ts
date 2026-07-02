@@ -58,10 +58,14 @@ export function signOut(): void {
 	sessionStorage.removeItem(TOKEN_KEY);
 }
 
+// Near-twin of fetchGitHubUser in worker/src/index.ts (separate deploy
+// bundle) — keep in sync. This one throws instead of returning null.
 export async function fetchGitHubUser(token: string): Promise<{ login: string; avatar_url: string }> {
 	const res = await fetch('https://api.github.com/user', {
 		headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
 	});
 	if (!res.ok) throw new Error('Could not verify your GitHub account.');
-	return res.json();
+	const data = (await res.json()) as { login?: string; avatar_url?: string };
+	if (!data.login) throw new Error('Could not verify your GitHub account.');
+	return { login: data.login, avatar_url: data.avatar_url ?? '' };
 }

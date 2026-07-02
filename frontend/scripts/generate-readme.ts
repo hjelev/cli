@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import matter from 'gray-matter';
-import { CATEGORIES, toolSchema } from '../src/lib/schema.ts';
+import { CATEGORIES } from '../src/lib/schema.ts';
+import { parseToolFile } from './lib/load-tool.ts';
 
 const frontendRoot = path.resolve(import.meta.dirname, '..');
 const repoRoot = path.resolve(frontendRoot, '..');
@@ -14,20 +14,17 @@ const END_MARKER = '<!-- TOOLS:END -->';
 const files = fs.readdirSync(toolsDir).filter((file) => file.endsWith('.md'));
 
 const tools = files.map((file) => {
-	const fullPath = path.join(toolsDir, file);
-	const raw = fs.readFileSync(fullPath, 'utf8');
-	const { data } = matter(raw);
-	const result = toolSchema.safeParse(data);
+	const parsed = parseToolFile(path.join(toolsDir, file));
 
-	if (!result.success) {
+	if ('issues' in parsed) {
 		console.error(`❌ ${file} — schema validation failed:`);
-		for (const issue of result.error.issues) {
-			console.error(`   - ${issue.path.join('.') || '(root)'}: ${issue.message}`);
+		for (const issue of parsed.issues) {
+			console.error(`   - ${issue}`);
 		}
 		process.exit(1);
 	}
 
-	return result.data;
+	return parsed.tool;
 });
 
 const byCategory = new Map<(typeof CATEGORIES)[number], typeof tools>();

@@ -40,50 +40,50 @@ const categoryCount = usedCategories.size;
 			<input id="search" type="search" placeholder="Search tools…" />
 		</label>
 
-			<select id="category-filter">
-				<option value="">All categories</option>
-				{categories.map((category) => <option value={category}>{category}</option>)}
-			</select>
+		<select id="category-filter">
+			<option value="">All categories</option>
+			{categories.map((category) => <option value={category}>{category}</option>)}
+		</select>
 
-			<select id="language-filter">
-				<option value="">All languages</option>
-				{languages.map((language) => <option value={language}>{language}</option>)}
-			</select>
-		</section>
+		<select id="language-filter">
+			<option value="">All languages</option>
+			{languages.map((language) => <option value={language}>{language}</option>)}
+		</select>
+	</section>
 
-		<p id="empty-state" hidden>No tools match your filters.</p>
+	<p id="empty-state" hidden>No tools match your filters.</p>
 
-		<ul id="tool-grid">
-			{tools.map((tool, i) => <ToolCard tool={tool} index={i + 1} />)}
-		</ul>
+	<ul id="tool-grid">
+		{tools.map((tool, i) => <ToolCard tool={tool} index={i + 1} />)}
+	</ul>
 
-		<script>
-			const search = document.getElementById('search') as HTMLInputElement;
-			const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
-			const languageFilter = document.getElementById('language-filter') as HTMLSelectElement;
-			const cards = Array.from(document.querySelectorAll<HTMLLIElement>('.tool-card'));
-			const emptyState = document.getElementById('empty-state') as HTMLElement;
+	<script>
+		const search = document.getElementById('search') as HTMLInputElement;
+		const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
+		const languageFilter = document.getElementById('language-filter') as HTMLSelectElement;
+		const cards = Array.from(document.querySelectorAll<HTMLLIElement>('.tool-card'));
+		const emptyState = document.getElementById('empty-state') as HTMLElement;
 
-			function applyFilters() {
-				const query = search.value.trim().toLowerCase();
-				const category = categoryFilter.value;
-				const language = languageFilter.value;
-				let visibleCount = 0;
+		function applyFilters() {
+			const query = search.value.trim().toLowerCase();
+			const category = categoryFilter.value;
+			const language = languageFilter.value;
+			let visibleCount = 0;
 
-				for (const card of cards) {
-					const matchesQuery = !query || card.dataset.search!.includes(query);
-					const matchesCategory = !category || card.dataset.category === category;
-					const matchesLanguage = !language || card.dataset.language === language;
-					const visible = matchesQuery && matchesCategory && matchesLanguage;
-					card.hidden = !visible;
-					if (visible) visibleCount++;
-				}
-
-				emptyState.hidden = visibleCount > 0;
+			for (const card of cards) {
+				const matchesQuery = !query || card.dataset.search!.includes(query);
+				const matchesCategory = !category || card.dataset.category === category;
+				const matchesLanguage = !language || card.dataset.language === language;
+				const visible = matchesQuery && matchesCategory && matchesLanguage;
+				card.hidden = !visible;
+				if (visible) visibleCount++;
 			}
 
-			search.addEventListener('input', applyFilters);
-			categoryFilter.addEventListener('change', applyFilters);
-			languageFilter.addEventListener('change', applyFilters);
-		</script>
+			emptyState.hidden = visibleCount > 0;
+		}
+
+		search.addEventListener('input', applyFilters);
+		categoryFilter.addEventListener('change', applyFilters);
+		languageFilter.addEventListener('change', applyFilters);
+	</script>
 </BaseLayout>

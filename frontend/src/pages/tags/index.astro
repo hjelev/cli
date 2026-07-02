@@ -4,13 +4,21 @@ import { slugify } from '../../lib/slug';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const tools = await getCollection('tools');
-const counts = new Map<string, number>();
+// Group by slug so tags that collide (see tags/[tag].astro) get one entry
+// whose count matches the page it links to.
+const bySlug = new Map<string, { label: string; toolIds: Set<string> }>();
 for (const tool of tools) {
 	for (const tag of tool.data.tags) {
-		counts.set(tag, (counts.get(tag) ?? 0) + 1);
+		const slug = slugify(tag);
+		const entry = bySlug.get(slug) ?? { label: tag, toolIds: new Set<string>() };
+		if (!entry.label.split(' / ').includes(tag)) entry.label += ` / ${tag}`;
+		entry.toolIds.add(tool.id);
+		bySlug.set(slug, entry);
 	}
 }
-const tags = [...counts.keys()].sort();
+const tags = [...bySlug.entries()]
+	.map(([slug, { label, toolIds }]) => ({ slug, label, count: toolIds.size }))
+	.sort((a, b) => a.slug.localeCompare(b.slug));
 ---
 
 <BaseLayout title="Tags — CLI Tools Directory" command="ls tags/">
@@ -26,10 +34,10 @@ const tags = [...counts.keys()].sort();
 
 	<ul class="links">
 		{
-			tags.map((tag) => (
+			tags.map(({ slug, label, count }) => (
 				<li>
-					<a href={`/tags/${slugify(tag)}`}>
-						#{tag} <span class="count">({counts.get(tag)})</span>
+					<a href={`/tags/${slug}`}>
+						#{label} <span class="count">({count})</span>
 					</a>
 				</li>
 			))

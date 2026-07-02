@@ -73,3 +73,9 @@ export const toolSchema = z.object({
 	ratings: z.array(ratingSchema).optional().default([]),
 	comments: z.array(commentSchema).optional().default([]),
 });
+
+// What the submission form produces: everything except the feedback fields,
+// which only the Worker writes. Types are derived, never re-declared by hand.
+export const toolFormSchema = toolSchema.omit({ ratings: true, comments: true });
+export type ToolFormData = z.infer<typeof toolFormSchema>;
+export type Rating = z.infer<typeof ratingSchema>;
