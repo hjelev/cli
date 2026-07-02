@@ -30,4 +30,5 @@ installation:
 platforms: [Linux, macOS]
 tags: [tui, file-manager, previews, rust]
 logo: "https://avatars.githubusercontent.com/u/275331632?v=4"
+media: "https://elio-fm.github.io/videos/previews.webm"
 ---
