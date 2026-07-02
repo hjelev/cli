@@ -7,7 +7,7 @@ description: |
   vim-style keybindings, fuzzy search, and a plugin system for custom actions.
 repository_url: https://github.com/hjelev/sb
 website: https://masoko.net/sb/
-author: "Masoko"
+author: Masoko
 license: MIT
 language: Rust
 installation:
@@ -17,8 +17,17 @@ installation:
     command: brew install hjelev/tap/sb
   - method: script
     command: Prebuilt binaries and an auto-installer script are available in GitHub Releases
-platforms: [Linux, macOS]
-tags: [tui, file-manager, productivity]
-media: "https://masoko.net/sb/images/screenshot-1.png"
-logo: "https://masoko.net/sb/images/favicon.png"
+platforms:
+  - Linux
+  - macOS
+tags:
+  - tui
+  - file-manager
+  - productivity
+media: https://masoko.net/sb/images/screenshot-1.png
+logo: https://masoko.net/sb/images/favicon.png
+ratings:
+  - user: hjelev
+    value: 5
+    date: '2026-07-02T19:41:34.494Z'
 ---
