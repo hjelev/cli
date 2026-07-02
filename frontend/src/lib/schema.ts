@@ -32,6 +32,7 @@ export const INSTALL_METHODS = [
 	'gem',
 	'docker',
 	'script',
+	'snap',
 	'binary',
 	'other',
 ] as const;
