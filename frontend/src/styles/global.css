@@ -684,6 +684,11 @@ dd {
 	gap: 0.4rem;
 }
 
+.stars-badge {
+	vertical-align: middle;
+	margin-left: 0.5rem;
+}
+
 .media {
 	max-width: 100%;
 	border-radius: var(--radius);
