@@ -5,6 +5,7 @@ import { z } from 'zod';
 // `astro:content` itself is server-only and breaks the browser bundle.
 export const CATEGORIES = [
 	'File Management',
+	'Shell History',
 	'File Listing Utilities',
 	'System Monitoring',
 	'Productivity',
