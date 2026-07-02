@@ -17,7 +17,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [eza](https://eza.rocks) | A modern, maintained replacement for ls. | Rust | [Repo](https://github.com/eza-community/eza), [Website](https://eza.rocks) |
-| [logo-ls](https://eza.rocks/) | A modern ls with VS Code-like file icons and git integration. | Go | [Repo](https://github.com/Yash-Handa/logo-ls), [Website](https://eza.rocks/) |
+| [logo-ls](https://github.com/Yash-Handa/logo-ls) | A modern ls with VS Code-like file icons and git integration. | Go | [Repo](https://github.com/Yash-Handa/logo-ls) |
 | [lsd](https://github.com/lsd-rs/lsd) | The next gen ls command, with colors and icons. | Rust | [Repo](https://github.com/lsd-rs/lsd) |
 
 ### Games & Fun
