@@ -27,6 +27,12 @@ Curated CLI/TUI tools list
 | [logo-ls](https://github.com/Yash-Handa/logo-ls) | A modern ls with VS Code-like file icons and git integration. | Go | [Repo](https://github.com/Yash-Handa/logo-ls) |
 | [lsd](https://github.com/lsd-rs/lsd) | The next gen ls command, with colors and icons. | Rust | [Repo](https://github.com/lsd-rs/lsd) |
 
+### Text Editors & Note-taking
+
+| Name | Description | Language | Links |
+|------|-------------|----------|-------|
+| [fresh](https://getfresh.dev) | A powerful terminal text editor and IDE. | Rust | [Repo](https://github.com/sinelaw/fresh), [Website](https://getfresh.dev) |
+
 ### Games & Fun
 
 | Name | Description | Language | Links |
