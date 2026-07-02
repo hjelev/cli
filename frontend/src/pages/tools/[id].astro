@@ -115,7 +115,7 @@ const starsBadgeUrl = `https://img.shields.io/github/stars/${repoPath}?style=soc
 			<dd><a href={`/categories/${slugify(data.category)}`}>{data.category}</a></dd>
 
 			<dt>Language</dt>
-			<dd>{data.language}</dd>
+			<dd><a href={`/languages/${slugify(data.language)}`}>{data.language}</a></dd>
 
 			<dt>Platforms</dt>
 			<dd>{data.platforms.join(', ')}</dd>
