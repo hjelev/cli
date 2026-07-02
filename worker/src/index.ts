@@ -15,6 +15,7 @@ const REPO_OWNER = 'hjelev';
 const REPO_NAME = 'cli';
 const REPO_BRANCH = 'master';
 const TOOLS_DIR = 'frontend/src/content/tools';
+// Mirrors the textarea maxlength in frontend/src/pages/tools/[id].astro.
 const MAX_COMMENT_LENGTH = 2000;
 
 function corsHeaders(origin: string | null): HeadersInit {
@@ -44,7 +45,9 @@ export default {
 		}
 
 		if (request.method !== 'POST') {
-			return json({ error: 'not_found' }, 404, origin);
+			const res = json({ error: 'method_not_allowed' }, 405, origin);
+			res.headers.set('Allow', 'POST, OPTIONS');
+			return res;
 		}
 
 		if (url.pathname === '/auth/github/token') {
@@ -99,6 +102,8 @@ async function handleTokenExchange(request: Request, env: Env, origin: string | 
 	return json({ access_token: tokenData.access_token }, 200, origin);
 }
 
+// Mirror the zod schemas in frontend/src/lib/schema.ts (separate deploy
+// bundle) — keep in sync.
 interface Rating {
 	user: string;
 	value: number;
@@ -180,6 +185,8 @@ async function handleFeedback(request: Request, env: Env, origin: string | null)
 	return json({ ok: true, user, rating, comment, date }, 200, origin);
 }
 
+// Near-twin of fetchGitHubUser in frontend/src/lib/github-auth.ts (separate
+// deploy bundle) — keep in sync. This one returns null instead of throwing.
 async function fetchGitHubUser(token: string): Promise<{ login: string; avatar_url: string } | null> {
 	const res = await fetch('https://api.github.com/user', {
 		headers: {
@@ -256,6 +263,8 @@ async function getFile(botToken: string, path: string): Promise<{ text: string; 
 	return { text: fromBase64Utf8(data.content), sha: data.sha };
 }
 
+// Bot-token twin of ghFetch in frontend/src/lib/github-submit.ts (separate
+// deploy bundle) — keep in sync.
 function ghApi(botToken: string, path: string, init: RequestInit = {}): Promise<Response> {
 	return fetch(`https://api.github.com${path}`, {
 		...init,
@@ -299,6 +308,8 @@ function applyFeedback(fileText: string, login: string, payload: FeedbackPayload
 	return `---\n${frontmatter}---\n${body}`;
 }
 
+// Duplicated in frontend/src/lib/github-submit.ts (separate deploy bundle) —
+// keep in sync.
 function toBase64Utf8(str: string): string {
 	const bytes = new TextEncoder().encode(str);
 	let binary = '';

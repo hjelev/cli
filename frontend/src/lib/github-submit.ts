@@ -1,24 +1,11 @@
 import { dump } from 'js-yaml';
 import { TARGET_BRANCH, TARGET_OWNER, TARGET_REPO } from './config';
+import { slugify } from './slug';
+import type { ToolFormData } from './schema';
+
+export type { ToolFormData };
 
 const GITHUB_API = 'https://api.github.com';
-
-export interface ToolFormData {
-	name: string;
-	category: string;
-	short_description: string;
-	description: string;
-	repository_url: string;
-	website?: string;
-	author: string;
-	license: string;
-	language: string;
-	installation: Array<{ method: string; command: string }>;
-	platforms: string[];
-	tags: string[];
-	media?: string;
-	logo?: string;
-}
 
 function authHeaders(token: string): HeadersInit {
 	return {
@@ -28,6 +15,8 @@ function authHeaders(token: string): HeadersInit {
 	};
 }
 
+// Runs with the visitor's own OAuth token. The Worker has its own bot-token
+// twin (`ghApi` in worker/src/index.ts) — keep the two in sync.
 async function ghFetch(token: string, path: string, init: RequestInit = {}): Promise<Response> {
 	return fetch(`${GITHUB_API}${path}`, {
 		...init,
@@ -62,9 +51,13 @@ async function ensureFork(token: string, login: string): Promise<void> {
 	throw new Error('Timed out waiting for your fork to become ready. Please try submitting again.');
 }
 
-async function getDefaultBranchSha(token: string): Promise<string> {
-	const res = await ghFetch(token, `/repos/${TARGET_OWNER}/${TARGET_REPO}/git/ref/heads/${TARGET_BRANCH}`);
-	if (!res.ok) throw new Error(await readErrorMessage(res, 'Could not read the upstream default branch.'));
+// Reads the SHA from the *fork's* branch, not upstream's: a returning
+// submitter's fork may be behind, and creating a ref that points at a SHA the
+// fork doesn't have fails. A slightly older base is fine — the PR only adds a
+// new file.
+async function getForkBranchSha(token: string, login: string): Promise<string> {
+	const res = await ghFetch(token, `/repos/${login}/${TARGET_REPO}/git/ref/heads/${TARGET_BRANCH}`);
+	if (!res.ok) throw new Error(await readErrorMessage(res, 'Could not read your fork’s default branch.'));
 	const data = (await res.json()) as { object: { sha: string } };
 	return data.object.sha;
 }
@@ -77,14 +70,7 @@ async function createBranch(token: string, login: string, branch: string, sha: s
 	if (!res.ok) throw new Error(await readErrorMessage(res, 'Could not create a branch on your fork.'));
 }
 
-export function slugify(name: string): string {
-	return name
-		.trim()
-		.toLowerCase()
-		.replace(/[^a-z0-9]+/g, '-')
-		.replace(/^-+|-+$/g, '');
-}
-
+// Duplicated in worker/src/index.ts (separate deploy bundle) — keep in sync.
 function toBase64Utf8(str: string): string {
 	const bytes = new TextEncoder().encode(str);
 	let binary = '';
@@ -99,16 +85,20 @@ function buildToolFileContent(data: ToolFormData): string {
 		short_description: data.short_description,
 		description: data.description,
 		repository_url: data.repository_url,
-		...(data.website ? { website: data.website } : {}),
+		website: data.website,
 		author: data.author,
 		license: data.license,
 		language: data.language,
 		installation: data.installation,
 		platforms: data.platforms,
 		tags: data.tags,
-		...(data.media ? { media: data.media } : {}),
-		...(data.logo ? { logo: data.logo } : {}),
+		media: data.media,
+		logo: data.logo,
 	};
+	// js-yaml would serialize absent optional fields as `key: undefined`.
+	for (const key of Object.keys(frontmatter)) {
+		if (frontmatter[key] === undefined) delete frontmatter[key];
+	}
 	return `---\n${dump(frontmatter)}---\n`;
 }
 
@@ -140,7 +130,7 @@ async function openPullRequest(token: string, login: string, branch: string, tit
 export async function submitTool(token: string, data: ToolFormData): Promise<{ prUrl: string }> {
 	const login = await getAuthenticatedLogin(token);
 	await ensureFork(token, login);
-	const sha = await getDefaultBranchSha(token);
+	const sha = await getForkBranchSha(token, login);
 
 	const slug = slugify(data.name);
 	const branch = `submission-${slug}-${Date.now()}`;

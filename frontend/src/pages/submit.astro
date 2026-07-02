@@ -99,8 +99,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	<script>
 		import { getStoredToken, redirectToGitHubSignIn, signOut, fetchGitHubUser } from '../lib/github-auth';
-		import { submitTool, type ToolFormData } from '../lib/github-submit';
-		import { toolSchema, INSTALL_METHODS } from '../lib/schema';
+		import { submitTool } from '../lib/github-submit';
+		import { toolFormSchema, INSTALL_METHODS } from '../lib/schema';
 
 		const signedOutSection = document.getElementById('signed-out') as HTMLElement;
 		const signedInSection = document.getElementById('signed-in') as HTMLElement;
@@ -109,6 +109,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		const formStatus = document.getElementById('form-status') as HTMLElement;
 		const installationRows = document.getElementById('installation-rows') as HTMLElement;
 		const addInstallationRowBtn = document.getElementById('add-installation-row') as HTMLButtonElement;
+		const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
 
 		function createInstallationRow(): HTMLElement {
 			const row = document.createElement('div');
@@ -206,7 +207,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			const installation = installMethods
 				.map((method, i) => ({ method, command: (installCommands[i] ?? '').trim() }))
 				.filter((entry) => entry.command);
-			const candidate: ToolFormData = {
+			const candidate = {
 				name: String(formData.get('name') ?? '').trim(),
 				category: String(formData.get('category') ?? ''),
 				short_description: String(formData.get('short_description') ?? '').trim(),
@@ -223,26 +224,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				logo: optional(String(formData.get('logo') ?? '')),
 			};
 
-			const validation = toolSchema.safeParse(candidate);
+			const validation = toolFormSchema.safeParse(candidate);
 			if (!validation.success) {
 				formStatus.textContent = `Please fix: ${validation.error.issues.map((issue) => issue.message).join(', ')}`;
 				return;
 			}
 
 			formStatus.textContent = 'Submitting — forking, committing, and opening a pull request…';
-			(form.querySelector('button[type="submit"]') as HTMLButtonElement).disabled = true;
+			submitBtn.disabled = true;
 
 			try {
-				const { prUrl } = await submitTool(token, candidate);
-				formStatus.innerHTML = `Submitted! <a href="${prUrl}" target="_blank" rel="noopener">View your pull request</a>.`;
+				const { prUrl } = await submitTool(token, validation.data);
+				const link = document.createElement('a');
+				link.href = prUrl;
+				link.target = '_blank';
+				link.rel = 'noopener';
+				link.textContent = 'View your pull request';
+				formStatus.replaceChildren('Submitted! ', link, '.');
 				form.reset();
-				installationRows.innerHTML = '';
-				installationRows.appendChild(createInstallationRow());
+				installationRows.replaceChildren(createInstallationRow());
 				updateRemoveButtons();
 			} catch (error) {
 				formStatus.textContent = error instanceof Error ? error.message : 'Submission failed.';
 			} finally {
-				(form.querySelector('button[type="submit"]') as HTMLButtonElement).disabled = false;
+				submitBtn.disabled = false;
 			}
 		});
 

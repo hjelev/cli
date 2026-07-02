@@ -1,8 +1,6 @@
 import { execSync } from 'node:child_process';
-import fs from 'node:fs';
 import path from 'node:path';
-import matter from 'gray-matter';
-import { toolSchema } from '../src/lib/schema.ts';
+import { parseToolFile } from './lib/load-tool.ts';
 
 const repoRoot = path.resolve(import.meta.dirname, '..');
 // `git diff --name-only` prints paths relative to the git top-level, even when
@@ -50,25 +48,24 @@ let hasErrors = false;
 
 for (const relativePath of changedFiles) {
 	const fullPath = path.resolve(gitRoot, relativePath);
-	const raw = fs.readFileSync(fullPath, 'utf8');
-	const { data } = matter(raw);
-	const result = toolSchema.safeParse(data);
+	const parsed = parseToolFile(fullPath);
 
-	if (!result.success) {
+	if ('issues' in parsed) {
 		hasErrors = true;
 		console.error(`\n❌ ${relativePath} — schema validation failed:`);
-		for (const issue of result.error.issues) {
-			console.error(`   - ${issue.path.join('.') || '(root)'}: ${issue.message}`);
+		for (const issue of parsed.issues) {
+			console.error(`   - ${issue}`);
 		}
 		continue;
 	}
 	console.log(`✅ ${relativePath}: schema valid`);
 
+	const { tool } = parsed;
 	const urlFields: Array<[string, string | undefined]> = [
-		['repository_url', result.data.repository_url],
-		['website', result.data.website],
-		['media', result.data.media],
-		['logo', result.data.logo],
+		['repository_url', tool.repository_url],
+		['website', tool.website],
+		['media', tool.media],
+		['logo', tool.logo],
 	];
 
 	for (const [field, url] of urlFields) {

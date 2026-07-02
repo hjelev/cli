@@ -2,11 +2,8 @@
 // tool's .md frontmatter (see schema.ts `ratingSchema`); the average is
 // computed at build time and shown on cards and the detail page.
 
-export interface Rating {
-	user: string;
-	value: number;
-	date: string;
-}
+export type { Rating } from './schema';
+import type { Rating } from './schema';
 
 export function ratingSummary(ratings: Rating[] = []): { count: number; average: number } {
 	const count = ratings.length;
