@@ -3,13 +3,13 @@ updated: '2026-07-02'
 name: superfile
 category: File Management
 short_description: Pretty fancy and modern terminal file manager
-description: | 
+description: >- 
   Superfile is a highly customizable, modern terminal-based file manager written in Go that focuses on providing a visually appealing and intuitive user interface. 
   
 
   It features multiple interactive panels for simultaneous directory viewing, alongside extensive configuration options that allow users to easily personalize their themes and hotkeys. 
   
-  
+
   The project is open-source, actively maintained on GitHub, and designed to be compatible with Linux, macOS, and Windows operating systems.
 repository_url: https://github.com/yorukot/superfile
 website: https://superfile.dev
