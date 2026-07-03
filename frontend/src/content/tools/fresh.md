@@ -3,7 +3,7 @@ updated: '2026-07-02'
 name: fresh
 category: Text Editors & Note-taking
 short_description: A powerful terminal text editor and IDE.
-description: >-
+description: |
   A modern, full-featured terminal text editor, with zero configuration.
   Familiar keybindings, mouse support, and IDE-level features — no learning
   curve required.
