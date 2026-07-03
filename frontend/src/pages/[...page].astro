@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/schema';
+import { getSortedTools, sortByUpdated } from '../lib/tools';
 import { PAGE_SIZE } from '../lib/config';
 import { ratingSummary, stars } from '../lib/ratings';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -9,7 +10,7 @@ import ToolCard from '../components/ToolCard.astro';
 import Pagination from '../components/Pagination.astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
-	const tools = await getCollection('tools');
+	const tools = await getSortedTools();
 	return paginate(tools, { pageSize: PAGE_SIZE });
 }) satisfies GetStaticPaths;
 
@@ -17,7 +18,7 @@ const { page } = Astro.props;
 
 // The <select> options and the client-side search index are built from the FULL
 // collection so filtering works across every page, not just this page's slice.
-const allTools = await getCollection('tools');
+const allTools = sortByUpdated(await getCollection('tools'));
 const languages = [...new Set(allTools.map((tool) => tool.data.language))].sort();
 const usedCategories = new Set(allTools.map((tool) => tool.data.category));
 const categories = CATEGORIES.filter((category) => usedCategories.has(category));
@@ -89,7 +90,7 @@ const status =
 	<p id="empty-state" hidden>No tools match your filters.</p>
 
 	<ul id="tool-grid">
-		{page.data.map((tool, i) => <ToolCard tool={tool} index={page.start + i + 1} />)}
+		{page.data.map((tool) => <ToolCard tool={tool} />)}
 	</ul>
 
 	<!-- Populated by the search script when a filter is active; hidden otherwise. -->
@@ -133,12 +134,6 @@ const status =
 
 			const a = document.createElement('a');
 			a.href = `/tools/${tool.id}`;
-
-			const marker = document.createElement('span');
-			marker.className = 'tool-index';
-			marker.setAttribute('aria-hidden', 'true');
-			marker.textContent = '·';
-			a.append(marker);
 
 			const nameWrap = document.createElement('div');
 			nameWrap.className = 'tool-name';

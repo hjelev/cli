@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: superfile
 category: File Management
 short_description: Pretty fancy and modern terminal file manager

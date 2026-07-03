@@ -73,12 +73,15 @@ export const toolSchema = z.object({
 	tags: z.array(z.string()),
 	media: z.url().optional(),
 	logo: z.url().optional(),
+	// ISO YYYY-MM-DD date the tool's content was last changed. Stamped on
+	// submission; preserved (never bumped) by the ratings/comments Worker path.
+	updated: z.string().optional(),
 	ratings: z.array(ratingSchema).optional().default([]),
 	comments: z.array(commentSchema).optional().default([]),
 });
 
 // What the submission form produces: everything except the feedback fields,
 // which only the Worker writes. Types are derived, never re-declared by hand.
-export const toolFormSchema = toolSchema.omit({ ratings: true, comments: true });
+export const toolFormSchema = toolSchema.omit({ updated: true, ratings: true, comments: true });
 export type ToolFormData = z.infer<typeof toolFormSchema>;
 export type Rating = z.infer<typeof ratingSchema>;

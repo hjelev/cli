@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: lsd
 category: File Listing Utilities
 short_description: The next gen ls command, with colors and icons.

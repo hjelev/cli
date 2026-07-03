@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: fresh
 category: Text Editors & Note-taking
 short_description: A powerful terminal text editor and IDE.

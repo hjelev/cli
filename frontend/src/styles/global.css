@@ -400,7 +400,7 @@ textarea {
 
 .tool-card > a {
 	display: grid;
-	grid-template-columns: 2.25rem minmax(130px, 190px) 1fr auto;
+	grid-template-columns: minmax(130px, 190px) 1fr auto;
 	align-items: center;
 	gap: 0.35rem 1.25rem;
 	padding: 0.85rem 0.5rem;
@@ -411,18 +411,6 @@ textarea {
 .tool-card > a:hover {
 	background: var(--panel-hi);
 	text-decoration: none;
-}
-
-.tool-index {
-	font-family: var(--font-display);
-	font-size: 0.8rem;
-	color: var(--fg-faint);
-	font-variant-numeric: tabular-nums;
-	text-align: right;
-}
-
-.tool-card > a:hover .tool-index {
-	color: var(--accent-rust);
 }
 
 .tool-name {
@@ -949,10 +937,6 @@ button[type='submit']:disabled {
 
 	.tool-card > a {
 		grid-template-columns: 1fr;
-	}
-
-	.tool-index {
-		display: none;
 	}
 
 	.statusline {

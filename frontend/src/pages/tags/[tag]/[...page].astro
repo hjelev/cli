@@ -1,6 +1,7 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
+import { sortByUpdated } from '../../../lib/tools';
 import { slugify } from '../../../lib/slug';
 import { PAGE_SIZE } from '../../../lib/config';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
@@ -22,7 +23,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 	}
 	return [...tagsBySlug.entries()].flatMap(([slug, tags]) =>
 		paginate(
-			tools.filter((tool) => tool.data.tags.some((t) => slugify(t) === slug)),
+			sortByUpdated(tools.filter((tool) => tool.data.tags.some((t) => slugify(t) === slug))),
 			{
 				params: { tag: slug },
 				props: { tag: tags.join(' / ') },

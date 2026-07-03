@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: nnn
 category: File Management
 short_description: n³ The unorthodox terminal file manager

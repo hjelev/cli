@@ -94,6 +94,7 @@ function buildToolFileContent(data: ToolFormData): string {
 		tags: data.tags,
 		media: data.media,
 		logo: data.logo,
+		updated: new Date().toISOString().slice(0, 10),
 	};
 	// js-yaml would serialize absent optional fields as `key: undefined`.
 	for (const key of Object.keys(frontmatter)) {

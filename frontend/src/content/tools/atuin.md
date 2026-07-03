@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: atuin
 category: Shell History
 short_description: ✨ Making your shell magical

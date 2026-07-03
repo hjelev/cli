@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: mc
 category: File Management
 short_description: GNU Midnight Commander, a text-mode full-screen file manager.

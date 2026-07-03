@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: ttt
 category: Text Editors & Note-taking
 short_description: >-

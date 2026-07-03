@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: tetro-tui
 category: Games & Fun
 short_description: A modern, highly customizable tetromino-stacking game for the terminal.

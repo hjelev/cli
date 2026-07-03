@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: eza
 category: File Listing Utilities
 short_description: A modern, maintained replacement for ls.

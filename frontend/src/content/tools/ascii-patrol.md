@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: ascii patrol
 category: Games & Fun
 short_description: >-

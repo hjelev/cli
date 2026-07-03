@@ -4,11 +4,9 @@ import { ratingSummary, stars } from '../lib/ratings';
 
 interface Props {
 	tool: CollectionEntry<'tools'>;
-	index?: number;
 }
 
-const { tool, index } = Astro.props;
-const marker = index != null ? String(index).padStart(2, '0') : '·';
+const { tool } = Astro.props;
 const { count: ratingCount, average: ratingAverage } = ratingSummary(tool.data.ratings);
 ---
 
@@ -19,7 +17,6 @@ const { count: ratingCount, average: ratingAverage } = ratingSummary(tool.data.r
 	data-search={`${tool.data.name} ${tool.data.short_description} ${tool.data.tags.join(' ')}`.toLowerCase()}
 >
 	<a href={`/tools/${tool.id}`}>
-		<span class="tool-index" aria-hidden="true">{marker}</span>
 		<div class="tool-name">
 			{tool.data.logo && <img src={tool.data.logo} alt="" width="44" height="44" />}
 			<h2>{tool.data.name}</h2>

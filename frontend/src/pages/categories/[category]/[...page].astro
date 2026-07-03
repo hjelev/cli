@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../../../lib/schema';
+import { sortByUpdated } from '../../../lib/tools';
 import { slugify } from '../../../lib/slug';
 import { PAGE_SIZE } from '../../../lib/config';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
@@ -13,7 +14,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 	return CATEGORIES.flatMap((category) => {
 		const list = tools.filter((tool) => tool.data.category === category);
 		if (list.length === 0) return [];
-		return paginate(list, {
+		return paginate(sortByUpdated(list), {
 			params: { category: slugify(category) },
 			props: { category },
 			pageSize: PAGE_SIZE,

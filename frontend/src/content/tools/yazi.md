@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: yazi
 category: File Management
 short_description: Blazing fast terminal file manager written in Rust, based on async I/O.

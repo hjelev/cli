@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: logo-ls
 category: File Listing Utilities
 short_description: A modern ls with VS Code-like file icons and git integration.

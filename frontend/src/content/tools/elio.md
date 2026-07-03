@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: elio
 category: File Management
 short_description: Snappy, batteries-included terminal file manager with rich previews.

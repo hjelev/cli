@@ -1,4 +1,5 @@
 ---
+updated: '2026-07-02'
 name: slap
 category: Text Editors & Note-taking
 short_description: Sublime-like terminal-based text editor
