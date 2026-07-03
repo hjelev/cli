@@ -740,6 +740,11 @@ dd {
 	margin-left: 0.5rem;
 }
 
+.favicon {
+	vertical-align: middle;
+	margin-right: 0.4rem;
+}
+
 .media {
 	display: block;
 	max-width: 100%;

@@ -23,6 +23,16 @@ const repoPath = data.repository_url
 	.replace(/\.git$/, '')
 	.replace(/\/+$/, '');
 const starsBadgeUrl = `https://img.shields.io/github/stars/${repoPath}?style=social`;
+
+let faviconUrl = '';
+if (data.website) {
+	try {
+		const host = new URL(data.website).hostname;
+		faviconUrl = `https://www.google.com/s2/favicons?domain=${host}&sz=32`;
+	} catch {
+		faviconUrl = ''; // malformed URL → no icon
+	}
+}
 ---
 
 <BaseLayout title={`${data.name} — CLI Tools Directory`} command={`man ${tool.id}`}>
@@ -144,6 +154,16 @@ const starsBadgeUrl = `https://img.shields.io/github/stars/${repoPath}?style=soc
 			{
 				data.website && (
 					<li>
+						{faviconUrl && (
+							<img
+								class="favicon"
+								src={faviconUrl}
+								alt=""
+								width="16"
+								height="16"
+								loading="lazy"
+							/>
+						)}
 						<a href={data.website} target="_blank" rel="noopener">
 							Website &nearr;
 						</a>
