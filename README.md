@@ -7,6 +7,7 @@ Curated CLI/TUI tools list
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
+| [broot](https://dystroy.org/broot/) | A new way to see and navigate directory trees | Rust | [Repo](https://github.com/Canop/broot), [Website](https://dystroy.org/broot/) |
 | [elio](https://elio-fm.github.io/) | Snappy, batteries-included terminal file manager with rich previews. | Rust | [Repo](https://github.com/elio-fm/elio), [Website](https://elio-fm.github.io/) |
 | [mc](https://midnight-commander.org) | GNU Midnight Commander, a text-mode full-screen file manager. | C | [Repo](https://github.com/MidnightCommander/mc), [Website](https://midnight-commander.org) |
 | [nnn](https://github.com/jarun/nnn) | n³ The unorthodox terminal file manager | C | [Repo](https://github.com/jarun/nnn) |
