@@ -1,0 +1,50 @@
+---
+import type { Page } from 'astro';
+
+interface Props {
+	page: Page;
+}
+
+const { page } = Astro.props;
+const { currentPage, lastPage } = page;
+
+// Base path shared by every page in this set (i.e. page 1's path). `page.url.first`
+// is undefined while on page 1, so derive the base from the current URL instead by
+// stripping any trailing `/<currentPage>` segment. Works for the root ('/') and for
+// nested routes ('/categories/cli').
+const stripped = page.url.current.replace(new RegExp(`/${currentPage}/?$`), '');
+const base = stripped === '/' ? '' : stripped.replace(/\/$/, '');
+const href = (n: number) => (n === 1 ? base || '/' : `${base}/${n}`);
+
+const numbers = Array.from({ length: lastPage }, (_, i) => i + 1);
+---
+
+{
+	lastPage > 1 && (
+		<nav class="pagination" aria-label="Pagination">
+			{page.url.prev ? (
+				<a class="page-nav" href={page.url.prev} rel="prev">&larr; prev</a>
+			) : (
+				<span class="page-nav disabled">&larr; prev</span>
+			)}
+
+			<ul class="page-numbers">
+				{numbers.map((n) => (
+					<li>
+						{n === currentPage ? (
+							<span class="page-num current" aria-current="page">{n}</span>
+						) : (
+							<a class="page-num" href={href(n)}>{n}</a>
+						)}
+					</li>
+				))}
+			</ul>
+
+			{page.url.next ? (
+				<a class="page-nav" href={page.url.next} rel="next">next &rarr;</a>
+			) : (
+				<span class="page-nav disabled">next &rarr;</span>
+			)}
+		</nav>
+	)
+}

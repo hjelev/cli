@@ -8,3 +8,8 @@ export const OAUTH_SCOPE = 'public_repo';
 export const TARGET_OWNER = 'hjelev';
 export const TARGET_REPO = 'cli';
 export const TARGET_BRANCH = 'master';
+
+// Number of tool listings shown per page before pagination kicks in. Shared by
+// the home listing and the category/tag/language routes so every paginated view
+// splits at the same size.
+export const PAGE_SIZE = 10;

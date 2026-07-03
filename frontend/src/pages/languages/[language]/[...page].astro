@@ -1,0 +1,47 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import { slugify } from '../../../lib/slug';
+import { PAGE_SIZE } from '../../../lib/config';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ToolCard from '../../../components/ToolCard.astro';
+import Pagination from '../../../components/Pagination.astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const tools = await getCollection('tools');
+	// Distinct language names can share a slug, so group by slug: one page (set)
+	// per slug, listing every tool whose language maps to it.
+	const languagesBySlug = new Map<string, string[]>();
+	for (const tool of tools) {
+		const slug = slugify(tool.data.language);
+		const languages = languagesBySlug.get(slug) ?? [];
+		if (!languages.includes(tool.data.language)) languages.push(tool.data.language);
+		languagesBySlug.set(slug, languages);
+	}
+	return [...languagesBySlug.entries()].flatMap(([slug, languages]) =>
+		paginate(
+			tools.filter((tool) => slugify(tool.data.language) === slug),
+			{
+				params: { language: slug },
+				props: { language: languages.join(' / ') },
+				pageSize: PAGE_SIZE,
+			},
+		),
+	);
+}) satisfies GetStaticPaths;
+
+const { page, language } = Astro.props;
+---
+
+<BaseLayout title={`${language} — CLI Tools Directory`} command={`ls languages/${slugify(language)}`}>
+	<a class="back" href="/languages">&larr; cd ..</a>
+
+	<header class="hero">
+		<h1>{language}</h1>
+		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} written in {language}</p>
+	</header>
+
+	<ul id="tool-grid">{page.data.map((tool) => <ToolCard tool={tool} />)}</ul>
+
+	<Pagination page={page} />
+</BaseLayout>

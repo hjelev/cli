@@ -1,0 +1,38 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import { CATEGORIES } from '../../../lib/schema';
+import { slugify } from '../../../lib/slug';
+import { PAGE_SIZE } from '../../../lib/config';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ToolCard from '../../../components/ToolCard.astro';
+import Pagination from '../../../components/Pagination.astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const tools = await getCollection('tools');
+	return CATEGORIES.flatMap((category) => {
+		const list = tools.filter((tool) => tool.data.category === category);
+		if (list.length === 0) return [];
+		return paginate(list, {
+			params: { category: slugify(category) },
+			props: { category },
+			pageSize: PAGE_SIZE,
+		});
+	});
+}) satisfies GetStaticPaths;
+
+const { page, category } = Astro.props;
+---
+
+<BaseLayout title={`${category} — CLI Tools Directory`} command={`ls categories/${slugify(category)}`}>
+	<a class="back" href="/categories">&larr; cd ..</a>
+
+	<header class="hero">
+		<h1>{category}</h1>
+		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} in this category</p>
+	</header>
+
+	<ul id="tool-grid">{page.data.map((tool) => <ToolCard tool={tool} />)}</ul>
+
+	<Pagination page={page} />
+</BaseLayout>
