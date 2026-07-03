@@ -36,6 +36,11 @@ const starsBadgeUrl = `https://img.shields.io/github/stars/${repoPath}?style=soc
 		</div>
 	</header>
 
+	{data.media && (/\.(webm|mp4)(\?.*)?$/i.test(data.media)
+		? <video class="media" src={data.media} autoplay loop muted playsinline controls />
+		: <img class="media" src={data.media} alt={`${data.name} demo`} />
+	)}
+
 	<section class="man-section">
 		<h2>DESCRIPTION</h2>
 		<p>{data.description}</p>
@@ -158,11 +163,6 @@ const starsBadgeUrl = `https://img.shields.io/github/stars/${repoPath}?style=soc
 			))}
 		</ul>
 	</section>
-
-	{data.media && (/\.(webm|mp4)(\?.*)?$/i.test(data.media)
-		? <video class="media" src={data.media} autoplay loop muted playsinline controls />
-		: <img class="media" src={data.media} alt={`${data.name} demo`} />
-	)}
 
 	<section class="man-section feedback" id="feedback" data-tool-id={tool.id}>
 		<h2>RATINGS</h2>
