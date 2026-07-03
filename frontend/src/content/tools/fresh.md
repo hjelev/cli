@@ -7,14 +7,10 @@ description: |
   A modern, full-featured terminal text editor, with zero configuration.
   Familiar keybindings, mouse support, and IDE-level features — no learning
   curve required.
-
-
   Fresh brings the intuitive UX of VS Code and Sublime Text to the terminal.
   Standard keybindings, full mouse support, menus, and a command palette —
   everything works the way you'd expect, right out of the box. No modes, no
   memorizing shortcuts.
-
-
   Built for real-world performance: Fresh handles multi-gigabyte files with
   negligible memory overhead and delivers consistently low-latency input,
   regardless of file size.

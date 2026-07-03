@@ -7,28 +7,17 @@ description: |
   slap is a Sublime-like terminal-based text editor that strives to make editing
   from the terminal easier. It has:
 
-
-  first-class mouse support (even over an SSH connection)
-
-  a Sublime-like file sidebar
-
-  double-click to select word, highlight other occurrences
-
-  configurable Sublime-like keybindings* (Ctrl+S save, Ctrl+Z undo, etc.)
-
-  copying/pasting with OS clipboard support
-
-  infinite undo/redo
-
-  syntax highlighting for 100+ languages
-
-  bracket matching
-
-  autoindentation
-
-  heavily customizeable via plugins
-
-  ... many other features that will make you leave nano, vim, and emacs behind
+  - first-class mouse support (even over an SSH connection)
+  - a Sublime-like file sidebar
+  - double-click to select word, highlight other occurrences
+  - configurable Sublime-like keybindings* (Ctrl+S save, Ctrl+Z undo, etc.)
+  - copying/pasting with OS clipboard support
+  - infinite undo/redo
+  - syntax highlighting for 100+ languages
+  - bracket matching
+  - autoindentation
+  - heavily customizeable via plugins
+  - ... many other features that will make you leave nano, vim, and emacs behind
 repository_url: https://github.com/slap-editor/slap
 author: Dan Kaplun
 license: MIT
