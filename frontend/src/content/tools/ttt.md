@@ -36,5 +36,5 @@ tags:
   - code-editor
   - ide
 media: https://github.com/eugenioenko/ttt/raw/main/docs-web/public/demo/demo.gif
-logo: https://avatars.githubusercontent.com/u/17834212?v=4
+logo: https://tttedit.dev/_astro/logo.9JdCUVB0.svg
 ---
