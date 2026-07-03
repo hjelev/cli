@@ -4,7 +4,7 @@ import { slugify } from '../../lib/slug';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const tools = await getCollection('tools');
-// Group by slug so languages that collide (see languages/[language].astro)
+// Group by slug so languages that collide (see languages/[language]/[...page].astro)
 // get one entry whose count matches the page it links to.
 const bySlug = new Map<string, { label: string; toolIds: Set<string> }>();
 for (const tool of tools) {

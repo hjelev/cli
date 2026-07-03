@@ -387,7 +387,8 @@ textarea {
 
 /* ---------- listing ---------- */
 
-#tool-grid {
+#tool-grid,
+#search-results {
 	list-style: none;
 	padding: 0;
 	border-top: 1px solid var(--border);
@@ -514,6 +515,68 @@ textarea {
 .count {
 	color: var(--fg-dim);
 	font-size: 0.85em;
+}
+
+/* ---------- pagination ---------- */
+
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem 1rem;
+	margin: 1.5rem 0;
+	font-family: var(--font-display);
+	font-size: 0.85rem;
+}
+
+.page-nav {
+	color: var(--fg-dim);
+	white-space: nowrap;
+}
+
+.page-nav:hover {
+	color: var(--accent-rust);
+	text-decoration: none;
+}
+
+.page-nav.disabled {
+	color: var(--fg-faint);
+	cursor: default;
+}
+
+.page-numbers {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.4rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.page-num {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 1.9rem;
+	padding: 0.25rem 0.5rem;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	color: var(--fg-dim);
+	font-variant-numeric: tabular-nums;
+}
+
+a.page-num:hover {
+	border-color: var(--accent-rust);
+	color: var(--accent-rust);
+	text-decoration: none;
+}
+
+.page-num.current {
+	border-color: var(--accent-rust);
+	color: var(--accent-rust);
+	background: var(--panel);
 }
 
 /* ---------- man page (tool detail) ---------- */

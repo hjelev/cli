@@ -1,0 +1,49 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import { slugify } from '../../../lib/slug';
+import { PAGE_SIZE } from '../../../lib/config';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ToolCard from '../../../components/ToolCard.astro';
+import Pagination from '../../../components/Pagination.astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const tools = await getCollection('tools');
+	// Distinct tags can share a slug (e.g. "C++" and "C#" → "c"), so group by
+	// slug: one page (set) per slug, listing every tool whose tags map to it.
+	const tagsBySlug = new Map<string, string[]>();
+	for (const tool of tools) {
+		for (const tag of tool.data.tags) {
+			const slug = slugify(tag);
+			const tags = tagsBySlug.get(slug) ?? [];
+			if (!tags.includes(tag)) tags.push(tag);
+			tagsBySlug.set(slug, tags);
+		}
+	}
+	return [...tagsBySlug.entries()].flatMap(([slug, tags]) =>
+		paginate(
+			tools.filter((tool) => tool.data.tags.some((t) => slugify(t) === slug)),
+			{
+				params: { tag: slug },
+				props: { tag: tags.join(' / ') },
+				pageSize: PAGE_SIZE,
+			},
+		),
+	);
+}) satisfies GetStaticPaths;
+
+const { page, tag } = Astro.props;
+---
+
+<BaseLayout title={`#${tag} — CLI Tools Directory`} command={`ls tags/${slugify(tag)}`}>
+	<a class="back" href="/tags">&larr; cd ..</a>
+
+	<header class="hero">
+		<h1>#{tag}</h1>
+		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} tagged {tag}</p>
+	</header>
+
+	<ul id="tool-grid">{page.data.map((tool) => <ToolCard tool={tool} />)}</ul>
+
+	<Pagination page={page} />
+</BaseLayout>

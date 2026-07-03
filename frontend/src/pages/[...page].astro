@@ -1,0 +1,233 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import { CATEGORIES } from '../lib/schema';
+import { PAGE_SIZE } from '../lib/config';
+import { ratingSummary, stars } from '../lib/ratings';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ToolCard from '../components/ToolCard.astro';
+import Pagination from '../components/Pagination.astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const tools = await getCollection('tools');
+	return paginate(tools, { pageSize: PAGE_SIZE });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+
+// The <select> options and the client-side search index are built from the FULL
+// collection so filtering works across every page, not just this page's slice.
+const allTools = await getCollection('tools');
+const languages = [...new Set(allTools.map((tool) => tool.data.language))].sort();
+const usedCategories = new Set(allTools.map((tool) => tool.data.category));
+const categories = CATEGORIES.filter((category) => usedCategories.has(category));
+
+// Compact search index embedded once per page. Rating strings are precomputed
+// here (via the same helpers as ToolCard) so the browser never re-implements the
+// rating math. `search` mirrors ToolCard's `data-search`.
+const searchIndex = allTools.map((tool) => {
+	const { count, average } = ratingSummary(tool.data.ratings);
+	return {
+		id: tool.id,
+		name: tool.data.name,
+		short: tool.data.short_description,
+		category: tool.data.category,
+		language: tool.data.language,
+		tags: tool.data.tags,
+		logo: tool.data.logo ?? null,
+		search: `${tool.data.name} ${tool.data.short_description} ${tool.data.tags.join(' ')}`.toLowerCase(),
+		stars: count > 0 ? stars(average) : null,
+		ratingLabel: count > 0 ? `${average.toFixed(1)} (${count})` : null,
+	};
+});
+// Escape `<` so tool data can never break out of the <script> element.
+const indexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
+
+const status =
+	page.lastPage > 1
+		? `page ${page.currentPage}/${page.lastPage} · ${page.total} tools`
+		: `${page.total} tools indexed`;
+---
+
+<BaseLayout title="CLI Tools Directory" command="browse --all" status={status}>
+	<header class="hero">
+		<h1>CLI Tools Directory</h1>
+		<p class="tagline"># command-line tools, submitted by the people who use them</p>
+		<p class="hero-stats">
+			<span><b>{page.total}</b> tools</span>
+			<span class="sep">·</span>
+			<span><b>{usedCategories.size}</b> categories</span>
+			<span class="sep">·</span>
+			<span><b>{languages.length}</b> languages</span>
+		</p>
+		<div class="hero-actions">
+			<nav class="browse-links">
+				<a href="/categories">ls categories/</a>
+				<a href="/tags">ls tags/</a>
+				<a href="/languages">ls languages/</a>
+			</nav>
+		</div>
+	</header>
+
+	<section id="filters" class="filters">
+		<label class="search-field">
+			<span class="caret" aria-hidden="true">$</span>
+			<input id="search" type="search" placeholder="Search tools…" />
+		</label>
+
+		<select id="category-filter">
+			<option value="">All categories</option>
+			{categories.map((category) => <option value={category}>{category}</option>)}
+		</select>
+
+		<select id="language-filter">
+			<option value="">All languages</option>
+			{languages.map((language) => <option value={language}>{language}</option>)}
+		</select>
+	</section>
+
+	<p id="empty-state" hidden>No tools match your filters.</p>
+
+	<ul id="tool-grid">
+		{page.data.map((tool, i) => <ToolCard tool={tool} index={page.start + i + 1} />)}
+	</ul>
+
+	<!-- Populated by the search script when a filter is active; hidden otherwise. -->
+	<ul id="search-results" hidden></ul>
+
+	<Pagination page={page} />
+
+	<script type="application/json" id="tools-index" set:html={indexJson} />
+
+	<script>
+		interface ToolIndexEntry {
+			id: string;
+			name: string;
+			short: string;
+			category: string;
+			language: string;
+			tags: string[];
+			logo: string | null;
+			search: string;
+			stars: string | null;
+			ratingLabel: string | null;
+		}
+
+		const search = document.getElementById('search') as HTMLInputElement;
+		const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
+		const languageFilter = document.getElementById('language-filter') as HTMLSelectElement;
+		const grid = document.getElementById('tool-grid') as HTMLUListElement;
+		const results = document.getElementById('search-results') as HTMLUListElement;
+		const pagination = document.querySelector('.pagination') as HTMLElement | null;
+		const emptyState = document.getElementById('empty-state') as HTMLElement;
+		const tools = JSON.parse(
+			(document.getElementById('tools-index') as HTMLScriptElement).textContent!,
+		) as ToolIndexEntry[];
+
+		// keep in sync with ToolCard.astro — builds the same markup from the search index.
+		function renderCard(tool: ToolIndexEntry): HTMLLIElement {
+			const li = document.createElement('li');
+			li.className = 'tool-card';
+			li.dataset.category = tool.category;
+			li.dataset.language = tool.language;
+
+			const a = document.createElement('a');
+			a.href = `/tools/${tool.id}`;
+
+			const marker = document.createElement('span');
+			marker.className = 'tool-index';
+			marker.setAttribute('aria-hidden', 'true');
+			marker.textContent = '·';
+			a.append(marker);
+
+			const nameWrap = document.createElement('div');
+			nameWrap.className = 'tool-name';
+			if (tool.logo) {
+				const img = document.createElement('img');
+				img.src = tool.logo;
+				img.alt = '';
+				img.width = 44;
+				img.height = 44;
+				nameWrap.append(img);
+			}
+			const h2 = document.createElement('h2');
+			h2.textContent = tool.name;
+			nameWrap.append(h2);
+			a.append(nameWrap);
+
+			const desc = document.createElement('p');
+			desc.textContent = tool.short;
+			a.append(desc);
+
+			if (tool.stars) {
+				const rating = document.createElement('div');
+				rating.className = 'card-rating';
+				const starsSpan = document.createElement('span');
+				starsSpan.className = 'stars';
+				starsSpan.textContent = tool.stars;
+				const meta = document.createElement('span');
+				meta.className = 'rating-meta';
+				meta.textContent = tool.ratingLabel;
+				rating.append(starsSpan, meta);
+				a.append(rating);
+			}
+
+			const badges = document.createElement('div');
+			badges.className = 'badges';
+			for (const text of [tool.language, tool.category]) {
+				const badge = document.createElement('span');
+				badge.className = 'badge';
+				badge.textContent = text;
+				badges.append(badge);
+			}
+			a.append(badges);
+
+			const tags = document.createElement('ul');
+			tags.className = 'tags';
+			for (const tag of tool.tags) {
+				const tagLi = document.createElement('li');
+				tagLi.textContent = tag;
+				tags.append(tagLi);
+			}
+			a.append(tags);
+
+			li.append(a);
+			return li;
+		}
+
+		function applyFilters() {
+			const query = search.value.trim().toLowerCase();
+			const category = categoryFilter.value;
+			const language = languageFilter.value;
+			const filtering = query !== '' || category !== '' || language !== '';
+
+			if (!filtering) {
+				// Default paginated browsing: show this page's static grid + nav.
+				grid.hidden = false;
+				if (pagination) pagination.hidden = false;
+				results.hidden = true;
+				results.replaceChildren();
+				emptyState.hidden = true;
+				return;
+			}
+
+			// Active filter: search across ALL tools, ignoring pagination.
+			const matches = tools.filter((tool) => {
+				const matchesQuery = !query || tool.search.includes(query);
+				const matchesCategory = !category || tool.category === category;
+				const matchesLanguage = !language || tool.language === language;
+				return matchesQuery && matchesCategory && matchesLanguage;
+			});
+
+			results.replaceChildren(...matches.map(renderCard));
+			grid.hidden = true;
+			if (pagination) pagination.hidden = true;
+			results.hidden = false;
+			emptyState.hidden = matches.length > 0;
+		}
+
+		search.addEventListener('input', applyFilters);
+		categoryFilter.addEventListener('change', applyFilters);
+		languageFilter.addEventListener('change', applyFilters);
+	</script>
+</BaseLayout>
