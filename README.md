@@ -21,6 +21,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [atuin](https://atuin.sh/) | ✨ Making your shell magical | Rust | [Repo](https://github.com/atuinsh/atuin), [Website](https://atuin.sh/) |
+| [nat](https://github.com/willdoescode/nat) | About `ls` alternative with useful info and a splash of color 🎨 | Rust | [Repo](https://github.com/willdoescode/nat) |
 | [suvadu](https://suvadu.sh) | Shell history replacement with AI agent tracking and MCP server. Built in Rust, 100% local. | Rust | [Repo](https://github.com/AppachiTech/suvadu), [Website](https://suvadu.sh) |
 
 ### Directory Listing
