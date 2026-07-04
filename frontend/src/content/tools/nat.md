@@ -1,7 +1,7 @@
 ---
 name: nat
 category: Shell History
-short_description: `ls` alternative with useful info and a splash of color 🎨
+short_description: "ls alternative with useful info and a splash of color 🎨"
 description: >-
   Why Natls?
 
