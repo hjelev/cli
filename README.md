@@ -31,6 +31,7 @@ Curated CLI/TUI tools list
 | [lla](https://lla.chaqchase.com) | blazing fast `ls` replacement with superpowers | Rust | [Repo](https://github.com/chaqchase/lla), [Website](https://lla.chaqchase.com) |
 | [logo-ls](https://github.com/Yash-Handa/logo-ls) | A modern ls with VS Code-like file icons and git integration. | Go | [Repo](https://github.com/Yash-Handa/logo-ls) |
 | [lsd](https://github.com/lsd-rs/lsd) | The next gen ls command, with colors and icons. | Rust | [Repo](https://github.com/lsd-rs/lsd) |
+| [pls](https://pls.cli.rs/) | pls is a prettier and powerful ls(1) for the pros. | Rust | [Repo](https://github.com/pls-rs/pls), [Website](https://pls.cli.rs/) |
 
 ### Text Editors
 
