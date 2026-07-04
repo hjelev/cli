@@ -30,7 +30,7 @@ const starsBadgeUrl = `https://img.shields.io/github/stars/${repoPath}?style=soc
 let faviconUrl = '';
 if (data.website) {
 	try {
-		const host = new URL(data.website).hostname;
+		const host = 'https://' + new URL(data.website).hostname;
 		faviconUrl = `https://www.google.com/s2/favicons?domain=${host}&sz=32`;
 	} catch {
 		faviconUrl = ''; // malformed URL → no icon
