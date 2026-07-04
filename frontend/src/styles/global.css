@@ -624,8 +624,8 @@ a.page-num:hover {
 	margin-bottom: 0.75rem;
 }
 
-.man-section p.description {
-	white-space: pre-line;
+.man-section .description > :last-child {
+	margin-bottom: 0;
 }
 
 .man-section .content {
@@ -755,6 +755,7 @@ dd {
 	border-radius: var(--radius);
 	border: 1px solid var(--border);
 	margin-top: 1rem;
+	margin-bottom: 2rem;
 }
 
 /* ---------- submit form ---------- */

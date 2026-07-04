@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { marked } from 'marked';
 import { slugify } from '../../lib/slug';
 import { ratingSummary, stars } from '../../lib/ratings';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -12,6 +13,8 @@ export async function getStaticPaths() {
 const { tool } = Astro.props;
 const { data } = tool;
 const { Content } = await render(tool);
+
+const descriptionHtml = marked.parse(data.description, { async: false });
 
 const { count: ratingCount, average: ratingAverage } = ratingSummary(data.ratings);
 const comments = [...(data.comments ?? [])].sort((a, b) => b.date.localeCompare(a.date));
@@ -53,7 +56,7 @@ if (data.website) {
 
 	<section class="man-section">
 		<h2>DESCRIPTION</h2>
-		<p class="description">{data.description}</p>
+		<div class="description" set:html={descriptionHtml} />
 		<div class="content">
 			<Content />
 		</div>
