@@ -42,7 +42,7 @@ tags:
   - rust
 logo: https://yazi-rs.github.io/webp/logo.webp
 media: "https://awesometui.com/captures/yazi/yazi-hero.webp"
-github_stars: 40021
+github_stars: 40024
 github_updated: "2026-07-03"
 github_release: "v26.5.6"
 ratings:

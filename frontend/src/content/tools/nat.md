@@ -41,4 +41,7 @@ tags:
 media: https://github.com/willdoescode/nat/raw/main/assets/example.png
 logo: https://avatars.githubusercontent.com/u/53620720?v=4
 updated: '2026-07-04'
+github_stars: 1264
+github_updated: "2021-05-28"
+github_release: "v2.1.14"
 ---
