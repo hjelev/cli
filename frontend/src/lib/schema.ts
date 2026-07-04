@@ -6,7 +6,7 @@ import { z } from 'zod';
 export const CATEGORIES = [
 	'File Management',
 	'Shell History',
-	'File Listing',
+	'Directory Listing',
 	'System Monitoring',
 	'Productivity',
 	'Development Tools',

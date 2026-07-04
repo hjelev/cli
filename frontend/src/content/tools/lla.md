@@ -1,6 +1,6 @@
 ---
 name: lla
-category: File Listing
+category: Directory Listing
 short_description: blazing fast `ls` replacement with superpowers
 description: >-
   lla is a modern ls replacement that transforms how developers interact with

@@ -23,7 +23,7 @@ Curated CLI/TUI tools list
 | [atuin](https://atuin.sh/) | ✨ Making your shell magical | Rust | [Repo](https://github.com/atuinsh/atuin), [Website](https://atuin.sh/) |
 | [suvadu](https://suvadu.sh) | Shell history replacement with AI agent tracking and MCP server. Built in Rust, 100% local. | Rust | [Repo](https://github.com/AppachiTech/suvadu), [Website](https://suvadu.sh) |
 
-### File Listing
+### Directory Listing
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|

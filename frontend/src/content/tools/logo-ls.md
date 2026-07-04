@@ -1,7 +1,7 @@
 ---
 updated: '2026-07-02'
 name: logo-ls
-category: File Listing
+category: Directory Listing
 short_description: A modern ls with VS Code-like file icons and git integration.
 description: |
   logo-ls is an ls replacement written in Go that displays file and folder
