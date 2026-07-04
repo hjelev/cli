@@ -32,12 +32,6 @@ Curated CLI/TUI tools list
 | [logo-ls](https://github.com/Yash-Handa/logo-ls) | A modern ls with VS Code-like file icons and git integration. | Go | [Repo](https://github.com/Yash-Handa/logo-ls) |
 | [lsd](https://github.com/lsd-rs/lsd) | The next gen ls command, with colors and icons. | Rust | [Repo](https://github.com/lsd-rs/lsd) |
 
-### Development Tools
-
-| Name | Description | Language | Links |
-|------|-------------|----------|-------|
-| [lazygit](https://lazygit.dev/) | simple terminal UI for git commands | Go | [Repo](https://github.com/jesseduffield/lazygit), [Website](https://lazygit.dev/) |
-
 ### Text Editors
 
 | Name | Description | Language | Links |
@@ -61,6 +55,12 @@ that runs in your terminal. Single binary, zero config.
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [lazyskills](https://lazyskills.sh) | mission control for agent skills | Go | [Repo](https://github.com/alvinunreal/lazyskills), [Website](https://lazyskills.sh) |
+
+### Git
+
+| Name | Description | Language | Links |
+|------|-------------|----------|-------|
+| [lazygit](https://lazygit.dev/) | simple terminal UI for git commands | Go | [Repo](https://github.com/jesseduffield/lazygit), [Website](https://lazygit.dev/) |
 
 ### Utilities & Other
 
