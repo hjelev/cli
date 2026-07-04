@@ -1,6 +1,6 @@
 ---
 name: lazygit
-category: Development Tools
+category: Git
 short_description: simple terminal UI for git commands
 description: >-
   Lazygit is a powerful, terminal-based user interface designed to simplify
