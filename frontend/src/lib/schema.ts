@@ -80,10 +80,23 @@ export const toolSchema = z.object({
 	updated: z.string().optional(),
 	ratings: z.array(ratingSchema).optional().default([]),
 	comments: z.array(commentSchema).optional().default([]),
+	// GitHub-derived stats, refreshed daily by scripts/sync-github-stats.ts
+	// via the GraphQL API (see .github/workflows/sync-github-stats.yml).
+	github_stars: z.number().int().min(0).optional(),
+	github_updated: z.string().optional(), // ISO YYYY-MM-DD, repo's last push date
+	github_release: z.string().optional(), // latest release tag name, e.g. "v1.2.3"
 });
 
-// What the submission form produces: everything except the feedback fields,
-// which only the Worker writes. Types are derived, never re-declared by hand.
-export const toolFormSchema = toolSchema.omit({ updated: true, ratings: true, comments: true });
+// What the submission form produces: everything except the feedback fields
+// and GitHub-synced stats, which only the Worker / sync script write. Types
+// are derived, never re-declared by hand.
+export const toolFormSchema = toolSchema.omit({
+	updated: true,
+	ratings: true,
+	comments: true,
+	github_stars: true,
+	github_updated: true,
+	github_release: true,
+});
 export type ToolFormData = z.infer<typeof toolFormSchema>;
 export type Rating = z.infer<typeof ratingSchema>;

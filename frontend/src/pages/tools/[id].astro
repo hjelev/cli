@@ -137,6 +137,27 @@ if (data.website) {
 
 			<dt>Platforms</dt>
 			<dd>{data.platforms.join(', ')}</dd>
+
+			{data.github_stars !== undefined && (
+				<>
+					<dt>GitHub Stars</dt>
+					<dd>{new Intl.NumberFormat('en-US').format(data.github_stars)}</dd>
+				</>
+			)}
+
+			{data.github_updated && (
+				<>
+					<dt>Last Updated</dt>
+					<dd>{fmtDate(data.github_updated)}</dd>
+				</>
+			)}
+
+			{data.github_release && (
+				<>
+					<dt>Latest Release</dt>
+					<dd>{data.github_release}</dd>
+				</>
+			)}
 		</dl>
 	</section>
 
