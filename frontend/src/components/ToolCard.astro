@@ -8,6 +8,12 @@ interface Props {
 
 const { tool } = Astro.props;
 const { count: ratingCount, average: ratingAverage } = ratingSummary(tool.data.ratings);
+
+const githubStars = tool.data.github_stars;
+const githubStarsLabel =
+	githubStars !== undefined
+		? new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(githubStars)
+		: null;
 ---
 
 <li
@@ -29,6 +35,9 @@ const { count: ratingCount, average: ratingAverage } = ratingSummary(tool.data.r
 			</div>
 		)}
 		<div class="badges">
+			{githubStarsLabel && (
+				<span class="badge badge-stars" title={`${githubStars} GitHub stars`}>★ {githubStarsLabel}</span>
+			)}
 			<span class="badge">{tool.data.language}</span>
 			<span class="badge">{tool.data.category}</span>
 		</div>
