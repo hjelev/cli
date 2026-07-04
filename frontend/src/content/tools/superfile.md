@@ -31,4 +31,7 @@ tags:
   - preview
 media: https://superfile.dev/_astro/demo.CvzVaHej_28nrJ.webp
 logo: https://superfile.dev/logo.svg
+github_stars: 18368
+github_updated: "2026-07-03"
+github_release: "v1.6.0"
 ---

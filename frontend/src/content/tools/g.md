@@ -36,4 +36,7 @@ tags:
 media: https://raw.githubusercontent.com/equationzhao/g/master/asset/screenshot_3.png
 logo: https://avatars.githubusercontent.com/u/75521101?v=4
 updated: '2026-07-04'
+github_stars: 356
+github_updated: "2026-07-04"
+github_release: "v0.31.2"
 ---

@@ -27,6 +27,9 @@ tags:
   - productivity
 media: https://masoko.net/sb/images/screenshot-1.png
 logo: https://masoko.net/sb/images/favicon.png
+github_stars: 3
+github_updated: "2026-07-04"
+github_release: "v0.8.4"
 ratings:
   - user: hjelev
     value: 5

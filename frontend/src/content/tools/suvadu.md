@@ -27,6 +27,9 @@ tags:
   - shell-history
 logo: https://github.com/AppachiTech/suvadu/raw/main/assets/suvadu-logo.svg
 media: https://suvadu.sh/demo/suvadu-search.webm
+github_stars: 89
+github_updated: "2026-06-25"
+github_release: "v0.3.4"
 ratings:
   - user: hjelev
     value: 5

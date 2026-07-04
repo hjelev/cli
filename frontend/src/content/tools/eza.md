@@ -36,6 +36,9 @@ tags:
   - rust
 logo: https://avatars.githubusercontent.com/u/141388427?v=4
 media: https://eza.rocks/demo.gif
+github_stars: 22485
+github_updated: "2026-05-31"
+github_release: "v0.23.4"
 ratings:
   - user: hjelev
     value: 4
