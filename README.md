@@ -55,6 +55,12 @@ that runs in your terminal. Single binary, zero config.
 | [ascii patrol](https://ascii-patrol.com/) | Ascii Patrol is an ASCII game project. It was mainly inspired by "Moon Patrol", Msokalski favorite arcade game at the times he was a child. | C++ | [Repo](https://github.com/msokalski/ascii-patrol), [Website](https://ascii-patrol.com/) |
 | [tetro-tui](https://github.com/Strophox/tetro-tui) | A modern, highly customizable tetromino-stacking game for the terminal. | Rust | [Repo](https://github.com/Strophox/tetro-tui) |
 
+### AI
+
+| Name | Description | Language | Links |
+|------|-------------|----------|-------|
+| [lazyskills](https://lazyskills.sh) | mission control for agent skills | Go | [Repo](https://github.com/alvinunreal/lazyskills), [Website](https://lazyskills.sh) |
+
 ### Utilities & Other
 
 | Name | Description | Language | Links |
