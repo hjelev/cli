@@ -47,6 +47,7 @@ if (data.website) {
 			<h1>{data.name}<span class="num"></span></h1>
 			<p class="tagline">{data.short_description}</p>
 		</div>
+		<a class="edit-link" href={`/tools/${tool.id}/edit`}>Edit this listing</a>
 	</header>
 
 	{data.media && (/\.(webm|mp4)(\?.*)?$/i.test(data.media)

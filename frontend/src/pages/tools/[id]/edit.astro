@@ -1,34 +1,44 @@
 ---
-import ToolForm from '../components/ToolForm.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import ToolForm from '../../../components/ToolForm.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+	const tools = await getCollection('tools');
+	return tools.map((tool) => ({ params: { id: tool.id }, props: { tool } }));
+}
+
+const { tool } = Astro.props;
+const { data } = tool;
 ---
 
-<BaseLayout title="Submit a tool — CLI Tools Directory" command="submit --new">
-	<a class="back" href="/">&larr; cd ..</a>
-	<h1>Submit a tool</h1>
-	<p class="form-note">Sign in with GitHub to submit a tool. Submitting opens a pull request from your own fork.</p>
+<BaseLayout title={`Edit ${data.name} — CLI Tools Directory`} command={`man ${tool.id} --edit`}>
+	<a class="back" href={`/tools/${tool.id}`}>&larr; cd ..</a>
+	<h1>Edit {data.name}</h1>
+	<p class="form-note">Sign in with GitHub to propose an edit. Submitting opens a pull request from your own fork.</p>
 
 	<section id="signed-out">
 		<button id="sign-in-btn" type="button">Sign in with GitHub</button>
 	</section>
 
-	<section id="signed-in" hidden>
+	<section id="signed-in" hidden data-tool-id={tool.id}>
 		<p id="signed-in-as"></p>
 		<button id="sign-out-btn" type="button">Sign out</button>
 
-		<ToolForm submitLabel="Submit for review" />
+		<ToolForm initialData={data} submitLabel="Submit edit for review" />
 
 		<p id="form-status" role="status"></p>
 	</section>
 
 	<script>
-		import { getStoredToken, redirectToGitHubSignIn, signOut, fetchGitHubUser } from '../lib/github-auth';
-		import { submitTool } from '../lib/github-submit';
-		import { toolFormSchema } from '../lib/schema';
-		import { initInstallationRows, readCandidate, resetInstallationRows } from '../lib/tool-form-client';
+		import { getStoredToken, redirectToGitHubSignIn, signOut, fetchGitHubUser } from '../../../lib/github-auth';
+		import { editTool } from '../../../lib/github-submit';
+		import { toolFormSchema } from '../../../lib/schema';
+		import { initInstallationRows, readCandidate } from '../../../lib/tool-form-client';
 
 		const signedOutSection = document.getElementById('signed-out') as HTMLElement;
 		const signedInSection = document.getElementById('signed-in') as HTMLElement;
+		const toolId = signedInSection.dataset.toolId as string;
 		const signedInAs = document.getElementById('signed-in-as') as HTMLElement;
 		const form = document.getElementById('tool-form') as HTMLFormElement;
 		const formStatus = document.getElementById('form-status') as HTMLElement;
@@ -39,7 +49,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		initInstallationRows(installationRows, addInstallationRowBtn);
 
 		document.getElementById('sign-in-btn')?.addEventListener('click', () => {
-			redirectToGitHubSignIn('/submit');
+			redirectToGitHubSignIn(window.location.pathname);
 		});
 
 		document.getElementById('sign-out-btn')?.addEventListener('click', () => {
@@ -79,21 +89,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				return;
 			}
 
-			formStatus.textContent = 'Submitting — forking, committing, and opening a pull request…';
+			formStatus.textContent = 'Submitting your edit — forking, committing, and opening a pull request…';
 			submitBtn.disabled = true;
 
 			try {
-				const { prUrl } = await submitTool(token, validation.data);
+				const { prUrl } = await editTool(token, toolId, validation.data);
 				const link = document.createElement('a');
 				link.href = prUrl;
 				link.target = '_blank';
 				link.rel = 'noopener';
 				link.textContent = 'View your pull request';
-				formStatus.replaceChildren('Submitted! ', link, '.');
-				form.reset();
-				resetInstallationRows(installationRows);
+				formStatus.replaceChildren('Edit submitted! ', link, '.');
 			} catch (error) {
-				formStatus.textContent = error instanceof Error ? error.message : 'Submission failed.';
+				formStatus.textContent = error instanceof Error ? error.message : 'Submitting the edit failed.';
 			} finally {
 				submitBtn.disabled = false;
 			}

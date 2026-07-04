@@ -1,0 +1,128 @@
+---
+import { CATEGORIES, INSTALL_METHODS } from '../lib/schema';
+import type { ToolFormData } from '../lib/schema';
+
+interface Props {
+	initialData?: Partial<ToolFormData>;
+	submitLabel: string;
+}
+
+const { initialData, submitLabel } = Astro.props;
+const installation = initialData?.installation?.length ? initialData.installation : [{ method: '', command: '' }];
+---
+
+<form id="tool-form">
+	<label class="field">
+		<span class="flag">--name <span class="type">&lt;string&gt;</span></span>
+		<input name="name" required value={initialData?.name ?? ''} />
+	</label>
+
+	<label class="field">
+		<span class="flag">--category <span class="type">&lt;enum&gt;</span></span>
+		<select name="category" required>
+			<option value="" disabled selected={!initialData?.category}>Choose a category</option>
+			{CATEGORIES.map((category) => (
+				<option value={category} selected={category === initialData?.category}>{category}</option>
+			))}
+		</select>
+	</label>
+
+	<label class="field">
+		<span class="flag">--short-description <span class="type">&lt;string&gt;</span></span>
+		<input name="short_description" required maxlength="140" value={initialData?.short_description ?? ''} />
+	</label>
+
+	<label class="field">
+		<span class="flag">--description <span class="type">&lt;text&gt;</span></span>
+		<textarea name="description" required rows="6">{initialData?.description ?? ''}</textarea>
+	</label>
+
+	<label class="field">
+		<span class="flag">--repository-url <span class="type">&lt;url&gt;</span></span>
+		<input
+			name="repository_url"
+			type="url"
+			required
+			placeholder="https://github.com/you/tool"
+			value={initialData?.repository_url ?? ''}
+		/>
+	</label>
+
+	<label class="field optional">
+		<span class="flag">--website <span class="type">&lt;url&gt;</span></span>
+		<input name="website" type="url" placeholder="https://example.com" value={initialData?.website ?? ''} />
+	</label>
+
+	<label class="field">
+		<span class="flag">--author <span class="type">&lt;string&gt;</span></span>
+		<input name="author" required value={initialData?.author ?? ''} />
+	</label>
+
+	<label class="field">
+		<span class="flag">--license <span class="type">&lt;string&gt;</span></span>
+		<input name="license" required placeholder="MIT" value={initialData?.license ?? ''} />
+	</label>
+
+	<label class="field">
+		<span class="flag">--language <span class="type">&lt;string&gt;</span></span>
+		<input name="language" required placeholder="Rust" value={initialData?.language ?? ''} />
+	</label>
+
+	<div class="field">
+		<span class="flag">--installation <span class="type">&lt;method,command&gt;[]</span></span>
+		<div id="installation-rows">
+			{installation.map((entry) => (
+				<div class="install-row">
+					<select name="installation_method" required>
+						<option value="" disabled selected={!entry.method}>method</option>
+						{INSTALL_METHODS.map((m) => (
+							<option value={m} selected={m === entry.method}>{m}</option>
+						))}
+					</select>
+					<input
+						name="installation_command"
+						required
+						placeholder="cargo install your-tool"
+						value={entry.command}
+					/>
+					<button
+						type="button"
+						class="remove-row-btn"
+						aria-label="Remove install method"
+						disabled={installation.length <= 1}
+					>
+						−
+					</button>
+				</div>
+			))}
+		</div>
+		<button type="button" id="add-installation-row">+ add install method</button>
+	</div>
+
+	<label class="field">
+		<span class="flag">--platforms <span class="type">&lt;csv&gt;</span></span>
+		<input
+			name="platforms"
+			required
+			placeholder="Linux, macOS, Windows"
+			value={(initialData?.platforms ?? []).join(', ')}
+		/>
+	</label>
+
+	<label class="field">
+		<span class="flag">--tags <span class="type">&lt;csv&gt;</span></span>
+		<input name="tags" required placeholder="tui, productivity" value={(initialData?.tags ?? []).join(', ')} />
+	</label>
+
+	<label class="field optional">
+		<span class="flag">--media <span class="type">&lt;url&gt;</span></span>
+		<input name="media" type="url" value={initialData?.media ?? ''} />
+	</label>
+
+	<label class="field optional">
+		<span class="flag">--logo <span class="type">&lt;url&gt;</span></span>
+		<input name="logo" type="url" value={initialData?.logo ?? ''} />
+	</label>
+
+	<button type="submit">{submitLabel}</button>
+</form>

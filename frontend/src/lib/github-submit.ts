@@ -1,7 +1,7 @@
-import { dump } from 'js-yaml';
+import { dump, load } from 'js-yaml';
 import { TARGET_BRANCH, TARGET_OWNER, TARGET_REPO } from './config';
 import { slugify } from './slug';
-import type { ToolFormData } from './schema';
+import type { PreservedToolFields, ToolFormData } from './schema';
 
 export type { ToolFormData };
 
@@ -70,6 +70,19 @@ async function createBranch(token: string, login: string, branch: string, sha: s
 	if (!res.ok) throw new Error(await readErrorMessage(res, 'Could not create a branch on your fork.'));
 }
 
+// Best-effort fast-forward of the fork's target branch to match upstream.
+// Only used before editing: a stale fork copy of the file being edited could
+// resurrect ratings/comments/github_* that changed upstream since the fork
+// was created. Failures are swallowed — worst case we fall back to the
+// fork's own (possibly slightly stale) branch tip, same as submitTool always
+// has, which is an acceptable degraded path, not silent corruption.
+async function syncForkWithUpstream(token: string, login: string): Promise<void> {
+	await ghFetch(token, `/repos/${login}/${TARGET_REPO}/merge-upstream`, {
+		method: 'POST',
+		body: JSON.stringify({ branch: TARGET_BRANCH }),
+	}).catch(() => undefined);
+}
+
 // Duplicated in worker/src/index.ts (separate deploy bundle) — keep in sync.
 function toBase64Utf8(str: string): string {
 	const bytes = new TextEncoder().encode(str);
@@ -78,7 +91,16 @@ function toBase64Utf8(str: string): string {
 	return btoa(binary);
 }
 
-function buildToolFileContent(data: ToolFormData): string {
+// Duplicated in worker/src/index.ts (separate deploy bundle) — keep in sync.
+function fromBase64Utf8(base64: string): string {
+	const binary = atob(base64.replace(/\n/g, ''));
+	const bytes = Uint8Array.from(binary, (ch) => ch.charCodeAt(0));
+	return new TextDecoder().decode(bytes);
+}
+
+const FRONTMATTER_RE = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/;
+
+function buildFrontmatter(data: ToolFormData, preserved?: PreservedToolFields): Record<string, unknown> {
 	const frontmatter: Record<string, unknown> = {
 		name: data.name,
 		category: data.category,
@@ -95,12 +117,52 @@ function buildToolFileContent(data: ToolFormData): string {
 		media: data.media,
 		logo: data.logo,
 		updated: new Date().toISOString().slice(0, 10),
+		...preserved,
 	};
 	// js-yaml would serialize absent optional fields as `key: undefined`.
 	for (const key of Object.keys(frontmatter)) {
 		if (frontmatter[key] === undefined) delete frontmatter[key];
 	}
-	return `---\n${dump(frontmatter)}---\n`;
+	return frontmatter;
+}
+
+function buildToolFileContent(data: ToolFormData): string {
+	return `---\n${dump(buildFrontmatter(data))}---\n`;
+}
+
+// Merges edited form data into the current file's frontmatter, carrying
+// forward ratings/comments/github_* (never collected by the form) and the
+// trailing markdown body verbatim.
+function buildEditedToolFileContent(data: ToolFormData, currentFileText: string): string {
+	const match = currentFileText.match(FRONTMATTER_RE);
+	if (!match) throw new Error('The existing tool file has malformed frontmatter.');
+
+	const current = (load(match[1]) ?? {}) as Record<string, unknown>;
+	const body = match[2];
+
+	const preserved: PreservedToolFields = {
+		ratings: Array.isArray(current.ratings) ? (current.ratings as PreservedToolFields['ratings']) : [],
+		comments: Array.isArray(current.comments) ? (current.comments as PreservedToolFields['comments']) : [],
+		github_stars: current.github_stars as PreservedToolFields['github_stars'],
+		github_updated: current.github_updated as PreservedToolFields['github_updated'],
+		github_release: current.github_release as PreservedToolFields['github_release'],
+	};
+
+	const frontmatter = buildFrontmatter(data, preserved);
+	return `---\n${dump(frontmatter)}---\n${body}`;
+}
+
+async function getFileOnBranch(
+	token: string,
+	login: string,
+	path: string,
+	branch: string,
+): Promise<{ text: string; sha: string } | null> {
+	const res = await ghFetch(token, `/repos/${login}/${TARGET_REPO}/contents/${path}?ref=${branch}`);
+	if (res.status === 404) return null;
+	if (!res.ok) throw new Error(await readErrorMessage(res, 'Could not read the existing tool file from your fork.'));
+	const data = (await res.json()) as { content: string; sha: string };
+	return { text: fromBase64Utf8(data.content), sha: data.sha };
 }
 
 async function commitToolFile(
@@ -110,10 +172,11 @@ async function commitToolFile(
 	path: string,
 	content: string,
 	message: string,
+	sha?: string,
 ): Promise<void> {
 	const res = await ghFetch(token, `/repos/${login}/${TARGET_REPO}/contents/${path}`, {
 		method: 'PUT',
-		body: JSON.stringify({ message, content: toBase64Utf8(content), branch }),
+		body: JSON.stringify({ message, content: toBase64Utf8(content), branch, ...(sha ? { sha } : {}) }),
 	});
 	if (!res.ok) throw new Error(await readErrorMessage(res, 'Could not commit the tool file to your fork.'));
 }
@@ -146,6 +209,36 @@ export async function submitTool(token: string, data: ToolFormData): Promise<{ p
 		branch,
 		`Add ${data.name}`,
 		`Submitted by @${login} via the directory's submission form.`,
+	);
+	return { prUrl };
+}
+
+// The tool's id/filename never changes here, even if `data.name` did — the
+// path is the file's identity (see content.config.ts's glob loader), not
+// derived from frontmatter. Re-slugifying the (possibly edited) name would
+// silently orphan the original file and create a duplicate instead.
+export async function editTool(token: string, toolId: string, data: ToolFormData): Promise<{ prUrl: string }> {
+	const login = await getAuthenticatedLogin(token);
+	await ensureFork(token, login);
+	await syncForkWithUpstream(token, login);
+	const sha = await getForkBranchSha(token, login);
+
+	const branch = `edit-${toolId}-${Date.now()}`;
+	await createBranch(token, login, branch, sha);
+
+	const path = `frontend/src/content/tools/${toolId}.md`;
+	const current = await getFileOnBranch(token, login, path, branch);
+	if (!current) throw new Error(`Could not find ${toolId} in the repository. It may have been renamed or removed.`);
+
+	const content = buildEditedToolFileContent(data, current.text);
+	await commitToolFile(token, login, branch, path, content, `Update ${data.name}`, current.sha);
+
+	const prUrl = await openPullRequest(
+		token,
+		login,
+		branch,
+		`Update ${data.name}`,
+		`Edited by @${login} via the directory's edit form.`,
 	);
 	return { prUrl };
 }

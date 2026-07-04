@@ -100,3 +100,10 @@ export const toolFormSchema = toolSchema.omit({
 });
 export type ToolFormData = z.infer<typeof toolFormSchema>;
 export type Rating = z.infer<typeof ratingSchema>;
+
+// Fields an edit must carry forward from the existing file rather than
+// collect via the form — the form only ever produces `ToolFormData`.
+export type PreservedToolFields = Pick<
+	z.infer<typeof toolSchema>,
+	'ratings' | 'comments' | 'github_stars' | 'github_updated' | 'github_release'
+>;
