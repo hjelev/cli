@@ -18,7 +18,7 @@ export const CATEGORIES = [
 	'Data Processing',
 	'Games & Fun',
 	'AI',
-	'GIT'
+	'Git',
 	'Utilities & Other',
 ] as const;
 
