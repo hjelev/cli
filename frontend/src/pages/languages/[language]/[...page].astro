@@ -34,7 +34,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page, language } = Astro.props;
 ---
 
-<BaseLayout title={`${language} — CLI Tools Directory`} command={`ls languages/${slugify(language)}`}>
+<BaseLayout title={`${language} — The Terminal Index`} command={`ls languages/${slugify(language)}`}>
 	<a class="back" href="/languages">&larr; cd ..</a>
 
 	<header class="hero">

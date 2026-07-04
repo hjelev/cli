@@ -38,7 +38,11 @@ if (data.website) {
 }
 ---
 
-<BaseLayout title={`${data.name} — CLI Tools Directory`} command={`man ${tool.id}`}>
+<BaseLayout
+	title={`${data.name} — The Terminal Index`}
+	command={`man ${tool.id}`}
+	editHref={`/tools/${tool.id}/edit`}
+>
 	<a class="back" href="/">&larr; cd ..</a>
 
 	<header class="man-header">
@@ -47,7 +51,6 @@ if (data.website) {
 			<h1>{data.name}<span class="num"></span></h1>
 			<p class="tagline">{data.short_description}</p>
 		</div>
-		<a class="edit-link" href={`/tools/${tool.id}/edit`}>Edit this listing</a>
 	</header>
 
 	{data.media && (/\.(webm|mp4)(\?.*)?$/i.test(data.media)

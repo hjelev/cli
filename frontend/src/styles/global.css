@@ -603,12 +603,6 @@ a.page-num:hover {
 	margin-top: 0.35rem;
 }
 
-.man-header .edit-link {
-	margin-left: auto;
-	color: var(--fg-dim);
-	white-space: nowrap;
-}
-
 .man-section {
 	margin-bottom: 2rem;
 }

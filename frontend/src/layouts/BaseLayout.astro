@@ -6,9 +6,10 @@ interface Props {
 	command: string;
 	mode?: string;
 	status?: string;
+	editHref?: string;
 }
 
-const { title, command, mode = 'NORMAL', status } = Astro.props;
+const { title, command, mode = 'NORMAL', status, editHref } = Astro.props;
 ---
 
 <html lang="en">
@@ -33,6 +34,12 @@ const { title, command, mode = 'NORMAL', status } = Astro.props;
 				<span class="seg path">~/cli-tools</span>
 				{status && <span class="seg">{status}</span>}
 				<span class="seg right">
+					{editHref && (
+						<>
+							<a href={editHref}>edit</a>
+							<span class="sep">·</span>
+						</>
+					)}
 					<a href="/submit">submit</a>
 					<span class="sep">·</span>
 					<a href="https://github.com/hjelev/cli" target="_blank" rel="noopener">github</a>

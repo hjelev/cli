@@ -1,4 +1,4 @@
-# Claude Code Project Initialization: CLI Tools Directory
+# Claude Code Project Initialization: The Terminal Index
 
 **Context:**
 You are acting as an autonomous Senior Software Engineer via Claude Code. We are building a community-driven directory for CLI and TUI tools. The architecture consists of a static site (hosted on GitHub Pages) and a minimal Cloudflare Worker that exists solely to exchange a GitHub OAuth code for an access token. Submitters sign in with their own GitHub account and the browser talks to the GitHub API directly (fork, branch, commit, PR) using that account's token — there is no bot/service credential and no server-side PR-creation logic. Spam prevention comes from requiring a real, identifiable GitHub account rather than any custom rate-limiting.
