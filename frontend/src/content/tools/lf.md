@@ -37,6 +37,10 @@ author: Gökçehan Kara
 license: MIT
 language: Go
 installation:
+  - method: apt
+    command: sudo apt install lf
+  - method: brew
+    command: brew install lf
   - method: go
     command: >-
       env CGO_ENABLED=0 go install -trimpath -ldflags="-s -w"
