@@ -1,6 +1,6 @@
 ---
 name: nat
-category: Shell History
+category: Directory Listing
 short_description: "ls alternative with useful info and a splash of color 🎨"
 description: >-
   Why Natls?
