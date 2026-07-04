@@ -6,18 +6,20 @@ import { z } from 'zod';
 export const CATEGORIES = [
 	'File Management',
 	'Shell History',
-	'File Listing Utilities',
+	'File Listing',
 	'System Monitoring',
 	'Productivity',
 	'Development Tools',
 	'Networking',
-	'Text Editors & Note-taking',
+	'Text Editors',
 	'Media & Entertainment',
 	'Security',
 	'DevOps & Cloud',
 	'Data Processing',
 	'Games & Fun',
-	'Utilities/Other',
+	'AI',
+	'GIT'
+	'Utilities & Other',
 ] as const;
 
 export const INSTALL_METHODS = [

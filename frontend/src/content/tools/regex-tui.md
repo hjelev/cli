@@ -1,6 +1,6 @@
 ---
 name: regex-tui
-category: Utilities/Other
+category: Utilities & Other
 short_description: >-
   A terminal user interface (TUI) application for testing and visualizing
   regular expressions in real-time.

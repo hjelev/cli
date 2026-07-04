@@ -23,7 +23,7 @@ Curated CLI/TUI tools list
 | [atuin](https://atuin.sh/) | ✨ Making your shell magical | Rust | [Repo](https://github.com/atuinsh/atuin), [Website](https://atuin.sh/) |
 | [suvadu](https://suvadu.sh) | Shell history replacement with AI agent tracking and MCP server. Built in Rust, 100% local. | Rust | [Repo](https://github.com/AppachiTech/suvadu), [Website](https://suvadu.sh) |
 
-### File Listing Utilities
+### File Listing
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
@@ -37,7 +37,7 @@ Curated CLI/TUI tools list
 |------|-------------|----------|-------|
 | [lazygit](https://lazygit.dev/) | simple terminal UI for git commands | Go | [Repo](https://github.com/jesseduffield/lazygit), [Website](https://lazygit.dev/) |
 
-### Text Editors & Note-taking
+### Text Editors
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
@@ -55,7 +55,7 @@ that runs in your terminal. Single binary, zero config.
 | [ascii patrol](https://ascii-patrol.com/) | Ascii Patrol is an ASCII game project. It was mainly inspired by "Moon Patrol", Msokalski favorite arcade game at the times he was a child. | C++ | [Repo](https://github.com/msokalski/ascii-patrol), [Website](https://ascii-patrol.com/) |
 | [tetro-tui](https://github.com/Strophox/tetro-tui) | A modern, highly customizable tetromino-stacking game for the terminal. | Rust | [Repo](https://github.com/Strophox/tetro-tui) |
 
-### Utilities/Other
+### Utilities & Other
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|

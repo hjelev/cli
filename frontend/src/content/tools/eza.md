@@ -1,7 +1,7 @@
 ---
 updated: '2026-07-02'
 name: eza
-category: File Listing Utilities
+category: File Listing
 short_description: A modern, maintained replacement for ls.
 description: |
   eza is a modern replacement for ls, written in Rust. It adds colors for

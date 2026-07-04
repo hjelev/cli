@@ -1,7 +1,7 @@
 ---
 updated: '2026-07-02'
 name: ttt
-category: Text Editors & Note-taking
+category: Text Editors
 short_description: |
   A terminal text editor IDE. A real alternative to VS Code, Zed, and Sublime
   that runs in your terminal. Single binary, zero config.

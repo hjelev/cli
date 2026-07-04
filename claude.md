@@ -27,7 +27,7 @@ Please execute the following development plan step-by-step. Keep me updated on y
    - `logo` — url, optional. When absent, the UI must render without a logo slot (fallback/no image) rather than a broken image link — the listing card and detail page components need an explicit conditional for this, not a naive `<img src={logo}>`.
 
    **Predefined `category` list (starter set, editable later):**
-   `File Management`, `System Monitoring`, `Productivity`, `Development Tools`, `Networking`, `Text Editors & Note-taking`, `Media & Entertainment`, `Security`, `DevOps & Cloud`, `Data Processing`, `Games & Fun`, `Utilities/Other`.
+   `File Management`, `System Monitoring`, `Productivity`, `Development Tools`, `Networking`, `Text Editors`, `Media & Entertainment`, `Security`, `DevOps & Cloud`, `Data Processing`, `Games & Fun`, `Utilities & Other`.
 
 3. **Generate Sample Data:** Create a sample Markdown/MDX entry in `frontend/src/content/tools/sb.md` to validate the routing and schema. Use this data:
    ```yaml

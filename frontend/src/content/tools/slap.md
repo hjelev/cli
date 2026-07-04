@@ -1,7 +1,7 @@
 ---
 updated: '2026-07-02'
 name: slap
-category: Text Editors & Note-taking
+category: Text Editors
 short_description: Sublime-like terminal-based text editor
 description: |
   slap is a Sublime-like terminal-based text editor that strives to make editing

@@ -1,7 +1,7 @@
 ---
 updated: '2026-07-02'
 name: fresh
-category: Text Editors & Note-taking
+category: Text Editors
 short_description: A powerful terminal text editor and IDE.
 description: |
   A modern, full-featured terminal text editor, with zero configuration.

@@ -1,6 +1,6 @@
 ---
 name: micro
-category: Text Editors & Note-taking
+category: Text Editors
 short_description: A modern and intuitive terminal-based text editor
 description: >-
   micro is a terminal-based text editor that aims to be easy to use and
