@@ -36,6 +36,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [fresh](https://getfresh.dev) | A powerful terminal text editor and IDE. | Rust | [Repo](https://github.com/sinelaw/fresh), [Website](https://getfresh.dev) |
+| [micro](https://micro-editor.github.io/) | A modern and intuitive terminal-based text editor | Go | [Repo](https://github.com/micro-editor/micro), [Website](https://micro-editor.github.io/) |
 | [slap](https://github.com/slap-editor/slap) | Sublime-like terminal-based text editor | JavaScript | [Repo](https://github.com/slap-editor/slap) |
 | [ttt](https://tttedit.dev/) | A terminal text editor IDE. A real alternative to VS Code, Zed, and Sublime
 that runs in your terminal. Single binary, zero config.
