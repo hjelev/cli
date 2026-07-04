@@ -7,7 +7,7 @@ description: |
   sb is a terminal-based file manager built for speed and efficiency, with
   vim-style keybindings, fuzzy search, and a plugin system for custom actions.
 repository_url: https://github.com/hjelev/sb
-website: https://masoko.net/sb/
+website: https://sb.masoko.net
 author: Masoko
 license: MIT
 language: Rust
