@@ -35,7 +35,7 @@ tags:
   - batch-rename
 media: https://github.com/user-attachments/assets/541ca36d-ae26-49fb-97da-d1f7a12d4b9a
 logo: https://raw.githubusercontent.com/jarun/nnn/master/misc/logo/logo-128x128.png
-github_stars: 21675
+github_stars: 21677
 github_updated: "2026-07-03"
 github_release: "v5.2"
 ---

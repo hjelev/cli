@@ -34,7 +34,7 @@ tags:
   - rust
 logo: https://github.com/TabbyML/pochi/raw/main/packages/vscode/assets/icons/logo128.png?raw=true
 media: https://raw.githubusercontent.com/lsd-rs/lsd/assets/screen_lsd.png
-github_stars: 16098
+github_stars: 16099
 github_updated: "2026-06-03"
 github_release: "v1.2.0"
 ratings:
