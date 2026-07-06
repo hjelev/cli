@@ -42,8 +42,8 @@ tags:
   - rust
 logo: https://yazi-rs.github.io/webp/logo.webp
 media: "https://awesometui.com/captures/yazi/yazi-hero.webp"
-github_stars: 40032
-github_updated: "2026-07-03"
+github_stars: 40065
+github_updated: "2026-07-05"
 github_release: "v26.5.6"
 ratings:
   - user: hjelev
