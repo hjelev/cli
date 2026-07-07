@@ -38,7 +38,7 @@ tags:
   - editor
 media: https://raw.githubusercontent.com/sinelaw/fresh/master/docs/fresh-demo2.gif
 logo: https://avatars.githubusercontent.com/u/84020?v=4
-github_stars: 7768
+github_stars: 7784
 github_updated: "2026-07-06"
-github_release: "v0.4.2"
+github_release: "v0.4.3"
 ---
