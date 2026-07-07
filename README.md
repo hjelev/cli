@@ -36,6 +36,12 @@ Curated CLI/TUI tools list
 | [nat](https://github.com/willdoescode/nat) | ls alternative with useful info and a splash of color 🎨 | Rust | [Repo](https://github.com/willdoescode/nat) |
 | [pls](https://pls.cli.rs/) | pls is a prettier and powerful ls(1) for the pros. | Rust | [Repo](https://github.com/pls-rs/pls), [Website](https://pls.cli.rs/) |
 
+### Networking
+
+| Name | Description | Language | Links |
+|------|-------------|----------|-------|
+| [dnsglobe](https://github.com/514-labs/dnsglobe) | Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers worldwide, on a world map in your terminal | Rust | [Repo](https://github.com/514-labs/dnsglobe) |
+
 ### Text Editors
 
 | Name | Description | Language | Links |
