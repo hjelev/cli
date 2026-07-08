@@ -28,7 +28,7 @@ platforms:
   - macOS
   - Windows
 tags:
-  - ls-replacement
+  - ls-alternative
   - file-listing
   - cli
   - rust

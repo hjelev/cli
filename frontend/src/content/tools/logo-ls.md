@@ -18,7 +18,7 @@ installation:
   - method: binary
     command: Prebuilt .deb, .rpm, and tar.gz binaries for Linux/macOS are available on the GitHub Releases page.
 platforms: [Linux, macOS]
-tags: [ls-replacement, file-listing, cli, go]
+tags: [ls-alternative, file-listing, cli, go]
 logo: "https://avatars.githubusercontent.com/u/32840183?v=4"
 media: "https://github.com/Yash-Handa/logo-ls/raw/master/.github/images/ls-R.png"
 github_stars: 1184

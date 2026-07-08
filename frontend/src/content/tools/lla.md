@@ -27,7 +27,7 @@ platforms:
   - macOS
 tags:
   - cli
-  - ls-replacement
+  - ls-alternative
 media: https://linkedlist.org/public/2025/lla-long@1x.jpg
 logo: https://avatars.githubusercontent.com/u/92867709?v=4
 updated: '2026-07-04'
