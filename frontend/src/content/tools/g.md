@@ -38,6 +38,5 @@ updated: '2026-07-04'
 github_stars: 355
 github_updated: "2026-07-04"
 github_release: "v0.31.2"
-ratings: []
 comments: []
 ---

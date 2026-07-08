@@ -30,8 +30,4 @@ media: https://suvadu.sh/demo/suvadu-search.webm
 github_stars: 89
 github_updated: "2026-06-25"
 github_release: "v0.3.4"
-ratings:
-  - user: hjelev
-    value: 5
-    date: '2026-07-02T19:42:50.422Z'
 ---

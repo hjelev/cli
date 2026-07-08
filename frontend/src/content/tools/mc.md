@@ -35,8 +35,4 @@ logo: https://avatars.githubusercontent.com/u/1191610?v=4
 media: https://midnight-commander.org/img/mc-screenshot-cropped.png
 github_stars: 915
 github_updated: "2026-07-03"
-ratings:
-  - user: hjelev
-    value: 5
-    date: '2026-07-01T21:57:58.716Z'
 ---

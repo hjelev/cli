@@ -4,7 +4,6 @@ import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/schema';
 import { getSortedTools, sortByUpdated } from '../lib/tools';
 import { PAGE_SIZE } from '../lib/config';
-import { ratingSummary, stars } from '../lib/ratings';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ToolCard from '../components/ToolCard.astro';
 import Pagination from '../components/Pagination.astro';
@@ -23,11 +22,9 @@ const languages = [...new Set(allTools.map((tool) => tool.data.language))].sort(
 const usedCategories = new Set(allTools.map((tool) => tool.data.category));
 const categories = CATEGORIES.filter((category) => usedCategories.has(category));
 
-// Compact search index embedded once per page. Rating strings are precomputed
-// here (via the same helpers as ToolCard) so the browser never re-implements the
-// rating math. `search` mirrors ToolCard's `data-search`.
+// Compact search index embedded once per page. `search` mirrors ToolCard's
+// `data-search`.
 const searchIndex = allTools.map((tool) => {
-	const { count, average } = ratingSummary(tool.data.ratings);
 	return {
 		id: tool.id,
 		name: tool.data.name,
@@ -37,8 +34,6 @@ const searchIndex = allTools.map((tool) => {
 		tags: tool.data.tags,
 		logo: tool.data.logo ?? null,
 		search: `${tool.data.name} ${tool.data.short_description} ${tool.data.tags.join(' ')}`.toLowerCase(),
-		stars: count > 0 ? stars(average) : null,
-		ratingLabel: count > 0 ? `${average.toFixed(1)} (${count})` : null,
 	};
 });
 // Escape `<` so tool data can never break out of the <script> element.
@@ -110,8 +105,6 @@ const status =
 			tags: string[];
 			logo: string | null;
 			search: string;
-			stars: string | null;
-			ratingLabel: string | null;
 		}
 
 		const search = document.getElementById('search') as HTMLInputElement;
@@ -153,19 +146,6 @@ const status =
 			const desc = document.createElement('p');
 			desc.textContent = tool.short;
 			a.append(desc);
-
-			if (tool.stars) {
-				const rating = document.createElement('div');
-				rating.className = 'card-rating';
-				const starsSpan = document.createElement('span');
-				starsSpan.className = 'stars';
-				starsSpan.textContent = tool.stars;
-				const meta = document.createElement('span');
-				meta.className = 'rating-meta';
-				meta.textContent = tool.ratingLabel;
-				rating.append(starsSpan, meta);
-				a.append(rating);
-			}
 
 			const badges = document.createElement('div');
 			badges.className = 'badges';

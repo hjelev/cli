@@ -33,8 +33,4 @@ media: https://github.com/Strophox/tetro-tui/blob/15d6f8a13d146d2655f80559e0aee0
 github_stars: 719
 github_updated: "2026-06-02"
 github_release: "v3.6.1"
-ratings:
-  - user: hjelev
-    value: 5
-    date: '2026-07-02T19:26:07.398Z'
 ---

@@ -39,8 +39,4 @@ media: https://eza.rocks/demo.gif
 github_stars: 22532
 github_updated: "2026-05-31"
 github_release: "v0.23.4"
-ratings:
-  - user: hjelev
-    value: 4
-    date: '2026-07-01T21:37:11.517Z'
 ---

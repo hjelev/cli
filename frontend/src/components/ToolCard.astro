@@ -1,13 +1,11 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { ratingSummary, stars } from '../lib/ratings';
 
 interface Props {
 	tool: CollectionEntry<'tools'>;
 }
 
 const { tool } = Astro.props;
-const { count: ratingCount, average: ratingAverage } = ratingSummary(tool.data.ratings);
 
 const githubStars = tool.data.github_stars;
 const githubStarsLabel =
@@ -28,12 +26,6 @@ const githubStarsLabel =
 			<h2>{tool.data.name}</h2>
 		</div>
 		<p>{tool.data.short_description}</p>
-		{ratingCount > 0 && (
-			<div class="card-rating" title={`${ratingAverage.toFixed(1)} out of 5 from ${ratingCount} rating${ratingCount === 1 ? '' : 's'}`}>
-				<span class="stars">{stars(ratingAverage)}</span>
-				<span class="rating-meta">{ratingAverage.toFixed(1)} ({ratingCount})</span>
-			</div>
-		)}
 		<div class="badges">
 			{githubStarsLabel && (
 				<span class="badge badge-stars" title={`${githubStars} GitHub stars`}>★ {githubStarsLabel}</span>

@@ -46,7 +46,7 @@ function setFrontmatterFields(raw: string, newLines: string[]): string {
 	if (!match) throw new Error('file has no frontmatter block');
 
 	const lines = match[1].split('\n').filter((line) => !GITHUB_FIELD_PATTERN.test(line));
-	const anchor = lines.findIndex((line) => /^(ratings|comments):/.test(line));
+	const anchor = lines.findIndex((line) => /^comments:/.test(line));
 	if (anchor === -1) {
 		lines.push(...newLines);
 	} else {

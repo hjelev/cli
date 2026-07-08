@@ -30,8 +30,4 @@ logo: https://masoko.net/sb/images/favicon.png
 github_stars: 3
 github_updated: "2026-07-04"
 github_release: "v0.9.1"
-ratings:
-  - user: hjelev
-    value: 5
-    date: '2026-07-02T19:41:34.494Z'
 ---

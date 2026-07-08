@@ -104,12 +104,6 @@ async function handleTokenExchange(request: Request, env: Env, origin: string | 
 
 // Mirror the zod schemas in frontend/src/lib/schema.ts (separate deploy
 // bundle) — keep in sync.
-interface Rating {
-	user: string;
-	value: number;
-	date: string;
-}
-
 interface Comment {
 	user: string;
 	body: string;
@@ -121,7 +115,7 @@ async function handleFeedback(request: Request, env: Env, origin: string | null)
 		return json({ error: 'feedback_not_configured' }, 503, origin);
 	}
 
-	let body: { token?: unknown; toolId?: unknown; rating?: unknown; comment?: unknown };
+	let body: { token?: unknown; toolId?: unknown; comment?: unknown };
 	try {
 		body = (await request.json()) as typeof body;
 	} catch {
@@ -139,15 +133,6 @@ async function handleFeedback(request: Request, env: Env, origin: string | null)
 		return json({ error: 'invalid_tool_id' }, 400, origin);
 	}
 
-	let rating: number | undefined;
-	if (body.rating !== undefined && body.rating !== null) {
-		const value = Number(body.rating);
-		if (!Number.isInteger(value) || value < 1 || value > 5) {
-			return json({ error: 'invalid_rating' }, 400, origin);
-		}
-		rating = value;
-	}
-
 	let comment: string | undefined;
 	if (body.comment !== undefined && body.comment !== null) {
 		if (typeof body.comment !== 'string') {
@@ -160,7 +145,7 @@ async function handleFeedback(request: Request, env: Env, origin: string | null)
 		if (trimmed.length > 0) comment = trimmed;
 	}
 
-	if (rating === undefined && comment === undefined) {
+	if (comment === undefined) {
 		return json({ error: 'empty_feedback' }, 400, origin);
 	}
 
@@ -174,7 +159,7 @@ async function handleFeedback(request: Request, env: Env, origin: string | null)
 	const date = new Date().toISOString();
 
 	try {
-		await commitFeedback(env.GITHUB_BOT_TOKEN, toolId, user.login, { rating, comment, date });
+		await commitFeedback(env.GITHUB_BOT_TOKEN, toolId, user.login, { comment, date });
 	} catch (err) {
 		if (err instanceof ToolNotFoundError) {
 			return json({ error: 'tool_not_found' }, 404, origin);
@@ -182,7 +167,7 @@ async function handleFeedback(request: Request, env: Env, origin: string | null)
 		return json({ error: 'commit_failed' }, 502, origin);
 	}
 
-	return json({ ok: true, user, rating, comment, date }, 200, origin);
+	return json({ ok: true, user, comment, date }, 200, origin);
 }
 
 // Near-twin of fetchGitHubUser in frontend/src/lib/github-auth.ts (separate
@@ -204,8 +189,7 @@ async function fetchGitHubUser(token: string): Promise<{ login: string; avatar_u
 class ToolNotFoundError extends Error {}
 
 interface FeedbackPayload {
-	rating?: number;
-	comment?: string;
+	comment: string;
 	date: string;
 }
 
@@ -225,7 +209,7 @@ async function commitFeedback(
 		if (!file) throw new ToolNotFoundError(toolId);
 
 		const updated = applyFeedback(file.text, login, payload);
-		const message = buildCommitMessage(login, payload);
+		const message = buildCommitMessage(login);
 
 		const res = await ghApi(botToken, `/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`, {
 			method: 'PUT',
@@ -245,11 +229,8 @@ async function commitFeedback(
 	throw new Error('commit failed after retries');
 }
 
-function buildCommitMessage(login: string, payload: FeedbackPayload): string {
-	const parts: string[] = [];
-	if (payload.rating !== undefined) parts.push(`${payload.rating}★ rating`);
-	if (payload.comment !== undefined) parts.push('comment');
-	return `Add ${parts.join(' + ')} from @${login}`;
+function buildCommitMessage(login: string): string {
+	return `Add comment from @${login}`;
 }
 
 async function getFile(botToken: string, path: string): Promise<{ text: string; sha: string } | null> {
@@ -280,9 +261,8 @@ function ghApi(botToken: string, path: string, init: RequestInit = {}): Promise<
 
 const FRONTMATTER_RE = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/;
 
-// Parses the `---` frontmatter block, appends the feedback to the ratings /
-// comments arrays, and re-serializes. A visitor's rating replaces their own
-// previous rating (one rating per GitHub login).
+// Parses the `---` frontmatter block, appends the feedback to the comments
+// array, and re-serializes.
 function applyFeedback(fileText: string, login: string, payload: FeedbackPayload): string {
 	const match = fileText.match(FRONTMATTER_RE);
 	if (!match) throw new Error('malformed frontmatter');
@@ -290,18 +270,9 @@ function applyFeedback(fileText: string, login: string, payload: FeedbackPayload
 	const data = (load(match[1]) ?? {}) as Record<string, unknown>;
 	const body = match[2];
 
-	if (payload.rating !== undefined) {
-		const ratings = Array.isArray(data.ratings) ? (data.ratings as Rating[]) : [];
-		const withoutMine = ratings.filter((r) => r && r.user !== login);
-		withoutMine.push({ user: login, value: payload.rating, date: payload.date });
-		data.ratings = withoutMine;
-	}
-
-	if (payload.comment !== undefined) {
-		const comments = Array.isArray(data.comments) ? (data.comments as Comment[]) : [];
-		comments.push({ user: login, body: payload.comment, date: payload.date });
-		data.comments = comments;
-	}
+	const comments = Array.isArray(data.comments) ? (data.comments as Comment[]) : [];
+	comments.push({ user: login, body: payload.comment, date: payload.date });
+	data.comments = comments;
 
 	// lineWidth: -1 keeps long descriptions/URLs on one line, minimizing churn.
 	const frontmatter = dump(data, { lineWidth: -1 });

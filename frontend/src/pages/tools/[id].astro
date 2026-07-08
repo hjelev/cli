@@ -2,7 +2,6 @@
 import { getCollection, render } from 'astro:content';
 import { marked } from 'marked';
 import { slugify } from '../../lib/slug';
-import { ratingSummary, stars } from '../../lib/ratings';
 import { getRelatedTools } from '../../lib/tools';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ToolCard from '../../components/ToolCard.astro';
@@ -21,7 +20,6 @@ const { Content } = await render(tool);
 
 const descriptionHtml = marked.parse(data.description, { async: false });
 
-const { count: ratingCount, average: ratingAverage } = ratingSummary(data.ratings);
 const comments = [...(data.comments ?? [])].sort((a, b) => b.date.localeCompare(a.date));
 const fmtDate = (iso: string) => (iso ? iso.slice(0, 10) : '');
 
@@ -218,44 +216,6 @@ if (data.website) {
 	</section>
 
 	<section class="man-section feedback" id="feedback" data-tool-id={tool.id}>
-		<h2>RATINGS</h2>
-		<div class="rating-summary">
-			{ratingCount > 0 ? (
-				<>
-					<span class="stars big" id="rating-stars">{stars(ratingAverage)}</span>
-					<span class="rating-meta" id="rating-meta">
-						{ratingAverage.toFixed(1)} / 5 · {ratingCount} rating{ratingCount === 1 ? '' : 's'}
-					</span>
-				</>
-			) : (
-				<span class="rating-meta" id="rating-meta">No ratings yet.</span>
-			)}
-		</div>
-
-		<div class="rate-widget" hidden>
-			<span class="rate-label">Your rating:</span>
-			<div class="star-picker" role="radiogroup" aria-label="Rate this tool">
-				{[1, 2, 3, 4, 5].map((v) => (
-					<button
-						type="button"
-						class="star-btn"
-						data-value={v}
-						role="radio"
-						aria-checked="false"
-						aria-label={`${v} star${v === 1 ? '' : 's'}`}
-					>
-						☆
-					</button>
-				))}
-			</div>
-		</div>
-
-		<p class="feedback-signin" hidden>
-			<button type="button" class="link-btn feedback-signin-btn">Sign in with GitHub</button> to rate this tool.
-		</p>
-	</section>
-
-	<section class="man-section" id="comments">
 		<h2>COMMENTS</h2>
 		<ul class="comment-list" id="comment-list">
 			{comments.map((c) => (
@@ -345,8 +305,6 @@ if (data.website) {
 	const root = document.getElementById('feedback');
 	const toolId = root?.dataset.toolId;
 	const status = document.getElementById('feedback-status') as HTMLElement | null;
-	const rateWidget = document.querySelector<HTMLElement>('.rate-widget');
-	const starBtns = Array.from(document.querySelectorAll<HTMLButtonElement>('.star-btn'));
 	const commentForm = document.getElementById('comment-form') as HTMLFormElement | null;
 	const commentInput = document.getElementById('comment-input') as HTMLTextAreaElement | null;
 	const commentList = document.getElementById('comment-list');
@@ -360,20 +318,10 @@ if (data.website) {
 		status.classList.toggle('error', isError);
 	}
 
-	function paintStars(upTo: number) {
-		starBtns.forEach((btn) => {
-			const value = Number(btn.dataset.value);
-			btn.textContent = value <= upTo ? '★' : '☆';
-		});
-	}
-
 	function renderSignedIn(signedIn: boolean) {
-		if (rateWidget) rateWidget.hidden = !signedIn;
 		if (commentForm) commentForm.hidden = !signedIn;
 		signinPrompts.forEach((el) => (el.hidden = signedIn));
 	}
-
-	let myRating = 0;
 
 	function initFeedback() {
 		if (!toolId) return;
@@ -383,31 +331,7 @@ if (data.website) {
 			.flatMap((el) => Array.from(el.querySelectorAll<HTMLButtonElement>('.feedback-signin-btn')))
 			.forEach((btn) => btn.addEventListener('click', () => redirectToGitHubSignIn(window.location.pathname)));
 
-		// Star picker: preview on hover, submit on click.
-		starBtns.forEach((btn) => {
-			const value = Number(btn.dataset.value);
-			btn.addEventListener('mouseenter', () => paintStars(value));
-			btn.addEventListener('focus', () => paintStars(value));
-			btn.addEventListener('click', () => submitRating(value));
-		});
-		rateWidget?.addEventListener('mouseleave', () => paintStars(myRating));
-
 		commentForm?.addEventListener('submit', submitComment);
-	}
-
-	async function submitRating(value: number) {
-		const token = getStoredToken();
-		if (!token || !toolId) return;
-		myRating = value;
-		paintStars(value);
-		starBtns.forEach((b) => b.setAttribute('aria-checked', String(Number(b.dataset.value) === value)));
-		setStatus('Saving your rating…');
-		try {
-			await submitFeedback(token, { toolId, rating: value });
-			setStatus(`Rated ${value}★. ${REBUILD_NOTE}`);
-		} catch (err) {
-			setStatus(err instanceof Error ? err.message : 'Could not save your rating.', true);
-		}
 	}
 
 	async function submitComment(event: SubmitEvent) {

@@ -48,12 +48,6 @@ const installMethodSchema = z.object({
 // User-contributed feedback, appended to a tool's .md frontmatter by the
 // Worker (see worker/src/index.ts). `user` is the commenter's verified GitHub
 // login, `date` an ISO-8601 timestamp.
-export const ratingSchema = z.object({
-	user: z.string(),
-	value: z.number().int().min(1).max(5),
-	date: z.string(),
-});
-
 export const commentSchema = z.object({
 	user: z.string(),
 	body: z.string(),
@@ -76,9 +70,8 @@ export const toolSchema = z.object({
 	media: z.url().optional(),
 	logo: z.url().optional(),
 	// ISO YYYY-MM-DD date the tool's content was last changed. Stamped on
-	// submission; preserved (never bumped) by the ratings/comments Worker path.
+	// submission; preserved (never bumped) by the comments Worker path.
 	updated: z.string().optional(),
-	ratings: z.array(ratingSchema).optional().default([]),
 	comments: z.array(commentSchema).optional().default([]),
 	// GitHub-derived stats, refreshed daily by scripts/sync-github-stats.ts
 	// via the GraphQL API (see .github/workflows/sync-github-stats.yml).
@@ -92,18 +85,16 @@ export const toolSchema = z.object({
 // are derived, never re-declared by hand.
 export const toolFormSchema = toolSchema.omit({
 	updated: true,
-	ratings: true,
 	comments: true,
 	github_stars: true,
 	github_updated: true,
 	github_release: true,
 });
 export type ToolFormData = z.infer<typeof toolFormSchema>;
-export type Rating = z.infer<typeof ratingSchema>;
 
 // Fields an edit must carry forward from the existing file rather than
 // collect via the form — the form only ever produces `ToolFormData`.
 export type PreservedToolFields = Pick<
 	z.infer<typeof toolSchema>,
-	'ratings' | 'comments' | 'github_stars' | 'github_updated' | 'github_release'
+	'comments' | 'github_stars' | 'github_updated' | 'github_release'
 >;

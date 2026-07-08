@@ -974,74 +974,7 @@ button[type='submit']:disabled {
 	}
 }
 
-/* ---------- ratings & comments ---------- */
-
-.stars {
-	color: var(--accent-amber);
-	letter-spacing: 0.05em;
-	font-size: 1.05rem;
-}
-
-.card-rating {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	font-size: 0.8rem;
-	grid-column: 1 / -1;
-}
-
-@media (min-width: 640px) {
-	.card-rating {
-		grid-column: 2;
-	}
-}
-
-.card-rating .rating-meta,
-.rating-summary .rating-meta {
-	color: var(--fg-dim);
-	font-variant-numeric: tabular-nums;
-}
-
-.rating-summary {
-	display: flex;
-	align-items: center;
-	gap: 0.6rem;
-	margin-bottom: 0.75rem;
-}
-
-.stars.big {
-	font-size: 1.85rem;
-}
-
-.rate-widget {
-	display: flex;
-	align-items: center;
-	gap: 0.6rem;
-	margin-bottom: 0.5rem;
-}
-
-.rate-label {
-	color: var(--fg-dim);
-	font-size: 0.85rem;
-}
-
-.star-picker {
-	display: inline-flex;
-}
-
-.star-btn {
-	background: transparent;
-	border: none;
-	padding: 0 0.1rem;
-	font-size: 1.85rem;
-	line-height: 1;
-	color: var(--accent-amber);
-	cursor: pointer;
-}
-
-.star-btn:hover {
-	filter: brightness(1.15);
-}
+/* ---------- comments ---------- */
 
 .link-btn {
 	background: transparent;

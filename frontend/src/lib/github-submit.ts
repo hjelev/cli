@@ -72,7 +72,7 @@ async function createBranch(token: string, login: string, branch: string, sha: s
 
 // Best-effort fast-forward of the fork's target branch to match upstream.
 // Only used before editing: a stale fork copy of the file being edited could
-// resurrect ratings/comments/github_* that changed upstream since the fork
+// resurrect comments/github_* that changed upstream since the fork
 // was created. Failures are swallowed — worst case we fall back to the
 // fork's own (possibly slightly stale) branch tip, same as submitTool always
 // has, which is an acceptable degraded path, not silent corruption.
@@ -131,7 +131,7 @@ function buildToolFileContent(data: ToolFormData): string {
 }
 
 // Merges edited form data into the current file's frontmatter, carrying
-// forward ratings/comments/github_* (never collected by the form) and the
+// forward comments/github_* (never collected by the form) and the
 // trailing markdown body verbatim.
 function buildEditedToolFileContent(data: ToolFormData, currentFileText: string): string {
 	const match = currentFileText.match(FRONTMATTER_RE);
@@ -141,7 +141,6 @@ function buildEditedToolFileContent(data: ToolFormData, currentFileText: string)
 	const body = match[2];
 
 	const preserved: PreservedToolFields = {
-		ratings: Array.isArray(current.ratings) ? (current.ratings as PreservedToolFields['ratings']) : [],
 		comments: Array.isArray(current.comments) ? (current.comments as PreservedToolFields['comments']) : [],
 		github_stars: current.github_stars as PreservedToolFields['github_stars'],
 		github_updated: current.github_updated as PreservedToolFields['github_updated'],

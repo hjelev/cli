@@ -45,8 +45,4 @@ media: "https://awesometui.com/captures/yazi/yazi-hero.webp"
 github_stars: 40122
 github_updated: "2026-07-06"
 github_release: "v26.5.6"
-ratings:
-  - user: hjelev
-    value: 5
-    date: '2026-07-01T21:53:11.252Z'
 ---
