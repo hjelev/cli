@@ -837,6 +837,48 @@ dd {
 	font-family: var(--font-body);
 }
 
+.source-toggle {
+	display: flex;
+	gap: 1rem;
+	font-family: var(--font-display);
+	font-size: 0.8rem;
+	color: var(--fg-dim);
+}
+
+.source-option {
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+	cursor: pointer;
+}
+
+.source-toggle input[type='radio'] {
+	width: auto;
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.file-name,
+.file-error {
+	display: block;
+	margin-top: 0.3rem;
+	font-size: 0.85rem;
+}
+
+.file-name {
+	color: var(--fg-dim);
+}
+
+.file-error {
+	color: var(--accent-rust);
+}
+
+.file-name:empty,
+.file-error:empty {
+	display: none;
+}
+
 .install-row {
 	display: grid;
 	grid-template-columns: 140px 1fr auto;

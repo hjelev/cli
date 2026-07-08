@@ -1,6 +1,7 @@
 import { dump, load } from 'js-yaml';
 import { TARGET_BRANCH, TARGET_OWNER, TARGET_REPO } from './config';
 import { slugify } from './slug';
+import { buildUploadUrl, extensionForFile, fileToBase64, type UploadableField } from './upload';
 import type { PreservedToolFields, ToolFormData } from './schema';
 
 export type { ToolFormData };
@@ -164,20 +165,57 @@ async function getFileOnBranch(
 	return { text: fromBase64Utf8(data.content), sha: data.sha };
 }
 
-async function commitToolFile(
+// Shared PUT for both text (markdown) and binary (upload) commits — callers
+// encode `contentBase64` themselves since the encoding strategy differs
+// (toBase64Utf8 for text, fileToBase64 for uploaded binaries).
+async function commitFile(
 	token: string,
 	login: string,
 	branch: string,
 	path: string,
-	content: string,
+	contentBase64: string,
 	message: string,
 	sha?: string,
 ): Promise<void> {
 	const res = await ghFetch(token, `/repos/${login}/${TARGET_REPO}/contents/${path}`, {
 		method: 'PUT',
-		body: JSON.stringify({ message, content: toBase64Utf8(content), branch, ...(sha ? { sha } : {}) }),
+		body: JSON.stringify({ message, content: contentBase64, branch, ...(sha ? { sha } : {}) }),
 	});
-	if (!res.ok) throw new Error(await readErrorMessage(res, 'Could not commit the tool file to your fork.'));
+	if (!res.ok) throw new Error(await readErrorMessage(res, 'Could not commit the file to your fork.'));
+}
+
+// Like getFileOnBranch but skips decoding content — binary uploads (images,
+// video) aren't valid UTF-8 text and fromBase64Utf8 shouldn't run against
+// them. Returns undefined for a path that doesn't exist yet on this branch,
+// so the caller's PUT omits `sha` (fresh file) instead of erroring.
+async function getExistingFileSha(token: string, login: string, path: string, branch: string): Promise<string | undefined> {
+	const res = await ghFetch(token, `/repos/${login}/${TARGET_REPO}/contents/${path}?ref=${branch}`);
+	if (res.status === 404) return undefined;
+	if (!res.ok) throw new Error(await readErrorMessage(res, 'Could not check for an existing upload on your fork.'));
+	const data = (await res.json()) as { sha: string };
+	return data.sha;
+}
+
+// Commits an uploaded logo/media file to `frontend/public/uploads/{slug}/{field}.{ext}`
+// and returns the final production URL to store in frontmatter. If a prior
+// upload used a different extension (e.g. was .png, now .gif), the old file
+// is left orphaned rather than deleted — harmless once frontmatter stops
+// pointing at it, and not worth a second sha-lookup/DELETE call to clean up.
+async function commitUpload(
+	token: string,
+	login: string,
+	branch: string,
+	slug: string,
+	field: UploadableField,
+	file: File,
+): Promise<string> {
+	const ext = extensionForFile(file);
+	if (!ext) throw new Error(`${file.name} isn't a supported file type.`);
+	const path = `frontend/public/uploads/${slug}/${field}.${ext}`;
+	const sha = await getExistingFileSha(token, login, path, branch);
+	const contentBase64 = await fileToBase64(file);
+	await commitFile(token, login, branch, path, contentBase64, `Add ${field} for ${slug}`, sha);
+	return buildUploadUrl(slug, field, ext);
 }
 
 async function openPullRequest(token: string, login: string, branch: string, title: string, body: string): Promise<string> {
@@ -190,7 +228,11 @@ async function openPullRequest(token: string, login: string, branch: string, tit
 	return data.html_url;
 }
 
-export async function submitTool(token: string, data: ToolFormData): Promise<{ prUrl: string }> {
+export async function submitTool(
+	token: string,
+	data: ToolFormData,
+	files?: Partial<Record<UploadableField, File>>,
+): Promise<{ prUrl: string }> {
 	const login = await getAuthenticatedLogin(token);
 	await ensureFork(token, login);
 	const sha = await getForkBranchSha(token, login);
@@ -199,8 +241,19 @@ export async function submitTool(token: string, data: ToolFormData): Promise<{ p
 	const branch = `submission-${slug}-${Date.now()}`;
 	await createBranch(token, login, branch, sha);
 
-	const content = buildToolFileContent(data);
-	await commitToolFile(token, login, branch, `frontend/src/content/tools/${slug}.md`, content, `Add ${data.name} to the directory`);
+	const resolved: ToolFormData = { ...data };
+	if (files?.logo) resolved.logo = await commitUpload(token, login, branch, slug, 'logo', files.logo);
+	if (files?.media) resolved.media = await commitUpload(token, login, branch, slug, 'media', files.media);
+
+	const content = buildToolFileContent(resolved);
+	await commitFile(
+		token,
+		login,
+		branch,
+		`frontend/src/content/tools/${slug}.md`,
+		toBase64Utf8(content),
+		`Add ${data.name} to the directory`,
+	);
 
 	const prUrl = await openPullRequest(
 		token,
@@ -216,7 +269,12 @@ export async function submitTool(token: string, data: ToolFormData): Promise<{ p
 // path is the file's identity (see content.config.ts's glob loader), not
 // derived from frontmatter. Re-slugifying the (possibly edited) name would
 // silently orphan the original file and create a duplicate instead.
-export async function editTool(token: string, toolId: string, data: ToolFormData): Promise<{ prUrl: string }> {
+export async function editTool(
+	token: string,
+	toolId: string,
+	data: ToolFormData,
+	files?: Partial<Record<UploadableField, File>>,
+): Promise<{ prUrl: string }> {
 	const login = await getAuthenticatedLogin(token);
 	await ensureFork(token, login);
 	await syncForkWithUpstream(token, login);
@@ -229,8 +287,12 @@ export async function editTool(token: string, toolId: string, data: ToolFormData
 	const current = await getFileOnBranch(token, login, path, branch);
 	if (!current) throw new Error(`Could not find ${toolId} in the repository. It may have been renamed or removed.`);
 
-	const content = buildEditedToolFileContent(data, current.text);
-	await commitToolFile(token, login, branch, path, content, `Update ${data.name}`, current.sha);
+	const resolved: ToolFormData = { ...data };
+	if (files?.logo) resolved.logo = await commitUpload(token, login, branch, toolId, 'logo', files.logo);
+	if (files?.media) resolved.media = await commitUpload(token, login, branch, toolId, 'media', files.media);
+
+	const content = buildEditedToolFileContent(resolved, current.text);
+	await commitFile(token, login, branch, path, toBase64Utf8(content), `Update ${data.name}`, current.sha);
 
 	const prUrl = await openPullRequest(
 		token,

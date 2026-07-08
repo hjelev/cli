@@ -25,7 +25,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		import { getStoredToken, redirectToGitHubSignIn, signOut, fetchGitHubUser } from '../lib/github-auth';
 		import { submitTool } from '../lib/github-submit';
 		import { toolFormSchema } from '../lib/schema';
-		import { initInstallationRows, readCandidate, resetInstallationRows } from '../lib/tool-form-client';
+		import {
+			extractUploadFiles,
+			initInstallationRows,
+			initUploadToggles,
+			readCandidate,
+			resetInstallationRows,
+		} from '../lib/tool-form-client';
+		import { validateUploadFile } from '../lib/upload';
 
 		const signedOutSection = document.getElementById('signed-out') as HTMLElement;
 		const signedInSection = document.getElementById('signed-in') as HTMLElement;
@@ -37,6 +44,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
 
 		initInstallationRows(installationRows, addInstallationRowBtn);
+		initUploadToggles(form);
 
 		document.getElementById('sign-in-btn')?.addEventListener('click', () => {
 			redirectToGitHubSignIn('/submit');
@@ -79,11 +87,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				return;
 			}
 
+			const files = extractUploadFiles(form);
+			for (const file of Object.values(files)) {
+				const error = file && validateUploadFile(file);
+				if (error) {
+					formStatus.textContent = `Please fix: ${error}`;
+					return;
+				}
+			}
+
 			formStatus.textContent = 'Submitting — forking, committing, and opening a pull request…';
 			submitBtn.disabled = true;
 
 			try {
-				const { prUrl } = await submitTool(token, validation.data);
+				const { prUrl } = await submitTool(token, validation.data, files);
 				const link = document.createElement('a');
 				link.href = prUrl;
 				link.target = '_blank';

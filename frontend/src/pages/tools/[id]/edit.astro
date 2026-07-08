@@ -34,7 +34,8 @@ const { data } = tool;
 		import { getStoredToken, redirectToGitHubSignIn, signOut, fetchGitHubUser } from '../../../lib/github-auth';
 		import { editTool } from '../../../lib/github-submit';
 		import { toolFormSchema } from '../../../lib/schema';
-		import { initInstallationRows, readCandidate } from '../../../lib/tool-form-client';
+		import { extractUploadFiles, initInstallationRows, initUploadToggles, readCandidate } from '../../../lib/tool-form-client';
+		import { validateUploadFile } from '../../../lib/upload';
 
 		const signedOutSection = document.getElementById('signed-out') as HTMLElement;
 		const signedInSection = document.getElementById('signed-in') as HTMLElement;
@@ -47,6 +48,7 @@ const { data } = tool;
 		const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
 
 		initInstallationRows(installationRows, addInstallationRowBtn);
+		initUploadToggles(form);
 
 		document.getElementById('sign-in-btn')?.addEventListener('click', () => {
 			redirectToGitHubSignIn(window.location.pathname);
@@ -89,11 +91,20 @@ const { data } = tool;
 				return;
 			}
 
+			const files = extractUploadFiles(form);
+			for (const file of Object.values(files)) {
+				const error = file && validateUploadFile(file);
+				if (error) {
+					formStatus.textContent = `Please fix: ${error}`;
+					return;
+				}
+			}
+
 			formStatus.textContent = 'Submitting your edit — forking, committing, and opening a pull request…';
 			submitBtn.disabled = true;
 
 			try {
-				const { prUrl } = await editTool(token, toolId, validation.data);
+				const { prUrl } = await editTool(token, toolId, validation.data, files);
 				const link = document.createElement('a');
 				link.href = prUrl;
 				link.target = '_blank';

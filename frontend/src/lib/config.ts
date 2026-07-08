@@ -9,6 +9,11 @@ export const TARGET_OWNER = 'hjelev';
 export const TARGET_REPO = 'cli';
 export const TARGET_BRANCH = 'master';
 
+// Matches astro.config.mjs `site`. Needed to build absolute URLs for files
+// committed straight into public/ (uploaded logo/media), which have no
+// server-rendered page to derive an origin from.
+export const SITE_ORIGIN = 'https://cli.masoko.net';
+
 // Number of tool listings shown per page before pagination kicks in. Shared by
 // the home listing and the category/tag/language routes so every paginated view
 // splits at the same size.
