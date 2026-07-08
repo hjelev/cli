@@ -124,6 +124,15 @@ textarea {
 	background: #27c93f;
 }
 
+/* macOS-style proxy icon: the site mark sitting in the window title bar. */
+.term-logo {
+	width: 18px;
+	height: 18px;
+	flex-shrink: 0;
+	border-radius: var(--radius);
+	margin-left: 0.15rem;
+}
+
 .term-title {
 	flex: 1;
 	min-width: 0;
