@@ -475,6 +475,19 @@ textarea {
 	content: ']';
 }
 
+.badge-stars {
+	background: var(--accent-amber);
+	color: var(--bg-deep);
+	font-weight: 700;
+	padding: 0.05rem 0.45rem;
+	border-radius: var(--radius);
+}
+
+.badge-stars::before,
+.badge-stars::after {
+	content: '';
+}
+
 .tags {
 	display: flex;
 	flex-wrap: wrap;
