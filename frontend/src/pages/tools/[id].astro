@@ -23,13 +23,6 @@ const descriptionHtml = marked.parse(data.description, { async: false });
 const comments = [...(data.comments ?? [])].sort((a, b) => b.date.localeCompare(a.date));
 const fmtDate = (iso: string) => (iso ? iso.slice(0, 10) : '');
 
-const isGithub = /^https?:\/\/github\.com\//i.test(data.repository_url);
-const repoPath = data.repository_url
-	.replace(/^https?:\/\/github\.com\//i, '')
-	.replace(/\.git$/, '')
-	.replace(/\/+$/, '');
-const starsBadgeUrl = `https://img.shields.io/github/stars/${repoPath}?style=social`;
-
 let faviconUrl = '';
 if (data.website) {
 	try {
@@ -132,14 +125,6 @@ if (data.website) {
 		<dl>
 			<dt>Repository</dt>
 			<dd>
-				{isGithub && (
-					<img
-						class="stars-badge"
-						src={starsBadgeUrl}
-						alt={`GitHub stars for ${data.name}`}
-						loading="lazy"
-					/>
-				)}
 				<a href={data.repository_url} target="_blank" rel="noopener">{data.repository_url}</a>
 			</dd>
 
