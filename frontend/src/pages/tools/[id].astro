@@ -45,6 +45,10 @@ if (data.website) {
 	command={`man ${tool.id}`}
 	editHref={`/tools/${tool.id}/edit`}
 	backHref="/"
+	breadcrumb={[
+		{ label: slugify(data.category), href: `/categories/${slugify(data.category)}` },
+		{ label: tool.id },
+	]}
 >
 	<header class="man-header">
 		<div class="logo-stack">

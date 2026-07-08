@@ -1,6 +1,11 @@
 ---
 import '../styles/global.css';
 
+interface BreadcrumbSegment {
+	label: string;
+	href?: string;
+}
+
 interface Props {
 	title: string;
 	command: string;
@@ -9,9 +14,19 @@ interface Props {
 	editHref?: string;
 	backHref?: string;
 	noindex?: boolean;
+	breadcrumb?: BreadcrumbSegment[];
 }
 
-const { title, command, mode = 'NORMAL', status, editHref, backHref, noindex = false } = Astro.props;
+const {
+	title,
+	command,
+	mode = 'NORMAL',
+	status,
+	editHref,
+	backHref,
+	noindex = false,
+	breadcrumb = [],
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -37,7 +52,19 @@ const { title, command, mode = 'NORMAL', status, editHref, backHref, noindex = f
 			</div>
 			<footer class="statusline">
 				<span class="mode">{mode}</span>
-				<span class="seg path">~/cli.masoko.net</span>
+				<span class="seg path">
+					~/{breadcrumb.length > 0 ? <a href="/">cli.masoko.net</a> : 'cli.masoko.net'}
+					{breadcrumb.map((segment, i) => (
+						<>
+							<span class="sep">/</span>
+							{i < breadcrumb.length - 1 && segment.href ? (
+								<a href={segment.href}>{segment.label}</a>
+							) : (
+								segment.label
+							)}
+						</>
+					))}
+				</span>
 				{status && <span class="seg">{status}</span>}
 				<span class="seg right">
 					{editHref && (

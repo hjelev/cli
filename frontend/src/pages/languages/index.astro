@@ -20,7 +20,12 @@ const languages = [...bySlug.entries()]
 	.sort((a, b) => a.slug.localeCompare(b.slug));
 ---
 
-<BaseLayout title="Languages — The Terminal Index" command="ls languages/" backHref="/">
+<BaseLayout
+	title="Languages — The Terminal Index"
+	command="ls languages/"
+	backHref="/"
+	breadcrumb={[{ label: 'languages/' }]}
+>
 	<header class="hero">
 		<h1><Logo />Languages</h1>
 		<p class="tagline"># browse tools by language</p>

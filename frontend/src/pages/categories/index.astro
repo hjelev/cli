@@ -13,7 +13,12 @@ for (const tool of tools) {
 const nonEmptyCategories = CATEGORIES.filter((category) => (counts.get(category) ?? 0) > 0);
 ---
 
-<BaseLayout title="Categories — The Terminal Index" command="ls categories/" backHref="/">
+<BaseLayout
+	title="Categories — The Terminal Index"
+	command="ls categories/"
+	backHref="/"
+	breadcrumb={[{ label: 'categories/' }]}
+>
 	<header class="hero">
 		<h1><Logo />Categories</h1>
 		<p class="tagline"># browse tools grouped by category</p>

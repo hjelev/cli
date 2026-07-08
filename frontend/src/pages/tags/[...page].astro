@@ -33,7 +33,13 @@ const { page } = Astro.props;
 const status = page.lastPage > 1 ? `page ${page.currentPage}/${page.lastPage}` : undefined;
 ---
 
-<BaseLayout title="Tags — The Terminal Index" command="ls tags/" backHref="/" status={status}>
+<BaseLayout
+	title="Tags — The Terminal Index"
+	command="ls tags/"
+	backHref="/"
+	status={status}
+	breadcrumb={[{ label: 'tags/' }]}
+>
 	<header class="hero">
 		<h1><Logo />Tags</h1>
 		<p class="tagline"># browse tools by tag</p>

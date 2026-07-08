@@ -42,6 +42,7 @@ const { page, tag } = Astro.props;
 	command={`ls tags/${slugify(tag)}`}
 	backHref="/tags"
 	noindex={page.total < MIN_INDEXABLE_LISTINGS}
+	breadcrumb={[{ label: `${slugify(tag)}/` }]}
 >
 	<header class="hero">
 		<h1><Logo />#{tag}</h1>

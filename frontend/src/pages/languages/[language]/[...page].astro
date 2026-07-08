@@ -40,6 +40,7 @@ const { page, language } = Astro.props;
 	command={`ls languages/${slugify(language)}`}
 	backHref="/languages"
 	noindex={page.total < MIN_INDEXABLE_LISTINGS}
+	breadcrumb={[{ label: `${slugify(language)}/` }]}
 >
 	<header class="hero">
 		<h1><Logo />{language}</h1>

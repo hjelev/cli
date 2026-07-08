@@ -31,6 +31,7 @@ const { page, category } = Astro.props;
 	command={`ls categories/${slugify(category)}`}
 	backHref="/categories"
 	noindex={page.total < MIN_INDEXABLE_LISTINGS}
+	breadcrumb={[{ label: `${slugify(category)}/` }]}
 >
 	<header class="hero">
 		<h1><Logo />{category}</h1>

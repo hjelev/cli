@@ -192,6 +192,7 @@ textarea {
 
 .statusline .seg.path {
 	color: var(--accent-green);
+	gap: 0;
 }
 
 .statusline .seg.right {
