@@ -1,9 +1,8 @@
 ---
-updated: '2026-07-02'
 name: fresh
 category: Text Editors
 short_description: A powerful terminal text editor and IDE.
-description: |
+description: |-
   A modern, full-featured terminal text editor, with zero configuration.
   Familiar keybindings, mouse support, and IDE-level features — no learning
   curve required.
@@ -38,8 +37,10 @@ tags:
   - editor
   - terminal-based
 media: https://raw.githubusercontent.com/sinelaw/fresh/master/docs/fresh-demo2.gif
-logo: https://avatars.githubusercontent.com/u/84020?v=4
+logo: https://cli.masoko.net/uploads/fresh/logo.png
+updated: '2026-07-08'
+comments: []
 github_stars: 7806
-github_updated: "2026-07-08"
-github_release: "v0.4.3"
+github_updated: '2026-07-08'
+github_release: v0.4.3
 ---
