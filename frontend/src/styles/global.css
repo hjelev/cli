@@ -545,6 +545,10 @@ textarea {
 	font-size: 0.85rem;
 }
 
+.pagination[hidden] {
+	display: none;
+}
+
 .page-nav {
 	color: var(--fg-dim);
 	white-space: nowrap;
