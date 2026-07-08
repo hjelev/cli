@@ -29,7 +29,7 @@ const { title, command, mode = 'NORMAL', status, editHref, backHref, noindex = f
 		<div class="term">
 			<div class="term-bar">
 				<div class="term-dots"><span></span><span></span><span></span></div>
-				<p class="term-title"><span class="user">visitor@cli-tools</span>:~$ {command}</p>
+				<p class="term-title"><span class="user">visitor@cli.masoko.net</span>:~$ {command}</p>
 				{backHref && <a class="back" href={backHref}>&larr; cd ..</a>}
 			</div>
 			<div class="term-body">
@@ -37,7 +37,7 @@ const { title, command, mode = 'NORMAL', status, editHref, backHref, noindex = f
 			</div>
 			<footer class="statusline">
 				<span class="mode">{mode}</span>
-				<span class="seg path">~/cli-tools</span>
+				<span class="seg path">~/cli.masoko.net</span>
 				{status && <span class="seg">{status}</span>}
 				<span class="seg right">
 					{editHref && (
