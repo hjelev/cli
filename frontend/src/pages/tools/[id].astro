@@ -130,6 +130,38 @@ if (data.website) {
 	<section class="man-section">
 		<h2>DETAILS</h2>
 		<dl>
+			<dt>Repository</dt>
+			<dd>
+				<a href={data.repository_url} target="_blank" rel="noopener">{data.repository_url}</a>
+				{isGithub && (
+					<img
+						class="stars-badge"
+						src={starsBadgeUrl}
+						alt={`GitHub stars for ${data.name}`}
+						loading="lazy"
+					/>
+				)}
+			</dd>
+
+			{data.website && (
+				<>
+					<dt>Website</dt>
+					<dd>
+						{faviconUrl && (
+							<img
+								class="favicon"
+								src={faviconUrl}
+								alt=""
+								width="16"
+								height="16"
+								loading="lazy"
+							/>
+						)}
+						<a href={data.website} target="_blank" rel="noopener">{data.website}</a>
+					</dd>
+				</>
+			)}
+
 			<dt>Author</dt>
 			<dd>{data.author}</dd>
 
@@ -166,42 +198,6 @@ if (data.website) {
 				</>
 			)}
 		</dl>
-	</section>
-
-	<section class="man-section">
-		<h2>SEE ALSO</h2>
-		<ul class="links">
-			<li>
-				<a href={data.repository_url} target="_blank" rel="noopener">Repository &nearr;</a>
-				{isGithub && (
-					<img
-						class="stars-badge"
-						src={starsBadgeUrl}
-						alt={`GitHub stars for ${data.name}`}
-						loading="lazy"
-					/>
-				)}
-			</li>
-			{
-				data.website && (
-					<li>
-						{faviconUrl && (
-							<img
-								class="favicon"
-								src={faviconUrl}
-								alt=""
-								width="16"
-								height="16"
-								loading="lazy"
-							/>
-						)}
-						<a href={data.website} target="_blank" rel="noopener">
-							Website &nearr;
-						</a>
-					</li>
-				)
-			}
-		</ul>
 	</section>
 
 	<section class="man-section">
