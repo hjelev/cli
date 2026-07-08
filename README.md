@@ -42,6 +42,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [btop](https://github.com/aristocratos/btop) | A monitor of resources | C++ | [Repo](https://github.com/aristocratos/btop) |
+| [htop](https://htop.dev/) | htop - an interactive process viewer | C | [Repo](https://github.com/htop-dev/htop), [Website](https://htop.dev/) |
 
 ### Networking
 
