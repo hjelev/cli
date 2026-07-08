@@ -12,8 +12,11 @@ const { tool } = Astro.props;
 const { data } = tool;
 ---
 
-<BaseLayout title={`Edit ${data.name} — CLI Tools Directory`} command={`man ${tool.id} --edit`}>
-	<a class="back" href={`/tools/${tool.id}`}>&larr; cd ..</a>
+<BaseLayout
+	title={`Edit ${data.name} — CLI Tools Directory`}
+	command={`man ${tool.id} --edit`}
+	backHref={`/tools/${tool.id}`}
+>
 	<h1>Edit {data.name}</h1>
 	<p class="form-note">Sign in with GitHub to propose an edit. Submitting opens a pull request from your own fork.</p>
 

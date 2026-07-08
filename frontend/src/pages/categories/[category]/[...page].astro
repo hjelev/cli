@@ -25,9 +25,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page, category } = Astro.props;
 ---
 
-<BaseLayout title={`${category} — The Terminal Index`} command={`ls categories/${slugify(category)}`}>
-	<a class="back" href="/categories">&larr; cd ..</a>
-
+<BaseLayout title={`${category} — The Terminal Index`} command={`ls categories/${slugify(category)}`} backHref="/categories">
 	<header class="hero">
 		<h1>{category}</h1>
 		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} in this category</p>

@@ -7,9 +7,10 @@ interface Props {
 	mode?: string;
 	status?: string;
 	editHref?: string;
+	backHref?: string;
 }
 
-const { title, command, mode = 'NORMAL', status, editHref } = Astro.props;
+const { title, command, mode = 'NORMAL', status, editHref, backHref } = Astro.props;
 ---
 
 <html lang="en">
@@ -25,6 +26,7 @@ const { title, command, mode = 'NORMAL', status, editHref } = Astro.props;
 			<div class="term-bar">
 				<div class="term-dots"><span></span><span></span><span></span></div>
 				<p class="term-title"><span class="user">visitor@cli-tools</span>:~$ {command}</p>
+				{backHref && <a class="back" href={backHref}>&larr; cd ..</a>}
 			</div>
 			<div class="term-body">
 				<slot />

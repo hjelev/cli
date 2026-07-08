@@ -34,9 +34,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page, language } = Astro.props;
 ---
 
-<BaseLayout title={`${language} — The Terminal Index`} command={`ls languages/${slugify(language)}`}>
-	<a class="back" href="/languages">&larr; cd ..</a>
-
+<BaseLayout title={`${language} — The Terminal Index`} command={`ls languages/${slugify(language)}`} backHref="/languages">
 	<header class="hero">
 		<h1>{language}</h1>
 		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} written in {language}</p>

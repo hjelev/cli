@@ -125,6 +125,8 @@ textarea {
 }
 
 .term-title {
+	flex: 1;
+	min-width: 0;
 	font-size: 0.8rem;
 	color: var(--fg-dim);
 	white-space: nowrap;
@@ -134,6 +136,18 @@ textarea {
 
 .term-title .user {
 	color: var(--accent-green);
+}
+
+.back {
+	flex-shrink: 0;
+	font-size: 0.8rem;
+	color: var(--fg-dim);
+	white-space: nowrap;
+}
+
+.back:hover {
+	color: var(--accent-rust);
+	text-decoration: none;
 }
 
 .term-body {
@@ -581,12 +595,6 @@ a.page-num:hover {
 }
 
 /* ---------- man page (tool detail) ---------- */
-
-.back {
-	display: inline-block;
-	margin-bottom: 1.5rem;
-	color: var(--fg-dim);
-}
 
 .man-header {
 	display: flex;

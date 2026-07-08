@@ -36,9 +36,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page, tag } = Astro.props;
 ---
 
-<BaseLayout title={`#${tag} — The Terminal Index`} command={`ls tags/${slugify(tag)}`}>
-	<a class="back" href="/tags">&larr; cd ..</a>
-
+<BaseLayout title={`#${tag} — The Terminal Index`} command={`ls tags/${slugify(tag)}`} backHref="/tags">
 	<header class="hero">
 		<h1>#{tag}</h1>
 		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} tagged {tag}</p>

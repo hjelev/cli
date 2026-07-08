@@ -38,9 +38,8 @@ if (data.website) {
 	title={`${data.name} — The Terminal Index`}
 	command={`man ${tool.id}`}
 	editHref={`/tools/${tool.id}/edit`}
+	backHref="/"
 >
-	<a class="back" href="/">&larr; cd ..</a>
-
 	<header class="man-header">
 		{data.logo && <img src={data.logo} alt="" width="48" height="48" />}
 		<div>
