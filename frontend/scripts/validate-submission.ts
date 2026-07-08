@@ -1,6 +1,7 @@
 import { execSync } from 'node:child_process';
 import path from 'node:path';
 import { parseToolFile } from './lib/load-tool.ts';
+import { SITE_ORIGIN } from '../src/lib/config.ts';
 
 const repoRoot = path.resolve(import.meta.dirname, '..');
 // `git diff --name-only` prints paths relative to the git top-level, even when
@@ -44,6 +45,26 @@ async function checkUrl(url: string): Promise<boolean> {
 	}
 }
 
+// Uploaded logo/media are committed to the submitter's PR branch, not
+// `master` — so the production URL (`SITE_ORIGIN`/uploads/...) 404s until the
+// PR is merged and the site redeploys. Rather than fetching that not-yet-live
+// URL, check the file exists in the PR's own head commit.
+const UPLOAD_URL_PREFIX = `${SITE_ORIGIN}/uploads/`;
+
+function localUploadPath(url: string): string | null {
+	if (!url.startsWith(UPLOAD_URL_PREFIX)) return null;
+	return `frontend/public/uploads/${url.slice(UPLOAD_URL_PREFIX.length)}`;
+}
+
+function existsAtHead(relativePath: string): boolean {
+	try {
+		execSync(`git cat-file -e ${headSha}:${relativePath}`, { cwd: gitRoot, stdio: 'ignore' });
+		return true;
+	} catch {
+		return false;
+	}
+}
+
 let hasErrors = false;
 
 for (const relativePath of changedFiles) {
@@ -70,10 +91,14 @@ for (const relativePath of changedFiles) {
 
 	for (const [field, url] of urlFields) {
 		if (!url) continue;
-		const reachable = await checkUrl(url);
+		const localPath = localUploadPath(url);
+		const reachable = localPath ? existsAtHead(localPath) : await checkUrl(url);
 		if (!reachable) {
 			hasErrors = true;
-			console.error(`❌ ${relativePath}: ${field} (${url}) is not reachable (did not return a successful response)`);
+			const detail = localPath
+				? `not found in this PR (expected ${localPath})`
+				: 'is not reachable (did not return a successful response)';
+			console.error(`❌ ${relativePath}: ${field} (${url}) ${detail}`);
 		} else {
 			console.log(`✅ ${relativePath}: ${field} reachable`);
 		}
