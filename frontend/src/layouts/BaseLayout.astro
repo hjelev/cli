@@ -29,14 +29,6 @@ const { title, command, mode = 'NORMAL', status, editHref, backHref, noindex = f
 		<div class="term">
 			<div class="term-bar">
 				<div class="term-dots"><span></span><span></span><span></span></div>
-				<svg class="term-logo" viewBox="0 0 128 128" aria-hidden="true">
-					<rect width="128" height="128" rx="20" fill="var(--bg-deep)" />
-					<rect x="26" y="19" width="11" height="11" rx="3" fill="var(--accent-green)" />
-					<rect x="43" y="19" width="40" height="11" rx="3" fill="var(--fg)" />
-					<rect x="26" y="43" width="60" height="11" rx="3" fill="var(--fg-dim)" />
-					<rect x="26" y="67" width="38" height="11" rx="3" fill="var(--fg-dim)" />
-					<rect x="26" y="91" width="16" height="18" rx="3" fill="var(--accent-rust)" />
-				</svg>
 				<p class="term-title"><span class="user">visitor@cli-tools</span>:~$ {command}</p>
 				{backHref && <a class="back" href={backHref}>&larr; cd ..</a>}
 			</div>

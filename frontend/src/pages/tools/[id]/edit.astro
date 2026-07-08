@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import ToolForm from '../../../components/ToolForm.astro';
+import Logo from '../../../components/Logo.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
@@ -17,7 +18,7 @@ const { data } = tool;
 	command={`man ${tool.id} --edit`}
 	backHref={`/tools/${tool.id}`}
 >
-	<h1>Edit {data.name}</h1>
+	<h1><Logo />Edit {data.name}</h1>
 	<p class="form-note">Sign in with GitHub to propose an edit. Submitting opens a pull request from your own fork.</p>
 
 	<section id="signed-out">

@@ -1,10 +1,11 @@
 ---
 import ToolForm from '../components/ToolForm.astro';
+import Logo from '../components/Logo.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Submit a tool — The Terminal Index" command="submit --new" backHref="/">
-	<h1>Submit a tool</h1>
+	<h1><Logo />Submit a tool</h1>
 	<p class="form-note">Sign in with GitHub to submit a tool. Submitting opens a pull request from your own fork.</p>
 
 	<section id="signed-out">

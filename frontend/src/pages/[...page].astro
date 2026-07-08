@@ -7,6 +7,7 @@ import { PAGE_SIZE } from '../lib/config';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ToolCard from '../components/ToolCard.astro';
 import Pagination from '../components/Pagination.astro';
+import Logo from '../components/Logo.astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const tools = await getSortedTools();
@@ -48,7 +49,7 @@ const status =
 
 <BaseLayout title="The Terminal Index" command="browse --all" status={status}>
 	<header class="hero">
-		<h1>The Terminal Index</h1>
+		<h1><Logo />The Terminal Index</h1>
 		<p class="tagline">Discover terminal tools, curated by the developers who rely on them.</p>
 		<p class="hero-stats">
 			<span><b>{page.total}</b> tools</span>

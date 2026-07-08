@@ -124,15 +124,6 @@ textarea {
 	background: #27c93f;
 }
 
-/* macOS-style proxy icon: the site mark sitting in the window title bar. */
-.term-logo {
-	width: 18px;
-	height: 18px;
-	flex-shrink: 0;
-	border-radius: var(--radius);
-	margin-left: 0.15rem;
-}
-
 .term-title {
 	flex: 1;
 	min-width: 0;
@@ -292,6 +283,15 @@ textarea {
 	line-height: 1.05;
 	letter-spacing: -0.02em;
 	margin-bottom: 0.75rem;
+}
+
+/* Site mark rendered in front of hero titles; sized in em so it tracks the h1. */
+.title-logo {
+	display: inline-block;
+	width: 0.85em;
+	height: 0.85em;
+	vertical-align: -0.08em;
+	margin-right: 0.3em;
 }
 
 .hero .tagline {

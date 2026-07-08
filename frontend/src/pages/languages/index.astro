@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { slugify } from '../../lib/slug';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Logo from '../../components/Logo.astro';
 
 const tools = await getCollection('tools');
 // Group by slug so languages that collide (see languages/[language]/[...page].astro)
@@ -21,7 +22,7 @@ const languages = [...bySlug.entries()]
 
 <BaseLayout title="Languages — The Terminal Index" command="ls languages/" backHref="/">
 	<header class="hero">
-		<h1>Languages</h1>
+		<h1><Logo />Languages</h1>
 		<p class="tagline"># browse tools by language</p>
 		<nav class="browse-links">
 			<a href="/categories">ls categories/</a>
