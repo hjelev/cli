@@ -36,4 +36,7 @@ media: https://github.com/hjelev/lyrtui/raw/main/screenshots/lyrtui.gif
 logo: >-
   https://raw.githubusercontent.com/hjelev/lyrtui/refs/heads/main/docs/assets/logo_small.png
 updated: '2026-07-08'
+github_stars: 21
+github_updated: "2026-07-08"
+github_release: "0.2.12"
 ---
