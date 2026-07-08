@@ -41,6 +41,15 @@ tags:
   - tui
   - top-alternative
   - resource-monitor
+  - process
+  - viewer
+  - console
+  - terminal
+  - linux
+  - macos
+  - bsd
+  - c
+  - hacktoberfest
 media: >-
   https://raw.githubusercontent.com/htop-dev/htop/main/docs/images/screenshot.png
 logo: >-

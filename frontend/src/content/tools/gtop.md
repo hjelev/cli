@@ -43,6 +43,11 @@ tags:
   - tui
   - top-alternative
   - resource-monitor
+  - monitoring
+  - nodejs
+  - top
+  - command-line
+  - system-monitoring
 media: https://raw.githubusercontent.com/aksakalli/gtop/master/img/demo.gif
 logo: https://avatars.githubusercontent.com/u/1939193?v=4
 updated: '2026-07-08'
