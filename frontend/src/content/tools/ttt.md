@@ -38,6 +38,6 @@ tags:
 media: https://github.com/eugenioenko/ttt/raw/main/docs-web/public/demo/demo.gif
 logo: https://tttedit.dev/_astro/logo.9JdCUVB0.svg
 github_stars: 86
-github_updated: "2026-07-07"
+github_updated: "2026-07-08"
 github_release: "v0.3.5"
 ---

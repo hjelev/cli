@@ -36,7 +36,7 @@ tags:
 media: https://github.com/alvinunreal/lazyskills/raw/main/assets/demo.gif
 logo: https://lazyskills.sh/logo.svg
 updated: '2026-07-04'
-github_stars: 158
+github_stars: 160
 github_updated: "2026-07-07"
 github_release: "v1.0.0"
 ---
