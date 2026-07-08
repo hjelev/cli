@@ -132,7 +132,6 @@ if (data.website) {
 		<dl>
 			<dt>Repository</dt>
 			<dd>
-				<a href={data.repository_url} target="_blank" rel="noopener">{data.repository_url}</a>
 				{isGithub && (
 					<img
 						class="stars-badge"
@@ -141,6 +140,7 @@ if (data.website) {
 						loading="lazy"
 					/>
 				)}
+				<a href={data.repository_url} target="_blank" rel="noopener">{data.repository_url}</a>
 			</dd>
 
 			{data.website && (
