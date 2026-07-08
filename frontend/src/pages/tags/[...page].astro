@@ -1,0 +1,58 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import { slugify } from '../../lib/slug';
+import { TAGS_INDEX_PAGE_SIZE } from '../../lib/config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Pagination from '../../components/Pagination.astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const tools = await getCollection('tools');
+	// Group by slug so tags that collide (see tags/[tag]/[...page].astro) get one entry
+	// whose count matches the page it links to.
+	const bySlug = new Map<string, { label: string; toolIds: Set<string> }>();
+	for (const tool of tools) {
+		for (const tag of tool.data.tags) {
+			const slug = slugify(tag);
+			const entry = bySlug.get(slug) ?? { label: tag, toolIds: new Set<string>() };
+			if (!entry.label.split(' / ').includes(tag)) entry.label += ` / ${tag}`;
+			entry.toolIds.add(tool.id);
+			bySlug.set(slug, entry);
+		}
+	}
+	// Popularity-based pagination: most-used tags lead page 1, not alphabetical
+	// or chronological order. Tie-break on slug for a stable order.
+	const tags = [...bySlug.entries()]
+		.map(([slug, { label, toolIds }]) => ({ slug, label, count: toolIds.size }))
+		.sort((a, b) => b.count - a.count || a.slug.localeCompare(b.slug));
+	return paginate(tags, { pageSize: TAGS_INDEX_PAGE_SIZE });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const status = page.lastPage > 1 ? `page ${page.currentPage}/${page.lastPage}` : undefined;
+---
+
+<BaseLayout title="Tags — The Terminal Index" command="ls tags/" backHref="/" status={status}>
+	<header class="hero">
+		<h1>Tags</h1>
+		<p class="tagline"># browse tools by tag</p>
+		<nav class="browse-links">
+			<a href="/categories">ls categories/</a>
+			<a href="/languages">ls languages/</a>
+		</nav>
+	</header>
+
+	<ul class="links">
+		{
+			page.data.map(({ slug, label, count }) => (
+				<li>
+					<a href={`/tags/${slug}`}>
+						#{label} <span class="count">({count})</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+
+	<Pagination page={page} />
+</BaseLayout>

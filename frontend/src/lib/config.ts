@@ -22,3 +22,7 @@ export const PAGE_SIZE = 10;
 // Tag/category/language pages below this listing count are marked noindex
 // and excluded from the sitemap — too thin to be worth indexing.
 export const MIN_INDEXABLE_LISTINGS = 3;
+
+// Tags per page on the /tags index. Tag links are far lighter than tool
+// cards, so this is much larger than PAGE_SIZE.
+export const TAGS_INDEX_PAGE_SIZE = 50;
