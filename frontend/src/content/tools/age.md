@@ -27,6 +27,7 @@ description: >-
   post-quantum cryptography to secure files against future quantum computing
   capabilities.  
 
+
   Essentially, if you need to encrypt a backup, a text file, or a secret stream
   cleanly in a script or terminal without wrestling with a full GPG keyring, age
   is the modern standard for the job.
