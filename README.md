@@ -37,6 +37,12 @@ Curated CLI/TUI tools list
 | [nls](https://github.com/nolight132/nls) | A modern ls with useful tables | Go | [Repo](https://github.com/nolight132/nls) |
 | [pls](https://pls.cli.rs/) | pls is a prettier and powerful ls(1) for the pros. | Rust | [Repo](https://github.com/pls-rs/pls), [Website](https://pls.cli.rs/) |
 
+### System Monitoring
+
+| Name | Description | Language | Links |
+|------|-------------|----------|-------|
+| [btop](https://github.com/aristocratos/btop) | A monitor of resources | C++ | [Repo](https://github.com/aristocratos/btop) |
+
 ### Networking
 
 | Name | Description | Language | Links |
