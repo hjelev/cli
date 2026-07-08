@@ -1,3 +1,5 @@
+import type { RepoAutofillData } from './github-repo';
+import { parseRepoUrl } from './github-repo';
 import { INSTALL_METHODS } from './schema';
 import { validateUploadFile, type UploadableField } from './upload';
 
@@ -192,4 +194,50 @@ export function readCandidate(form: HTMLFormElement): Record<string, unknown> {
 		media: getFieldSource(form, 'media') === 'upload' ? undefined : optional(String(formData.get('media') ?? '')),
 		logo: getFieldSource(form, 'logo') === 'upload' ? undefined : optional(String(formData.get('logo') ?? '')),
 	};
+}
+
+function setFieldValue(form: HTMLFormElement, name: string, value: string | undefined): void {
+	if (!value) return;
+	const el = form.elements.namedItem(name);
+	if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) el.value = value;
+}
+
+// Wires the "Autofill from repo" button: parses the repository URL field,
+// fetches repo metadata (caller supplies `fetchInfo`, typically
+// fetchRepoAutofill bound to the current auth token), and overwrites the
+// fields GitHub can supply. `category`, `installation`, and `platforms` have
+// no reliable GitHub source and are left for the user to fill in.
+export function initAutofill(form: HTMLFormElement, fetchInfo: (owner: string, repo: string) => Promise<RepoAutofillData>): void {
+	const btn = form.querySelector<HTMLButtonElement>('#autofill-btn');
+	const status = form.querySelector<HTMLElement>('#autofill-status');
+	const urlInput = form.elements.namedItem('repository_url');
+	if (!btn || !(urlInput instanceof HTMLInputElement)) return;
+
+	btn.addEventListener('click', async () => {
+		const parsed = parseRepoUrl(urlInput.value);
+		if (!parsed) {
+			if (status) status.textContent = 'Enter a valid GitHub repository URL first.';
+			return;
+		}
+
+		btn.disabled = true;
+		if (status) status.textContent = 'Fetching repo info…';
+
+		try {
+			const data = await fetchInfo(parsed.owner, parsed.repo);
+			setFieldValue(form, 'name', data.name);
+			setFieldValue(form, 'short_description', data.short_description);
+			setFieldValue(form, 'description', data.description);
+			setFieldValue(form, 'website', data.website);
+			setFieldValue(form, 'author', data.author);
+			setFieldValue(form, 'license', data.license);
+			setFieldValue(form, 'language', data.language);
+			if (data.tags.length) setFieldValue(form, 'tags', data.tags.join(', '));
+			if (status) status.textContent = 'Auto-filled from repository. Review before submitting.';
+		} catch (error) {
+			if (status) status.textContent = error instanceof Error ? error.message : 'Could not fetch repository info.';
+		} finally {
+			btn.disabled = false;
+		}
+	});
 }

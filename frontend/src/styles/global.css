@@ -926,6 +926,47 @@ dd {
 	display: none;
 }
 
+.field-hint {
+	display: block;
+	font-size: 0.85rem;
+	color: var(--fg-dim);
+}
+
+.field-hint:empty {
+	display: none;
+}
+
+.repo-url-row {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.repo-url-row input {
+	flex: 1;
+}
+
+#autofill-btn {
+	flex-shrink: 0;
+	background: transparent;
+	border: 1px dashed var(--border);
+	color: var(--fg-dim);
+	border-radius: var(--radius);
+	padding: 0.55rem 0.9rem;
+	font-family: var(--font-display);
+	cursor: pointer;
+}
+
+#autofill-btn:hover {
+	color: var(--fg);
+	border-color: var(--accent-rust);
+}
+
+#autofill-btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
 .install-row {
 	display: grid;
 	grid-template-columns: 140px 1fr auto;

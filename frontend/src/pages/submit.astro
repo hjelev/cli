@@ -23,10 +23,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	<script>
 		import { getStoredToken, redirectToGitHubSignIn, signOut, fetchGitHubUser } from '../lib/github-auth';
+		import { fetchRepoAutofill } from '../lib/github-repo';
 		import { submitTool } from '../lib/github-submit';
 		import { toolFormSchema } from '../lib/schema';
 		import {
 			extractUploadFiles,
+			initAutofill,
 			initInstallationRows,
 			initUploadToggles,
 			readCandidate,
@@ -45,6 +47,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 		initInstallationRows(installationRows, addInstallationRowBtn);
 		initUploadToggles(form);
+		initAutofill(form, (owner, repo) => fetchRepoAutofill(getStoredToken(), owner, repo));
 
 		document.getElementById('sign-in-btn')?.addEventListener('click', () => {
 			redirectToGitHubSignIn('/submit');

@@ -40,13 +40,17 @@ const installation = initialData?.installation?.length ? initialData.installatio
 
 	<label class="field">
 		<span class="flag">--repository-url <span class="type">&lt;url&gt;</span></span>
-		<input
-			name="repository_url"
-			type="url"
-			required
-			placeholder="https://github.com/you/tool"
-			value={initialData?.repository_url ?? ''}
-		/>
+		<div class="repo-url-row">
+			<input
+				name="repository_url"
+				type="url"
+				required
+				placeholder="https://github.com/you/tool"
+				value={initialData?.repository_url ?? ''}
+			/>
+			<button type="button" id="autofill-btn">Autofill from repo</button>
+		</div>
+		<span id="autofill-status" class="field-hint"></span>
 	</label>
 
 	<label class="field optional">
