@@ -18,3 +18,7 @@ export const SITE_ORIGIN = 'https://cli.masoko.net';
 // the home listing and the category/tag/language routes so every paginated view
 // splits at the same size.
 export const PAGE_SIZE = 10;
+
+// Tag/category/language pages below this listing count are marked noindex
+// and excluded from the sitemap — too thin to be worth indexing.
+export const MIN_INDEXABLE_LISTINGS = 3;

@@ -3,7 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { sortByUpdated } from '../../../lib/tools';
 import { slugify } from '../../../lib/slug';
-import { PAGE_SIZE } from '../../../lib/config';
+import { PAGE_SIZE, MIN_INDEXABLE_LISTINGS } from '../../../lib/config';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ToolCard from '../../../components/ToolCard.astro';
 import Pagination from '../../../components/Pagination.astro';
@@ -36,7 +36,12 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page, tag } = Astro.props;
 ---
 
-<BaseLayout title={`#${tag} — The Terminal Index`} command={`ls tags/${slugify(tag)}`} backHref="/tags">
+<BaseLayout
+	title={`#${tag} — The Terminal Index`}
+	command={`ls tags/${slugify(tag)}`}
+	backHref="/tags"
+	noindex={page.total < MIN_INDEXABLE_LISTINGS}
+>
 	<header class="hero">
 		<h1>#{tag}</h1>
 		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} tagged {tag}</p>
