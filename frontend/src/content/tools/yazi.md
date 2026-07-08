@@ -40,6 +40,22 @@ tags:
   - file-manager
   - async
   - rust
+  - asyncio
+  - concurrency
+  - linux
+  - macos
+  - windows
+  - terminal
+  - android
+  - file-explorer
+  - productivity
+  - vim
+  - cli
+  - neovim
+  - command-line
+  - developer-tools
+  - filesystem
+  - cross-platform
 logo: https://yazi-rs.github.io/webp/logo.webp
 media: "https://awesometui.com/captures/yazi/yazi-hero.webp"
 github_stars: 40143

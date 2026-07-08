@@ -29,6 +29,15 @@ tags:
   - tui
   - file-manager
   - preview
+  - bubbletea
+  - cli
+  - filesystem
+  - golang
+  - linux-app
+  - terminal-app
+  - filemanager
+  - terminal-based
+  - hacktoberfest
 media: https://superfile.dev/_astro/demo.CvzVaHej_28nrJ.webp
 logo: https://superfile.dev/logo.svg
 github_stars: 18504

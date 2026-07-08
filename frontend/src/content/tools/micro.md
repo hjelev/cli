@@ -40,6 +40,13 @@ platforms:
 tags:
   - tui
   - text-editor
+  - micro
+  - editor
+  - command-line
+  - go
+  - golang
+  - cross-platform
+  - terminal
 media: https://github.com/micro-editor/micro/raw/master/assets/micro-solarized.png
 logo: https://micro-editor.github.io/micro_files/micro-logo-mark.svg
 updated: '2026-07-04'

@@ -33,6 +33,23 @@ tags:
   - file-manager
   - preview
   - batch-rename
+  - disk-usage
+  - terminal
+  - command-line
+  - file-preview
+  - cli
+  - vim
+  - c
+  - productivity
+  - launcher
+  - raspberry-pi
+  - multi-platform
+  - filesystem
+  - ncurses
+  - wsl
+  - file-search
+  - android
+  - developer-tools
 media: https://github.com/user-attachments/assets/541ca36d-ae26-49fb-97da-d1f7a12d4b9a
 logo: https://raw.githubusercontent.com/jarun/nnn/master/misc/logo/logo-128x128.png
 github_stars: 21691

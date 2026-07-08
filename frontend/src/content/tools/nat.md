@@ -38,6 +38,17 @@ platforms:
 tags:
   - ls-alternative
   - cli
+  - rust
+  - rust-lang
+  - ls
+  - command-line-tool
+  - open-source
+  - nat
+  - easy-to-use
+  - cargo
+  - zshrc
+  - stargazers
+  - hacktoberfest
 media: https://github.com/willdoescode/nat/raw/main/assets/example.png
 logo: https://avatars.githubusercontent.com/u/53620720?v=4
 updated: '2026-07-04'

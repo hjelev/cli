@@ -28,6 +28,10 @@ tags:
   - dns
   - tui
   - dns-checker
+  - cli
+  - dns-propagation
+  - ratatui
+  - rust
 media: https://raw.githubusercontent.com/514-labs/dnsglobe/main/demo/demo.gif
 logo: https://avatars.githubusercontent.com/u/140028474?s=200&v=4
 updated: '2026-07-07'

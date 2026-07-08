@@ -31,6 +31,14 @@ platforms:
 tags:
   - file-manager
   - tree-view
+  - rust
+  - linux
+  - command-line
+  - tree
+  - command-line-tool
+  - balanced-bfs-descent
+  - fuzzy-search
+  - hacktoberfest
 media: https://dystroy.org/broot/img/20241027-cows.png
 logo: https://dystroy.org/broot/img/vache-blanche.svg
 updated: '2026-07-03'

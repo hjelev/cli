@@ -32,6 +32,14 @@ platforms:
 tags:
   - ls-alternative
   - cli
+  - command-line-tool
+  - ls
+  - golang
+  - utility
+  - darwin
+  - linux-shell
+  - macos
+  - windows
 media: https://raw.githubusercontent.com/equationzhao/g/master/asset/screenshot_3.png
 logo: https://avatars.githubusercontent.com/u/75521101?v=4
 updated: '2026-07-04'

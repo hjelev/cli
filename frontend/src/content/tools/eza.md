@@ -34,6 +34,15 @@ tags:
   - file-listing
   - cli
   - rust
+  - color
+  - command-line
+  - files
+  - icons
+  - ls
+  - nerd-fonts
+  - terminal
+  - tools
+  - hacktoberfest
 logo: https://avatars.githubusercontent.com/u/141388427?v=4
 media: https://eza.rocks/demo.gif
 github_stars: 22542

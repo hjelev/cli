@@ -32,6 +32,11 @@ tags:
   - file-listing
   - cli
   - rust
+  - ls
+  - icons
+  - color
+  - nerd-fonts
+  - hacktoberfest
 logo: https://github.com/TabbyML/pochi/raw/main/packages/vscode/assets/icons/logo128.png?raw=true
 media: https://raw.githubusercontent.com/lsd-rs/lsd/assets/screen_lsd.png
 github_stars: 16109

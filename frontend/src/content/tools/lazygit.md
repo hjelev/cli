@@ -27,6 +27,8 @@ platforms:
 tags:
   - git
   - tui
+  - cli
+  - terminal
 media: >-
   https://raw.githubusercontent.com/jesseduffield/lazygit/assets/demo/commit_and_push-compressed.gif
 logo: https://www.myqnap.org/wp-content/uploads/lazygit-logo-100x100.png

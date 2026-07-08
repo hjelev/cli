@@ -36,6 +36,7 @@ tags:
   - text-editor
   - IDE
   - editor
+  - terminal-based
 media: https://raw.githubusercontent.com/sinelaw/fresh/master/docs/fresh-demo2.gif
 logo: https://avatars.githubusercontent.com/u/84020?v=4
 github_stars: 7806

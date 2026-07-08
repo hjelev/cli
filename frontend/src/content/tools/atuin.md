@@ -18,7 +18,7 @@ installation:
   - method: script
     command: curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 platforms: [Linux, macOS]
-tags: [tui, history, ai-agent-monitoring, shell-history]
+tags: [tui, history, ai-agent-monitoring, shell-history, shell, rust, zsh, fish, bash]
 logo: "https://avatars.githubusercontent.com/u/122059230?s=48&v=4"
 media: "https://raw.githubusercontent.com/atuinsh/atuin/main/demo.gif"
 github_stars: 30480

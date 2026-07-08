@@ -25,6 +25,12 @@ tags:
   - tui
   - file-manager
   - productivity
+  - filemanager
+  - tui-app
+  - tui-rs
+  - cli-tool
+  - rust
+  - tui-application
 media: https://masoko.net/sb/images/screenshot-1.png
 logo: https://masoko.net/sb/images/favicon.png
 github_stars: 3

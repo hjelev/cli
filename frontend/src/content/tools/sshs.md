@@ -24,6 +24,8 @@ platforms:
 tags:
   - tui
   - ssh
+  - cli
+  - command-line-tool
 media: https://cli.masoko.net/uploads/sshs/media.gif
 logo: https://avatars.githubusercontent.com/u/7271496?v=4
 updated: '2026-07-08'

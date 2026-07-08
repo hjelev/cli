@@ -33,6 +33,25 @@ platforms:
 tags:
   - AI
   - skill-management
+  - agent-skills
+  - ai-agents
+  - cli
+  - developer-tools
+  - go
+  - terminal-ui
+  - tui
+  - coding-agents
+  - skills
+  - agent-tools
+  - ai-tools
+  - ai-workflow
+  - command-line-tool
+  - productivity-tools
+  - skill-discovery
+  - terminal-app
+  - workflow-automation
+  - claude-code
+  - opencode
 media: https://github.com/alvinunreal/lazyskills/raw/main/assets/demo.gif
 logo: https://lazyskills.sh/logo.svg
 updated: '2026-07-04'

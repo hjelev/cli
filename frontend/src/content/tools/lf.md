@@ -52,6 +52,7 @@ platforms:
 tags:
   - tui
   - file-manager
+  - terminal
 media: https://www.tecmint.com/wp-content/uploads/2024/09/Lf-Terminal-File-Manager.webp
 logo: https://avatars.githubusercontent.com/u/1835672?v=4
 updated: '2026-07-04'

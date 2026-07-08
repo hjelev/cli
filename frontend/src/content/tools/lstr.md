@@ -25,6 +25,16 @@ platforms:
 tags:
   - ls-alternative
   - cli
+  - command-line
+  - command-line-tool
+  - filesystem
+  - ls
+  - rust-lang
+  - tree
+  - developer-tools
+  - git
+  - nerd-fonts
+  - tui
 media: https://raw.githubusercontent.com/bgreenwell/lstr/main/assets/lstr-demo.gif
 logo: https://avatars.githubusercontent.com/u/3777755?v=4
 updated: '2026-07-04'

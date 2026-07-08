@@ -35,6 +35,19 @@ tags:
   - editor
   - code-editor
   - ide
+  - cli
+  - go
+  - golang
+  - lsp
+  - terminal
+  - terminal-emulator
+  - vscode-alternative
+  - developer-tools
+  - git-integration
+  - syntax-highlighting
+  - tcell
+  - diff
+  - text
 media: https://github.com/eugenioenko/ttt/raw/main/docs-web/public/demo/demo.gif
 logo: https://tttedit.dev/_astro/logo.9JdCUVB0.svg
 github_stars: 87

@@ -25,6 +25,17 @@ tags:
   - history
   - ai-agent-monitoring
   - shell-history
+  - bash
+  - cli
+  - rust
+  - shell
+  - sqlite
+  - terminal
+  - zsh
+  - atuin
+  - command-line
+  - open-source
+  - ratatui
 logo: https://github.com/AppachiTech/suvadu/raw/main/assets/suvadu-logo.svg
 media: https://suvadu.sh/demo/suvadu-search.webm
 github_stars: 89

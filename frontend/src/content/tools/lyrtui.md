@@ -32,6 +32,12 @@ tags:
   - lyrion
   - lms
   - media-player
+  - cli
+  - music
+  - rust
+  - rust-crate
+  - squeezebox-server
+  - tui-app
 media: https://github.com/hjelev/lyrtui/raw/main/screenshots/lyrtui.gif
 logo: >-
   https://raw.githubusercontent.com/hjelev/lyrtui/refs/heads/main/docs/assets/logo_small.png
