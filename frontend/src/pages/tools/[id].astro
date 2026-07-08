@@ -3,14 +3,19 @@ import { getCollection, render } from 'astro:content';
 import { marked } from 'marked';
 import { slugify } from '../../lib/slug';
 import { ratingSummary, stars } from '../../lib/ratings';
+import { getRelatedTools } from '../../lib/tools';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ToolCard from '../../components/ToolCard.astro';
 
 export async function getStaticPaths() {
 	const tools = await getCollection('tools');
-	return tools.map((tool) => ({ params: { id: tool.id }, props: { tool } }));
+	return tools.map((tool) => ({
+		params: { id: tool.id },
+		props: { tool, relatedTools: getRelatedTools(tool, tools) },
+	}));
 }
 
-const { tool } = Astro.props;
+const { tool, relatedTools } = Astro.props;
 const { data } = tool;
 const { Content } = await render(tool);
 
@@ -276,6 +281,13 @@ if (data.website) {
 
 		<p id="feedback-status" role="status"></p>
 	</section>
+
+	{relatedTools.length > 0 && (
+		<section class="man-section">
+			<h2>MORE IN {data.category.toUpperCase()}</h2>
+			<ul id="tool-grid">{relatedTools.map((t) => <ToolCard tool={t} />)}</ul>
+		</section>
+	)}
 </BaseLayout>
 
 <script>

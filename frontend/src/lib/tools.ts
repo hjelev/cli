@@ -12,3 +12,18 @@ export function sortByUpdated(tools: CollectionEntry<'tools'>[]): CollectionEntr
 export async function getSortedTools(): Promise<CollectionEntry<'tools'>[]> {
 	return sortByUpdated(await getCollection('tools'));
 }
+
+// Random same-category tools (excluding `tool` itself), for "related listings"
+// on the tool detail page. Re-shuffles on every static build.
+export function getRelatedTools(
+	tool: CollectionEntry<'tools'>,
+	allTools: CollectionEntry<'tools'>[],
+	count = 3,
+): CollectionEntry<'tools'>[] {
+	const sameCategory = allTools.filter((t) => t.id !== tool.id && t.data.category === tool.data.category);
+	for (let i = sameCategory.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[sameCategory[i], sameCategory[j]] = [sameCategory[j], sameCategory[i]];
+	}
+	return sameCategory.slice(0, count);
+}
