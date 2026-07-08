@@ -519,6 +519,7 @@ textarea {
 	list-style: none;
 	padding: 0;
 	font-size: 0.8rem;
+	line-height: 1.4rem;
 	color: var(--accent-green);
 	grid-column: 1 / -1;
 }
@@ -535,6 +536,11 @@ textarea {
 
 .tags a {
 	color: inherit;
+}
+
+.tool-card .tags {
+	max-height: 2.8rem;
+	overflow: hidden;
 }
 
 .count {
