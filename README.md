@@ -34,6 +34,7 @@ Curated CLI/TUI tools list
 | [lsd](https://github.com/lsd-rs/lsd) | The next gen ls command, with colors and icons. | Rust | [Repo](https://github.com/lsd-rs/lsd) |
 | [lstr](https://github.com/bgreenwell/lstr) | A fast, minimalist directory tree viewer, written in Rust. | Rust | [Repo](https://github.com/bgreenwell/lstr) |
 | [nat](https://github.com/willdoescode/nat) | ls alternative with useful info and a splash of color 🎨 | Rust | [Repo](https://github.com/willdoescode/nat) |
+| [nls](https://github.com/nolight132/nls) | A modern ls with useful tables | Go | [Repo](https://github.com/nolight132/nls) |
 | [pls](https://pls.cli.rs/) | pls is a prettier and powerful ls(1) for the pros. | Rust | [Repo](https://github.com/pls-rs/pls), [Website](https://pls.cli.rs/) |
 
 ### Networking
