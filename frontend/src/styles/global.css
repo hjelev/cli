@@ -607,6 +607,13 @@ a.page-num:hover {
 	border-radius: var(--radius);
 }
 
+.man-header .logo-stack {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.35rem;
+}
+
 .man-header h1 {
 	font-size: clamp(1.7rem, 4vw, 2.1rem);
 	font-weight: 700;

@@ -23,6 +23,12 @@ const descriptionHtml = marked.parse(data.description, { async: false });
 const comments = [...(data.comments ?? [])].sort((a, b) => b.date.localeCompare(a.date));
 const fmtDate = (iso: string) => (iso ? iso.slice(0, 10) : '');
 
+const githubStars = data.github_stars;
+const githubStarsLabel =
+	githubStars !== undefined
+		? new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(githubStars)
+		: null;
+
 let faviconUrl = '';
 if (data.website) {
 	try {
@@ -41,7 +47,12 @@ if (data.website) {
 	backHref="/"
 >
 	<header class="man-header">
-		{data.logo && <img src={data.logo} alt="" width="48" height="48" />}
+		<div class="logo-stack">
+			{data.logo && <img src={data.logo} alt="" width="48" height="48" />}
+			{githubStarsLabel && (
+				<span class="badge badge-stars" title={`${githubStars} GitHub stars`}>★ {githubStarsLabel}</span>
+			)}
+		</div>
 		<div>
 			<h1>{data.name}<span class="num"></span></h1>
 			<p class="tagline">{data.short_description}</p>
@@ -161,14 +172,7 @@ if (data.website) {
 			<dt>Platforms</dt>
 			<dd>{data.platforms.join(', ')}</dd>
 
-			{data.github_stars !== undefined && (
-				<>
-					<dt>GitHub Stars</dt>
-					<dd>{new Intl.NumberFormat('en-US').format(data.github_stars)}</dd>
-				</>
-			)}
-
-			{data.github_updated && (
+{data.github_updated && (
 				<>
 					<dt>Last Updated</dt>
 					<dd>{fmtDate(data.github_updated)}</dd>
