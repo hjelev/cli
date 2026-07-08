@@ -615,6 +615,10 @@ a.page-num:hover {
 	margin-bottom: 0.75rem;
 }
 
+.man-section-no-hash h2::before {
+	content: none;
+}
+
 .man-section h2::before {
 	content: '# ';
 	color: var(--fg-faint);

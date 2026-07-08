@@ -224,7 +224,7 @@ if (data.website) {
 	</section>
 
 	{relatedTools.length > 0 && (
-		<section class="man-section">
+		<section class="man-section man-section-no-hash">
 			<h2>MORE IN {data.category.toUpperCase()}</h2>
 			<ul id="tool-grid">{relatedTools.map((t) => <ToolCard tool={t} />)}</ul>
 		</section>
