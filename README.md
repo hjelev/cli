@@ -68,6 +68,12 @@ that runs in your terminal. Single binary, zero config.
 |------|-------------|----------|-------|
 | [lyrtui](http://masoko.net/lyrtui/) | Fast and good looking TUI for Lyrion Music Server | Rust | [Repo](https://github.com/hjelev/lyrtui), [Website](http://masoko.net/lyrtui/) |
 
+### Security
+
+| Name | Description | Language | Links |
+|------|-------------|----------|-------|
+| [age](https://age-encryption.org) | A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability. | Go | [Repo](https://github.com/FiloSottile/age), [Website](https://age-encryption.org) |
+
 ### Games & Fun
 
 | Name | Description | Language | Links |
