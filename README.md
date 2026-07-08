@@ -54,6 +54,12 @@ Curated CLI/TUI tools list
 that runs in your terminal. Single binary, zero config.
  | Go | [Repo](https://github.com/eugenioenko/ttt), [Website](https://tttedit.dev/) |
 
+### Media & Entertainment
+
+| Name | Description | Language | Links |
+|------|-------------|----------|-------|
+| [lyrtui](http://masoko.net/lyrtui/) | Fast and good looking TUI for Lyrion Music Server | Rust | [Repo](https://github.com/hjelev/lyrtui), [Website](http://masoko.net/lyrtui/) |
+
 ### Games & Fun
 
 | Name | Description | Language | Links |
