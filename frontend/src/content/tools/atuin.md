@@ -21,7 +21,7 @@ platforms: [Linux, macOS]
 tags: [tui, history, ai-agent-monitoring, shell-history]
 logo: "https://avatars.githubusercontent.com/u/122059230?s=48&v=4"
 media: "https://raw.githubusercontent.com/atuinsh/atuin/main/demo.gif"
-github_stars: 30472
+github_stars: 30476
 github_updated: "2026-07-08"
 github_release: "v18.16.1"
 ---

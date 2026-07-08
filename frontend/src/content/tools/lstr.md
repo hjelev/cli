@@ -28,7 +28,7 @@ tags:
 media: https://raw.githubusercontent.com/bgreenwell/lstr/main/assets/lstr-demo.gif
 logo: https://avatars.githubusercontent.com/u/3777755?v=4
 updated: '2026-07-04'
-github_stars: 1526
+github_stars: 1523
 github_updated: "2025-09-07"
 github_release: "v0.2.1"
 ---

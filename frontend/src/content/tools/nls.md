@@ -25,4 +25,7 @@ tags:
   - ls-alternative
 logo: https://avatars.githubusercontent.com/u/71591964?v=4
 updated: '2026-07-08'
+github_stars: 25
+github_updated: "2026-07-08"
+github_release: "v0.5.2"
 ---

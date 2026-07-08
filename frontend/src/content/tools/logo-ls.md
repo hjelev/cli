@@ -21,7 +21,7 @@ platforms: [Linux, macOS]
 tags: [ls-alternative, file-listing, cli, go]
 logo: "https://avatars.githubusercontent.com/u/32840183?v=4"
 media: "https://github.com/Yash-Handa/logo-ls/raw/master/.github/images/ls-R.png"
-github_stars: 1184
+github_stars: 1183
 github_updated: "2023-05-10"
 github_release: "v1.3.7"
 ---

@@ -31,7 +31,7 @@ tags:
 media: https://linkedlist.org/public/2025/lla-long@1x.jpg
 logo: https://avatars.githubusercontent.com/u/92867709?v=4
 updated: '2026-07-04'
-github_stars: 1219
+github_stars: 1218
 github_updated: "2026-07-04"
 github_release: "v0.5.9"
 ---
