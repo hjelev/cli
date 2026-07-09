@@ -443,6 +443,13 @@ textarea {
 	gap: 0.5rem;
 }
 
+.tool-name-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.2rem;
+}
+
 .tool-name img {
 	flex-shrink: 0;
 	border-radius: var(--radius);

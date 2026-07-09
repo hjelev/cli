@@ -141,17 +141,11 @@ const status =
 				img.height = 44;
 				nameWrap.append(img);
 			}
+			const nameText = document.createElement('div');
+			nameText.className = 'tool-name-text';
 			const h2 = document.createElement('h2');
 			h2.textContent = tool.name;
-			nameWrap.append(h2);
-			a.append(nameWrap);
-
-			const desc = document.createElement('p');
-			desc.textContent = tool.short;
-			a.append(desc);
-
-			const badges = document.createElement('div');
-			badges.className = 'badges';
+			nameText.append(h2);
 			if (tool.stars !== null) {
 				const starsBadge = document.createElement('span');
 				starsBadge.className = 'badge badge-stars';
@@ -160,8 +154,17 @@ const status =
 					notation: 'compact',
 					maximumFractionDigits: 1,
 				}).format(tool.stars)}`;
-				badges.append(starsBadge);
+				nameText.append(starsBadge);
 			}
+			nameWrap.append(nameText);
+			a.append(nameWrap);
+
+			const desc = document.createElement('p');
+			desc.textContent = tool.short;
+			a.append(desc);
+
+			const badges = document.createElement('div');
+			badges.className = 'badges';
 			for (const text of [tool.language, tool.category]) {
 				const badge = document.createElement('span');
 				badge.className = 'badge';
