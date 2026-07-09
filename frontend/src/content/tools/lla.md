@@ -35,8 +35,8 @@ tags:
 media: https://linkedlist.org/public/2025/lla-long@1x.jpg
 logo: https://cli.masoko.net/uploads/lla/logo.png
 updated: '2026-07-08'
-comments: []
 github_stars: 1218
-github_updated: '2026-07-04'
-github_release: v0.5.9
+github_updated: "2026-07-04"
+github_release: "v0.5.9"
+comments: []
 ---

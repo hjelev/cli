@@ -58,7 +58,7 @@ tags:
   - cross-platform
 logo: https://yazi-rs.github.io/webp/logo.webp
 media: "https://awesometui.com/captures/yazi/yazi-hero.webp"
-github_stars: 40143
+github_stars: 40149
 github_updated: "2026-07-08"
 github_release: "v26.5.6"
 ---
