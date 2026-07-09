@@ -146,16 +146,10 @@ const status =
 			const h2 = document.createElement('h2');
 			h2.textContent = tool.name;
 			nameText.append(h2);
-			if (tool.stars !== null) {
-				const starsBadge = document.createElement('span');
-				starsBadge.className = 'badge badge-stars';
-				starsBadge.title = `${tool.stars} GitHub stars`;
-				starsBadge.textContent = `★ ${new Intl.NumberFormat('en-US', {
-					notation: 'compact',
-					maximumFractionDigits: 1,
-				}).format(tool.stars)}`;
-				nameText.append(starsBadge);
-			}
+			const languageBadge = document.createElement('span');
+			languageBadge.className = 'badge';
+			languageBadge.textContent = tool.language;
+			nameText.append(languageBadge);
 			nameWrap.append(nameText);
 			a.append(nameWrap);
 
@@ -165,12 +159,20 @@ const status =
 
 			const badges = document.createElement('div');
 			badges.className = 'badges';
-			for (const text of [tool.language, tool.category]) {
-				const badge = document.createElement('span');
-				badge.className = 'badge';
-				badge.textContent = text;
-				badges.append(badge);
+			if (tool.stars !== null) {
+				const starsBadge = document.createElement('span');
+				starsBadge.className = 'badge badge-stars';
+				starsBadge.title = `${tool.stars} GitHub stars`;
+				starsBadge.textContent = `★ ${new Intl.NumberFormat('en-US', {
+					notation: 'compact',
+					maximumFractionDigits: 1,
+				}).format(tool.stars)}`;
+				badges.append(starsBadge);
 			}
+			const categoryBadge = document.createElement('span');
+			categoryBadge.className = 'badge';
+			categoryBadge.textContent = tool.category;
+			badges.append(categoryBadge);
 			a.append(badges);
 
 			const tags = document.createElement('ul');

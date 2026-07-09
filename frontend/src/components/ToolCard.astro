@@ -25,14 +25,14 @@ const githubStarsLabel =
 			{tool.data.logo && <img src={tool.data.logo} alt="" width="44" height="44" />}
 			<div class="tool-name-text">
 				<h2>{tool.data.name}</h2>
-				{githubStarsLabel && (
-					<span class="badge badge-stars" title={`${githubStars} GitHub stars`}>★ {githubStarsLabel}</span>
-				)}
+				<span class="badge">{tool.data.language}</span>
 			</div>
 		</div>
 		<p>{tool.data.short_description}</p>
 		<div class="badges">
-			<span class="badge">{tool.data.language}</span>
+			{githubStarsLabel && (
+				<span class="badge badge-stars" title={`${githubStars} GitHub stars`}>★ {githubStarsLabel}</span>
+			)}
 			<span class="badge">{tool.data.category}</span>
 		</div>
 		<ul class="tags">
