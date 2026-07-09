@@ -51,6 +51,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [dnsglobe](https://github.com/514-labs/dnsglobe) | Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers worldwide, on a world map in your terminal | Rust | [Repo](https://github.com/514-labs/dnsglobe) |
+| [noodle](https://noodlerest.dev) | A delicious REST client for your terminal | TypeScript | [Repo](https://github.com/wilfredinni/noodle), [Website](https://noodlerest.dev) |
 
 ### Text Editors
 
