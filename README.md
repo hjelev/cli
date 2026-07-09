@@ -10,7 +10,7 @@ Curated CLI/TUI tools list
 | [broot](https://dystroy.org/broot/) | A new way to see and navigate directory trees | Rust | [Repo](https://github.com/Canop/broot), [Website](https://dystroy.org/broot/) |
 | [elio](https://elio-fm.github.io/) | Snappy, batteries-included terminal file manager with rich previews. | Rust | [Repo](https://github.com/elio-fm/elio), [Website](https://elio-fm.github.io/) |
 | [felix](https://kyoheiu.dev/felix/) | tui file manager with vim-like key mapping | Rust | [Repo](https://github.com/kyoheiu/felix), [Website](https://kyoheiu.dev/felix/) |
-| [lf](https://github.com/gokcehan/lf) | lf (as in "list files") is a terminal file manager written in Go with a heavy inspiration from ranger file manager. | Go | [Repo](https://github.com/gokcehan/lf) |
+| [lf](https://github.com/gokcehan/lf) | lf (as in "list files") is a terminal file manager written in Go with a heavy inspiration from… | Go | [Repo](https://github.com/gokcehan/lf) |
 | [mc](https://midnight-commander.org) | GNU Midnight Commander, a text-mode full-screen file manager. | C | [Repo](https://github.com/MidnightCommander/mc), [Website](https://midnight-commander.org) |
 | [nnn](https://github.com/jarun/nnn) | n³ The unorthodox terminal file manager | C | [Repo](https://github.com/jarun/nnn) |
 | [sb](https://sb.masoko.net) | A terminal-based file manager built for speed and efficiency. | Rust | [Repo](https://github.com/hjelev/sb), [Website](https://sb.masoko.net) |
@@ -46,13 +46,13 @@ Curated CLI/TUI tools list
 | [btop](https://github.com/aristocratos/btop) | A monitor of resources | C++ | [Repo](https://github.com/aristocratos/btop) |
 | [gtop](https://github.com/aksakalli/gtop) | System monitoring dashboard for terminal | JavaScript | [Repo](https://github.com/aksakalli/gtop) |
 | [htop](https://htop.dev/) | htop - an interactive process viewer | C | [Repo](https://github.com/htop-dev/htop), [Website](https://htop.dev/) |
-| [usbtree](https://gnomeria.github.io/usbtree/) | Live USB device tree in your terminal. Rust TUI, no root, no libusb. Full activity metrics on Linux; device tree on macOS/Windows. | Rust | [Repo](https://github.com/gnomeria/usbtree), [Website](https://gnomeria.github.io/usbtree/) |
+| [usbtree](https://gnomeria.github.io/usbtree/) | Live USB device tree in your terminal. Rust TUI, no root, no libusb. Full activity metrics on… | Rust | [Repo](https://github.com/gnomeria/usbtree), [Website](https://gnomeria.github.io/usbtree/) |
 
 ### Productivity
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
-| [flyline](https://github.com/HalFrgrd/flyline) | Flyline: a Bash plugin to replace readline for a modern line editing experience: syntax highlighting, agent integration, rich prompts, toolt | Rust | [Repo](https://github.com/HalFrgrd/flyline) |
+| [flyline](https://github.com/HalFrgrd/flyline) | Flyline: a Bash plugin to replace readline for a modern line editing experience: syntax… | Rust | [Repo](https://github.com/HalFrgrd/flyline) |
 | [inshellisense](https://github.com/microsoft/inshellisense) | IDE style command line auto complete | TypeScript | [Repo](https://github.com/microsoft/inshellisense) |
 | [pet](https://github.com/knqyf263/pet) | Simple command-line snippet manager | Go | [Repo](https://github.com/knqyf263/pet) |
 
@@ -60,7 +60,7 @@ Curated CLI/TUI tools list
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
-| [dnsglobe](https://github.com/514-labs/dnsglobe) | Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers worldwide, on a world map in your terminal | Rust | [Repo](https://github.com/514-labs/dnsglobe) |
+| [dnsglobe](https://github.com/514-labs/dnsglobe) | Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers… | Rust | [Repo](https://github.com/514-labs/dnsglobe) |
 | [noodle](https://noodlerest.dev) | A delicious REST client for your terminal | TypeScript | [Repo](https://github.com/wilfredinni/noodle), [Website](https://noodlerest.dev) |
 
 ### Text Editors
@@ -70,22 +70,20 @@ Curated CLI/TUI tools list
 | [fresh](https://getfresh.dev) | A powerful terminal text editor and IDE. | Rust | [Repo](https://github.com/sinelaw/fresh), [Website](https://getfresh.dev) |
 | [micro](https://micro-editor.github.io/) | A modern and intuitive terminal-based text editor | Go | [Repo](https://github.com/micro-editor/micro), [Website](https://micro-editor.github.io/) |
 | [slap](https://github.com/slap-editor/slap) | Sublime-like terminal-based text editor | JavaScript | [Repo](https://github.com/slap-editor/slap) |
-| [ttt](https://tttedit.dev/) | A terminal text editor IDE. A real alternative to VS Code, Zed, and Sublime
-that runs in your terminal. Single binary, zero config.
- | Go | [Repo](https://github.com/eugenioenko/ttt), [Website](https://tttedit.dev/) |
+| [ttt](https://tttedit.dev/) | A terminal text editor IDE. A real alternative to VS Code, Zed, and Sublime that runs in your… | Go | [Repo](https://github.com/eugenioenko/ttt), [Website](https://tttedit.dev/) |
 
 ### Media & Entertainment
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [lyrtui](http://masoko.net/lyrtui/) | Fast and good looking TUI for Lyrion Music Server | Rust | [Repo](https://github.com/hjelev/lyrtui), [Website](http://masoko.net/lyrtui/) |
-| [spotatui](https://spotatui.com) | A fast, standalone terminal music player in Rust: native Spotify streaming plus local, Subsonic, radio, and YouTube sources. | Rust | [Repo](https://github.com/LargeModGames/spotatui), [Website](https://spotatui.com) |
+| [spotatui](https://spotatui.com) | A fast, standalone terminal music player in Rust: native Spotify streaming plus local, Subsonic,… | Rust | [Repo](https://github.com/LargeModGames/spotatui), [Website](https://spotatui.com) |
 
 ### Security
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
-| [age](https://age-encryption.org) | A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability. | Go | [Repo](https://github.com/FiloSottile/age), [Website](https://age-encryption.org) |
+| [age](https://age-encryption.org) | A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config… | Go | [Repo](https://github.com/FiloSottile/age), [Website](https://age-encryption.org) |
 
 ### Data Processing
 
@@ -97,8 +95,8 @@ that runs in your terminal. Single binary, zero config.
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
-| [ascii patrol](https://ascii-patrol.com/) | Ascii Patrol is an ASCII game project. It was mainly inspired by "Moon Patrol", Msokalski favorite arcade game at the times he was a child. | C++ | [Repo](https://github.com/msokalski/ascii-patrol), [Website](https://ascii-patrol.com/) |
-| [terminal_gameboy](https://github.com/dquigles/terminal_gameboy) | A rust, terminal-based Game Boy and Game Boy Color emulator with ASCII art and block rendering modes. | Rust | [Repo](https://github.com/dquigles/terminal_gameboy) |
+| [ascii patrol](https://ascii-patrol.com/) | Ascii Patrol is an ASCII game project. It was mainly inspired by "Moon Patrol", Msokalski favorite… | C++ | [Repo](https://github.com/msokalski/ascii-patrol), [Website](https://ascii-patrol.com/) |
+| [terminal_gameboy](https://github.com/dquigles/terminal_gameboy) | A rust, terminal-based Game Boy and Game Boy Color emulator with ASCII art and block rendering… | Rust | [Repo](https://github.com/dquigles/terminal_gameboy) |
 | [tetro-tui](https://github.com/Strophox/tetro-tui) | A modern, highly customizable tetromino-stacking game for the terminal. | Rust | [Repo](https://github.com/Strophox/tetro-tui) |
 
 ### AI
@@ -118,7 +116,7 @@ that runs in your terminal. Single binary, zero config.
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [oha](https://github.com/hatoo/oha) | Ohayou is a HTTP load generator inspired by rakyll/hey with tui animation. | Rust | [Repo](https://github.com/hatoo/oha) |
-| [regex-tui](https://github.com/vitor-mariano/regex-tui) | A terminal user interface (TUI) application for testing and visualizing regular expressions in real-time. | Go | [Repo](https://github.com/vitor-mariano/regex-tui) |
+| [regex-tui](https://github.com/vitor-mariano/regex-tui) | A terminal user interface (TUI) application for testing and visualizing regular expressions in… | Go | [Repo](https://github.com/vitor-mariano/regex-tui) |
 | [sshs](https://github.com/quantumsheep/sshs) | Terminal user interface for SSH | Rust | [Repo](https://github.com/quantumsheep/sshs) |
 
 <!-- TOOLS:END -->

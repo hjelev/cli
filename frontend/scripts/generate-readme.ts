@@ -37,6 +37,21 @@ for (const category of CATEGORIES) {
 	}
 }
 
+const DESCRIPTION_MAX_LENGTH = 100;
+
+// Table cells must be single-line, and wildly long descriptions make some
+// tables render far wider than others — collapse embedded newlines/whitespace
+// and cap the length so table columns stay reasonably consistent in size.
+function formatDescription(description: string): string {
+	const collapsed = description.replace(/\s+/g, ' ').trim();
+	if (collapsed.length <= DESCRIPTION_MAX_LENGTH) {
+		return collapsed;
+	}
+	const truncated = collapsed.slice(0, DESCRIPTION_MAX_LENGTH);
+	const lastSpace = truncated.lastIndexOf(' ');
+	return `${truncated.slice(0, lastSpace > 0 ? lastSpace : DESCRIPTION_MAX_LENGTH)}…`;
+}
+
 const sections: string[] = [];
 for (const [category, categoryTools] of byCategory) {
 	const rows = categoryTools.map((tool) => {
@@ -45,7 +60,7 @@ for (const [category, categoryTools] of byCategory) {
 		if (tool.website) {
 			links.push(`[Website](${tool.website})`);
 		}
-		return `| [${tool.name}](${nameLink}) | ${tool.short_description} | ${tool.language} | ${links.join(', ')} |`;
+		return `| [${tool.name}](${nameLink}) | ${formatDescription(tool.short_description)} | ${tool.language} | ${links.join(', ')} |`;
 	});
 
 	sections.push(
