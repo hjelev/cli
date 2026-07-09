@@ -14,6 +14,8 @@ language: TypeScript
 installation:
   - method: script
     command: curl -LsSf https://noodlerest.dev/install.sh | sh
+  - method: brew
+    command: brew install wilfredinni/noodle/noodle
 platforms:
   - Linux
   - macOS
@@ -29,4 +31,5 @@ media: >-
   https://raw.githubusercontent.com/wilfredinni/noodle/main/assets/noodle-catppuccin.png
 logo: https://raw.githubusercontent.com/wilfredinni/noodle/main/assets/logo.png
 updated: '2026-07-09'
+comments: []
 ---
