@@ -44,6 +44,7 @@ Curated CLI/TUI tools list
 | [btop](https://github.com/aristocratos/btop) | A monitor of resources | C++ | [Repo](https://github.com/aristocratos/btop) |
 | [gtop](https://github.com/aksakalli/gtop) | System monitoring dashboard for terminal | JavaScript | [Repo](https://github.com/aksakalli/gtop) |
 | [htop](https://htop.dev/) | htop - an interactive process viewer | C | [Repo](https://github.com/htop-dev/htop), [Website](https://htop.dev/) |
+| [usbtree](https://gnomeria.github.io/usbtree/) | Live USB device tree in your terminal. Rust TUI, no root, no libusb. Full activity metrics on Linux; device tree on macOS/Windows. | Rust | [Repo](https://github.com/gnomeria/usbtree), [Website](https://gnomeria.github.io/usbtree/) |
 
 ### Networking
 
