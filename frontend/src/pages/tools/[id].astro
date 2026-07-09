@@ -139,7 +139,7 @@ if (data.website) {
 		<dl>
 			<dt>Repository</dt>
 			<dd>
-				<a href={data.repository_url} target="_blank" rel="noopener">{data.repository_url}</a>
+				<a href={data.repository_url} target="_blank" rel="noopener">{data.repository_url.replace(/^https?:\/\/(www\.)?github\.com\//, '')}</a>
 			</dd>
 
 			{data.website && (
@@ -156,7 +156,7 @@ if (data.website) {
 								loading="lazy"
 							/>
 						)}
-						<a href={data.website} target="_blank" rel="noopener">{data.website}</a>
+						<a href={data.website} target="_blank" rel="noopener">{data.website.replace(/^https?:\/\//, '')}</a>
 					</dd>
 				</>
 			)}
