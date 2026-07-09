@@ -98,6 +98,7 @@ that runs in your terminal. Single binary, zero config.
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [ascii patrol](https://ascii-patrol.com/) | Ascii Patrol is an ASCII game project. It was mainly inspired by "Moon Patrol", Msokalski favorite arcade game at the times he was a child. | C++ | [Repo](https://github.com/msokalski/ascii-patrol), [Website](https://ascii-patrol.com/) |
+| [terminal_gameboy](https://github.com/dquigles/terminal_gameboy) | A rust, terminal-based Game Boy and Game Boy Color emulator with ASCII art and block rendering modes. | Rust | [Repo](https://github.com/dquigles/terminal_gameboy) |
 | [tetro-tui](https://github.com/Strophox/tetro-tui) | A modern, highly customizable tetromino-stacking game for the terminal. | Rust | [Repo](https://github.com/Strophox/tetro-tui) |
 
 ### AI
