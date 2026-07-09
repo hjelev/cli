@@ -46,6 +46,12 @@ Curated CLI/TUI tools list
 | [htop](https://htop.dev/) | htop - an interactive process viewer | C | [Repo](https://github.com/htop-dev/htop), [Website](https://htop.dev/) |
 | [usbtree](https://gnomeria.github.io/usbtree/) | Live USB device tree in your terminal. Rust TUI, no root, no libusb. Full activity metrics on Linux; device tree on macOS/Windows. | Rust | [Repo](https://github.com/gnomeria/usbtree), [Website](https://gnomeria.github.io/usbtree/) |
 
+### Productivity
+
+| Name | Description | Language | Links |
+|------|-------------|----------|-------|
+| [flyline](https://github.com/HalFrgrd/flyline) | Flyline: a Bash plugin to replace readline for a modern line editing experience: syntax highlighting, agent integration, rich prompts, toolt | Rust | [Repo](https://github.com/HalFrgrd/flyline) |
+
 ### Networking
 
 | Name | Description | Language | Links |
