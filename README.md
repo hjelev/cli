@@ -87,6 +87,12 @@ that runs in your terminal. Single binary, zero config.
 |------|-------------|----------|-------|
 | [age](https://age-encryption.org) | A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability. | Go | [Repo](https://github.com/FiloSottile/age), [Website](https://age-encryption.org) |
 
+### Data Processing
+
+| Name | Description | Language | Links |
+|------|-------------|----------|-------|
+| [tabiew](https://github.com/shshemi/tabiew) | A lightweight TUI application to view and query tabular data files, such as CSV, TSV, and parquet. | Rust | [Repo](https://github.com/shshemi/tabiew) |
+
 ### Games & Fun
 
 | Name | Description | Language | Links |
