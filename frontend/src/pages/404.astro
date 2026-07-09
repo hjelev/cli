@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Logo from '../components/Logo.astro';
+---
+
+<BaseLayout
+	title="404: not found — The Terminal Index"
+	command="cd /404"
+	mode="ERROR"
+	status="exit 127"
+	backHref="/"
+	noindex={true}
+	breadcrumb={[{ label: '404' }]}
+>
+	<header class="hero">
+		<h1><Logo />404</h1>
+		<p class="tagline"># page not found</p>
+	</header>
+
+	<div class="shell-output">
+		<p><span class="caret">$</span> cd <span class="requested-path">/404</span></p>
+		<p class="error">sh: cd: <span class="requested-path">/404</span>: No such file or directory</p>
+		<p class="hero-cmd"><span class="caret">$</span></p>
+	</div>
+
+	<nav class="browse-links">
+		<a href="/">cd ~</a>
+		<a href="/categories">ls categories/</a>
+		<a href="/tags">ls tags/</a>
+		<a href="/languages">ls languages/</a>
+		<a href="/submit">submit --tool</a>
+	</nav>
+
+	<script>
+		const path = window.location.pathname;
+		if (path && path !== '/404' && path !== '/404.html') {
+			for (const el of document.querySelectorAll('.requested-path')) {
+				el.textContent = path;
+			}
+		}
+	</script>
+
+	<style>
+		.shell-output {
+			margin-bottom: 2.5rem;
+		}
+
+		.shell-output p {
+			margin-bottom: 0.5rem;
+		}
+
+		.shell-output .error {
+			color: var(--accent-rust);
+		}
+	</style>
+</BaseLayout>
