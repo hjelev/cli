@@ -28,4 +28,7 @@ tags:
 media: https://github.com/kyoheiu/felix/raw/develop/screenshots/screenshot.png
 logo: https://avatars.githubusercontent.com/u/61998590?v=4
 updated: '2026-07-09'
+github_stars: 894
+github_updated: "2025-04-12"
+github_release: "v2.16.1"
 ---
