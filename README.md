@@ -22,6 +22,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [atuin](https://atuin.sh/) | ✨ Making your shell magical | Rust | [Repo](https://github.com/atuinsh/atuin), [Website](https://atuin.sh/) |
+| [mcfly](https://github.com/cantino/mcfly) | Fly through your shell history. Great Scott! | Rust | [Repo](https://github.com/cantino/mcfly) |
 | [suvadu](https://suvadu.sh) | Shell history replacement with AI agent tracking and MCP server. Built in Rust, 100% local. | Rust | [Repo](https://github.com/AppachiTech/suvadu), [Website](https://suvadu.sh) |
 
 ### Directory Listing
