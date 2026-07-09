@@ -67,6 +67,7 @@ that runs in your terminal. Single binary, zero config.
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [lyrtui](http://masoko.net/lyrtui/) | Fast and good looking TUI for Lyrion Music Server | Rust | [Repo](https://github.com/hjelev/lyrtui), [Website](http://masoko.net/lyrtui/) |
+| [spotatui](https://spotatui.com) | A fast, standalone terminal music player in Rust: native Spotify streaming plus local, Subsonic, radio, and YouTube sources. | Rust | [Repo](https://github.com/LargeModGames/spotatui), [Website](https://spotatui.com) |
 
 ### Security
 
