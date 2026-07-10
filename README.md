@@ -56,6 +56,7 @@ Curated CLI/TUI tools list
 | [inshellisense](https://github.com/microsoft/inshellisense) | IDE style command line auto complete | TypeScript | [Repo](https://github.com/microsoft/inshellisense) |
 | [pet](https://github.com/knqyf263/pet) | Simple command-line snippet manager | Go | [Repo](https://github.com/knqyf263/pet) |
 | [tmux](https://tmux.us) | tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and… | C | [Repo](https://github.com/tmux/tmux), [Website](https://tmux.us) |
+| [zellij](https://zellij.dev) | A terminal workspace with batteries included | Rust | [Repo](https://github.com/zellij-org/zellij), [Website](https://zellij.dev) |
 
 ### Networking
 
