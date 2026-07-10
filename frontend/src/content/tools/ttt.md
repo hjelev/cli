@@ -50,7 +50,7 @@ tags:
   - text
 media: https://github.com/eugenioenko/ttt/raw/main/docs-web/public/demo/demo.gif
 logo: https://tttedit.dev/_astro/logo.9JdCUVB0.svg
-github_stars: 87
-github_updated: "2026-07-08"
-github_release: "v0.3.5"
+github_stars: 88
+github_updated: "2026-07-09"
+github_release: "v1.0.0"
 ---
