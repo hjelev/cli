@@ -47,5 +47,6 @@ logo: https://avatars.githubusercontent.com/u/2306588?v=4
 updated: '2026-07-04'
 github_stars: 349
 github_updated: "2026-04-12"
+github_created: "2025-10-11"
 github_release: "v0.7.0"
 ---

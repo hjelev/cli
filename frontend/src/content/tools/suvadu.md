@@ -40,5 +40,6 @@ logo: https://github.com/AppachiTech/suvadu/raw/main/assets/suvadu-logo.svg
 media: https://suvadu.sh/demo/suvadu-search.webm
 github_stars: 89
 github_updated: "2026-06-25"
+github_created: "2026-02-13"
 github_release: "v0.3.4"
 ---

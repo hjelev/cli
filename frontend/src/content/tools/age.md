@@ -55,8 +55,9 @@ tags:
 media: https://cli.masoko.net/uploads/age/media.gif
 logo: https://cli.masoko.net/uploads/age/logo.png
 updated: '2026-07-08'
-github_stars: 22804
+github_stars: 22807
 github_updated: "2026-03-20"
+github_created: "2019-05-18"
 github_release: "v1.3.1"
 comments: []
 ---

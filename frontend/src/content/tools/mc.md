@@ -39,4 +39,5 @@ logo: https://avatars.githubusercontent.com/u/1191610?v=4
 media: https://midnight-commander.org/img/mc-screenshot-cropped.png
 github_stars: 918
 github_updated: "2026-07-03"
+github_created: "2025-02-27"
 ---

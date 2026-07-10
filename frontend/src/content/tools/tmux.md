@@ -36,4 +36,8 @@ tags:
 media: https://www.perl.com/images/an-introduction-to-tmux/tmux-panes.png
 logo: https://avatars.githubusercontent.com/u/12054114?s=200&v=4
 updated: '2026-07-10'
+github_stars: 47533
+github_updated: "2026-07-10"
+github_created: "2015-06-03"
+github_release: "3.7b"
 ---

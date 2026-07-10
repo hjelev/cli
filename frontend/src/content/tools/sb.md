@@ -35,5 +35,6 @@ media: https://masoko.net/sb/images/screenshot-1.png
 logo: https://masoko.net/sb/images/favicon.png
 github_stars: 3
 github_updated: "2026-07-04"
+github_created: "2026-04-15"
 github_release: "v0.9.1"
 ---

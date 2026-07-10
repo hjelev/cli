@@ -43,4 +43,5 @@ media: https://raw.githubusercontent.com/slap-editor/slap/master/screenshot.png
 logo: https://avatars.githubusercontent.com/u/7591891?s=200&v=4
 github_stars: 6185
 github_updated: "2021-11-01"
+github_created: "2014-04-21"
 ---

@@ -46,5 +46,6 @@ logo: https://github.com/Strophox/tetro-tui/blob/b66590cb461d34c95e988ef41b6d8b7
 media: https://github.com/Strophox/tetro-tui/blob/15d6f8a13d146d2655f80559e0aee0430527f1c9/demo_assets/tetro-tui-v3.5.0_demo.gif?raw=true
 github_stars: 721
 github_updated: "2026-06-02"
+github_created: "2024-06-16"
 github_release: "v3.6.1"
 ---

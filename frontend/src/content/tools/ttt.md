@@ -52,5 +52,6 @@ media: https://github.com/eugenioenko/ttt/raw/main/docs-web/public/demo/demo.gif
 logo: https://tttedit.dev/_astro/logo.9JdCUVB0.svg
 github_stars: 88
 github_updated: "2026-07-09"
+github_created: "2026-01-16"
 github_release: "v1.0.0"
 ---
