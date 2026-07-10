@@ -18,6 +18,7 @@ const CHUNK_SIZE = 50;
 interface RepoStats {
 	stargazerCount: number;
 	pushedAt: string;
+	createdAt: string;
 	latestRelease: { tagName: string } | null;
 }
 
@@ -35,7 +36,7 @@ function parseGitHubRepo(repositoryUrl: string): { owner: string; repo: string }
 }
 
 const FRONTMATTER_PATTERN = /^---\r?\n([\s\S]*?)\r?\n---\r?\n/;
-const GITHUB_FIELD_PATTERN = /^github_(stars|updated|release):/;
+const GITHUB_FIELD_PATTERN = /^github_(stars|updated|release|created):/;
 
 // Rewrites only our own `github_*` keys in-place, leaving every other line
 // byte-for-byte untouched — a full YAML parse+dump round-trip (e.g. via
@@ -75,6 +76,7 @@ async function fetchStatsBatch(tools: ToolFile[]): Promise<Map<string, RepoStats
   repo${i}: repository(owner: ${JSON.stringify(tool.owner)}, name: ${JSON.stringify(tool.repo)}) {
     stargazerCount
     pushedAt
+    createdAt
     latestRelease { tagName }
   }`,
 		)
@@ -145,11 +147,13 @@ for (const tool of toolFiles) {
 
 	const raw = fs.readFileSync(tool.fullPath, 'utf8');
 	const githubUpdated = repoStats.pushedAt.slice(0, 10);
+	const githubCreated = repoStats.createdAt.slice(0, 10);
 	const githubRelease = repoStats.latestRelease?.tagName;
 
 	const newLines = [
 		`github_stars: ${repoStats.stargazerCount}`,
 		`github_updated: ${JSON.stringify(githubUpdated)}`,
+		`github_created: ${JSON.stringify(githubCreated)}`,
 		...(githubRelease ? [`github_release: ${JSON.stringify(githubRelease)}`] : []),
 	];
 

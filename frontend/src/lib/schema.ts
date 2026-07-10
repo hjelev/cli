@@ -77,6 +77,7 @@ export const toolSchema = z.object({
 	// via the GraphQL API (see .github/workflows/sync-github-stats.yml).
 	github_stars: z.number().int().min(0).optional(),
 	github_updated: z.string().optional(), // ISO YYYY-MM-DD, repo's last push date
+	github_created: z.string().optional(), // ISO YYYY-MM-DD, repo creation date
 	github_release: z.string().optional(), // latest release tag name, e.g. "v1.2.3"
 });
 
@@ -88,6 +89,7 @@ export const toolFormSchema = toolSchema.omit({
 	comments: true,
 	github_stars: true,
 	github_updated: true,
+	github_created: true,
 	github_release: true,
 });
 export type ToolFormData = z.infer<typeof toolFormSchema>;
@@ -96,5 +98,5 @@ export type ToolFormData = z.infer<typeof toolFormSchema>;
 // collect via the form — the form only ever produces `ToolFormData`.
 export type PreservedToolFields = Pick<
 	z.infer<typeof toolSchema>,
-	'comments' | 'github_stars' | 'github_updated' | 'github_release'
+	'comments' | 'github_stars' | 'github_updated' | 'github_created' | 'github_release'
 >;

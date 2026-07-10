@@ -145,6 +145,7 @@ function buildEditedToolFileContent(data: ToolFormData, currentFileText: string)
 		comments: Array.isArray(current.comments) ? (current.comments as PreservedToolFields['comments']) : [],
 		github_stars: current.github_stars as PreservedToolFields['github_stars'],
 		github_updated: current.github_updated as PreservedToolFields['github_updated'],
+		github_created: current.github_created as PreservedToolFields['github_created'],
 		github_release: current.github_release as PreservedToolFields['github_release'],
 	};
 
