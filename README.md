@@ -89,6 +89,12 @@ Curated CLI/TUI tools list
 |------|-------------|----------|-------|
 | [age](https://age-encryption.org) | A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config… | Go | [Repo](https://github.com/FiloSottile/age), [Website](https://age-encryption.org) |
 
+### DevOps & Cloud
+
+| Name | Description | Language | Links |
+|------|-------------|----------|-------|
+| [cloudlens](https://one2n.gitbook.io/docs/) | k9s like CLI for AWS and GCP | Go | [Repo](https://github.com/one2nc/cloudlens), [Website](https://one2n.gitbook.io/docs/) |
+
 ### Data Processing
 
 | Name | Description | Language | Links |
