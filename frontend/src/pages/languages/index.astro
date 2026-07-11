@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { slugify } from '../../lib/slug';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageIcon from '../../components/LanguageIcon.astro';
 
 const tools = await getCollection('tools');
 // Group by slug so languages that collide (see languages/[language]/[...page].astro)
@@ -39,7 +40,7 @@ const languages = [...bySlug.entries()]
 			languages.map(({ slug, label, count }) => (
 				<li>
 					<a href={`/languages/${slug}`}>
-						{label} <span class="count">({count})</span>
+						<LanguageIcon language={label} /> {label} <span class="count">({count})</span>
 					</a>
 				</li>
 			))

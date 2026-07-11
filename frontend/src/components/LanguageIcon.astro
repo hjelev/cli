@@ -1,0 +1,61 @@
+---
+import { getLanguageIcon, splitLanguageLabel } from '../lib/languageIcons';
+
+interface Props {
+	language: string;
+	size?: number;
+}
+
+const { language, size = 16 } = Astro.props;
+
+// A very dark brand color (e.g. Rust's official black) is nearly invisible
+// against this site's dark background, so give those icons a faint outline.
+function isNearBlack(hex: string): boolean {
+	const r = parseInt(hex.slice(0, 2), 16);
+	const g = parseInt(hex.slice(2, 4), 16);
+	const b = parseInt(hex.slice(4, 6), 16);
+	return (0.299 * r + 0.587 * g + 0.114 * b) / 255 < 0.15;
+}
+
+const icons = splitLanguageLabel(language).map((name) => ({
+	name,
+	icon: getLanguageIcon(name),
+}));
+---
+
+{
+	icons.map(({ name, icon }) =>
+		icon ? (
+			<svg
+				class="lang-icon"
+				viewBox="0 0 24 24"
+				width={size}
+				height={size}
+				fill={`#${icon.hex}`}
+				stroke={isNearBlack(icon.hex) ? 'var(--fg-dim)' : 'none'}
+				stroke-width={isNearBlack(icon.hex) ? '0.5' : '0'}
+				role="img"
+				aria-label={name}
+			>
+				<path d={icon.path} />
+			</svg>
+		) : (
+			<svg
+				class="lang-icon"
+				viewBox="0 0 24 24"
+				width={size}
+				height={size}
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				role="img"
+				aria-label={name}
+			>
+				<polyline points="16 18 22 12 16 6" />
+				<polyline points="8 6 2 12 8 18" />
+			</svg>
+		),
+	)
+}

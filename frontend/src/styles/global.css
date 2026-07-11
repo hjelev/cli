@@ -803,6 +803,16 @@ dd {
 	margin-right: 0.4rem;
 }
 
+.lang-icon {
+	vertical-align: middle;
+	margin-right: 0.35rem;
+	flex-shrink: 0;
+}
+
+.lang-icon-lg {
+	margin-right: 0.5rem;
+}
+
 .media {
 	display: block;
 	max-width: 100%;

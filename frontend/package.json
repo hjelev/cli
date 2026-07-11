@@ -19,6 +19,7 @@
     "astro": "^7.0.4",
     "js-yaml": "^5.2.0",
     "marked": "^18.0.5",
+    "simple-icons": "^16.25.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
