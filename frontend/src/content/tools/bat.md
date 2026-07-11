@@ -44,6 +44,7 @@ tags:
   - terminal
   - tool
 media: https://cli.masoko.net/uploads/bat/media.png
-logo: https://cli.masoko.net/uploads/bat/logo.svg
+logo: https://cli.masoko.net/uploads/bat/logo.png
 updated: '2026-07-11'
+comments: []
 ---
