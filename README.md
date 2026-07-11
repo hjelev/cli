@@ -91,6 +91,7 @@ Curated CLI/TUI tools list
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
+| [harlequin](https://harlequin.sh) | The SQL IDE for Your Terminal. | Python | [Repo](https://github.com/tconbeer/harlequin), [Website](https://harlequin.sh) |
 | [tabiew](https://github.com/shshemi/tabiew) | A lightweight TUI application to view and query tabular data files, such as CSV, TSV, and parquet. | Rust | [Repo](https://github.com/shshemi/tabiew) |
 
 ### Games & Fun
@@ -117,6 +118,7 @@ Curated CLI/TUI tools list
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
+| [cloc](https://github.com/AlDanial/cloc) | cloc counts blank lines, comment lines, and physical lines of source code in many programming… | Perl | [Repo](https://github.com/AlDanial/cloc) |
 | [oha](https://github.com/hatoo/oha) | Ohayou is a HTTP load generator inspired by rakyll/hey with tui animation. | Rust | [Repo](https://github.com/hatoo/oha) |
 | [regex-tui](https://github.com/vitor-mariano/regex-tui) | A terminal user interface (TUI) application for testing and visualizing regular expressions in… | Go | [Repo](https://github.com/vitor-mariano/regex-tui) |
 | [sshs](https://github.com/quantumsheep/sshs) | Terminal user interface for SSH | Rust | [Repo](https://github.com/quantumsheep/sshs) |
