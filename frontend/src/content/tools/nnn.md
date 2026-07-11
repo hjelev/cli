@@ -52,7 +52,7 @@ tags:
   - developer-tools
 media: https://github.com/user-attachments/assets/541ca36d-ae26-49fb-97da-d1f7a12d4b9a
 logo: https://raw.githubusercontent.com/jarun/nnn/master/misc/logo/logo-128x128.png
-github_stars: 21695
+github_stars: 21696
 github_updated: "2026-07-03"
 github_created: "2016-08-20"
 github_release: "v5.2"

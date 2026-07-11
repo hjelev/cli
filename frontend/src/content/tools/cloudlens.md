@@ -26,4 +26,8 @@ tags:
 media: https://github.com/one2nc/cloudlens/raw/main/assets/cloudlensdemo.gif
 logo: https://github.com/one2nc/cloudlens/raw/main/assets/cloudlens.png
 updated: '2026-07-11'
+github_stars: 591
+github_updated: "2024-04-20"
+github_created: "2023-01-11"
+github_release: "v0.1.4"
 ---

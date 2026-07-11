@@ -32,7 +32,7 @@ platforms: [Linux, macOS]
 tags: [tui, file-manager, previews, rust, cli, file-browser, image-preview, kitty-graphics, ratatui, sixel, terminal]
 logo: "https://avatars.githubusercontent.com/u/275331632?v=4"
 media: "https://elio-fm.github.io/videos/previews.webm"
-github_stars: 728
+github_stars: 729
 github_updated: "2026-07-10"
 github_created: "2026-03-09"
 github_release: "v1.10.0"

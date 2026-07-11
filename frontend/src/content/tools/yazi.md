@@ -61,7 +61,7 @@ tags:
 media: https://yazi-rs.github.io/videos/scrollable-preview.mp4
 logo: https://yazi-rs.github.io/webp/logo.webp
 updated: '2026-07-09'
-github_stars: 40203
+github_stars: 40215
 github_updated: "2026-07-08"
 github_created: "2023-07-08"
 github_release: "v26.5.6"
