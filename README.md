@@ -115,6 +115,7 @@ Curated CLI/TUI tools list
 |------|-------------|----------|-------|
 | [harlequin](https://harlequin.sh) | The SQL IDE for Your Terminal. | Python | [Repo](https://github.com/tconbeer/harlequin), [Website](https://harlequin.sh) |
 | [rura](https://github.com/tlipinski/rura) | Interactive TUI scratchpad for building shell pipelines | Rust | [Repo](https://github.com/tlipinski/rura) |
+| [sheets](https://github.com/maaslalani/sheets) | Terminal based spreadsheet tool | Go | [Repo](https://github.com/maaslalani/sheets) |
 | [tabiew](https://github.com/shshemi/tabiew) | A lightweight TUI application to view and query tabular data files, such as CSV, TSV, and parquet. | Rust | [Repo](https://github.com/shshemi/tabiew) |
 
 ### Games & Fun
