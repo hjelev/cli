@@ -102,6 +102,7 @@ Curated CLI/TUI tools list
 | [ascii patrol](https://ascii-patrol.com/) | Ascii Patrol is an ASCII game project. It was mainly inspired by "Moon Patrol", Msokalski favorite… | C++ | [Repo](https://github.com/msokalski/ascii-patrol), [Website](https://ascii-patrol.com/) |
 | [terminal_gameboy](https://github.com/dquigles/terminal_gameboy) | A rust, terminal-based Game Boy and Game Boy Color emulator with ASCII art and block rendering… | Rust | [Repo](https://github.com/dquigles/terminal_gameboy) |
 | [tetrigo](https://github.com/Broderick-Westrope/tetrigo) | Play Tetris in your terminal. | Go | [Repo](https://github.com/Broderick-Westrope/tetrigo) |
+| [tetris](https://github.com/samtay/tetris) | A terminal interface for Tetris | Haskell | [Repo](https://github.com/samtay/tetris) |
 | [tetro-tui](https://github.com/Strophox/tetro-tui) | A modern, highly customizable tetromino-stacking game for the terminal. | Rust | [Repo](https://github.com/Strophox/tetro-tui) |
 
 ### AI
