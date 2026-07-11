@@ -32,6 +32,7 @@ installation:
     command: sudo apt install kakoune
 platforms:
   - linux
+  - macOS
 tags:
   - c-plus-plus
   - console-application
