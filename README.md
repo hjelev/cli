@@ -52,6 +52,7 @@ Curated CLI/TUI tools list
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
+| [Bagels](https://github.com/EnhancedJax/Bagels) | Powerful expense tracker that lives in your terminal. | Python | [Repo](https://github.com/EnhancedJax/Bagels) |
 | [flyline](https://github.com/HalFrgrd/flyline) | Flyline: a Bash plugin to replace readline for a modern line editing experience: syntax… | Rust | [Repo](https://github.com/HalFrgrd/flyline) |
 | [inshellisense](https://github.com/microsoft/inshellisense) | IDE style command line auto complete | TypeScript | [Repo](https://github.com/microsoft/inshellisense) |
 | [pet](https://github.com/knqyf263/pet) | Simple command-line snippet manager | Go | [Repo](https://github.com/knqyf263/pet) |
@@ -94,6 +95,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [cloudlens](https://one2n.gitbook.io/docs/) | k9s like CLI for AWS and GCP | Go | [Repo](https://github.com/one2nc/cloudlens), [Website](https://one2n.gitbook.io/docs/) |
+| [sidekick](https://www.sidekickdeploy.com) | Bare metal to production ready in mins; your own fly server on your VPS. | Go | [Repo](https://github.com/mightymoud/sidekick), [Website](https://www.sidekickdeploy.com) |
 
 ### Data Processing
 
