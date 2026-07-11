@@ -55,6 +55,7 @@ Curated CLI/TUI tools list
 |------|-------------|----------|-------|
 | [Bagels](https://github.com/EnhancedJax/Bagels) | Powerful expense tracker that lives in your terminal. | Python | [Repo](https://github.com/EnhancedJax/Bagels) |
 | [flyline](https://github.com/HalFrgrd/flyline) | Flyline: a Bash plugin to replace readline for a modern line editing experience: syntax… | Rust | [Repo](https://github.com/HalFrgrd/flyline) |
+| [fzf](https://junegunn.github.io/fzf) | 🌸 A command-line fuzzy finder | Go | [Repo](https://github.com/junegunn/fzf), [Website](https://junegunn.github.io/fzf) |
 | [inshellisense](https://github.com/microsoft/inshellisense) | IDE style command line auto complete | TypeScript | [Repo](https://github.com/microsoft/inshellisense) |
 | [pet](https://github.com/knqyf263/pet) | Simple command-line snippet manager | Go | [Repo](https://github.com/knqyf263/pet) |
 | [tmux](https://tmux.us) | tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and… | C | [Repo](https://github.com/tmux/tmux), [Website](https://tmux.us) |
