@@ -39,6 +39,8 @@ tags:
   - nvim
   - text-editor
   - vim
-media: https://cli.masoko.net/uploads/neovim/media.png
+media: https://neovim.io/images/showcase/statuscolumn0.12.png
+logo: https://cli.masoko.net/uploads/neovim/media.png
 updated: '2026-07-11'
+comments: []
 ---
