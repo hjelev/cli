@@ -197,6 +197,11 @@ textarea {
 	text-decoration: none;
 }
 
+.statusline .seg a.icon-link {
+	display: flex;
+	align-items: center;
+}
+
 .statusline .sep {
 	color: var(--fg-faint);
 }
