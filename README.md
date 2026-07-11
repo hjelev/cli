@@ -29,6 +29,7 @@ Curated CLI/TUI tools list
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
+| [dust](https://github.com/bootandy/dust) | A more intuitive version of du in rust | Rust | [Repo](https://github.com/bootandy/dust) |
 | [eza](https://eza.rocks) | A modern, maintained replacement for ls. | Rust | [Repo](https://github.com/eza-community/eza), [Website](https://eza.rocks) |
 | [g](https://equationzhao.github.io/g/) | powerful and cross-platform ls 🌈 | Go | [Repo](https://github.com/Equationzhao/g), [Website](https://equationzhao.github.io/g/) |
 | [lla](https://lla.chaqchase.com) | blazing fast `ls` replacement with superpowers | Rust | [Repo](https://github.com/chaqchase/lla), [Website](https://lla.chaqchase.com) |
