@@ -78,6 +78,8 @@ Curated CLI/TUI tools list
 |------|-------------|----------|-------|
 | [amp](https://amp.rs) | A complete text editor for your terminal. | Rust | [Repo](https://github.com/jmacdonald/amp), [Website](https://amp.rs) |
 | [fresh](https://getfresh.dev) | A powerful terminal text editor and IDE. | Rust | [Repo](https://github.com/sinelaw/fresh), [Website](https://getfresh.dev) |
+| [helix](https://helix-editor.com) | A post-modern modal text editor. | Rust | [Repo](https://github.com/helix-editor/helix), [Website](https://helix-editor.com) |
+| [kakoune](http://kakoune.org) | mawww's experiment for a better code editor | C++ | [Repo](https://github.com/mawww/kakoune), [Website](http://kakoune.org) |
 | [micro](https://micro-editor.github.io/) | A modern and intuitive terminal-based text editor | Go | [Repo](https://github.com/micro-editor/micro), [Website](https://micro-editor.github.io/) |
 | [slap](https://github.com/slap-editor/slap) | Sublime-like terminal-based text editor | JavaScript | [Repo](https://github.com/slap-editor/slap) |
 | [ttt](https://tttedit.dev/) | A terminal text editor IDE. A real alternative to VS Code, Zed, and Sublime that runs in your… | Go | [Repo](https://github.com/eugenioenko/ttt), [Website](https://tttedit.dev/) |
