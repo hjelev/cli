@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import LanguageIcon from './LanguageIcon.astro';
 
 interface Props {
 	tool: CollectionEntry<'tools'>;
@@ -26,7 +25,7 @@ const githubStarsLabel =
 			{tool.data.logo && <img src={tool.data.logo} alt="" width="44" height="44" />}
 			<div class="tool-name-text">
 				<h2>{tool.data.name}</h2>
-				<span class="badge"><LanguageIcon language={tool.data.language} size={14} /> {tool.data.language}</span>
+				<span class="badge">{tool.data.language}</span>
 			</div>
 		</div>
 		<p>{tool.data.short_description}</p>
