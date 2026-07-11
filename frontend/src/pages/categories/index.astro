@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../../lib/schema';
 import { slugify } from '../../lib/slug';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Logo from '../../components/Logo.astro';
 
 const tools = await getCollection('tools');
 const counts = new Map<string, number>();
@@ -20,7 +19,7 @@ const nonEmptyCategories = CATEGORIES.filter((category) => (counts.get(category)
 	breadcrumb={[{ label: 'categories/' }]}
 >
 	<header class="hero">
-		<h1><Logo />Categories</h1>
+		<h1>Categories</h1>
 		<p class="tagline"># browse tools grouped by category</p>
 		<nav class="browse-links">
 			<a href="/tags">ls tags/</a>

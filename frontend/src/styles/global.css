@@ -99,29 +99,17 @@ textarea {
 	padding: 0.6rem 0.9rem;
 }
 
-.term-dots {
+.term-logo {
 	display: flex;
-	gap: 0.45rem;
+	align-items: center;
 	flex-shrink: 0;
 }
 
-.term-dots span {
-	width: 11px;
-	height: 11px;
-	border-radius: 50%;
-	background: var(--border);
-}
-
-.term-dots span:nth-child(1) {
-	background: #ff5f56;
-}
-
-.term-dots span:nth-child(2) {
-	background: #ffbd2e;
-}
-
-.term-dots span:nth-child(3) {
-	background: #27c93f;
+.term-logo .title-logo {
+	width: 20px;
+	height: 20px;
+	margin-right: 0;
+	vertical-align: middle;
 }
 
 .term-title {

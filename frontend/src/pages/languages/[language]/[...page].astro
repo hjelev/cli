@@ -7,7 +7,6 @@ import { PAGE_SIZE, MIN_INDEXABLE_LISTINGS } from '../../../lib/config';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ToolCard from '../../../components/ToolCard.astro';
 import Pagination from '../../../components/Pagination.astro';
-import Logo from '../../../components/Logo.astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const tools = await getCollection('tools');
@@ -43,7 +42,7 @@ const { page, language } = Astro.props;
 	breadcrumb={[{ label: `${slugify(language)}/` }]}
 >
 	<header class="hero">
-		<h1><Logo />{language}</h1>
+		<h1>{language}</h1>
 		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} written in {language}</p>
 	</header>
 

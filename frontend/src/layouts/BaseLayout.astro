@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Logo from '../components/Logo.astro';
 
 interface BreadcrumbSegment {
 	label: string;
@@ -43,7 +44,7 @@ const {
 	<body>
 		<div class="term">
 			<div class="term-bar">
-				<div class="term-dots"><span></span><span></span><span></span></div>
+				<span class="term-logo"><Logo /></span>
 				<p class="term-title"><span class="user">visitor@cli.masoko.net</span>:~$ {command}</p>
 				{backHref && <a class="back" href={backHref}>&larr; cd ..</a>}
 			</div>

@@ -5,7 +5,6 @@ import { slugify } from '../../lib/slug';
 import { TAGS_INDEX_PAGE_SIZE } from '../../lib/config';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Pagination from '../../components/Pagination.astro';
-import Logo from '../../components/Logo.astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const tools = await getCollection('tools');
@@ -41,7 +40,7 @@ const status = page.lastPage > 1 ? `page ${page.currentPage}/${page.lastPage}` :
 	breadcrumb={[{ label: 'tags/' }]}
 >
 	<header class="hero">
-		<h1><Logo />Tags</h1>
+		<h1>Tags</h1>
 		<p class="tagline"># browse tools by tag</p>
 		<nav class="browse-links">
 			<a href="/categories">ls categories/</a>
