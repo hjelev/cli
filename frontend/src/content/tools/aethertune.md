@@ -35,4 +35,8 @@ media: >-
   https://github.com/nevermore23274/AetherTune/blob/main/img/showcase.gif?raw=true
 logo: https://avatars.githubusercontent.com/u/18754037?v=4
 updated: '2026-07-11'
+github_stars: 122
+github_updated: "2026-05-28"
+github_created: "2026-03-14"
+github_release: "v0.9.0"
 ---
