@@ -76,6 +76,7 @@ Curated CLI/TUI tools list
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
+| [amp](https://amp.rs) | A complete text editor for your terminal. | Rust | [Repo](https://github.com/jmacdonald/amp), [Website](https://amp.rs) |
 | [fresh](https://getfresh.dev) | A powerful terminal text editor and IDE. | Rust | [Repo](https://github.com/sinelaw/fresh), [Website](https://getfresh.dev) |
 | [micro](https://micro-editor.github.io/) | A modern and intuitive terminal-based text editor | Go | [Repo](https://github.com/micro-editor/micro), [Website](https://micro-editor.github.io/) |
 | [slap](https://github.com/slap-editor/slap) | Sublime-like terminal-based text editor | JavaScript | [Repo](https://github.com/slap-editor/slap) |
