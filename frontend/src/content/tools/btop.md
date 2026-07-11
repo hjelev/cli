@@ -49,8 +49,8 @@ tags:
 media: https://github.com/aristocratos/btop/raw/main/Img/normal.png
 logo: https://github.com/aristocratos/btop/raw/main/Img/logo.png
 updated: '2026-07-08'
-github_stars: 33439
-github_updated: "2026-07-02"
+github_stars: 33444
+github_updated: "2026-07-11"
 github_created: "2021-05-06"
 github_release: "v1.4.7"
 ---
