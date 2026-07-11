@@ -64,6 +64,7 @@ Curated CLI/TUI tools list
 |------|-------------|----------|-------|
 | [dnsglobe](https://github.com/514-labs/dnsglobe) | Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers… | Rust | [Repo](https://github.com/514-labs/dnsglobe) |
 | [noodle](https://noodlerest.dev) | A delicious REST client for your terminal | TypeScript | [Repo](https://github.com/wilfredinni/noodle), [Website](https://noodlerest.dev) |
+| [riptide](https://github.com/Foxemsx/riptide) | A polished terminal internet speed test and realtime bandwidth monitor written in Go. Riptide… | Go | [Repo](https://github.com/Foxemsx/riptide) |
 
 ### Text Editors
 
