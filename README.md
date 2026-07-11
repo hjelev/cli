@@ -58,6 +58,7 @@ Curated CLI/TUI tools list
 | [bat](https://github.com/sharkdp/bat) | A cat(1) clone with syntax highlighting and Git integration. | Rust | [Repo](https://github.com/sharkdp/bat) |
 | [flyline](https://github.com/HalFrgrd/flyline) | Flyline: a Bash plugin to replace readline for a modern line editing experience: syntax… | Rust | [Repo](https://github.com/HalFrgrd/flyline) |
 | [fzf](https://junegunn.github.io/fzf) | 🌸 A command-line fuzzy finder | Go | [Repo](https://github.com/junegunn/fzf), [Website](https://junegunn.github.io/fzf) |
+| [glow](https://github.com/charmbracelet/glow) | Render markdown on the CLI, with pizzazz! 💅🏻 | Go | [Repo](https://github.com/charmbracelet/glow) |
 | [inshellisense](https://github.com/microsoft/inshellisense) | IDE style command line auto complete | TypeScript | [Repo](https://github.com/microsoft/inshellisense) |
 | [pet](https://github.com/knqyf263/pet) | Simple command-line snippet manager | Go | [Repo](https://github.com/knqyf263/pet) |
 | [tmux](https://tmux.us) | tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and… | C | [Repo](https://github.com/tmux/tmux), [Website](https://tmux.us) |
