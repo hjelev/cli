@@ -78,6 +78,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [amp](https://amp.rs) | A complete text editor for your terminal. | Rust | [Repo](https://github.com/jmacdonald/amp), [Website](https://amp.rs) |
+| [edit](https://github.com/microsoft/edit) | We all edit. | Rust | [Repo](https://github.com/microsoft/edit) |
 | [fresh](https://getfresh.dev) | A powerful terminal text editor and IDE. | Rust | [Repo](https://github.com/sinelaw/fresh), [Website](https://getfresh.dev) |
 | [helix](https://helix-editor.com) | A post-modern modal text editor. | Rust | [Repo](https://github.com/helix-editor/helix), [Website](https://helix-editor.com) |
 | [kakoune](http://kakoune.org) | mawww's experiment for a better code editor | C++ | [Repo](https://github.com/mawww/kakoune), [Website](http://kakoune.org) |
