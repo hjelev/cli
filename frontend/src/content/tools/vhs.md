@@ -34,7 +34,7 @@ tags:
 media: https://cli.masoko.net/uploads/vhs/media.gif
 logo: https://cli.masoko.net/uploads/vhs/logo.png
 updated: '2026-07-11'
-github_stars: 20325
+github_stars: 20326
 github_updated: "2026-06-29"
 github_created: "2022-07-19"
 github_release: "v0.11.0"

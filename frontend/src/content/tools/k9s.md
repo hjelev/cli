@@ -48,7 +48,7 @@ tags:
 media: https://raw.githubusercontent.com/derailed/k9s/master/assets/screen_po.png
 logo: https://github.com/derailed/k9s/raw/master/assets/k9s.png
 updated: '2026-07-11'
-github_stars: 34112
+github_stars: 34113
 github_updated: "2026-07-10"
 github_created: "2019-01-25"
 github_release: "v0.51.0"

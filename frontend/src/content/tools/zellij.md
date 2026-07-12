@@ -33,7 +33,7 @@ tags:
 media: https://raw.githubusercontent.com/zellij-org/zellij/main/assets/demo.gif
 logo: https://raw.githubusercontent.com/zellij-org/zellij/main/assets/logo.png
 updated: '2026-07-10'
-github_stars: 34239
+github_stars: 34244
 github_updated: "2026-07-10"
 github_created: "2020-09-01"
 github_release: "v0.44.3"

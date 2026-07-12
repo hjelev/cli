@@ -45,7 +45,7 @@ media: >-
 logo: https://cli.masoko.net/uploads/usbtree/logo.svg
 updated: '2026-07-09'
 github_stars: 109
-github_updated: "2026-07-10"
+github_updated: "2026-07-12"
 github_created: "2026-07-07"
 github_release: "v0.0.8"
 ---
