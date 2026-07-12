@@ -118,6 +118,7 @@ Curated CLI/TUI tools list
 | [rura](https://github.com/tlipinski/rura) | Interactive TUI scratchpad for building shell pipelines | Rust | [Repo](https://github.com/tlipinski/rura) |
 | [sheets](https://github.com/maaslalani/sheets) | Terminal based spreadsheet tool | Go | [Repo](https://github.com/maaslalani/sheets) |
 | [tabiew](https://github.com/shshemi/tabiew) | A lightweight TUI application to view and query tabular data files, such as CSV, TSV, and parquet. | Rust | [Repo](https://github.com/shshemi/tabiew) |
+| [xan](https://github.com/medialab/xan) | The CSV magician | Rust | [Repo](https://github.com/medialab/xan) |
 
 ### Games & Fun
 
