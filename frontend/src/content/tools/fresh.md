@@ -39,7 +39,7 @@ tags:
 media: https://raw.githubusercontent.com/sinelaw/fresh/master/docs/fresh-demo2.gif
 logo: https://cli.masoko.net/uploads/fresh/logo.png
 updated: '2026-07-08'
-github_stars: 7839
+github_stars: 7840
 github_updated: "2026-07-12"
 github_created: "2024-12-24"
 github_release: "v0.4.3"

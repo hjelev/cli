@@ -39,4 +39,8 @@ tags:
 media: https://github.com/gitui-org/gitui/raw/master/demo.gif
 logo: https://github.com/gitui-org/gitui/raw/master/assets/logo.png
 updated: '2026-07-12'
+github_stars: 22236
+github_updated: "2026-07-09"
+github_created: "2020-03-16"
+github_release: "v0.28.1"
 ---
