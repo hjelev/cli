@@ -1,6 +1,6 @@
 ---
 name: herdr
-category: Productivity
+category: AI
 short_description: agent multiplexer that lives in your terminal.
 description: >-
   Run all your coding agents from one terminal, on any box, even over ssh. Each
