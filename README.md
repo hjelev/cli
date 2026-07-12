@@ -69,6 +69,7 @@ Curated CLI/TUI tools list
 
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
+| [archivemount](https://github.com/cybernoid/archivemount) | A fuse filesystem for mounting archives in formats supported by libarchive. | C | [Repo](https://github.com/cybernoid/archivemount) |
 | [dnsglobe](https://github.com/514-labs/dnsglobe) | Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers… | Rust | [Repo](https://github.com/514-labs/dnsglobe) |
 | [noodle](https://noodlerest.dev) | A delicious REST client for your terminal | TypeScript | [Repo](https://github.com/wilfredinni/noodle), [Website](https://noodlerest.dev) |
 | [posting](https://github.com/darrenburns/posting) | The modern API client that lives in your terminal. | Python | [Repo](https://github.com/darrenburns/posting) |
