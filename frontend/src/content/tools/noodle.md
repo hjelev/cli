@@ -34,6 +34,6 @@ updated: '2026-07-09'
 github_stars: 55
 github_updated: "2026-07-11"
 github_created: "2026-06-24"
-github_release: "v0.4.0"
+github_release: "v0.4.1"
 comments: []
 ---

@@ -46,7 +46,7 @@ tags:
 media: https://cli.masoko.net/uploads/bat/media.png
 logo: https://cli.masoko.net/uploads/bat/logo.png
 updated: '2026-07-11'
-github_stars: 59648
+github_stars: 59671
 github_updated: "2026-07-01"
 github_created: "2018-04-21"
 github_release: "v0.26.1"
