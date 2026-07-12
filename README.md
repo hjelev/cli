@@ -148,6 +148,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [ghgrab](https://ghgrab.readthedocs.io) | A simple, pretty terminal tool that lets you browse and download files from GitHub, GitLab,… | Rust | [Repo](https://github.com/abhixdd/ghgrab), [Website](https://ghgrab.readthedocs.io) |
+| [gitui](https://github.com/gitui-org/gitui) | Blazing 💥 fast terminal-ui for git written in rust 🦀 | Rust | [Repo](https://github.com/gitui-org/gitui) |
 | [lazygit](https://lazygit.dev/) | simple terminal UI for git commands | Go | [Repo](https://github.com/jesseduffield/lazygit), [Website](https://lazygit.dev/) |
 
 ### Utilities & Other
