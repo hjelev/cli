@@ -45,4 +45,8 @@ tags:
   - workflows
 media: https://raw.githubusercontent.com/F1bonacc1/process-compose/main/imgs/demo.gif
 updated: '2026-07-13'
+github_stars: 2565
+github_updated: "2026-07-11"
+github_created: "2022-04-05"
+github_release: "v1.120.0"
 ---
