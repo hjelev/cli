@@ -152,6 +152,7 @@ Curated CLI/TUI tools list
 | [gh-enhance](https://www.gh-dash.dev/enhance) | A Blazingly Fast Terminal UI for GitHub Actions | Go | [Repo](https://github.com/dlvhdr/gh-enhance), [Website](https://www.gh-dash.dev/enhance) |
 | [ghgrab](https://ghgrab.readthedocs.io) | A simple, pretty terminal tool that lets you browse and download files from GitHub, GitLab,… | Rust | [Repo](https://github.com/abhixdd/ghgrab), [Website](https://ghgrab.readthedocs.io) |
 | [gitui](https://github.com/gitui-org/gitui) | Blazing 💥 fast terminal-ui for git written in rust 🦀 | Rust | [Repo](https://github.com/gitui-org/gitui) |
+| [grv](https://github.com/rgburke/grv) | GRV is a terminal interface for viewing git repositories | Go | [Repo](https://github.com/rgburke/grv) |
 | [lazygit](https://lazygit.dev/) | simple terminal UI for git commands | Go | [Repo](https://github.com/jesseduffield/lazygit), [Website](https://lazygit.dev/) |
 
 ### Utilities & Other
