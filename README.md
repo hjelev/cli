@@ -111,6 +111,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [cloudlens](https://one2n.gitbook.io/docs/) | k9s like CLI for AWS and GCP | Go | [Repo](https://github.com/one2nc/cloudlens), [Website](https://one2n.gitbook.io/docs/) |
+| [dtop](https://dtop.dev/) | Terminal dashboard for Docker monitoring across multiple hosts with Dozzle integration. | Rust | [Repo](https://github.com/amir20/dtop), [Website](https://dtop.dev/) |
 | [k9s](https://k9scli.io) | 🐶 Kubernetes CLI To Manage Your Clusters In Style! | Go | [Repo](https://github.com/derailed/k9s), [Website](https://k9scli.io) |
 | [kdash](https://kdash-rs.github.io) | A simple and fast dashboard for Kubernetes | Rust | [Repo](https://github.com/kdash-rs/kdash), [Website](https://kdash-rs.github.io) |
 | [lazydocker](https://lazydocker.com) | The lazier way to manage everything docker | Go | [Repo](https://github.com/jesseduffield/lazydocker), [Website](https://lazydocker.com) |
