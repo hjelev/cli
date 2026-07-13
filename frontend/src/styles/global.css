@@ -16,9 +16,27 @@
 	--accent-rust: #f74c00;
 	--accent-green: #6fcf87;
 	--accent-amber: #e0a83a;
+	--accent-ink: #14151a;
 	--radius: 3px;
 	--font-display: 'IBM Plex Mono', ui-monospace, 'Courier New', monospace;
 	--font-body: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg: #eef2ec;
+		--bg-deep: #e4e9df;
+		--panel: #e7ebe2;
+		--panel-hi: #dde4d6;
+		--border: #cdd6c5;
+		--fg: #1b1f1a;
+		--fg-dim: #4d564a;
+		--fg-faint: #7c8578;
+		--accent-rust: #c73d00;
+		--accent-green: #1f7a43;
+		--accent-amber: #e0a83a;
+		--accent-ink: #14151a;
+	}
 }
 
 *,
@@ -28,7 +46,7 @@
 }
 
 html {
-	color-scheme: dark;
+	color-scheme: light dark;
 }
 
 body {
@@ -162,7 +180,7 @@ textarea {
 
 .statusline .mode {
 	background: var(--accent-amber);
-	color: var(--bg-deep);
+	color: var(--accent-ink);
 	font-weight: 700;
 	letter-spacing: 0.08em;
 	padding: 0.4rem 0.85rem;
@@ -501,7 +519,7 @@ textarea {
 
 .badge-stars {
 	background: var(--accent-amber);
-	color: var(--bg-deep);
+	color: var(--accent-ink);
 	font-weight: 700;
 	padding: 0.05rem 0.45rem;
 	border-radius: var(--radius);
