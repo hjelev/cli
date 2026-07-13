@@ -38,4 +38,8 @@ media: >-
   https://raw.githubusercontent.com/elfmz/far2l/master/far2l/DE/screenshots/far2l.png
 logo: https://avatars.githubusercontent.com/u/20957349?v=4
 updated: '2026-07-13'
+github_stars: 2194
+github_updated: "2026-07-12"
+github_created: "2016-08-10"
+github_release: "v_2.8.0"
 ---
