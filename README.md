@@ -15,6 +15,7 @@ Curated CLI/TUI tools list
 | [nnn](https://github.com/jarun/nnn) | n³ The unorthodox terminal file manager | C | [Repo](https://github.com/jarun/nnn) |
 | [sb](https://sb.masoko.net) | A terminal-based file manager built for speed and efficiency. | Rust | [Repo](https://github.com/hjelev/sb), [Website](https://sb.masoko.net) |
 | [superfile](https://superfile.dev) | Pretty fancy and modern terminal file manager | Go | [Repo](https://github.com/yorukot/superfile), [Website](https://superfile.dev) |
+| [vifm](https://vifm.info) | Vifm is a file manager with curses interface, which provides Vim-like environment for managing… | C | [Repo](https://github.com/vifm/vifm), [Website](https://vifm.info) |
 | [yazi](https://yazi-rs.github.io) | Blazing fast terminal file manager written in Rust, based on async I/O. | Rust | [Repo](https://github.com/sxyazi/yazi), [Website](https://yazi-rs.github.io) |
 
 ### Shell History
