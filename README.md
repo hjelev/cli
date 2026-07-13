@@ -9,6 +9,7 @@ Curated CLI/TUI tools list
 |------|-------------|----------|-------|
 | [broot](https://dystroy.org/broot/) | A new way to see and navigate directory trees | Rust | [Repo](https://github.com/Canop/broot), [Website](https://dystroy.org/broot/) |
 | [elio](https://elio-fm.github.io/) | Snappy, batteries-included terminal file manager with rich previews. | Rust | [Repo](https://github.com/elio-fm/elio), [Website](https://elio-fm.github.io/) |
+| [far2l](https://github.com/elfmz/far2l) | Linux port of FAR v2 | C++ | [Repo](https://github.com/elfmz/far2l) |
 | [felix](https://kyoheiu.dev/felix/) | tui file manager with vim-like key mapping | Rust | [Repo](https://github.com/kyoheiu/felix), [Website](https://kyoheiu.dev/felix/) |
 | [lf](https://github.com/gokcehan/lf) | lf (as in "list files") is a terminal file manager written in Go with a heavy inspiration from… | Go | [Repo](https://github.com/gokcehan/lf) |
 | [mc](https://midnight-commander.org) | GNU Midnight Commander, a text-mode full-screen file manager. | C | [Repo](https://github.com/MidnightCommander/mc), [Website](https://midnight-commander.org) |
