@@ -105,6 +105,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [age](https://age-encryption.org) | A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config… | Go | [Repo](https://github.com/FiloSottile/age), [Website](https://age-encryption.org) |
+| [gpg-tui](https://blog.orhun.dev/introducing-gpg-tui/) | Manage your GnuPG keys with ease! 🔐 | Rust | [Repo](https://github.com/orhun/gpg-tui), [Website](https://blog.orhun.dev/introducing-gpg-tui/) |
 
 ### DevOps & Cloud
 
