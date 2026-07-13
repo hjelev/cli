@@ -75,6 +75,7 @@ Curated CLI/TUI tools list
 | [posting](https://github.com/darrenburns/posting) | The modern API client that lives in your terminal. | Python | [Repo](https://github.com/darrenburns/posting) |
 | [riptide](https://github.com/Foxemsx/riptide) | A polished terminal internet speed test and realtime bandwidth monitor written in Go. Riptide… | Go | [Repo](https://github.com/Foxemsx/riptide) |
 | [sshfs](https://github.com/libfuse/sshfs) | A network filesystem client to connect to SSH servers | C | [Repo](https://github.com/libfuse/sshfs) |
+| [ttl](https://github.com/lance0/ttl) | Fast, modern traceroute with real-time TUI, per-hop stats, ASN/geo lookup, ECMP detection, and MPLS… | Rust | [Repo](https://github.com/lance0/ttl) |
 
 ### Text Editors
 
