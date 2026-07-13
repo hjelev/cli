@@ -47,8 +47,8 @@ tags:
 media: https://cli.masoko.net/uploads/herdr/media.mp4
 logo: https://herdr.dev/assets/logo.svg
 updated: '2026-07-12'
-github_stars: 15700
-github_updated: "2026-07-12"
+github_stars: 15848
+github_updated: "2026-07-13"
 github_created: "2026-03-27"
 github_release: "v0.7.3"
 ---
