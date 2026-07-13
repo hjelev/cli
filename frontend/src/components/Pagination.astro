@@ -16,7 +16,48 @@ const stripped = page.url.current.replace(new RegExp(`/${currentPage}/?$`), '');
 const base = stripped === '/' ? '' : stripped.replace(/\/$/, '');
 const href = (n: number) => (n === 1 ? base || '/' : `${base}/${n}`);
 
-const numbers = Array.from({ length: lastPage }, (_, i) => i + 1);
+type PageEntry = number | '...';
+
+// Windows the visible page numbers to at most `delta * 2 + 1` around the current
+// page, always pinning page 1 and the last page. A single hidden page is merged
+// into the visible range rather than replaced by '...', since an ellipsis for
+// just one skipped page reads as noise rather than a useful compaction.
+function getPageNumbers(current: number, last: number, delta = 2): PageEntry[] {
+	let start = current - delta;
+	let end = current + delta;
+
+	if (start < 1) {
+		end += 1 - start;
+		start = 1;
+	}
+	if (end > last) {
+		start -= end - last;
+		end = last;
+	}
+	start = Math.max(1, start);
+	end = Math.min(last, end);
+
+	if (start === 3) start = 2;
+	if (end === last - 2) end = last - 1;
+
+	const pages: PageEntry[] = [];
+
+	if (start > 1) {
+		pages.push(1);
+		if (start > 2) pages.push('...');
+	}
+
+	for (let i = start; i <= end; i++) pages.push(i);
+
+	if (end < last) {
+		if (end < last - 1) pages.push('...');
+		pages.push(last);
+	}
+
+	return pages;
+}
+
+const numbers = getPageNumbers(currentPage, lastPage);
 ---
 
 {
@@ -31,7 +72,9 @@ const numbers = Array.from({ length: lastPage }, (_, i) => i + 1);
 			<ul class="page-numbers">
 				{numbers.map((n) => (
 					<li>
-						{n === currentPage ? (
+						{n === '...' ? (
+							<span class="page-ellipsis">&hellip;</span>
+						) : n === currentPage ? (
 							<span class="page-num current" aria-current="page">{n}</span>
 						) : (
 							<a class="page-num" href={href(n)}>{n}</a>
