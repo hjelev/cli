@@ -151,6 +151,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [ascii patrol](https://ascii-patrol.com/) | Ascii Patrol is an ASCII game project. It was mainly inspired by "Moon Patrol", Msokalski favorite… | C++ | [Repo](https://github.com/msokalski/ascii-patrol), [Website](https://ascii-patrol.com/) |
+| [chess-tui](https://thomas-mauran.github.io/chess-tui/) | Play chess in any terminal. Rust TUI, Stockfish, Lichess. | Rust | [Repo](https://github.com/thomas-mauran/chess-tui), [Website](https://thomas-mauran.github.io/chess-tui/) |
 | [terminal_gameboy](https://github.com/dquigles/terminal_gameboy) | A rust, terminal-based Game Boy and Game Boy Color emulator with ASCII art and block rendering… | Rust | [Repo](https://github.com/dquigles/terminal_gameboy) |
 | [tetrigo](https://github.com/Broderick-Westrope/tetrigo) | Play Tetris in your terminal. | Go | [Repo](https://github.com/Broderick-Westrope/tetrigo) |
 | [tetris](https://github.com/samtay/tetris) | A terminal interface for Tetris | Haskell | [Repo](https://github.com/samtay/tetris) |
