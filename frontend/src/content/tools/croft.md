@@ -35,4 +35,7 @@ tags:
 media: https://cli.masoko.net/uploads/croft/media.png
 logo: https://codeberg.org/vitali87/croft/media/branch/main/assets/logo-tight.png
 updated: '2026-07-15'
+repo_stars: 67
+repo_updated: "2026-07-15"
+repo_created: "2026-05-08"
 ---

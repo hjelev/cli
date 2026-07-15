@@ -40,4 +40,8 @@ github_stars: 115
 github_updated: "2026-07-11"
 github_created: "2026-06-11"
 github_release: "v1.0.5"
+repo_stars: 115
+repo_updated: "2026-07-11"
+repo_created: "2026-06-11"
+repo_release: "v1.0.5"
 ---
