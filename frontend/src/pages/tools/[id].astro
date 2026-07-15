@@ -182,7 +182,7 @@ if (data.website) {
 			<dd><a href={`/categories/${slugify(data.category)}`}>{data.category}</a></dd>
 
 			<dt>Language</dt>
-			<dd><a href={`/languages/${slugify(data.language)}`}><LanguageIcon language={data.language} /> {data.language}</a></dd>
+			<dd><a class="lang-link" href={`/languages/${slugify(data.language)}`}><LanguageIcon language={data.language} /> <span class="lang-label">{data.language}</span></a></dd>
 
 			<dt>Platforms</dt>
 			<dd>{data.platforms.join(', ')}</dd>

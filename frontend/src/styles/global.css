@@ -123,6 +123,10 @@ textarea {
 	flex-shrink: 0;
 }
 
+.term-logo:hover {
+	text-decoration: none;
+}
+
 .term-logo .title-logo {
 	width: 20px;
 	height: 20px;
@@ -847,6 +851,14 @@ dd {
 
 .lang-icon-lg {
 	margin-right: 0.5rem;
+}
+
+.lang-link:hover {
+	text-decoration: none;
+}
+
+.lang-link:hover .lang-label {
+	text-decoration: underline;
 }
 
 .media {
