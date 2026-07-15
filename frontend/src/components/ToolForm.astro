@@ -131,7 +131,13 @@ const installation = initialData?.installation?.length ? initialData.installatio
 				upload
 			</label>
 		</div>
-		<input name="media" type="url" data-source-panel="url" value={initialData?.media ?? ''} />
+		<input
+			name="media"
+			type="url"
+			data-source-panel="url"
+			placeholder="image/video URL or https://asciinema.org/a/…"
+			value={initialData?.media ?? ''}
+		/>
 		<div data-source-panel="upload" hidden>
 			<input name="media_file" type="file" accept={ACCEPT_ATTR} />
 			<span class="file-name" data-file-name></span>

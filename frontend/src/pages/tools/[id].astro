@@ -46,6 +46,8 @@ if (data.website) {
 		faviconUrl = ''; // malformed URL → no icon
 	}
 }
+
+const asciinemaId = data.media?.match(/asciinema\.org\/a\/([\w-]+)/i)?.[1];
 ---
 
 <BaseLayout
@@ -71,9 +73,11 @@ if (data.website) {
 		</div>
 	</header>
 
-	{data.media && (/\.(webm|mp4)(\?.*)?$/i.test(data.media)
-		? <video class="media" src={data.media} autoplay loop muted playsinline controls />
-		: <img class="media" src={data.media} alt={`${data.name} demo`} />
+	{data.media && (asciinemaId
+		? <script id={`asciicast-${asciinemaId}`} src={`https://asciinema.org/a/${asciinemaId}.js`} data-autoplay="false" async />
+		: /\.(webm|mp4)(\?.*)?$/i.test(data.media)
+			? <video class="media" src={data.media} autoplay loop muted playsinline controls />
+			: <img class="media" src={data.media} alt={`${data.name} demo`} />
 	)}
 
 	<section class="man-section">
