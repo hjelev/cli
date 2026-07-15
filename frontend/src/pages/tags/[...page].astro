@@ -24,6 +24,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 	// or chronological order. Tie-break on slug for a stable order.
 	const tags = [...bySlug.entries()]
 		.map(([slug, { label, toolIds }]) => ({ slug, label, count: toolIds.size }))
+		.filter((t) => t.count > 1)
 		.sort((a, b) => b.count - a.count || a.slug.localeCompare(b.slug));
 	return paginate(tags, { pageSize: TAGS_INDEX_PAGE_SIZE });
 }) satisfies GetStaticPaths;
