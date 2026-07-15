@@ -19,6 +19,14 @@ language: Python
 installation:
   - method: pip
     command: pip3 install visidata
+  - method: brew
+    command: brew install visidata
+  - method: pacman
+    command: sudo pacman -S visidata
+  - method: dnf
+    command: sudo dnf install visidata
+  - method: apt
+    command: sudo apt install visidata
 platforms:
   - Linux
   - macOS
@@ -45,4 +53,5 @@ tags:
 media: https://www.visidata.org/videos/freq-move-row.mp4
 logo: https://cli.masoko.net/uploads/visidata/logo.png
 updated: '2026-07-15'
+comments: []
 ---
