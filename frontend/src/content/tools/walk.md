@@ -1,6 +1,6 @@
 ---
 name: walk
-category: Directory Listing
+category: File Management
 short_description: Walk — a terminal navigator; a cd and ls replacement.
 description: >-
   A minimal terminal navigator and file manager designed to replace traditional
@@ -34,4 +34,5 @@ tags:
 media: https://github.com/antonmedv/walk/raw/master/.github/images/demo.gif
 logo: https://cli.masoko.net/uploads/walk/logo.png
 updated: '2026-07-15'
+comments: []
 ---
