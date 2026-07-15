@@ -41,7 +41,7 @@ tags:
 media: https://ranger.fm/screenshots/screenshot0.png
 logo: https://ranger.fm/ranger_logo.png
 updated: '2026-07-13'
-github_stars: 17295
+github_stars: 17299
 github_updated: "2026-07-12"
 github_created: "2009-06-04"
 ---

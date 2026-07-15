@@ -36,7 +36,7 @@ tags:
 media: https://github.com/maaslalani/slides/raw/main/assets/slides-1.gif?raw=true
 logo: https://avatars.githubusercontent.com/u/42545625?v=4
 updated: '2026-07-12'
-github_stars: 11581
+github_stars: 11585
 github_updated: "2026-07-08"
 github_created: "2021-05-05"
 github_release: "v0.9.0"

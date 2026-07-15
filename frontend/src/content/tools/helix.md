@@ -38,8 +38,8 @@ tags:
 media: https://github.com/helix-editor/helix/raw/master/screenshot.png
 logo: https://helix-editor.com/logo.svg
 updated: '2026-07-11'
-github_stars: 45404
-github_updated: "2026-07-07"
+github_stars: 45424
+github_updated: "2026-07-14"
 github_created: "2020-06-01"
 github_release: "25.07.1"
 ---

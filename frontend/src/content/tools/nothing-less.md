@@ -40,7 +40,7 @@ tags:
 media: https://github.com/mpryor/nothing-less/raw/main/docs/assets/demo.webp
 logo: https://cli.masoko.net/uploads/nothing-less/logo.png
 updated: '2026-07-12'
-github_stars: 271
+github_stars: 272
 github_updated: "2026-05-08"
 github_created: "2025-09-17"
 github_release: "1.17.0"

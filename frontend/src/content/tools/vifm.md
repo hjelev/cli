@@ -51,7 +51,7 @@ media: >-
   https://raw.githubusercontent.com/vifm/vifm/master/data/graphics/screenshot.png
 logo: https://raw.githubusercontent.com/vifm/vifm/master/data/graphics/vifm.svg
 updated: '2026-07-13'
-github_stars: 3221
+github_stars: 3222
 github_updated: "2026-07-12"
 github_created: "2009-01-21"
 github_release: "v0.14.4"

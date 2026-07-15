@@ -54,7 +54,7 @@ tags:
 media: https://cli.masoko.net/uploads/xplr/media.mp4
 logo: https://cli.masoko.net/uploads/xplr/logo.png
 updated: '2026-07-13'
-github_stars: 4776
+github_stars: 4777
 github_updated: "2025-12-24"
 github_created: "2021-02-24"
 github_release: "v1.1.0"
