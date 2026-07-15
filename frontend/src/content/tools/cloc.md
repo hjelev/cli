@@ -58,9 +58,9 @@ tags:
 media: https://cli.masoko.net/uploads/cloc/media.png
 logo: https://avatars.githubusercontent.com/u/1459933?v=4
 updated: '2026-07-15'
-comments: []
 repo_stars: 23301
-repo_updated: '2026-07-11'
-repo_created: '2015-09-07'
-repo_release: v2.10
+repo_updated: "2026-07-11"
+repo_created: "2015-09-07"
+repo_release: "v2.10"
+comments: []
 ---

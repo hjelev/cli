@@ -34,5 +34,9 @@ tags:
 media: https://github.com/antonmedv/walk/raw/master/.github/images/demo.gif
 logo: https://cli.masoko.net/uploads/walk/logo.png
 updated: '2026-07-15'
+repo_stars: 3624
+repo_updated: "2026-01-06"
+repo_created: "2021-12-08"
+repo_release: "v1.13.0"
 comments: []
 ---
