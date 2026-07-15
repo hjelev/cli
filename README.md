@@ -18,6 +18,7 @@ Curated CLI/TUI tools list
 | [sb](https://sb.masoko.net) | A terminal-based file manager built for speed and efficiency. | Rust | [Repo](https://github.com/hjelev/sb), [Website](https://sb.masoko.net) |
 | [superfile](https://superfile.dev) | Pretty fancy and modern terminal file manager | Go | [Repo](https://github.com/yorukot/superfile), [Website](https://superfile.dev) |
 | [vifm](https://vifm.info) | Vifm is a file manager with curses interface, which provides Vim-like environment for managing… | C | [Repo](https://github.com/vifm/vifm), [Website](https://vifm.info) |
+| [walk](https://github.com/antonmedv/walk) | Walk — a terminal navigator; a cd and ls replacement. | Go | [Repo](https://github.com/antonmedv/walk) |
 | [xplr](https://xplr.dev) | A hackable, minimal, fast TUI file explorer | Rust | [Repo](https://github.com/sayanarijit/xplr), [Website](https://xplr.dev) |
 | [yazi](https://yazi-rs.github.io) | Blazing fast terminal file manager written in Rust, based on async I/O. | Rust | [Repo](https://github.com/sxyazi/yazi), [Website](https://yazi-rs.github.io) |
 
@@ -43,7 +44,6 @@ Curated CLI/TUI tools list
 | [nat](https://github.com/willdoescode/nat) | ls alternative with useful info and a splash of color 🎨 | Rust | [Repo](https://github.com/willdoescode/nat) |
 | [nls](https://github.com/nolight132/nls) | A modern ls with useful tables | Go | [Repo](https://github.com/nolight132/nls) |
 | [pls](https://pls.cli.rs/) | pls is a prettier and powerful ls(1) for the pros. | Rust | [Repo](https://github.com/pls-rs/pls), [Website](https://pls.cli.rs/) |
-| [walk](https://github.com/antonmedv/walk) | Walk — a terminal navigator; a cd and ls replacement. | Go | [Repo](https://github.com/antonmedv/walk) |
 
 ### System Monitoring
 
