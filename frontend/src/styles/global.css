@@ -699,6 +699,10 @@ a.page-num:hover {
 	color: var(--fg-faint);
 }
 
+.man-section-no-hash .tool-card h2::before {
+	content: none;
+}
+
 .man-section p {
 	margin-bottom: 0.75rem;
 }
