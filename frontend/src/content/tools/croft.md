@@ -2,9 +2,7 @@
 name: croft
 category: Text Editors
 short_description: VSCode-style TUI written in Rust
-description: >-
-  A VS Code style three pane workspace that runs entirely inside your terminal.
-  Written in Rust and shipped as a single static binary.
+description: A VS Code style three pane workspace that runs entirely inside your terminal. Written in Rust and shipped as a single static binary.
 repository_url: https://codeberg.org/vitali87/croft
 website: https://docs.croft.software
 author: vitali87
@@ -36,6 +34,10 @@ media: https://cli.masoko.net/uploads/croft/media.png
 logo: https://codeberg.org/vitali87/croft/media/branch/main/assets/logo-tight.png
 updated: '2026-07-15'
 repo_stars: 67
-repo_updated: "2026-07-15"
-repo_created: "2026-05-08"
+repo_updated: '2026-07-15'
+repo_created: '2026-05-08'
+comments:
+  - user: hjelev
+    body: This terminal IDE looks very promising, it's really VS Code in the terminal.
+    date: '2026-07-15T18:55:38.461Z'
 ---
