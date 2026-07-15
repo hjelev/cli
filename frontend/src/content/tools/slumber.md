@@ -42,4 +42,8 @@ tags:
 media: https://slumber.lucaspickering.me/images/demo.gif
 logo: https://cli.masoko.net/uploads/slumber/logo.png
 updated: '2026-07-15'
+github_stars: 1200
+github_updated: "2026-07-04"
+github_created: "2023-08-28"
+github_release: "v5.3.0"
 ---

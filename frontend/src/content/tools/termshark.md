@@ -41,4 +41,8 @@ tags:
 media: https://github.com/gcla/termshark/raw/gh-pages/images/demo4.gif?raw=true
 logo: https://cli.masoko.net/uploads/termshark/logo.png
 updated: '2026-07-15'
+github_stars: 9934
+github_updated: "2024-04-30"
+github_created: "2019-04-20"
+github_release: "v2.4.0"
 ---

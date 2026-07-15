@@ -36,7 +36,7 @@ tags:
 media: https://github.com/microsoft/edit/raw/main/assets/edit_hero_image.png
 logo: https://avatars.githubusercontent.com/u/6154722?s=200&v=4
 updated: '2026-07-12'
-github_stars: 14386
+github_stars: 14387
 github_updated: "2026-06-30"
 github_created: "2025-03-21"
 github_release: "v2.0.0"

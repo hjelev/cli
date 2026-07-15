@@ -40,5 +40,9 @@ tags:
 media: https://github.com/Julien-cpsn/ATAC/raw/main/gifs/demo.gif
 logo: https://cli.masoko.net/uploads/atac/logo.png
 updated: '2026-07-15'
+github_stars: 3669
+github_updated: "2026-03-09"
+github_created: "2024-02-05"
+github_release: "v0.23.0"
 comments: []
 ---

@@ -50,4 +50,8 @@ tags:
 media: https://xwmx.github.io/misc/nb/images/nb-theme-nb-home.png
 logo: https://raw.githubusercontent.com/xwmx/nb/master/docs/assets/images/nb.png
 updated: '2026-07-15'
+github_stars: 8290
+github_updated: "2026-07-06"
+github_created: "2016-01-12"
+github_release: "7.25.4"
 ---

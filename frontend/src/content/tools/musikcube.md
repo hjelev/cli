@@ -42,5 +42,9 @@ tags:
 media: https://asciinema.org/a/129748
 logo: https://cli.masoko.net/uploads/musikcube/logo.png
 updated: '2026-07-15'
+github_stars: 4799
+github_updated: "2026-03-23"
+github_created: "2015-03-18"
+github_release: "3.0.5"
 comments: []
 ---
