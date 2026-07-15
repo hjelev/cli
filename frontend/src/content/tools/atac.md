@@ -38,5 +38,7 @@ tags:
   - rust
   - tui
 media: https://github.com/Julien-cpsn/ATAC/raw/main/gifs/demo.gif
+logo: https://cli.masoko.net/uploads/atac/logo.png
 updated: '2026-07-15'
+comments: []
 ---
