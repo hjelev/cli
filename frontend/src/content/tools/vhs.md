@@ -1,6 +1,6 @@
 ---
 name: vhs
-category: Utilities & Other
+category: Media & Entertainment
 short_description: Your CLI home video recorder 📼
 description: >-
   Write terminal GIFs as code for integration testing and demoing your CLI
@@ -33,9 +33,10 @@ tags:
   - video
 media: https://cli.masoko.net/uploads/vhs/media.gif
 logo: https://cli.masoko.net/uploads/vhs/logo.png
-updated: '2026-07-11'
+updated: '2026-07-15'
+comments: []
 repo_stars: 20364
-repo_updated: "2026-06-29"
-repo_created: "2022-07-19"
-repo_release: "v0.11.0"
+repo_updated: '2026-06-29'
+repo_created: '2022-07-19'
+repo_release: v0.11.0
 ---
