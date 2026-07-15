@@ -39,7 +39,7 @@ tags:
   - zip
 logo: https://avatars.githubusercontent.com/u/452612?v=4
 updated: '2026-07-12'
-github_stars: 242
-github_updated: "2021-10-05"
-github_created: "2018-04-10"
+repo_stars: 242
+repo_updated: "2021-10-05"
+repo_created: "2018-04-10"
 ---

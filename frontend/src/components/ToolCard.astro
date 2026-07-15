@@ -7,10 +7,10 @@ interface Props {
 
 const { tool } = Astro.props;
 
-const githubStars = tool.data.github_stars;
-const githubStarsLabel =
-	githubStars !== undefined
-		? new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(githubStars)
+const repoStars = tool.data.repo_stars;
+const repoStarsLabel =
+	repoStars !== undefined
+		? new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(repoStars)
 		: null;
 ---
 
@@ -30,8 +30,8 @@ const githubStarsLabel =
 		</div>
 		<p>{tool.data.short_description}</p>
 		<div class="badges">
-			{githubStarsLabel && (
-				<span class="badge badge-stars" title={`${githubStars} GitHub stars`}>★ {githubStarsLabel}</span>
+			{repoStarsLabel && (
+				<span class="badge badge-stars" title={`${repoStars} stars`}>★ {repoStarsLabel}</span>
 			)}
 			<span class="badge">{tool.data.category}</span>
 		</div>

@@ -34,8 +34,8 @@ tags:
 media: https://cli.masoko.net/uploads/diffnav/media.gif
 logo: https://avatars.githubusercontent.com/u/6196971?v=4
 updated: '2026-07-13'
-github_stars: 1466
-github_updated: "2026-07-15"
-github_created: "2024-09-18"
-github_release: "v0.11.0"
+repo_stars: 1466
+repo_updated: "2026-07-15"
+repo_created: "2024-09-18"
+repo_release: "v0.11.0"
 ---

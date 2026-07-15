@@ -26,7 +26,7 @@ media: >-
   https://raw.githubusercontent.com/dquigles/terminal_gameboy/main/media/terminal_gameboy.gif
 logo: https://avatars.githubusercontent.com/u/126037949?v=4
 updated: '2026-07-09'
-github_stars: 69
-github_updated: "2026-06-23"
-github_created: "2026-01-04"
+repo_stars: 69
+repo_updated: "2026-06-23"
+repo_created: "2026-01-04"
 ---

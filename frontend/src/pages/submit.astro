@@ -46,7 +46,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 		initInstallationRows(installationRows, addInstallationRowBtn);
 		initUploadToggles(form);
-		initAutofill(form, (owner, repo) => fetchRepoAutofill(getStoredToken(), owner, repo));
+		initAutofill(form, (host, owner, repo) => fetchRepoAutofill(getStoredToken(), host, owner, repo));
 
 		document.getElementById('sign-in-btn')?.addEventListener('click', () => {
 			redirectToGitHubSignIn('/submit');

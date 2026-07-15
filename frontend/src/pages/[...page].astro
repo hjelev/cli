@@ -33,7 +33,7 @@ const searchIndex = allTools.map((tool) => {
 		language: tool.data.language,
 		tags: tool.data.tags,
 		logo: tool.data.logo ?? null,
-		stars: tool.data.github_stars ?? null,
+		stars: tool.data.repo_stars ?? null,
 		search: `${tool.data.name} ${tool.data.short_description} ${tool.data.tags.join(' ')}`.toLowerCase(),
 	};
 });
@@ -161,7 +161,7 @@ const status =
 			if (tool.stars !== null) {
 				const starsBadge = document.createElement('span');
 				starsBadge.className = 'badge badge-stars';
-				starsBadge.title = `${tool.stars} GitHub stars`;
+				starsBadge.title = `${tool.stars} stars`;
 				starsBadge.textContent = `★ ${new Intl.NumberFormat('en-US', {
 					notation: 'compact',
 					maximumFractionDigits: 1,

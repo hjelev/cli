@@ -15,30 +15,42 @@ if (!token) {
 // well below GitHub's limits even as the tool list grows past today's count.
 const CHUNK_SIZE = 50;
 
+// Codeberg (Gitea) has no batch/GraphQL API, so its repos are fetched one at
+// a time; capping concurrency keeps us polite to a much smaller instance
+// than GitHub.
+const CODEBERG_CONCURRENCY = 8;
+
+type RepoHost = 'github' | 'codeberg';
+
 interface RepoStats {
-	stargazerCount: number;
-	pushedAt: string;
-	createdAt: string;
-	latestRelease: { tagName: string } | null;
+	stars: number;
+	updated: string; // ISO YYYY-MM-DD, repo's last push date
+	created: string; // ISO YYYY-MM-DD, repo creation date
+	release: string | null;
 }
 
 interface ToolFile {
 	file: string;
 	fullPath: string;
+	host: RepoHost;
 	owner: string;
 	repo: string;
 }
 
-function parseGitHubRepo(repositoryUrl: string): { owner: string; repo: string } | null {
-	const match = repositoryUrl.match(/^https?:\/\/github\.com\/([^/]+)\/([^/]+?)(?:\.git)?\/?$/i);
-	if (!match) return null;
-	return { owner: match[1], repo: match[2] };
+function parseRepoUrl(repositoryUrl: string): { host: RepoHost; owner: string; repo: string } | null {
+	const github = repositoryUrl.match(/^https?:\/\/(?:www\.)?github\.com\/([^/]+)\/([^/]+?)(?:\.git)?\/?$/i);
+	if (github) return { host: 'github', owner: github[1], repo: github[2] };
+
+	const codeberg = repositoryUrl.match(/^https?:\/\/codeberg\.org\/([^/]+)\/([^/]+?)(?:\.git)?\/?$/i);
+	if (codeberg) return { host: 'codeberg', owner: codeberg[1], repo: codeberg[2] };
+
+	return null;
 }
 
 const FRONTMATTER_PATTERN = /^---\r?\n([\s\S]*?)\r?\n---\r?\n/;
-const GITHUB_FIELD_PATTERN = /^github_(stars|updated|release|created):/;
+const REPO_FIELD_PATTERN = /^repo_(stars|updated|release|created):/;
 
-// Rewrites only our own `github_*` keys in-place, leaving every other line
+// Rewrites only our own `repo_*` keys in-place, leaving every other line
 // byte-for-byte untouched — a full YAML parse+dump round-trip (e.g. via
 // gray-matter/js-yaml) would re-quote unrelated fields and produce noisy
 // diffs on every daily run.
@@ -46,7 +58,7 @@ function setFrontmatterFields(raw: string, newLines: string[]): string {
 	const match = raw.match(FRONTMATTER_PATTERN);
 	if (!match) throw new Error('file has no frontmatter block');
 
-	const lines = match[1].split('\n').filter((line) => !GITHUB_FIELD_PATTERN.test(line));
+	const lines = match[1].split('\n').filter((line) => !REPO_FIELD_PATTERN.test(line));
 	const anchor = lines.findIndex((line) => /^comments:/.test(line));
 	if (anchor === -1) {
 		lines.push(...newLines);
@@ -66,7 +78,14 @@ function chunk<T>(items: T[], size: number): T[][] {
 	return chunks;
 }
 
-async function fetchStatsBatch(tools: ToolFile[]): Promise<Map<string, RepoStats | null>> {
+interface GitHubRepoStats {
+	stargazerCount: number;
+	pushedAt: string;
+	createdAt: string;
+	latestRelease: { tagName: string } | null;
+}
+
+async function fetchGitHubStatsBatch(tools: ToolFile[]): Promise<Map<string, RepoStats | null>> {
 	const results = new Map<string, RepoStats | null>();
 	if (tools.length === 0) return results;
 
@@ -92,22 +111,76 @@ async function fetchStatsBatch(tools: ToolFile[]): Promise<Map<string, RepoStats
 	});
 
 	if (!res.ok) {
-		throw new Error(`GraphQL request failed: ${res.status} ${await res.text()}`);
+		throw new Error(`GitHub GraphQL request failed: ${res.status} ${await res.text()}`);
 	}
 
 	const body = (await res.json()) as {
-		data: Record<string, RepoStats | null> | null;
+		data: Record<string, GitHubRepoStats | null> | null;
 		errors?: Array<{ message: string; path?: string[] }>;
 	};
 
 	for (const error of body.errors ?? []) {
-		console.warn(`⚠️  GraphQL error: ${error.message}`);
+		console.warn(`⚠️  GitHub GraphQL error: ${error.message}`);
 	}
 
 	tools.forEach((tool, i) => {
-		results.set(tool.file, body.data?.[`repo${i}`] ?? null);
+		const stats = body.data?.[`repo${i}`];
+		results.set(
+			tool.file,
+			stats
+				? {
+						stars: stats.stargazerCount,
+						updated: stats.pushedAt.slice(0, 10),
+						created: stats.createdAt.slice(0, 10),
+						release: stats.latestRelease?.tagName ?? null,
+					}
+				: null,
+		);
 	});
 
+	return results;
+}
+
+async function fetchGitHubStats(tools: ToolFile[]): Promise<Map<string, RepoStats | null>> {
+	const results = new Map<string, RepoStats | null>();
+	for (const batch of chunk(tools, CHUNK_SIZE)) {
+		const batchStats = await fetchGitHubStatsBatch(batch);
+		for (const [file, stats] of batchStats) {
+			results.set(file, stats);
+		}
+	}
+	return results;
+}
+
+interface CodebergRepoResponse {
+	stars_count: number;
+	updated_at: string;
+	created_at: string;
+}
+
+async function fetchCodebergStats(tool: ToolFile): Promise<RepoStats | null> {
+	const repoRes = await fetch(`https://codeberg.org/api/v1/repos/${tool.owner}/${tool.repo}`);
+	if (!repoRes.ok) return null;
+	const repoData = (await repoRes.json()) as CodebergRepoResponse;
+
+	// 404 simply means the repo has no releases yet, not an error.
+	const releaseRes = await fetch(`https://codeberg.org/api/v1/repos/${tool.owner}/${tool.repo}/releases/latest`);
+	const releaseData = releaseRes.ok ? ((await releaseRes.json()) as { tag_name: string }) : null;
+
+	return {
+		stars: repoData.stars_count,
+		updated: repoData.updated_at.slice(0, 10),
+		created: repoData.created_at.slice(0, 10),
+		release: releaseData?.tag_name ?? null,
+	};
+}
+
+async function fetchCodebergStatsAll(tools: ToolFile[]): Promise<Map<string, RepoStats | null>> {
+	const results = new Map<string, RepoStats | null>();
+	for (const batch of chunk(tools, CODEBERG_CONCURRENCY)) {
+		const batchStats = await Promise.all(batch.map((tool) => fetchCodebergStats(tool)));
+		batch.forEach((tool, i) => results.set(tool.file, batchStats[i]));
+	}
 	return results;
 }
 
@@ -119,22 +192,25 @@ for (const file of files) {
 	const raw = fs.readFileSync(fullPath, 'utf8');
 	const { data } = matter(raw);
 	const repositoryUrl = data.repository_url as string | undefined;
-	const parsed = repositoryUrl ? parseGitHubRepo(repositoryUrl) : null;
+	const parsed = repositoryUrl ? parseRepoUrl(repositoryUrl) : null;
 
 	if (!parsed) {
-		console.warn(`⚠️  ${file}: repository_url is not a github.com URL, skipping`);
+		console.warn(`⚠️  ${file}: repository_url is not a github.com or codeberg.org URL, skipping`);
 		continue;
 	}
 
-	toolFiles.push({ file, fullPath, owner: parsed.owner, repo: parsed.repo });
+	toolFiles.push({ file, fullPath, host: parsed.host, owner: parsed.owner, repo: parsed.repo });
 }
 
+const githubTools = toolFiles.filter((tool) => tool.host === 'github');
+const codebergTools = toolFiles.filter((tool) => tool.host === 'codeberg');
+
 const stats = new Map<string, RepoStats | null>();
-for (const batch of chunk(toolFiles, CHUNK_SIZE)) {
-	const batchStats = await fetchStatsBatch(batch);
-	for (const [file, result] of batchStats) {
-		stats.set(file, result);
-	}
+for (const [file, repoStats] of await fetchGitHubStats(githubTools)) {
+	stats.set(file, repoStats);
+}
+for (const [file, repoStats] of await fetchCodebergStatsAll(codebergTools)) {
+	stats.set(file, repoStats);
 }
 
 let updatedCount = 0;
@@ -146,22 +222,19 @@ for (const tool of toolFiles) {
 	}
 
 	const raw = fs.readFileSync(tool.fullPath, 'utf8');
-	const githubUpdated = repoStats.pushedAt.slice(0, 10);
-	const githubCreated = repoStats.createdAt.slice(0, 10);
-	const githubRelease = repoStats.latestRelease?.tagName;
 
 	const newLines = [
-		`github_stars: ${repoStats.stargazerCount}`,
-		`github_updated: ${JSON.stringify(githubUpdated)}`,
-		`github_created: ${JSON.stringify(githubCreated)}`,
-		...(githubRelease ? [`github_release: ${JSON.stringify(githubRelease)}`] : []),
+		`repo_stars: ${repoStats.stars}`,
+		`repo_updated: ${JSON.stringify(repoStats.updated)}`,
+		`repo_created: ${JSON.stringify(repoStats.created)}`,
+		...(repoStats.release ? [`repo_release: ${JSON.stringify(repoStats.release)}`] : []),
 	];
 
 	const updated = setFrontmatterFields(raw, newLines);
 	if (updated !== raw) {
 		fs.writeFileSync(tool.fullPath, updated);
 		updatedCount += 1;
-		console.log(`✅ ${tool.file}: updated (${repoStats.stargazerCount}★, ${githubUpdated}${githubRelease ? `, ${githubRelease}` : ''})`);
+		console.log(`✅ ${tool.file}: updated (${repoStats.stars}★, ${repoStats.updated}${repoStats.release ? `, ${repoStats.release}` : ''})`);
 	}
 }
 

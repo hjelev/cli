@@ -33,8 +33,8 @@ tags:
   - tui-application
 media: https://masoko.net/sb/images/screenshot-1.png
 logo: https://masoko.net/sb/images/favicon.png
-github_stars: 3
-github_updated: "2026-07-15"
-github_created: "2026-04-15"
-github_release: "v0.10.2"
+repo_stars: 3
+repo_updated: "2026-07-15"
+repo_created: "2026-04-15"
+repo_release: "v0.10.2"
 ---

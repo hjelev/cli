@@ -47,8 +47,8 @@ tags:
 media: https://raw.githubusercontent.com/amir20/dtop/master/demo.gif
 logo: https://github.com/amir20/dtop/raw/master/docs/static/dtop-icon.svg
 updated: '2026-07-13'
-github_stars: 1180
-github_updated: "2026-07-12"
-github_created: "2025-06-20"
-github_release: "v0.7.9"
+repo_stars: 1180
+repo_updated: "2026-07-12"
+repo_created: "2025-06-20"
+repo_release: "v0.7.9"
 ---

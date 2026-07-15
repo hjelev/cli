@@ -1,4 +1,4 @@
-import type { RepoAutofillData } from './github-repo';
+import type { RepoAutofillData, RepoHost } from './github-repo';
 import { parseRepoUrl } from './github-repo';
 import { INSTALL_METHODS } from './schema';
 import { validateUploadFile, type UploadableField } from './upload';
@@ -205,9 +205,13 @@ function setFieldValue(form: HTMLFormElement, name: string, value: string | unde
 // Wires the "Autofill from repo" button: parses the repository URL field,
 // fetches repo metadata (caller supplies `fetchInfo`, typically
 // fetchRepoAutofill bound to the current auth token), and overwrites the
-// fields GitHub can supply. `category`, `installation`, and `platforms` have
-// no reliable GitHub source and are left for the user to fill in.
-export function initAutofill(form: HTMLFormElement, fetchInfo: (owner: string, repo: string) => Promise<RepoAutofillData>): void {
+// fields the repo host can supply. `category`, `installation`, and
+// `platforms` have no reliable repo-host source and are left for the user to
+// fill in.
+export function initAutofill(
+	form: HTMLFormElement,
+	fetchInfo: (host: RepoHost, owner: string, repo: string) => Promise<RepoAutofillData>,
+): void {
 	const btn = form.querySelector<HTMLButtonElement>('#autofill-btn');
 	const status = form.querySelector<HTMLElement>('#autofill-status');
 	const urlInput = form.elements.namedItem('repository_url');
@@ -216,7 +220,7 @@ export function initAutofill(form: HTMLFormElement, fetchInfo: (owner: string, r
 	btn.addEventListener('click', async () => {
 		const parsed = parseRepoUrl(urlInput.value);
 		if (!parsed) {
-			if (status) status.textContent = 'Enter a valid GitHub repository URL first.';
+			if (status) status.textContent = 'Enter a valid GitHub or Codeberg repository URL first.';
 			return;
 		}
 
@@ -224,7 +228,7 @@ export function initAutofill(form: HTMLFormElement, fetchInfo: (owner: string, r
 		if (status) status.textContent = 'Fetching repo info…';
 
 		try {
-			const data = await fetchInfo(parsed.owner, parsed.repo);
+			const data = await fetchInfo(parsed.host, parsed.owner, parsed.repo);
 			setFieldValue(form, 'name', data.name);
 			setFieldValue(form, 'short_description', data.short_description);
 			setFieldValue(form, 'description', data.description);

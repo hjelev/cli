@@ -73,7 +73,7 @@ async function createBranch(token: string, login: string, branch: string, sha: s
 
 // Best-effort fast-forward of the fork's target branch to match upstream.
 // Only used before editing: a stale fork copy of the file being edited could
-// resurrect comments/github_* that changed upstream since the fork
+// resurrect comments/repo_* that changed upstream since the fork
 // was created. Failures are swallowed — worst case we fall back to the
 // fork's own (possibly slightly stale) branch tip, same as submitTool always
 // has, which is an acceptable degraded path, not silent corruption.
@@ -132,7 +132,7 @@ function buildToolFileContent(data: ToolFormData): string {
 }
 
 // Merges edited form data into the current file's frontmatter, carrying
-// forward comments/github_* (never collected by the form) and the
+// forward comments/repo_* (never collected by the form) and the
 // trailing markdown body verbatim.
 function buildEditedToolFileContent(data: ToolFormData, currentFileText: string): string {
 	const match = currentFileText.match(FRONTMATTER_RE);
@@ -143,10 +143,10 @@ function buildEditedToolFileContent(data: ToolFormData, currentFileText: string)
 
 	const preserved: PreservedToolFields = {
 		comments: Array.isArray(current.comments) ? (current.comments as PreservedToolFields['comments']) : [],
-		github_stars: current.github_stars as PreservedToolFields['github_stars'],
-		github_updated: current.github_updated as PreservedToolFields['github_updated'],
-		github_created: current.github_created as PreservedToolFields['github_created'],
-		github_release: current.github_release as PreservedToolFields['github_release'],
+		repo_stars: current.repo_stars as PreservedToolFields['repo_stars'],
+		repo_updated: current.repo_updated as PreservedToolFields['repo_updated'],
+		repo_created: current.repo_created as PreservedToolFields['repo_created'],
+		repo_release: current.repo_release as PreservedToolFields['repo_release'],
 	};
 
 	const frontmatter = buildFrontmatter(data, preserved);

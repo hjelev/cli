@@ -73,24 +73,24 @@ export const toolSchema = z.object({
 	// submission; preserved (never bumped) by the comments Worker path.
 	updated: z.string().optional(),
 	comments: z.array(commentSchema).optional().default([]),
-	// GitHub-derived stats, refreshed daily by scripts/sync-github-stats.ts
-	// via the GraphQL API (see .github/workflows/sync-github-stats.yml).
-	github_stars: z.number().int().min(0).optional(),
-	github_updated: z.string().optional(), // ISO YYYY-MM-DD, repo's last push date
-	github_created: z.string().optional(), // ISO YYYY-MM-DD, repo creation date
-	github_release: z.string().optional(), // latest release tag name, e.g. "v1.2.3"
+	// Repo-host-derived stats (GitHub or Codeberg), refreshed daily by
+	// scripts/sync-github-stats.ts (see .github/workflows/sync-github-stats.yml).
+	repo_stars: z.number().int().min(0).optional(),
+	repo_updated: z.string().optional(), // ISO YYYY-MM-DD, repo's last push date
+	repo_created: z.string().optional(), // ISO YYYY-MM-DD, repo creation date
+	repo_release: z.string().optional(), // latest release tag name, e.g. "v1.2.3"
 });
 
 // What the submission form produces: everything except the feedback fields
-// and GitHub-synced stats, which only the Worker / sync script write. Types
+// and repo-synced stats, which only the Worker / sync script write. Types
 // are derived, never re-declared by hand.
 export const toolFormSchema = toolSchema.omit({
 	updated: true,
 	comments: true,
-	github_stars: true,
-	github_updated: true,
-	github_created: true,
-	github_release: true,
+	repo_stars: true,
+	repo_updated: true,
+	repo_created: true,
+	repo_release: true,
 });
 export type ToolFormData = z.infer<typeof toolFormSchema>;
 
@@ -98,5 +98,5 @@ export type ToolFormData = z.infer<typeof toolFormSchema>;
 // collect via the form — the form only ever produces `ToolFormData`.
 export type PreservedToolFields = Pick<
 	z.infer<typeof toolSchema>,
-	'comments' | 'github_stars' | 'github_updated' | 'github_created' | 'github_release'
+	'comments' | 'repo_stars' | 'repo_updated' | 'repo_created' | 'repo_release'
 >;
