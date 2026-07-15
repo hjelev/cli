@@ -80,6 +80,7 @@ Curated CLI/TUI tools list
 | [noodle](https://noodlerest.dev) | A delicious REST client for your terminal | TypeScript | [Repo](https://github.com/wilfredinni/noodle), [Website](https://noodlerest.dev) |
 | [posting](https://github.com/darrenburns/posting) | The modern API client that lives in your terminal. | Python | [Repo](https://github.com/darrenburns/posting) |
 | [riptide](https://github.com/Foxemsx/riptide) | A polished terminal internet speed test and realtime bandwidth monitor written in Go. Riptide… | Go | [Repo](https://github.com/Foxemsx/riptide) |
+| [slumber](https://slumber.lucaspickering.me/) | Terminal-based HTTP/REST client | Rust | [Repo](https://github.com/LucasPickering/slumber), [Website](https://slumber.lucaspickering.me/) |
 | [sshfs](https://github.com/libfuse/sshfs) | A network filesystem client to connect to SSH servers | C | [Repo](https://github.com/libfuse/sshfs) |
 | [ttl](https://github.com/lance0/ttl) | Fast, modern traceroute with real-time TUI, per-hop stats, ASN/geo lookup, ECMP detection, and MPLS… | Rust | [Repo](https://github.com/lance0/ttl) |
 | [wlctl](https://github.com/aashish-thapa/wlctl) | 🛜 TUI for managing wifi/ethernet/vpn on Linux with Network Manager | Rust | [Repo](https://github.com/aashish-thapa/wlctl) |
