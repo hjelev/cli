@@ -1,0 +1,48 @@
+---
+name: visidata
+category: Data Processing
+short_description: A terminal spreadsheet multitool for discovering and arranging data
+description: >-
+  A powerful interactive terminal utility for exploring, cleaning, and
+  manipulating large tabular datasets.  
+
+  Functions like a spreadsheet for the command line, seamlessly handling formats
+  like CSV, JSON, SQLite, and Excel.  
+
+  Features lightning-fast performance, Vim-inspired keybindings, and robust
+  filtering and aggregation capabilities.
+repository_url: https://github.com/saulpw/visidata
+website: http://visidata.org
+author: saulpw
+license: GPL-3.0
+language: Python
+installation:
+  - method: pip
+    command: pip3 install visidata
+platforms:
+  - Linux
+  - macOS
+  - Windows
+tags:
+  - cli
+  - csv
+  - datajournalism
+  - datawrangling
+  - devops-tools
+  - eda
+  - hdf5
+  - json
+  - opendata
+  - pandas
+  - python
+  - reconciliation
+  - spreadsheet
+  - sqlite
+  - tabular-data
+  - tsv
+  - tui
+  - unix-toolkit
+media: https://www.visidata.org/videos/freq-move-row.mp4
+logo: https://cli.masoko.net/uploads/visidata/logo.png
+updated: '2026-07-15'
+---
