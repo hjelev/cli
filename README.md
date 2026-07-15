@@ -139,6 +139,7 @@ Curated CLI/TUI tools list
 |------|-------------|----------|-------|
 | [harlequin](https://harlequin.sh) | The SQL IDE for Your Terminal. | Python | [Repo](https://github.com/tconbeer/harlequin), [Website](https://harlequin.sh) |
 | [jnv](https://github.com/ynqa/jnv) | Interactive JSON filter using jq | Rust | [Repo](https://github.com/ynqa/jnv) |
+| [jq](https://jqlang.org) | Command-line JSON processor | C | [Repo](https://github.com/jqlang/jq), [Website](https://jqlang.org) |
 | [nothing-less](https://mpryor.github.io/nothing-less/) | A TUI pager with advanced support for tabular data, inferring/swapping delimiters, and real-time… | Python | [Repo](https://github.com/mpryor/nothing-less), [Website](https://mpryor.github.io/nothing-less/) |
 | [rura](https://github.com/tlipinski/rura) | Interactive TUI scratchpad for building shell pipelines | Rust | [Repo](https://github.com/tlipinski/rura) |
 | [sheets](https://github.com/maaslalani/sheets) | Terminal based spreadsheet tool | Go | [Repo](https://github.com/maaslalani/sheets) |
