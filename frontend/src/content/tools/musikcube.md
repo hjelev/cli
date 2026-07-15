@@ -39,8 +39,8 @@ tags:
   - pulseaudio
   - terminal
   - wasapi
-media: >-
-  https://raw.githubusercontent.com/clangen/clangen-projects-static/master/musikcube/screenshots/windows.png
+media: https://asciinema.org/a/129748
 logo: https://cli.masoko.net/uploads/musikcube/logo.png
 updated: '2026-07-15'
+comments: []
 ---
