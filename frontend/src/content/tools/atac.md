@@ -1,0 +1,42 @@
+---
+name: ATAC
+category: Networking
+short_description: A simple API client (postman like) in your terminal
+description: >-
+  ATAC is Arguably a Terminal API Client. It is based on well-known clients such
+  as Postman, Insomnia, or even Bruno, but inside your terminal without any
+  specific graphical environment needed.  
+
+
+  The philosophy of ATAC is to be free, account-less, and offline for now and
+  forever.
+repository_url: https://github.com/Julien-cpsn/ATAC
+website: https://atac.julien-cpsn.com/
+author: Julien-cpsn
+license: MIT
+language: Rust
+installation:
+  - method: cargo
+    command: cargo install atac --locked
+  - method: pacman
+    command: pacman -S atac
+  - method: brew
+    command: brew install atac
+  - method: dnf
+    command: dnf copr enable joxcat/atac; dnf install atac
+  - method: binary
+    command: https://github.com/Julien-cpsn/ATAC/releases/latest
+platforms:
+  - Linux
+  - macOS
+tags:
+  - api
+  - api-client
+  - insomnia
+  - postman
+  - ratatui
+  - rust
+  - tui
+media: https://github.com/Julien-cpsn/ATAC/raw/main/gifs/demo.gif
+updated: '2026-07-15'
+---
