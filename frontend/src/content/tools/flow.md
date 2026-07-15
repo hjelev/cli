@@ -50,4 +50,8 @@ tags:
 media: https://github.com/programmersd21/flow/raw/main/assets/demo.gif
 logo: https://cli.masoko.net/uploads/flow/logo.png
 updated: '2026-07-15'
+github_stars: 240
+github_updated: "2026-07-10"
+github_created: "2026-07-04"
+github_release: "v0.1.7"
 ---

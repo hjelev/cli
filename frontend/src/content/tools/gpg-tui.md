@@ -57,8 +57,8 @@ media: >-
   https://raw.githubusercontent.com/orhun/gpg-tui/master/demo/gpg-tui-showcase.gif
 logo: https://cli.masoko.net/uploads/gpg-tui/logo.png
 updated: '2026-07-13'
-github_stars: 1739
-github_updated: "2026-07-11"
+github_stars: 1738
+github_updated: "2026-07-15"
 github_created: "2020-12-26"
 github_release: "v0.11.2"
 ---
