@@ -60,7 +60,7 @@ if (data.website) {
 >
 	<header class="man-header">
 		<div class="logo-stack">
-			{data.logo && <img src={data.logo} alt="" width="48" height="48" />}
+			{data.logo && <img src={data.logo} alt={`${data.name} logo`} width="48" height="48" />}
 			{githubStarsLabel && (
 				<span class="badge badge-stars" title={`${githubStars} GitHub stars`}>★ {githubStarsLabel}</span>
 			)}

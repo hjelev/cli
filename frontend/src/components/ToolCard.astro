@@ -22,7 +22,7 @@ const githubStarsLabel =
 >
 	<a href={`/tools/${tool.id}`}>
 		<div class="tool-name">
-			{tool.data.logo && <img src={tool.data.logo} alt="" width="44" height="44" />}
+			{tool.data.logo && <img src={tool.data.logo} alt={`${tool.data.name} logo`} width="44" height="44" />}
 			<div class="tool-name-text">
 				<h2>{tool.data.name}</h2>
 				<span class="badge">{tool.data.language}</span>
