@@ -53,8 +53,8 @@ tags:
 media: https://www.visidata.org/videos/freq-move-row.mp4
 logo: https://cli.masoko.net/uploads/visidata/logo.png
 updated: '2026-07-15'
-repo_stars: 9176
-repo_updated: "2026-07-03"
+repo_stars: 9178
+repo_updated: "2026-07-15"
 repo_created: "2016-10-27"
 repo_release: "v3.4"
 comments: []
