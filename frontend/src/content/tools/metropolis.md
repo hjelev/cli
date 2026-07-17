@@ -3,7 +3,7 @@ name: metropolis
 category: Media & Entertainment
 short_description: >-
   A cyberpunk system monitor that transforms kernel metrics into a living
-  terminal skyline. Built with Rust & Ratatui.
+  terminal skyline.
 description: >-
   Metropolis is a high-performance system monitor written in Rust that
   transforms your kernel metrics into a living, breathing cyberpunk skyline.  
@@ -46,4 +46,5 @@ tags:
 media: https://raw.githubusercontent.com/5c0/metropolis/main/docs/clean.gif
 logo: https://cli.masoko.net/uploads/metropolis/logo.png
 updated: '2026-07-17'
+comments: []
 ---
