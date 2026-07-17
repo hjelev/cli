@@ -25,7 +25,7 @@ tags:
   - arcade
 media: https://github.com/msokalski/ascii-patrol/raw/master/ascii-patrol.gif
 logo: https://dashboard.snapcraft.io/site_media/appmedia/2019/02/aaaa.png
-repo_stars: 257
+repo_stars: 258
 repo_updated: "2024-05-08"
 repo_created: "2017-01-03"
 repo_release: "1.7"
