@@ -110,7 +110,7 @@ Curated CLI/TUI tools list
 | [AetherTune](https://github.com/nevermore23274/AetherTune) | A terminal-based internet radio player with real-time audio visualization, built in Rust. | Rust | [Repo](https://github.com/nevermore23274/AetherTune) |
 | [ditto](https://github.com/arvingarciabtw/ditto) | a system-wide ascii keyboard visualizer in the terminal | Go | [Repo](https://github.com/arvingarciabtw/ditto) |
 | [lyrtui](http://masoko.net/lyrtui/) | Fast and good looking TUI for Lyrion Music Server | Rust | [Repo](https://github.com/hjelev/lyrtui), [Website](http://masoko.net/lyrtui/) |
-| [metropolis](https://github.com/5c0/metropolis) | A cyberpunk system monitor that transforms kernel metrics into a living terminal skyline. Built… | Rust | [Repo](https://github.com/5c0/metropolis) |
+| [metropolis](https://github.com/5c0/metropolis) | A cyberpunk system monitor that transforms kernel metrics into a living terminal skyline. | Rust | [Repo](https://github.com/5c0/metropolis) |
 | [musikcube](https://musikcube.com) | a cross-platform, terminal-based music player, audio engine, metadata indexer, and server in c++ | C++ | [Repo](https://github.com/clangen/musikcube), [Website](https://musikcube.com) |
 | [spotatui](https://spotatui.com) | A fast, standalone terminal music player in Rust: native Spotify streaming plus local, Subsonic,… | Rust | [Repo](https://github.com/LargeModGames/spotatui), [Website](https://spotatui.com) |
 | [vhs](https://github.com/charmbracelet/vhs) | Your CLI home video recorder 📼 | Go | [Repo](https://github.com/charmbracelet/vhs) |
