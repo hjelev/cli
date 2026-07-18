@@ -48,4 +48,8 @@ tags:
 media: https://github.com/bgreenwell/xleak/raw/devel/assets/demo.gif
 logo: https://github.com/bgreenwell/xleak/raw/devel/assets/logo.jpg
 updated: '2026-07-18'
+repo_stars: 1433
+repo_updated: "2026-07-15"
+repo_created: "2025-11-06"
+repo_release: "v0.2.6"
 ---

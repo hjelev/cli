@@ -39,7 +39,7 @@ tags:
 media: https://github.com/MightyMoud/sidekick/raw/main/demo/imgs/init.png
 logo: https://emoji.aranja.com/static/emoji-data/img-apple-160/1f91c-1f3fb.png
 updated: '2026-07-11'
-repo_stars: 7482
+repo_stars: 7481
 repo_updated: "2026-02-03"
 repo_created: "2024-07-02"
 repo_release: "v0.6.6"
