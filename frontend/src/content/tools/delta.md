@@ -41,11 +41,12 @@ tags:
   - rust
   - syntax-highlighter
 media: https://cli.masoko.net/uploads/delta/media.png
-logo: https://avatars.githubusercontent.com/u/52205?v=4
-updated: '2026-07-13'
+logo: https://cli.masoko.net/uploads/delta/logo.png
+updated: '2026-07-18'
+comments: []
 repo_stars: 31490
-repo_updated: "2026-07-05"
-repo_created: "2019-06-24"
-repo_release: "0.19.2"
-repo_release_date: "2026-03-28"
+repo_updated: '2026-07-05'
+repo_created: '2019-06-24'
+repo_release: 0.19.2
+repo_release_date: '2026-03-28'
 ---
