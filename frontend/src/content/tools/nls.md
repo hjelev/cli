@@ -31,10 +31,10 @@ tags:
 media: https://cli.masoko.net/uploads/nls/media.png
 logo: https://avatars.githubusercontent.com/u/71591964?v=4
 updated: '2026-07-08'
-repo_stars: 62
+repo_stars: 63
 repo_updated: "2026-07-18"
 repo_created: "2026-06-20"
-repo_release: "v0.10.0"
+repo_release: "v0.11.0"
 repo_release_date: "2026-07-18"
 comments: []
 ---
