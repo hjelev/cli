@@ -113,3 +113,10 @@ export type PreservedToolFields = Pick<
 	z.infer<typeof toolSchema>,
 	'comments' | 'repo_stars' | 'repo_updated' | 'repo_created' | 'repo_release'
 >;
+
+// Per-category metadata, keyed by slugified category name (see content/categories/*.md).
+// Deliberately minimal — a category page shows just one blurb, unlike a tool's many fields.
+export const categorySchema = z.object({
+	description: z.string().min(1),
+});
+export type CategoryFormData = z.infer<typeof categorySchema>;

@@ -315,6 +315,12 @@ textarea {
 	margin-bottom: 1rem;
 }
 
+.category-description {
+	color: var(--fg-dim);
+	max-width: 60ch;
+	margin-bottom: 0.75rem;
+}
+
 .hero-stats {
 	display: flex;
 	flex-wrap: wrap;

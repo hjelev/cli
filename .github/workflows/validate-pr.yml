@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'frontend/src/content/tools/**/*.md'
+      - 'frontend/src/content/categories/**/*.md'
 
 jobs:
   validate:

@@ -1,0 +1,119 @@
+---
+import { getCollection } from 'astro:content';
+import { CATEGORIES } from '../../../lib/schema';
+import { slugify } from '../../../lib/slug';
+import CategoryDescriptionForm from '../../../components/CategoryDescriptionForm.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+	const tools = await getCollection('tools');
+	const categories = await getCollection('categories');
+	const nonEmptyCategories = CATEGORIES.filter((category) => tools.some((tool) => tool.data.category === category));
+
+	return nonEmptyCategories.map((category) => {
+		const slug = slugify(category);
+		const description = categories.find((entry) => entry.id === slug)?.data.description ?? '';
+		return { params: { category: slug }, props: { category, slug, description } };
+	});
+}
+
+const { category, slug, description } = Astro.props;
+---
+
+<BaseLayout
+	title={`Edit ${category} — The Terminal Index`}
+	command={`man categories/${slug} --edit`}
+	backHref={`/categories/${slug}`}
+>
+	<h1>Edit {category}</h1>
+	<p class="form-note">Sign in with GitHub to propose an edit. Submitting opens a pull request from your own fork.</p>
+
+	<section id="signed-out">
+		<button id="sign-in-btn" type="button">Sign in with GitHub</button>
+	</section>
+
+	<section id="signed-in" hidden data-category-slug={slug} data-category-label={category}>
+		<p id="signed-in-as"></p>
+		<button id="sign-out-btn" type="button">Sign out</button>
+
+		<CategoryDescriptionForm initialData={{ description }} submitLabel="Submit edit for review" />
+
+		<p id="form-status" role="status"></p>
+	</section>
+
+	<script>
+		import { getStoredToken, redirectToGitHubSignIn, signOut, fetchGitHubUser } from '../../../lib/github-auth';
+		import { editCategory } from '../../../lib/github-submit';
+		import { categorySchema } from '../../../lib/schema';
+
+		const signedOutSection = document.getElementById('signed-out') as HTMLElement;
+		const signedInSection = document.getElementById('signed-in') as HTMLElement;
+		const categorySlug = signedInSection.dataset.categorySlug as string;
+		const categoryLabel = signedInSection.dataset.categoryLabel as string;
+		const signedInAs = document.getElementById('signed-in-as') as HTMLElement;
+		const form = document.getElementById('category-form') as HTMLFormElement;
+		const formStatus = document.getElementById('form-status') as HTMLElement;
+		const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+
+		document.getElementById('sign-in-btn')?.addEventListener('click', () => {
+			redirectToGitHubSignIn(window.location.pathname);
+		});
+
+		document.getElementById('sign-out-btn')?.addEventListener('click', () => {
+			signOut();
+			window.location.reload();
+		});
+
+		async function init() {
+			const token = getStoredToken();
+			if (!token) {
+				signedOutSection.hidden = false;
+				signedInSection.hidden = true;
+				return;
+			}
+
+			try {
+				const user = await fetchGitHubUser(token);
+				signedInAs.textContent = `Signed in as @${user.login}`;
+				signedOutSection.hidden = true;
+				signedInSection.hidden = false;
+			} catch {
+				signOut();
+				signedOutSection.hidden = false;
+				signedInSection.hidden = true;
+			}
+		}
+
+		form?.addEventListener('submit', async (event) => {
+			event.preventDefault();
+			const token = getStoredToken();
+			if (!token) return;
+
+			const candidate = { description: String(new FormData(form).get('description') ?? '').trim() };
+			const validation = categorySchema.safeParse(candidate);
+			if (!validation.success) {
+				formStatus.textContent = `Please fix: ${validation.error.issues.map((issue) => issue.message).join(', ')}`;
+				return;
+			}
+
+			formStatus.textContent = 'Submitting your edit — forking, committing, and opening a pull request…';
+			submitBtn.disabled = true;
+
+			try {
+				const { prUrl } = await editCategory(token, categorySlug, categoryLabel, validation.data);
+				const link = document.createElement('a');
+				link.href = prUrl;
+				link.target = '_blank';
+				link.rel = 'noopener';
+				link.textContent = 'View your pull request';
+				formStatus.replaceChildren('Edit submitted! ', link, '.');
+			} catch (error) {
+				formStatus.textContent = error instanceof Error ? error.message : 'Submitting the edit failed.';
+			} finally {
+				submitBtn.disabled = false;
+			}
+		});
+
+		init();
+	</script>
+</BaseLayout>

@@ -2,7 +2,7 @@ import { dump, load } from 'js-yaml';
 import { TARGET_BRANCH, TARGET_OWNER, TARGET_REPO } from './config';
 import { slugify } from './slug';
 import { buildUploadUrl, extensionForFile, fileToBase64, type UploadableField } from './upload';
-import type { PreservedToolFields, ToolFormData } from './schema';
+import type { CategoryFormData, PreservedToolFields, ToolFormData } from './schema';
 
 export type { ToolFormData };
 
@@ -153,6 +153,19 @@ function buildEditedToolFileContent(data: ToolFormData, currentFileText: string)
 	return `---\n${dump(frontmatter)}---\n${body}`;
 }
 
+function buildCategoryFileContent(data: CategoryFormData): string {
+	return `---\n${dump(data)}---\n`;
+}
+
+// Category files have no fields beyond `description` to preserve, so unlike
+// buildEditedToolFileContent this only needs the trailing body carried
+// forward — there's nothing server/worker-written to merge back in.
+function buildEditedCategoryFileContent(data: CategoryFormData, currentFileText: string): string {
+	const match = currentFileText.match(FRONTMATTER_RE);
+	const body = match ? match[2] : '';
+	return `---\n${dump(data)}---\n${body}`;
+}
+
 async function getFileOnBranch(
 	token: string,
 	login: string,
@@ -301,6 +314,47 @@ export async function editTool(
 		branch,
 		`Update ${data.name}`,
 		`Edited by @${login} via the directory's edit form.`,
+	);
+	return { prUrl };
+}
+
+// Unlike editTool, tolerates a missing file: not every category is
+// guaranteed to have a seed file, so a first edit creates one instead of
+// hard-failing.
+export async function editCategory(
+	token: string,
+	categorySlug: string,
+	categoryLabel: string,
+	data: CategoryFormData,
+): Promise<{ prUrl: string }> {
+	const login = await getAuthenticatedLogin(token);
+	await ensureFork(token, login);
+	await syncForkWithUpstream(token, login);
+	const sha = await getForkBranchSha(token, login);
+
+	const branch = `edit-category-${categorySlug}-${Date.now()}`;
+	await createBranch(token, login, branch, sha);
+
+	const path = `frontend/src/content/categories/${categorySlug}.md`;
+	const current = await getFileOnBranch(token, login, path, branch);
+	const content = current ? buildEditedCategoryFileContent(data, current.text) : buildCategoryFileContent(data);
+
+	await commitFile(
+		token,
+		login,
+		branch,
+		path,
+		toBase64Utf8(content),
+		`Update ${categoryLabel} category description`,
+		current?.sha,
+	);
+
+	const prUrl = await openPullRequest(
+		token,
+		login,
+		branch,
+		`Update ${categoryLabel} category description`,
+		`Edited by @${login} via the directory's category edit form.`,
 	);
 	return { prUrl };
 }

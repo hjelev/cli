@@ -11,29 +11,35 @@ import Pagination from '../../../components/Pagination.astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const tools = await getCollection('tools');
+	const categories = await getCollection('categories');
 	return CATEGORIES.flatMap((category) => {
 		const list = tools.filter((tool) => tool.data.category === category);
 		if (list.length === 0) return [];
+		const slug = slugify(category);
+		const description = categories.find((entry) => entry.id === slug)?.data.description;
 		return paginate(sortByUpdated(list), {
-			params: { category: slugify(category) },
-			props: { category },
+			params: { category: slug },
+			props: { category, description },
 			pageSize: PAGE_SIZE,
 		});
 	});
 }) satisfies GetStaticPaths;
 
-const { page, category } = Astro.props;
+const { page, category, description } = Astro.props;
 ---
 
 <BaseLayout
 	title={`${category} — The Terminal Index`}
 	command={`ls categories/${slugify(category)}`}
+	description={description}
 	backHref="/categories"
+	editHref={`/categories/${slugify(category)}/edit`}
 	noindex={page.total < MIN_INDEXABLE_LISTINGS}
 	breadcrumb={[{ label: `${slugify(category)}/` }]}
 >
 	<header class="hero">
 		<h1>{category}</h1>
+		{description && <p class="category-description">{description}</p>}
 		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} in this category</p>
 	</header>
 

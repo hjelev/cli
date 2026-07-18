@@ -1,0 +1,19 @@
+---
+import type { CategoryFormData } from '../lib/schema';
+
+interface Props {
+	initialData?: Partial<CategoryFormData>;
+	submitLabel: string;
+}
+
+const { initialData, submitLabel } = Astro.props;
+---
+
+<form id="category-form">
+	<label class="field">
+		<span class="flag">--description <span class="type">&lt;text&gt;</span></span>
+		<textarea name="description" required rows="4">{initialData?.description ?? ''}</textarea>
+	</label>
+
+	<button type="submit">{submitLabel}</button>
+</form>

@@ -1,6 +1,6 @@
 import { execSync } from 'node:child_process';
 import path from 'node:path';
-import { parseToolFile } from './lib/load-tool.ts';
+import { parseCategoryFile, parseToolFile } from './lib/load-tool.ts';
 import { SITE_ORIGIN } from '../src/lib/config.ts';
 
 const repoRoot = path.resolve(import.meta.dirname, '..');
@@ -15,19 +15,21 @@ if (!baseSha || !headSha) {
 	process.exit(1);
 }
 
-const diffOutput = execSync(`git diff --name-only --diff-filter=d ${baseSha} ${headSha} -- 'src/content/tools/*.md'`, {
-	cwd: repoRoot,
-	encoding: 'utf8',
-});
+const diffOutput = execSync(
+	`git diff --name-only --diff-filter=d ${baseSha} ${headSha} -- 'src/content/tools/*.md' 'src/content/categories/*.md'`,
+	{ cwd: repoRoot, encoding: 'utf8' },
+);
 const changedFiles = diffOutput
 	.split('\n')
 	.map((line) => line.trim())
 	.filter(Boolean);
 
 if (changedFiles.length === 0) {
-	console.log('No tool submission files changed — nothing to validate.');
+	console.log('No tool or category submission files changed — nothing to validate.');
 	process.exit(0);
 }
+
+const CATEGORY_PATH_RE = /\/content\/categories\//;
 
 async function checkUrl(url: string): Promise<boolean> {
 	const controller = new AbortController();
@@ -69,6 +71,21 @@ let hasErrors = false;
 
 for (const relativePath of changedFiles) {
 	const fullPath = path.resolve(gitRoot, relativePath);
+
+	if (CATEGORY_PATH_RE.test(relativePath)) {
+		const parsed = parseCategoryFile(fullPath);
+		if ('issues' in parsed) {
+			hasErrors = true;
+			console.error(`\n❌ ${relativePath} — schema validation failed:`);
+			for (const issue of parsed.issues) {
+				console.error(`   - ${issue}`);
+			}
+		} else {
+			console.log(`✅ ${relativePath}: schema valid`);
+		}
+		continue;
+	}
+
 	const parsed = parseToolFile(fullPath);
 
 	if ('issues' in parsed) {
