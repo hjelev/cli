@@ -62,6 +62,7 @@ Curated CLI/TUI tools list
 |------|-------------|----------|-------|
 | [Bagels](https://github.com/EnhancedJax/Bagels) | Powerful expense tracker that lives in your terminal. | Python | [Repo](https://github.com/EnhancedJax/Bagels) |
 | [bat](https://github.com/sharkdp/bat) | A cat(1) clone with syntax highlighting and Git integration. | Rust | [Repo](https://github.com/sharkdp/bat) |
+| [byobu](https://byobu.org) | text window manager, shell multiplexer, integrated DevOps environment | Python | [Repo](https://github.com/dustinkirkland/byobu), [Website](https://byobu.org) |
 | [flyline](https://github.com/HalFrgrd/flyline) | Flyline: a Bash plugin to replace readline for a modern line editing experience: syntax… | Rust | [Repo](https://github.com/HalFrgrd/flyline) |
 | [fzf](https://junegunn.github.io/fzf) | 🌸 A command-line fuzzy finder | Go | [Repo](https://github.com/junegunn/fzf), [Website](https://junegunn.github.io/fzf) |
 | [glow](https://github.com/charmbracelet/glow) | Render markdown on the CLI, with pizzazz! 💅🏻 | Go | [Repo](https://github.com/charmbracelet/glow) |
