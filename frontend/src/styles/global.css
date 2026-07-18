@@ -317,7 +317,7 @@ textarea {
 
 .category-description {
 	color: var(--fg-dim);
-	max-width: 60ch;
+	max-width: 100%;
 	margin-bottom: 0.75rem;
 }
 
