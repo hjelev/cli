@@ -30,7 +30,7 @@ tags:
 media: https://github.com/antonmedv/countdown/raw/master/demo.gif
 logo: https://avatars.githubusercontent.com/u/141232?v=4
 updated: '2026-07-15'
-repo_stars: 1286
+repo_stars: 1284
 repo_updated: "2025-02-18"
 repo_created: "2019-03-20"
 repo_release: "v1.5.0"

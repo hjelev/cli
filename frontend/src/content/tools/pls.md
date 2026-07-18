@@ -36,7 +36,7 @@ tags:
 media: https://cdn.terminaltrove.com/m/211849d7-90cb-4e90-a120-6b874a22ef8c.png
 logo: https://github.com/pls-rs/.github/raw/main/profile/readme_assets/logo.png
 updated: '2026-07-04'
-repo_stars: 956
+repo_stars: 957
 repo_updated: "2026-07-14"
 repo_created: "2022-02-01"
 ---

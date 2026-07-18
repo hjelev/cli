@@ -45,7 +45,7 @@ tags:
 media: https://raw.githubusercontent.com/kdash-rs/kdash/main/screenshots/ui.gif
 logo: https://avatars.githubusercontent.com/u/82433141?s=200&v=4
 updated: '2026-07-13'
-repo_stars: 2501
+repo_stars: 2502
 repo_updated: "2026-07-16"
 repo_created: "2021-04-13"
 repo_release: "v2.1.0"

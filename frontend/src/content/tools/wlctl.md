@@ -36,7 +36,7 @@ media: https://cli.masoko.net/uploads/wlctl/media.gif
 logo: https://avatars.githubusercontent.com/u/158542252?v=4
 updated: '2026-07-15'
 repo_stars: 136
-repo_updated: "2026-07-16"
+repo_updated: "2026-07-17"
 repo_created: "2025-12-25"
 repo_release: "v0.1.9"
 ---
