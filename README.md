@@ -67,6 +67,7 @@ Curated CLI/TUI tools list
 | [fzf](https://junegunn.github.io/fzf) | 🌸 A command-line fuzzy finder | Go | [Repo](https://github.com/junegunn/fzf), [Website](https://junegunn.github.io/fzf) |
 | [glow](https://github.com/charmbracelet/glow) | Render markdown on the CLI, with pizzazz! 💅🏻 | Go | [Repo](https://github.com/charmbracelet/glow) |
 | [inshellisense](https://github.com/microsoft/inshellisense) | IDE style command line auto complete | TypeScript | [Repo](https://github.com/microsoft/inshellisense) |
+| [nap](https://github.com/maaslalani/nap) | Code snippets in your terminal | Go | [Repo](https://github.com/maaslalani/nap) |
 | [pet](https://github.com/knqyf263/pet) | Simple command-line snippet manager | Go | [Repo](https://github.com/knqyf263/pet) |
 | [psmux](https://psmux.pages.dev/) | Tmux on Windows Powershell - tmux for PowerShell, Windows Terminal, cmd.exe. Includes psmux, pmux,… | PowerShell | [Repo](https://github.com/psmux/psmux), [Website](https://psmux.pages.dev/) |
 | [slides](http://maaslalani.com/slides/) | Terminal based presentation tool | Go | [Repo](https://github.com/maaslalani/slides), [Website](http://maaslalani.com/slides/) |
