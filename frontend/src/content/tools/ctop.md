@@ -42,6 +42,7 @@ tags:
   - runc
   - top
 media: https://github.com/bcicen/ctop/raw/master/_docs/img/grid.gif
-logo: https://ctop.sh/img/logo.png
+logo: https://cli.masoko.net/uploads/ctop/logo.png
 updated: '2026-07-18'
+comments: []
 ---
