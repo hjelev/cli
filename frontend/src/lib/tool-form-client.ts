@@ -53,9 +53,50 @@ export function updateRemoveButtons(container: HTMLElement): void {
 	});
 }
 
+// Best-effort mapping from a typed install command to its install method,
+// checked in order against the start of the (trimmed) command. Methods with
+// no recognizable CLI invocation (binary, other) are left for the user.
+const INSTALL_METHOD_PATTERNS: ReadonlyArray<[RegExp, (typeof INSTALL_METHODS)[number]]> = [
+	[/^cargo\b/i, 'cargo'],
+	[/^brew\b/i, 'brew'],
+	[/^(sudo\s+)?apt(-get)?\b/i, 'apt'],
+	[/^(sudo\s+)?dnf\b/i, 'dnf'],
+	[/^(sudo\s+)?rpm\b/i, 'rpm'],
+	[/^(sudo\s+)?apk\b/i, 'apk'],
+	[/^(sudo\s+)?pacman\b/i, 'pacman'],
+	[/^(yay|paru)\b/i, 'aur'],
+	[/^npm\b/i, 'npm'],
+	[/^(pip3?|python3?\s+-m\s+pip)\b/i, 'pip'],
+	[/^uv\b/i, 'uv'],
+	[/^pipx\b/i, 'pipx'],
+	[/^go\s+(install|get)\b/i, 'go'],
+	[/^gem\b/i, 'gem'],
+	[/^nix(-env|\s+profile\s+install|\s+shell)?\b/i, 'nix'],
+	[/^docker\b/i, 'docker'],
+	[/^(curl|wget)\b.*\|\s*(sudo\s+)?(sh|bash|zsh)\b/i, 'script'],
+	[/^(irm|iwr|invoke-restmethod|invoke-webrequest)\b.*\|\s*(iex|invoke-expression)\b/i, 'powershell'],
+	[/^eget\b/i, 'eget'],
+	[/^(sudo\s+)?snap\b/i, 'snap'],
+	[/^(sudo\s+)?port\b/i, 'port'],
+	[/^pkgin\b/i, 'pkgin'],
+	[/^(sudo\s+)?pkg\b/i, 'pkg'],
+	[/^scoop\b/i, 'scoop'],
+	[/^choco(latey)?\b/i, 'choco'],
+	[/^winget\b/i, 'winget'],
+];
+
+export function detectInstallMethod(command: string): (typeof INSTALL_METHODS)[number] | undefined {
+	const trimmed = command.trim();
+	if (!trimmed) return undefined;
+	return INSTALL_METHOD_PATTERNS.find(([pattern]) => pattern.test(trimmed))?.[1];
+}
+
 // Wires the "+ add" button and a delegated remove-row click handler (so it
 // works for both server-rendered and JS-created rows), then ensures at least
-// one row exists.
+// one row exists. Also auto-selects each row's method from its command text
+// as the user types, unless that row's method was already chosen (either
+// server-rendered with a value, e.g. on the edit page, or picked manually via
+// the dropdown) — a manual choice always wins over detection.
 export function initInstallationRows(container: HTMLElement, addBtn: HTMLButtonElement): void {
 	container.addEventListener('click', (event) => {
 		const removeBtn = (event.target as HTMLElement).closest('.remove-row-btn');
@@ -67,6 +108,26 @@ export function initInstallationRows(container: HTMLElement, addBtn: HTMLButtonE
 	addBtn.addEventListener('click', () => {
 		container.appendChild(createInstallationRow());
 		updateRemoveButtons(container);
+	});
+
+	container.addEventListener('change', (event) => {
+		const select = event.target as HTMLElement;
+		if (select instanceof HTMLSelectElement && select.name === 'installation_method') {
+			select.dataset.userSet = 'true';
+		}
+	});
+
+	container.addEventListener('input', (event) => {
+		const input = event.target as HTMLElement;
+		if (!(input instanceof HTMLInputElement) || input.name !== 'installation_command') return;
+		const select = input.closest('.install-row')?.querySelector<HTMLSelectElement>('select[name="installation_method"]');
+		if (!select || select.dataset.userSet === 'true') return;
+		const detected = detectInstallMethod(input.value);
+		if (detected) select.value = detected;
+	});
+
+	container.querySelectorAll<HTMLSelectElement>('select[name="installation_method"]').forEach((select) => {
+		if (select.value) select.dataset.userSet = 'true';
 	});
 
 	if (container.querySelectorAll('.install-row').length === 0) {
