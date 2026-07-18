@@ -315,7 +315,7 @@ textarea {
 	margin-bottom: 1rem;
 }
 
-.category-description {
+.entity-description {
 	color: var(--fg-dim);
 	max-width: 100%;
 	margin-bottom: 0.75rem;

@@ -1,0 +1,127 @@
+---
+import { getCollection } from 'astro:content';
+import { slugify } from '../../../lib/slug';
+import LanguageDescriptionForm from '../../../components/LanguageDescriptionForm.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+	const tools = await getCollection('tools');
+	const languageEntries = await getCollection('languages');
+	// Distinct language names can share a slug (see [...page].astro), so group
+	// by slug: one edit page per slug, whose description applies to every
+	// language name mapping to it.
+	const languagesBySlug = new Map<string, string[]>();
+	for (const tool of tools) {
+		const slug = slugify(tool.data.language);
+		const languages = languagesBySlug.get(slug) ?? [];
+		if (!languages.includes(tool.data.language)) languages.push(tool.data.language);
+		languagesBySlug.set(slug, languages);
+	}
+
+	return [...languagesBySlug.entries()].map(([slug, languages]) => {
+		const label = languages.join(' / ');
+		const description = languageEntries.find((entry) => entry.id === slug)?.data.description ?? '';
+		return { params: { language: slug }, props: { language: label, slug, description } };
+	});
+}
+
+const { language, slug, description } = Astro.props;
+---
+
+<BaseLayout
+	title={`Edit ${language} — The Terminal Index`}
+	command={`man languages/${slug} --edit`}
+	backHref={`/languages/${slug}`}
+>
+	<h1>Edit {language}</h1>
+	<p class="form-note">Sign in with GitHub to propose an edit. Submitting opens a pull request from your own fork.</p>
+
+	<section id="signed-out">
+		<button id="sign-in-btn" type="button">Sign in with GitHub</button>
+	</section>
+
+	<section id="signed-in" hidden data-language-slug={slug} data-language-label={language}>
+		<p id="signed-in-as"></p>
+		<button id="sign-out-btn" type="button">Sign out</button>
+
+		<LanguageDescriptionForm initialData={{ description }} submitLabel="Submit edit for review" />
+
+		<p id="form-status" role="status"></p>
+	</section>
+
+	<script>
+		import { getStoredToken, redirectToGitHubSignIn, signOut, fetchGitHubUser } from '../../../lib/github-auth';
+		import { editLanguage } from '../../../lib/github-submit';
+		import { languageSchema } from '../../../lib/schema';
+
+		const signedOutSection = document.getElementById('signed-out') as HTMLElement;
+		const signedInSection = document.getElementById('signed-in') as HTMLElement;
+		const languageSlug = signedInSection.dataset.languageSlug as string;
+		const languageLabel = signedInSection.dataset.languageLabel as string;
+		const signedInAs = document.getElementById('signed-in-as') as HTMLElement;
+		const form = document.getElementById('language-form') as HTMLFormElement;
+		const formStatus = document.getElementById('form-status') as HTMLElement;
+		const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+
+		document.getElementById('sign-in-btn')?.addEventListener('click', () => {
+			redirectToGitHubSignIn(window.location.pathname);
+		});
+
+		document.getElementById('sign-out-btn')?.addEventListener('click', () => {
+			signOut();
+			window.location.reload();
+		});
+
+		async function init() {
+			const token = getStoredToken();
+			if (!token) {
+				signedOutSection.hidden = false;
+				signedInSection.hidden = true;
+				return;
+			}
+
+			try {
+				const user = await fetchGitHubUser(token);
+				signedInAs.textContent = `Signed in as @${user.login}`;
+				signedOutSection.hidden = true;
+				signedInSection.hidden = false;
+			} catch {
+				signOut();
+				signedOutSection.hidden = false;
+				signedInSection.hidden = true;
+			}
+		}
+
+		form?.addEventListener('submit', async (event) => {
+			event.preventDefault();
+			const token = getStoredToken();
+			if (!token) return;
+
+			const candidate = { description: String(new FormData(form).get('description') ?? '').trim() };
+			const validation = languageSchema.safeParse(candidate);
+			if (!validation.success) {
+				formStatus.textContent = `Please fix: ${validation.error.issues.map((issue) => issue.message).join(', ')}`;
+				return;
+			}
+
+			formStatus.textContent = 'Submitting your edit — forking, committing, and opening a pull request…';
+			submitBtn.disabled = true;
+
+			try {
+				const { prUrl } = await editLanguage(token, languageSlug, languageLabel, validation.data);
+				const link = document.createElement('a');
+				link.href = prUrl;
+				link.target = '_blank';
+				link.rel = 'noopener';
+				link.textContent = 'View your pull request';
+				formStatus.replaceChildren('Edit submitted! ', link, '.');
+			} catch (error) {
+				formStatus.textContent = error instanceof Error ? error.message : 'Submitting the edit failed.';
+			} finally {
+				submitBtn.disabled = false;
+			}
+		});
+
+		init();
+	</script>
+</BaseLayout>

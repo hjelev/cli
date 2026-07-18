@@ -2,7 +2,7 @@ import { dump, load } from 'js-yaml';
 import { TARGET_BRANCH, TARGET_OWNER, TARGET_REPO } from './config';
 import { slugify } from './slug';
 import { buildUploadUrl, extensionForFile, fileToBase64, type UploadableField } from './upload';
-import type { CategoryFormData, PreservedToolFields, ToolFormData } from './schema';
+import type { CategoryFormData, LanguageFormData, PreservedToolFields, ToolFormData } from './schema';
 
 export type { ToolFormData };
 
@@ -153,14 +153,16 @@ function buildEditedToolFileContent(data: ToolFormData, currentFileText: string)
 	return `---\n${dump(frontmatter)}---\n${body}`;
 }
 
-function buildCategoryFileContent(data: CategoryFormData): string {
+// Shared by category and language files — both schemas are just `{ description }`,
+// so one pair of builders covers them instead of duplicating per entity.
+function buildDescriptionFileContent(data: CategoryFormData | LanguageFormData): string {
 	return `---\n${dump(data)}---\n`;
 }
 
-// Category files have no fields beyond `description` to preserve, so unlike
-// buildEditedToolFileContent this only needs the trailing body carried
+// Category/language files have no fields beyond `description` to preserve, so
+// unlike buildEditedToolFileContent this only needs the trailing body carried
 // forward — there's nothing server/worker-written to merge back in.
-function buildEditedCategoryFileContent(data: CategoryFormData, currentFileText: string): string {
+function buildEditedDescriptionFileContent(data: CategoryFormData | LanguageFormData, currentFileText: string): string {
 	const match = currentFileText.match(FRONTMATTER_RE);
 	const body = match ? match[2] : '';
 	return `---\n${dump(data)}---\n${body}`;
@@ -337,7 +339,7 @@ export async function editCategory(
 
 	const path = `frontend/src/content/categories/${categorySlug}.md`;
 	const current = await getFileOnBranch(token, login, path, branch);
-	const content = current ? buildEditedCategoryFileContent(data, current.text) : buildCategoryFileContent(data);
+	const content = current ? buildEditedDescriptionFileContent(data, current.text) : buildDescriptionFileContent(data);
 
 	await commitFile(
 		token,
@@ -355,6 +357,47 @@ export async function editCategory(
 		branch,
 		`Update ${categoryLabel} category description`,
 		`Edited by @${login} via the directory's category edit form.`,
+	);
+	return { prUrl };
+}
+
+// Unlike editTool, tolerates a missing file: not every language is
+// guaranteed to have a seed file, so a first edit creates one instead of
+// hard-failing.
+export async function editLanguage(
+	token: string,
+	languageSlug: string,
+	languageLabel: string,
+	data: LanguageFormData,
+): Promise<{ prUrl: string }> {
+	const login = await getAuthenticatedLogin(token);
+	await ensureFork(token, login);
+	await syncForkWithUpstream(token, login);
+	const sha = await getForkBranchSha(token, login);
+
+	const branch = `edit-language-${languageSlug}-${Date.now()}`;
+	await createBranch(token, login, branch, sha);
+
+	const path = `frontend/src/content/languages/${languageSlug}.md`;
+	const current = await getFileOnBranch(token, login, path, branch);
+	const content = current ? buildEditedDescriptionFileContent(data, current.text) : buildDescriptionFileContent(data);
+
+	await commitFile(
+		token,
+		login,
+		branch,
+		path,
+		toBase64Utf8(content),
+		`Update ${languageLabel} language description`,
+		current?.sha,
+	);
+
+	const prUrl = await openPullRequest(
+		token,
+		login,
+		branch,
+		`Update ${languageLabel} language description`,
+		`Edited by @${login} via the directory's language edit form.`,
 	);
 	return { prUrl };
 }

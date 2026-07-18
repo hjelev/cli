@@ -1,6 +1,6 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { categorySchema, toolSchema } from './lib/schema';
+import { categorySchema, languageSchema, toolSchema } from './lib/schema';
 
 const tools = defineCollection({
 	loader: glob({ pattern: '**/*.md', base: './src/content/tools' }),
@@ -12,4 +12,9 @@ const categories = defineCollection({
 	schema: categorySchema,
 });
 
-export const collections = { tools, categories };
+const languages = defineCollection({
+	loader: glob({ pattern: '**/*.md', base: './src/content/languages' }),
+	schema: languageSchema,
+});
+
+export const collections = { tools, categories, languages };

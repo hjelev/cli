@@ -120,3 +120,11 @@ export const categorySchema = z.object({
 	description: z.string().min(1),
 });
 export type CategoryFormData = z.infer<typeof categorySchema>;
+
+// Per-language metadata, keyed by slugified language name (see content/languages/*.md).
+// `language` itself is free text (not an enum like CATEGORIES), so entries are
+// keyed by whatever slug the tools collection produces, not a fixed list.
+export const languageSchema = z.object({
+	description: z.string().min(1),
+});
+export type LanguageFormData = z.infer<typeof languageSchema>;

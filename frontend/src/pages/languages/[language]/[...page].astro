@@ -11,6 +11,7 @@ import LanguageIcon from '../../../components/LanguageIcon.astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const tools = await getCollection('tools');
+	const languageEntries = await getCollection('languages');
 	// Distinct language names can share a slug, so group by slug: one page (set)
 	// per slug, listing every tool whose language maps to it.
 	const languagesBySlug = new Map<string, string[]>();
@@ -20,30 +21,34 @@ export const getStaticPaths = (async ({ paginate }) => {
 		if (!languages.includes(tool.data.language)) languages.push(tool.data.language);
 		languagesBySlug.set(slug, languages);
 	}
-	return [...languagesBySlug.entries()].flatMap(([slug, languages]) =>
-		paginate(
+	return [...languagesBySlug.entries()].flatMap(([slug, languages]) => {
+		const description = languageEntries.find((entry) => entry.id === slug)?.data.description;
+		return paginate(
 			sortByUpdated(tools.filter((tool) => slugify(tool.data.language) === slug)),
 			{
 				params: { language: slug },
-				props: { language: languages.join(' / ') },
+				props: { language: languages.join(' / '), description },
 				pageSize: PAGE_SIZE,
 			},
-		),
-	);
+		);
+	});
 }) satisfies GetStaticPaths;
 
-const { page, language } = Astro.props;
+const { page, language, description } = Astro.props;
 ---
 
 <BaseLayout
 	title={`${language} — The Terminal Index`}
 	command={`ls languages/${slugify(language)}`}
+	description={description}
 	backHref="/languages"
+	editHref={`/languages/${slugify(language)}/edit`}
 	noindex={page.total < MIN_INDEXABLE_LISTINGS}
 	breadcrumb={[{ label: `${slugify(language)}/` }]}
 >
 	<header class="hero">
 		<h1><LanguageIcon language={language} size={28} /> {language}</h1>
+		{description && <p class="entity-description">{description}</p>}
 		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} written in {language}</p>
 	</header>
 

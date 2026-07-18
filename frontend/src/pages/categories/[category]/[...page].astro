@@ -39,7 +39,7 @@ const { page, category, description } = Astro.props;
 >
 	<header class="hero">
 		<h1>{category}</h1>
-		{description && <p class="category-description">{description}</p>}
+		{description && <p class="entity-description">{description}</p>}
 		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} in this category</p>
 	</header>
 
