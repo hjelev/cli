@@ -123,6 +123,7 @@ Curated CLI/TUI tools list
 | [termusic](https://github.com/tramhao/termusic) | Music Player TUI written in Rust | Rust | [Repo](https://github.com/tramhao/termusic) |
 | [vhs](https://github.com/charmbracelet/vhs) | Your CLI home video recorder 📼 | Go | [Repo](https://github.com/charmbracelet/vhs) |
 | [weathr](https://github.com/veirt/weathr) | a terminal weather app with ascii animation | Rust | [Repo](https://github.com/veirt/weathr) |
+| [wiremix](https://github.com/tsowell/wiremix) | Simple TUI audio mixer for PipeWire | Rust | [Repo](https://github.com/tsowell/wiremix) |
 
 ### Security
 
