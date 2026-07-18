@@ -212,6 +212,7 @@ Curated CLI/TUI tools list
 | [nb](https://xwmx.github.io/nb) | CLI and local web plain text note‑taking, bookmarking, and archiving with linking, tagging,… | Shell | [Repo](https://github.com/xwmx/nb), [Website](https://xwmx.github.io/nb) |
 | [oha](https://github.com/hatoo/oha) | Ohayou is a HTTP load generator inspired by rakyll/hey with tui animation. | Rust | [Repo](https://github.com/hatoo/oha) |
 | [regex-tui](https://github.com/vitor-mariano/regex-tui) | A terminal user interface (TUI) application for testing and visualizing regular expressions in… | Go | [Repo](https://github.com/vitor-mariano/regex-tui) |
+| [snips.sh](https://snips.sh) | ✂️ passwordless, anonymous SSH-powered pastebin with a human-friendly TUI and web UI | Go | [Repo](https://github.com/robherley/snips.sh), [Website](https://snips.sh) |
 | [sshs](https://github.com/quantumsheep/sshs) | Terminal user interface for SSH | Rust | [Repo](https://github.com/quantumsheep/sshs) |
 | [tokei](https://github.com/XAMPPRocky/tokei) | Count your code, quickly. | Rust | [Repo](https://github.com/XAMPPRocky/tokei) |
 
