@@ -39,4 +39,5 @@ repo_stars: 7562
 repo_updated: "2026-07-11"
 repo_created: "2015-12-21"
 repo_release: "sshfs-3.7.6"
+repo_release_date: "2026-05-29"
 ---

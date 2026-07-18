@@ -37,4 +37,5 @@ repo_stars: 3
 repo_updated: "2026-07-18"
 repo_created: "2026-04-15"
 repo_release: "v0.11.0"
+repo_release_date: "2026-07-18"
 ---

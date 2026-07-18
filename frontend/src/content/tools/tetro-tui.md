@@ -48,6 +48,7 @@ repo_stars: 726
 repo_updated: "2026-06-02"
 repo_created: "2024-06-16"
 repo_release: "v3.6.1"
+repo_release_date: "2026-05-31"
 comments:
   - user: hjelev
     body: This is the best Tetris game for the terminal!

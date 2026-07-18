@@ -44,4 +44,5 @@ repo_stars: 4369
 repo_updated: "2026-07-10"
 repo_created: "2018-07-10"
 repo_release: "0.60.0"
+repo_release_date: "2026-07-10"
 ---

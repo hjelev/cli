@@ -61,4 +61,5 @@ repo_stars: 1777
 repo_updated: "2026-07-14"
 repo_created: "2021-02-24"
 repo_release: "2.3.0"
+repo_release_date: "2026-02-14"
 ---

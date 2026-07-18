@@ -45,8 +45,9 @@ tags:
   - hacktoberfest
 logo: https://avatars.githubusercontent.com/u/141388427?v=4
 media: https://eza.rocks/demo.gif
-repo_stars: 22663
+repo_stars: 22662
 repo_updated: "2026-07-09"
 repo_created: "2023-07-28"
 repo_release: "v0.23.5"
+repo_release_date: "2026-07-09"
 ---

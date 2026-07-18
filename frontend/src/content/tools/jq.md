@@ -35,4 +35,5 @@ repo_stars: 35232
 repo_updated: "2026-07-18"
 repo_created: "2012-07-18"
 repo_release: "jq-1.8.2"
+repo_release_date: "2026-06-20"
 ---

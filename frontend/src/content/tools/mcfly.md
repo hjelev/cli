@@ -35,4 +35,5 @@ repo_stars: 7753
 repo_updated: "2026-04-14"
 repo_created: "2018-07-15"
 repo_release: "v0.9.4"
+repo_release_date: "2025-12-24"
 ---

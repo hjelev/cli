@@ -37,8 +37,9 @@ tags:
 media: https://github.com/bootandy/dust/raw/master/media/snap.png
 logo: https://avatars.githubusercontent.com/u/311785?v=4
 updated: '2026-07-11'
-repo_stars: 12001
+repo_stars: 12000
 repo_updated: "2026-02-21"
 repo_created: "2018-03-16"
 repo_release: "v1.2.4"
+repo_release_date: "2026-01-08"
 ---

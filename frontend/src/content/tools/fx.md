@@ -39,4 +39,5 @@ repo_stars: 20539
 repo_updated: "2026-05-11"
 repo_created: "2018-01-25"
 repo_release: "39.2.0"
+repo_release_date: "2025-11-12"
 ---
