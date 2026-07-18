@@ -23,7 +23,7 @@ tags:
 media: https://github.com/Jaxx497/NoctaVox/raw/master/docs/header.gif
 logo: https://avatars.githubusercontent.com/u/29159748?v=4
 updated: '2026-07-18'
-repo_stars: 344
+repo_stars: 346
 repo_updated: "2026-07-16"
 repo_created: "2025-05-27"
 repo_release: "v0.3.2"

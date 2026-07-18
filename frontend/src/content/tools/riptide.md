@@ -39,7 +39,7 @@ tags:
 media: https://github.com/Foxemsx/riptide/raw/main/assets/finished.png?v=3
 logo: https://avatars.githubusercontent.com/u/133228093?v=4
 updated: '2026-07-11'
-repo_stars: 157
+repo_stars: 158
 repo_updated: "2026-07-13"
 repo_created: "2026-07-06"
 repo_release: "v1.4.0"
