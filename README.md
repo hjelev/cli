@@ -120,6 +120,7 @@ Curated CLI/TUI tools list
 | [musikcube](https://musikcube.com) | a cross-platform, terminal-based music player, audio engine, metadata indexer, and server in c++ | C++ | [Repo](https://github.com/clangen/musikcube), [Website](https://musikcube.com) |
 | [NoctaVox](https://github.com/Jaxx497/NoctaVox) | Local TUI Music Player | Rust | [Repo](https://github.com/Jaxx497/NoctaVox) |
 | [spotatui](https://spotatui.com) | A fast, standalone terminal music player in Rust: native Spotify streaming plus local, Subsonic,… | Rust | [Repo](https://github.com/LargeModGames/spotatui), [Website](https://spotatui.com) |
+| [spotify-player](https://github.com/aome510/spotify-player) | A Spotify player in the terminal with full feature parity | Rust | [Repo](https://github.com/aome510/spotify-player) |
 | [termusic](https://github.com/tramhao/termusic) | Music Player TUI written in Rust | Rust | [Repo](https://github.com/tramhao/termusic) |
 | [vhs](https://github.com/charmbracelet/vhs) | Your CLI home video recorder 📼 | Go | [Repo](https://github.com/charmbracelet/vhs) |
 | [weathr](https://github.com/veirt/weathr) | a terminal weather app with ascii animation | Rust | [Repo](https://github.com/veirt/weathr) |
