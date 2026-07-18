@@ -27,6 +27,7 @@ interface RepoStats {
 	updated: string; // ISO YYYY-MM-DD, repo's last push date
 	created: string; // ISO YYYY-MM-DD, repo creation date
 	release: string | null;
+	releaseDate: string | null; // ISO YYYY-MM-DD, latest release's publish date
 }
 
 interface ToolFile {
@@ -48,7 +49,7 @@ function parseRepoUrl(repositoryUrl: string): { host: RepoHost; owner: string; r
 }
 
 const FRONTMATTER_PATTERN = /^---\r?\n([\s\S]*?)\r?\n---\r?\n/;
-const REPO_FIELD_PATTERN = /^repo_(stars|updated|release|created):/;
+const REPO_FIELD_PATTERN = /^repo_(stars|updated|release|release_date|created):/;
 
 // Rewrites only our own `repo_*` keys in-place, leaving every other line
 // byte-for-byte untouched — a full YAML parse+dump round-trip (e.g. via
@@ -82,7 +83,7 @@ interface GitHubRepoStats {
 	stargazerCount: number;
 	pushedAt: string;
 	createdAt: string;
-	latestRelease: { tagName: string } | null;
+	latestRelease: { tagName: string; publishedAt: string } | null;
 }
 
 async function fetchGitHubStatsBatch(tools: ToolFile[]): Promise<Map<string, RepoStats | null>> {
@@ -96,7 +97,7 @@ async function fetchGitHubStatsBatch(tools: ToolFile[]): Promise<Map<string, Rep
     stargazerCount
     pushedAt
     createdAt
-    latestRelease { tagName }
+    latestRelease { tagName publishedAt }
   }`,
 		)
 		.join('\n');
@@ -133,6 +134,7 @@ async function fetchGitHubStatsBatch(tools: ToolFile[]): Promise<Map<string, Rep
 						updated: stats.pushedAt.slice(0, 10),
 						created: stats.createdAt.slice(0, 10),
 						release: stats.latestRelease?.tagName ?? null,
+						releaseDate: stats.latestRelease?.publishedAt.slice(0, 10) ?? null,
 					}
 				: null,
 		);
@@ -165,13 +167,14 @@ async function fetchCodebergStats(tool: ToolFile): Promise<RepoStats | null> {
 
 	// 404 simply means the repo has no releases yet, not an error.
 	const releaseRes = await fetch(`https://codeberg.org/api/v1/repos/${tool.owner}/${tool.repo}/releases/latest`);
-	const releaseData = releaseRes.ok ? ((await releaseRes.json()) as { tag_name: string }) : null;
+	const releaseData = releaseRes.ok ? ((await releaseRes.json()) as { tag_name: string; published_at: string }) : null;
 
 	return {
 		stars: repoData.stars_count,
 		updated: repoData.updated_at.slice(0, 10),
 		created: repoData.created_at.slice(0, 10),
 		release: releaseData?.tag_name ?? null,
+		releaseDate: releaseData?.published_at.slice(0, 10) ?? null,
 	};
 }
 
@@ -228,13 +231,14 @@ for (const tool of toolFiles) {
 		`repo_updated: ${JSON.stringify(repoStats.updated)}`,
 		`repo_created: ${JSON.stringify(repoStats.created)}`,
 		...(repoStats.release ? [`repo_release: ${JSON.stringify(repoStats.release)}`] : []),
+		...(repoStats.releaseDate ? [`repo_release_date: ${JSON.stringify(repoStats.releaseDate)}`] : []),
 	];
 
 	const updated = setFrontmatterFields(raw, newLines);
 	if (updated !== raw) {
 		fs.writeFileSync(tool.fullPath, updated);
 		updatedCount += 1;
-		console.log(`✅ ${tool.file}: updated (${repoStats.stars}★, ${repoStats.updated}${repoStats.release ? `, ${repoStats.release}` : ''})`);
+		console.log(`✅ ${tool.file}: updated (${repoStats.stars}★, ${repoStats.updated}${repoStats.release ? `, ${repoStats.release}${repoStats.releaseDate ? ` (${repoStats.releaseDate})` : ''}` : ''})`);
 	}
 }
 

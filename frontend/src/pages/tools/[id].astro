@@ -201,7 +201,7 @@ const asciinemaId = data.media?.match(/asciinema\.org\/a\/([\w-]+)/i)?.[1];
 			{data.repo_release && (
 				<>
 					<dt>Latest Release</dt>
-					<dd>{data.repo_release}</dd>
+					<dd>{data.repo_release}{data.repo_release_date && ` (${fmtDate(data.repo_release_date)})`}</dd>
 				</>
 			)}
 

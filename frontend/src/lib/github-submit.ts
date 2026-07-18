@@ -147,6 +147,7 @@ function buildEditedToolFileContent(data: ToolFormData, currentFileText: string)
 		repo_updated: current.repo_updated as PreservedToolFields['repo_updated'],
 		repo_created: current.repo_created as PreservedToolFields['repo_created'],
 		repo_release: current.repo_release as PreservedToolFields['repo_release'],
+		repo_release_date: current.repo_release_date as PreservedToolFields['repo_release_date'],
 	};
 
 	const frontmatter = buildFrontmatter(data, preserved);
