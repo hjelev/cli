@@ -50,6 +50,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [btop](https://github.com/aristocratos/btop) | A monitor of resources | C++ | [Repo](https://github.com/aristocratos/btop) |
+| [ctop](https://ctop.sh) | Top-like interface for container metrics | Go | [Repo](https://github.com/bcicen/ctop), [Website](https://ctop.sh) |
 | [gtop](https://github.com/aksakalli/gtop) | System monitoring dashboard for terminal | JavaScript | [Repo](https://github.com/aksakalli/gtop) |
 | [htop](https://htop.dev/) | htop - an interactive process viewer | C | [Repo](https://github.com/htop-dev/htop), [Website](https://htop.dev/) |
 | [procs](https://github.com/dalance/procs) | A modern replacement for ps written in Rust | Rust | [Repo](https://github.com/dalance/procs) |
