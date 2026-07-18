@@ -163,6 +163,7 @@ Curated CLI/TUI tools list
 | [tabiew](https://github.com/shshemi/tabiew) | A lightweight TUI application to view and query tabular data files, such as CSV, TSV, and parquet. | Rust | [Repo](https://github.com/shshemi/tabiew) |
 | [visidata](http://visidata.org) | A terminal spreadsheet multitool for discovering and arranging data | Python | [Repo](https://github.com/saulpw/visidata), [Website](http://visidata.org) |
 | [xan](https://github.com/medialab/xan) | The CSV magician | Rust | [Repo](https://github.com/medialab/xan) |
+| [xleak](https://github.com/bgreenwell/xleak) | A fast terminal Excel viewer with an interactive TUI. | Rust | [Repo](https://github.com/bgreenwell/xleak) |
 
 ### Games & Fun
 
