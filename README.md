@@ -177,6 +177,7 @@ Curated CLI/TUI tools list
 | Name | Description | Language | Links |
 |------|-------------|----------|-------|
 | [codex](https://github.com/openai/codex) | Lightweight coding agent that runs in your terminal | Rust | [Repo](https://github.com/openai/codex) |
+| [crush](https://github.com/charmbracelet/crush) | Glamourous agentic coding for all 💘 | Go | [Repo](https://github.com/charmbracelet/crush) |
 | [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
 | [lazyskills](https://lazyskills.sh) | mission control for agent skills | Go | [Repo](https://github.com/alvinunreal/lazyskills), [Website](https://lazyskills.sh) |
 | [opencode](https://opencode.ai) | The open source coding agent. | TypeScript | [Repo](https://github.com/anomalyco/opencode), [Website](https://opencode.ai) |
