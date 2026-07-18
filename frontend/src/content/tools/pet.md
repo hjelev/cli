@@ -30,7 +30,7 @@ installation:
     command: brew install pet
   - method: dnf
     command: sudo dnf install pet
-  - method: other
+  - method: aur
     command: yay -S pet-git
 platforms:
   - Linux

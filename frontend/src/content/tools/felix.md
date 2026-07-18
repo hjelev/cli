@@ -15,7 +15,7 @@ installation:
     command: cargo install felix
   - method: pacman
     command: pacman -S felix-rs
-  - method: other
+  - method: pkgin
     command: pkgin install felix
 platforms:
   - Linux

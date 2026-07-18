@@ -18,7 +18,7 @@ language: Python
 installation:
   - method: script
     command: curl -LsSf https://astral.sh/uv/install.sh | sh
-  - method: other
+  - method: uv
     command: uv tool install --python 3.13 posting
 platforms:
   - Linux

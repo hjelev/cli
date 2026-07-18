@@ -45,7 +45,7 @@ installation:
     command: sudo pacman -S cloc
   - method: winget
     command: winget install AlDanial.Cloc
-  - method: other
+  - method: scoop
     command: scoop install cloc
 platforms:
   - Linux

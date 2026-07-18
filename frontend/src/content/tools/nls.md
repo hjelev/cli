@@ -14,7 +14,7 @@ installation:
     command: go install github.com/nolight132/nls/cmd/nls@latest
   - method: brew
     command: brew install nolight132/tap/nls
-  - method: other
+  - method: aur
     command: yay -S nls-bin
 platforms:
   - Linux

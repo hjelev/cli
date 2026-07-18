@@ -28,7 +28,7 @@ installation:
     command: sudo pacman -S xplr
   - method: brew
     command: brew install xplr
-  - method: other
+  - method: port
     command: sudo port install xplr
 platforms:
   - Linux

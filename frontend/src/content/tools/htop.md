@@ -32,7 +32,7 @@ installation:
     command: sudo dnf install htop
   - method: pacman
     command: sudo pacman -S htop
-  - method: other
+  - method: apk
     command: sudo apk add htop
 platforms:
   - Linux

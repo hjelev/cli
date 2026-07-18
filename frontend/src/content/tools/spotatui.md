@@ -23,7 +23,7 @@ installation:
     command: winget install spotatui
   - method: cargo
     command: cargo install spotatui
-  - method: other
+  - method: aur
     command: yay -S spotatui-bin
 platforms:
   - Linux

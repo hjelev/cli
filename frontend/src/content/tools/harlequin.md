@@ -19,9 +19,9 @@ language: Python
 installation:
   - method: script
     command: curl -LsSf https://astral.sh/uv/install.sh | sh
-  - method: other
+  - method: uv
     command: uv tool install harlequin
-  - method: other
+  - method: pip
     command: pip install harlequin
   - method: brew
     command: brew install harlequin

@@ -14,7 +14,7 @@ installation:
     command: brew install jnv
   - method: cargo
     command: cargo install jnv
-  - method: other
+  - method: port
     command: sudo port install jnv
 platforms:
   - Linux

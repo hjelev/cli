@@ -17,9 +17,9 @@ installation:
     command: brew install 514-labs/tap/dnsglobe
   - method: cargo
     command: cargo install dnsglobe
-  - method: other
+  - method: aur
     command: yay -S dnsglobe
-  - method: other
+  - method: nix
     command: nix run github:514-labs/dnsglobe
 platforms:
   - Linux

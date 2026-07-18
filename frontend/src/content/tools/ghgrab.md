@@ -20,9 +20,9 @@ installation:
     command: npm install -g @ghgrab/ghgrab
   - method: cargo
     command: cargo install ghgrab
-  - method: other
+  - method: pipx
     command: pipx install ghgrab
-  - method: other
+  - method: aur
     command: yay -S ghgrab-bin
 platforms:
   - Linux

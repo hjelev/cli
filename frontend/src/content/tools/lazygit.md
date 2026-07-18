@@ -16,7 +16,7 @@ language: Go
 installation:
   - method: brew
     command: brew install lazygit
-  - method: other
+  - method: scoop
     command: scoop install lazygit
   - method: go
     command: go install github.com/jesseduffield/lazygit@latest

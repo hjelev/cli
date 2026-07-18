@@ -22,7 +22,7 @@ installation:
     command: sudo dnf install tmux
   - method: pacman
     command: sudo pacman -S tmux
-  - method: other
+  - method: apk
     command: apk add tmux
   - method: brew
     command: brew install tmux

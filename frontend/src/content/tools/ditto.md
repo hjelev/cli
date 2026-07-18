@@ -14,9 +14,9 @@ language: Go
 installation:
   - method: go
     command: go install github.com/arvingarciabtw/ditto/cmd/ditto@latest
-  - method: other
+  - method: aur
     command: yay -S ditto
-  - method: other
+  - method: aur
     command: paru -S ditto
   - method: binary
     command: https://github.com/arvingarciabtw/ditto/releases

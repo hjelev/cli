@@ -17,9 +17,9 @@ language: C++
 installation:
   - method: brew
     command: brew install musikcube
-  - method: other
+  - method: pkg
     command: pkg install musikcube
-  - method: other
+  - method: choco
     command: choco install musikcube
 platforms:
   - Linux

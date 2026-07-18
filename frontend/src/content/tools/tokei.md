@@ -17,7 +17,7 @@ installation:
     command: pacman -S tokei
   - method: dnf
     command: sudo dnf install tokei
-  - method: other
+  - method: pkg
     command: pkg install tokei
   - method: brew
     command: brew install tokei

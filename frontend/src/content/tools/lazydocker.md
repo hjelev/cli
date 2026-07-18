@@ -13,13 +13,13 @@ language: Go
 installation:
   - method: brew
     command: brew install lazydocker
-  - method: other
+  - method: scoop
     command: scoop install lazydocker
-  - method: other
+  - method: choco
     command: choco install lazydocker
   - method: go
     command: go install github.com/jesseduffield/lazydocker@latest
-  - method: other
+  - method: aur
     command: yay -S lazydocker
   - method: docker
     command: >-

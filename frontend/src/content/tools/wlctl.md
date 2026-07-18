@@ -15,9 +15,9 @@ language: Rust
 installation:
   - method: cargo
     command: cargo install wlctl
-  - method: other
+  - method: aur
     command: yay -S wlctl-bin
-  - method: other
+  - method: nix
     command: nix run github:aashish-thapa/wlctl
 platforms:
   - Linux

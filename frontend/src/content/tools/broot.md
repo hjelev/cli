@@ -23,7 +23,7 @@ installation:
     command: sudo apt install broot
   - method: dnf
     command: sudo dnf install broot
-  - method: other
+  - method: apk
     command: sudo apk add broot
 platforms:
   - Linux

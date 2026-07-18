@@ -32,7 +32,7 @@ language: Go
 installation:
   - method: go
     command: go install github.com/vitor-mariano/regex-tui@latest
-  - method: other
+  - method: aur
     command: yay -S regex-tui
 platforms:
   - Linux

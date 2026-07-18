@@ -16,7 +16,7 @@ language: Rust
 installation:
   - method: cargo
     command: cargo install tetro-tui
-  - method: other
+  - method: aur
     command: yay -S tetro-tui
 platforms:
   - Linux

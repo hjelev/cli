@@ -21,7 +21,7 @@ language: C++
 installation:
   - method: brew
     command: brew install lnav
-  - method: other
+  - method: pkg
     command: pkg install lnav
 platforms:
   - Linux

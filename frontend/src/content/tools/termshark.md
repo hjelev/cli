@@ -24,7 +24,7 @@ installation:
     command: apt install termshark
   - method: snap
     command: snap install termshark
-  - method: other
+  - method: pkg
     command: pkg install termshark
 platforms:
   - Linux

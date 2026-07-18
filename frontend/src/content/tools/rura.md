@@ -13,9 +13,9 @@ language: Rust
 installation:
   - method: brew
     command: brew install rura
-  - method: other
+  - method: aur
     command: yay -S rura-bin
-  - method: other
+  - method: rpm
     command: sudo rpm -ivh rura_<version>_<arch>.rpm
   - method: cargo
     command: cargo install rura

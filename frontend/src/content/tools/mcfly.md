@@ -18,7 +18,7 @@ language: Rust
 installation:
   - method: brew
     command: brew install mcfly
-  - method: other
+  - method: port
     command: sudo port install mcfly
 platforms:
   - Linux

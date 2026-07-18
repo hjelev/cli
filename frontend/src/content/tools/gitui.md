@@ -17,7 +17,7 @@ installation:
     command: brew install gitui
   - method: winget
     command: winget install gitui
-  - method: other
+  - method: port
     command: port install gitui
   - method: dnf
     command: sudo dnf install gitui

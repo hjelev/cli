@@ -14,7 +14,7 @@ installation:
     command: brew install vhs
   - method: pacman
     command: pacman -S vhs
-  - method: other
+  - method: scoop
     command: scoop install vhs
   - method: go
     command: go install github.com/charmbracelet/vhs@latest

@@ -24,7 +24,7 @@ installation:
     command: sudo pacman -S fzf
   - method: winget
     command: winget install fzf
-  - method: other
+  - method: choco
     command: choco install fzf
 platforms:
   - Linux

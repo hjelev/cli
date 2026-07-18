@@ -25,7 +25,7 @@ installation:
     command: curl -fsSL https://opencode.ai/install | bash
   - method: pacman
     command: sudo pacman -S opencode
-  - method: other
+  - method: aur
     command: paru -S opencode-bin
 platforms:
   - Linux

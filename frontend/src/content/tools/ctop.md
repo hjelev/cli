@@ -22,7 +22,7 @@ installation:
     command: sudo pacman -S ctop
   - method: brew
     command: brew install ctop
-  - method: other
+  - method: scoop
     command: scoop install ctop
   - method: docker
     command: >-

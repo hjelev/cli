@@ -22,7 +22,7 @@ installation:
     command: brew install pls-rs/pls/pls
   - method: cargo
     command: cargo install --git https://github.com/pls-rs/pls
-  - method: other
+  - method: eget
     command: eget --pre-release pls-rs/pls
 platforms:
   - Linux

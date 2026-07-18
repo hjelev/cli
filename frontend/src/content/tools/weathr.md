@@ -24,7 +24,7 @@ installation:
     command: docker run --rm -it ghcr.io/veirt/weathr:latest
   - method: brew
     command: brew install Veirt/veirt/weathr
-  - method: other
+  - method: port
     command: sudo port install weathr
   - method: winget
     command: winget install -i Veirt.weathr

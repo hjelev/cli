@@ -22,7 +22,7 @@ installation:
     command: brew install dust
   - method: snap
     command: snap install dust
-  - method: other
+  - method: scoop
     command: scoop install dust
   - method: other
     command: pacstall -I dust-bin

@@ -21,7 +21,7 @@ installation:
     command: brew install programmersd21/flow/flow
   - method: go
     command: go install github.com/programmersd21/flow/cmd/flow@latest
-  - method: other
+  - method: aur
     command: yay -S flow-network-monitor-bin
 platforms:
   - Linux

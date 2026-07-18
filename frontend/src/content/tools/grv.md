@@ -18,7 +18,7 @@ language: Go
 installation:
   - method: brew
     command: brew install grv
-  - method: other
+  - method: pkg
     command: pkg install grv
   - method: snap
     command: sudo snap install grv

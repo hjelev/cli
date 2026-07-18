@@ -22,7 +22,7 @@ installation:
     command: sudo snap install slides
   - method: go
     command: go install github.com/maaslalani/slides@latest
-  - method: other
+  - method: aur
     command: yay -S slides
 platforms:
   - Linux

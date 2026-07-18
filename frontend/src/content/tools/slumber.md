@@ -23,7 +23,7 @@ installation:
     command: cargo install slumber --locked
   - method: brew
     command: brew install LucasPickering/tap/slumber
-  - method: other
+  - method: powershell
     command: >-
       powershell -c "irm
       https://github.com/LucasPickering/slumber/releases/download/v3.3.0/slumber-installer.ps1

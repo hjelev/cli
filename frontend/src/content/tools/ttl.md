@@ -33,7 +33,7 @@ installation:
     command: >-
       curl -fsSL https://raw.githubusercontent.com/lance0/ttl/master/install.sh
       | sh
-  - method: other
+  - method: aur
     command: yay -S ttl-bin
 platforms:
   - Linux

@@ -12,9 +12,9 @@ installation:
     command: brew install sshs
   - method: pacman
     command: pacman -S sshs
-  - method: other
+  - method: apk
     command: apk add sshs
-  - method: other
+  - method: pkgin
     command: pkgin install sshs
   - method: cargo
     command: cargo install --git https://github.com/quantumsheep/sshs

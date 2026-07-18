@@ -19,9 +19,9 @@ language: Rust
 installation:
   - method: brew
     command: brew install kdash-rs/kdash/kdash
-  - method: other
+  - method: choco
     command: choco install kdash
-  - method: other
+  - method: aur
     command: yay -S kdash-bin
   - method: cargo
     command: cargo install kdash

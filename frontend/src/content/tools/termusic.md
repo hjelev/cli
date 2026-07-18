@@ -14,7 +14,7 @@ installation:
     command: cargo binstall termusic termusic-server
   - method: brew
     command: brew install termusic
-  - method: other
+  - method: pkgin
     command: pkgin install termusic
   - method: pacman
     command: pacman -S termusic

@@ -18,9 +18,9 @@ installation:
     command: brew install lazyjournal
   - method: other
     command: conda install -c conda-forge lazyjournal
-  - method: other
+  - method: aur
     command: paru -S lazyjournal
-  - method: other
+  - method: powershell
     command: >-
       irm
       https://raw.githubusercontent.com/Lifailon/lazyjournal/main/scripts/install.ps1

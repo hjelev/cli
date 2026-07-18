@@ -48,7 +48,7 @@ installation:
       curl -sSfL
       https://github.com/HalFrgrd/flyline/releases/latest/download/install.sh |
       sh
-  - method: other
+  - method: aur
     command: paru -S flyline
 platforms:
   - Linux

@@ -21,7 +21,7 @@ installation:
     command: >-
       bash -c "$(curl -fsSLk
       https://raw.githubusercontent.com/Equationzhao/g/master/script/install.sh)"
-  - method: other
+  - method: scoop
     command: >-
       scoop install
       https://raw.githubusercontent.com/Equationzhao/g/master/scoop/g.json

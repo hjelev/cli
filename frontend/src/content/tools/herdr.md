@@ -15,11 +15,11 @@ language: Rust
 installation:
   - method: brew
     command: brew install herdr
-  - method: other
+  - method: nix
     command: nix run github:ogulcancelik/herdr
   - method: script
     command: curl -fsSL https://herdr.dev/install.sh | sh
-  - method: other
+  - method: powershell
     command: irm https://herdr.dev/install.ps1 | iex
 platforms:
   - Linux

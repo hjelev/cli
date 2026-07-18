@@ -18,7 +18,7 @@ language: Haskell
 installation:
   - method: brew
     command: brew install samtay/tui/tetris
-  - method: other
+  - method: aur
     command: 'yay -S tetris-terminal-git # or yaourt, etc.'
   - method: snap
     command: >-

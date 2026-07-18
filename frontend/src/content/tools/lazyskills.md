@@ -21,7 +21,7 @@ installation:
       curl -fsSL
       https://raw.githubusercontent.com/alvinunreal/lazyskills/main/scripts/install.sh
       | sh
-  - method: other
+  - method: powershell
     command: >-
       irm
       https://raw.githubusercontent.com/alvinunreal/lazyskills/main/scripts/install.ps1

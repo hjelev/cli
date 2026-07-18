@@ -18,12 +18,12 @@ installation:
       curl -fsSL
       https://raw.githubusercontent.com/gnomeria/usbtree/main/scripts/install.sh
       | sh
-  - method: other
+  - method: powershell
     command: >-
       irm
       https://raw.githubusercontent.com/gnomeria/usbtree/main/scripts/install.ps1
       | iex
-  - method: other
+  - method: eget
     command: eget gnomeria/usbtree --to ~/.local/bin/usbtree
 platforms:
   - Linux

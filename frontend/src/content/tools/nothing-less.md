@@ -17,7 +17,7 @@ language: Python
 installation:
   - method: brew
     command: brew install mpryor/tap/nless
-  - method: other
+  - method: pipx
     command: pipx install nothing-less
 platforms:
   - Linux

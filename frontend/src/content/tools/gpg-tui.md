@@ -24,7 +24,7 @@ installation:
     command: cargo install gpg-tui
   - method: pacman
     command: pacman -S gpg-tui
-  - method: other
+  - method: apk
     command: apk add gpg-tui
   - method: brew
     command: brew install gpg-tui

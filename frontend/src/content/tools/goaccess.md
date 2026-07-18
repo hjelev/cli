@@ -24,7 +24,7 @@ installation:
     command: pacman -S goaccess
   - method: brew
     command: brew install goaccess
-  - method: other
+  - method: pkg
     command: pkg install goaccess
 platforms:
   - Linux

@@ -13,7 +13,7 @@ language: Rust
 installation:
   - method: brew
     command: brew install bookokrat
-  - method: other
+  - method: aur
     command: yay -S bookokrat-bin
   - method: cargo
     command: cargo install bookokrat

@@ -13,7 +13,7 @@ language: Go
 installation:
   - method: go
     command: go install github.com/Yash-Handa/logo-ls@latest
-  - method: other
+  - method: aur
     command: yay -S logo-ls
   - method: binary
     command: Prebuilt .deb, .rpm, and tar.gz binaries for Linux/macOS are available on the GitHub Releases page.

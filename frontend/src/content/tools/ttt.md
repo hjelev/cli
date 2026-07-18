@@ -23,7 +23,7 @@ installation:
       https://raw.githubusercontent.com/eugenioenko/ttt/main/install.sh | sh
   - method: go
     command: go install github.com/eugenioenko/ttt/cmd/ttt@latest
-  - method: other
+  - method: aur
     command: yay -S ttt
 platforms:
   - Linux

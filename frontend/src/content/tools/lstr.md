@@ -17,7 +17,7 @@ language: Rust
 installation:
   - method: brew
     command: brew install lstr
-  - method: other
+  - method: pkgin
     command: pkgin install lstr
 platforms:
   - Linux

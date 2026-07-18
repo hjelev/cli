@@ -24,7 +24,7 @@ installation:
     command: sudo dnf install procs
   - method: pacman
     command: sudo pacman -S procs
-  - method: other
+  - method: rpm
     command: >-
       sudo rpm -i
       https://github.com/dalance/procs/releases/download/v0.14.12/procs-0.14.12-1.x86_64.rpm
