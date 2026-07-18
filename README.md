@@ -111,6 +111,7 @@ Curated CLI/TUI tools list
 |------|-------------|----------|-------|
 | [AetherTune](https://github.com/nevermore23274/AetherTune) | A terminal-based internet radio player with real-time audio visualization, built in Rust. | Rust | [Repo](https://github.com/nevermore23274/AetherTune) |
 | [ditto](https://github.com/arvingarciabtw/ditto) | a system-wide ascii keyboard visualizer in the terminal | Go | [Repo](https://github.com/arvingarciabtw/ditto) |
+| [kew](https://kewplayer.com) | Music for the Shell. kew is an immersive and fast music player that allows you to listen to music… | C | [Repo](https://github.com/ravachol/kew), [Website](https://kewplayer.com) |
 | [lyrtui](http://masoko.net/lyrtui/) | Fast and good looking TUI for Lyrion Music Server | Rust | [Repo](https://github.com/hjelev/lyrtui), [Website](http://masoko.net/lyrtui/) |
 | [metropolis](https://github.com/5c0/metropolis) | A cyberpunk system monitor that transforms kernel metrics into a living terminal skyline. | Rust | [Repo](https://github.com/5c0/metropolis) |
 | [musikcube](https://musikcube.com) | a cross-platform, terminal-based music player, audio engine, metadata indexer, and server in c++ | C++ | [Repo](https://github.com/clangen/musikcube), [Website](https://musikcube.com) |
