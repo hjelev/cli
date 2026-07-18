@@ -84,6 +84,32 @@ interface GitHubRepoStats {
 	pushedAt: string;
 	createdAt: string;
 	latestRelease: { tagName: string; publishedAt: string } | null;
+	// Fallback for repos with no GitHub Releases: most recently created tag.
+	refs: {
+		nodes: Array<{
+			name: string;
+			target: {
+				committedDate?: string; // present when target is a Commit
+				tagger?: { date: string } | null; // present when target is an annotated Tag
+				target?: { committedDate: string } | null; // annotated Tag's underlying commit
+			};
+		}>;
+	};
+}
+
+// Repos without any GitHub Releases fall back to their most recently created
+// tag as the version, using the tag's (or its annotated tag object's) commit
+// date since tags have no publishedAt of their own.
+function latestVersionFromGitHub(stats: GitHubRepoStats): { release: string | null; releaseDate: string | null } {
+	if (stats.latestRelease) {
+		return { release: stats.latestRelease.tagName, releaseDate: stats.latestRelease.publishedAt.slice(0, 10) };
+	}
+
+	const tag = stats.refs.nodes[0];
+	if (!tag) return { release: null, releaseDate: null };
+
+	const date = tag.target.committedDate ?? tag.target.target?.committedDate ?? tag.target.tagger?.date ?? null;
+	return { release: tag.name, releaseDate: date ? date.slice(0, 10) : null };
 }
 
 async function fetchGitHubStatsBatch(tools: ToolFile[]): Promise<Map<string, RepoStats | null>> {
@@ -98,6 +124,18 @@ async function fetchGitHubStatsBatch(tools: ToolFile[]): Promise<Map<string, Rep
     pushedAt
     createdAt
     latestRelease { tagName publishedAt }
+    refs(refPrefix: "refs/tags/", first: 1, orderBy: {field: TAG_COMMIT_DATE, direction: DESC}) {
+      nodes {
+        name
+        target {
+          ... on Commit { committedDate }
+          ... on Tag {
+            tagger { date }
+            target { ... on Commit { committedDate } }
+          }
+        }
+      }
+    }
   }`,
 		)
 		.join('\n');
@@ -126,18 +164,7 @@ async function fetchGitHubStatsBatch(tools: ToolFile[]): Promise<Map<string, Rep
 
 	tools.forEach((tool, i) => {
 		const stats = body.data?.[`repo${i}`];
-		results.set(
-			tool.file,
-			stats
-				? {
-						stars: stats.stargazerCount,
-						updated: stats.pushedAt.slice(0, 10),
-						created: stats.createdAt.slice(0, 10),
-						release: stats.latestRelease?.tagName ?? null,
-						releaseDate: stats.latestRelease?.publishedAt.slice(0, 10) ?? null,
-					}
-				: null,
-		);
+		results.set(tool.file, stats ? { stars: stats.stargazerCount, updated: stats.pushedAt.slice(0, 10), created: stats.createdAt.slice(0, 10), ...latestVersionFromGitHub(stats) } : null);
 	});
 
 	return results;
@@ -169,12 +196,26 @@ async function fetchCodebergStats(tool: ToolFile): Promise<RepoStats | null> {
 	const releaseRes = await fetch(`https://codeberg.org/api/v1/repos/${tool.owner}/${tool.repo}/releases/latest`);
 	const releaseData = releaseRes.ok ? ((await releaseRes.json()) as { tag_name: string; published_at: string }) : null;
 
+	let release = releaseData?.tag_name ?? null;
+	let releaseDate = releaseData?.published_at.slice(0, 10) ?? null;
+
+	// Repos without any Releases fall back to their most recent tag (the Gitea
+	// API returns tags newest-first) as the version, using its commit date.
+	if (!release) {
+		const tagsRes = await fetch(`https://codeberg.org/api/v1/repos/${tool.owner}/${tool.repo}/tags?limit=1`);
+		const tags = tagsRes.ok ? ((await tagsRes.json()) as Array<{ name: string; commit: { created: string } }>) : [];
+		if (tags[0]) {
+			release = tags[0].name;
+			releaseDate = tags[0].commit.created.slice(0, 10);
+		}
+	}
+
 	return {
 		stars: repoData.stars_count,
 		updated: repoData.updated_at.slice(0, 10),
 		created: repoData.created_at.slice(0, 10),
-		release: releaseData?.tag_name ?? null,
-		releaseDate: releaseData?.published_at.slice(0, 10) ?? null,
+		release,
+		releaseDate,
 	};
 }
 

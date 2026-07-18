@@ -91,8 +91,8 @@ export const toolSchema = z.object({
 	repo_stars: z.number().int().min(0).optional(),
 	repo_updated: z.string().optional(), // ISO YYYY-MM-DD, repo's last push date
 	repo_created: z.string().optional(), // ISO YYYY-MM-DD, repo creation date
-	repo_release: z.string().optional(), // latest release tag name, e.g. "v1.2.3"
-	repo_release_date: z.string().optional(), // ISO YYYY-MM-DD, latest release's publish date
+	repo_release: z.string().optional(), // latest release tag name, e.g. "v1.2.3"; falls back to the latest git tag if the repo has no releases
+	repo_release_date: z.string().optional(), // ISO YYYY-MM-DD, publish date of the release (or commit date of the fallback tag)
 });
 
 // What the submission form produces: everything except the feedback fields
