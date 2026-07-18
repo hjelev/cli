@@ -41,7 +41,7 @@ tags:
 media: https://cli.masoko.net/uploads/procs/media.png
 logo: https://avatars.githubusercontent.com/u/4331004?v=4
 updated: '2026-07-11'
-repo_stars: 6109
+repo_stars: 6110
 repo_updated: "2026-07-17"
 repo_created: "2019-01-28"
 repo_release: "v0.14.12"

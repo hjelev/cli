@@ -43,4 +43,8 @@ tags:
 media: https://lnav.org/assets/images/lnav-open-help.mp4
 logo: https://cli.masoko.net/uploads/lnav/logo.svg
 updated: '2026-07-18'
+repo_stars: 10456
+repo_updated: "2026-07-16"
+repo_created: "2009-09-14"
+repo_release: "v0.14.0"
 ---
