@@ -34,14 +34,11 @@ tags:
   - tui
   - visualizer
 media: https://cli.masoko.net/uploads/ditto/media.png
-logo: https://avatars.githubusercontent.com/u/223969760?v=4
-updated: '2026-07-15'
-github_stars: 115
-github_updated: "2026-07-11"
-github_created: "2026-06-11"
-github_release: "v1.0.5"
+logo: https://cli.masoko.net/uploads/ditto/logo.png
+updated: '2026-07-18'
+comments: []
 repo_stars: 116
-repo_updated: "2026-07-16"
-repo_created: "2026-06-11"
-repo_release: "v1.1.0"
+repo_updated: '2026-07-16'
+repo_created: '2026-06-11'
+repo_release: v1.1.0
 ---
