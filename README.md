@@ -7,7 +7,7 @@
 
 **A curated directory of the best CLI & TUI tools**
 
-[![Tools](https://img.shields.io/badge/tools-144-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-145-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -16,9 +16,9 @@
 
 <!-- TOOLS:START -->
 
-**144 tools** across **15 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**145 tools** across **15 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (14) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (10) · [System Monitoring](#system-monitoring) (6) · [Productivity](#productivity) (13) · [Networking](#networking) (12) · [Text Editors](#text-editors) (11) · [Media & Entertainment](#media--entertainment) (15) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (9) · [Data Processing](#data-processing) (20) · [Games & Fun](#games--fun) (6) · [AI](#ai) (6) · [Git](#git) (7) · [Utilities & Other](#utilities--other) (9)
+[File Management](#file-management) (14) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (10) · [System Monitoring](#system-monitoring) (6) · [Productivity](#productivity) (13) · [Networking](#networking) (12) · [Text Editors](#text-editors) (11) · [Media & Entertainment](#media--entertainment) (16) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (9) · [Data Processing](#data-processing) (20) · [Games & Fun](#games--fun) (6) · [AI](#ai) (6) · [Git](#git) (7) · [Utilities & Other](#utilities--other) (9)
 
 ### File Management
 
@@ -134,6 +134,7 @@
 | [lyrtui](http://masoko.net/lyrtui/) | Fast and good looking TUI for Lyrion Music Server | Rust | 21 | [Repo](https://github.com/hjelev/lyrtui), [Website](http://masoko.net/lyrtui/) |
 | [mapscii](https://github.com/rastapasta/mapscii) | 🗺 MapSCII is a Braille & ASCII world map renderer for your console. | JavaScript | 9.2k | [Repo](https://github.com/rastapasta/mapscii) |
 | [metropolis](https://github.com/5c0/metropolis) | A cyberpunk system monitor that transforms kernel metrics into a living terminal skyline. | Rust | 263 | [Repo](https://github.com/5c0/metropolis) |
+| [mpv](https://mpv.io) | 🎥 Command line media player | C | – | [Repo](https://github.com/mpv-player/mpv), [Website](https://mpv.io) |
 | [musikcube](https://musikcube.com) | a cross-platform, terminal-based music player, audio engine, metadata indexer, and server in c++ | C++ | 4.8k | [Repo](https://github.com/clangen/musikcube), [Website](https://musikcube.com) |
 | [NoctaVox](https://github.com/Jaxx497/NoctaVox) | Local TUI Music Player | Rust | 346 | [Repo](https://github.com/Jaxx497/NoctaVox) |
 | [spotatui](https://spotatui.com) | A fast, standalone terminal music player in Rust: native Spotify streaming plus local, Subsonic,… | Rust | 1k | [Repo](https://github.com/LargeModGames/spotatui), [Website](https://spotatui.com) |
