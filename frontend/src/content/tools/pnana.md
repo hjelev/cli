@@ -11,7 +11,7 @@ description: >-
 repository_url: https://github.com/Cyxuan0311/PNANA
 author: Frames
 license: MIT
-language: CPP
+language: C++
 installation:
   - method: other
     command: Install for git repo.
