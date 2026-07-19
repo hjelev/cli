@@ -7,7 +7,7 @@
 
 **A curated directory of the best CLI & TUI tools**
 
-[![Tools](https://img.shields.io/badge/tools-152-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-153-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -16,9 +16,9 @@
 
 <!-- TOOLS:START -->
 
-**152 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**153 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (15) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (10) · [System Monitoring](#system-monitoring) (6) · [Productivity](#productivity) (13) · [Development Tools](#development-tools) (1) · [Networking](#networking) (12) · [Text Editors](#text-editors) (12) · [Media & Entertainment](#media--entertainment) (17) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (20) · [Games & Fun](#games--fun) (6) · [AI](#ai) (6) · [Git](#git) (8) · [Utilities & Other](#utilities--other) (10)
+[File Management](#file-management) (15) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (10) · [System Monitoring](#system-monitoring) (6) · [Productivity](#productivity) (13) · [Development Tools](#development-tools) (1) · [Networking](#networking) (12) · [Text Editors](#text-editors) (12) · [Media & Entertainment](#media--entertainment) (17) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (20) · [Games & Fun](#games--fun) (6) · [AI](#ai) (6) · [Git](#git) (8) · [Utilities & Other](#utilities--other) (11)
 
 ### File Management
 
@@ -246,6 +246,7 @@
 | [hexyl](https://github.com/sharkdp/hexyl) | A command-line hex viewer | Rust | 10.2k | [Repo](https://github.com/sharkdp/hexyl) |
 | [nb](https://xwmx.github.io/nb) | CLI and local web plain text note‑taking, bookmarking, and archiving with linking, tagging,… | Shell | 8.3k | [Repo](https://github.com/xwmx/nb), [Website](https://xwmx.github.io/nb) |
 | [oha](https://github.com/hatoo/oha) | Ohayou is a HTTP load generator inspired by rakyll/hey with tui animation. | Rust | 10.4k | [Repo](https://github.com/hatoo/oha) |
+| [parallel-disk-usage](https://crates.io/crates/parallel-disk-usage) | Highly parallelized, blazing fast directory tree analyzer | Rust | – | [Repo](https://github.com/KSXGitHub/parallel-disk-usage), [Website](https://crates.io/crates/parallel-disk-usage) |
 | [regex-tui](https://github.com/vitor-mariano/regex-tui) | A terminal user interface (TUI) application for testing and visualizing regular expressions in… | Go | 349 | [Repo](https://github.com/vitor-mariano/regex-tui) |
 | [snips.sh](https://snips.sh) | ✂️ passwordless, anonymous SSH-powered pastebin with a human-friendly TUI and web UI | Go | 1.3k | [Repo](https://github.com/robherley/snips.sh), [Website](https://snips.sh) |
 | [sshs](https://github.com/quantumsheep/sshs) | Terminal user interface for SSH | Rust | 1.6k | [Repo](https://github.com/quantumsheep/sshs) |
