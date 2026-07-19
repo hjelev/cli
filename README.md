@@ -7,7 +7,7 @@
 
 **A curated directory of the best CLI & TUI tools**
 
-[![Tools](https://img.shields.io/badge/tools-148-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-149-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -16,9 +16,9 @@
 
 <!-- TOOLS:START -->
 
-**148 tools** across **15 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**149 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (14) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (10) · [System Monitoring](#system-monitoring) (6) · [Productivity](#productivity) (13) · [Networking](#networking) (12) · [Text Editors](#text-editors) (11) · [Media & Entertainment](#media--entertainment) (17) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (20) · [Games & Fun](#games--fun) (6) · [AI](#ai) (6) · [Git](#git) (8) · [Utilities & Other](#utilities--other) (9)
+[File Management](#file-management) (14) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (10) · [System Monitoring](#system-monitoring) (6) · [Productivity](#productivity) (13) · [Development Tools](#development-tools) (1) · [Networking](#networking) (12) · [Text Editors](#text-editors) (11) · [Media & Entertainment](#media--entertainment) (17) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (20) · [Games & Fun](#games--fun) (6) · [AI](#ai) (6) · [Git](#git) (8) · [Utilities & Other](#utilities--other) (9)
 
 ### File Management
 
@@ -90,6 +90,12 @@
 | [slides](http://maaslalani.com/slides/) | Terminal based presentation tool | Go | 11.6k | [Repo](https://github.com/maaslalani/slides), [Website](http://maaslalani.com/slides/) |
 | [tmux](https://tmux.us) | tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and… | C | 47.9k | [Repo](https://github.com/tmux/tmux), [Website](https://tmux.us) |
 | [zellij](https://zellij.dev) | A terminal workspace with batteries included | Rust | 34.4k | [Repo](https://github.com/zellij-org/zellij), [Website](https://zellij.dev) |
+
+### Development Tools
+
+| Name | Description | Language | ⭐ Stars | Links |
+|------|-------------|----------|---------|-------|
+| [jbang](https://jbang.dev) | Unleash the power of java | Java | – | [Repo](https://github.com/jbangdev/jbang), [Website](https://jbang.dev) |
 
 ### Networking
 
