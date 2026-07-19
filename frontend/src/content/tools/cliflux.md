@@ -34,4 +34,9 @@ media: >-
   https://github.com/spencerwi/cliflux/raw/github-pointer-to-codeberg/screenshots/entry_list.png
 logo: https://avatars.githubusercontent.com/u/2829379?v=4
 updated: '2026-07-19'
+repo_stars: 45
+repo_updated: "2026-04-14"
+repo_created: "2023-02-08"
+repo_release: "v1.9.1"
+repo_release_date: "2026-04-04"
 ---

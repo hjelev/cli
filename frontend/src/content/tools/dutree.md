@@ -33,4 +33,9 @@ tags:
 media: https://github.com/nachoparker/dutree/raw/master/resources/dutree_featured.png
 logo: https://avatars.githubusercontent.com/u/21343324?v=4
 updated: '2026-07-19'
+repo_stars: 875
+repo_updated: "2022-06-29"
+repo_created: "2018-03-25"
+repo_release: "v0.2.15"
+repo_release_date: "2019-11-18"
 ---

@@ -36,7 +36,7 @@ tags:
 media: https://cli.masoko.net/uploads/ditto/media.png
 logo: https://cli.masoko.net/uploads/ditto/logo.png
 updated: '2026-07-18'
-repo_stars: 116
+repo_stars: 117
 repo_updated: "2026-07-16"
 repo_created: "2026-06-11"
 repo_release: "v1.1.0"
