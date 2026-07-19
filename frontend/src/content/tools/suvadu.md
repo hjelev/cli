@@ -38,7 +38,7 @@ tags:
   - ratatui
 logo: https://github.com/AppachiTech/suvadu/raw/main/assets/suvadu-logo.svg
 media: https://suvadu.sh/demo/suvadu-search.webm
-repo_stars: 91
+repo_stars: 92
 repo_updated: "2026-06-25"
 repo_created: "2026-02-13"
 repo_release: "v0.3.4"
