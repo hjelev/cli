@@ -43,7 +43,7 @@ tags:
 media: https://kakoune.org/video/rename.webm
 logo: https://kakoune.org/img/kakoune_logo_full.png
 updated: '2026-07-11'
-repo_stars: 10995
+repo_stars: 10996
 repo_updated: "2026-07-11"
 repo_created: "2011-11-03"
 repo_release: "v2026.05.21"
