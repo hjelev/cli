@@ -7,7 +7,7 @@
 
 **A curated directory of the best CLI & TUI tools**
 
-[![Tools](https://img.shields.io/badge/tools-161-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-162-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -16,9 +16,9 @@
 
 <!-- TOOLS:START -->
 
-**161 tools** across **15 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**162 tools** across **15 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (15) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (7) · [Productivity](#productivity) (16) · [Development Tools](#development-tools) (5) · [Networking](#networking) (15) · [Text Editors](#text-editors) (13) · [Media & Entertainment](#media--entertainment) (18) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (21) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (9)
+[File Management](#file-management) (15) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (7) · [Productivity](#productivity) (16) · [Development Tools](#development-tools) (5) · [Networking](#networking) (16) · [Text Editors](#text-editors) (13) · [Media & Entertainment](#media--entertainment) (18) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (21) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (9)
 
 ### File Management
 
@@ -117,6 +117,7 @@
 | [ATAC](https://atac.julien-cpsn.com/) | A simple API client (postman like) in your terminal | Rust | 3.7k | [Repo](https://github.com/Julien-cpsn/ATAC), [Website](https://atac.julien-cpsn.com/) |
 | [dnsglobe](https://github.com/514-labs/dnsglobe) | Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers… | Rust | 903 | [Repo](https://github.com/514-labs/dnsglobe) |
 | [flow](https://github.com/programmersd21/flow) | 🌊 see your network breathe | Go | 255 | [Repo](https://github.com/programmersd21/flow) |
+| [netwatch](https://www.netwatchlabs.com/labs/netwatch) | Real-time network diagnostics in your terminal. One command, zero config, instant visibility. | Rust | – | [Repo](https://github.com/matthart1983/netwatch), [Website](https://www.netwatchlabs.com/labs/netwatch) |
 | [noodle](https://noodlerest.dev) | A delicious REST client for your terminal | TypeScript | 84 | [Repo](https://github.com/wilfredinni/noodle), [Website](https://noodlerest.dev) |
 | [oha](https://github.com/hatoo/oha) | Ohayou is a HTTP load generator inspired by rakyll/hey with tui animation. | Rust | 10.4k | [Repo](https://github.com/hatoo/oha) |
 | [payk](https://github.com/yusupkhemraev/payk) | Keyboard-first TUI HTTP client | Go | 6 | [Repo](https://github.com/yusupkhemraev/payk) |
