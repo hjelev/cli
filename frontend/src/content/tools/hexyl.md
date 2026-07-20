@@ -36,7 +36,7 @@ tags:
 media: https://cli.masoko.net/uploads/hexyl/media.png
 logo: https://github.com/sharkdp/hexyl/raw/master/doc/logo.svg
 updated: '2026-07-15'
-repo_stars: 10230
+repo_stars: 10231
 repo_updated: "2026-04-30"
 repo_created: "2018-11-05"
 repo_release: "v0.17.0"
