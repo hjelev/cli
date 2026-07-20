@@ -1,6 +1,6 @@
 ---
 name: sshs
-category: Utilities & Other
+category: Networking
 short_description: Terminal user interface for SSH
 description: It uses ~/.ssh/config to list and connect to hosts.
 repository_url: https://github.com/quantumsheep/sshs

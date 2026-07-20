@@ -106,10 +106,17 @@ for (const relativePath of changedFiles) {
 		['logo', tool.logo],
 	];
 
-	for (const [field, url] of urlFields) {
-		if (!url) continue;
-		const localPath = localUploadPath(url);
-		const reachable = localPath ? existsAtHead(localPath) : await checkUrl(url);
+	const urlChecks = await Promise.all(
+		urlFields
+			.filter((entry): entry is [string, string] => Boolean(entry[1]))
+			.map(async ([field, url]) => {
+				const localPath = localUploadPath(url);
+				const reachable = localPath ? existsAtHead(localPath) : await checkUrl(url);
+				return { field, url, localPath, reachable };
+			}),
+	);
+
+	for (const { field, url, localPath, reachable } of urlChecks) {
 		if (!reachable) {
 			hasErrors = true;
 			const detail = localPath

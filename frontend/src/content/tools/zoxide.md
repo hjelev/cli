@@ -1,6 +1,6 @@
 ---
 name: zoxide
-category: Utilities & Other
+category: Directory Listing
 short_description: A smarter cd command. Supports all major shells.
 description: >-
   zoxide is a smarter cd command, inspired by z and autojump.  

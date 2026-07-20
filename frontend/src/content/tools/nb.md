@@ -1,6 +1,6 @@
 ---
 name: nb
-category: Utilities & Other
+category: Productivity
 short_description: >-
   CLI and local web plain text note‑taking, bookmarking, and archiving with
   linking, tagging, filtering, search, Git versioning & more

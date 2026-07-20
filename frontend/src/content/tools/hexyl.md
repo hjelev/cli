@@ -1,6 +1,6 @@
 ---
 name: hexyl
-category: Utilities & Other
+category: Development Tools
 short_description: A command-line hex viewer
 description: >-
   hexyl is a hex viewer for the terminal. It uses a colored output to

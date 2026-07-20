@@ -2,6 +2,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import matter from 'gray-matter';
+import { fetchWithRetry, parseRepoUrl } from './lib/github.ts';
+import { replaceFrontmatterListField } from './lib/frontmatter.ts';
+import { chunk } from './lib/util.ts';
 
 const frontendRoot = path.resolve(import.meta.dirname, '..');
 const toolsDir = path.join(frontendRoot, 'src/content/tools');
@@ -36,48 +39,8 @@ interface ToolFile {
 }
 
 function parseGitHubRepo(repositoryUrl: string): { owner: string; repo: string } | null {
-	const match = repositoryUrl.match(/^https?:\/\/github\.com\/([^/]+)\/([^/]+?)(?:\.git)?\/?$/i);
-	if (!match) return null;
-	return { owner: match[1], repo: match[2] };
-}
-
-const FRONTMATTER_PATTERN = /^---\r?\n([\s\S]*?)\r?\n---\r?\n/;
-
-// Rewrites only the `tags:` field in-place, leaving every other line
-// byte-for-byte untouched — a full YAML parse+dump round-trip (e.g. via
-// gray-matter/js-yaml) would re-quote unrelated fields and produce noisy
-// diffs. Preserves whichever style (flow `tags: [a, b]` or block `tags:\n  - a`)
-// the file already used.
-function replaceTagsField(raw: string, tags: string[]): string {
-	const match = raw.match(FRONTMATTER_PATTERN);
-	if (!match) throw new Error('file has no frontmatter block');
-
-	const lines = match[1].split('\n');
-	const tagsIndex = lines.findIndex((line) => /^tags:/.test(line));
-	if (tagsIndex === -1) throw new Error('no tags field found');
-
-	const isFlow = /^tags:\s*\[/.test(lines[tagsIndex]);
-	let endIndex = tagsIndex;
-	if (!isFlow) {
-		while (endIndex + 1 < lines.length && /^\s+-\s/.test(lines[endIndex + 1])) {
-			endIndex += 1;
-		}
-	}
-
-	const replacement = isFlow ? [`tags: [${tags.join(', ')}]`] : ['tags:', ...tags.map((tag) => `  - ${tag}`)];
-
-	lines.splice(tagsIndex, endIndex - tagsIndex + 1, ...replacement);
-
-	const newFrontmatter = `---\n${lines.join('\n')}\n---\n`;
-	return raw.slice(0, match.index) + newFrontmatter + raw.slice(match.index! + match[0].length);
-}
-
-function chunk<T>(items: T[], size: number): T[][] {
-	const chunks: T[][] = [];
-	for (let i = 0; i < items.length; i += size) {
-		chunks.push(items.slice(i, i + size));
-	}
-	return chunks;
+	const parsed = parseRepoUrl(repositoryUrl);
+	return parsed && parsed.host === 'github' ? { owner: parsed.owner, repo: parsed.repo } : null;
 }
 
 async function fetchTopicsBatch(tools: ToolFile[]): Promise<Map<string, string[] | null>> {
@@ -93,7 +56,7 @@ async function fetchTopicsBatch(tools: ToolFile[]): Promise<Map<string, string[]
 		)
 		.join('\n');
 
-	const res = await fetch('https://api.github.com/graphql', {
+	const res = await fetchWithRetry('https://api.github.com/graphql', {
 		method: 'POST',
 		headers: {
 			Authorization: `Bearer ${token}`,
@@ -144,9 +107,13 @@ for (const file of files) {
 
 const topicsByFile = new Map<string, string[] | null>();
 for (const batch of chunk(toolFiles, CHUNK_SIZE)) {
-	const batchTopics = await fetchTopicsBatch(batch);
-	for (const [file, result] of batchTopics) {
-		topicsByFile.set(file, result);
+	try {
+		const batchTopics = await fetchTopicsBatch(batch);
+		for (const [file, result] of batchTopics) {
+			topicsByFile.set(file, result);
+		}
+	} catch (error) {
+		console.warn(`⚠️  GitHub batch of ${batch.length} repos failed, skipping: ${error instanceof Error ? error.message : error}`);
 	}
 }
 
@@ -172,7 +139,7 @@ for (const tool of toolFiles) {
 	console.log(`✅ ${tool.file}: +${newTopics.join(', +')}`);
 
 	if (!dryRun) {
-		const updated = replaceTagsField(raw, mergedTags);
+		const updated = replaceFrontmatterListField(raw, 'tags', mergedTags);
 		fs.writeFileSync(tool.fullPath, updated);
 	}
 	updatedCount += 1;
