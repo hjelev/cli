@@ -40,7 +40,7 @@ media: https://raw.githubusercontent.com/sinelaw/fresh/master/docs/fresh-demo2.g
 logo: https://cli.masoko.net/uploads/fresh/logo.png
 updated: '2026-07-08'
 repo_stars: 7892
-repo_updated: "2026-07-19"
+repo_updated: "2026-07-20"
 repo_created: "2024-12-24"
 repo_release: "v0.4.4"
 repo_release_date: "2026-07-16"

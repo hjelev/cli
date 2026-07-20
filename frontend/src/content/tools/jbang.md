@@ -32,7 +32,7 @@ logo: >-
   https://raw.githubusercontent.com/jbangdev/jbang/refs/heads/main/images/jbang_icon.png
 updated: '2026-07-19'
 repo_stars: 1841
-repo_updated: "2026-07-14"
+repo_updated: "2026-07-19"
 repo_created: "2019-12-24"
 repo_release: "v0.141.0"
 repo_release_date: "2026-07-14"
