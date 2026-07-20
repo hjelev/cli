@@ -37,7 +37,7 @@ tags:
 media: https://asciinema.org/a/117813
 logo: https://cli.masoko.net/uploads/mapscii/logo.png
 updated: '2026-07-18'
-repo_stars: 9188
+repo_stars: 9189
 repo_updated: "2024-11-03"
 repo_created: "2016-09-18"
 repo_release: "v0.3.1"
