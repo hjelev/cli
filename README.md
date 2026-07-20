@@ -7,7 +7,7 @@
 
 **A curated directory of the best CLI & TUI tools**
 
-[![Tools](https://img.shields.io/badge/tools-158-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-159-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -16,9 +16,9 @@
 
 <!-- TOOLS:START -->
 
-**158 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**159 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (15) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (12) · [System Monitoring](#system-monitoring) (6) · [Productivity](#productivity) (14) · [Development Tools](#development-tools) (1) · [Networking](#networking) (13) · [Text Editors](#text-editors) (13) · [Media & Entertainment](#media--entertainment) (17) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (20) · [Games & Fun](#games--fun) (6) · [AI](#ai) (6) · [Git](#git) (8) · [Utilities & Other](#utilities--other) (11)
+[File Management](#file-management) (15) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (12) · [System Monitoring](#system-monitoring) (6) · [Productivity](#productivity) (14) · [Development Tools](#development-tools) (1) · [Networking](#networking) (13) · [Text Editors](#text-editors) (13) · [Media & Entertainment](#media--entertainment) (17) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (21) · [Games & Fun](#games--fun) (6) · [AI](#ai) (6) · [Git](#git) (8) · [Utilities & Other](#utilities--other) (11)
 
 ### File Management
 
@@ -199,6 +199,7 @@
 | [jq](https://jqlang.org) | Command-line JSON processor | C | 35.3k | [Repo](https://github.com/jqlang/jq), [Website](https://jqlang.org) |
 | [lnav](http://lnav.org) | Log file navigator | C++ | 10.5k | [Repo](https://github.com/tstack/lnav), [Website](http://lnav.org) |
 | [nothing-less](https://mpryor.github.io/nothing-less/) | A TUI pager with advanced support for tabular data, inferring/swapping delimiters, and real-time… | Python | 273 | [Repo](https://github.com/mpryor/nothing-less), [Website](https://mpryor.github.io/nothing-less/) |
+| [rayomd](https://butterski.github.io/rayomd-website/) | Tiny native Markdown-to-PDF converter in C++17. | C++ | – | [Repo](https://github.com/Butterski/rayomd), [Website](https://butterski.github.io/rayomd-website/) |
 | [ripgrep](https://ripgrep.dev) | ripgrep recursively searches directories for a regex pattern while respecting your gitignore | Rust | 66.3k | [Repo](https://github.com/BurntSushi/ripgrep), [Website](https://ripgrep.dev) |
 | [rura](https://github.com/tlipinski/rura) | Interactive TUI scratchpad for building shell pipelines | Rust | 321 | [Repo](https://github.com/tlipinski/rura) |
 | [sheets](https://github.com/maaslalani/sheets) | Terminal based spreadsheet tool | Go | 2.3k | [Repo](https://github.com/maaslalani/sheets) |
