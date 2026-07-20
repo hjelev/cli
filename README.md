@@ -7,7 +7,7 @@
 
 **A curated directory of the best CLI & TUI tools**
 
-[![Tools](https://img.shields.io/badge/tools-157-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-158-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -16,9 +16,9 @@
 
 <!-- TOOLS:START -->
 
-**157 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**158 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (15) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (12) · [System Monitoring](#system-monitoring) (6) · [Productivity](#productivity) (14) · [Development Tools](#development-tools) (1) · [Networking](#networking) (12) · [Text Editors](#text-editors) (13) · [Media & Entertainment](#media--entertainment) (17) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (20) · [Games & Fun](#games--fun) (6) · [AI](#ai) (6) · [Git](#git) (8) · [Utilities & Other](#utilities--other) (11)
+[File Management](#file-management) (15) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (12) · [System Monitoring](#system-monitoring) (6) · [Productivity](#productivity) (14) · [Development Tools](#development-tools) (1) · [Networking](#networking) (13) · [Text Editors](#text-editors) (13) · [Media & Entertainment](#media--entertainment) (17) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (20) · [Games & Fun](#games--fun) (6) · [AI](#ai) (6) · [Git](#git) (8) · [Utilities & Other](#utilities--other) (11)
 
 ### File Management
 
@@ -110,6 +110,7 @@
 | [dnsglobe](https://github.com/514-labs/dnsglobe) | Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers… | Rust | 900 | [Repo](https://github.com/514-labs/dnsglobe) |
 | [flow](https://github.com/programmersd21/flow) | 🌊 see your network breathe | Go | 255 | [Repo](https://github.com/programmersd21/flow) |
 | [noodle](https://noodlerest.dev) | A delicious REST client for your terminal | TypeScript | 80 | [Repo](https://github.com/wilfredinni/noodle), [Website](https://noodlerest.dev) |
+| [payk](https://github.com/yusupkhemraev/payk) | Keyboard-first TUI HTTP client | Go | – | [Repo](https://github.com/yusupkhemraev/payk) |
 | [posting](https://github.com/darrenburns/posting) | The modern API client that lives in your terminal. | Python | 12.2k | [Repo](https://github.com/darrenburns/posting) |
 | [riptide](https://github.com/Foxemsx/riptide) | A polished terminal internet speed test and realtime bandwidth monitor written in Go. Riptide… | Go | 160 | [Repo](https://github.com/Foxemsx/riptide) |
 | [slumber](https://slumber.lucaspickering.me/) | Terminal-based HTTP/REST client | Rust | 1.2k | [Repo](https://github.com/LucasPickering/slumber), [Website](https://slumber.lucaspickering.me/) |
