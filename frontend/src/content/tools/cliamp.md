@@ -51,13 +51,13 @@ tags:
   - winamp
   - youtube
   - yt-dlp
-media: >-
-  https://github.com/user-attachments/assets/fbc33d20-e3ac-4a62-a991-8a2f0243c8ea
+media: https://cli.masoko.net/uploads/cliamp/media.mp4
 logo: https://cli.masoko.net/uploads/cliamp/logo.png
 updated: '2026-07-20'
+comments: []
 repo_stars: 2711
-repo_updated: "2026-07-17"
-repo_created: "2026-02-24"
-repo_release: "v1.60.1"
-repo_release_date: "2026-07-17"
+repo_updated: '2026-07-17'
+repo_created: '2026-02-24'
+repo_release: v1.60.1
+repo_release_date: '2026-07-17'
 ---
