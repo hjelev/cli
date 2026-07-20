@@ -1,6 +1,6 @@
 ---
 name: dz6
-category: Utilities & Other
+category: Development Tools
 short_description: Fast Vim-inspired hex editor for the terminal
 description: >-
   dz6 is a fast, terminal-based hex editor written in Rust and developed by the

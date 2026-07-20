@@ -1,6 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
+import { fetchWithRetry, parseRepoUrl, type RepoHost } from './lib/github.ts';
+import { spliceFrontmatterFields } from './lib/frontmatter.ts';
+import { chunk } from './lib/util.ts';
 
 const frontendRoot = path.resolve(import.meta.dirname, '..');
 const toolsDir = path.join(frontendRoot, 'src/content/tools');
@@ -20,8 +23,6 @@ const CHUNK_SIZE = 50;
 // than GitHub.
 const CODEBERG_CONCURRENCY = 8;
 
-type RepoHost = 'github' | 'codeberg';
-
 interface RepoStats {
 	stars: number;
 	updated: string; // ISO YYYY-MM-DD, repo's last push date
@@ -38,46 +39,8 @@ interface ToolFile {
 	repo: string;
 }
 
-function parseRepoUrl(repositoryUrl: string): { host: RepoHost; owner: string; repo: string } | null {
-	const github = repositoryUrl.match(/^https?:\/\/(?:www\.)?github\.com\/([^/]+)\/([^/]+?)(?:\.git)?\/?$/i);
-	if (github) return { host: 'github', owner: github[1], repo: github[2] };
-
-	const codeberg = repositoryUrl.match(/^https?:\/\/codeberg\.org\/([^/]+)\/([^/]+?)(?:\.git)?\/?$/i);
-	if (codeberg) return { host: 'codeberg', owner: codeberg[1], repo: codeberg[2] };
-
-	return null;
-}
-
-const FRONTMATTER_PATTERN = /^---\r?\n([\s\S]*?)\r?\n---\r?\n/;
 const REPO_FIELD_PATTERN = /^repo_(stars|updated|release|release_date|created):/;
-
-// Rewrites only our own `repo_*` keys in-place, leaving every other line
-// byte-for-byte untouched — a full YAML parse+dump round-trip (e.g. via
-// gray-matter/js-yaml) would re-quote unrelated fields and produce noisy
-// diffs on every daily run.
-function setFrontmatterFields(raw: string, newLines: string[]): string {
-	const match = raw.match(FRONTMATTER_PATTERN);
-	if (!match) throw new Error('file has no frontmatter block');
-
-	const lines = match[1].split('\n').filter((line) => !REPO_FIELD_PATTERN.test(line));
-	const anchor = lines.findIndex((line) => /^comments:/.test(line));
-	if (anchor === -1) {
-		lines.push(...newLines);
-	} else {
-		lines.splice(anchor, 0, ...newLines);
-	}
-
-	const newFrontmatter = `---\n${lines.join('\n')}\n---\n`;
-	return raw.slice(0, match.index) + newFrontmatter + raw.slice(match.index! + match[0].length);
-}
-
-function chunk<T>(items: T[], size: number): T[][] {
-	const chunks: T[][] = [];
-	for (let i = 0; i < items.length; i += size) {
-		chunks.push(items.slice(i, i + size));
-	}
-	return chunks;
-}
+const COMMENTS_FIELD_PATTERN = /^comments:/;
 
 interface GitHubRepoStats {
 	stargazerCount: number;
@@ -140,7 +103,7 @@ async function fetchGitHubStatsBatch(tools: ToolFile[]): Promise<Map<string, Rep
 		)
 		.join('\n');
 
-	const res = await fetch('https://api.github.com/graphql', {
+	const res = await fetchWithRetry('https://api.github.com/graphql', {
 		method: 'POST',
 		headers: {
 			Authorization: `Bearer ${token}`,
@@ -173,9 +136,13 @@ async function fetchGitHubStatsBatch(tools: ToolFile[]): Promise<Map<string, Rep
 async function fetchGitHubStats(tools: ToolFile[]): Promise<Map<string, RepoStats | null>> {
 	const results = new Map<string, RepoStats | null>();
 	for (const batch of chunk(tools, CHUNK_SIZE)) {
-		const batchStats = await fetchGitHubStatsBatch(batch);
-		for (const [file, stats] of batchStats) {
-			results.set(file, stats);
+		try {
+			const batchStats = await fetchGitHubStatsBatch(batch);
+			for (const [file, stats] of batchStats) {
+				results.set(file, stats);
+			}
+		} catch (error) {
+			console.warn(`⚠️  GitHub batch of ${batch.length} repos failed, skipping: ${error instanceof Error ? error.message : error}`);
 		}
 	}
 	return results;
@@ -188,12 +155,12 @@ interface CodebergRepoResponse {
 }
 
 async function fetchCodebergStats(tool: ToolFile): Promise<RepoStats | null> {
-	const repoRes = await fetch(`https://codeberg.org/api/v1/repos/${tool.owner}/${tool.repo}`);
+	const repoRes = await fetchWithRetry(`https://codeberg.org/api/v1/repos/${tool.owner}/${tool.repo}`, {});
 	if (!repoRes.ok) return null;
 	const repoData = (await repoRes.json()) as CodebergRepoResponse;
 
 	// 404 simply means the repo has no releases yet, not an error.
-	const releaseRes = await fetch(`https://codeberg.org/api/v1/repos/${tool.owner}/${tool.repo}/releases/latest`);
+	const releaseRes = await fetchWithRetry(`https://codeberg.org/api/v1/repos/${tool.owner}/${tool.repo}/releases/latest`, {});
 	const releaseData = releaseRes.ok ? ((await releaseRes.json()) as { tag_name: string; published_at: string }) : null;
 
 	let release = releaseData?.tag_name ?? null;
@@ -202,7 +169,7 @@ async function fetchCodebergStats(tool: ToolFile): Promise<RepoStats | null> {
 	// Repos without any Releases fall back to their most recent tag (the Gitea
 	// API returns tags newest-first) as the version, using its commit date.
 	if (!release) {
-		const tagsRes = await fetch(`https://codeberg.org/api/v1/repos/${tool.owner}/${tool.repo}/tags?limit=1`);
+		const tagsRes = await fetchWithRetry(`https://codeberg.org/api/v1/repos/${tool.owner}/${tool.repo}/tags?limit=1`, {});
 		const tags = tagsRes.ok ? ((await tagsRes.json()) as Array<{ name: string; commit: { created: string } }>) : [];
 		if (tags[0]) {
 			release = tags[0].name;
@@ -222,8 +189,12 @@ async function fetchCodebergStats(tool: ToolFile): Promise<RepoStats | null> {
 async function fetchCodebergStatsAll(tools: ToolFile[]): Promise<Map<string, RepoStats | null>> {
 	const results = new Map<string, RepoStats | null>();
 	for (const batch of chunk(tools, CODEBERG_CONCURRENCY)) {
-		const batchStats = await Promise.all(batch.map((tool) => fetchCodebergStats(tool)));
-		batch.forEach((tool, i) => results.set(tool.file, batchStats[i]));
+		try {
+			const batchStats = await Promise.all(batch.map((tool) => fetchCodebergStats(tool)));
+			batch.forEach((tool, i) => results.set(tool.file, batchStats[i]));
+		} catch (error) {
+			console.warn(`⚠️  Codeberg batch of ${batch.length} repos failed, skipping: ${error instanceof Error ? error.message : error}`);
+		}
 	}
 	return results;
 }
@@ -249,11 +220,13 @@ for (const file of files) {
 const githubTools = toolFiles.filter((tool) => tool.host === 'github');
 const codebergTools = toolFiles.filter((tool) => tool.host === 'codeberg');
 
+const [githubStats, codebergStats] = await Promise.all([fetchGitHubStats(githubTools), fetchCodebergStatsAll(codebergTools)]);
+
 const stats = new Map<string, RepoStats | null>();
-for (const [file, repoStats] of await fetchGitHubStats(githubTools)) {
+for (const [file, repoStats] of githubStats) {
 	stats.set(file, repoStats);
 }
-for (const [file, repoStats] of await fetchCodebergStatsAll(codebergTools)) {
+for (const [file, repoStats] of codebergStats) {
 	stats.set(file, repoStats);
 }
 
@@ -275,7 +248,7 @@ for (const tool of toolFiles) {
 		...(repoStats.releaseDate ? [`repo_release_date: ${JSON.stringify(repoStats.releaseDate)}`] : []),
 	];
 
-	const updated = setFrontmatterFields(raw, newLines);
+	const updated = spliceFrontmatterFields(raw, newLines, REPO_FIELD_PATTERN, COMMENTS_FIELD_PATTERN);
 	if (updated !== raw) {
 		fs.writeFileSync(tool.fullPath, updated);
 		updatedCount += 1;

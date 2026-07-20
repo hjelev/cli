@@ -1,6 +1,6 @@
 ---
 name: countdown
-category: Utilities & Other
+category: Games & Fun
 short_description: Terminal countdown timer
 description: >-
   A minimalist, visually appealing terminal countdown timer with a clean digital

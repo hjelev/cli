@@ -1,6 +1,6 @@
 ---
 name: snips.sh
-category: Utilities & Other
+category: Productivity
 short_description: >-
   ✂️ passwordless, anonymous SSH-powered pastebin with a human-friendly TUI and
   web UI

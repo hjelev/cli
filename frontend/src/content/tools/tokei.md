@@ -1,6 +1,6 @@
 ---
 name: tokei
-category: Utilities & Other
+category: Development Tools
 short_description: Count your code, quickly.
 description: >-
   Tokei is a program that displays statistics about your code. Tokei will show
