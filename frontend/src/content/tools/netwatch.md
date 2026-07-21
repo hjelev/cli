@@ -25,7 +25,7 @@ tags:
 media: https://www.netwatchlabs.com/netwatch-tui-demo.gif
 logo: https://cli.masoko.net/uploads/netwatch/logo.png
 updated: '2026-07-20'
-repo_stars: 2235
+repo_stars: 2248
 repo_updated: "2026-07-05"
 repo_created: "2026-02-14"
 repo_release: "v0.26.1"

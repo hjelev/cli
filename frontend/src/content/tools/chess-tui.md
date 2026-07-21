@@ -38,7 +38,7 @@ tags:
 media: https://github.com/thomas-mauran/chess-tui/raw/main/examples/ratatui.gif
 logo: https://thomas-mauran.github.io/chess-tui/img/logo.png
 updated: '2026-07-15'
-repo_stars: 1128
+repo_stars: 1129
 repo_updated: "2026-07-18"
 repo_created: "2023-11-14"
 repo_release: "2.7.1"

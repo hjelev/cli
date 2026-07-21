@@ -35,7 +35,7 @@ tags:
   - md-to-pdf
 logo: https://github.com/Butterski/rayomd/raw/master/docs/assets/branding/rayomd.png
 updated: '2026-07-20'
-repo_stars: 10
+repo_stars: 11
 repo_updated: "2026-07-18"
 repo_created: "2026-06-05"
 repo_release: "v2.6.0"
