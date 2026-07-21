@@ -1,11 +1,15 @@
+<!-- HEADER:START -->
+
 <div align="center">
-  <a href="https://cli.masoko.net">
-    <img src="frontend/public/favicon.svg" alt="The Terminal Index logo" width="80">
-  </a>
-
-# The Terminal Index
-
-**A curated directory of the best CLI & TUI tools**
+  <table>
+    <tr>
+      <td><a href="https://cli.masoko.net"><img src="frontend/public/favicon.svg" alt="The Terminal Index logo" width="80"></a></td>
+      <td align="left">
+        <h1>The Terminal Index</h1>
+        <strong>A curated directory of the best CLI & TUI tools</strong>
+      </td>
+    </tr>
+  </table>
 
 [![Tools](https://img.shields.io/badge/tools-175-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
@@ -13,6 +17,8 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
 
 </div>
+
+<!-- HEADER:END -->
 
 <!-- TOOLS:START -->
 

@@ -8,6 +8,8 @@ const repoRoot = path.resolve(frontendRoot, '..');
 const toolsDir = path.join(frontendRoot, 'src/content/tools');
 const readmePath = path.join(repoRoot, 'README.md');
 
+const HEADER_START_MARKER = '<!-- HEADER:START -->';
+const HEADER_END_MARKER = '<!-- HEADER:END -->';
 const START_MARKER = '<!-- TOOLS:START -->';
 const END_MARKER = '<!-- TOOLS:END -->';
 
@@ -108,7 +110,36 @@ for (const [category, categoryTools] of byCategory) {
 
 const generated = [intro, ...sections].join('\n\n');
 
+const header = [
+	'<div align="center">',
+	'  <table>',
+	'    <tr>',
+	'      <td><a href="https://cli.masoko.net"><img src="frontend/public/favicon.svg" alt="The Terminal Index logo" width="80"></a></td>',
+	'      <td align="left">',
+	'        <h1>The Terminal Index</h1>',
+	'        <strong>A curated directory of the best CLI & TUI tools</strong>',
+	'      </td>',
+	'    </tr>',
+	'  </table>',
+	'',
+	`[![Tools](https://img.shields.io/badge/tools-${tools.length}-f74c00)](https://cli.masoko.net)`,
+	'[![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)',
+	'[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)',
+	'[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)',
+	'',
+	'</div>',
+].join('\n');
+
 const currentReadme = fs.readFileSync(readmePath, 'utf8');
+
+const headerMarkerPattern = new RegExp(`${HEADER_START_MARKER}[\\s\\S]*?${HEADER_END_MARKER}`);
+const headerReplacement = `${HEADER_START_MARKER}\n\n${header}\n\n${HEADER_END_MARKER}`;
+
+if (!headerMarkerPattern.test(currentReadme)) {
+	console.error(`README.md is missing ${HEADER_START_MARKER} / ${HEADER_END_MARKER} markers.`);
+	process.exit(1);
+}
+
 const markerPattern = new RegExp(`${START_MARKER}[\\s\\S]*?${END_MARKER}`);
 const replacement = `${START_MARKER}\n\n${generated}\n\n${END_MARKER}`;
 
@@ -118,9 +149,8 @@ if (!markerPattern.test(currentReadme)) {
 }
 
 const updatedReadme = currentReadme
-	.replace(markerPattern, replacement)
-	// Keep the tool-count badge in the header in sync.
-	.replace(/badge\/tools-\d+-/, `badge/tools-${tools.length}-`);
+	.replace(headerMarkerPattern, headerReplacement)
+	.replace(markerPattern, replacement);
 
 if (updatedReadme === currentReadme) {
 	console.log('README.md is already up to date.');
