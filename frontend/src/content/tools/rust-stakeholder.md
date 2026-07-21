@@ -32,4 +32,7 @@ media: >-
   https://raw.githubusercontent.com/giacomo-b/rust-stakeholder/master/assets/demo.gif
 logo: https://avatars.githubusercontent.com/u/38355805?v=4
 updated: '2026-07-21'
+repo_stars: 2580
+repo_updated: "2025-03-17"
+repo_created: "2025-03-15"
 ---
