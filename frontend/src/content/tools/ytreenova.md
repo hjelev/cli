@@ -20,5 +20,7 @@ tags:
   - tui
   - productivity
 media: https://cli.masoko.net/uploads/ytreenova/media.png
+logo: https://avatars.githubusercontent.com/u/4047844?v=4
 updated: '2026-07-21'
+comments: []
 ---
