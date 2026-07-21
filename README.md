@@ -27,7 +27,7 @@
 | [broot](https://dystroy.org/broot/) | A new way to see and navigate directory trees | Rust | 12.8k | [Repo](https://github.com/Canop/broot), [Website](https://dystroy.org/broot/) |
 | [elio](https://elio-fm.github.io/) | Snappy, batteries-included terminal file manager with rich previews. | Rust | 737 | [Repo](https://github.com/elio-fm/elio), [Website](https://elio-fm.github.io/) |
 | [far2l](https://github.com/elfmz/far2l) | Linux port of FAR v2 | C++ | 2.2k | [Repo](https://github.com/elfmz/far2l) |
-| [felix](https://kyoheiu.dev/felix/) | tui file manager with vim-like key mapping | Rust | 900 | [Repo](https://github.com/kyoheiu/felix), [Website](https://kyoheiu.dev/felix/) |
+| [felix](https://kyoheiu.dev/felix/) | tui file manager with vim-like key mapping | Rust | 899 | [Repo](https://github.com/kyoheiu/felix), [Website](https://kyoheiu.dev/felix/) |
 | [FTB](https://github.com/Cyxuan0311/FTB) | A terminal-based file browser, built with C++17 and FTXUI. | C++ | 11 | [Repo](https://github.com/Cyxuan0311/FTB) |
 | [lf](https://github.com/gokcehan/lf) | lf (as in "list files") is a terminal file manager written in Go with a heavy inspiration from… | Go | 9.4k | [Repo](https://github.com/gokcehan/lf) |
 | [mc](https://midnight-commander.org) | GNU Midnight Commander, a text-mode full-screen file manager. | C | 925 | [Repo](https://github.com/MidnightCommander/mc), [Website](https://midnight-commander.org) |
@@ -54,7 +54,7 @@
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
 | [dust](https://github.com/bootandy/dust) | A more intuitive version of du in rust | Rust | 12k | [Repo](https://github.com/bootandy/dust) |
-| [dutree](https://github.com/nachoparker/dutree) | a tool to analyze file system usage written in Rust | Rust | 875 | [Repo](https://github.com/nachoparker/dutree) |
+| [dutree](https://github.com/nachoparker/dutree) | a tool to analyze file system usage written in Rust | Rust | 876 | [Repo](https://github.com/nachoparker/dutree) |
 | [eza](https://eza.rocks) | A modern, maintained replacement for ls. | Rust | 22.7k | [Repo](https://github.com/eza-community/eza), [Website](https://eza.rocks) |
 | [g](https://equationzhao.github.io/g/) | powerful and cross-platform ls 🌈 | Go | 355 | [Repo](https://github.com/Equationzhao/g), [Website](https://equationzhao.github.io/g/) |
 | [gdu](https://github.com/dundee/gdu) | Fast disk usage analyzer with console interface written in Go | Go | 5.8k | [Repo](https://github.com/dundee/gdu) |
@@ -109,7 +109,7 @@
 | [ComChan](https://blog.vaishnavs.is-a.dev/comchan/) | A Blazingly Fast Minimal Serial Monitor with serial plottter TUI and more | Rust | 164 | [Repo](https://github.com/Vaishnav-Sabari-Girish/ComChan), [Website](https://blog.vaishnavs.is-a.dev/comchan/) |
 | [dz6](https://dz6.dev.br) | Fast Vim-inspired hex editor for the terminal | Rust | 180 | [Repo](https://github.com/mentebinaria/dz6), [Website](https://dz6.dev.br) |
 | [hexyl](https://github.com/sharkdp/hexyl) | A command-line hex viewer | Rust | 10.2k | [Repo](https://github.com/sharkdp/hexyl) |
-| [hyperfine](https://github.com/sharkdp/hyperfine) | A command-line benchmarking tool | Rust | – | [Repo](https://github.com/sharkdp/hyperfine) |
+| [hyperfine](https://github.com/sharkdp/hyperfine) | A command-line benchmarking tool | Rust | 28.5k | [Repo](https://github.com/sharkdp/hyperfine) |
 | [jbang](https://jbang.dev) | Unleash the power of java | Java | 1.8k | [Repo](https://github.com/jbangdev/jbang), [Website](https://jbang.dev) |
 | [regex-tui](https://github.com/vitor-mariano/regex-tui) | A terminal user interface (TUI) application for testing and visualizing regular expressions in… | Go | 349 | [Repo](https://github.com/vitor-mariano/regex-tui) |
 | [tokei](https://github.com/XAMPPRocky/tokei) | Count your code, quickly. | Rust | 14.7k | [Repo](https://github.com/XAMPPRocky/tokei) |
@@ -120,14 +120,14 @@
 |------|-------------|----------|---------|-------|
 | [archivemount](https://github.com/cybernoid/archivemount) | A fuse filesystem for mounting archives in formats supported by libarchive. | C | 242 | [Repo](https://github.com/cybernoid/archivemount) |
 | [ATAC](https://atac.julien-cpsn.com/) | A simple API client (postman like) in your terminal | Rust | 3.7k | [Repo](https://github.com/Julien-cpsn/ATAC), [Website](https://atac.julien-cpsn.com/) |
-| [dnsglobe](https://github.com/514-labs/dnsglobe) | Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers… | Rust | 907 | [Repo](https://github.com/514-labs/dnsglobe) |
-| [flow](https://github.com/programmersd21/flow) | 🌊 see your network breathe | Go | 259 | [Repo](https://github.com/programmersd21/flow) |
+| [dnsglobe](https://github.com/514-labs/dnsglobe) | Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers… | Rust | 908 | [Repo](https://github.com/514-labs/dnsglobe) |
+| [flow](https://github.com/programmersd21/flow) | 🌊 see your network breathe | Go | 262 | [Repo](https://github.com/programmersd21/flow) |
 | [netwatch](https://www.netwatchlabs.com/labs/netwatch) | Real-time network diagnostics in your terminal. One command, zero config, instant visibility. | Rust | 2.2k | [Repo](https://github.com/matthart1983/netwatch), [Website](https://www.netwatchlabs.com/labs/netwatch) |
-| [noodle](https://noodlerest.dev) | A delicious REST client for your terminal | TypeScript | 102 | [Repo](https://github.com/wilfredinni/noodle), [Website](https://noodlerest.dev) |
+| [noodle](https://noodlerest.dev) | A delicious REST client for your terminal | TypeScript | 101 | [Repo](https://github.com/wilfredinni/noodle), [Website](https://noodlerest.dev) |
 | [oha](https://github.com/hatoo/oha) | Ohayou is a HTTP load generator inspired by rakyll/hey with tui animation. | Rust | 10.4k | [Repo](https://github.com/hatoo/oha) |
-| [payk](https://github.com/yusupkhemraev/payk) | Keyboard-first TUI HTTP client | Go | 10 | [Repo](https://github.com/yusupkhemraev/payk) |
+| [payk](https://github.com/yusupkhemraev/payk) | Keyboard-first TUI HTTP client | Go | 11 | [Repo](https://github.com/yusupkhemraev/payk) |
 | [posting](https://github.com/darrenburns/posting) | The modern API client that lives in your terminal. | Python | 12.2k | [Repo](https://github.com/darrenburns/posting) |
-| [riptide](https://github.com/Foxemsx/riptide) | A polished terminal internet speed test and realtime bandwidth monitor written in Go. Riptide… | Go | 159 | [Repo](https://github.com/Foxemsx/riptide) |
+| [riptide](https://github.com/Foxemsx/riptide) | A polished terminal internet speed test and realtime bandwidth monitor written in Go. Riptide… | Go | 158 | [Repo](https://github.com/Foxemsx/riptide) |
 | [slumber](https://slumber.lucaspickering.me/) | Terminal-based HTTP/REST client | Rust | 1.2k | [Repo](https://github.com/LucasPickering/slumber), [Website](https://slumber.lucaspickering.me/) |
 | [sshfs](https://github.com/libfuse/sshfs) | A network filesystem client to connect to SSH servers | C | 7.6k | [Repo](https://github.com/libfuse/sshfs) |
 | [sshs](https://github.com/quantumsheep/sshs) | Terminal user interface for SSH | Rust | 1.6k | [Repo](https://github.com/quantumsheep/sshs) |
@@ -151,7 +151,7 @@
 | [PNANA](https://github.com/Cyxuan0311/PNANA) | pnana is a modern terminal text editor built with FTXUI, inspired by Nano, Micro, and Sublime Text. | C++ | 308 | [Repo](https://github.com/Cyxuan0311/PNANA) |
 | [scooter](https://github.com/thomasschafer/scooter) | Interactive find-and-replace in the terminal | Rust | 1.3k | [Repo](https://github.com/thomasschafer/scooter) |
 | [slap](https://github.com/slap-editor/slap) | Sublime-like terminal-based text editor | JavaScript | 6.2k | [Repo](https://github.com/slap-editor/slap) |
-| [ttt](https://tttedit.dev/) | A terminal text editor IDE. A real alternative to VS Code, Zed, and Sublime that runs in your… | Go | 125 | [Repo](https://github.com/eugenioenko/ttt), [Website](https://tttedit.dev/) |
+| [ttt](https://tttedit.dev/) | A terminal text editor IDE. A real alternative to VS Code, Zed, and Sublime that runs in your… | Go | 126 | [Repo](https://github.com/eugenioenko/ttt), [Website](https://tttedit.dev/) |
 
 ### Media & Entertainment
 
@@ -170,7 +170,7 @@
 | [musikcube](https://musikcube.com) | a cross-platform, terminal-based music player, audio engine, metadata indexer, and server in c++ | C++ | 4.8k | [Repo](https://github.com/clangen/musikcube), [Website](https://musikcube.com) |
 | [NoctaVox](https://github.com/Jaxx497/NoctaVox) | Local TUI Music Player | Rust | 346 | [Repo](https://github.com/Jaxx497/NoctaVox) |
 | [rmpc](https://rmpc.mierak.dev) | A modern, configurable, terminal based MPD Client with album art support via various terminal image… | Rust | 3.1k | [Repo](https://github.com/mierak/rmpc), [Website](https://rmpc.mierak.dev) |
-| [rust-stakeholder](https://github.com/giacomo-b/rust-stakeholder) | Generate impressive-looking terminal output to look busy when stakeholders walk by | Rust | – | [Repo](https://github.com/giacomo-b/rust-stakeholder) |
+| [rust-stakeholder](https://github.com/giacomo-b/rust-stakeholder) | Generate impressive-looking terminal output to look busy when stakeholders walk by | Rust | 2.6k | [Repo](https://github.com/giacomo-b/rust-stakeholder) |
 | [spotatui](https://spotatui.com) | A fast, standalone terminal music player in Rust: native Spotify streaming plus local, Subsonic,… | Rust | 1.1k | [Repo](https://github.com/LargeModGames/spotatui), [Website](https://spotatui.com) |
 | [spotify-player](https://github.com/aome510/spotify-player) | A Spotify player in the terminal with full feature parity | Rust | 7k | [Repo](https://github.com/aome510/spotify-player) |
 | [spotify-tui](https://github.com/Rigellute/spotify-tui) | Spotify for the terminal written in Rust 🚀 | Rust | 19.3k | [Repo](https://github.com/Rigellute/spotify-tui) |
@@ -191,7 +191,7 @@
 
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
-| [bencher](https://bencher.dev) | 🐰 Bencher - Continuous Benchmarking | Rust | – | [Repo](https://github.com/bencherdev/bencher), [Website](https://bencher.dev) |
+| [bencher](https://bencher.dev) | 🐰 Bencher - Continuous Benchmarking | Rust | 870 | [Repo](https://github.com/bencherdev/bencher), [Website](https://bencher.dev) |
 | [cloudlens](https://one2n.gitbook.io/docs/) | k9s like CLI for AWS and GCP | Go | 592 | [Repo](https://github.com/one2nc/cloudlens), [Website](https://one2n.gitbook.io/docs/) |
 | [dive](https://github.com/wagoodman/dive) | A tool for exploring each layer in a docker image | Go | 54.3k | [Repo](https://github.com/wagoodman/dive) |
 | [dtop](https://dtop.dev/) | Terminal dashboard for Docker monitoring across multiple hosts with Dozzle integration. | Rust | 1.2k | [Repo](https://github.com/amir20/dtop), [Website](https://dtop.dev/) |
@@ -248,7 +248,7 @@
 | [Backlog.md](https://backlog.md) | Backlog.md - A tool for managing project collaboration between humans and AI Agents in a git… | TypeScript | 6.2k | [Repo](https://github.com/MrLesk/Backlog.md), [Website](https://backlog.md) |
 | [codex](https://github.com/openai/codex) | Lightweight coding agent that runs in your terminal | Rust | 100k | [Repo](https://github.com/openai/codex) |
 | [crush](https://github.com/charmbracelet/crush) | Glamourous agentic coding for all 💘 | Go | 26.7k | [Repo](https://github.com/charmbracelet/crush) |
-| [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | 19k | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
+| [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | 19.1k | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
 | [lazyskills](https://lazyskills.sh) | mission control for agent skills | Go | 208 | [Repo](https://github.com/alvinunreal/lazyskills), [Website](https://lazyskills.sh) |
 | [opencode](https://opencode.ai) | The open source coding agent. | TypeScript | 188k | [Repo](https://github.com/anomalyco/opencode), [Website](https://opencode.ai) |
 
@@ -258,13 +258,13 @@
 |------|-------------|----------|---------|-------|
 | [delta](https://dandavison.github.io/delta/) | A syntax-highlighting pager for git, diff, grep, rg --json, and blame output | Rust | 31.5k | [Repo](https://github.com/dandavison/delta), [Website](https://dandavison.github.io/delta/) |
 | [diffnav](https://github.com/dlvhdr/diffnav) | A git diff pager based on delta but with a file tree, à la GitHub. | Go | 1.5k | [Repo](https://github.com/dlvhdr/diffnav) |
-| [gh](https://cli.github.com) | GitHub’s official command line tool | Go | – | [Repo](https://github.com/cli/cli), [Website](https://cli.github.com) |
+| [gh](https://cli.github.com) | GitHub’s official command line tool | Go | 45.4k | [Repo](https://github.com/cli/cli), [Website](https://cli.github.com) |
 | [gh-enhance](https://www.gh-dash.dev/enhance) | A Blazingly Fast Terminal UI for GitHub Actions | Go | 209 | [Repo](https://github.com/dlvhdr/gh-enhance), [Website](https://www.gh-dash.dev/enhance) |
 | [ghgrab](https://ghgrab.readthedocs.io) | A simple, pretty terminal tool that lets you browse and download files from GitHub, GitLab,… | Rust | 1.3k | [Repo](https://github.com/abhixdd/ghgrab), [Website](https://ghgrab.readthedocs.io) |
 | [gitlogue](https://github.com/unhappychoice/gitlogue) | A cinematic Git commit replay tool for the terminal, turning your Git history into a living,… | Rust | 4.9k | [Repo](https://github.com/unhappychoice/gitlogue) |
 | [gitu](https://github.com/altsem/gitu) | A TUI Git client inspired by Magit | Rust | 2.8k | [Repo](https://github.com/altsem/gitu) |
 | [gitui](https://github.com/gitui-org/gitui) | Blazing 💥 fast terminal-ui for git written in rust 🦀 | Rust | 22.3k | [Repo](https://github.com/gitui-org/gitui) |
-| [GLab](https://gitlab.com/gitlab-org/cli) | Read only mirror of https://gitlab.com/gitlab-org/cli | Go | – | [Repo](https://github.com/gitlabhq/cli), [Website](https://gitlab.com/gitlab-org/cli) |
+| [GLab](https://gitlab.com/gitlab-org/cli) | The official GitLab CLI | Go | 1.1k | [Repo](https://gitlab.com/gitlab-org/cli) |
 | [grv](https://github.com/rgburke/grv) | GRV is a terminal interface for viewing git repositories | Go | 4.1k | [Repo](https://github.com/rgburke/grv) |
 | [lazygit](https://lazygit.dev/) | simple terminal UI for git commands | Go | 80.6k | [Repo](https://github.com/jesseduffield/lazygit), [Website](https://lazygit.dev/) |
 
