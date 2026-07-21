@@ -34,10 +34,13 @@ media: https://cli.masoko.net/uploads/croft/media.png
 logo: https://codeberg.org/vitali87/croft/media/branch/main/assets/logo-tight.png
 updated: '2026-07-15'
 repo_stars: 68
-repo_updated: "2026-07-16"
-repo_created: "2026-05-08"
+repo_updated: '2026-07-16'
+repo_created: '2026-05-08'
 comments:
   - user: hjelev
     body: This terminal IDE looks very promising, it's really VS Code in the terminal.
     date: '2026-07-15T18:55:38.461Z'
+  - user: vitali87
+    body: how far can this be pushed?
+    date: '2026-07-21T12:55:35.394Z'
 ---
