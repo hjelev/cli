@@ -112,7 +112,7 @@ const generated = [intro, ...sections].join('\n\n');
 
 const header = [
 	'<div align="center">',
-	'  <table>',
+	'  <table border="0">',
 	'    <tr>',
 	'      <td><a href="https://cli.masoko.net"><img src="frontend/public/favicon.svg" alt="The Terminal Index logo" width="80"></a></td>',
 	'      <td align="left">',
