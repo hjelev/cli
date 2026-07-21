@@ -62,7 +62,7 @@ tags:
 media: https://github.com/HalFrgrd/flyline/releases/download/assets/demo_overview.gif
 logo: https://avatars.githubusercontent.com/u/4559349?v=4
 updated: '2026-07-09'
-repo_stars: 938
+repo_stars: 940
 repo_updated: "2026-07-20"
 repo_created: "2025-10-28"
 repo_release: "v1.3.0"

@@ -40,7 +40,7 @@ tags:
   - hacktoberfest
 media: https://superfile.dev/_astro/demo.CvzVaHej_28nrJ.webp
 logo: https://superfile.dev/logo.svg
-repo_stars: 18689
+repo_stars: 18690
 repo_updated: "2026-07-20"
 repo_created: "2024-03-19"
 repo_release: "v1.6.0"
