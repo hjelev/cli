@@ -13,3 +13,6 @@ worker/.dev.vars
 
 # OS / editor
 .DS_Store
+
+# Claude Code local config
+.claude/
