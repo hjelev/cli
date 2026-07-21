@@ -1,7 +1,7 @@
 ---
 name: GLab
 category: Git
-short_description: Read only mirror of https://gitlab.com/gitlab-org/cli
+short_description: The official GitLab CLI
 description: >-
   The official GitLab CLI (glab) brings GitLab issues, merge requests,
   pipelines, and releases directly to your terminal.  
@@ -11,8 +11,7 @@ description: >-
 
   Written in Go, it features a customizable interface and integrates seamlessly
   with your local Git configurations.
-repository_url: https://github.com/gitlabhq/cli
-website: https://gitlab.com/gitlab-org/cli
+repository_url: https://gitlab.com/gitlab-org/cli
 author: gitlabhq
 license: MIT
 language: Go
@@ -46,9 +45,9 @@ media: >-
 logo: >-
   https://gitlab.com/uploads/-/system/project/avatar/34675721/cli-logo.png?width=48
 updated: '2026-07-21'
-repo_stars: 42
+repo_stars: 1053
 repo_updated: "2026-07-21"
-repo_created: "2023-05-16"
+repo_created: "2022-03-21"
 repo_release: "v1.109.0"
-repo_release_date: "2026-07-17"
+repo_release_date: "2026-07-21"
 ---

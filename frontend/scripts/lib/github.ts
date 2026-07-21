@@ -1,4 +1,4 @@
-export type RepoHost = 'github' | 'codeberg';
+export type RepoHost = 'github' | 'codeberg' | 'gitlab';
 
 export function parseRepoUrl(repositoryUrl: string): { host: RepoHost; owner: string; repo: string } | null {
 	const github = repositoryUrl.match(/^https?:\/\/(?:www\.)?github\.com\/([^/]+)\/([^/]+?)(?:\.git)?\/?$/i);
@@ -6,6 +6,12 @@ export function parseRepoUrl(repositoryUrl: string): { host: RepoHost; owner: st
 
 	const codeberg = repositoryUrl.match(/^https?:\/\/codeberg\.org\/([^/]+)\/([^/]+?)(?:\.git)?\/?$/i);
 	if (codeberg) return { host: 'codeberg', owner: codeberg[1], repo: codeberg[2] };
+
+	// GitLab projects can live under nested subgroups (owner/subgroup/.../repo),
+	// unlike GitHub/Codeberg's flat owner/repo — capture everything before the
+	// final segment as "owner" so fetchGitLabStats can rejoin the full path.
+	const gitlab = repositoryUrl.match(/^https?:\/\/gitlab\.com\/(.+)\/([^/]+?)(?:\.git)?\/?$/i);
+	if (gitlab) return { host: 'gitlab', owner: gitlab[1], repo: gitlab[2] };
 
 	return null;
 }

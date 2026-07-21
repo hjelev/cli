@@ -23,6 +23,10 @@ const CHUNK_SIZE = 50;
 // than GitHub.
 const CODEBERG_CONCURRENCY = 8;
 
+// GitLab.com's REST API has no batch query either, and we call it
+// unauthenticated (no GITHUB_TOKEN equivalent), so keep concurrency modest.
+const GITLAB_CONCURRENCY = 8;
+
 interface RepoStats {
 	stars: number;
 	updated: string; // ISO YYYY-MM-DD, repo's last push date
@@ -199,6 +203,59 @@ async function fetchCodebergStatsAll(tools: ToolFile[]): Promise<Map<string, Rep
 	return results;
 }
 
+interface GitLabRepoResponse {
+	star_count: number;
+	last_activity_at: string;
+	created_at: string;
+}
+
+async function fetchGitLabStats(tool: ToolFile): Promise<RepoStats | null> {
+	// Nested subgroups mean the full path (not just owner/repo) is the project
+	// identifier; encodeURIComponent escapes the internal "/" as required.
+	const projectPath = encodeURIComponent(`${tool.owner}/${tool.repo}`);
+
+	const repoRes = await fetchWithRetry(`https://gitlab.com/api/v4/projects/${projectPath}`, {});
+	if (!repoRes.ok) return null;
+	const repoData = (await repoRes.json()) as GitLabRepoResponse;
+
+	const releasesRes = await fetchWithRetry(`https://gitlab.com/api/v4/projects/${projectPath}/releases?per_page=1`, {});
+	const releases = releasesRes.ok ? ((await releasesRes.json()) as Array<{ tag_name: string; released_at: string }>) : [];
+
+	let release = releases[0]?.tag_name ?? null;
+	let releaseDate = releases[0]?.released_at.slice(0, 10) ?? null;
+
+	// Repos without any Releases fall back to their most recently updated tag.
+	if (!release) {
+		const tagsRes = await fetchWithRetry(`https://gitlab.com/api/v4/projects/${projectPath}/repository/tags?per_page=1`, {});
+		const tags = tagsRes.ok ? ((await tagsRes.json()) as Array<{ name: string; commit: { created_at: string } }>) : [];
+		if (tags[0]) {
+			release = tags[0].name;
+			releaseDate = tags[0].commit.created_at.slice(0, 10);
+		}
+	}
+
+	return {
+		stars: repoData.star_count,
+		updated: repoData.last_activity_at.slice(0, 10),
+		created: repoData.created_at.slice(0, 10),
+		release,
+		releaseDate,
+	};
+}
+
+async function fetchGitLabStatsAll(tools: ToolFile[]): Promise<Map<string, RepoStats | null>> {
+	const results = new Map<string, RepoStats | null>();
+	for (const batch of chunk(tools, GITLAB_CONCURRENCY)) {
+		try {
+			const batchStats = await Promise.all(batch.map((tool) => fetchGitLabStats(tool)));
+			batch.forEach((tool, i) => results.set(tool.file, batchStats[i]));
+		} catch (error) {
+			console.warn(`⚠️  GitLab batch of ${batch.length} repos failed, skipping: ${error instanceof Error ? error.message : error}`);
+		}
+	}
+	return results;
+}
+
 const files = fs.readdirSync(toolsDir).filter((file) => file.endsWith('.md'));
 
 const toolFiles: ToolFile[] = [];
@@ -210,7 +267,7 @@ for (const file of files) {
 	const parsed = repositoryUrl ? parseRepoUrl(repositoryUrl) : null;
 
 	if (!parsed) {
-		console.warn(`⚠️  ${file}: repository_url is not a github.com or codeberg.org URL, skipping`);
+		console.warn(`⚠️  ${file}: repository_url is not a github.com, codeberg.org, or gitlab.com URL, skipping`);
 		continue;
 	}
 
@@ -219,14 +276,22 @@ for (const file of files) {
 
 const githubTools = toolFiles.filter((tool) => tool.host === 'github');
 const codebergTools = toolFiles.filter((tool) => tool.host === 'codeberg');
+const gitlabTools = toolFiles.filter((tool) => tool.host === 'gitlab');
 
-const [githubStats, codebergStats] = await Promise.all([fetchGitHubStats(githubTools), fetchCodebergStatsAll(codebergTools)]);
+const [githubStats, codebergStats, gitlabStats] = await Promise.all([
+	fetchGitHubStats(githubTools),
+	fetchCodebergStatsAll(codebergTools),
+	fetchGitLabStatsAll(gitlabTools),
+]);
 
 const stats = new Map<string, RepoStats | null>();
 for (const [file, repoStats] of githubStats) {
 	stats.set(file, repoStats);
 }
 for (const [file, repoStats] of codebergStats) {
+	stats.set(file, repoStats);
+}
+for (const [file, repoStats] of gitlabStats) {
 	stats.set(file, repoStats);
 }
 
