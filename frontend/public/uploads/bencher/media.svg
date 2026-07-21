@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img" aria-label="Animated chart showing benchmark results with a performance regression spike that triggers an alert, followed by a fix back to baseline">
+  <style>
+    @keyframes line-draw {
+      0%, 14.179% { stroke-dashoffset: 885; opacity: 1; }
+      46.879%, 61.805% { stroke-dashoffset: 239; opacity: 1; }
+      73.881%, 94.776% { stroke-dashoffset: 0; opacity: 1; }
+      100% { stroke-dashoffset: 0; opacity: 0; }
+    }
+    @keyframes alert-show {
+      0%, 48.864% { opacity: 0; transform: scale(0.4); }
+      51.103% { opacity: 1; transform: scale(1.25); }
+      53.342%, 67.452% { opacity: 1; transform: scale(1); }
+      70.437%, 100% { opacity: 0; transform: scale(0.6); }
+    }
+    @keyframes boundary-show {
+      0%, 94.776% { opacity: 0.95; }
+      100% { opacity: 0; }
+    }
+    @keyframes dot-0 {
+      0%, 0.000% { opacity: 0; }
+      2.239%, 94.776% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes dot-1 {
+      0%, 6.716% { opacity: 0; }
+      8.955%, 94.776% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes dot-2 {
+      0%, 18.082% { opacity: 0; }
+      20.321%, 94.776% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes dot-3 {
+      0%, 21.526% { opacity: 0; }
+      23.764%, 94.776% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes dot-4 {
+      0%, 24.969% { opacity: 0; }
+      27.208%, 94.776% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes dot-5 {
+      0%, 28.419% { opacity: 0; }
+      30.658%, 94.776% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes dot-6 {
+      0%, 31.862% { opacity: 0; }
+      34.101%, 94.776% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes dot-7 {
+      0%, 35.304% { opacity: 0; }
+      37.543%, 94.776% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes dot-8 {
+      0%, 43.894% { opacity: 0; }
+      46.133%, 94.776% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes dot-9 {
+      0%, 67.452% { opacity: 0; }
+      69.691%, 94.776% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes dot-10 {
+      0%, 70.896% { opacity: 0; }
+      73.134%, 94.776% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+  <rect width="800" height="320" rx="6" fill="#1e1e1e"/>
+  <line x1="60" y1="270" x2="740" y2="270" stroke="#333" stroke-width="0.5"/>
+  <line x1="60" y1="224" x2="740" y2="224" stroke="#333" stroke-width="0.5"/>
+  <line x1="60" y1="178" x2="740" y2="178" stroke="#333" stroke-width="0.5"/>
+  <line x1="60" y1="132" x2="740" y2="132" stroke="#333" stroke-width="0.5"/>
+  <line x1="60" y1="86" x2="740" y2="86" stroke="#333" stroke-width="0.5"/>
+  <line x1="60" y1="40" x2="740" y2="40" stroke="#333" stroke-width="0.5"/>
+  <text x="50" y="274" text-anchor="end" fill="#888" font-size="11" font-family="system-ui, sans-serif">0</text>
+  <text x="50" y="228" text-anchor="end" fill="#888" font-size="11" font-family="system-ui, sans-serif">5</text>
+  <text x="50" y="182" text-anchor="end" fill="#888" font-size="11" font-family="system-ui, sans-serif">10</text>
+  <text x="50" y="136" text-anchor="end" fill="#888" font-size="11" font-family="system-ui, sans-serif">15</text>
+  <text x="50" y="90" text-anchor="end" fill="#888" font-size="11" font-family="system-ui, sans-serif">20</text>
+  <text x="50" y="44" text-anchor="end" fill="#888" font-size="11" font-family="system-ui, sans-serif">25</text>
+  <text x="15" y="28" fill="#888" font-size="11" font-family="system-ui, sans-serif">↑ microseconds (μs)</text>
+  <line x1="60" y1="132" x2="740" y2="132" stroke="#ff7a1a" stroke-width="2.5" stroke-dasharray="10,6" stroke-linecap="round" style="opacity: 0.95; animation: boundary-show 6.7s linear infinite;"/>
+  <polyline points="60,224 128,222.16 196,224.92 264,223.08 332,221.24 400,225.84 468,224 536,223.08 604,67.6 672,224 740,222.16" fill="none" stroke="#6bbfcf" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 885; stroke-dashoffset: 885; animation: line-draw 6.7s linear infinite;"/>
+  <circle cx="60" cy="224" r="4" fill="#6bbfcf" style="opacity: 0; animation: dot-0 6.7s linear infinite;"/>
+  <circle cx="128" cy="222.16" r="4" fill="#6bbfcf" style="opacity: 0; animation: dot-1 6.7s linear infinite;"/>
+  <circle cx="196" cy="224.92" r="4" fill="#6bbfcf" style="opacity: 0; animation: dot-2 6.7s linear infinite;"/>
+  <circle cx="264" cy="223.08" r="4" fill="#6bbfcf" style="opacity: 0; animation: dot-3 6.7s linear infinite;"/>
+  <circle cx="332" cy="221.24" r="4" fill="#6bbfcf" style="opacity: 0; animation: dot-4 6.7s linear infinite;"/>
+  <circle cx="400" cy="225.84" r="4" fill="#6bbfcf" style="opacity: 0; animation: dot-5 6.7s linear infinite;"/>
+  <circle cx="468" cy="224" r="4" fill="#6bbfcf" style="opacity: 0; animation: dot-6 6.7s linear infinite;"/>
+  <circle cx="536" cy="223.08" r="4" fill="#6bbfcf" style="opacity: 0; animation: dot-7 6.7s linear infinite;"/>
+  <circle cx="604" cy="67.6" r="4" fill="#e26000" style="opacity: 0; animation: dot-8 6.7s linear infinite;"/>
+  <circle cx="672" cy="224" r="4" fill="#6bbfcf" style="opacity: 0; animation: dot-9 6.7s linear infinite;"/>
+  <circle cx="740" cy="222.16" r="4" fill="#6bbfcf" style="opacity: 0; animation: dot-10 6.7s linear infinite;"/>
+  <g style="opacity: 0; transform-box: fill-box; transform-origin: center; animation: alert-show 6.7s linear infinite;">
+    <circle cx="604" cy="41.6" r="12" fill="#e26000"/>
+    <text x="604" y="45.6" text-anchor="middle" fill="white" font-size="16" font-weight="bold" font-family="system-ui, sans-serif">!</text>
+  </g>
+</svg>
