@@ -7,7 +7,7 @@
 
 **A curated directory of the best CLI & TUI tools**
 
-[![Tools](https://img.shields.io/badge/tools-165-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-166-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -16,9 +16,9 @@
 
 <!-- TOOLS:START -->
 
-**165 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**166 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (15) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (7) · [Productivity](#productivity) (17) · [Development Tools](#development-tools) (6) · [Networking](#networking) (16) · [Text Editors](#text-editors) (13) · [Media & Entertainment](#media--entertainment) (18) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (21) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (9) · [Utilities & Other](#utilities--other) (1)
+[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (7) · [Productivity](#productivity) (17) · [Development Tools](#development-tools) (6) · [Networking](#networking) (16) · [Text Editors](#text-editors) (13) · [Media & Entertainment](#media--entertainment) (18) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (10) · [Data Processing](#data-processing) (21) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (9) · [Utilities & Other](#utilities--other) (1)
 
 ### File Management
 
@@ -39,6 +39,7 @@
 | [walk](https://github.com/antonmedv/walk) | Walk — a terminal navigator; a cd and ls replacement. | Go | 3.6k | [Repo](https://github.com/antonmedv/walk) |
 | [xplr](https://xplr.dev) | A hackable, minimal, fast TUI file explorer | Rust | 4.8k | [Repo](https://github.com/sayanarijit/xplr), [Website](https://xplr.dev) |
 | [yazi](https://yazi-rs.github.io) | Blazing fast terminal file manager written in Rust, based on async I/O. | Rust | 40.5k | [Repo](https://github.com/sxyazi/yazi), [Website](https://yazi-rs.github.io) |
+| [YtreeNova](https://github.com/robkam/ytreenova) | A File Manager for Unix-like Systems | C | – | [Repo](https://github.com/robkam/ytreenova) |
 
 ### Shell History
 
