@@ -44,7 +44,7 @@ tags:
 media: https://asciinema.org/a/801539
 logo: https://cli.masoko.net/uploads/dz6/logo.png
 updated: '2026-07-15'
-repo_stars: 180
+repo_stars: 181
 repo_updated: "2026-07-18"
 repo_created: "2025-11-15"
 repo_release: "v0.7.0"
