@@ -47,8 +47,8 @@ tags:
 media: https://github.com/xyproto/orbiton/raw/main/rec/gif/debug_c.gif
 logo: https://github.com/xyproto/orbiton/raw/main/img/icon_128x128.png
 updated: '2026-07-12'
-repo_stars: 688
-repo_updated: "2026-07-20"
+repo_stars: 689
+repo_updated: "2026-07-23"
 repo_created: "2019-09-30"
 repo_release: "v2.74.4"
 repo_release_date: "2026-06-18"
