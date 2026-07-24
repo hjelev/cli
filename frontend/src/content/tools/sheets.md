@@ -31,7 +31,7 @@ tags:
 media: https://cli.masoko.net/uploads/sheets/media.gif
 logo: https://avatars.githubusercontent.com/u/42545625?v=4
 updated: '2026-07-11'
-repo_stars: 2285
+repo_stars: 2286
 repo_updated: "2026-07-18"
 repo_created: "2026-04-01"
 repo_release: "v0.3.0"

@@ -43,7 +43,7 @@ tags:
 media: https://github.com/mierak/rmpc/raw/master/assets/preview.png
 logo: https://rmpc.mierak.dev/favicon.svg
 updated: '2026-07-21'
-repo_stars: 3112
+repo_stars: 3118
 repo_updated: "2026-07-21"
 repo_created: "2024-03-12"
 repo_release: "v0.11.0"
