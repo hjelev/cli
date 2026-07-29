@@ -54,7 +54,7 @@ tags:
 media: https://cli.masoko.net/uploads/cliamp/media.mp4
 logo: https://cli.masoko.net/uploads/cliamp/logo.png
 updated: '2026-07-20'
-repo_stars: 2733
+repo_stars: 2734
 repo_updated: "2026-07-27"
 repo_created: "2026-02-24"
 repo_release: "v1.62.0"
