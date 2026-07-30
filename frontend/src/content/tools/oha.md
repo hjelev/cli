@@ -37,7 +37,7 @@ tags:
 media: https://github.com/hatoo/oha/raw/master/demo.gif
 logo: https://avatars.githubusercontent.com/u/1667746?v=4
 updated: '2026-07-09'
-repo_stars: 10449
+repo_stars: 10450
 repo_updated: "2026-07-25"
 repo_created: "2020-03-02"
 repo_release: "v1.15.0"
