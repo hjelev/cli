@@ -30,7 +30,7 @@ tags:
   - zoom
   - wayland
 media: >-
-  https://github.com/user-attachments/assets/ce8830a6-ccfd-432a-afdb-4bf6b012b411
+  https://github.com/Vaishnav-Sabari-Girish/miru/raw/refs/heads/main/out_web.mp4
 logo: https://cli.masoko.net/uploads/miru/logo.svg
 updated: '2026-08-01'
 ---
