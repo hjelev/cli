@@ -55,8 +55,8 @@ tags:
 media: https://tldr.sh/assets/img/screenshot.png
 logo: https://cli.masoko.net/uploads/tldr/logo.png
 updated: '2026-07-21'
-repo_stars: 63262
-repo_updated: "2026-08-01"
+repo_stars: 63267
+repo_updated: "2026-08-02"
 repo_created: "2013-12-08"
 repo_release: "v2.3"
 repo_release_date: "2025-03-07"

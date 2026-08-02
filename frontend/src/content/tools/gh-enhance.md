@@ -32,10 +32,10 @@ tags:
 media: https://github.com/dlvhdr/gh-enhance/raw/main/tapes/demo.gif
 logo: https://avatars.githubusercontent.com/u/6196971?v=4
 updated: '2026-07-18'
-repo_stars: 215
-repo_updated: "2026-07-15"
+repo_stars: 217
+repo_updated: "2026-08-01"
 repo_created: "2025-10-02"
-repo_release: "v0.6.1"
-repo_release_date: "2026-05-16"
+repo_release: "v0.7.0"
+repo_release_date: "2026-08-01"
 comments: []
 ---

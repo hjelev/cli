@@ -44,7 +44,7 @@ media: https://github.com/thomasschafer/scooter/raw/main/media/preview.gif
 logo: https://avatars.githubusercontent.com/u/54135831?v=4
 updated: '2026-07-20'
 repo_stars: 1280
-repo_updated: "2026-07-26"
+repo_updated: "2026-08-01"
 repo_created: "2024-07-22"
 repo_release: "v0.9.1"
 repo_release_date: "2026-04-23"
