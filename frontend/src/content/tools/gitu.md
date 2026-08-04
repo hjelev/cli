@@ -34,8 +34,8 @@ tags:
 media: https://github.com/altsem/gitu/raw/master/vhs/rec.gif
 logo: https://avatars.githubusercontent.com/u/3618477?v=4
 updated: '2026-07-20'
-repo_stars: 2846
-repo_updated: "2026-07-30"
+repo_stars: 2845
+repo_updated: "2026-08-03"
 repo_created: "2023-12-23"
 repo_release: "v0.43.0"
 repo_release_date: "2026-07-11"

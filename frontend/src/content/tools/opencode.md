@@ -38,9 +38,9 @@ tags:
 media: https://opencode.ai/_build/assets/opencode-min-CiEsORKQ.mp4
 logo: https://cli.masoko.net/uploads/opencode/logo.png
 updated: '2026-07-18'
-repo_stars: 192491
-repo_updated: "2026-08-03"
+repo_stars: 192984
+repo_updated: "2026-08-04"
 repo_created: "2025-04-30"
-repo_release: "v1.18.11"
-repo_release_date: "2026-08-01"
+repo_release: "v1.18.12"
+repo_release_date: "2026-08-04"
 ---

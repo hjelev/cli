@@ -33,8 +33,8 @@ media: >-
   https://raw.githubusercontent.com/jesseduffield/lazygit/assets/demo/commit_and_push-compressed.gif
 logo: https://www.myqnap.org/wp-content/uploads/lazygit-logo-100x100.png
 updated: '2026-07-04'
-repo_stars: 80972
-repo_updated: "2026-08-02"
+repo_stars: 81007
+repo_updated: "2026-08-03"
 repo_created: "2018-05-19"
 repo_release: "v0.63.1"
 repo_release_date: "2026-07-15"
