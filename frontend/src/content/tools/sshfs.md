@@ -35,7 +35,7 @@ tags:
   - system-utilities
 logo: https://avatars.githubusercontent.com/u/16281578?s=200&v=4
 updated: '2026-07-12'
-repo_stars: 7590
+repo_stars: 7592
 repo_updated: "2026-08-03"
 repo_created: "2015-12-21"
 repo_release: "sshfs-3.7.6"
