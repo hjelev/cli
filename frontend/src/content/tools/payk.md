@@ -29,8 +29,8 @@ media: https://github.com/yusupkhemraev/payk/raw/main/docs/demo.gif
 logo: https://avatars.githubusercontent.com/u/82462593?v=4
 updated: '2026-07-20'
 repo_stars: 13
-repo_updated: "2026-08-04"
+repo_updated: "2026-08-07"
 repo_created: "2026-07-20"
-repo_release: "v0.3.0"
-repo_release_date: "2026-07-22"
+repo_release: "v0.4.1"
+repo_release_date: "2026-08-07"
 ---
