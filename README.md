@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-179-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-180-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -22,9 +22,9 @@
 
 <!-- TOOLS:START -->
 
-**179 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**180 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (18) · [Development Tools](#development-tools) (7) · [Networking](#networking) (17) · [Text Editors](#text-editors) (13) · [Media & Entertainment](#media--entertainment) (21) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (22) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (11) · [Utilities & Other](#utilities--other) (3)
+[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (18) · [Development Tools](#development-tools) (7) · [Networking](#networking) (17) · [Text Editors](#text-editors) (13) · [Media & Entertainment](#media--entertainment) (21) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (22) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (11) · [Utilities & Other](#utilities--other) (4)
 
 ### File Management
 
@@ -284,6 +284,7 @@
 | [iamb](https://iamb.chat) | A Matrix client for Vim addicts | Rust | 1.3k | [Repo](https://github.com/ulyssa/iamb), [Website](https://iamb.chat) |
 | [miru](https://blog.vaishnavs.is-a.dev/miru/) | Zooming daemon for wayland | C | 13 | [Repo](https://github.com/Vaishnav-Sabari-Girish/miru), [Website](https://blog.vaishnavs.is-a.dev/miru/) |
 | [tldr](https://tldr.sh) | Collaborative cheatsheets for console commands 📚. | Markdown | 63.3k | [Repo](https://github.com/tldr-pages/tldr), [Website](https://tldr.sh) |
+| [undo](https://undo.edaywalid.com) | Undo what the last shell command did to the filesystem | Go | – | [Repo](https://github.com/edaywalid/undo), [Website](https://undo.edaywalid.com) |
 
 <!-- TOOLS:END -->
 
