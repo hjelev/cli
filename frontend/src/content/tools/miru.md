@@ -22,6 +22,12 @@ language: C
 installation:
   - method: aur
     command: paru -S miru-zoom
+  - method: aur
+    command: paru -S miru-zoom-git
+  - method: brew
+    command: brew install Vaishnav-Sabari-Girish/taps/miru
+  - method: nix
+    command: nix profile add github:Vaishnav-Sabari-Girish/miru
 platforms:
   - Linux
 tags:
@@ -29,8 +35,7 @@ tags:
   - daemon
   - zoom
   - wayland
-media: >-
-  https://github.com/Vaishnav-Sabari-Girish/miru/raw/refs/heads/main/out_web.mp4
+media: https://github.com/Vaishnav-Sabari-Girish/miru/raw/refs/heads/main/out_web.mp4
 logo: https://cli.masoko.net/uploads/miru/logo.svg
 updated: '2026-08-01'
 repo_stars: 13
