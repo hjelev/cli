@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-183-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-184-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -22,9 +22,9 @@
 
 <!-- TOOLS:START -->
 
-**183 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**184 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (18) · [Development Tools](#development-tools) (7) · [Networking](#networking) (17) · [Text Editors](#text-editors) (13) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (23) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (11) · [Utilities & Other](#utilities--other) (4)
+[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (18) · [Development Tools](#development-tools) (7) · [Networking](#networking) (17) · [Text Editors](#text-editors) (14) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (23) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (11) · [Utilities & Other](#utilities--other) (4)
 
 ### File Management
 
@@ -147,6 +147,7 @@
 
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
+| [ad](https://crates.io/crates/ad-editor) | an adaptable text editor | Rust | – | [Repo](https://github.com/sminez/ad), [Website](https://crates.io/crates/ad-editor) |
 | [amp](https://amp.rs) | A complete text editor for your terminal. | Rust | 4.1k | [Repo](https://github.com/jmacdonald/amp), [Website](https://amp.rs) |
 | [croft](https://docs.croft.software) | VSCode-style TUI written in Rust | Rust | 70 | [Repo](https://codeberg.org/vitali87/croft), [Website](https://docs.croft.software) |
 | [edit](https://github.com/microsoft/edit) | We all edit. | Rust | 14.4k | [Repo](https://github.com/microsoft/edit) |
