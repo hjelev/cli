@@ -29,6 +29,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			extractUploadFiles,
 			initAutofill,
 			initInstallationRows,
+			initPreview,
 			initUploadToggles,
 			readCandidate,
 			resetInstallationRows,
@@ -43,10 +44,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		const installationRows = document.getElementById('installation-rows') as HTMLElement;
 		const addInstallationRowBtn = document.getElementById('add-installation-row') as HTMLButtonElement;
 		const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+		const previewDialog = document.getElementById('tool-preview-dialog') as HTMLDialogElement;
 
 		initInstallationRows(installationRows, addInstallationRowBtn);
 		initUploadToggles(form);
 		initAutofill(form, (host, owner, repo) => fetchRepoAutofill(getStoredToken(), host, owner, repo));
+		initPreview(form, previewDialog);
 
 		document.getElementById('sign-in-btn')?.addEventListener('click', () => {
 			redirectToGitHubSignIn('/submit');

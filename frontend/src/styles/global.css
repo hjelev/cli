@@ -1109,6 +1109,67 @@ button[type='submit']:disabled {
 	cursor: not-allowed;
 }
 
+.form-actions {
+	display: flex;
+	gap: 0.75rem;
+	align-items: center;
+}
+
+#preview-btn {
+	align-self: flex-start;
+	font-family: var(--font-display);
+	font-weight: 600;
+	background: transparent;
+	color: var(--fg-dim);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 0.6rem 1rem;
+	cursor: pointer;
+}
+
+#preview-btn:hover {
+	color: var(--fg);
+	border-color: var(--accent-rust);
+}
+
+#tool-preview-dialog {
+	width: min(720px, 92vw);
+	max-height: 85vh;
+	padding: 1.5rem;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	background: var(--bg);
+	color: var(--fg);
+}
+
+#tool-preview-dialog::backdrop {
+	background: rgb(0 0 0 / 60%);
+}
+
+#tool-preview-dialog #close-preview-btn {
+	position: sticky;
+	top: 0;
+	float: right;
+	background: transparent;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	color: var(--fg-dim);
+	font-size: 1.1rem;
+	line-height: 1;
+	padding: 0.3rem 0.6rem;
+	cursor: pointer;
+}
+
+#tool-preview-dialog #close-preview-btn:hover {
+	color: var(--fg);
+	border-color: var(--accent-rust);
+}
+
+.preview-empty {
+	color: var(--fg-faint);
+	font-style: italic;
+}
+
 #sign-out-btn {
 	background: transparent;
 	color: var(--fg-dim);
