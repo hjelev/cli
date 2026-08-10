@@ -1,17 +1,23 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { filterDisplayTags } from '../lib/tag-filter';
 
 interface Props {
 	tool: CollectionEntry<'tools'>;
+	reservedSlugs: Set<string>;
 }
 
-const { tool } = Astro.props;
+const { tool, reservedSlugs } = Astro.props;
 
 const repoStars = tool.data.repo_stars;
 const repoStarsLabel =
 	repoStars !== undefined
 		? new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(repoStars)
 		: null;
+
+// Tags that just restate the tool's own category/language are noise — hide
+// them here, but keep the full raw list in data-search below.
+const displayTags = filterDisplayTags(tool.data.tags, reservedSlugs);
 ---
 
 <li
@@ -36,7 +42,7 @@ const repoStarsLabel =
 			<span class="badge">{tool.data.category}</span>
 		</div>
 		<ul class="tags">
-			{tool.data.tags.map((tag) => (
+			{displayTags.map((tag) => (
 				<li>{tag}</li>
 			))}
 		</ul>

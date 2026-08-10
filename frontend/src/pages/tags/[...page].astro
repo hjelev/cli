@@ -2,17 +2,21 @@
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { slugify } from '../../lib/slug';
+import { getReservedSlugs, isRedundantTag } from '../../lib/tag-filter';
 import { TAGS_INDEX_PAGE_SIZE } from '../../lib/config';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Pagination from '../../components/Pagination.astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const tools = await getCollection('tools');
+	const reservedSlugs = getReservedSlugs(tools);
 	// Group by slug so tags that collide (see tags/[tag]/[...page].astro) get one entry
-	// whose count matches the page it links to.
+	// whose count matches the page it links to. Tags redundant with a
+	// category/language are skipped entirely.
 	const bySlug = new Map<string, { label: string; toolIds: Set<string> }>();
 	for (const tool of tools) {
 		for (const tag of tool.data.tags) {
+			if (isRedundantTag(tag, reservedSlugs)) continue;
 			const slug = slugify(tag);
 			const entry = bySlug.get(slug) ?? { label: tag, toolIds: new Set<string>() };
 			if (!entry.label.split(' / ').includes(tag)) entry.label += ` / ${tag}`;

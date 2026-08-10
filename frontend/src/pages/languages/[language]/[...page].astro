@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { sortByUpdated } from '../../../lib/tools';
+import { getReservedSlugs } from '../../../lib/tag-filter';
 import { slugify } from '../../../lib/slug';
 import { PAGE_SIZE, MIN_INDEXABLE_LISTINGS } from '../../../lib/config';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
@@ -12,6 +13,7 @@ import LanguageIcon from '../../../components/LanguageIcon.astro';
 export const getStaticPaths = (async ({ paginate }) => {
 	const tools = await getCollection('tools');
 	const languageEntries = await getCollection('languages');
+	const reservedSlugs = getReservedSlugs(tools);
 	// Distinct language names can share a slug, so group by slug: one page (set)
 	// per slug, listing every tool whose language maps to it.
 	const languagesBySlug = new Map<string, string[]>();
@@ -27,14 +29,14 @@ export const getStaticPaths = (async ({ paginate }) => {
 			sortByUpdated(tools.filter((tool) => slugify(tool.data.language) === slug)),
 			{
 				params: { language: slug },
-				props: { language: languages.join(' / '), description },
+				props: { language: languages.join(' / '), description, reservedSlugs },
 				pageSize: PAGE_SIZE,
 			},
 		);
 	});
 }) satisfies GetStaticPaths;
 
-const { page, language, description } = Astro.props;
+const { page, language, description, reservedSlugs } = Astro.props;
 ---
 
 <BaseLayout
@@ -52,7 +54,7 @@ const { page, language, description } = Astro.props;
 		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} written in {language}</p>
 	</header>
 
-	<ul id="tool-grid">{page.data.map((tool) => <ToolCard tool={tool} />)}</ul>
+	<ul id="tool-grid">{page.data.map((tool) => <ToolCard tool={tool} reservedSlugs={reservedSlugs} />)}</ul>
 
 	<Pagination page={page} />
 </BaseLayout>

@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { sortByUpdated } from '../../../lib/tools';
+import { getReservedSlugs, isRedundantTag } from '../../../lib/tag-filter';
 import { slugify } from '../../../lib/slug';
 import { PAGE_SIZE, MIN_INDEXABLE_LISTINGS } from '../../../lib/config';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
@@ -10,11 +11,15 @@ import Pagination from '../../../components/Pagination.astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const tools = await getCollection('tools');
+	const reservedSlugs = getReservedSlugs(tools);
 	// Distinct tags can share a slug (e.g. "C++" and "C#" → "c"), so group by
 	// slug: one page (set) per slug, listing every tool whose tags map to it.
+	// Tags redundant with a category/language are skipped entirely, so no page
+	// is generated for them.
 	const tagsBySlug = new Map<string, string[]>();
 	for (const tool of tools) {
 		for (const tag of tool.data.tags) {
+			if (isRedundantTag(tag, reservedSlugs)) continue;
 			const slug = slugify(tag);
 			const tags = tagsBySlug.get(slug) ?? [];
 			if (!tags.includes(tag)) tags.push(tag);
@@ -26,14 +31,14 @@ export const getStaticPaths = (async ({ paginate }) => {
 			sortByUpdated(tools.filter((tool) => tool.data.tags.some((t) => slugify(t) === slug))),
 			{
 				params: { tag: slug },
-				props: { tag: tags.join(' / ') },
+				props: { tag: tags.join(' / '), reservedSlugs },
 				pageSize: PAGE_SIZE,
 			},
 		),
 	);
 }) satisfies GetStaticPaths;
 
-const { page, tag } = Astro.props;
+const { page, tag, reservedSlugs } = Astro.props;
 ---
 
 <BaseLayout
@@ -48,7 +53,7 @@ const { page, tag } = Astro.props;
 		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} tagged {tag}</p>
 	</header>
 
-	<ul id="tool-grid">{page.data.map((tool) => <ToolCard tool={tool} />)}</ul>
+	<ul id="tool-grid">{page.data.map((tool) => <ToolCard tool={tool} reservedSlugs={reservedSlugs} />)}</ul>
 
 	<Pagination page={page} />
 </BaseLayout>

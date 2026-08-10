@@ -3,6 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/schema';
 import { getSortedTools, sortByUpdated } from '../lib/tools';
+import { getReservedSlugs, filterDisplayTags } from '../lib/tag-filter';
 import { PAGE_SIZE } from '../lib/config';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ToolCard from '../components/ToolCard.astro';
@@ -21,9 +22,11 @@ const allTools = sortByUpdated(await getCollection('tools'));
 const languages = [...new Set(allTools.map((tool) => tool.data.language))].sort();
 const usedCategories = new Set(allTools.map((tool) => tool.data.category));
 const categories = CATEGORIES.filter((category) => usedCategories.has(category));
+const reservedSlugs = getReservedSlugs(allTools);
 
 // Compact search index embedded once per page. `search` mirrors ToolCard's
-// `data-search`.
+// `data-search`; `tags` is pre-filtered so client-rendered cards match the
+// static ones (see ToolCard.astro).
 const searchIndex = allTools.map((tool) => {
 	return {
 		id: tool.id,
@@ -31,7 +34,7 @@ const searchIndex = allTools.map((tool) => {
 		short: tool.data.short_description,
 		category: tool.data.category,
 		language: tool.data.language,
-		tags: tool.data.tags,
+		tags: filterDisplayTags(tool.data.tags, reservedSlugs),
 		logo: tool.data.logo ?? null,
 		stars: tool.data.repo_stars ?? null,
 		search: `${tool.data.name} ${tool.data.short_description} ${tool.data.tags.join(' ')}`.toLowerCase(),
@@ -86,7 +89,7 @@ const status =
 	<p id="empty-state" hidden>No tools match your filters.</p>
 
 	<ul id="tool-grid">
-		{page.data.map((tool) => <ToolCard tool={tool} />)}
+		{page.data.map((tool) => <ToolCard tool={tool} reservedSlugs={reservedSlugs} />)}
 	</ul>
 
 	<!-- Populated by the search script when a filter is active; hidden otherwise. -->
