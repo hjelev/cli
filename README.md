@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-186-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-187-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -22,9 +22,9 @@
 
 <!-- TOOLS:START -->
 
-**186 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**187 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (18) · [Development Tools](#development-tools) (7) · [Networking](#networking) (17) · [Text Editors](#text-editors) (16) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (23) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (11) · [Utilities & Other](#utilities--other) (4)
+[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (18) · [Development Tools](#development-tools) (7) · [Networking](#networking) (17) · [Text Editors](#text-editors) (17) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (23) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (11) · [Utilities & Other](#utilities--other) (4)
 
 ### File Management
 
@@ -151,6 +151,7 @@
 | [amp](https://amp.rs) | A complete text editor for your terminal. | Rust | 4.1k | [Repo](https://github.com/jmacdonald/amp), [Website](https://amp.rs) |
 | [croft](https://docs.croft.software) | VSCode-style TUI written in Rust | Rust | 70 | [Repo](https://codeberg.org/vitali87/croft), [Website](https://docs.croft.software) |
 | [edit](https://github.com/microsoft/edit) | We all edit. | Rust | 14.4k | [Repo](https://github.com/microsoft/edit) |
+| [emacs](https://github.com/emacs-mirror/emacs) | GNU Emacs is an extensible, customizable, free/libre text editor — and more. | C | – | [Repo](https://github.com/emacs-mirror/emacs) |
 | [fresh](https://getfresh.dev) | A powerful terminal text editor and IDE. | Rust | 8.2k | [Repo](https://github.com/sinelaw/fresh), [Website](https://getfresh.dev) |
 | [helix](https://helix-editor.com) | A post-modern modal text editor. | Rust | 45.8k | [Repo](https://github.com/helix-editor/helix), [Website](https://helix-editor.com) |
 | [kakoune](http://kakoune.org) | mawww's experiment for a better code editor | C++ | 11k | [Repo](https://github.com/mawww/kakoune), [Website](http://kakoune.org) |
