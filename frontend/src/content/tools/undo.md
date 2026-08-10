@@ -36,9 +36,9 @@ tags:
 media: https://raw.githubusercontent.com/edaywalid/undo/main/assets/demo.gif
 logo: https://avatars.githubusercontent.com/u/103851402?v=4
 updated: '2026-08-09'
-repo_stars: 369
-repo_updated: "2026-08-09"
+repo_stars: 371
+repo_updated: "2026-08-10"
 repo_created: "2026-07-23"
-repo_release: "v0.2.9"
-repo_release_date: "2026-08-02"
+repo_release: "v0.3.0"
+repo_release_date: "2026-08-10"
 ---

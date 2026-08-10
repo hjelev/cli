@@ -53,7 +53,7 @@ tags:
 media: https://github.com/jdx/mise/raw/main/docs/tapes/demo.gif
 logo: https://github.com/jdx/mise/raw/main/docs/public/logo-dark.svg
 updated: '2026-07-19'
-repo_stars: 32214
+repo_stars: 32235
 repo_updated: "2026-08-10"
 repo_created: "2023-01-09"
 repo_release: "v2026.8.3"
