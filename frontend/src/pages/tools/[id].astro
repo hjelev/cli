@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import { marked } from 'marked';
+import { getAsciinemaId, getMediaKind } from '../../lib/media';
 import { slugify } from '../../lib/slug';
 import { getRelatedTools } from '../../lib/tools';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -47,7 +48,7 @@ if (data.website) {
 	}
 }
 
-const asciinemaId = data.media?.match(/asciinema\.org\/a\/([\w-]+)/i)?.[1];
+const asciinemaId = data.media ? getAsciinemaId(data.media) : undefined;
 ---
 
 <BaseLayout
@@ -75,7 +76,7 @@ const asciinemaId = data.media?.match(/asciinema\.org\/a\/([\w-]+)/i)?.[1];
 
 	{data.media && (asciinemaId
 		? <script id={`asciicast-${asciinemaId}`} src={`https://asciinema.org/a/${asciinemaId}.js`} data-autoplay="false" async />
-		: /\.(webm|mp4)(\?.*)?$/i.test(data.media)
+		: getMediaKind(data.media) === 'video'
 			? <video class="media" src={data.media} autoplay loop muted playsinline controls />
 			: <img class="media" src={data.media} alt={`${data.name} demo`} />
 	)}

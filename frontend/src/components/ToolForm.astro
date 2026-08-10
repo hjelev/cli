@@ -165,5 +165,13 @@ const installation = initialData?.installation?.length ? initialData.installatio
 		</div>
 	</div>
 
-	<button type="submit">{submitLabel}</button>
+	<div class="form-actions">
+		<button type="button" id="preview-btn">Preview</button>
+		<button type="submit">{submitLabel}</button>
+	</div>
 </form>
+
+<dialog id="tool-preview-dialog">
+	<button type="button" id="close-preview-btn" aria-label="Close preview">×</button>
+	<div id="tool-preview-content"></div>
+</dialog>

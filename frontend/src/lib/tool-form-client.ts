@@ -1,6 +1,7 @@
 import type { RepoAutofillData, RepoHost } from './github-repo';
 import { parseRepoUrl } from './github-repo';
 import { INSTALL_METHODS } from './schema';
+import { renderToolPreview } from './tool-preview-render';
 import { validateUploadFile, type UploadableField } from './upload';
 
 const UPLOADABLE_FIELDS: readonly UploadableField[] = ['media', 'logo'];
@@ -261,6 +262,37 @@ function setFieldValue(form: HTMLFormElement, name: string, value: string | unde
 	if (!value) return;
 	const el = form.elements.namedItem(name);
 	if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) el.value = value;
+}
+
+// Wires the "Preview" button: renders the form's current (possibly
+// incomplete/invalid) values into the preview dialog using the same
+// markup/classes as the real tool detail page. Object URLs created for any
+// uploaded logo/media files are revoked on the *next* preview render (or
+// never, if the user closes the tab first — acceptable, they're
+// tab-scoped) so repeated clicks don't leak blobs.
+export function initPreview(form: HTMLFormElement, dialog: HTMLDialogElement): void {
+	const content = dialog.querySelector<HTMLElement>('#tool-preview-content');
+	const previewBtn = document.getElementById('preview-btn');
+	const closeBtn = dialog.querySelector<HTMLButtonElement>('#close-preview-btn');
+	let currentObjectUrls: string[] = [];
+
+	previewBtn?.addEventListener('click', () => {
+		if (!content) return;
+		const candidate = readCandidate(form);
+		const files = extractUploadFiles(form);
+		const { fragment, objectUrls } = renderToolPreview(candidate, files);
+
+		currentObjectUrls.forEach((url) => URL.revokeObjectURL(url));
+		currentObjectUrls = objectUrls;
+
+		content.replaceChildren(fragment);
+		dialog.showModal();
+	});
+
+	closeBtn?.addEventListener('click', () => dialog.close());
+	dialog.addEventListener('click', (event) => {
+		if (event.target === dialog) dialog.close();
+	});
 }
 
 // Wires the "Autofill from repo" button: parses the repository URL field,
