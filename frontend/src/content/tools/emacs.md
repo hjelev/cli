@@ -14,6 +14,18 @@ installation:
     command: apt install emacs
   - method: brew
     command: brew install emacs
+  - method: pacman
+    command: pacman -S emacs
+  - method: dnf
+    command: dnf install emacs
+  - method: apk
+    command: apk add emacs
+  - method: pkg
+    command: pkg install emacs
+  - method: choco
+    command: choco install emacs
+  - method: scoop
+    command: scoop install emacs
 platforms:
   - Linux
   - macOS
@@ -23,4 +35,5 @@ tags:
 media: https://www.gnu.org/software/emacs/images/teaser.png
 logo: https://cli.masoko.net/uploads/emacs/logo.png
 updated: '2026-08-10'
+comments: []
 ---
