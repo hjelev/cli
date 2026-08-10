@@ -38,4 +38,9 @@ media: >-
   https://cowlark.com/wordgrinder/AF1QipNpWXJ028DQWnn9KNZkZQCPXSxHHfxECYVXZOmN.jpg
 logo: https://cowlark.com/wordgrinder/image-selection.jpg
 updated: '2026-08-10'
+repo_stars: 1259
+repo_updated: "2026-06-09"
+repo_created: "2015-06-07"
+repo_release: "dev"
+repo_release_date: "2020-10-22"
 ---
