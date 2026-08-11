@@ -14,7 +14,7 @@ description: >-
   configuration file, you can fine-tune parameters such as your preferred zoom
   factor, zoom step, spotlight radius, and dimming intensity to suit your
   workflow.
-repository_url: https://github.com/Vaishnav-Sabari-Girish/miru
+repository_url: https://codeberg.org/Vaishnav-Sabari-Girish/miru
 website: https://blog.vaishnavs.is-a.dev/miru/
 author: Vaishnav-Sabari-Girish
 license: MIT
@@ -37,10 +37,11 @@ tags:
   - wayland
 media: https://github.com/Vaishnav-Sabari-Girish/miru/raw/refs/heads/main/out_web.mp4
 logo: https://cli.masoko.net/uploads/miru/logo.svg
-updated: '2026-08-01'
+updated: '2026-08-11'
+comments: []
 repo_stars: 13
-repo_updated: "2026-08-10"
-repo_created: "2026-07-09"
-repo_release: "v0.4.1"
-repo_release_date: "2026-08-07"
+repo_updated: '2026-08-10'
+repo_created: '2026-07-09'
+repo_release: v0.4.1
+repo_release_date: '2026-08-07'
 ---
