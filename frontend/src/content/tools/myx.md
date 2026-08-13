@@ -48,8 +48,8 @@ tags:
 media: https://cli.masoko.net/uploads/myx/media.gif
 logo: https://avatars.githubusercontent.com/u/57045294?v=4
 updated: '2026-08-10'
-repo_stars: 171
-repo_updated: "2026-08-07"
+repo_stars: 174
+repo_updated: "2026-08-13"
 repo_created: "2026-07-23"
 repo_release: "v0.4.0"
 repo_release_date: "2026-08-04"
