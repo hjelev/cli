@@ -45,8 +45,8 @@ media: >-
   https://raw.githubusercontent.com/homeport/dyff/main/.docs/dyff-between-kubectl-diff.png
 logo: https://raw.githubusercontent.com/homeport/dyff/main/.docs/logo.png
 updated: '2026-07-18'
-repo_stars: 1869
-repo_updated: "2026-08-05"
+repo_stars: 1870
+repo_updated: "2026-08-13"
 repo_created: "2018-03-09"
 repo_release: "v1.12.0"
 repo_release_date: "2026-04-26"
