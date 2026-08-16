@@ -52,9 +52,9 @@ tags:
   - developer-tools
 media: https://github.com/user-attachments/assets/541ca36d-ae26-49fb-97da-d1f7a12d4b9a
 logo: https://raw.githubusercontent.com/jarun/nnn/master/misc/logo/logo-128x128.png
-repo_stars: 21788
-repo_updated: "2026-08-11"
+repo_stars: 21792
+repo_updated: "2026-08-15"
 repo_created: "2016-08-20"
-repo_release: "v5.2"
-repo_release_date: "2026-02-14"
+repo_release: "v5.3"
+repo_release_date: "2026-08-15"
 ---
