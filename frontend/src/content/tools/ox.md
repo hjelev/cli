@@ -45,7 +45,7 @@ tags:
 media: https://github.com/curlpipe/ox/raw/master/assets/showcase.gif?raw=true
 logo: https://github.com/curlpipe/ox/raw/master/assets/logo.png
 updated: '2026-08-10'
-repo_stars: 3728
+repo_stars: 3730
 repo_updated: "2026-04-23"
 repo_created: "2020-07-29"
 repo_release: "0.7.7"
