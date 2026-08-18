@@ -28,6 +28,12 @@ installation:
     command: brew install xan
   - method: pacman
     command: sudo pacman -S xan
+  - method: scoop
+    command: scoop install xan
+  - method: eget
+    command: eget medialab/xan
+  - method: port
+    command: sudo port install xan
 platforms:
   - Linux
   - macOS
@@ -39,10 +45,11 @@ tags:
   - tsv
 media: https://github.com/medialab/xan/raw/master/docs/img/grid/view.png
 logo: https://avatars.githubusercontent.com/u/534856?s=200&v=4
-updated: '2026-07-12'
+updated: '2026-08-18'
+comments: []
 repo_stars: 4469
-repo_updated: "2026-07-31"
-repo_created: "2018-07-10"
-repo_release: "0.60.0"
-repo_release_date: "2026-07-10"
+repo_updated: '2026-07-31'
+repo_created: '2018-07-10'
+repo_release: 0.60.0
+repo_release_date: '2026-07-10'
 ---
