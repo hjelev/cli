@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-193-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-194-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -22,9 +22,9 @@
 
 <!-- TOOLS:START -->
 
-**193 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**194 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (18) · [Development Tools](#development-tools) (7) · [Networking](#networking) (18) · [Text Editors](#text-editors) (19) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (24) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (12) · [Utilities & Other](#utilities--other) (5)
+[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (18) · [Development Tools](#development-tools) (7) · [Networking](#networking) (18) · [Text Editors](#text-editors) (19) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (25) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (12) · [Utilities & Other](#utilities--other) (5)
 
 ### File Management
 
@@ -234,6 +234,7 @@
 | [fx](https://fx.wtf) | Terminal JSON viewer & processor | Go | 20.6k | [Repo](https://github.com/antonmedv/fx), [Website](https://fx.wtf) |
 | [goaccess](https://goaccess.io) | GoAccess is a real-time web log analyzer and interactive viewer that runs in a terminal in *nix… | C | 20.8k | [Repo](https://github.com/allinurl/goaccess), [Website](https://goaccess.io) |
 | [harlequin](https://harlequin.sh) | The SQL IDE for Your Terminal. | Python | 6.3k | [Repo](https://github.com/tconbeer/harlequin), [Website](https://harlequin.sh) |
+| [igrep](https://github.com/konradsz/igrep) | Interactive Grep | Rust | – | [Repo](https://github.com/konradsz/igrep) |
 | [jnv](https://github.com/ynqa/jnv) | Interactive JSON filter using jq | Rust | 6.1k | [Repo](https://github.com/ynqa/jnv) |
 | [jq](https://jqlang.org) | Command-line JSON processor | C | 35.5k | [Repo](https://github.com/jqlang/jq), [Website](https://jqlang.org) |
 | [lnav](http://lnav.org) | Log file navigator | C++ | 10.6k | [Repo](https://github.com/tstack/lnav), [Website](http://lnav.org) |
