@@ -28,7 +28,7 @@ logo: >-
   https://raw.githubusercontent.com/Cyxuan0311/PNANA/refs/heads/master/resources/logo.png
 updated: '2026-07-19'
 repo_stars: 317
-repo_updated: "2026-07-20"
+repo_updated: "2026-08-19"
 repo_created: "2025-12-28"
 repo_release: "v0.0.7"
 repo_release_date: "2026-07-20"

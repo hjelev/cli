@@ -36,7 +36,7 @@ media: https://www.gnu.org/software/emacs/images/teaser.png
 logo: https://cli.masoko.net/uploads/emacs/logo.png
 updated: '2026-08-10'
 repo_stars: 5163
-repo_updated: "2026-08-19"
+repo_updated: "2026-08-20"
 repo_created: "2014-08-07"
 repo_release: "emacs-31.1-rc1"
 repo_release_date: "2026-08-17"
