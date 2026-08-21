@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { filterDisplayTags } from '../lib/tag-filter';
+import { formatAge } from '../lib/repo-age';
 
 interface Props {
 	tool: CollectionEntry<'tools'>;
@@ -40,6 +41,11 @@ const displayTags = filterDisplayTags(tool.data.tags, reservedSlugs);
 				<span class="badge badge-stars" title={`${repoStars} stars`}>★ {repoStarsLabel}</span>
 			)}
 			<span class="badge">{tool.data.category}</span>
+			{tool.data.repo_created && (
+				<span class="badge" title={`Created ${tool.data.repo_created.slice(0, 10)}`}>
+					{formatAge(tool.data.repo_created)}
+				</span>
+			)}
 		</div>
 		<ul class="tags">
 			{displayTags.map((tag) => (

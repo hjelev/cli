@@ -5,6 +5,7 @@ import { getAsciinemaId, getMediaKind } from '../../lib/media';
 import { slugify } from '../../lib/slug';
 import { getRelatedTools } from '../../lib/tools';
 import { getReservedSlugs, filterDisplayTags } from '../../lib/tag-filter';
+import { formatAge } from '../../lib/repo-age';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ToolCard from '../../components/ToolCard.astro';
 import LanguageIcon from '../../components/LanguageIcon.astro';
@@ -26,13 +27,6 @@ const descriptionHtml = marked.parse(data.description, { async: false });
 
 const comments = [...(data.comments ?? [])].sort((a, b) => b.date.localeCompare(a.date));
 const fmtDate = (iso: string) => (iso ? iso.slice(0, 10) : '');
-const formatAge = (iso: string) => {
-	const created = new Date(iso);
-	const years = (Date.now() - created.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
-	if (years >= 1) return `${Math.floor(years)} year${Math.floor(years) === 1 ? '' : 's'} old`;
-	const months = Math.max(1, Math.floor(years * 12));
-	return `${months} month${months === 1 ? '' : 's'} old`;
-};
 
 const repoStars = data.repo_stars;
 const repoStarsLabel =
