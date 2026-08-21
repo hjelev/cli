@@ -33,7 +33,7 @@ media: https://github.com/ynqa/ynqa/raw/master/demo/jnv.gif
 logo: https://cli.masoko.net/uploads/jnv/logo.svg
 updated: '2026-07-15'
 repo_stars: 6093
-repo_updated: "2026-07-27"
+repo_updated: "2026-08-20"
 repo_created: "2024-03-18"
 repo_release: "v0.7.1"
 repo_release_date: "2026-04-01"
