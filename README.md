@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-203-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-204-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -22,9 +22,9 @@
 
 <!-- TOOLS:START -->
 
-**203 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**204 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (20) · [Development Tools](#development-tools) (7) · [Networking](#networking) (20) · [Text Editors](#text-editors) (19) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (25) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (16) · [Utilities & Other](#utilities--other) (6)
+[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (20) · [Development Tools](#development-tools) (7) · [Networking](#networking) (20) · [Text Editors](#text-editors) (19) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (25) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (17) · [Utilities & Other](#utilities--other) (6)
 
 ### File Management
 
@@ -295,6 +295,7 @@
 | [GLab](https://gitlab.com/gitlab-org/cli) | The official GitLab CLI | Go | 1.1k | [Repo](https://gitlab.com/gitlab-org/cli) |
 | [grv](https://github.com/rgburke/grv) | GRV is a terminal interface for viewing git repositories | Go | 4.1k | [Repo](https://github.com/rgburke/grv) |
 | [jj](https://jj-vcs.dev) | A Git-compatible VCS that is both simple and powerful | Rust | – | [Repo](https://github.com/jj-vcs/jj), [Website](https://jj-vcs.dev) |
+| [jjui](https://idursun.github.io/jjui/) | jjui is a TUI designed for interacting with the Jujutsu version control system. | Go | – | [Repo](https://github.com/idursun/jjui), [Website](https://idursun.github.io/jjui/) |
 | [lazygit](https://lazygit.dev/) | simple terminal UI for git commands | Go | 81.5k | [Repo](https://github.com/jesseduffield/lazygit), [Website](https://lazygit.dev/) |
 | [onefetch](https://onefetch.dev) | Command-line Git information tool | Rust | 12k | [Repo](https://github.com/o2sh/onefetch), [Website](https://onefetch.dev) |
 
