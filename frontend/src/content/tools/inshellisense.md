@@ -39,8 +39,8 @@ tags:
 media: https://github.com/microsoft/inshellisense/raw/main/docs/demo.gif
 logo: https://avatars.githubusercontent.com/u/6154722?s=200&v=4
 updated: '2026-07-09'
-repo_stars: 10660
-repo_updated: "2026-08-11"
+repo_stars: 10665
+repo_updated: "2026-08-21"
 repo_created: "2023-10-08"
 repo_release: "0.0.3"
 repo_release_date: "2026-08-11"
