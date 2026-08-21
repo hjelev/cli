@@ -1,5 +1,5 @@
 ---
-name: drydock
+name: DryDock
 category: Git
 short_description: What's uncommitted, unpushed, and unreleased across every repo you own.
 description: >-
