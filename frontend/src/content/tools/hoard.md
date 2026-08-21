@@ -38,4 +38,9 @@ media: >-
   https://raw.githubusercontent.com/Hyde46/hoard/main/img/hoard_usage_example.gif
 logo: https://raw.githubusercontent.com/Hyde46/hoard/main/img/hoard_icon.png
 updated: '2026-08-21'
+repo_stars: 659
+repo_updated: "2024-09-09"
+repo_created: "2021-07-04"
+repo_release: "v1.4.2"
+repo_release_date: "2023-08-06"
 ---

@@ -54,4 +54,9 @@ media: >-
   https://raw.githubusercontent.com/madLinux7/dssh-artifacts/refs/heads/main/demo_tabs.gif
 logo: https://dssh.grolmes.com/_astro/dssh_stripped.D28FK-iO_SMe1d.svg
 updated: '2026-08-21'
+repo_stars: 87
+repo_updated: "2026-07-24"
+repo_created: "2026-04-01"
+repo_release: "v2.2.1"
+repo_release_date: "2026-07-24"
 ---
