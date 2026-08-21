@@ -34,11 +34,12 @@ tags:
   - shell
   - undo
 media: https://raw.githubusercontent.com/edaywalid/undo/main/assets/demo.gif
-logo: https://avatars.githubusercontent.com/u/103851402?v=4
-updated: '2026-08-09'
+logo: https://cli.masoko.net/uploads/undo/logo.png
+updated: '2026-08-21'
+comments: []
 repo_stars: 373
-repo_updated: "2026-08-12"
-repo_created: "2026-07-23"
-repo_release: "v0.3.0"
-repo_release_date: "2026-08-10"
+repo_updated: '2026-08-12'
+repo_created: '2026-07-23'
+repo_release: v0.3.0
+repo_release_date: '2026-08-10'
 ---
