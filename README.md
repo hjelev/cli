@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-197-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-198-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -22,9 +22,9 @@
 
 <!-- TOOLS:START -->
 
-**197 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**198 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (19) · [Development Tools](#development-tools) (7) · [Networking](#networking) (18) · [Text Editors](#text-editors) (19) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (25) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (13) · [Utilities & Other](#utilities--other) (6)
+[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (19) · [Development Tools](#development-tools) (7) · [Networking](#networking) (19) · [Text Editors](#text-editors) (19) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (11) · [Data Processing](#data-processing) (25) · [Games & Fun](#games--fun) (7) · [AI](#ai) (6) · [Git](#git) (13) · [Utilities & Other](#utilities--other) (6)
 
 ### File Management
 
@@ -144,6 +144,7 @@
 | [termshark](https://github.com/gcla/termshark) | A terminal UI for tshark, inspired by Wireshark | Go | 10k | [Repo](https://github.com/gcla/termshark) |
 | [ttl](https://github.com/lance0/ttl) | Fast, modern traceroute with real-time TUI, per-hop stats, ASN/geo lookup, ECMP detection, and MPLS… | Rust | 1.4k | [Repo](https://github.com/lance0/ttl) |
 | [wlctl](https://github.com/aashish-thapa/wlctl) | 🛜 TUI for managing wifi/ethernet/vpn on Linux with Network Manager | Rust | 163 | [Repo](https://github.com/aashish-thapa/wlctl) |
+| [YTunnel](https://yetidevworks.com/ytunnel) | A TUI-first CLI for managing Cloudflare Tunnels with custom domains. | Rust | – | [Repo](https://github.com/yetidevworks/ytunnel), [Website](https://yetidevworks.com/ytunnel) |
 
 ### Text Editors
 
