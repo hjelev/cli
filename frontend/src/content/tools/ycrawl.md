@@ -27,7 +27,7 @@ license: MIT
 language: Rust
 installation:
   - method: brew
-    command: brew tap yetidevworks/ycrawl && brew trust yetidevworks/ycrawl && brew install ycrawl
+    command: brew install yetidevworks/ycrawl/ycrawl
 platforms:
   - Linux
   - macOS
