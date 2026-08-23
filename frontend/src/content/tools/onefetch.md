@@ -44,7 +44,7 @@ tags:
 media: https://github.com/o2sh/onefetch/raw/main/assets/screenshot-2.png
 logo: https://github.com/o2sh/onefetch/raw/main/assets/onefetch.svg
 updated: '2026-08-18'
-repo_stars: 12026
+repo_stars: 12027
 repo_updated: "2026-08-17"
 repo_created: "2018-09-14"
 repo_release: "2.27.1"

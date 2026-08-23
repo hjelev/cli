@@ -42,9 +42,9 @@ tags:
 media: https://dystroy.org/broot/img/20241027-cows.png
 logo: https://dystroy.org/broot/img/vache-blanche.svg
 updated: '2026-07-03'
-repo_stars: 12904
-repo_updated: "2026-08-21"
+repo_stars: 12906
+repo_updated: "2026-08-22"
 repo_created: "2018-11-15"
-repo_release: "v1.58.0"
-repo_release_date: "2026-07-10"
+repo_release: "v1.59.0"
+repo_release_date: "2026-08-22"
 ---
