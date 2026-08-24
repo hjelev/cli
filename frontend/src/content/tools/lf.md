@@ -56,8 +56,8 @@ tags:
 media: https://www.tecmint.com/wp-content/uploads/2024/09/Lf-Terminal-File-Manager.webp
 logo: https://avatars.githubusercontent.com/u/1835672?v=4
 updated: '2026-07-04'
-repo_stars: 9471
-repo_updated: "2026-08-15"
+repo_stars: 9474
+repo_updated: "2026-08-24"
 repo_created: "2016-08-13"
 repo_release: "r42"
 repo_release_date: "2026-07-31"

@@ -60,8 +60,8 @@ tags:
 media: https://ugrep.com/ug.png
 logo: https://avatars.githubusercontent.com/u/13117366?s=200&v=4
 updated: '2026-08-10'
-repo_stars: 3247
-repo_updated: "2026-08-22"
+repo_stars: 3250
+repo_updated: "2026-08-24"
 repo_created: "2019-04-29"
 repo_release: "v7.8.4"
 repo_release_date: "2026-08-05"
