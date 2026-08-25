@@ -36,8 +36,8 @@ tags:
 media: https://raw.githubusercontent.com/sminez/ad/develop/screenshot.png
 logo: https://avatars.githubusercontent.com/u/8116092?v=4
 updated: '2026-08-10'
-repo_stars: 734
-repo_updated: "2026-06-26"
+repo_stars: 735
+repo_updated: "2026-08-24"
 repo_created: "2023-09-27"
 repo_release: "0.4.0"
 repo_release_date: "2025-12-15"

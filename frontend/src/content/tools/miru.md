@@ -38,7 +38,7 @@ tags:
 media: https://github.com/Vaishnav-Sabari-Girish/miru/raw/refs/heads/main/out_web.mp4
 logo: https://cli.masoko.net/uploads/miru/logo.svg
 updated: '2026-08-01'
-repo_stars: 21
+repo_stars: 22
 repo_updated: "2026-08-23"
 repo_created: "2026-07-09"
 repo_release: "v0.4.1"
