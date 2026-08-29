@@ -29,9 +29,9 @@ tags:
 media: https://cli.masoko.net/uploads/sshs/media.gif
 logo: https://avatars.githubusercontent.com/u/7271496?v=4
 updated: '2026-07-08'
-repo_stars: 1575
-repo_updated: "2026-08-25"
+repo_stars: 1578
+repo_updated: "2026-08-28"
 repo_created: "2022-01-31"
-repo_release: "4.7.2"
-repo_release_date: "2025-04-23"
+repo_release: "4.8.0"
+repo_release_date: "2026-08-28"
 ---

@@ -55,8 +55,8 @@ tags:
 media: https://cli.masoko.net/uploads/age/media.gif
 logo: https://cli.masoko.net/uploads/age/logo.png
 updated: '2026-07-08'
-repo_stars: 23345
-repo_updated: "2026-03-20"
+repo_stars: 23350
+repo_updated: "2026-08-28"
 repo_created: "2019-05-18"
 repo_release: "v1.3.1"
 repo_release_date: "2025-12-28"

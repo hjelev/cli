@@ -43,8 +43,8 @@ tags:
 media: https://cli.masoko.net/uploads/crush/media.gif
 logo: https://avatars.githubusercontent.com/u/57376114?s=200&v=4
 updated: '2026-07-18'
-repo_stars: 27744
-repo_updated: "2026-08-27"
+repo_stars: 27766
+repo_updated: "2026-08-29"
 repo_created: "2025-05-21"
 repo_release: "v0.91.2"
 repo_release_date: "2026-08-26"
