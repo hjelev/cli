@@ -50,8 +50,8 @@ tags:
 media: https://github.com/micro-editor/micro/raw/master/assets/micro-solarized.png
 logo: https://micro-editor.github.io/micro_files/micro-logo-mark.svg
 updated: '2026-07-04'
-repo_stars: 29456
-repo_updated: "2026-08-29"
+repo_stars: 29470
+repo_updated: "2026-08-30"
 repo_created: "2016-03-11"
 repo_release: "v2.0.15"
 repo_release_date: "2025-12-31"

@@ -44,7 +44,7 @@ tags:
 media: https://raw.githubusercontent.com/yetidevworks/yscan/main/yscan-screenshot.png
 logo: https://avatars.githubusercontent.com/u/220336074?v=4
 updated: '2026-08-21'
-repo_stars: 7
+repo_stars: 8
 repo_updated: "2026-08-04"
 repo_created: "2026-02-26"
 repo_release: "0.1.1"
