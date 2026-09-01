@@ -37,7 +37,7 @@ media: >-
   https://raw.githubusercontent.com/Macchina-CLI/macchina/main/assets/preview.png
 logo: https://avatars.githubusercontent.com/u/81122749?s=200&v=4
 updated: '2026-08-18'
-repo_stars: 1965
+repo_stars: 1966
 repo_updated: "2025-03-08"
 repo_created: "2021-01-08"
 repo_release: "v6.4.0"

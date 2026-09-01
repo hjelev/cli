@@ -20,7 +20,7 @@ tags:
 media: https://cli.masoko.net/uploads/ftb/media.png
 logo: https://cli.masoko.net/uploads/ftb/logo.png
 updated: '2026-07-19'
-repo_stars: 12
+repo_stars: 13
 repo_updated: "2026-08-02"
 repo_created: "2025-03-01"
 repo_release: "v2.1.1"
