@@ -37,8 +37,8 @@ tags:
 media: https://cli.masoko.net/uploads/glow/media.webp
 logo: https://avatars.githubusercontent.com/u/57376114?s=200&v=4
 updated: '2026-07-11'
-repo_stars: 27144
-repo_updated: "2026-08-16"
+repo_stars: 27157
+repo_updated: "2026-09-01"
 repo_created: "2019-11-04"
 repo_release: "v3.0.0"
 repo_release_date: "2026-08-11"

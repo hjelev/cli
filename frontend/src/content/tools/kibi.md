@@ -52,8 +52,8 @@ tags:
 media: https://raw.githubusercontent.com/ilai-deutel/kibi/master/assets/recording.svg
 logo: https://raw.githubusercontent.com/ilai-deutel/kibi/master/assets/kibi.svg
 updated: '2026-08-10'
-repo_stars: 1941
-repo_updated: "2026-08-30"
+repo_stars: 1940
+repo_updated: "2026-09-01"
 repo_created: "2020-02-10"
 repo_release: "v0.3.3"
 repo_release_date: "2026-02-01"
