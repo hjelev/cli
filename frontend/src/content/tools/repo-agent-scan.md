@@ -25,7 +25,7 @@ installation:
   - method: scoop
     command: scoop bucket add repoagentkit https://github.com/sunxiayi/scoop-bucket; scoop install repoagentkit/repo-agent-scan
   - method: npm
-    command: npx https://github.com/sunxiayi/repo-agent-instruction-security-scan/archive/4e0a03940411c3a6a79f28b5e0c200838884486d.tar.gz .
+    command: npx https://github.com/sunxiayi/repo-agent-instruction-security-scan/releases/download/v1.1.3/repo-agent-instruction-security-scan-1.1.3.tar.gz .
 platforms:
   - Linux
   - macOS
