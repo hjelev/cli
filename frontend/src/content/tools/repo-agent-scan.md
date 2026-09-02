@@ -22,6 +22,8 @@ language: JavaScript
 installation:
   - method: brew
     command: brew install sunxiayi/tap/repo-agent-scan
+  - method: scoop
+    command: scoop bucket add repoagentkit https://github.com/sunxiayi/scoop-bucket; scoop install repoagentkit/repo-agent-scan
   - method: npm
     command: npx https://github.com/sunxiayi/repo-agent-instruction-security-scan/archive/4e0a03940411c3a6a79f28b5e0c200838884486d.tar.gz .
 platforms:
