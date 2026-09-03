@@ -36,7 +36,7 @@ media: https://cli.masoko.net/uploads/wlctl/media.gif
 logo: https://cli.masoko.net/uploads/wlctl/logo.svg
 updated: '2026-07-18'
 repo_stars: 172
-repo_updated: "2026-08-30"
+repo_updated: "2026-09-02"
 repo_created: "2025-12-25"
 repo_release: "v0.1.10"
 repo_release_date: "2026-08-20"
