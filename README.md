@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-211-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-212-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -22,9 +22,9 @@
 
 <!-- TOOLS:START -->
 
-**211 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**212 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (20) · [Development Tools](#development-tools) (7) · [Networking](#networking) (21) · [Text Editors](#text-editors) (20) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (12) · [Data Processing](#data-processing) (28) · [Games & Fun](#games--fun) (7) · [AI](#ai) (7) · [Git](#git) (17) · [Utilities & Other](#utilities--other) (6)
+[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (20) · [Development Tools](#development-tools) (7) · [Networking](#networking) (21) · [Text Editors](#text-editors) (21) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (12) · [Data Processing](#data-processing) (28) · [Games & Fun](#games--fun) (7) · [AI](#ai) (7) · [Git](#git) (17) · [Utilities & Other](#utilities--other) (6)
 
 ### File Management
 
@@ -169,6 +169,7 @@
 | [ox](https://github.com/curlpipe/ox) | The simple but flexible text editor | Rust | 3.7k | [Repo](https://github.com/curlpipe/ox) |
 | [PNANA](https://github.com/Cyxuan0311/PNANA) | pnana is a modern terminal text editor built with FTXUI, inspired by Nano, Micro, and Sublime Text. | C++ | 320 | [Repo](https://github.com/Cyxuan0311/PNANA) |
 | [scooter](https://github.com/thomasschafer/scooter) | Interactive find-and-replace in the terminal | Rust | 1.3k | [Repo](https://github.com/thomasschafer/scooter) |
+| [Shoin](https://github.com/nol00p/Shoin) | A no-clutter terminal Markdown editor. Modal editing, Obsidian-style live formatting, an iA Writer… | Rust | – | [Repo](https://github.com/nol00p/Shoin) |
 | [slap](https://github.com/slap-editor/slap) | Sublime-like terminal-based text editor | JavaScript | 6.2k | [Repo](https://github.com/slap-editor/slap) |
 | [ttt](https://tttedit.dev/) | A terminal text editor IDE. A real alternative to VS Code, Zed, and Sublime that runs in your… | Go | 223 | [Repo](https://github.com/eugenioenko/ttt), [Website](https://tttedit.dev/) |
 | [vim](https://www.vim.org) | Vim is a greatly improved version of the good old UNIX editor Vi. | Vim Script | 40.9k | [Repo](https://github.com/vim/vim), [Website](https://www.vim.org) |
