@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-212-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-213-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -22,9 +22,9 @@
 
 <!-- TOOLS:START -->
 
-**212 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**213 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (20) · [Development Tools](#development-tools) (7) · [Networking](#networking) (21) · [Text Editors](#text-editors) (21) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (12) · [Data Processing](#data-processing) (28) · [Games & Fun](#games--fun) (7) · [AI](#ai) (7) · [Git](#git) (17) · [Utilities & Other](#utilities--other) (6)
+[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (8) · [Productivity](#productivity) (20) · [Development Tools](#development-tools) (7) · [Networking](#networking) (21) · [Text Editors](#text-editors) (21) · [Media & Entertainment](#media--entertainment) (23) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (13) · [Data Processing](#data-processing) (28) · [Games & Fun](#games--fun) (7) · [AI](#ai) (7) · [Git](#git) (17) · [Utilities & Other](#utilities--other) (6)
 
 ### File Management
 
@@ -227,6 +227,7 @@
 | [process-compose](https://f1bonacc1.github.io/process-compose/) | Process Compose is a simple and flexible scheduler and orchestrator to manage non-containerized… | Go | 2.7k | [Repo](https://github.com/F1bonacc1/process-compose), [Website](https://f1bonacc1.github.io/process-compose/) |
 | [reeve](https://yetidevworks.com/reeve) | A TUI based local web development stack for macOS and Linux. | Rust | 83 | [Repo](https://github.com/yetidevworks/reeve), [Website](https://yetidevworks.com/reeve) |
 | [sidekick](https://www.sidekickdeploy.com) | Bare metal to production ready in mins; your own fly server on your VPS. | Go | 7.6k | [Repo](https://github.com/mightymoud/sidekick), [Website](https://www.sidekickdeploy.com) |
+| [sofka](https://sofka.rs) | A reimagining of k9s with one generic object pipeline instead of a renderer per resource kind | Rust | – | [Repo](https://github.com/nklmilojevic/sofka/), [Website](https://sofka.rs) |
 
 ### Data Processing
 
