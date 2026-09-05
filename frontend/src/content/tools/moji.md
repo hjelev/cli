@@ -1,6 +1,6 @@
 ---
 name: moji
-category: Media & Entertainment
+category: Utilities & Other
 short_description: find and download fonts from the terminal
 description: >-
   Find the right font without leaving your terminal.  
@@ -39,10 +39,11 @@ tags:
 media: https://cli.masoko.net/uploads/moji/media.gif
 logo: >-
   https://raw.githubusercontent.com/Microck/moji/main/.github/assets/moji-logo.svg
-updated: '2026-08-10'
+updated: '2026-09-05'
+comments: []
 repo_stars: 246
-repo_updated: "2026-08-30"
-repo_created: "2026-07-10"
-repo_release: "v0.8.0"
-repo_release_date: "2026-08-30"
+repo_updated: '2026-08-30'
+repo_created: '2026-07-10'
+repo_release: v0.8.0
+repo_release_date: '2026-08-30'
 ---
