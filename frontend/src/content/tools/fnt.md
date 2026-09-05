@@ -40,4 +40,9 @@ tags:
 media: https://cli.masoko.net/uploads/fnt/media.png
 logo: https://avatars.githubusercontent.com/u/21078693?v=4
 updated: '2026-09-05'
+repo_stars: 637
+repo_updated: "2026-09-05"
+repo_created: "2021-02-03"
+repo_release: "1.9.1"
+repo_release_date: "2026-01-02"
 ---
