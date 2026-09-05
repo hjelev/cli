@@ -31,6 +31,7 @@ tags:
   - server
   - ssh
 media: https://raw.githubusercontent.com/alajmo/sake/main/res/output.gif
-logo: https://avatars.githubusercontent.com/u/5246600?v=4
+logo: https://sakecli.com/img/logo.svg
 updated: '2026-09-05'
+comments: []
 ---
