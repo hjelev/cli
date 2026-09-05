@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-217-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-218-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -22,9 +22,9 @@
 
 <!-- TOOLS:START -->
 
-**217 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**218 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (9) · [Productivity](#productivity) (20) · [Development Tools](#development-tools) (7) · [Networking](#networking) (21) · [Text Editors](#text-editors) (22) · [Media & Entertainment](#media--entertainment) (22) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (13) · [Data Processing](#data-processing) (28) · [Games & Fun](#games--fun) (7) · [AI](#ai) (7) · [Git](#git) (17) · [Utilities & Other](#utilities--other) (9)
+[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (9) · [Productivity](#productivity) (20) · [Development Tools](#development-tools) (7) · [Networking](#networking) (22) · [Text Editors](#text-editors) (22) · [Media & Entertainment](#media--entertainment) (22) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (13) · [Data Processing](#data-processing) (28) · [Games & Fun](#games--fun) (7) · [AI](#ai) (7) · [Git](#git) (17) · [Utilities & Other](#utilities--other) (9)
 
 ### File Management
 
@@ -130,6 +130,7 @@
 |------|-------------|----------|---------|-------|
 | [archivemount](https://github.com/cybernoid/archivemount) | A fuse filesystem for mounting archives in formats supported by libarchive. | C | 241 | [Repo](https://github.com/cybernoid/archivemount) |
 | [ATAC](https://atac.julien-cpsn.com/) | A simple API client (postman like) in your terminal | Rust | 3.7k | [Repo](https://github.com/Julien-cpsn/ATAC), [Website](https://atac.julien-cpsn.com/) |
+| [bmon](http://jafaral.github.io/bmon/) | bandwidth monitor and rate estimator | C | – | [Repo](https://github.com/Jafaral/bmon), [Website](http://jafaral.github.io/bmon/) |
 | [dnsglobe](https://github.com/514-labs/dnsglobe) | Global DNS propagation checker TUI — watch a DNS record propagate across 34 public resolvers… | Rust | 1.1k | [Repo](https://github.com/514-labs/dnsglobe) |
 | [dssh](https://dssh.grolmes.com) | The dead-simple SSH connection manager. CLI & TUI. | Go | 87 | [Repo](https://github.com/madLinux7/dssh), [Website](https://dssh.grolmes.com) |
 | [flow](https://github.com/programmersd21/flow) | 🌊 see your network breathe | Go | 447 | [Repo](https://github.com/programmersd21/flow) |
