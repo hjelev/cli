@@ -51,8 +51,8 @@ tags:
 media: https://github.com/jj-vcs/jj/raw/main/demos/git_compat.png
 logo: https://github.com/jj-vcs/jj/raw/main/docs/images/jj-logo.svg
 updated: '2026-08-21'
-repo_stars: 31741
-repo_updated: "2026-09-25"
+repo_stars: 31752
+repo_updated: "2026-09-26"
 repo_created: "2020-12-18"
 repo_release: "v0.45.1"
 repo_release_date: "2026-09-03"

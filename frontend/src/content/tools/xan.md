@@ -46,8 +46,8 @@ tags:
 media: https://github.com/medialab/xan/raw/master/docs/img/grid/view.png
 logo: https://avatars.githubusercontent.com/u/534856?s=200&v=4
 updated: '2026-08-18'
-repo_stars: 4526
-repo_updated: "2026-09-23"
+repo_stars: 4527
+repo_updated: "2026-09-25"
 repo_created: "2018-07-10"
 repo_release: "0.61.0"
 repo_release_date: "2026-09-11"
