@@ -69,7 +69,7 @@ tags:
 media: https://github.com/ajeetdsouza/zoxide/raw/main/contrib/tutorial.webp
 logo: https://avatars.githubusercontent.com/u/1777663?v=4
 updated: '2026-07-19'
-repo_stars: 39699
+repo_stars: 39711
 repo_updated: "2026-09-21"
 repo_created: "2020-03-05"
 repo_release: "v0.10.0"

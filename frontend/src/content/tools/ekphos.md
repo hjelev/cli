@@ -36,4 +36,9 @@ media: >-
   https://raw.githubusercontent.com/nostacks/ekphos/main/examples/ekphos-screenshot.png
 logo: https://avatars.githubusercontent.com/u/308344009?s=200&v=4
 updated: '2026-09-26'
+repo_stars: 1057
+repo_updated: "2026-09-23"
+repo_created: "2025-12-15"
+repo_release: "v0.50.20"
+repo_release_date: "2026-09-20"
 ---

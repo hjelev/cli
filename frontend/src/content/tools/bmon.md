@@ -37,7 +37,7 @@ tags:
 media: https://raw.githubusercontent.com/Jafaral/bmon/gh-pages/images/shot3.png
 logo: https://avatars.githubusercontent.com/u/10768078?v=4
 updated: '2026-09-05'
-repo_stars: 1392
+repo_stars: 1394
 repo_updated: "2026-09-19"
 repo_created: "2013-07-05"
 repo_release: "v5.0"
