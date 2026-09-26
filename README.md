@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-224-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-225-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -22,9 +22,9 @@
 
 <!-- TOOLS:START -->
 
-**224 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**225 tools** across **16 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (9) · [Productivity](#productivity) (20) · [Development Tools](#development-tools) (7) · [Networking](#networking) (23) · [Text Editors](#text-editors) (23) · [Media & Entertainment](#media--entertainment) (22) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (29) · [Games & Fun](#games--fun) (7) · [AI](#ai) (8) · [Git](#git) (17) · [Utilities & Other](#utilities--other) (10)
+[File Management](#file-management) (16) · [Shell History](#shell-history) (3) · [Directory Listing](#directory-listing) (13) · [System Monitoring](#system-monitoring) (9) · [Productivity](#productivity) (20) · [Development Tools](#development-tools) (7) · [Networking](#networking) (23) · [Text Editors](#text-editors) (24) · [Media & Entertainment](#media--entertainment) (22) · [Security](#security) (3) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (29) · [Games & Fun](#games--fun) (7) · [AI](#ai) (8) · [Git](#git) (17) · [Utilities & Other](#utilities--other) (10)
 
 ### File Management
 
@@ -163,6 +163,7 @@
 | [edit](https://github.com/microsoft/edit) | We all edit. | Rust | 14.6k | [Repo](https://github.com/microsoft/edit) |
 | [ekphos](https://ekphos.nostacks.xyz) | A lightweight, fast, terminal-based markdown research tool inspired by Obsidian | Rust | – | [Repo](https://github.com/nostacks/ekphos), [Website](https://ekphos.nostacks.xyz) |
 | [emacs](https://github.com/emacs-mirror/emacs) | GNU Emacs is an extensible, customizable, free/libre text editor — and more. | C | 5.2k | [Repo](https://github.com/emacs-mirror/emacs) |
+| [Flow Control](https://flow-control.dev) | Flow Control: a programmer's text editor | Zig | – | [Repo](https://github.com/neurocyte/flow), [Website](https://flow-control.dev) |
 | [fresh](https://getfresh.dev) | A powerful terminal text editor and IDE. | Rust | 9k | [Repo](https://github.com/sinelaw/fresh), [Website](https://getfresh.dev) |
 | [helix](https://helix-editor.com) | A post-modern modal text editor. | Rust | 46.3k | [Repo](https://github.com/helix-editor/helix), [Website](https://helix-editor.com) |
 | [kakoune](http://kakoune.org) | mawww's experiment for a better code editor | C++ | 11.1k | [Repo](https://github.com/mawww/kakoune), [Website](http://kakoune.org) |
