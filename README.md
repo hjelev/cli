@@ -290,7 +290,7 @@
 | [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | 40.8k | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
 | [lazyskills](https://lazyskills.sh) | mission control for agent skills | Go | 252 | [Repo](https://github.com/alvinunreal/lazyskills), [Website](https://lazyskills.sh) |
 | [opencode](https://opencode.ai) | The open source coding agent. | TypeScript | 210k | [Repo](https://github.com/anomalyco/opencode), [Website](https://opencode.ai) |
-| [YYLO CLI](https://yylo.dev) | A command-line orchestrator for coding agents, repeatable workflows, and receipt-backed repository… | Python | 60 | [Repo](https://github.com/yylo-dev/yylo), [Website](https://yylo.dev) |
+| [yylo](https://yylo.dev) | A command-line orchestrator for coding agents, repeatable workflows, and receipt-backed repository… | Python | 60 | [Repo](https://github.com/yylo-dev/yylo), [Website](https://yylo.dev) |
 
 ### Git
 
