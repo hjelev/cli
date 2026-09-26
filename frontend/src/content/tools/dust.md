@@ -34,12 +34,13 @@ tags:
   - cli
   - du-alternative
   - disk-usage
-media: https://github.com/bootandy/dust/raw/master/media/snap.png
+media: https://raw.githubusercontent.com/bootandy/dust/master/media/demo.gif
 logo: https://avatars.githubusercontent.com/u/311785?v=4
-updated: '2026-07-11'
+updated: '2026-09-26'
+comments: []
 repo_stars: 12365
-repo_updated: "2026-09-16"
-repo_created: "2018-03-16"
-repo_release: "v1.2.6"
-repo_release_date: "2026-09-16"
+repo_updated: '2026-09-16'
+repo_created: '2018-03-16'
+repo_release: v1.2.6
+repo_release_date: '2026-09-16'
 ---
