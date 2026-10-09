@@ -33,8 +33,8 @@ tags:
 media: https://raw.githubusercontent.com/zellij-org/zellij/main/assets/demo.gif
 logo: https://raw.githubusercontent.com/zellij-org/zellij/main/assets/logo.png
 updated: '2026-07-10'
-repo_stars: 35666
-repo_updated: "2026-10-07"
+repo_stars: 35685
+repo_updated: "2026-10-08"
 repo_created: "2020-09-01"
 repo_release: "v0.45.1"
 repo_release_date: "2026-08-28"

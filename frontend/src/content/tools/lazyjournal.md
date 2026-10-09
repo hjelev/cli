@@ -55,7 +55,7 @@ media: https://github.com/Lifailon/lazyjournal/raw/main/img/fuzzy.png
 logo: https://cli.masoko.net/uploads/lazyjournal/logo.png
 updated: '2026-07-13'
 repo_stars: 1418
-repo_updated: "2026-08-01"
+repo_updated: "2026-10-08"
 repo_created: "2024-11-12"
 repo_release: "0.8.6"
 repo_release_date: "2026-03-16"

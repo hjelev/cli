@@ -31,7 +31,7 @@ media: >-
   https://raw.githubusercontent.com/nol00p/Shoin/refs/heads/main/examples/images/shoin.png
 logo: https://avatars.githubusercontent.com/u/63861454?v=4
 updated: '2026-09-05'
-repo_stars: 55
+repo_stars: 54
 repo_updated: "2026-10-03"
 repo_created: "2026-08-28"
 repo_release: "v0.1.6"

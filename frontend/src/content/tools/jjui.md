@@ -44,7 +44,7 @@ tags:
 media: https://idursun.github.io/jjui/gifs/jjui_details_split.gif
 logo: https://avatars.githubusercontent.com/u/103216?v=4
 updated: '2026-08-21'
-repo_stars: 2196
+repo_stars: 2197
 repo_updated: "2026-10-03"
 repo_created: "2024-09-08"
 repo_release: "v0.10.11"
