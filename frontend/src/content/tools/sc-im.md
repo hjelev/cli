@@ -30,7 +30,7 @@ media: >-
   https://raw.githubusercontent.com/andmarti1424/sc-im/main/screenshots/scim-plot-graph.gif
 logo: https://raw.githubusercontent.com/andmarti1424/sc-im/dev/logo.png
 updated: '2026-09-26'
-repo_stars: 5707
+repo_stars: 5708
 repo_updated: "2026-09-24"
 repo_created: "2014-10-30"
 repo_release: "v0.8.5"
