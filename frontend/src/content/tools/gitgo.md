@@ -38,6 +38,6 @@ tags:
   - automation
   - productivity
 media: https://cli.masoko.net/uploads/gitgo/media.gif
-logo: https://cli.masoko.net/uploads/gitgo/logo.png
-updated: '2026-09-25'
+updated: '2026-10-23'
+comments: []
 ---
