@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import BrowseLinks from '../../components/BrowseLinks.astro';
 import { ALTERNATIVES } from '../../lib/guides';
 import { pageTitle } from '../../lib/seo';
+import TileIcon from '../../components/TileIcon.astro';
 ---
 
 <BaseLayout
@@ -18,16 +19,19 @@ import { pageTitle } from '../../lib/seo';
 		<BrowseLinks current="alternatives" />
 	</header>
 
-	<ul class="dir-grid">
+	<ul class="dir-grid tile-grid">
 		{
 			ALTERNATIVES.map((guide) => (
 				<li>
 					<a href={`/alternatives/${guide.slug}/`}>
-						<span class="dir-head">
-							<span class="dir-name">{guide.replaces}</span>
-							<span class="count">{guide.tools.length}</span>
+						<TileIcon kind="alternative" slug={guide.slug} />
+						<span class="tile-text">
+							<span class="dir-head">
+								<span class="dir-name">{guide.replaces}</span>
+								<span class="count">{guide.tools.length}</span>
+							</span>
+							<span class="dir-desc" title={guide.intro}>{guide.intro}</span>
 						</span>
-						<span class="dir-desc" title={guide.intro}>{guide.intro}</span>
 					</a>
 				</li>
 			))

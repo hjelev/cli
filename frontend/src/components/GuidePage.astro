@@ -29,8 +29,8 @@ const reservedSlugs = getReservedSlugs(allTools);
 	backHref={`/${section}/`}
 	breadcrumb={[{ label: `${section}/`, href: `/${section}/` }, { label: guide.slug }]}
 >
-	<header class:list={['hero', { 'tile-hero': section === 'collections' }]}>
-		{section === 'collections' && <TileIcon kind="collection" slug={guide.slug} size={88} />}
+	<header class="hero tile-hero">
+		<TileIcon kind={section === 'collections' ? 'collection' : 'alternative'} slug={guide.slug} size={88} />
 		<div>
 			<h1>{guide.title}</h1>
 			<p class="entity-description">{guide.intro}</p>

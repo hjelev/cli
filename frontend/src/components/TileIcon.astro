@@ -1,15 +1,15 @@
 ---
-import { CATEGORY_ICONS, COLLECTION_ICONS, FALLBACK_ICON, TILE_FRAME } from '../lib/tile-icons';
+import { ALTERNATIVE_ICONS, CATEGORY_ICONS, COLLECTION_ICONS, FALLBACK_ICON, TILE_FRAME } from '../lib/tile-icons';
 
-// A 64x64 illustrated tile for a collection or category (see lib/tile-icons.ts).
+// A 64x64 illustrated tile for a collection, alternative or category (see lib/tile-icons.ts).
 interface Props {
-	kind: 'collection' | 'category';
+	kind: 'collection' | 'alternative' | 'category';
 	slug: string;
 	size?: number;
 }
 
 const { kind, slug, size = 64 } = Astro.props;
-const icons = kind === 'collection' ? COLLECTION_ICONS : CATEGORY_ICONS;
+const icons = { collection: COLLECTION_ICONS, alternative: ALTERNATIVE_ICONS, category: CATEGORY_ICONS }[kind];
 ---
 
 <svg
