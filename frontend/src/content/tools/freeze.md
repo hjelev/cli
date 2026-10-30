@@ -31,7 +31,7 @@ tags:
 media: https://cli.masoko.net/uploads/freeze/media.gif
 logo: https://stuff.charm.sh/freeze/freeze-4k.png
 updated: '2026-10-29'
-repo_stars: 4899
+repo_stars: 4900
 repo_updated: "2026-09-16"
 repo_created: "2024-01-10"
 repo_release: "v0.2.2"

@@ -40,7 +40,7 @@ media: https://cli.masoko.net/uploads/moji/media.gif
 logo: >-
   https://raw.githubusercontent.com/Microck/moji/main/.github/assets/moji-logo.svg
 updated: '2026-09-05'
-repo_stars: 257
+repo_stars: 258
 repo_updated: "2026-10-20"
 repo_created: "2026-07-10"
 repo_release: "v0.8.0"

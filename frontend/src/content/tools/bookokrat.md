@@ -32,7 +32,7 @@ tags:
 media: https://bugzmanov.github.io/bookokrat/epub_demo_720p.mp4
 logo: https://bugzmanov.github.io/bookokrat/favicon.svg
 updated: '2026-07-18'
-repo_stars: 1261
+repo_stars: 1264
 repo_updated: "2026-10-21"
 repo_created: "2025-10-28"
 repo_release: "v0.3.14"

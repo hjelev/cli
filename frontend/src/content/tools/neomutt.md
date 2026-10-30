@@ -55,7 +55,7 @@ media: >-
   https://user-images.githubusercontent.com/5733531/87884539-35786d80-c9e5-11ea-8b4e-c0b0e32f8cde.png
 logo: https://neomutt.org/images/mutt-48x48.png
 updated: '2026-10-24'
-repo_stars: 3857
+repo_stars: 3859
 repo_updated: "2026-10-27"
 repo_created: "2015-12-21"
 repo_release: "20260616"

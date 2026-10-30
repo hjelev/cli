@@ -32,7 +32,7 @@ tags:
 media: https://raw.githubusercontent.com/webstonehq/tuxedo/main/docs/demo.gif
 logo: https://avatars.githubusercontent.com/u/80186622?s=200&v=4
 updated: '2026-10-17'
-repo_stars: 1890
+repo_stars: 1892
 repo_updated: "2026-10-26"
 repo_created: "2026-05-07"
 repo_release: "v2026.8.1"

@@ -44,7 +44,7 @@ github_stars: 3669
 github_updated: "2026-03-09"
 github_created: "2024-02-05"
 github_release: "v0.23.0"
-repo_stars: 3743
+repo_stars: 3746
 repo_updated: "2026-10-19"
 repo_created: "2024-02-05"
 repo_release: "v0.24.0"

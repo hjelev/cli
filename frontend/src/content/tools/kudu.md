@@ -27,5 +27,10 @@ tags:
 media: https://vhs.charm.sh/vhs-ZWwzVXQeM183nMda585zA.gif
 logo: https://avatars.githubusercontent.com/u/57548585?v=4
 updated: '2026-10-30'
+repo_stars: 202
+repo_updated: "2026-10-30"
+repo_created: "2026-07-27"
+repo_release: "v0.4.2"
+repo_release_date: "2026-10-10"
 comments: []
 ---

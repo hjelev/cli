@@ -34,7 +34,7 @@ media: https://github.com/prjctimg/gtm/raw/dev/screenshots/1.png
 logo: https://cli.masoko.net/uploads/gtm/logo.png
 updated: '2026-10-22'
 repo_stars: 63
-repo_updated: "2026-10-28"
+repo_updated: "2026-10-30"
 repo_created: "2026-06-30"
 repo_release: "v0.2.96"
 repo_release_date: "2026-10-25"
