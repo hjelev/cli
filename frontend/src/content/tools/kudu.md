@@ -8,7 +8,6 @@ description: >-
   alternative to GUIs like virt-manager or GNOME boxes and as opposed to these,
   it does not rely on libvirt.
 repository_url: https://github.com/pythops/kudu
-website: https://github.com/pythops/kudu
 author: pythops
 license: GPL-3.0
 language: Rust
@@ -26,5 +25,7 @@ tags:
   - rust
   - virtualization
 media: https://vhs.charm.sh/vhs-ZWwzVXQeM183nMda585zA.gif
+logo: https://avatars.githubusercontent.com/u/57548585?v=4
 updated: '2026-10-30'
+comments: []
 ---
