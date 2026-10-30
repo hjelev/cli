@@ -408,7 +408,7 @@
 |------|-------------|----------|---------|-------|
 | [fnt](https://github.com/alexmyczko/fnt) | apt for fonts, the missing font manager for macOS/linux | Shell | 650 | [Repo](https://github.com/alexmyczko/fnt) |
 | [gum](https://github.com/charmbracelet/gum) | A tool for glamorous shell scripts 🎀 | Go | 24.5k | [Repo](https://github.com/charmbracelet/gum) |
-| [kudu](https://github.com/pythops/kudu) | 📦 TUI VM Manager on Linux | Rust | – | [Repo](https://github.com/pythops/kudu), [Website](https://github.com/pythops/kudu) |
+| [kudu](https://github.com/pythops/kudu) | 📦 TUI VM Manager on Linux | Rust | – | [Repo](https://github.com/pythops/kudu) |
 | [miru](https://blog.vaishnavs.is-a.dev/miru/) | Zooming daemon for wayland | C | 12 | [Repo](https://codeberg.org/Vaishnav-Sabari-Girish/miru), [Website](https://blog.vaishnavs.is-a.dev/miru/) |
 | [moji](https://moji.micr.dev/docs) | find and download fonts from the terminal | Go | 257 | [Repo](https://github.com/Microck/moji), [Website](https://moji.micr.dev/docs) |
 | [sauva](https://lusingander.github.io/sauva/) | Terminal Unicode Explorer 🪄 | Rust | 105 | [Repo](https://github.com/lusingander/sauva), [Website](https://lusingander.github.io/sauva/) |
