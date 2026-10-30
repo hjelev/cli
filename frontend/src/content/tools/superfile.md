@@ -1,16 +1,20 @@
 ---
-updated: '2026-07-02'
 name: superfile
 category: File Management
 short_description: Pretty fancy and modern terminal file manager
-description: >- 
-  Superfile is a highly customizable, modern terminal-based file manager written in Go that focuses on providing a visually appealing and intuitive user interface. 
-  
+description: >-
+  Superfile is a highly customizable, modern terminal-based file manager written
+  in Go that focuses on providing a visually appealing and intuitive user
+  interface. 
 
-  It features multiple interactive panels for simultaneous directory viewing, alongside extensive configuration options that allow users to easily personalize their themes and hotkeys. 
-  
 
-  The project is open-source, actively maintained on GitHub, and designed to be compatible with Linux, macOS, and Windows operating systems.
+  It features multiple interactive panels for simultaneous directory viewing,
+  alongside extensive configuration options that allow users to easily
+  personalize their themes and hotkeys. 
+
+
+  The project is open-source, actively maintained on GitHub, and designed to be
+  compatible with Linux, macOS, and Windows operating systems.
 repository_url: https://github.com/yorukot/superfile
 website: https://superfile.dev
 author: yorukot
@@ -21,6 +25,13 @@ installation:
     command: winget install --id yorukot.superfile
   - method: script
     command: bash -c "$(curl -sLo- https://superfile.dev/install.sh)"
+  - method: scoop
+    command: scoop install superfile
+  - method: powershell
+    command: >-
+      powershell -ExecutionPolicy Bypass -Command "Invoke-Expression
+      ((New-Object
+      System.Net.WebClient).DownloadString('https://superfile.dev/install.ps1'))"
 platforms:
   - Linux
   - macOS
@@ -40,9 +51,11 @@ tags:
   - hacktoberfest
 media: https://superfile.dev/_astro/demo.CvzVaHej_28nrJ.webp
 logo: https://superfile.dev/logo.svg
+updated: '2026-10-30'
+comments: []
 repo_stars: 23975
-repo_updated: "2026-10-30"
-repo_created: "2024-03-19"
-repo_release: "v1.6.0"
-repo_release_date: "2026-06-07"
+repo_updated: '2026-10-30'
+repo_created: '2024-03-19'
+repo_release: v1.6.0
+repo_release_date: '2026-06-07'
 ---
