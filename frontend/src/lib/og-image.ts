@@ -3,6 +3,7 @@ import { createRequire } from 'node:module';
 import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
 import { truncate } from './seo';
+import { stripEmoji } from './text';
 
 // Build-time renderer for per-page 1200×630 share cards. Mirrors the look of
 // public/og-image.png (terminal window, title bar, vim-style statusline) so a
@@ -76,9 +77,6 @@ export interface OgCard {
 }
 
 // The embedded font only covers Latin; drop emoji so they don't render as tofu.
-const stripEmoji = (text: string) =>
-	text.replace(/[\p{Extended_Pictographic}\u{FE0F}\u{200D}]/gu, '').replace(/\s+/g, ' ').trim();
-
 export async function renderOgImage(card: OgCard): Promise<Buffer> {
 	const title = truncate(stripEmoji(card.title), 40);
 	const titleSize = title.length > 26 ? 64 : title.length > 14 ? 84 : 104;

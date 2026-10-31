@@ -63,7 +63,7 @@ const youTubeId = data.media ? getYouTubeId(data.media) : undefined;
 ---
 
 <BaseLayout
-	title={toolTitle(data.name, data.short_description)}
+	title={toolTitle(tool)}
 	description={toolDescription(tool)}
 	ogImage={`/og/tools/${tool.id}.png`}
 	ogType="article"

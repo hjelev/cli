@@ -43,8 +43,8 @@ export const ALTERNATIVES: Alternative[] = [
 	{
 		slug: 'du',
 		replaces: 'du / df',
-		title: 'Modern alternatives to du and df',
-		intro: 'See where your disk space went: visual, sorted and fast disk-usage tools for the terminal.',
+		title: 'Disk usage analyzers: modern alternatives to du and df',
+		intro: 'See where your disk space went: visual, sorted and fast disk usage analyzers for the terminal, from interactive TUIs like gdu to one-shot trees like dust.',
 		tools: ['dust', 'gdu', 'duf', 'parallel-disk-usage', 'dutree'],
 	},
 	{
@@ -92,8 +92,8 @@ export const ALTERNATIVES: Alternative[] = [
 	{
 		slug: 'tmux',
 		replaces: 'tmux',
-		title: 'Alternatives to tmux',
-		intro: 'Terminal multiplexers and workspaces: split panes, persistent sessions and layouts.',
+		title: 'Alternatives to tmux, including tmux for Windows',
+		intro: 'Terminal multiplexers and workspaces: split panes, persistent sessions and layouts, including psmux, a native tmux for Windows PowerShell and cmd.',
 		tools: ['zellij', 'byobu', 'psmux'],
 	},
 	{
@@ -113,8 +113,8 @@ export const ALTERNATIVES: Alternative[] = [
 	{
 		slug: 'excel',
 		replaces: 'Excel',
-		title: 'Terminal alternatives to Excel',
-		intro: 'Spreadsheets and tabular-data viewers for CSV, TSV and XLSX files, right in the terminal.',
+		title: 'TUI CSV viewers and terminal alternatives to Excel',
+		intro: 'TUI spreadsheets and CSV viewers: open, sort, filter and query CSV, TSV and XLSX files right in the terminal.',
 		tools: ['visidata', 'sc-im', 'tabiew', 'csvlens', 'sheets', 'xleak'],
 	},
 	{
@@ -141,8 +141,8 @@ export const ALTERNATIVES: Alternative[] = [
 	{
 		slug: 'wireshark',
 		replaces: 'Wireshark',
-		title: 'Terminal alternatives to Wireshark',
-		intro: 'Capture, inspect and analyze network packets and connections from a TUI instead of a desktop app.',
+		title: 'Wireshark TUIs: terminal alternatives to Wireshark',
+		intro: 'Capture, inspect and analyze network packets and connections from a TUI instead of a desktop app — works over SSH on headless servers.',
 		tools: ['termshark', 'kyanos', 'rustnet'],
 	},
 	{
@@ -162,8 +162,8 @@ export const ALTERNATIVES: Alternative[] = [
 	{
 		slug: 'tail',
 		replaces: 'tail -f / less',
-		title: 'Better log viewers than tail and less',
-		intro: 'Follow, filter and search logs from files, journald and remote hosts with highlighting, timelines and queries.',
+		title: 'Terminal log viewers: better than tail and less',
+		intro: 'TUI log viewers that follow, filter and search logs from files, journald and remote hosts with highlighting, timelines and queries.',
 		tools: ['lnav', 'lazyjournal', 'nerdlog', 'goaccess'],
 	},
 ];
@@ -178,7 +178,7 @@ export const COLLECTIONS: Guide[] = [
 	{
 		slug: 'tui-git-clients',
 		title: 'TUI git clients',
-		intro: 'Stage, commit, branch and browse history from a terminal UI instead of a GUI.',
+		intro: 'Stage, commit, branch and browse history from a terminal UI instead of a GUI, plus jjui for Jujutsu (jj) users.',
 		tools: ['lazygit', 'gitui', 'gitu', 'grv', 'gitwig', 'jjui', 'forgit', 'diffnav'],
 	},
 	{
@@ -252,6 +252,18 @@ export const COLLECTIONS: Guide[] = [
 		title: 'GitHub and GitLab from the terminal',
 		intro: 'Work with pull requests, issues, Actions and repositories on GitHub and GitLab without opening a browser.',
 		tools: ['gh', 'glab', 'gh-enhance', 'ghgrab', 'drydock'],
+	},
+	{
+		slug: 'terminal-text-editors',
+		title: 'Terminal text editors',
+		intro: 'Every text editor in the index that runs in a terminal: modal editors like vim and helix, nano-style editors like micro, and full TUI IDEs like croft and fresh.',
+		tools: ['neovim', 'vim', 'helix', 'micro', 'edit', 'emacs', 'kakoune', 'fresh', 'ox', 'croft', 'kibi', 'amp', 'orbiton', 'pnana', 'slap', 'ttt', 'cleecode', 'termide', 'toast', 'kiwi', 'ad'],
+	},
+	{
+		slug: 'windows-cli-tools',
+		title: 'CLI and TUI tools for Windows',
+		intro: 'Terminal tools that run natively on Windows and install with winget, scoop or choco — for PowerShell, Windows Terminal and cmd, no WSL needed.',
+		tools: ['psmux', 'cloc', 'dust', 'bat', 'fzf', 'ripgrep', 'zoxide', 'eza', 'delta', 'micro', 'edit', 'helix', 'glow', 'lazygit', 'gh', 'glab', 'jjui', 'onefetch', 'yazi', 'superfile', 'mpv', 'csvlens', 'hyperfine', 'fastfetch', 'k9s', 'lazydocker'],
 	},
 ];
 
