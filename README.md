@@ -20,9 +20,21 @@
 
 <!-- HEADER:END -->
 
+## Features
+
+- **Search & filters** — relevance-ranked search across every listing, filters for category and language, sorting by recently updated or most stars, and a **verified only** view. The filter state lives in the URL, so you can share results.
+- **Rich tool pages** — screenshots and demo videos, install commands for each method (cargo, brew, apt, …), supported platforms, and related tools.
+- **Live GitHub stats** — stars, last push, repo age and latest release are synced daily from GitHub and Codeberg.
+- **Browse by** [categories](https://cli.masoko.net/categories/), [tags](https://cli.masoko.net/tags/) and [languages](https://cli.masoko.net/languages/).
+- **Guides** — [modern alternatives](https://cli.masoko.net/alternatives/) to classic commands and apps (`ls`, `grep`, `top`, `vim`, `tmux`, Postman, Spotify, …), plus curated [collections](https://cli.masoko.net/collections/) such as Modern Unix, TUI Git clients, AI coding agents and Kubernetes TUIs.
+- **Comments** — sign in with GitHub to leave a comment on any tool page.
+- **Community submissions & edits** — add a new tool or suggest changes to an existing listing from the site. Your GitHub account opens the pull request, with no bot in between.
+- **README badge & verified listings** — every tool page has a "listed on The Terminal Index" badge you can copy. When a tool's README links back, the listing is marked **✓ verified** and shown first on category, tag and language pages.
+- **Feeds & data** — an [RSS feed](https://cli.masoko.net/rss.xml) of newly added and updated tools, and a JSON dump of the full directory at [`/api/tools.json`](https://cli.masoko.net/api/tools.json).
+
 <!-- TOOLS:START -->
 
-**274 tools** across **23 categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).
+**274 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
 [File Management](#file-management) (20) · [Directory Listing](#directory-listing) (9) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (18) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (10) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (12) · [Development Tools](#development-tools) (15) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (26) · [Email & Messaging](#email--messaging) (8) · [Text Editors](#text-editors) (22) · [Music & Audio](#music--audio) (15) · [Media & Entertainment](#media--entertainment) (9) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (18) · [Logs](#logs) (6) · [Games & Fun](#games--fun) (8) · [AI](#ai) (8) · [Utilities & Other](#utilities--other) (7)
 

@@ -81,7 +81,7 @@ const toc = [...byCategory.entries()]
 	.join(' · ');
 
 const intro = [
-	`**${tools.length} tools** across **${byCategory.size} categories** — browse with screenshots, ratings and comments at [cli.masoko.net](https://cli.masoko.net).`,
+	`**${tools.length} tools** across **${byCategory.size} categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).`,
 	'',
 	toc,
 ].join('\n');

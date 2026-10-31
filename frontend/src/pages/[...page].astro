@@ -323,7 +323,7 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 				const matchesVerified = !verifiedOnly || tool.verified;
 				return matchesQuery && matchesCategory && matchesLanguage && matchesVerified;
 			});
-			// The index is already in listing order (verified, then recently updated); only stars needs a re-sort.
+			// The index is already in recently-updated order; only stars needs a re-sort.
 			// With a query, rank by relevance first; the stable sort keeps the chosen order within a tier.
 			if (sortByStars) matches.sort((a, b) => (b.stars ?? -1) - (a.stars ?? -1));
 			if (query) matches.sort((a, b) => relevance(b, query) - relevance(a, query));
