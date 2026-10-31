@@ -39,7 +39,7 @@ tags:
 media: https://raw.githubusercontent.com/Adembc/lazyssh/main/docs/list%20server.png
 logo: https://raw.githubusercontent.com/Adembc/lazyssh/main/docs/logo.png
 updated: '2026-10-25'
-repo_stars: 3998
+repo_stars: 3999
 repo_updated: "2025-10-09"
 repo_created: "2025-08-13"
 repo_release: "v0.3.0"

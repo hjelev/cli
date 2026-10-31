@@ -43,7 +43,7 @@ logo: >-
   https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/960px-Vimlogo.svg.png
 updated: '2026-08-10'
 repo_stars: 41179
-repo_updated: "2026-10-30"
+repo_updated: "2026-10-31"
 repo_created: "2015-08-18"
 repo_release: "v9.2.1254"
 repo_release_date: "2026-10-30"

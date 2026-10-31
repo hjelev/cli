@@ -21,8 +21,8 @@ platforms: [Linux, macOS]
 tags: [tui, history, ai-agent-monitoring, shell-history, shell, rust, zsh, fish, bash]
 logo: "https://avatars.githubusercontent.com/u/122059230?s=48&v=4"
 media: "https://raw.githubusercontent.com/atuinsh/atuin/main/demo.gif"
-repo_stars: 32154
-repo_updated: "2026-10-30"
+repo_stars: 32156
+repo_updated: "2026-10-31"
 repo_created: "2020-10-04"
 repo_release: "v18.24.4"
 repo_release_date: "2026-10-30"

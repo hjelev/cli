@@ -85,7 +85,7 @@
 | [chezmoi](https://www.chezmoi.io) | Manage your dotfiles across multiple diverse machines, securely. | Go | 22.1k | [Repo](https://github.com/twpayne/chezmoi), [Website](https://www.chezmoi.io) |
 | [flyline](https://github.com/HalFrgrd/flyline) | Flyline: a Bash plugin to replace readline for a modern line editing experience: syntax… | Rust | 1.4k | [Repo](https://github.com/HalFrgrd/flyline) |
 | [fzf](https://junegunn.github.io/fzf) | 🌸 A command-line fuzzy finder | Go | 83.9k | [Repo](https://github.com/junegunn/fzf), [Website](https://junegunn.github.io/fzf) |
-| [ghostty-config](https://github.com/Vitruves/ghostty-config) | TUI for Ghostty terminal customization | Go | 151 | [Repo](https://github.com/Vitruves/ghostty-config) |
+| [ghostty-config](https://github.com/Vitruves/ghostty-config) | TUI for Ghostty terminal customization | Go | 152 | [Repo](https://github.com/Vitruves/ghostty-config) |
 | [hoard](https://hyde46.github.io/hoard/) | cli command organizer written in rust | Rust | 660 | [Repo](https://github.com/Hyde46/hoard), [Website](https://hyde46.github.io/hoard/) |
 | [inshellisense](https://github.com/microsoft/inshellisense) | IDE style command line auto complete | TypeScript | 10.7k | [Repo](https://github.com/microsoft/inshellisense) |
 | [mcfly](https://github.com/cantino/mcfly) | Fly through your shell history. Great Scott! | Rust | 7.8k | [Repo](https://github.com/cantino/mcfly) |
@@ -145,7 +145,7 @@
 | [ekphos](https://ekphos.nostacks.xyz) | A lightweight, fast, terminal-based markdown research tool inspired by Obsidian | Rust | 1.1k | [Repo](https://github.com/nostacks/ekphos), [Website](https://ekphos.nostacks.xyz) |
 | [emeraldian](https://emeraldian-tui.github.io) | A terminal UI for your Obsidian vault: live-preview notes, backlinks, images, a force-directed… | Rust | 545 | [Repo](https://github.com/iamrohithrnair/emeraldian), [Website](https://emeraldian-tui.github.io) |
 | [glow](https://github.com/charmbracelet/glow) | Render markdown on the CLI, with pizzazz! 💅🏻 | Go | 27.9k | [Repo](https://github.com/charmbracelet/glow) |
-| [lazymark](https://github.com/MathiasDrizzy/lazymark) | Lazy markdown notes, tasks and a Kanban board in your terminal. With a sleepy sloth. | Go | 101 | [Repo](https://github.com/MathiasDrizzy/lazymark) |
+| [lazymark](https://github.com/MathiasDrizzy/lazymark) | Lazy markdown notes, tasks and a Kanban board in your terminal. With a sleepy sloth. | Go | 102 | [Repo](https://github.com/MathiasDrizzy/lazymark) |
 | [nb](https://xwmx.github.io/nb) | CLI and local web plain text note‑taking, bookmarking, and archiving with linking, tagging,… | Shell | 8.5k | [Repo](https://github.com/xwmx/nb), [Website](https://xwmx.github.io/nb) |
 | [rayomd](https://butterski.github.io/rayomd-website/) | Markdown to PDF in under a millisecond: one small native binary, no browser, LaTeX or Pandoc. | C++ | 21 | [Repo](https://github.com/Butterski/rayomd), [Website](https://butterski.github.io/rayomd-website/) |
 | [Shoin](https://github.com/nol00p/Shoin) | A no-clutter terminal Markdown editor. Modal editing, Obsidian-style live formatting, an iA Writer… | Rust | 68 | [Repo](https://github.com/nol00p/Shoin) |
@@ -277,7 +277,7 @@
 | [slap](https://github.com/slap-editor/slap) | Sublime-like terminal-based text editor | JavaScript | 6.2k | [Repo](https://github.com/slap-editor/slap) |
 | [termide](https://termide.github.io) | All-in-one terminal workspace for desktops and servers: editor with LSP, file manager with… | Rust | 183 | [Repo](https://github.com/termide/termide), [Website](https://termide.github.io) |
 | [toast](https://paradise-runner.github.io/toast/) | a batteries-included, beautiful, in-terminal IDE | Go | 284 | [Repo](https://github.com/paradise-runner/toast), [Website](https://paradise-runner.github.io/toast/) |
-| [ttt](https://tttedit.dev/) | A terminal text editor IDE. A real alternative to VS Code, Zed, and Sublime that runs in your… | Go | 987 | [Repo](https://github.com/eugenioenko/ttt), [Website](https://tttedit.dev/) |
+| [ttt](https://tttedit.dev/) | A terminal text editor IDE. A real alternative to VS Code, Zed, and Sublime that runs in your… | Go | 991 | [Repo](https://github.com/eugenioenko/ttt), [Website](https://tttedit.dev/) |
 | [vim](https://www.vim.org) | Vim is a greatly improved version of the good old UNIX editor Vi. | Vim Script | 41.2k | [Repo](https://github.com/vim/vim), [Website](https://www.vim.org) |
 
 ### Music & Audio
@@ -291,7 +291,7 @@
 | [lyrtui](http://masoko.net/lyrtui/) | Fast and good looking TUI for Lyrion Music Server | Rust | 27 | [Repo](https://github.com/hjelev/lyrtui), [Website](http://masoko.net/lyrtui/) |
 | [mocp](http://moc.daper.net) | Music On Console Player | C | 431 | [Repo](https://github.com/jonsafari/mocp), [Website](http://moc.daper.net) |
 | [musikcube](https://musikcube.com) | a cross-platform, terminal-based music player, audio engine, metadata indexer, and server in c++ | C++ | 4.9k | [Repo](https://github.com/clangen/musikcube), [Website](https://musikcube.com) |
-| [Myx](https://github.com/HaseebKhalid1507/Myx) | Spotify player for the terminal. With reactive themes. | Rust | 262 | [Repo](https://github.com/HaseebKhalid1507/Myx) |
+| [Myx](https://github.com/HaseebKhalid1507/Myx) | Spotify player for the terminal. With reactive themes. | Rust | 263 | [Repo](https://github.com/HaseebKhalid1507/Myx) |
 | [NoctaVox](https://github.com/Jaxx497/NoctaVox) | Local TUI Music Player | Rust | 382 | [Repo](https://github.com/Jaxx497/NoctaVox) |
 | [rmpc](https://rmpc.mierak.dev) | A modern, configurable, terminal based MPD Client with album art support via various terminal image… | Rust | 3.5k | [Repo](https://github.com/mierak/rmpc), [Website](https://rmpc.mierak.dev) |
 | [spotatui](https://spotatui.com) | A fast, standalone terminal music player in Rust: native Spotify streaming plus local, Subsonic,… | Rust | 1.8k | [Repo](https://github.com/LargeModGames/spotatui), [Website](https://spotatui.com) |
@@ -307,11 +307,11 @@
 | [ditto](https://github.com/arvingarciabtw/ditto) | a system-wide ascii keyboard visualizer in the terminal | Go | 128 | [Repo](https://github.com/arvingarciabtw/ditto) |
 | [freeze](https://github.com/charmbracelet/freeze) | Generate images of code and terminal output 📸 | Go | 4.9k | [Repo](https://github.com/charmbracelet/freeze) |
 | [kari](https://github.com/Dhairya3391/kari) | Kari just a tui for getting media from providers and playing it in your media player with nice to… | Go | 62 | [Repo](https://github.com/Dhairya3391/kari), [Website](https://github.com/Dhairya3391/kari) |
-| [linecast](https://terminaltrove.com/linecast/) | Weather, tides, the sun, the moon, and maps, in your terminal. The Old Farmer's Almanac meets… | Python | 652 | [Repo](https://github.com/ashuttl/linecast), [Website](https://terminaltrove.com/linecast/) |
+| [linecast](https://terminaltrove.com/linecast/) | Weather, tides, the sun, the moon, and maps, in your terminal. The Old Farmer's Almanac meets… | Python | 653 | [Repo](https://github.com/ashuttl/linecast), [Website](https://terminaltrove.com/linecast/) |
 | [mapscii](https://github.com/rastapasta/mapscii) | 🗺 MapSCII is a Braille & ASCII world map renderer for your console. | JavaScript | 9.3k | [Repo](https://github.com/rastapasta/mapscii) |
 | [mpv](https://mpv.io) | 🎥 Command line media player | C | 37.6k | [Repo](https://github.com/mpv-player/mpv), [Website](https://mpv.io) |
-| [Terrascope](https://pypi.org/project/terrascope/) | Braille-rendered terminal world map with live weather, aircraft, earthquakes, and day/night layers. | Python | 371 | [Repo](https://github.com/a-shygun/Terrascope), [Website](https://pypi.org/project/terrascope/) |
-| [waxon](https://waxon.danfry.dev) | A vim-modal Spotify client for the terminal | Go | 57 | [Repo](https://github.com/danfry1/waxon), [Website](https://waxon.danfry.dev) |
+| [Terrascope](https://pypi.org/project/terrascope/) | Braille-rendered terminal world map with live weather, aircraft, earthquakes, and day/night layers. | Python | 373 | [Repo](https://github.com/a-shygun/Terrascope), [Website](https://pypi.org/project/terrascope/) |
+| [waxon](https://waxon.danfry.dev) | A vim-modal Spotify client for the terminal | Go | 58 | [Repo](https://github.com/danfry1/waxon), [Website](https://waxon.danfry.dev) |
 | [weathr](https://github.com/veirt/weathr) | a terminal weather app with ascii animation | Rust | 3.1k | [Repo](https://github.com/veirt/weathr) |
 
 ### Security
@@ -348,7 +348,7 @@
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
 | [csvlens](https://github.com/YS-L/csvlens) | Command line csv viewer | Rust | 4k | [Repo](https://github.com/YS-L/csvlens) |
-| [dbdelve](https://dbdelve.github.io/) | Fast and lightweight DB Client made in Rust and GPUI. | Rust | 623 | [Repo](https://github.com/ShayanAbbas1/dbdelve), [Website](https://dbdelve.github.io/) |
+| [dbdelve](https://dbdelve.github.io/) | Fast and lightweight DB Client made in Rust and GPUI. | Rust | 626 | [Repo](https://github.com/ShayanAbbas1/dbdelve), [Website](https://dbdelve.github.io/) |
 | [fx](https://fx.wtf) | Terminal JSON viewer & processor | Go | 20.7k | [Repo](https://github.com/antonmedv/fx), [Website](https://fx.wtf) |
 | [harlequin](https://harlequin.sh) | The SQL IDE for Your Terminal. | Python | 6.5k | [Repo](https://github.com/tconbeer/harlequin), [Website](https://harlequin.sh) |
 | [jnv](https://github.com/ynqa/jnv) | Interactive JSON filter using jq | Rust | 6.1k | [Repo](https://github.com/ynqa/jnv) |
@@ -398,7 +398,7 @@
 | [Bosun](https://yetidevworks.com/bosun) | Tmux-native orchestrator for AI agent sessions. | Rust | 47 | [Repo](https://github.com/yetidevworks/bosun), [Website](https://yetidevworks.com/bosun) |
 | [codex](https://github.com/openai/codex) | Lightweight coding agent that runs in your terminal | Rust | 132k | [Repo](https://github.com/openai/codex) |
 | [crush](https://github.com/charmbracelet/crush) | Glamourous agentic coding for all 💘 | Go | 28.9k | [Repo](https://github.com/charmbracelet/crush) |
-| [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | 46.9k | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
+| [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | 47k | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
 | [lazyskills](https://lazyskills.sh) | mission control for agent skills | Go | 334 | [Repo](https://github.com/alvinunreal/lazyskills), [Website](https://lazyskills.sh) |
 | [opencode](https://opencode.ai) | The open source coding agent. | TypeScript | 223k | [Repo](https://github.com/anomalyco/opencode), [Website](https://opencode.ai) |
 | [yylo](https://yylo.dev) | A command-line orchestrator for coding agents, repeatable workflows, and receipt-backed repository… | Python | 66 | [Repo](https://github.com/yylo-dev/yylo), [Website](https://yylo.dev) |

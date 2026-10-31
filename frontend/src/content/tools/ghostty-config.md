@@ -27,7 +27,7 @@ tags:
 media: https://github.com/Vitruves/ghostty-config/raw/main/img/themes.png
 logo: https://raw.githubusercontent.com/Vitruves/ghostty-config/main/img/logo.png
 updated: '2026-10-20'
-repo_stars: 151
+repo_stars: 152
 repo_updated: "2026-10-29"
 repo_created: "2026-09-27"
 repo_release: "1.1.6"
