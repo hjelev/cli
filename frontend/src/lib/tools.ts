@@ -1,4 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { filterDisplayTags } from './tag-filter';
+import { slugify } from './slug';
 
 // Newest `updated` first; missing dates sort last; name as a stable tiebreak.
 // `updated` is an ISO YYYY-MM-DD string, so localeCompare orders it chronologically.
@@ -20,17 +22,33 @@ export async function getSortedTools(): Promise<CollectionEntry<'tools'>[]> {
 	return sortByUpdated(await getCollection('tools'));
 }
 
-// Random same-category tools (excluding `tool` itself), for "related listings"
-// on the tool detail page. Re-shuffles on every static build.
+// Most relevant tools for the "related tools" section of a tool page: ranked
+// by shared (non-redundant) tags, with a same-category bonus, then stars and
+// name as tiebreaks. Deterministic, so every build links the same pages —
+// stable internal links help crawlers find and keep indexing listings.
 export function getRelatedTools(
 	tool: CollectionEntry<'tools'>,
 	allTools: CollectionEntry<'tools'>[],
-	count = 3,
+	reservedSlugs: Set<string>,
+	count = 6,
 ): CollectionEntry<'tools'>[] {
-	const sameCategory = allTools.filter((t) => t.id !== tool.id && t.data.category === tool.data.category);
-	for (let i = sameCategory.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[sameCategory[i], sameCategory[j]] = [sameCategory[j], sameCategory[i]];
-	}
-	return sameCategory.slice(0, count);
+	const tagSlugs = (t: CollectionEntry<'tools'>) => new Set(filterDisplayTags(t.data.tags, reservedSlugs).map(slugify));
+	const ownTags = tagSlugs(tool);
+	const score = (t: CollectionEntry<'tools'>) => {
+		let shared = 0;
+		for (const slug of tagSlugs(t)) if (ownTags.has(slug)) shared++;
+		return shared + (t.data.category === tool.data.category ? 2 : 0);
+	};
+	return allTools
+		.filter((t) => t.id !== tool.id)
+		.map((t) => ({ t, score: score(t) }))
+		.filter(({ score }) => score > 0)
+		.sort(
+			(a, b) =>
+				b.score - a.score ||
+				(b.t.data.repo_stars ?? 0) - (a.t.data.repo_stars ?? 0) ||
+				a.t.data.name.localeCompare(b.t.data.name),
+		)
+		.slice(0, count)
+		.map(({ t }) => t);
 }

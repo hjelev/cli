@@ -1,9 +1,8 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
-import { slugify } from '../../lib/slug';
-import { getReservedSlugs, isRedundantTag } from '../../lib/tag-filter';
-import { TAGS_INDEX_PAGE_SIZE } from '../../lib/config';
+import { getReservedSlugs, groupTagsBySlug } from '../../lib/tag-filter';
+import { MIN_INDEXABLE_LISTINGS, TAGS_INDEX_PAGE_SIZE } from '../../lib/config';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BrowseLinks from '../../components/BrowseLinks.astro';
 import Pagination from '../../components/Pagination.astro';
@@ -12,25 +11,12 @@ import { pageTitle, pagedDescription } from '../../lib/seo';
 export const getStaticPaths = (async ({ paginate }) => {
 	const tools = await getCollection('tools');
 	const reservedSlugs = getReservedSlugs(tools);
-	// Group by slug so tags that collide (see tags/[tag]/[...page].astro) get one entry
-	// whose count matches the page it links to. Tags redundant with a
-	// category/language are skipped entirely.
-	const bySlug = new Map<string, { label: string; toolIds: Set<string> }>();
-	for (const tool of tools) {
-		for (const tag of tool.data.tags) {
-			if (isRedundantTag(tag, reservedSlugs)) continue;
-			const slug = slugify(tag);
-			const entry = bySlug.get(slug) ?? { label: tag, toolIds: new Set<string>() };
-			if (!entry.label.split(' / ').includes(tag)) entry.label += ` / ${tag}`;
-			entry.toolIds.add(tool.id);
-			bySlug.set(slug, entry);
-		}
-	}
+	// Only tags that have a page (see getIndexableTagSlugs) are listed.
 	// Popularity-based pagination: most-used tags lead page 1, not alphabetical
 	// or chronological order. Tie-break on slug for a stable order.
-	const tags = [...bySlug.entries()]
-		.map(([slug, { label, toolIds }]) => ({ slug, label, count: toolIds.size }))
-		.filter((t) => t.count > 1)
+	const tags = [...groupTagsBySlug(tools, reservedSlugs).entries()]
+		.map(([slug, { labels, toolIds }]) => ({ slug, label: labels.join(' / '), count: toolIds.size }))
+		.filter((t) => t.count >= MIN_INDEXABLE_LISTINGS)
 		.sort((a, b) => b.count - a.count || a.slug.localeCompare(b.slug));
 	return paginate(tags, { pageSize: TAGS_INDEX_PAGE_SIZE });
 }) satisfies GetStaticPaths;

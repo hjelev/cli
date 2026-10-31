@@ -1,6 +1,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { CATEGORIES } from './schema';
 import { slugify } from './slug';
+import { MIN_INDEXABLE_LISTINGS } from './config';
 
 // Standard Levenshtein edit distance (DP table).
 function levenshtein(a: string, b: string): number {
@@ -48,4 +49,44 @@ export function isRedundantTag(tag: string, reservedSlugs: Set<string>): boolean
 
 export function filterDisplayTags(tags: string[], reservedSlugs: Set<string>): string[] {
 	return tags.filter((tag) => !isRedundantTag(tag, reservedSlugs));
+}
+
+export interface TagGroup {
+	// Distinct tags sharing the slug, in first-seen order (e.g. ["C++", "C#"]).
+	labels: string[];
+	toolIds: Set<string>;
+}
+
+// Distinct tags can share a slug (e.g. "C++" and "C#" → "c"), so group by
+// slug. Tags redundant with a category/language are skipped entirely.
+export function groupTagsBySlug(
+	tools: CollectionEntry<'tools'>[],
+	reservedSlugs: Set<string>,
+): Map<string, TagGroup> {
+	const groups = new Map<string, TagGroup>();
+	for (const tool of tools) {
+		for (const tag of tool.data.tags) {
+			if (isRedundantTag(tag, reservedSlugs)) continue;
+			const slug = slugify(tag);
+			const group = groups.get(slug) ?? { labels: [], toolIds: new Set<string>() };
+			if (!group.labels.includes(tag)) group.labels.push(tag);
+			group.toolIds.add(tool.id);
+			groups.set(slug, group);
+		}
+	}
+	return groups;
+}
+
+// Slugs of tags with enough listings to get a page. Thinner tags get no page
+// at all (rather than a noindex one) and are shown as plain text, so crawlers
+// don't spend their budget on hundreds of near-empty pages.
+export function getIndexableTagSlugs(
+	tools: CollectionEntry<'tools'>[],
+	reservedSlugs: Set<string>,
+): Set<string> {
+	const slugs = new Set<string>();
+	for (const [slug, group] of groupTagsBySlug(tools, reservedSlugs)) {
+		if (group.toolIds.size >= MIN_INDEXABLE_LISTINGS) slugs.add(slug);
+	}
+	return slugs;
 }

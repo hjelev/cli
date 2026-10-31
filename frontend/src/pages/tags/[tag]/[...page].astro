@@ -2,7 +2,7 @@
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { sortForListing } from '../../../lib/tools';
-import { getReservedSlugs, isRedundantTag } from '../../../lib/tag-filter';
+import { getReservedSlugs, groupTagsBySlug } from '../../../lib/tag-filter';
 import { slugify } from '../../../lib/slug';
 import { PAGE_SIZE, MIN_INDEXABLE_LISTINGS } from '../../../lib/config';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
@@ -13,30 +13,21 @@ import { itemListLd, pageTitle, pagedDescription, sampleNames } from '../../../l
 export const getStaticPaths = (async ({ paginate }) => {
 	const tools = await getCollection('tools');
 	const reservedSlugs = getReservedSlugs(tools);
-	// Distinct tags can share a slug (e.g. "C++" and "C#" → "c"), so group by
-	// slug: one page (set) per slug, listing every tool whose tags map to it.
-	// Tags redundant with a category/language are skipped entirely, so no page
-	// is generated for them.
-	const tagsBySlug = new Map<string, string[]>();
-	for (const tool of tools) {
-		for (const tag of tool.data.tags) {
-			if (isRedundantTag(tag, reservedSlugs)) continue;
-			const slug = slugify(tag);
-			const tags = tagsBySlug.get(slug) ?? [];
-			if (!tags.includes(tag)) tags.push(tag);
-			tagsBySlug.set(slug, tags);
-		}
-	}
-	return [...tagsBySlug.entries()].flatMap(([slug, tags]) =>
-		paginate(
-			sortForListing(tools.filter((tool) => tool.data.tags.some((t) => slugify(t) === slug))),
-			{
-				params: { tag: slug },
-				props: { tag: tags.join(' / '), reservedSlugs },
-				pageSize: PAGE_SIZE,
-			},
-		),
-	);
+	// One page (set) per tag slug, listing every tool whose tags map to it.
+	// Tags below MIN_INDEXABLE_LISTINGS get no page at all (see
+	// getIndexableTagSlugs), so every generated tag page is indexable.
+	return [...groupTagsBySlug(tools, reservedSlugs).entries()]
+		.filter(([, group]) => group.toolIds.size >= MIN_INDEXABLE_LISTINGS)
+		.flatMap(([slug, group]) =>
+			paginate(
+				sortForListing(tools.filter((tool) => group.toolIds.has(tool.id))),
+				{
+					params: { tag: slug },
+					props: { tag: group.labels.join(' / '), reservedSlugs },
+					pageSize: PAGE_SIZE,
+				},
+			),
+		);
 }) satisfies GetStaticPaths;
 
 const { page, tag, reservedSlugs } = Astro.props;
@@ -52,7 +43,6 @@ const { page, tag, reservedSlugs } = Astro.props;
 	jsonLd={[itemListLd(page.data, page.start)]}
 	command={`ls tags/${slugify(tag)}`}
 	backHref="/tags/"
-	noindex={page.total < MIN_INDEXABLE_LISTINGS}
 	breadcrumb={[{ label: `${slugify(tag)}/` }]}
 >
 	<header class="hero">

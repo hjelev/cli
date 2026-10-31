@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+# Forms and the OAuth landing page: noindex and worthless to crawl.
+Disallow: /tools/*/edit/
+Disallow: /categories/*/edit/
+Disallow: /languages/*/edit/
+Disallow: /auth/
+Disallow: /submit/
 
 Sitemap: https://cli.masoko.net/sitemap-index.xml
