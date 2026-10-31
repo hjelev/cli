@@ -104,6 +104,7 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			<select id="sort-filter" aria-label="Sort order">
 				<option value="">Recently updated</option>
 				<option value="stars">Most stars</option>
+				<option value="verified">Verified only</option>
 			</select>
 		</div>
 	</section>
@@ -297,7 +298,8 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			const category = categoryFilter.value;
 			const language = languageFilter.value;
 			const sortByStars = sortFilter.value === 'stars';
-			const filtering = query !== '' || category !== '' || language !== '' || sortByStars;
+			const verifiedOnly = sortFilter.value === 'verified';
+			const filtering = query !== '' || category !== '' || language !== '' || sortFilter.value !== '';
 
 			syncUrl();
 			updateFiltersCount();
@@ -318,7 +320,8 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 				const matchesQuery = !query || tool.search.includes(query);
 				const matchesCategory = !category || tool.category === category;
 				const matchesLanguage = !language || tool.language === language;
-				return matchesQuery && matchesCategory && matchesLanguage;
+				const matchesVerified = !verifiedOnly || tool.verified;
+				return matchesQuery && matchesCategory && matchesLanguage && matchesVerified;
 			});
 			// The index is already in listing order (verified, then recently updated); only stars needs a re-sort.
 			// With a query, rank by relevance first; the stable sort keeps the chosen order within a tier.
