@@ -3,6 +3,9 @@
 // theme variables so a tile follows light/dark mode, while the accents are
 // fixed hues picked to read on both backgrounds. Rendered by TileIcon.astro.
 
+import type { SimpleIcon } from 'simple-icons';
+import { siDocker, siGnubash, siObsidian, siPostman, siSpotify, siThunderbird, siTmux, siVim, siWireshark } from 'simple-icons';
+
 const RUST = '#f74c00';
 const AMBER = '#e0a83a';
 const GREEN = '#3fb96b';
@@ -361,8 +364,21 @@ export const CATEGORY_ICONS: Record<string, string> = {
 		<rect x="28" y="30" width="8" height="8" rx="1.5" fill="${AMBER}" />`,
 };
 
-// Keyed by alternative slug (see ALTERNATIVES in lib/guides.ts). Each drawing
-// shows what the classic command or app does, not its brand.
+// Alternatives whose original app has a logo show that logo (from simple-icons,
+// like the language tiles); the rest get a drawing of what the classic command
+// does. Both keyed by alternative slug (see ALTERNATIVES in lib/guides.ts).
+export const ALTERNATIVE_BRANDS: Record<string, SimpleIcon> = {
+	'ctrl-r': siGnubash,
+	'vim': siVim,
+	'tmux': siTmux,
+	'postman': siPostman,
+	'docker-desktop': siDocker,
+	'spotify': siSpotify,
+	'obsidian': siObsidian,
+	'wireshark': siWireshark,
+	'thunderbird': siThunderbird,
+};
+
 export const ALTERNATIVE_ICONS: Record<string, string> = {
 	// an icon view: folders and files in a grid
 	'ls': `
@@ -427,13 +443,6 @@ export const ALTERNATIVE_ICONS: Record<string, string> = {
 		<rect x="37" y="37" width="16" height="7" rx="2" fill="${GREEN}" fill-opacity="0.25" />
 		<rect x="39" y="39" width="10" height="3" rx="1.5" fill="${GREEN}" />
 		<rect x="38" y="47" width="12" height="3" rx="1.5" fill="var(--fg-dim)" />`,
-	// a rewinding clock with a magnifier
-	'ctrl-r': `
-		<path d="M14 30A16 16 0 1 1 18.7 41.3" fill="none" stroke="${BLUE}" stroke-width="4" stroke-linecap="round" />
-		<polyline points="9 25 14 31 19 25" fill="none" stroke="${BLUE}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-		<path d="M30 30V20M30 30l7 4" stroke="var(--fg)" stroke-width="3.5" stroke-linecap="round" />
-		<circle cx="45" cy="45" r="7.5" fill="var(--bg-deep)" stroke="${AMBER}" stroke-width="3.5" />
-		<line x1="50.5" y1="50.5" x2="56" y2="56" stroke="${AMBER}" stroke-width="4.5" stroke-linecap="round" />`,
 	// signal rings travelling from one host to another
 	'ping': `
 		<path d="M14 38A12 12 0 0 1 26 50" fill="none" stroke="${GREEN}" stroke-width="4" stroke-linecap="round" />
@@ -455,54 +464,6 @@ export const ALTERNATIVE_ICONS: Record<string, string> = {
 		<rect x="34" y="43" width="9" height="7" rx="1.5" fill="var(--fg)" />
 		<polyline points="36.5 48 38.5 45.5 40.5 48" fill="none" stroke="var(--bg-deep)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 		<rect x="45" y="45.5" width="7" height="2.5" rx="1.25" fill="var(--fg-dim)" />`,
-	// block cursor, empty-line tildes and a mode line
-	'vim': `
-		<rect x="8" y="10" width="48" height="44" rx="6" fill="var(--panel)" stroke="var(--border)" stroke-width="2" />
-		<rect x="13" y="16" width="20" height="3" rx="1.5" fill="${GREEN}" />
-		<rect x="13" y="23" width="12" height="3" rx="1.5" fill="${PURPLE}" />
-		<rect x="28" y="23" width="16" height="3" rx="1.5" fill="var(--fg-dim)" />
-		<rect x="13" y="30" width="8" height="3" rx="1.5" fill="var(--fg-dim)" />
-		<rect x="23" y="28.5" width="5" height="6" rx="1" fill="var(--fg)" />
-		<path d="M12 39q2-2 4 0t4 0" fill="none" stroke="${BLUE}" stroke-width="2" stroke-linecap="round" />
-		<path d="M8 46h48v2a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6z" fill="${GREEN}" />
-		<rect x="12" y="48.5" width="14" height="3" rx="1.5" fill="#fff" />`,
-	// split panes above a green status line with window tabs
-	'tmux': `
-		<rect x="8" y="10" width="48" height="44" rx="6" fill="var(--panel)" stroke="var(--border)" stroke-width="2" />
-		<line x1="30" y1="10" x2="30" y2="46" stroke="var(--border)" stroke-width="2" />
-		<line x1="30" y1="28" x2="56" y2="28" stroke="var(--border)" stroke-width="2" />
-		<polyline points="13 16 16.5 19 13 22" fill="none" stroke="${GREEN}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-		<rect x="19" y="17.5" width="6" height="3" rx="1.5" fill="var(--fg-dim)" />
-		<rect x="13" y="27" width="12" height="3" rx="1.5" fill="var(--fg-dim)" />
-		<rect x="13" y="33" width="9" height="3" rx="1.5" fill="var(--fg-dim)" />
-		<rect x="35" y="16" width="14" height="3" rx="1.5" fill="var(--fg-dim)" />
-		<rect x="35" y="21" width="9" height="3" rx="1.5" fill="${BLUE}" />
-		<rect x="35" y="34" width="12" height="3" rx="1.5" fill="${AMBER}" />
-		<rect x="35" y="39" width="8" height="3" rx="1.5" fill="var(--fg-dim)" />
-		<path d="M8 46h48v2a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6z" fill="${GREEN}" />
-		<rect x="12" y="48.5" width="8" height="3" rx="1.5" fill="#fff" />
-		<rect x="23" y="48.5" width="8" height="3" rx="1.5" fill="#fff" fill-opacity="0.55" />
-		<rect x="44" y="48.5" width="8" height="3" rx="1.5" fill="#fff" fill-opacity="0.55" />`,
-	// a GET request bar over a JSON response
-	'postman': `
-		<rect x="8" y="10" width="48" height="16" rx="4" fill="var(--panel)" stroke="var(--border)" stroke-width="2" />
-		<rect x="11" y="13" width="12" height="10" rx="2.5" fill="${GREEN}" />
-		<rect x="27" y="16.5" width="15" height="3" rx="1.5" fill="var(--fg-dim)" />
-		<rect x="45" y="13" width="8" height="10" rx="2.5" fill="${RUST}" />
-		<path d="M16 32h-2a2 2 0 0 0-2 2v6l-3 3 3 3v6a2 2 0 0 0 2 2h2" fill="none" stroke="${AMBER}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-		<path d="M48 32h2a2 2 0 0 1 2 2v6l3 3-3 3v6a2 2 0 0 1-2 2h-2" fill="none" stroke="${AMBER}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-		<rect x="20" y="36" width="16" height="3" rx="1.5" fill="${BLUE}" />
-		<rect x="24" y="42" width="20" height="3" rx="1.5" fill="var(--fg-dim)" />
-		<rect x="24" y="48" width="14" height="3" rx="1.5" fill="${PURPLE}" />`,
-	// stacked shipping containers hanging from a crane hook
-	'docker-desktop': `
-		<path d="M31.5 8v9M31.5 17L22 25M31.5 17L41 25" fill="none" stroke="var(--fg-dim)" stroke-width="2" stroke-linecap="round" />
-		<rect x="20" y="25" width="23" height="13" rx="2" fill="${AMBER}" />
-		<path d="M25 28v7M29.5 28v7M34 28v7M38.5 28v7" stroke="var(--bg-deep)" stroke-width="2" stroke-linecap="round" stroke-opacity="0.35" />
-		<rect x="8" y="40" width="23" height="13" rx="2" fill="${BLUE}" />
-		<path d="M13 43v7M17.5 43v7M22 43v7M26.5 43v7" stroke="var(--bg-deep)" stroke-width="2" stroke-linecap="round" stroke-opacity="0.35" />
-		<rect x="33" y="40" width="23" height="13" rx="2" fill="${TEAL}" />
-		<path d="M38 43v7M42.5 43v7M47 43v7M51.5 43v7" stroke="var(--bg-deep)" stroke-width="2" stroke-linecap="round" stroke-opacity="0.35" />`,
 	// a spreadsheet with a formula bar and a selected cell
 	'excel': `
 		<rect x="8" y="10" width="48" height="44" rx="5" fill="var(--panel)" stroke="var(--border)" stroke-width="2" />
@@ -515,27 +476,6 @@ export const ALTERNATIVE_ICONS: Record<string, string> = {
 		<rect x="23" y="40" width="6" height="2.5" rx="1.25" fill="var(--fg-dim)" />
 		<rect x="32" y="37" width="12" height="8.5" fill="${GREEN}" fill-opacity="0.15" stroke="${GREEN}" stroke-width="2.5" />
 		<rect x="42.5" y="44" width="3.5" height="3.5" fill="${GREEN}" />`,
-	// a vinyl record under a tonearm
-	'spotify': `
-		<circle cx="28" cy="34" r="20" fill="#24292f" />
-		<circle cx="28" cy="34" r="15" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="1.5" />
-		<circle cx="28" cy="34" r="10.5" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="1.5" />
-		<circle cx="28" cy="34" r="6.5" fill="${GREEN}" />
-		<circle cx="28" cy="34" r="1.8" fill="#24292f" />
-		<polyline points="52 10 50 32 39 40" fill="none" stroke="var(--fg-dim)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-		<circle cx="52" cy="10" r="3.5" fill="var(--fg-dim)" />
-		<circle cx="39" cy="40" r="2.8" fill="${RUST}" />`,
-	// a note linked into a graph of other notes
-	'obsidian': `
-		<path d="M32 32L14 16M32 32L50 18M32 32L18 50M32 32L48 47M50 18L48 47M18 50L48 47" stroke="var(--fg-dim)" stroke-width="2.5" stroke-linecap="round" />
-		<circle cx="14" cy="16" r="5" fill="${PURPLE}" />
-		<circle cx="50" cy="18" r="4" fill="${BLUE}" />
-		<circle cx="18" cy="50" r="4.5" fill="${TEAL}" />
-		<circle cx="48" cy="47" r="5.5" fill="${PINK}" />
-		<rect x="24" y="22" width="16" height="20" rx="2.5" fill="var(--panel)" stroke="${PURPLE}" stroke-width="2.5" />
-		<rect x="27.5" y="26.5" width="9" height="2.5" rx="1.25" fill="${PURPLE}" />
-		<rect x="27.5" y="31.5" width="7" height="2.5" rx="1.25" fill="var(--fg-dim)" />
-		<rect x="27.5" y="36" width="9" height="2.5" rx="1.25" fill="var(--fg-dim)" />`,
 	// a logo, system info lines and the color palette row
 	'neofetch': `
 		<rect x="9" y="12" width="20" height="20" rx="5" fill="${BLUE}" />
@@ -556,19 +496,6 @@ export const ALTERNATIVE_ICONS: Record<string, string> = {
 		<rect x="35.4" y="41" width="5.6" height="10" rx="1.5" fill="${BLUE}" />
 		<rect x="42" y="41" width="5.6" height="10" rx="1.5" fill="${PURPLE}" />
 		<rect x="48.6" y="41" width="5.6" height="10" rx="1.5" fill="${PINK}" />`,
-	// color-coded packet rows under a magnifier
-	'wireshark': `
-		<rect x="8" y="10" width="48" height="44" rx="6" fill="var(--panel)" stroke="var(--border)" stroke-width="2" />
-		<rect x="11" y="14" width="42" height="6" rx="1.5" fill="${BLUE}" fill-opacity="0.35" />
-		<rect x="11" y="22" width="42" height="6" rx="1.5" fill="${GREEN}" fill-opacity="0.35" />
-		<rect x="11" y="30" width="42" height="6" rx="1.5" fill="${PURPLE}" fill-opacity="0.35" />
-		<rect x="11" y="38" width="42" height="6" rx="1.5" fill="${BLUE}" fill-opacity="0.35" />
-		<rect x="11" y="46" width="42" height="6" rx="1.5" fill="${AMBER}" fill-opacity="0.35" />
-		<path d="M14 17h4M21 17h12M14 25h4M21 25h9M14 33h4M21 33h14M14 41h4M21 41h8M14 49h4M21 49h11" stroke="var(--fg-dim)" stroke-width="2" stroke-linecap="round" />
-		<circle cx="44" cy="42" r="8" fill="var(--bg-deep)" stroke="${TEAL}" stroke-width="3.5" />
-		<rect x="40" y="38.5" width="8" height="2.5" rx="1.25" fill="${RUST}" />
-		<rect x="40" y="43" width="5" height="2.5" rx="1.25" fill="var(--fg-dim)" />
-		<line x1="50" y1="48" x2="56" y2="54" stroke="${TEAL}" stroke-width="4.5" stroke-linecap="round" />`,
 	// an IDE: activity bar, file tree, code, terminal and status bar
 	'vscode': `
 		<rect x="8" y="10" width="48" height="44" rx="6" fill="var(--panel)" stroke="var(--border)" stroke-width="2" />
@@ -587,12 +514,6 @@ export const ALTERNATIVE_ICONS: Record<string, string> = {
 		<polyline points="31 42.5 33.5 44.5 31 46.5" fill="none" stroke="${GREEN}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
 		<rect x="36" y="43.5" width="8" height="2" rx="1" fill="var(--fg-dim)" />
 		<path d="M8 48h48a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6z" fill="${BLUE}" />`,
-	// a letter dropping into an inbox tray, with an unread badge
-	'thunderbird': `
-		<rect x="18" y="14" width="28" height="20" rx="3" fill="${BLUE}" />
-		<polyline points="21 17 32 25 43 17" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-		<path d="M8 32h12l4 7h16l4-7h12v16a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6z" fill="var(--panel)" stroke="var(--border)" stroke-width="2" stroke-linejoin="round" />
-		<circle cx="50" cy="14" r="6" fill="${RUST}" stroke="var(--bg-deep)" stroke-width="2" />`,
 	// a log with a fresh line arriving and a follow arrow
 	'tail': `
 		<rect x="8" y="10" width="34" height="44" rx="5" fill="var(--panel)" stroke="var(--border)" stroke-width="2" />

@@ -1,7 +1,9 @@
 ---
-import { ALTERNATIVE_ICONS, CATEGORY_ICONS, COLLECTION_ICONS, FALLBACK_ICON, TILE_FRAME } from '../lib/tile-icons';
+import { isNearBlack } from '../lib/languageIcons';
+import { ALTERNATIVE_BRANDS, ALTERNATIVE_ICONS, CATEGORY_ICONS, COLLECTION_ICONS, FALLBACK_ICON, TILE_FRAME } from '../lib/tile-icons';
 
-// A 64x64 illustrated tile for a collection, alternative or category (see lib/tile-icons.ts).
+// A 64x64 illustrated tile for a collection, alternative or category (see
+// lib/tile-icons.ts). An alternative whose original app has a logo shows it.
 interface Props {
 	kind: 'collection' | 'alternative' | 'category';
 	slug: string;
@@ -10,13 +12,34 @@ interface Props {
 
 const { kind, slug, size = 64 } = Astro.props;
 const icons = { collection: COLLECTION_ICONS, alternative: ALTERNATIVE_ICONS, category: CATEGORY_ICONS }[kind];
+const brand = kind === 'alternative' ? ALTERNATIVE_BRANDS[slug] : undefined;
 ---
 
-<svg
-	class="tile-icon"
-	viewBox="0 0 64 64"
-	width={size}
-	height={size}
-	aria-hidden="true"
-	set:html={TILE_FRAME + (icons[slug] ?? FALLBACK_ICON)}
-/>
+{
+	brand ? (
+		<svg class="tile-icon" viewBox="0 0 64 64" width={size} height={size} aria-hidden="true">
+			<Fragment set:html={TILE_FRAME} />
+			<svg
+				x="14"
+				y="14"
+				width="36"
+				height="36"
+				viewBox="0 0 24 24"
+				fill={`#${brand.hex}`}
+				stroke={isNearBlack(brand.hex) ? 'var(--fg-dim)' : 'none'}
+				stroke-width={isNearBlack(brand.hex) ? '0.5' : '0'}
+			>
+				<path d={brand.path} />
+			</svg>
+		</svg>
+	) : (
+		<svg
+			class="tile-icon"
+			viewBox="0 0 64 64"
+			width={size}
+			height={size}
+			aria-hidden="true"
+			set:html={TILE_FRAME + (icons[slug] ?? FALLBACK_ICON)}
+		/>
+	)
+}
