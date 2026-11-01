@@ -40,7 +40,7 @@ updated: '2026-09-26'
 repo_stars: 12572
 repo_updated: "2026-11-01"
 repo_created: "2018-03-16"
-repo_release: "v1.2.6"
-repo_release_date: "2026-09-16"
+repo_release: "v1.2.7"
+repo_release_date: "2026-11-01"
 comments: []
 ---
