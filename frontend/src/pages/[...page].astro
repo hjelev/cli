@@ -3,14 +3,13 @@ import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/schema';
 import { getSortedTools, sortByUpdated } from '../lib/tools';
-import { getReservedSlugs, filterDisplayTags } from '../lib/tag-filter';
+import { getReservedSlugs } from '../lib/tag-filter';
 import { PAGE_SIZE, MAX_CARD_TAGS } from '../lib/config';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BrowseLinks from '../components/BrowseLinks.astro';
 import ToolCard from '../components/ToolCard.astro';
 import Pagination from '../components/Pagination.astro';
 import { SITE_NAME, itemListLd, pagedDescription, websiteLd } from '../lib/seo';
-import { stripLeadingEmoji } from '../lib/text';
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const tools = await getSortedTools();
@@ -19,34 +18,14 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 const { page } = Astro.props;
 
-// The <select> options and the client-side search index are built from the FULL
-// collection so filtering works across every page, not just this page's slice.
+// The <select> options are built from the FULL collection so filtering works
+// across every page, not just this page's slice. The search index itself lives
+// at /api/search-index.json and is fetched only when the user starts searching.
 const allTools = sortByUpdated(await getCollection('tools'));
 const languages = [...new Set(allTools.map((tool) => tool.data.language))].sort();
 const usedCategories = new Set(allTools.map((tool) => tool.data.category));
 const categories = CATEGORIES.filter((category) => usedCategories.has(category)).sort((a, b) => a.localeCompare(b));
 const reservedSlugs = getReservedSlugs(allTools);
-
-// Compact search index embedded once per page. `search` mirrors ToolCard's
-// `data-search`; `tags` is pre-filtered so client-rendered cards match the
-// static ones (see ToolCard.astro).
-const searchIndex = allTools.map((tool) => {
-	return {
-		id: tool.id,
-		name: tool.data.name,
-		short: stripLeadingEmoji(tool.data.short_description),
-		category: tool.data.category,
-		language: tool.data.language,
-		tags: filterDisplayTags(tool.data.tags, reservedSlugs),
-		logo: tool.data.logo ?? null,
-		stars: tool.data.repo_stars ?? null,
-		created: tool.data.repo_created ?? null,
-		verified: Boolean(tool.data.repo_badge),
-		search: `${tool.data.name} ${tool.data.short_description} ${tool.data.tags.join(' ')}`.toLowerCase(),
-	};
-});
-// Escape `<` so tool data can never break out of the <script> element.
-const indexJson = JSON.stringify(searchIndex).replace(/</g, '\\u003c');
 
 const status =
 	page.lastPage > 1
@@ -120,7 +99,6 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 
 	<Pagination page={page} />
 
-	<script type="application/json" id="tools-index" set:html={indexJson} />
 	<script type="application/json" id="card-config" set:html={JSON.stringify({ maxTags: MAX_CARD_TAGS })} />
 
 	<script>
@@ -154,9 +132,23 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 		const results = document.getElementById('search-results') as HTMLUListElement;
 		const pagination = document.querySelector('.pagination') as HTMLElement | null;
 		const emptyState = document.getElementById('empty-state') as HTMLElement;
-		const tools = JSON.parse(
-			(document.getElementById('tools-index') as HTMLScriptElement).textContent!,
-		) as ToolIndexEntry[];
+		// The full index is only downloaded once the user engages with search or
+		// filters (click, tap or focus), so plain browsing stays lightweight.
+		let tools: ToolIndexEntry[] | null = null;
+		let toolsPromise: Promise<ToolIndexEntry[]> | null = null;
+		function loadTools(): Promise<ToolIndexEntry[]> {
+			toolsPromise ??= fetch('/api/search-index.json')
+				.then((res) => {
+					if (!res.ok) throw new Error(`search index: HTTP ${res.status}`);
+					return res.json() as Promise<ToolIndexEntry[]>;
+				})
+				.then((data) => (tools = data))
+				.catch((error) => {
+					toolsPromise = null; // allow a retry on the next interaction
+					throw error;
+				});
+			return toolsPromise;
+		}
 		const { maxTags } = JSON.parse(
 			(document.getElementById('card-config') as HTMLScriptElement).textContent!,
 		) as { maxTags: number };
@@ -293,7 +285,10 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			return 0;
 		}
 
-		function applyFilters() {
+		// Bumped on every call so a slow index download can't apply stale filters.
+		let filterRun = 0;
+		async function applyFilters() {
+			const run = ++filterRun;
 			const query = search.value.trim().toLowerCase();
 			const category = categoryFilter.value;
 			const language = languageFilter.value;
@@ -316,7 +311,19 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			}
 
 			// Active filter: search across ALL tools, ignoring pagination.
-			const matches = tools.filter((tool) => {
+			if (!tools) {
+				if (statusSeg) statusSeg.textContent = 'loading index…';
+				try {
+					await loadTools();
+				} catch {
+					if (run === filterRun && statusSeg) statusSeg.textContent = 'search unavailable — retry';
+					return;
+				}
+				// A newer call has taken over (or will, once the index lands).
+				if (run !== filterRun) return;
+			}
+
+			const matches = tools!.filter((tool) => {
 				const matchesQuery = !query || tool.search.includes(query);
 				const matchesCategory = !category || tool.category === category;
 				const matchesLanguage = !language || tool.language === language;
@@ -348,6 +355,14 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 		}
 
 		filtersToggle.addEventListener('click', () => setFiltersOpen(!filtersSection.classList.contains('open')));
+
+		// Start the download as soon as the user reaches for search or filters.
+		const prefetch = () => void loadTools().catch(() => {});
+		for (const el of [search, categoryFilter, languageFilter, sortFilter, filtersToggle]) {
+			for (const type of ['focus', 'pointerdown'] as const) {
+				el.addEventListener(type, prefetch, { once: true, passive: true });
+			}
+		}
 
 		search.addEventListener('input', applyFilters);
 		categoryFilter.addEventListener('change', applyFilters);
