@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-281-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-282-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**281 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**282 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (18) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (10) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (12) · [Development Tools](#development-tools) (16) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (26) · [Email & Messaging](#email--messaging) (10) · [Text Editors](#text-editors) (22) · [Music & Audio](#music--audio) (17) · [Media & Entertainment](#media--entertainment) (9) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (19) · [Logs](#logs) (6) · [Games & Fun](#games--fun) (8) · [AI](#ai) (8) · [Utilities & Other](#utilities--other) (7)
+[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (18) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (10) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (12) · [Development Tools](#development-tools) (16) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (26) · [Email & Messaging](#email--messaging) (10) · [Text Editors](#text-editors) (22) · [Music & Audio](#music--audio) (17) · [Media & Entertainment](#media--entertainment) (10) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (19) · [Logs](#logs) (6) · [Games & Fun](#games--fun) (8) · [AI](#ai) (8) · [Utilities & Other](#utilities--other) (7)
 
 ### File Management
 
@@ -328,6 +328,7 @@
 | [linecast](https://terminaltrove.com/linecast/) | Weather, tides, the sun, the moon, and maps, in your terminal. The Old Farmer's Almanac meets… | Python | 655 | [Repo](https://github.com/ashuttl/linecast), [Website](https://terminaltrove.com/linecast/) |
 | [mapscii](https://github.com/rastapasta/mapscii) | 🗺 MapSCII is a Braille & ASCII world map renderer for your console. | JavaScript | 9.3k | [Repo](https://github.com/rastapasta/mapscii) |
 | [mpv](https://mpv.io) | 🎥 Command line media player | C | 37.7k | [Repo](https://github.com/mpv-player/mpv), [Website](https://mpv.io) |
+| [silicon](https://github.com/Aloxaf/silicon) | Create beautiful image of your source code. | Rust | – | [Repo](https://github.com/Aloxaf/silicon) |
 | [Terrascope](https://pypi.org/project/terrascope/) | Braille-rendered terminal world map with live weather, aircraft, earthquakes, and day/night layers. | Python | 389 | [Repo](https://github.com/a-shygun/Terrascope), [Website](https://pypi.org/project/terrascope/) |
 | [waxon](https://waxon.danfry.dev) | A vim-modal Spotify client for the terminal | Go | 60 | [Repo](https://github.com/danfry1/waxon), [Website](https://waxon.danfry.dev) |
 | [weathr](https://github.com/veirt/weathr) | a terminal weather app with ascii animation | Rust | 3.1k | [Repo](https://github.com/veirt/weathr) |
