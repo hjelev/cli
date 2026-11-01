@@ -5,10 +5,16 @@ short_description: >-
   a cross-platform, terminal-based music player, audio engine, metadata indexer,
   and server in c++
 description: >-
-  musikcube is a fully functional terminal-based music player, library, and
-  streaming audio server that runs natively on Windows, macOS, and Linux. it
-  also runs well on a Raspberry Pi with a custom DAC (e.g. IQaudIO DAC+,
-  HiFiBerry DAC+ and others), and can output 24bit/192k audio comfortably.
+  musikcube is a fully functional, terminal-based audio engine, library,, and
+  player written in C++.
+
+
+  It includes a built-in streaming audio server, web socket interface, and
+  headless daemon mode for remote playback control.
+
+
+  It supports multiple audio formats, metadata tagging, playlist management, and
+  a responsive keyboard-driven interface.
 repository_url: https://github.com/clangen/musikcube
 website: https://musikcube.com
 author: clangen
@@ -21,6 +27,14 @@ installation:
     command: pkg install musikcube
   - method: choco
     command: choco install musikcube
+  - method: pacman
+    command: pacman -Sy musikcube
+  - method: dnf
+    command: sudo dnf install musikcube
+  - method: apk
+    command: apk install musikcube
+  - method: snap
+    command: sudo snap install musikcube
 platforms:
   - Linux
   - macOS
@@ -41,15 +55,11 @@ tags:
   - wasapi
 media: https://asciinema.org/a/129748
 logo: https://cli.masoko.net/uploads/musikcube/logo.png
-updated: '2026-07-15'
-github_stars: 4799
-github_updated: "2026-03-23"
-github_created: "2015-03-18"
-github_release: "3.0.5"
-repo_stars: 4858
-repo_updated: "2026-03-23"
-repo_created: "2015-03-18"
-repo_release: "3.0.5"
-repo_release_date: "2025-09-21"
+updated: '2026-11-01'
 comments: []
+repo_stars: 4858
+repo_updated: '2026-03-23'
+repo_created: '2015-03-18'
+repo_release: 3.0.5
+repo_release_date: '2025-09-21'
 ---
