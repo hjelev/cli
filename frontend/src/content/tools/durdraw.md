@@ -61,4 +61,9 @@ tags:
 media: https://durdraw.org/durdraw-0.28-demo.gif
 logo: https://avatars.githubusercontent.com/u/305736280?s=200&v=4
 updated: '2026-11-01'
+repo_stars: 1854
+repo_updated: "2026-10-31"
+repo_created: "2014-03-28"
+repo_release: "0.31.1"
+repo_release_date: "2026-10-19"
 ---

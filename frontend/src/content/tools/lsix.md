@@ -47,4 +47,9 @@ media: >-
   https://raw.githubusercontent.com/hackerb9/lsix/master/README.md.d/example1.png
 logo: https://avatars.githubusercontent.com/u/10174223?v=4
 updated: '2026-11-01'
+repo_stars: 4176
+repo_updated: "2024-06-20"
+repo_created: "2017-06-06"
+repo_release: "1.9.1"
+repo_release_date: "2024-06-12"
 ---

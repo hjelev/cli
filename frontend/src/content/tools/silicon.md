@@ -46,4 +46,9 @@ tags:
 media: https://github.com/Aloxaf/silicon/raw/master/example/example.png
 logo: https://avatars.githubusercontent.com/u/17017672?v=4
 updated: '2026-11-01'
+repo_stars: 3593
+repo_updated: "2024-09-26"
+repo_created: "2019-07-07"
+repo_release: "v0.5.3"
+repo_release_date: "2024-09-26"
 ---
