@@ -49,8 +49,8 @@ media: https://raw.githubusercontent.com/yetidevworks/reeve/main/screenshot.png
 logo: https://avatars.githubusercontent.com/u/220336074?v=4
 updated: '2026-08-21'
 repo_stars: 95
-repo_updated: "2026-10-11"
+repo_updated: "2026-10-31"
 repo_created: "2026-06-15"
-repo_release: "v1.1.2"
-repo_release_date: "2026-09-23"
+repo_release: "v1.1.3"
+repo_release_date: "2026-10-31"
 ---

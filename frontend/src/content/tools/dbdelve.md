@@ -53,9 +53,9 @@ media: >-
 logo: >-
   https://raw.githubusercontent.com/ShayanAbbas1/dbdelve/main/assets/icon/dbdelve.svg
 updated: '2026-10-24'
-repo_stars: 626
-repo_updated: "2026-10-30"
+repo_stars: 628
+repo_updated: "2026-10-31"
 repo_created: "2026-08-17"
-repo_release: "v0.6.1"
-repo_release_date: "2026-10-29"
+repo_release: "v0.6.2"
+repo_release_date: "2026-10-31"
 ---
