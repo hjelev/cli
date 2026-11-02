@@ -21,7 +21,7 @@ platforms: [Linux, macOS]
 tags: [ls-alternative, file-listing, cli, go, logo-ls, ls, eyecandy, git, icons, speed, golang, cli-app, vscode]
 logo: "https://avatars.githubusercontent.com/u/32840183?v=4"
 media: "https://github.com/Yash-Handa/logo-ls/raw/master/.github/images/ls-R.png"
-repo_stars: 1187
+repo_stars: 1186
 repo_updated: "2023-05-10"
 repo_created: "2020-08-23"
 repo_release: "v1.3.7"

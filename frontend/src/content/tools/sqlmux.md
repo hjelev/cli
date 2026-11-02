@@ -36,9 +36,9 @@ tags:
 media: https://raw.githubusercontent.com/kackerx/sqlmux/main/assets/demo.gif
 logo: https://cli.masoko.net/uploads/sqlmux/logo.png
 updated: '2026-11-01'
-repo_stars: 229
-repo_updated: "2026-10-30"
+repo_stars: 230
+repo_updated: "2026-11-02"
 repo_created: "2026-09-29"
-repo_release: "v0.8.0"
-repo_release_date: "2026-10-30"
+repo_release: "v0.9.0"
+repo_release_date: "2026-11-02"
 ---

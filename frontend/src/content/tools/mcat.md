@@ -49,7 +49,7 @@ media: https://github.com/Skardyy/assets-for-repos/raw/main/mcat_opt.gif
 logo: https://cli.masoko.net/uploads/mcat/logo.png
 updated: '2026-11-01'
 repo_stars: 1456
-repo_updated: "2026-10-31"
+repo_updated: "2026-11-02"
 repo_created: "2025-04-14"
 repo_release: "v0.6.8"
 repo_release_date: "2026-10-30"

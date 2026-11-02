@@ -29,8 +29,8 @@ tags:
 media: https://raw.githubusercontent.com/vostride/agent-qa/main/docs/assets/readme/cli-light.png
 logo: https://vostride.com/icon.png
 updated: '2026-11-01'
-repo_stars: 915
-repo_updated: "2026-11-01"
+repo_stars: 916
+repo_updated: "2026-11-02"
 repo_created: "2026-05-07"
 repo_release: "v0.2.5"
 repo_release_date: "2026-11-01"

@@ -47,7 +47,7 @@ tags:
 media: https://raw.githubusercontent.com/yetidevworks/ygrep/main/ygrep-screenshot.png
 logo: https://avatars.githubusercontent.com/u/220336074?v=4
 updated: '2026-08-21'
-repo_stars: 63
+repo_stars: 64
 repo_updated: "2026-10-21"
 repo_created: "2025-12-09"
 repo_release: "v4.0.4"

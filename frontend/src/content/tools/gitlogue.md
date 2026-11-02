@@ -61,7 +61,7 @@ media: https://cli.masoko.net/uploads/gitlogue/media.gif
 logo: https://avatars.githubusercontent.com/u/5608948?v=4
 updated: '2026-07-18'
 repo_stars: 5250
-repo_updated: "2026-10-31"
+repo_updated: "2026-11-02"
 repo_created: "2025-11-08"
 repo_release: "v0.12.2"
 repo_release_date: "2026-10-31"
