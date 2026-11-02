@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-293-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-294-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**293 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**294 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (18) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (11) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (14) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (26) · [Email & Messaging](#email--messaging) (10) · [Text Editors](#text-editors) (23) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (13) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (20) · [Logs](#logs) (6) · [Games & Fun](#games--fun) (8) · [AI](#ai) (9) · [Utilities & Other](#utilities--other) (7)
+[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (18) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (11) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (14) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (26) · [Email & Messaging](#email--messaging) (10) · [Text Editors](#text-editors) (23) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (13) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (20) · [Logs](#logs) (6) · [Games & Fun](#games--fun) (8) · [AI](#ai) (10) · [Utilities & Other](#utilities--other) (7)
 
 ### File Management
 
@@ -431,6 +431,7 @@
 | [crush](https://github.com/charmbracelet/crush) | Glamourous agentic coding for all 💘 | Go | 28.9k | [Repo](https://github.com/charmbracelet/crush) |
 | [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | 47.5k | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
 | [lazyskills](https://lazyskills.sh) | mission control for agent skills | Go | 334 | [Repo](https://github.com/alvinunreal/lazyskills), [Website](https://lazyskills.sh) |
+| [openclaw](https://openclaw.ai) | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 | TypeScript | – | [Repo](https://github.com/openclaw/openclaw), [Website](https://openclaw.ai) |
 | [opencode](https://opencode.ai) | The open source coding agent. | TypeScript | 224k | [Repo](https://github.com/anomalyco/opencode), [Website](https://opencode.ai) |
 | [yylo](https://yylo.dev) | A command-line orchestrator for coding agents, repeatable workflows, and receipt-backed repository… | Python | 66 | [Repo](https://github.com/yylo-dev/yylo), [Website](https://yylo.dev) |
 
