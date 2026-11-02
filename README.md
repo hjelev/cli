@@ -330,7 +330,7 @@
 | [freeze](https://github.com/charmbracelet/freeze) | Generate images of code and terminal output 📸 | Go | 4.9k | [Repo](https://github.com/charmbracelet/freeze) |
 | [gowall](https://achno.github.io/gowall-docs/) | A tool to convert a Wallpaper's color scheme / palette, OCR with VLM's Traditional & Hybrid, Image… | Go | 2.3k | [Repo](https://github.com/Achno/gowall), [Website](https://achno.github.io/gowall-docs/) |
 | [kari](https://github.com/Dhairya3391/kari) | Kari just a tui for getting media from providers and playing it in your media player with nice to… | Go | 62 | [Repo](https://github.com/Dhairya3391/kari), [Website](https://github.com/Dhairya3391/kari) |
-| [linecast](https://terminaltrove.com/linecast/) | Weather, tides, the sun, the moon, and maps, in your terminal. The Old Farmer's Almanac meets… | Python | 658 | [Repo](https://github.com/ashuttl/linecast), [Website](https://terminaltrove.com/linecast/) |
+| [linecast](https://github.com/ashuttl/linecast) | Weather, tides, the sun, the moon, and maps, in your terminal. The Old Farmer's Almanac meets… | Python | 658 | [Repo](https://github.com/ashuttl/linecast) |
 | [mapscii](https://github.com/rastapasta/mapscii) | 🗺 MapSCII is a Braille & ASCII world map renderer for your console. | JavaScript | 9.3k | [Repo](https://github.com/rastapasta/mapscii) |
 | [mcat](https://github.com/Skardyy/mcat) | Terminal image, video, PDF, and Markdown viewer | Rust | 1.5k | [Repo](https://github.com/Skardyy/mcat) |
 | [mpv](https://mpv.io) | 🎥 Command line media player | C | 37.7k | [Repo](https://github.com/mpv-player/mpv), [Website](https://mpv.io) |
