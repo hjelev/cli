@@ -9,7 +9,6 @@ description: >-
   It is pure Python, has no dependencies, adapts to your terminal theme, and
   needs no account or API key for its core experience.
 repository_url: https://github.com/ashuttl/linecast
-website: https://terminaltrove.com/linecast/
 author: ashuttl
 license: MIT
 language: Python
@@ -39,12 +38,13 @@ tags:
   - tides
   - tui
   - weather
-media: https://raw.githubusercontent.com/ashuttl/linecast/main/screenshots/hero.gif
+media: https://raw.githubusercontent.com/ashuttl/linecast/main/screenshots/hero.png
 logo: https://avatars.githubusercontent.com/u/2095936?v=4
-updated: '2026-08-21'
+updated: '2026-11-02'
+comments: []
 repo_stars: 658
-repo_updated: "2026-11-02"
-repo_created: "2026-03-05"
-repo_release: "v2.11.0"
-repo_release_date: "2026-10-24"
+repo_updated: '2026-11-02'
+repo_created: '2026-03-05'
+repo_release: v2.11.0
+repo_release_date: '2026-10-24'
 ---
