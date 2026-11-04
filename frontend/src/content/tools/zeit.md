@@ -49,7 +49,7 @@ media: >-
 logo: https://zeit.observer/images/zeit.png
 updated: '2026-07-21'
 repo_stars: 593
-repo_updated: "2026-09-09"
+repo_updated: "2026-11-03"
 repo_created: "2020-10-10"
 repo_release: "v1.1.0"
 repo_release_date: "2026-08-26"

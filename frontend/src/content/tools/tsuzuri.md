@@ -49,7 +49,7 @@ tags:
 media: https://tsuzuri-site-eyla.vercel.app/_astro/hero.BGn2Qygk_Z2fWbMp.webp
 logo: https://avatars.githubusercontent.com/u/289315174?v=4
 updated: '2026-10-17'
-repo_stars: 346
+repo_stars: 348
 repo_updated: "2026-10-31"
 repo_created: "2026-09-09"
 repo_release: "v0.4.0"

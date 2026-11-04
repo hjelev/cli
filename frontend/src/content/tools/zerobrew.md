@@ -32,8 +32,8 @@ media: >-
   https://raw.githubusercontent.com/zerobrewhq/zerobrew/main/assets/zb-demo-0.4.0.gif
 logo: https://avatars.githubusercontent.com/u/336332407?s=200&v=4
 updated: '2026-10-30'
-repo_stars: 8242
-repo_updated: "2026-11-02"
+repo_stars: 8244
+repo_updated: "2026-11-03"
 repo_created: "2026-01-19"
 repo_release: "v0.4.2"
 repo_release_date: "2026-10-21"

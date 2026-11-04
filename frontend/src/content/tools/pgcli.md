@@ -41,7 +41,7 @@ media: https://github.com/dbcli/pgcli/raw/main/screenshots/pgcli.gif
 logo: https://avatars.githubusercontent.com/u/11810727?s=200&v=4
 updated: '2026-10-25'
 repo_stars: 13428
-repo_updated: "2026-10-24"
+repo_updated: "2026-11-03"
 repo_created: "2014-10-12"
 repo_release: "v4.7.1"
 repo_release_date: "2026-09-20"
