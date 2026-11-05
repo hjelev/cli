@@ -2,7 +2,15 @@
 name: tmail
 category: Email & Messaging
 short_description: A terminal email client with a spatial workspace for conversations.
-description: A terminal email client with a spatial workspace for conversations.
+description: >-
+  A fast, keyboard- and mouse-friendly terminal email client that stores mail in
+  a local Maildir and syncs seamlessly with any IMAP/SMTP server.   
+
+  Features a unique spatial workspace view that visually maps conversation
+  threads to show who answered whom at a glance.   
+
+  Includes system keyring integration, OAuth2 authentication, GnuPG support, and
+  extensible configuration via Lua scripting.
 repository_url: https://github.com/tuna4ll/tmail
 website: https://crates.io/crates/tmail
 author: tuna4ll
@@ -28,5 +36,7 @@ tags:
   - email
   - workspaces
 media: https://raw.githubusercontent.com/tuna4ll/tmail/refs/heads/main/docs/demo.gif
+logo: https://avatars.githubusercontent.com/u/66411462?v=4
 updated: '2026-11-05'
+comments: []
 ---
