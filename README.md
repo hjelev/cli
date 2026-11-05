@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-301-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-302-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**301 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**302 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (11) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (14) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (27) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (23) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (13) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (20) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (10) · [Utilities & Other](#utilities--other) (7)
+[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (11) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (14) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (27) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (23) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (13) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (21) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (10) · [Utilities & Other](#utilities--other) (7)
 
 ### File Management
 
@@ -396,6 +396,7 @@
 | [sqlmux](https://github.com/kackerx/sqlmux) | A tmux-style terminal database client with Vim keybindings for PostgreSQL, MySQL, SqlServer, Redis,… | Go | 246 | [Repo](https://github.com/kackerx/sqlmux) |
 | [sttr](https://abhimanyu003.github.io/sttr/) | cross-platform, cli app to perform various operations on string | Go | 1.4k | [Repo](https://github.com/abhimanyu003/sttr), [Website](https://abhimanyu003.github.io/sttr/) |
 | [tabiew](https://github.com/shshemi/tabiew) | A lightweight TUI application to view and query tabular data files, such as CSV, TSV, and parquet. | Rust | 3.2k | [Repo](https://github.com/shshemi/tabiew) |
+| [tennis](https://github.com/gurgeous/tennis) | stylish CSV tables in your terminal | Rust | – | [Repo](https://github.com/gurgeous/tennis) |
 | [visidata](http://visidata.org) | A terminal spreadsheet multitool for discovering and arranging data | Python | 9.4k | [Repo](https://github.com/saulpw/visidata), [Website](http://visidata.org) |
 | [xan](https://github.com/medialab/xan) | The CSV magician | Rust | 4.5k | [Repo](https://github.com/medialab/xan) |
 | [xleak](https://github.com/bgreenwell/xleak) | A fast terminal Excel viewer with an interactive TUI. | Rust | 1.5k | [Repo](https://github.com/bgreenwell/xleak) |
