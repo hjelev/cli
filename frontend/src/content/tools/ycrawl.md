@@ -1,6 +1,6 @@
 ---
 name: ycrawl
-category: Data Processing
+category: AI
 short_description: Fetch a web page, get clean markdown, with honest verdicts when a page is blocked.
 description: >-
   Takes a URL and returns the page as markdown with YAML frontmatter. Navigation,

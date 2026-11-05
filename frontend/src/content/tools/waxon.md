@@ -1,6 +1,6 @@
 ---
 name: waxon
-category: Media & Entertainment
+category: Music & Audio
 short_description: A vim-modal Spotify client for the terminal
 description: >-
   Terminal Spotify Client: A feature-rich, terminal-based Spotify player built

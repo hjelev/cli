@@ -1,6 +1,6 @@
 ---
 name: freeze
-category: Media & Entertainment
+category: Development Tools
 short_description: Generate images of code and terminal output 📸
 description: >-
   freeze is a command-line tool by Charm that generates gorgeous, customizable

@@ -1,6 +1,6 @@
 ---
 name: nap
-category: Productivity
+category: Shell & Terminal
 short_description: Code snippets in your terminal
 description: >-
   Nap is a terminal-based code snippet manager that provides both a command-line

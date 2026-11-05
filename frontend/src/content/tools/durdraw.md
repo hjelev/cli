@@ -1,6 +1,6 @@
 ---
 name: durdraw
-category: Music & Audio
+category: Media & Entertainment
 short_description: >-
   Versatile ASCII and ANSI Art text editor for drawing in the Linux/Unix/macOS
   terminal, with animation, 256 and 16 colors, Unicode and CP437,

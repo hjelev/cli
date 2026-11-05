@@ -1,6 +1,6 @@
 ---
 name: leaf
-category: Shell & Terminal
+category: Notes & Documents
 short_description: Terminal Markdown previewer — GUI-like experience.
 description: >-
   A feature-rich terminal Markdown viewer built with Rust that delivers a

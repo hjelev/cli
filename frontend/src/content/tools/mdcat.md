@@ -1,6 +1,6 @@
 ---
 name: mdcat
-category: Shell & Terminal
+category: Notes & Documents
 short_description: cat for markdown
 description: >-
   A sophisticated Markdown viewer for text terminals that nicely renders

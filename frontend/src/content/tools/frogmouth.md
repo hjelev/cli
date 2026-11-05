@@ -1,6 +1,6 @@
 ---
 name: frogmouth
-category: Text Editors
+category: Notes & Documents
 short_description: A Markdown browser for your terminal
 description: >-
   Frogmouth is a markdown viewer for your terminal, built on the Textual TUI

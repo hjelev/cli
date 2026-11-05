@@ -1,6 +1,6 @@
 ---
 name: kudu
-category: Utilities & Other
+category: DevOps & Cloud
 short_description: 📦  TUI VM Manager on Linux
 description: >-
   Manage your Virtual Machines from the terminal. Provides cloud images for a

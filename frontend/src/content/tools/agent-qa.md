@@ -1,6 +1,6 @@
 ---
 name: agent-qa
-category: Development Tools
+category: AI
 short_description: Natural-language QA with persistent memory and evidence-gated self-improvement
 description: >-
   agent-qa runs natural-language tests for web, Android, and iOS apps from the

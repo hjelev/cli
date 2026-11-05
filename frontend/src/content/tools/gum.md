@@ -1,6 +1,6 @@
 ---
 name: gum
-category: Utilities & Other
+category: Shell & Terminal
 short_description: A tool for glamorous shell scripts 🎀
 description: >-
   gum is a utility by Charm designed to make shell scripts and terminal

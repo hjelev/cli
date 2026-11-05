@@ -1,6 +1,6 @@
 ---
 name: silicon
-category: Media & Entertainment
+category: Development Tools
 short_description: Create beautiful image of your source code.
 description: >-
   silicon is a fast, feature-rich command-line tool written in Rust to create

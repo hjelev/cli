@@ -1,6 +1,6 @@
 ---
 name: hurl
-category: Development Tools
+category: HTTP & API Clients
 short_description: Hurl, run and test HTTP requests with plain text.
 description: >-
   Hurl is a command-line tool powered by libcurl that runs and tests HTTP
