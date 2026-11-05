@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-294-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-295-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**294 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**295 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (18) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (11) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (14) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (26) · [Email & Messaging](#email--messaging) (10) · [Text Editors](#text-editors) (23) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (13) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (20) · [Logs](#logs) (6) · [Games & Fun](#games--fun) (8) · [AI](#ai) (10) · [Utilities & Other](#utilities--other) (7)
+[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (18) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (11) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (14) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (27) · [Email & Messaging](#email--messaging) (10) · [Text Editors](#text-editors) (23) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (13) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (20) · [Logs](#logs) (6) · [Games & Fun](#games--fun) (8) · [AI](#ai) (10) · [Utilities & Other](#utilities--other) (7)
 
 ### File Management
 
@@ -251,6 +251,7 @@
 | [sshfs](https://github.com/libfuse/sshfs) | A network filesystem client to connect to SSH servers | C | 7.7k | [Repo](https://github.com/libfuse/sshfs) |
 | [sshs](https://github.com/quantumsheep/sshs) | Terminal user interface for SSH | Rust | 1.6k | [Repo](https://github.com/quantumsheep/sshs) |
 | [termshark](https://github.com/gcla/termshark) | A terminal UI for tshark, inspired by Wireshark | Go | 10.1k | [Repo](https://github.com/gcla/termshark) |
+| [tork](https://github.com/melqtx/tork) | cli for searching and downloading torrents | Go | – | [Repo](https://github.com/melqtx/tork) |
 | [trippy](https://trippy.rs) | Trippy combines the functionality of traceroute and ping and is designed to assist with the… | Rust | 8.1k | [Repo](https://github.com/fujiapple852/trippy), [Website](https://trippy.rs) |
 | [ttl](https://github.com/lance0/ttl) | Fast, modern traceroute with real-time TUI, per-hop stats, ASN/geo lookup, ECMP detection, and MPLS… | Rust | 1.5k | [Repo](https://github.com/lance0/ttl) |
 | [whosthere](https://github.com/ramonvermeulen/whosthere) | Local Area Network discovery tool with an interactive Terminal User Interface (TUI) written in Go. | Go | 2.5k | [Repo](https://github.com/ramonvermeulen/whosthere) |
