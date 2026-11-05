@@ -52,4 +52,9 @@ tags:
 media: https://raw.githubusercontent.com/RivoLink/leaf/main/images/preview.png
 logo: https://leaf.rivolink.mg/images/logo/logo.svg
 updated: '2026-11-05'
+repo_stars: 2252
+repo_updated: "2026-11-05"
+repo_created: "2026-04-06"
+repo_release: "1.29.2"
+repo_release_date: "2026-10-25"
 ---
