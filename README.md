@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-296-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-297-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**296 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**297 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (18) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (11) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (14) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (27) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (23) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (13) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (20) · [Logs](#logs) (6) · [Games & Fun](#games--fun) (8) · [AI](#ai) (10) · [Utilities & Other](#utilities--other) (7)
+[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (18) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (11) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (14) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (27) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (23) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (13) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (20) · [Logs](#logs) (7) · [Games & Fun](#games--fun) (8) · [AI](#ai) (10) · [Utilities & Other](#utilities--other) (7)
 
 ### File Management
 
@@ -407,6 +407,7 @@
 | [lnav](http://lnav.org) | Log file navigator | C++ | 10.8k | [Repo](https://github.com/tstack/lnav), [Website](http://lnav.org) |
 | [nerdlog](https://dmitryfrank.com/projects/nerdlog/article) | Nerdlog: fast, remote-first, multi-host TUI log viewer with timeline histogram and no central server | Go | 1.6k | [Repo](https://github.com/dimonomid/nerdlog), [Website](https://dmitryfrank.com/projects/nerdlog/article) |
 | [tailspin](https://github.com/bensadeh/tailspin) | 🌀 A log file highlighter | Rust | 8k | [Repo](https://github.com/bensadeh/tailspin) |
+| [toolong](https://www.textualize.io/) | A terminal application to view, tail, merge, and search log files (plus JSONL). | Python | – | [Repo](https://github.com/Textualize/toolong), [Website](https://www.textualize.io/) |
 | [whyd](https://github.com/vmaltarello/whyd) | Find out why your Linux PC froze, crashed or shut down: whyd reads the journal of the previous boot… | Go | 85 | [Repo](https://github.com/vmaltarello/whyd) |
 
 ### Games & Fun
