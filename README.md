@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-300-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-301-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**300 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**301 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (20) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (11) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (14) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (27) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (23) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (13) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (20) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (10) · [Utilities & Other](#utilities--other) (7)
+[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (11) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (14) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (7) · [Git](#git) (19) · [Networking](#networking) (27) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (23) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (13) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (14) · [Data Processing](#data-processing) (20) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (10) · [Utilities & Other](#utilities--other) (7)
 
 ### File Management
 
@@ -104,6 +104,7 @@
 | [leaf](https://leaf.rivolink.mg) | Terminal Markdown previewer — GUI-like experience. | Rust | – | [Repo](https://github.com/rivolink/leaf), [Website](https://leaf.rivolink.mg) |
 | [mcfly](https://github.com/cantino/mcfly) | Fly through your shell history. Great Scott! | Rust | 7.8k | [Repo](https://github.com/cantino/mcfly) |
 | [mdcat](https://crates.io/crates/mdcat) | cat for markdown | Rust | – | [Repo](https://github.com/BIRSAx2/mdcat), [Website](https://crates.io/crates/mdcat) |
+| [moor](https://github.com/walles/moor) | Moor is a pager. It's designed to just do the right thing without any configuration. | Go | – | [Repo](https://github.com/walles/moor) |
 | [pet](https://github.com/knqyf263/pet) | Simple command-line snippet manager | Go | 5.4k | [Repo](https://github.com/knqyf263/pet) |
 | [psmux](https://psmux.pages.dev/) | Tmux on Windows Powershell - tmux for PowerShell, Windows Terminal, cmd.exe. Includes psmux, pmux,… | PowerShell | 3.8k | [Repo](https://github.com/psmux/psmux), [Website](https://psmux.pages.dev/) |
 | [suvadu](https://suvadu.sh) | Shell history replacement with AI agent tracking and MCP server. Built in Rust, 100% local. | Rust | 127 | [Repo](https://github.com/AppachiTech/suvadu), [Website](https://suvadu.sh) |
