@@ -48,9 +48,9 @@ media: https://raw.githubusercontent.com/amir20/dtop/master/demo.gif
 logo: https://raw.githubusercontent.com/amir20/dtop/main/docs/static/dtop-icon.svg
 updated: '2026-10-20'
 repo_stars: 1486
-repo_updated: "2026-11-04"
+repo_updated: "2026-11-05"
 repo_created: "2025-06-20"
-repo_release: "v0.10.6"
-repo_release_date: "2026-11-03"
+repo_release: "v0.11.1"
+repo_release_date: "2026-11-05"
 comments: []
 ---

@@ -31,7 +31,7 @@ media: >-
   https://raw.githubusercontent.com/wilfredinni/noodle/main/assets/noodle-catppuccin.png
 logo: https://raw.githubusercontent.com/wilfredinni/noodle/main/assets/logo.png
 updated: '2026-07-09'
-repo_stars: 403
+repo_stars: 402
 repo_updated: "2026-11-02"
 repo_created: "2026-06-24"
 repo_release: "v0.10.3"

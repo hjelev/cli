@@ -40,9 +40,9 @@ media: https://www.msgvault.io/docs/assets/generated/tui-senders.svg
 logo: >-
   https://raw.githubusercontent.com/kenn-io/msgvault/main/.github/assets/msgvault-mark.svg
 updated: '2026-11-01'
-repo_stars: 2176
-repo_updated: "2026-11-04"
+repo_stars: 2177
+repo_updated: "2026-11-05"
 repo_created: "2026-01-28"
-repo_release: "v0.22.0"
-repo_release_date: "2026-10-23"
+repo_release: "v0.23.0"
+repo_release_date: "2026-11-05"
 ---
