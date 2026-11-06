@@ -27,10 +27,10 @@ tags:
 media: https://github.com/Vitruves/ghostty-config/raw/main/img/themes.png
 logo: https://raw.githubusercontent.com/Vitruves/ghostty-config/main/img/logo.png
 updated: '2026-10-20'
-repo_stars: 180
-repo_updated: "2026-11-01"
+repo_stars: 181
+repo_updated: "2026-11-06"
 repo_created: "2026-09-27"
-repo_release: "2.0.0"
-repo_release_date: "2026-11-01"
+repo_release: "2.1.0"
+repo_release_date: "2026-11-06"
 repo_badge: true
 ---
