@@ -34,13 +34,13 @@ tags:
   - terminal-based
   - textual
   - tui
-media: https://cli.masoko.net/uploads/toolong/media.jpg
-logo: >-
-  https://private-user-images.githubusercontent.com/554369/303626543-07f286c9-ac8d-44cd-905a-062a26060821.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTM5MTIzMzIsIm5iZiI6MTc5MzkxMjAzMiwicGF0aCI6Ii81NTQzNjkvMzAzNjI2NTQzLTA3ZjI4NmM5LWFjOGQtNDRjZC05MDVhLTA2MmEyNjA2MDgyMS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMTA1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTEwNVQyMDUzNTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01YzJiMmU0YzAyYjUxZWZiOWMyZjU5Njg5MjZhMTM5ZjU3ZWRmNjA1NDgyNjVmYzVhYzAwZWM3OTdlNWIzYWQyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.0YE_xmhslnGqSAQpSc9y7KAmKXm0D7jdmb1om2zBi6g
-updated: '2026-11-05'
+media: https://cli.masoko.net/uploads/toolong/media.png
+logo: https://cli.masoko.net/uploads/toolong/logo.jpg
+updated: '2026-11-06'
+comments: []
 repo_stars: 3972
-repo_updated: "2024-08-05"
-repo_created: "2024-01-07"
-repo_release: "v1.4.0"
-repo_release_date: "2024-03-02"
+repo_updated: '2024-08-05'
+repo_created: '2024-01-07'
+repo_release: v1.4.0
+repo_release_date: '2024-03-02'
 ---
