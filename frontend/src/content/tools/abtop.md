@@ -51,7 +51,7 @@ tags:
 media: https://raw.githubusercontent.com/graykode/abtop/main/assets/demo.gif
 logo: https://avatars.githubusercontent.com/u/10525011?v=4
 updated: '2026-11-02'
-repo_stars: 3803
+repo_stars: 3804
 repo_updated: "2026-09-14"
 repo_created: "2026-03-29"
 repo_release: "v0.5.5"

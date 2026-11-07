@@ -37,10 +37,10 @@ tags:
 media: https://cli.masoko.net/uploads/toolong/media.png
 logo: https://cli.masoko.net/uploads/toolong/logo.jpg
 updated: '2026-11-06'
+repo_stars: 3973
+repo_updated: "2024-08-05"
+repo_created: "2024-01-07"
+repo_release: "v1.4.0"
+repo_release_date: "2024-03-02"
 comments: []
-repo_stars: 3972
-repo_updated: '2024-08-05'
-repo_created: '2024-01-07'
-repo_release: v1.4.0
-repo_release_date: '2024-03-02'
 ---

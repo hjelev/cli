@@ -33,7 +33,7 @@ tags:
 media: https://raw.githubusercontent.com/alajmo/sake/main/res/output.gif
 logo: https://sakecli.com/img/logo.svg
 updated: '2026-09-05'
-repo_stars: 752
+repo_stars: 753
 repo_updated: "2026-05-31"
 repo_created: "2021-10-09"
 repo_release: "v0.15.1"

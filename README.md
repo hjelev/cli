@@ -44,22 +44,22 @@
 |------|-------------|----------|---------|-------|
 | [archivemount](https://github.com/cybernoid/archivemount) | A fuse filesystem for mounting archives in formats supported by libarchive. | C | 244 | [Repo](https://github.com/cybernoid/archivemount) |
 | [broot](https://dystroy.org/broot/) | A new way to see and navigate directory trees | Rust | 13.1k | [Repo](https://github.com/Canop/broot), [Website](https://dystroy.org/broot/) |
-| [elio](https://elio-fm.github.io/) | Snappy, batteries-included terminal file manager with rich previews. | Rust | 913 | [Repo](https://github.com/elio-fm/elio), [Website](https://elio-fm.github.io/) |
+| [elio](https://elio-fm.github.io/) | Snappy, batteries-included terminal file manager with rich previews. | Rust | 912 | [Repo](https://github.com/elio-fm/elio), [Website](https://elio-fm.github.io/) |
 | [far2l](https://github.com/elfmz/far2l) | Linux port of FAR v2 | C++ | 2.2k | [Repo](https://github.com/elfmz/far2l) |
 | [felix](https://kyoheiu.dev/felix/) | tui file manager with vim-like key mapping | Rust | 922 | [Repo](https://github.com/kyoheiu/felix), [Website](https://kyoheiu.dev/felix/) |
 | [FTB](https://github.com/Cyxuan0311/FTB) | A terminal-based file browser, built with C++17 and FTXUI. | C++ | 16 | [Repo](https://github.com/Cyxuan0311/FTB) |
 | [lf](https://github.com/gokcehan/lf) | lf (as in "list files") is a terminal file manager written in Go with a heavy inspiration from… | Go | 9.6k | [Repo](https://github.com/gokcehan/lf) |
 | [mc](https://midnight-commander.org) | GNU Midnight Commander, a text-mode full-screen file manager. | C | 1k | [Repo](https://github.com/MidnightCommander/mc), [Website](https://midnight-commander.org) |
 | [nnn](https://github.com/jarun/nnn) | n³ The unorthodox terminal file manager | C | 22.1k | [Repo](https://github.com/jarun/nnn) |
-| [ranger](https://ranger.fm) | A VIM-inspired filemanager for the console | Python | 17.4k | [Repo](https://github.com/ranger/ranger), [Website](https://ranger.fm) |
+| [ranger](https://ranger.fm) | A VIM-inspired filemanager for the console | Python | 17.5k | [Repo](https://github.com/ranger/ranger), [Website](https://ranger.fm) |
 | [rclone](https://rclone.org) | "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic,… | Go | 60.8k | [Repo](https://github.com/rclone/rclone), [Website](https://rclone.org) |
 | [RecoverPy](https://github.com/PabloLec/RecoverPy) | Interactively find and recover deleted or :point_right: overwritten :point_left: files from your… | Python | 1.8k | [Repo](https://github.com/PabloLec/RecoverPy) |
 | [sb](https://sb.masoko.net) | A terminal-based file manager built for speed and efficiency. | Rust | 5 | [Repo](https://github.com/hjelev/sb), [Website](https://sb.masoko.net) |
 | [superfile](https://superfile.dev) | Pretty fancy and modern terminal file manager | Go | 24k | [Repo](https://github.com/yorukot/superfile), [Website](https://superfile.dev) |
-| [tfm](https://clarkarch.github.io/tfm-tui/) | 🖱️ Modern mouse-first terminal file manager | TypeScript | 355 | [Repo](https://github.com/clarkarch/tfm-tui), [Website](https://clarkarch.github.io/tfm-tui/) |
+| [tfm](https://clarkarch.github.io/tfm-tui/) | 🖱️ Modern mouse-first terminal file manager | TypeScript | 356 | [Repo](https://github.com/clarkarch/tfm-tui), [Website](https://clarkarch.github.io/tfm-tui/) |
 | [vifm](https://vifm.info) | Vifm is a file manager with curses interface, which provides Vim-like environment for managing… | C | 3.3k | [Repo](https://github.com/vifm/vifm), [Website](https://vifm.info) |
 | [walk](https://github.com/antonmedv/walk) | Walk — a terminal navigator; a cd and ls replacement. | Go | 3.6k | [Repo](https://github.com/antonmedv/walk) |
-| [xplr](https://xplr.dev) | A hackable, minimal, fast TUI file explorer | Rust | 4.8k | [Repo](https://github.com/sayanarijit/xplr), [Website](https://xplr.dev) |
+| [xplr](https://xplr.dev) | A hackable, minimal, fast TUI file explorer | Rust | 4.9k | [Repo](https://github.com/sayanarijit/xplr), [Website](https://xplr.dev) |
 | [yazi](https://yazi-rs.github.io) | Blazing fast terminal file manager written in Rust, based on async I/O. | Rust | 43.3k | [Repo](https://github.com/sxyazi/yazi), [Website](https://yazi-rs.github.io) |
 | [YtreeNova](https://github.com/robkam/ytreenova) | A File Manager for Unix-like Systems | C | 18 | [Repo](https://github.com/robkam/ytreenova) |
 
@@ -93,12 +93,12 @@
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
 | [atuin](https://atuin.sh/) | ✨ Making your shell magical | Rust | 32.2k | [Repo](https://github.com/atuinsh/atuin), [Website](https://atuin.sh/) |
-| [bat](https://github.com/sharkdp/bat) | A cat(1) clone with syntax highlighting and Git integration. | Rust | 61.1k | [Repo](https://github.com/sharkdp/bat) |
+| [bat](https://github.com/sharkdp/bat) | A cat(1) clone with syntax highlighting and Git integration. | Rust | 61.2k | [Repo](https://github.com/sharkdp/bat) |
 | [byobu](https://byobu.org) | text window manager, shell multiplexer, integrated DevOps environment | Python | 1.7k | [Repo](https://github.com/dustinkirkland/byobu), [Website](https://byobu.org) |
 | [chezmoi](https://www.chezmoi.io) | Manage your dotfiles across multiple diverse machines, securely. | Go | 22.2k | [Repo](https://github.com/twpayne/chezmoi), [Website](https://www.chezmoi.io) |
 | [flyline](https://github.com/HalFrgrd/flyline) | Flyline: a Bash plugin to replace readline for a modern line editing experience: syntax… | Rust | 1.4k | [Repo](https://github.com/HalFrgrd/flyline) |
-| [fzf](https://junegunn.github.io/fzf) | 🌸 A command-line fuzzy finder | Go | 84k | [Repo](https://github.com/junegunn/fzf), [Website](https://junegunn.github.io/fzf) |
-| [ghostty-config](https://github.com/Vitruves/ghostty-config) | TUI for Ghostty terminal customization | Go | 181 | [Repo](https://github.com/Vitruves/ghostty-config) |
+| [fzf](https://junegunn.github.io/fzf) | 🌸 A command-line fuzzy finder | Go | 84.1k | [Repo](https://github.com/junegunn/fzf), [Website](https://junegunn.github.io/fzf) |
+| [ghostty-config](https://github.com/Vitruves/ghostty-config) | TUI for Ghostty terminal customization | Go | 183 | [Repo](https://github.com/Vitruves/ghostty-config) |
 | [gum](https://github.com/charmbracelet/gum) | A tool for glamorous shell scripts 🎀 | Go | 24.6k | [Repo](https://github.com/charmbracelet/gum) |
 | [hoard](https://hyde46.github.io/hoard/) | cli command organizer written in rust | Rust | 661 | [Repo](https://github.com/Hyde46/hoard), [Website](https://hyde46.github.io/hoard/) |
 | [inshellisense](https://github.com/microsoft/inshellisense) | IDE style command line auto complete | TypeScript | 10.8k | [Repo](https://github.com/microsoft/inshellisense) |
@@ -108,7 +108,7 @@
 | [pet](https://github.com/knqyf263/pet) | Simple command-line snippet manager | Go | 5.4k | [Repo](https://github.com/knqyf263/pet) |
 | [psmux](https://psmux.pages.dev/) | Tmux on Windows Powershell - tmux for PowerShell, Windows Terminal, cmd.exe. Includes psmux, pmux,… | PowerShell | 3.8k | [Repo](https://github.com/psmux/psmux), [Website](https://psmux.pages.dev/) |
 | [suvadu](https://suvadu.sh) | Shell history replacement with AI agent tracking and MCP server. Built in Rust, 100% local. | Rust | 127 | [Repo](https://github.com/AppachiTech/suvadu), [Website](https://suvadu.sh) |
-| [tldr](https://tldr.sh) | Collaborative cheatsheets for console commands 📚. | Markdown | 64.1k | [Repo](https://github.com/tldr-pages/tldr), [Website](https://tldr.sh) |
+| [tldr](https://tldr.sh) | Collaborative cheatsheets for console commands 📚. | Markdown | 64.2k | [Repo](https://github.com/tldr-pages/tldr), [Website](https://tldr.sh) |
 | [tmux](https://tmux.us) | tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and… | C | 50.2k | [Repo](https://github.com/tmux/tmux), [Website](https://tmux.us) |
 | [undo](https://undo.edaywalid.com) | Undo what the last shell command did to the filesystem | Go | 402 | [Repo](https://github.com/edaywalid/undo), [Website](https://undo.edaywalid.com) |
 | [zellij](https://zellij.dev) | A terminal workspace with batteries included | Rust | 36k | [Repo](https://github.com/zellij-org/zellij), [Website](https://zellij.dev) |
@@ -119,7 +119,7 @@
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
 | [igrep](https://github.com/konradsz/igrep) | Interactive Grep | Rust | 847 | [Repo](https://github.com/konradsz/igrep) |
-| [ripgrep](https://ripgrep.dev) | ripgrep recursively searches directories for a regex pattern while respecting your gitignore | Rust | 69.8k | [Repo](https://github.com/BurntSushi/ripgrep), [Website](https://ripgrep.dev) |
+| [ripgrep](https://ripgrep.dev) | ripgrep recursively searches directories for a regex pattern while respecting your gitignore | Rust | 69.9k | [Repo](https://github.com/BurntSushi/ripgrep), [Website](https://ripgrep.dev) |
 | [scooter](https://github.com/thomasschafer/scooter) | Interactive find-and-replace in the terminal | Rust | 1.3k | [Repo](https://github.com/thomasschafer/scooter) |
 | [ugrep](https://ugrep.com) | 🔍 ugrep 7.8 file pattern searcher -- a user-friendly, faster, more capable grep replacement. | C++ | 3.3k | [Repo](https://github.com/Genivia/ugrep), [Website](https://ugrep.com) |
 | [ygrep](https://yetidevworks.com/ygrep) | A fast, local, indexed code search tool optimized for AI coding assistants. | Rust | 64 | [Repo](https://github.com/yetidevworks/ygrep), [Website](https://yetidevworks.com/ygrep) |
@@ -144,7 +144,7 @@
 
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
-| [alphai-tui](https://alphai.io/tui) | Stock-market TUI with quotes, charts, portfolio tracking, news and SEC insider filings | Rust | 90 | [Repo](https://github.com/makeev/alphai-tui), [Website](https://alphai.io/tui) |
+| [alphai-tui](https://alphai.io/tui) | Stock-market TUI with quotes, charts, portfolio tracking, news and SEC insider filings | Rust | 92 | [Repo](https://github.com/makeev/alphai-tui), [Website](https://alphai.io/tui) |
 | [Bagels](https://github.com/EnhancedJax/Bagels) | Powerful expense tracker that lives in your terminal. | Python | 2.9k | [Repo](https://github.com/EnhancedJax/Bagels) |
 | [chroncal](https://pkg.go.dev/github.com/douglasdemoura/chroncal) | Terminal-first calendar, todo, and journal manager with iCalendar (RFC 5545) support and CalDAV… | Go | 238 | [Repo](https://github.com/DouglasdeMoura/chroncal), [Website](https://pkg.go.dev/github.com/douglasdemoura/chroncal) |
 | [countdown](https://github.com/antonmedv/countdown) | Terminal countdown timer | Go | 1.3k | [Repo](https://github.com/antonmedv/countdown) |
@@ -165,7 +165,7 @@
 | [glow](https://github.com/charmbracelet/glow) | Render markdown on the CLI, with pizzazz! 💅🏻 | Go | 27.9k | [Repo](https://github.com/charmbracelet/glow) |
 | [lazymark](https://github.com/MathiasDrizzy/lazymark) | Lazy markdown notes, tasks and a Kanban board in your terminal. With a sleepy sloth. | Go | 103 | [Repo](https://github.com/MathiasDrizzy/lazymark) |
 | [leaf](https://leaf.rivolink.mg) | Terminal Markdown previewer — GUI-like experience. | Rust | 2.3k | [Repo](https://github.com/rivolink/leaf), [Website](https://leaf.rivolink.mg) |
-| [mdcat](https://crates.io/crates/mdcat) | cat for markdown | Rust | 165 | [Repo](https://github.com/BIRSAx2/mdcat), [Website](https://crates.io/crates/mdcat) |
+| [mdcat](https://crates.io/crates/mdcat) | cat for markdown | Rust | 166 | [Repo](https://github.com/BIRSAx2/mdcat), [Website](https://crates.io/crates/mdcat) |
 | [nb](https://xwmx.github.io/nb) | CLI and local web plain text note‑taking, bookmarking, and archiving with linking, tagging,… | Shell | 8.5k | [Repo](https://github.com/xwmx/nb), [Website](https://xwmx.github.io/nb) |
 | [rayomd](https://butterski.github.io/rayomd-website/) | Markdown to PDF in under a millisecond: one small native binary, no browser, LaTeX or Pandoc. | C++ | 21 | [Repo](https://github.com/Butterski/rayomd), [Website](https://butterski.github.io/rayomd-website/) |
 | [Shoin](https://github.com/nol00p/Shoin) | A no-clutter terminal Markdown editor. Modal editing, Obsidian-style live formatting, an iA Writer… | Rust | 78 | [Repo](https://github.com/nol00p/Shoin) |
@@ -181,7 +181,7 @@
 | [act](https://nektosact.com) | Run your GitHub Actions locally 🚀 | Go | 72.6k | [Repo](https://github.com/nektos/act), [Website](https://nektosact.com) |
 | [asciinema](https://asciinema.org) | Terminal session recorder, streamer and player 📹 | Rust | 17.9k | [Repo](https://github.com/asciinema/asciinema), [Website](https://asciinema.org) |
 | [cloc](https://github.com/AlDanial/cloc) | cloc counts blank lines, comment lines, and physical lines of source code in many programming… | Perl | 23.6k | [Repo](https://github.com/AlDanial/cloc) |
-| [ComChan](https://blog.vaishnavs.is-a.dev/comchan/) | A Blazingly Fast Minimal Serial Monitor with serial plottter TUI and more | Rust | 177 | [Repo](https://github.com/Vaishnav-Sabari-Girish/ComChan), [Website](https://blog.vaishnavs.is-a.dev/comchan/) |
+| [ComChan](https://blog.vaishnavs.is-a.dev/comchan/) | A Blazingly Fast Minimal Serial Monitor with serial plottter TUI and more | Rust | 178 | [Repo](https://github.com/Vaishnav-Sabari-Girish/ComChan), [Website](https://blog.vaishnavs.is-a.dev/comchan/) |
 | [difftastic](https://difftastic.wilfred.me.uk/) | a structural diff that understands syntax 🟥🟩 | Rust | 26.2k | [Repo](https://github.com/Wilfred/difftastic), [Website](https://difftastic.wilfred.me.uk/) |
 | [dyff](https://github.com/homeport/dyff) | /ˈdʏf/ - diff tool for YAML files, and sometimes JSON | Go | 1.9k | [Repo](https://github.com/homeport/dyff) |
 | [dz6](https://dz6.dev.br) | Fast Vim-inspired hex editor for the terminal | Rust | 217 | [Repo](https://github.com/mentebinaria/dz6), [Website](https://dz6.dev.br) |
@@ -249,7 +249,7 @@
 | [lsoff](https://github.com/yutat23/lsoff) | CLI / TUI that lists listening TCP/UDP ports | Go | 258 | [Repo](https://github.com/yutat23/lsoff) |
 | [netop](https://crates.io/crates/netop) | Network Top -- Help you monitor network traffic with bpf | Rust | 267 | [Repo](https://github.com/ZingerLittleBee/netop), [Website](https://crates.io/crates/netop) |
 | [netwatch](https://www.netwatchlabs.com/labs/netwatch) | Real-time network diagnostics in your terminal. One command, zero config, instant visibility. | Rust | 3.6k | [Repo](https://github.com/matthart1983/netwatch), [Website](https://www.netwatchlabs.com/labs/netwatch) |
-| [portop](https://padovanl.github.io/portop/) | htop for your ports. Inspect processes, Docker & systemd, detect port drift, audit Compose, and… | Go | 303 | [Repo](https://github.com/padovanl/portop), [Website](https://padovanl.github.io/portop/) |
+| [portop](https://padovanl.github.io/portop/) | htop for your ports. Inspect processes, Docker & systemd, detect port drift, audit Compose, and… | Go | 302 | [Repo](https://github.com/padovanl/portop), [Website](https://padovanl.github.io/portop/) |
 | [rustnet](https://github.com/domcyrus/rustnet#quick-start) | Per-process network monitoring for your terminal with deep packet inspection. Cross-platform,… | Rust | 5.2k | [Repo](https://github.com/domcyrus/rustnet), [Website](https://github.com/domcyrus/rustnet#quick-start) |
 | [shoal](https://github.com/BT10011/shoal) | Terminal LAN discovery that shows its work | Go | 100 | [Repo](https://github.com/BT10011/shoal) |
 | [slurm](http://github.com/mattthias/slurm/wiki/) | yet another realtime network interface monitor | C | 424 | [Repo](https://github.com/mattthias/slurm), [Website](http://github.com/mattthias/slurm/wiki/) |
@@ -257,7 +257,7 @@
 | [sshfs](https://github.com/libfuse/sshfs) | A network filesystem client to connect to SSH servers | C | 7.7k | [Repo](https://github.com/libfuse/sshfs) |
 | [sshs](https://github.com/quantumsheep/sshs) | Terminal user interface for SSH | Rust | 1.6k | [Repo](https://github.com/quantumsheep/sshs) |
 | [termshark](https://github.com/gcla/termshark) | A terminal UI for tshark, inspired by Wireshark | Go | 10.1k | [Repo](https://github.com/gcla/termshark) |
-| [tork](https://github.com/melqtx/tork) | cli for searching and downloading torrents | Go | 468 | [Repo](https://github.com/melqtx/tork) |
+| [tork](https://github.com/melqtx/tork) | cli for searching and downloading torrents | Go | 503 | [Repo](https://github.com/melqtx/tork) |
 | [trippy](https://trippy.rs) | Trippy combines the functionality of traceroute and ping and is designed to assist with the… | Rust | 8.1k | [Repo](https://github.com/fujiapple852/trippy), [Website](https://trippy.rs) |
 | [ttl](https://github.com/lance0/ttl) | Fast, modern traceroute with real-time TUI, per-hop stats, ASN/geo lookup, ECMP detection, and MPLS… | Rust | 1.5k | [Repo](https://github.com/lance0/ttl) |
 | [whosthere](https://github.com/ramonvermeulen/whosthere) | Local Area Network discovery tool with an interactive Terminal User Interface (TUI) written in Go. | Go | 2.5k | [Repo](https://github.com/ramonvermeulen/whosthere) |
@@ -279,13 +279,13 @@
 | [neomutt](https://neomutt.org/) | ✉️ A fast, highly configurable terminal email client with modern patches like a mailbox sidebar and… | C | 3.9k | [Repo](https://github.com/neomutt/neomutt), [Website](https://neomutt.org/) |
 | [pop](https://github.com/charmbracelet/pop) | Send emails from your terminal 📬 | Go | 2.9k | [Repo](https://github.com/charmbracelet/pop) |
 | [tidemail](https://github.com/allisonhere/tidemail) | TUI Key first email client | Go | 86 | [Repo](https://github.com/allisonhere/tidemail) |
-| [tmail](https://crates.io/crates/tmail) | A terminal email client with a spatial workspace for conversations. | Rust | 19 | [Repo](https://github.com/tuna4ll/tmail), [Website](https://crates.io/crates/tmail) |
+| [tmail](https://crates.io/crates/tmail) | A terminal email client with a spatial workspace for conversations. | Rust | 22 | [Repo](https://github.com/tuna4ll/tmail), [Website](https://crates.io/crates/tmail) |
 
 ### Text Editors
 
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
-| [ad](https://crates.io/crates/ad-editor) | an adaptable text editor | Rust | 751 | [Repo](https://github.com/sminez/ad), [Website](https://crates.io/crates/ad-editor) |
+| [ad](https://crates.io/crates/ad-editor) | an adaptable text editor | Rust | 752 | [Repo](https://github.com/sminez/ad), [Website](https://crates.io/crates/ad-editor) |
 | [amp](https://amp.rs) | A complete text editor for your terminal. | Rust | 4.1k | [Repo](https://github.com/jmacdonald/amp), [Website](https://amp.rs) |
 | [cleecode](https://cleecode.marunja.com/) | CleeCode: a terminal IDE written in Rust — micro-style editor, file tree, integrated terminals,… | Rust | 91 | [Repo](https://github.com/msavox/cleecode), [Website](https://cleecode.marunja.com/) |
 | [croft](https://docs.croft.software) | VSCode-style TUI written in Rust | Rust | 68 | [Repo](https://codeberg.org/vitali87/croft), [Website](https://docs.croft.software) |
@@ -293,7 +293,7 @@
 | [emacs](https://github.com/emacs-mirror/emacs) | GNU Emacs is an extensible, customizable, free/libre text editor — and more. | C | 5.2k | [Repo](https://github.com/emacs-mirror/emacs) |
 | [Flow Control](https://flow-control.dev) | Flow Control: a programmer's text editor | Zig | 2.5k | [Repo](https://github.com/neurocyte/flow), [Website](https://flow-control.dev) |
 | [fresh](https://getfresh.dev) | A powerful terminal text editor and IDE. | Rust | 9.4k | [Repo](https://github.com/sinelaw/fresh), [Website](https://getfresh.dev) |
-| [helix](https://helix-editor.com) | A post-modern modal text editor. | Rust | 46.8k | [Repo](https://github.com/helix-editor/helix), [Website](https://helix-editor.com) |
+| [helix](https://helix-editor.com) | A post-modern modal text editor. | Rust | 46.9k | [Repo](https://github.com/helix-editor/helix), [Website](https://helix-editor.com) |
 | [kakoune](http://kakoune.org) | mawww's experiment for a better code editor | C++ | 11.1k | [Repo](https://github.com/mawww/kakoune), [Website](http://kakoune.org) |
 | [kibi](https://github.com/ilai-deutel/kibi) | A text editor in ≤1024 lines of code, written in Rust | Rust | 2k | [Repo](https://github.com/ilai-deutel/kibi) |
 | [Kiwi](https://github.com/0x4D696E61/Kiwi) | A Windows-native modal terminal editor built around WASD navigation. | C++ | 2 | [Repo](https://github.com/0x4D696E61/Kiwi), [Website](https://github.com/0x4D696E61/Kiwi) |
@@ -328,7 +328,7 @@
 | [spotify-player](https://github.com/aome510/spotify-player) | A Spotify player in the terminal with full feature parity | Rust | 7.3k | [Repo](https://github.com/aome510/spotify-player) |
 | [spotify-tui](https://github.com/Rigellute/spotify-tui) | Spotify for the terminal written in Rust 🚀 | Rust | 19.4k | [Repo](https://github.com/Rigellute/spotify-tui) |
 | [termusic](https://github.com/tramhao/termusic) | Music Player TUI written in Rust | Rust | 2.2k | [Repo](https://github.com/tramhao/termusic) |
-| [waxon](https://waxon.danfry.dev) | A vim-modal Spotify client for the terminal | Go | 62 | [Repo](https://github.com/danfry1/waxon), [Website](https://waxon.danfry.dev) |
+| [waxon](https://waxon.danfry.dev) | A vim-modal Spotify client for the terminal | Go | 63 | [Repo](https://github.com/danfry1/waxon), [Website](https://waxon.danfry.dev) |
 | [wiremix](https://github.com/tsowell/wiremix) | Simple TUI audio mixer for PipeWire | Rust | 1.1k | [Repo](https://github.com/tsowell/wiremix) |
 
 ### Media & Entertainment
@@ -343,8 +343,8 @@
 | [linecast](https://github.com/ashuttl/linecast) | Weather, tides, the sun, the moon, and maps, in your terminal. The Old Farmer's Almanac meets… | Python | 672 | [Repo](https://github.com/ashuttl/linecast) |
 | [mapscii](https://github.com/rastapasta/mapscii) | 🗺 MapSCII is a Braille & ASCII world map renderer for your console. | JavaScript | 9.3k | [Repo](https://github.com/rastapasta/mapscii) |
 | [mcat](https://github.com/Skardyy/mcat) | Terminal image, video, PDF, and Markdown viewer | Rust | 1.5k | [Repo](https://github.com/Skardyy/mcat) |
-| [mpv](https://mpv.io) | 🎥 Command line media player | C | 37.8k | [Repo](https://github.com/mpv-player/mpv), [Website](https://mpv.io) |
-| [Terrascope](https://pypi.org/project/terrascope/) | Braille-rendered terminal world map with live weather, aircraft, earthquakes, and day/night layers. | Python | 412 | [Repo](https://github.com/a-shygun/Terrascope), [Website](https://pypi.org/project/terrascope/) |
+| [mpv](https://mpv.io) | 🎥 Command line media player | C | 38k | [Repo](https://github.com/mpv-player/mpv), [Website](https://mpv.io) |
+| [Terrascope](https://pypi.org/project/terrascope/) | Braille-rendered terminal world map with live weather, aircraft, earthquakes, and day/night layers. | Python | 417 | [Repo](https://github.com/a-shygun/Terrascope), [Website](https://pypi.org/project/terrascope/) |
 | [weathr](https://github.com/veirt/weathr) | a terminal weather app with ascii animation | Rust | 3.1k | [Repo](https://github.com/veirt/weathr) |
 
 ### Security
@@ -355,13 +355,13 @@
 | [ffuf](https://github.com/ffuf/ffuf) | Fast web fuzzer written in Go | Go | 17k | [Repo](https://github.com/ffuf/ffuf) |
 | [gopass](https://www.gopass.pw/) | The slightly more awesome standard unix password manager for teams | Go | 7.3k | [Repo](https://github.com/gopasspw/gopass), [Website](https://www.gopass.pw/) |
 | [gpg-tui](https://blog.orhun.dev/introducing-gpg-tui/) | Manage your GnuPG keys with ease! 🔐 | Rust | 1.8k | [Repo](https://github.com/orhun/gpg-tui), [Website](https://blog.orhun.dev/introducing-gpg-tui/) |
-| [sherlock](https://sherlockproject.xyz) | Hunt down social media accounts by username across social networks | Python | 97.5k | [Repo](https://github.com/sherlock-project/sherlock), [Website](https://sherlockproject.xyz) |
+| [sherlock](https://sherlockproject.xyz) | Hunt down social media accounts by username across social networks | Python | 99.1k | [Repo](https://github.com/sherlock-project/sherlock), [Website](https://sherlockproject.xyz) |
 
 ### DevOps & Cloud
 
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
-| [bencher](https://bencher.dev) | 🐰 Bencher - Continuous Benchmarking | Rust | 925 | [Repo](https://github.com/bencherdev/bencher), [Website](https://bencher.dev) |
+| [bencher](https://bencher.dev) | 🐰 Bencher - Continuous Benchmarking | Rust | 926 | [Repo](https://github.com/bencherdev/bencher), [Website](https://bencher.dev) |
 | [cloudlens](https://one2n.gitbook.io/docs/) | k9s like CLI for AWS and GCP | Go | 596 | [Repo](https://github.com/one2nc/cloudlens), [Website](https://one2n.gitbook.io/docs/) |
 | [ctop](https://ctop.sh) | Top-like interface for container metrics | Go | 17.8k | [Repo](https://github.com/bcicen/ctop), [Website](https://ctop.sh) |
 | [dive](https://github.com/wagoodman/dive) | A tool for exploring each layer in a docker image | Go | 54.7k | [Repo](https://github.com/wagoodman/dive) |
@@ -369,11 +369,11 @@
 | [k10s](http://oss.p10node.com) | Kubernetes TUI you can click. Instant search, logs/exec/port-forward, 7 themes, context-aware AI.… | Go | 328 | [Repo](https://github.com/p10node/k10s), [Website](http://oss.p10node.com) |
 | [k9s](https://k9scli.io) | 🐶 Kubernetes CLI To Manage Your Clusters In Style! | Go | 34.9k | [Repo](https://github.com/derailed/k9s), [Website](https://k9scli.io) |
 | [kdash](https://kdash-rs.github.io) | A simple and fast dashboard for Kubernetes | Rust | 2.6k | [Repo](https://github.com/kdash-rs/kdash), [Website](https://kdash-rs.github.io) |
-| [kudu](https://github.com/pythops/kudu) | 📦 TUI VM Manager on Linux | Rust | 205 | [Repo](https://github.com/pythops/kudu) |
+| [kudu](https://github.com/pythops/kudu) | 📦 TUI VM Manager on Linux | Rust | 206 | [Repo](https://github.com/pythops/kudu) |
 | [lazydocker](https://lazydocker.com) | The lazier way to manage everything docker | Go | 53.3k | [Repo](https://github.com/jesseduffield/lazydocker), [Website](https://lazydocker.com) |
 | [process-compose](https://f1bonacc1.github.io/process-compose/) | Process Compose is a simple and flexible scheduler and orchestrator to manage non-containerized… | Go | 2.9k | [Repo](https://github.com/F1bonacc1/process-compose), [Website](https://f1bonacc1.github.io/process-compose/) |
 | [reeve](https://yetidevworks.com/reeve) | A TUI based local web development stack for macOS and Linux. | Rust | 98 | [Repo](https://github.com/yetidevworks/reeve), [Website](https://yetidevworks.com/reeve) |
-| [sake](https://sakecli.com) | 🤖 task runner for local and remote hosts | Go | 752 | [Repo](https://github.com/alajmo/sake), [Website](https://sakecli.com) |
+| [sake](https://sakecli.com) | 🤖 task runner for local and remote hosts | Go | 753 | [Repo](https://github.com/alajmo/sake), [Website](https://sakecli.com) |
 | [sidekick](https://www.sidekickdeploy.com) | Bare metal to production ready in mins; your own fly server on your VPS. | Go | 7.6k | [Repo](https://github.com/mightymoud/sidekick), [Website](https://www.sidekickdeploy.com) |
 | [sofka](https://sofka.rs) | A reimagining of k9s with one generic object pipeline instead of a renderer per resource kind | Rust | 1.8k | [Repo](https://github.com/nklmilojevic/sofka/), [Website](https://sofka.rs) |
 
@@ -382,23 +382,23 @@
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
 | [csvlens](https://github.com/YS-L/csvlens) | Command line csv viewer | Rust | 4k | [Repo](https://github.com/YS-L/csvlens) |
-| [dbdelve](https://dbdelve.github.io/) | Fast and lightweight DB Client made in Rust and GPUI. | Rust | 664 | [Repo](https://github.com/ShayanAbbas1/dbdelve), [Website](https://dbdelve.github.io/) |
+| [dbdelve](https://dbdelve.github.io/) | Fast and lightweight DB Client made in Rust and GPUI. | Rust | 671 | [Repo](https://github.com/ShayanAbbas1/dbdelve), [Website](https://dbdelve.github.io/) |
 | [fx](https://fx.wtf) | Terminal JSON viewer & processor | Go | 20.7k | [Repo](https://github.com/antonmedv/fx), [Website](https://fx.wtf) |
 | [harlequin](https://harlequin.sh) | The SQL IDE for Your Terminal. | Python | 6.5k | [Repo](https://github.com/tconbeer/harlequin), [Website](https://harlequin.sh) |
 | [jless](https://jless.io) | jless is a command-line JSON viewer designed for reading, exploring, and searching through JSON… | Rust | 5.5k | [Repo](https://github.com/PaulJuliusMartinez/jless), [Website](https://jless.io) |
 | [jnv](https://github.com/ynqa/jnv) | Interactive JSON filter using jq | Rust | 6.1k | [Repo](https://github.com/ynqa/jnv) |
-| [jq](https://jqlang.org) | Command-line JSON processor | C | 36k | [Repo](https://github.com/jqlang/jq), [Website](https://jqlang.org) |
-| [nothing-less](https://mpryor.github.io/nothing-less/) | A TUI pager with advanced support for tabular data, inferring/swapping delimiters, and real-time… | Python | 283 | [Repo](https://github.com/mpryor/nothing-less), [Website](https://mpryor.github.io/nothing-less/) |
+| [jq](https://jqlang.org) | Command-line JSON processor | C | 36.1k | [Repo](https://github.com/jqlang/jq), [Website](https://jqlang.org) |
+| [nothing-less](https://mpryor.github.io/nothing-less/) | A TUI pager with advanced support for tabular data, inferring/swapping delimiters, and real-time… | Python | 284 | [Repo](https://github.com/mpryor/nothing-less), [Website](https://mpryor.github.io/nothing-less/) |
 | [pgcli](http://pgcli.com) | Postgres CLI with autocompletion and syntax highlighting | Python | 13.4k | [Repo](https://github.com/dbcli/pgcli), [Website](http://pgcli.com) |
 | [qo](https://github.com/kiki-ki/go-qo) | qo is an interactive minimalist TUI to query JSON and CSV using SQL. | Go | 402 | [Repo](https://github.com/kiki-ki/go-qo) |
 | [rura](https://github.com/tlipinski/rura) | Interactive TUI scratchpad for building shell pipelines | Rust | 342 | [Repo](https://github.com/tlipinski/rura) |
 | [sc-im](https://github.com/andmarti1424/sc-im) | sc-im - Spreadsheet Calculator Improvised -- An ncurses spreadsheet program for terminal | C | 5.7k | [Repo](https://github.com/andmarti1424/sc-im) |
 | [sheets](https://github.com/maaslalani/sheets) | Terminal based spreadsheet tool | Go | 2.3k | [Repo](https://github.com/maaslalani/sheets) |
-| [sqlmux](https://github.com/kackerx/sqlmux) | A tmux-style terminal database client with Vim keybindings for PostgreSQL, MySQL, SqlServer, Redis,… | Go | 252 | [Repo](https://github.com/kackerx/sqlmux) |
+| [sqlmux](https://github.com/kackerx/sqlmux) | A tmux-style terminal database client with Vim keybindings for PostgreSQL, MySQL, SqlServer, Redis,… | Go | 256 | [Repo](https://github.com/kackerx/sqlmux) |
 | [sttr](https://abhimanyu003.github.io/sttr/) | cross-platform, cli app to perform various operations on string | Go | 1.4k | [Repo](https://github.com/abhimanyu003/sttr), [Website](https://abhimanyu003.github.io/sttr/) |
 | [tabiew](https://github.com/shshemi/tabiew) | A lightweight TUI application to view and query tabular data files, such as CSV, TSV, and parquet. | Rust | 3.2k | [Repo](https://github.com/shshemi/tabiew) |
-| [tennis](https://github.com/gurgeous/tennis) | stylish CSV tables in your terminal | Rust | 851 | [Repo](https://github.com/gurgeous/tennis) |
-| [visidata](http://visidata.org) | A terminal spreadsheet multitool for discovering and arranging data | Python | 9.4k | [Repo](https://github.com/saulpw/visidata), [Website](http://visidata.org) |
+| [tennis](https://github.com/gurgeous/tennis) | stylish CSV tables in your terminal | Rust | 853 | [Repo](https://github.com/gurgeous/tennis) |
+| [visidata](http://visidata.org) | A terminal spreadsheet multitool for discovering and arranging data | Python | 9.5k | [Repo](https://github.com/saulpw/visidata), [Website](http://visidata.org) |
 | [xan](https://github.com/medialab/xan) | The CSV magician | Rust | 4.6k | [Repo](https://github.com/medialab/xan) |
 | [xleak](https://github.com/bgreenwell/xleak) | A fast terminal Excel viewer with an interactive TUI. | Rust | 1.5k | [Repo](https://github.com/bgreenwell/xleak) |
 
@@ -413,7 +413,7 @@
 | [nerdlog](https://dmitryfrank.com/projects/nerdlog/article) | Nerdlog: fast, remote-first, multi-host TUI log viewer with timeline histogram and no central server | Go | 1.6k | [Repo](https://github.com/dimonomid/nerdlog), [Website](https://dmitryfrank.com/projects/nerdlog/article) |
 | [tailspin](https://github.com/bensadeh/tailspin) | 🌀 A log file highlighter | Rust | 8k | [Repo](https://github.com/bensadeh/tailspin) |
 | [toolong](https://www.textualize.io/) | A terminal application to view, tail, merge, and search log files (plus JSONL). | Python | 4k | [Repo](https://github.com/Textualize/toolong), [Website](https://www.textualize.io/) |
-| [whyd](https://github.com/vmaltarello/whyd) | Find out why your Linux PC froze, crashed or shut down: whyd reads the journal of the previous boot… | Go | 85 | [Repo](https://github.com/vmaltarello/whyd) |
+| [whyd](https://github.com/vmaltarello/whyd) | Find out why your Linux PC froze, crashed or shut down: whyd reads the journal of the previous boot… | Go | 86 | [Repo](https://github.com/vmaltarello/whyd) |
 
 ### Games & Fun
 
@@ -425,21 +425,21 @@
 | [terminal_gameboy](https://github.com/dquigles/terminal_gameboy) | A rust, terminal-based Game Boy and Game Boy Color emulator with ASCII art and block rendering… | Rust | 81 | [Repo](https://github.com/dquigles/terminal_gameboy) |
 | [tetrigo](https://github.com/Broderick-Westrope/tetrigo) | Play Tetris in your terminal. | Go | 691 | [Repo](https://github.com/Broderick-Westrope/tetrigo) |
 | [tetris](https://github.com/samtay/tetris) | A terminal interface for Tetris | Haskell | 1k | [Repo](https://github.com/samtay/tetris) |
-| [tetro-tui](https://github.com/Strophox/tetro-tui) | A modern, highly customizable tetromino-stacking game for the terminal. | Rust | 765 | [Repo](https://github.com/Strophox/tetro-tui) |
+| [tetro-tui](https://github.com/Strophox/tetro-tui) | A modern, highly customizable tetromino-stacking game for the terminal. | Rust | 766 | [Repo](https://github.com/Strophox/tetro-tui) |
 | [typepper](https://typepper.com) | A spicy little typing game & typing test for your terminal and browser — sprint, blitz, zen,… | Rust | 33 | [Repo](https://github.com/leodiegues/typepper), [Website](https://typepper.com) |
 
 ### AI
 
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
-| [agent-qa](https://vostride.com) | Natural-language QA with persistent memory and evidence-gated self-improvement | TypeScript | 870 | [Repo](https://github.com/vostride/agent-qa), [Website](https://vostride.com) |
+| [agent-qa](https://vostride.com) | Natural-language QA with persistent memory and evidence-gated self-improvement | TypeScript | 856 | [Repo](https://github.com/vostride/agent-qa), [Website](https://vostride.com) |
 | [Backlog.md](https://backlog.md) | Backlog.md - A tool for managing project collaboration between humans and AI Agents in a git… | TypeScript | 7.3k | [Repo](https://github.com/MrLesk/Backlog.md), [Website](https://backlog.md) |
 | [Bosun](https://yetidevworks.com/bosun) | Tmux-native orchestrator for AI agent sessions. | Rust | 48 | [Repo](https://github.com/yetidevworks/bosun), [Website](https://yetidevworks.com/bosun) |
 | [claude-code](https://code.claude.com/docs/en/overview) | Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and… | TypeScript | 155k | [Repo](https://github.com/anthropics/claude-code), [Website](https://code.claude.com/docs/en/overview) |
-| [codex](https://github.com/openai/codex) | Lightweight coding agent that runs in your terminal | Rust | 133k | [Repo](https://github.com/openai/codex) |
+| [codex](https://github.com/openai/codex) | Lightweight coding agent that runs in your terminal | Rust | 134k | [Repo](https://github.com/openai/codex) |
 | [crush](https://github.com/charmbracelet/crush) | Glamourous agentic coding for all 💘 | Go | 29k | [Repo](https://github.com/charmbracelet/crush) |
-| [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | 48.4k | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
-| [lazyskills](https://lazyskills.sh) | mission control for agent skills | Go | 335 | [Repo](https://github.com/alvinunreal/lazyskills), [Website](https://lazyskills.sh) |
+| [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | 48.9k | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
+| [lazyskills](https://lazyskills.sh) | mission control for agent skills | Go | 336 | [Repo](https://github.com/alvinunreal/lazyskills), [Website](https://lazyskills.sh) |
 | [openclaw](https://openclaw.ai) | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 | TypeScript | 394k | [Repo](https://github.com/openclaw/openclaw), [Website](https://openclaw.ai) |
 | [opencode](https://opencode.ai) | The open source coding agent. | TypeScript | 225k | [Repo](https://github.com/anomalyco/opencode), [Website](https://opencode.ai) |
 | [ycrawl](https://yetidevworks.com/ycrawl) | Fetch a web page, get clean markdown, with honest verdicts when a page is blocked. | Rust | 3 | [Repo](https://github.com/yetidevworks/ycrawl), [Website](https://yetidevworks.com/ycrawl) |
