@@ -22,7 +22,7 @@ installation:
       && sudo dpkg -i bottom_0.3.0_amd64.deb
   - method: aur
     command: yay bottom-bin
-  - method: other
+  - method: zypper
     command: zypper in bottom
   - method: apk
     command: apk add bottom

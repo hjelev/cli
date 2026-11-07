@@ -80,7 +80,7 @@ export const ALTERNATIVES: Alternative[] = [
 		replaces: 'nano',
 		title: 'Beginner-friendly alternatives to nano',
 		intro: 'Terminal editors with familiar shortcuts (Ctrl-S, Ctrl-C), mouse support and syntax highlighting, no modal editing required.',
-		tools: ['micro', 'edit', 'fresh', 'pnana', 'ox', 'slap', 'ttt', 'orbiton', 'cleecode', 'kibi'],
+		tools: ['micro', 'edit', 'fresh', 'ox', 'slap', 'ttt', 'orbiton', 'cleecode', 'kibi'],
 	},
 	{
 		slug: 'vim',
@@ -257,7 +257,7 @@ export const COLLECTIONS: Guide[] = [
 		slug: 'terminal-text-editors',
 		title: 'Terminal text editors',
 		intro: 'Every text editor in the index that runs in a terminal: modal editors like vim and helix, nano-style editors like micro, and full TUI IDEs like croft and fresh.',
-		tools: ['neovim', 'vim', 'helix', 'micro', 'edit', 'emacs', 'kakoune', 'fresh', 'ox', 'croft', 'kibi', 'amp', 'orbiton', 'pnana', 'slap', 'ttt', 'cleecode', 'termide', 'toast', 'kiwi', 'ad'],
+		tools: ['neovim', 'vim', 'helix', 'micro', 'edit', 'emacs', 'kakoune', 'fresh', 'ox', 'croft', 'kibi', 'amp', 'orbiton', 'slap', 'ttt', 'cleecode', 'termide', 'toast', 'kiwi', 'ad'],
 	},
 	{
 		slug: 'windows-cli-tools',

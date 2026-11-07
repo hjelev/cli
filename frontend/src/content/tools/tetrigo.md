@@ -17,7 +17,7 @@ author: Broderick-Westrope
 license: GPL-3.0
 language: Go
 installation:
-  - method: other
+  - method: binary
     command: https://github.com/Broderick-Westrope/tetrigo/releases
 platforms:
   - Linux

@@ -29,7 +29,7 @@ installation:
     command: go install github.com/Achno/gowall@latest
   - method: brew
     command: brew install gowall
-  - method: other
+  - method: xbps
     command: sudo xbps-install -S gowall
   - method: scoop
     command: scoop install main/zig

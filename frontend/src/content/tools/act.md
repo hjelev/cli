@@ -25,7 +25,7 @@ installation:
     command: pacman -Syu act
   - method: dnf
     command: dnf copr enable goncalossilva/act; dnf install act-cli
-  - method: other
+  - method: zypper
     command: zypper install act
   - method: apk
     command: apk add act

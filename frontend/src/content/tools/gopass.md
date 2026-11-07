@@ -31,7 +31,7 @@ installation:
     command: apk add gopass
   - method: go
     command: go install github.com/gopasspw/gopass@latest
-  - method: other
+  - method: binary
     command: https://github.com/gopasspw/gopass/releases/latest
 platforms:
   - Linux

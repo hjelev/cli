@@ -20,7 +20,7 @@ installation:
     command: npm install -g mapscii
   - method: snap
     command: sudo snap install mapscii
-  - method: other
+  - method: npm
     command: npx mapscii
 platforms:
   - Linux

@@ -34,7 +34,7 @@ installation:
     command: npm install -g gtop
   - method: snap
     command: sudo snap install gtop --edge
-  - method: other
+  - method: npm
     command: npx gtop
 platforms:
   - Linux

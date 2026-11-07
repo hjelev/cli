@@ -39,7 +39,7 @@ installation:
     command: pkg_add trippy
   - method: pacman
     command: pacman -S trippy
-  - method: other
+  - method: emerge
     command: emerge -av net-analyzer/trippy
   - method: apk
     command: apk add trippy

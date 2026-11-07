@@ -33,7 +33,7 @@ installation:
     command: port install zoxide
   - method: choco
     command: choco install zoxide
-  - method: other
+  - method: conda
     command: conda install -c conda-forge zoxide
   - method: scoop
     command: scoop install zoxide

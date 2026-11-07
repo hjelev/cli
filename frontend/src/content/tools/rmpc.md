@@ -23,7 +23,7 @@ installation:
     command: pacman -S rmpc
   - method: aur
     command: yay -S rmpc-git
-  - method: other
+  - method: zypper
     command: zypper install rmpc
   - method: cargo
     command: cargo binstall rmpc

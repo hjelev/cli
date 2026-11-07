@@ -21,7 +21,7 @@ author: hengyoush
 license: Apache-2.0
 language: C
 installation:
-  - method: other
+  - method: binary
     command: https://github.com/hengyoush/kyanos/releases
 platforms:
   - Linux

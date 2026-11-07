@@ -23,7 +23,7 @@ installation:
     command: sudo apt install asciinema
   - method: dnf
     command: sudo dnf install asciinema
-  - method: other
+  - method: emerge
     command: sudo emerge -av asciinema
   - method: pkg
     command: pkg install py39-asciinema

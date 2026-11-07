@@ -24,7 +24,7 @@ installation:
     command: sudo apt install moor
   - method: port
     command: sudo port install moor
-  - method: other
+  - method: emerge
     command: emerge --ask --verbose sys-apps/moor
   - method: pacman
     command: pacman -S moor

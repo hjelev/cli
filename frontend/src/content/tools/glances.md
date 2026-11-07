@@ -30,7 +30,7 @@ installation:
     command: pacman -S glances
   - method: dnf
     command: dnf install glances
-  - method: other
+  - method: yum
     command: yum install glances
   - method: apk
     command: apk add glances

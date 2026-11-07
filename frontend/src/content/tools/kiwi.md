@@ -13,7 +13,7 @@ author: '0x4D696E61'
 license: MIT
 language: C++
 installation:
-  - method: other
+  - method: binary
     command: Download the latest Windows installer from GitHub Releases.
 platforms:
   - Windows

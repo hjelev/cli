@@ -29,7 +29,7 @@ installation:
     command: sudo pkg install bpytop
   - method: dnf
     command: sudo dnf install bpytop
-  - method: other
+  - method: emerge
     command: sudo emerge -av sys-process/bpytop
   - method: snap
     command: sudo snap install bpytop

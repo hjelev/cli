@@ -27,7 +27,7 @@ installation:
     command: sudo pacman -S neomutt
   - method: dnf
     command: sudo dnf install neomutt
-  - method: other
+  - method: xbps
     command: sudo xbps-install -S neomutt
 platforms:
   - Linux

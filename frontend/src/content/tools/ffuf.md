@@ -26,7 +26,7 @@ installation:
     command: brew install ffuf
   - method: go
     command: go install github.com/ffuf/ffuf/v2@latest
-  - method: other
+  - method: binary
     command: https://github.com/ffuf/ffuf/releases/latest
 platforms:
   - Linux

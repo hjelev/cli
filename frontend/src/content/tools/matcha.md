@@ -23,7 +23,7 @@ installation:
     command: brew install floatpane/matcha/matcha
   - method: snap
     command: sudo snap install matcha
-  - method: other
+  - method: flatpak
     command: flatpak install https://matcha.email/matcha.flatpakref
   - method: aur
     command: yay -S matcha-client-bin

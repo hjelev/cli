@@ -27,7 +27,7 @@ installation:
     command: nix profile install github:bgreenwell/doxx
   - method: pkgin
     command: pkgin install doxx
-  - method: other
+  - method: conda
     command: conda install doxx
 platforms:
   - Linux

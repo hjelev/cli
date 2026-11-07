@@ -24,7 +24,7 @@ installation:
     command: paru -Syu --pgpfetch kibi-bin
   - method: pkgin
     command: pkgin install kibi
-  - method: other
+  - method: flatpak
     command: flatpak install flathub com.github.ilai_deutel.kibi
   - method: apk
     command: apk add kibi

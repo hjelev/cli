@@ -27,7 +27,7 @@ installation:
     command: brew install iamb
   - method: pkgin
     command: pkgin install iamb
-  - method: other
+  - method: zypper
     command: zypper install iamb
   - method: snap
     command: snap install iamb

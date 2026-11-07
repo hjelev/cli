@@ -25,7 +25,7 @@ installation:
     command: pacman -S cmus
   - method: dnf
     command: dnf install cmus
-  - method: other
+  - method: zypper
     command: zypper in cmus
   - method: apk
     command: apk add cmus

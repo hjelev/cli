@@ -20,7 +20,7 @@ installation:
     command: sudo apt install libssl-dev libasound2-dev libdbus-1-dev
   - method: dnf
     command: sudo dnf install openssl-devel alsa-lib-devel dbus-devel
-  - method: other
+  - method: yum
     command: sudo yum install openssl-devel alsa-lib-devel dbus-devel
   - method: brew
     command: brew install spotify_player

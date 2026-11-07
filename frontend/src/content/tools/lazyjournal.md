@@ -16,7 +16,7 @@ language: Go
 installation:
   - method: brew
     command: brew install lazyjournal
-  - method: other
+  - method: conda
     command: conda install -c conda-forge lazyjournal
   - method: aur
     command: paru -S lazyjournal

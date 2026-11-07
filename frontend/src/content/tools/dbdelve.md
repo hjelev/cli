@@ -21,7 +21,7 @@ installation:
     command: brew install --cask ShayanAbbas1/dbdelve/dbdelve
   - method: other
     command: xattr -dr com.apple.quarantine /Applications/DBDelve.app
-  - method: other
+  - method: binary
     command: https://github.com/ShayanAbbas1/dbdelve/releases/latest
 platforms:
   - Linux

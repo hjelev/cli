@@ -21,7 +21,7 @@ installation:
     command: apk add wtfutil
   - method: nix
     command: nix-env -iA wtf
-  - method: other
+  - method: emerge
     command: emerge sys-process/wtf
   - method: brew
     command: brew install wtfutil

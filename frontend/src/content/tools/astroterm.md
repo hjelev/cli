@@ -33,7 +33,7 @@ installation:
     command: pacman -S astroterm
   - method: dnf
     command: sudo dnf install astroterm
-  - method: other
+  - method: binary
     command: >-
       Invoke-WebRequest -Uri
       "https://github.com/da-luce/astroterm/releases/latest/download/astroterm-win-x86_64.exe"

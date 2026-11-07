@@ -26,7 +26,7 @@ installation:
     command: choco install sampler
   - method: aur
     command: yay -S sampler
-  - method: other
+  - method: emerge
     command: emerge sys-apps/sampler
   - method: nix
     command: nix-env -iA sampler

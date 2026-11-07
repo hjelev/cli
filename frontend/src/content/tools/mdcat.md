@@ -27,7 +27,7 @@ installation:
     command: sudo port install mdcat
   - method: pkg
     command: pkg install mdcat
-  - method: other
+  - method: xbps
     command: sudo xbps-install mdcat
   - method: pacman
     command: pacman -S mingw-w64-x86_64-mdcat

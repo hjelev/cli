@@ -27,7 +27,7 @@ installation:
     command: python -m pip install recoverpy
   - method: uv
     command: uv tool install recoverpy
-  - method: other
+  - method: uv
     command: sudo uvx recoverpy
 platforms:
   - Linux

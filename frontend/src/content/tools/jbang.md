@@ -16,7 +16,7 @@ language: Java
 installation:
   - method: brew
     command: brew install jbangdev/tap/jbang
-  - method: other
+  - method: script
     command: curl -Ls https://sh.jbang.dev | bash -s - app setup
   - method: scoop
     command: choco install jbang

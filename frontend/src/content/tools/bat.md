@@ -22,7 +22,7 @@ installation:
     command: pacman -S bat
   - method: dnf
     command: dnf install bat
-  - method: other
+  - method: emerge
     command: emerge sys-apps/bat
   - method: brew
     command: brew install bat

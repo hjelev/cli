@@ -14,7 +14,7 @@ author: Dhairya3391
 license: MIT
 language: Go
 installation:
-  - method: other
+  - method: script
     command: >-
       curl -fsSL
       https://raw.githubusercontent.com/Dhairya3391/kari/main/install.sh | bash

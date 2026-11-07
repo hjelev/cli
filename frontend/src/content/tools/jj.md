@@ -27,9 +27,9 @@ installation:
     command: yay -S jujutsu-git
   - method: nix
     command: nix run 'github:jj-vcs/jj'
-  - method: other
+  - method: emerge
     command: emerge -av dev-vcs/jj
-  - method: other
+  - method: zypper
     command: zypper install jujutsu
   - method: brew
     command: brew install jj

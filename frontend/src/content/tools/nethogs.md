@@ -22,9 +22,9 @@ installation:
     command: pacman -S nethogs
   - method: dnf
     command: dnf install nethogs
-  - method: other
+  - method: yum
     command: yum install nethogs
-  - method: other
+  - method: zypper
     command: zypper install nethogs
   - method: apk
     command: apk add nethogs
@@ -32,7 +32,7 @@ installation:
     command: nix-env -iA nethogs
   - method: brew
     command: brew install nethogs
-  - method: other
+  - method: emerge
     command: emerge net-analyzer/nethogs
 platforms:
   - Linux

@@ -24,7 +24,7 @@ installation:
     command: sudo apt install kew
   - method: aur
     command: yay -S kew
-  - method: other
+  - method: zypper
     command: sudo zypper install kew
   - method: pkg
     command: pkg install kew

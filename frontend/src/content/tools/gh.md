@@ -31,7 +31,7 @@ installation:
     command: pkg install gh
   - method: pacman
     command: sudo pacman -S github-cli
-  - method: other
+  - method: conda
     command: conda install gh --channel conda-forge
   - method: dnf
     command: sudo dnf install gh

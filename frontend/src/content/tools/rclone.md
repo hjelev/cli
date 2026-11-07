@@ -25,13 +25,13 @@ installation:
     command: pacman -Sy rclone
   - method: dnf
     command: dnf install rclone
-  - method: other
+  - method: zypper
     command: zypper install rclone
   - method: apk
     command: apk add rclone
   - method: nix
     command: nix-shell -p rclone
-  - method: other
+  - method: emerge
     command: emerge install rclone
   - method: brew
     command: brew install rclone

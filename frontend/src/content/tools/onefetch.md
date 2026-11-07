@@ -13,7 +13,7 @@ author: o2sh
 license: MIT
 language: Rust
 installation:
-  - method: other
+  - method: binary
     command: >-
       wget
       https://github.com/o2sh/onefetch/releases/latest/download/onefetch_amd64.deb

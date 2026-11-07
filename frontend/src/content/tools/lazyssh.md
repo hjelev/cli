@@ -20,7 +20,7 @@ language: Go
 installation:
   - method: brew
     command: brew install Adembc/homebrew-tap/lazyssh
-  - method: other
+  - method: binary
     command: https://github.com/Adembc/lazyssh/releases
 platforms:
   - Linux

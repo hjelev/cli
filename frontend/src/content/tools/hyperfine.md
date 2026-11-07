@@ -30,7 +30,7 @@ installation:
     command: pacman -S hyperfine
   - method: apt
     command: apt install hyperfine
-  - method: other
+  - method: emerge
     command: emerge app-benchmarks/hyperfine
   - method: cargo
     command: cargo install --locked hyperfine

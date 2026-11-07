@@ -21,7 +21,7 @@ language: Rust
 installation:
   - method: pacman
     command: pacman -S jless
-  - method: other
+  - method: zypper
     command: zypper install jless
   - method: apk
     command: apk add jless
