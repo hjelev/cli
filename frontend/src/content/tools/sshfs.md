@@ -36,7 +36,7 @@ tags:
 logo: https://avatars.githubusercontent.com/u/16281578?s=200&v=4
 updated: '2026-07-12'
 repo_stars: 7744
-repo_updated: "2026-10-31"
+repo_updated: "2026-11-07"
 repo_created: "2015-12-21"
 repo_release: "sshfs-3.7.6"
 repo_release_date: "2026-05-29"

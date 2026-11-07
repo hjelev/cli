@@ -33,7 +33,7 @@ tags:
 media: https://flow-control.dev/devlog/2026/2026-02-13_flow-0.7.0_teaser.mp4
 logo: https://avatars.githubusercontent.com/u/1552770?v=4
 updated: '2026-09-26'
-repo_stars: 2533
+repo_stars: 2534
 repo_updated: "2026-11-06"
 repo_created: "2024-02-25"
 repo_release: "v0.7.2"

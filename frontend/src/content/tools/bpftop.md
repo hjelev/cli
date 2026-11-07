@@ -47,4 +47,9 @@ tags:
 media: https://bpftop.sh/assets/bpftop.gif
 logo: https://raw.githubusercontent.com/jfernandez/bpftop/main/bpftop-logo.png
 updated: '2026-11-07'
+repo_stars: 2710
+repo_updated: "2026-11-04"
+repo_created: "2024-02-10"
+repo_release: "v0.9.1"
+repo_release_date: "2026-11-04"
 ---

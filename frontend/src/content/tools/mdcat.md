@@ -45,7 +45,7 @@ media: >-
   https://raw.githubusercontent.com/BIRSAx2/mdcat/main/screenshots/side-by-side.png
 logo: https://avatars.githubusercontent.com/u/39867122?v=4
 updated: '2026-11-05'
-repo_stars: 166
+repo_stars: 168
 repo_updated: "2026-11-03"
 repo_created: "2026-06-18"
 repo_release: "mdcat-2.19.0"
