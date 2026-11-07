@@ -55,47 +55,85 @@ export function updateRemoveButtons(container: HTMLElement): void {
 }
 
 // Best-effort mapping from a typed install command to its install method,
-// checked in order against the start of the (trimmed) command. Methods with
-// no recognizable CLI invocation (binary, other) are left for the user.
+// checked in order against the start of the command after normalization
+// (prompt/sudo/env prefixes stripped, see normalizeCommand). Methods with no
+// recognizable CLI invocation (other) are left for the user.
 const INSTALL_METHOD_PATTERNS: ReadonlyArray<[RegExp, (typeof INSTALL_METHODS)[number]]> = [
-	[/^cargo\b/i, 'cargo'],
+	[/^cargo(-binstall)?\b/i, 'cargo'],
 	[/^brew\b/i, 'brew'],
-	[/^(sudo\s+)?apt(-get)?\b/i, 'apt'],
-	[/^(sudo\s+)?dnf\b/i, 'dnf'],
-	[/^(sudo\s+)?rpm\b/i, 'rpm'],
-	[/^(sudo\s+)?yum\b/i, 'yum'],
-	[/^(sudo\s+)?zypper\b/i, 'zypper'],
-	[/^(sudo\s+)?apk\b/i, 'apk'],
-	[/^(sudo\s+)?pacman\b/i, 'pacman'],
-	[/^(yay|paru)\b/i, 'aur'],
-	[/^(sudo\s+)?emerge\b/i, 'emerge'],
-	[/^(sudo\s+)?xbps-install\b/i, 'xbps'],
-	[/^npm\b/i, 'npm'],
+	[/^(apt(-get)?|add-apt-repository|nala)\b/i, 'apt'],
+	[/^dnf5?\b/i, 'dnf'],
+	[/^rpm\b/i, 'rpm'],
+	[/^yum\b/i, 'yum'],
+	[/^zypper\b/i, 'zypper'],
+	[/^apk\b/i, 'apk'],
+	[/^pacman\b/i, 'pacman'],
+	[/^(yay|paru|pikaur|trizen)\b/i, 'aur'],
+	[/^emerge\b/i, 'emerge'],
+	[/^xbps-install\b/i, 'xbps'],
+	[/^npx?\b/i, 'npm'],
 	[/^(pip3?|python3?\s+-m\s+pip)\b/i, 'pip'],
-	[/^uv\b/i, 'uv'],
+	[/^uvx?\b/i, 'uv'],
 	[/^pipx\b/i, 'pipx'],
 	[/^(conda|mamba|micromamba)\b/i, 'conda'],
 	[/^go\s+(install|get)\b/i, 'go'],
 	[/^gem\b/i, 'gem'],
 	[/^nix(-env|\s+profile\s+install|\s+shell)?\b/i, 'nix'],
-	[/^docker\b/i, 'docker'],
+	[/^(docker|podman)\b/i, 'docker'],
 	[/^(curl|wget)\b.*\|\s*(sudo\s+)?(sh|bash|zsh)\b/i, 'script'],
+	[/^(sh|bash|zsh)\s+(-c\s+)?["']?\$\(\s*(curl|wget)\b/i, 'script'],
+	[/^(sh|bash|zsh)\s+<\(\s*(curl|wget)\b/i, 'script'],
+	[/^(powershell|pwsh)\b.*\b(irm|iwr|invoke-restmethod|invoke-webrequest)\b.*\|\s*(iex|invoke-expression)\b/i, 'powershell'],
 	[/^(irm|iwr|invoke-restmethod|invoke-webrequest)\b.*\|\s*(iex|invoke-expression)\b/i, 'powershell'],
+	[/^(powershell|pwsh)\b.*\b(iex|invoke-expression)\b/i, 'powershell'],
+	[/^(curl|wget|iwr|invoke-webrequest)\b.*github\.com\/[^/\s]+\/[^/\s]+\/releases\//i, 'binary'],
 	[/^eget\b/i, 'eget'],
-	[/^(sudo\s+)?snap\b/i, 'snap'],
-	[/^(sudo\s+)?flatpak\b/i, 'flatpak'],
-	[/^(sudo\s+)?port\b/i, 'port'],
+	[/^snap\b/i, 'snap'],
+	[/^flatpak\b/i, 'flatpak'],
+	[/^port\b/i, 'port'],
 	[/^pkgin\b/i, 'pkgin'],
-	[/^(sudo\s+)?pkg\b/i, 'pkg'],
+	[/^pkg\b/i, 'pkg'],
 	[/^scoop\b/i, 'scoop'],
 	[/^choco(latey)?\b/i, 'choco'],
 	[/^winget\b/i, 'winget'],
+	[/^https?:\/\/\S+\/releases\b/i, 'binary'],
 ];
 
+// Strips things people commonly paste in front of the real command: a shell
+// prompt ("$ ", "> ", "PS> "), privilege escalation (sudo/doas), and env
+// assignments ("env FOO=1", "FOO=1 ").
+function normalizeCommand(command: string): string {
+	let s = command.trim();
+	let prev;
+	do {
+		prev = s;
+		s = s
+			.replace(/^(PS\s*[^>]*>|[$#>%])\s+/, '')
+			.replace(/^(sudo|doas)(\s+-\S+)*\s+/i, '')
+			.replace(/^env\s+/i, '')
+			.replace(/^[A-Za-z_][A-Za-z0-9_]*=("[^"]*"|'[^']*'|\S*)\s+/, '');
+	} while (s !== prev);
+	return s;
+}
+
+function matchMethod(command: string): (typeof INSTALL_METHODS)[number] | undefined {
+	const normalized = normalizeCommand(command);
+	return INSTALL_METHOD_PATTERNS.find(([pattern]) => pattern.test(normalized))?.[1];
+}
+
 export function detectInstallMethod(command: string): (typeof INSTALL_METHODS)[number] | undefined {
-	const trimmed = command.trim();
-	if (!trimmed) return undefined;
-	return INSTALL_METHOD_PATTERNS.find(([pattern]) => pattern.test(trimmed))?.[1];
+	if (!command.trim()) return undefined;
+	// Whole command first, so piped installers (curl ... | sh) are seen intact.
+	const whole = matchMethod(command);
+	if (whole) return whole;
+	// Then each step of a multi-step command (newlines, &&, ;), skipping
+	// comment lines; the first recognizable step wins.
+	for (const step of command.split(/\r?\n|&&|;/)) {
+		if (step.trim().startsWith('#')) continue;
+		const method = matchMethod(step);
+		if (method) return method;
+	}
+	return undefined;
 }
 
 // Wires the "+ add" button and a delegated remove-row click handler (so it
