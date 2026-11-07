@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-302-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-303-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**302 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**303 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (11) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (17) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (19) · [Networking](#networking) (27) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (22) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (15) · [Data Processing](#data-processing) (20) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (12) · [Utilities & Other](#utilities--other) (5)
+[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (12) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (17) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (19) · [Networking](#networking) (27) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (22) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (15) · [Data Processing](#data-processing) (20) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (12) · [Utilities & Other](#utilities--other) (5)
 
 ### File Management
 
@@ -132,6 +132,7 @@
 | [bpytop](https://github.com/aristocratos/bpytop) | Linux/OSX/FreeBSD resource monitor | Python | 10.9k | [Repo](https://github.com/aristocratos/bpytop) |
 | [btop](https://github.com/aristocratos/btop) | A monitor of resources | C++ | 35.3k | [Repo](https://github.com/aristocratos/btop) |
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) | A maintained, feature-rich and performance oriented, neofetch like system information tool. | C | 25.3k | [Repo](https://github.com/fastfetch-cli/fastfetch) |
+| [glances](http://nicolargo.github.io/glances/) | Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, macOS and Windows… | Python | – | [Repo](https://github.com/nicolargo/glances), [Website](http://nicolargo.github.io/glances/) |
 | [gtop](https://github.com/aksakalli/gtop) | System monitoring dashboard for terminal | JavaScript | 9.9k | [Repo](https://github.com/aksakalli/gtop) |
 | [htop](https://htop.dev/) | htop - an interactive process viewer | C | 8.4k | [Repo](https://github.com/htop-dev/htop), [Website](https://htop.dev/) |
 | [macchina](https://crates.io/crates/macchina) | A system information frontend with an emphasis on performance. | Rust | 2k | [Repo](https://github.com/Macchina-CLI/macchina), [Website](https://crates.io/crates/macchina) |
