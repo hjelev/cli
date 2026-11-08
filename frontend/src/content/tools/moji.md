@@ -41,7 +41,7 @@ logo: >-
   https://raw.githubusercontent.com/Microck/moji/main/.github/assets/moji-logo.svg
 updated: '2026-09-05'
 repo_stars: 259
-repo_updated: "2026-10-20"
+repo_updated: "2026-11-08"
 repo_created: "2026-07-10"
 repo_release: "v0.8.0"
 repo_release_date: "2026-08-30"

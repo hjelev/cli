@@ -55,7 +55,7 @@ tags:
 media: https://cli.masoko.net/uploads/nvitop/media.png
 logo: https://avatars.githubusercontent.com/u/16078332?v=4
 updated: '2026-11-07'
-repo_stars: 7242
+repo_stars: 7244
 repo_updated: "2026-11-02"
 repo_created: "2021-01-25"
 repo_release: "v1.7.2"
