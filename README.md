@@ -264,7 +264,7 @@
 | [sshfs](https://github.com/libfuse/sshfs) | A network filesystem client to connect to SSH servers | C | 7.7k | [Repo](https://github.com/libfuse/sshfs) |
 | [sshs](https://github.com/quantumsheep/sshs) | Terminal user interface for SSH | Rust | 1.6k | [Repo](https://github.com/quantumsheep/sshs) |
 | [termshark](https://github.com/gcla/termshark) | A terminal UI for tshark, inspired by Wireshark | Go | 10.1k | [Repo](https://github.com/gcla/termshark) |
-| [tork](https://github.com/melqtx/tork) | cli for searching and downloading torrents | Go | 547 | [Repo](https://github.com/melqtx/tork) |
+| [tork](https://github.com/melqtx/tork) | cli for searching and downloading torrents | Go | 549 | [Repo](https://github.com/melqtx/tork) |
 | [trippy](https://trippy.rs) | Trippy combines the functionality of traceroute and ping and is designed to assist with the… | Rust | 8.1k | [Repo](https://github.com/fujiapple852/trippy), [Website](https://trippy.rs) |
 | [ttl](https://github.com/lance0/ttl) | Fast, modern traceroute with real-time TUI, per-hop stats, ASN/geo lookup, ECMP detection, and MPLS… | Rust | 1.5k | [Repo](https://github.com/lance0/ttl) |
 | [whosthere](https://github.com/ramonvermeulen/whosthere) | Local Area Network discovery tool with an interactive Terminal User Interface (TUI) written in Go. | Go | 2.5k | [Repo](https://github.com/ramonvermeulen/whosthere) |
@@ -306,7 +306,7 @@
 | [Kiwi](https://github.com/0x4D696E61/Kiwi) | A Windows-native modal terminal editor built around WASD navigation. | C++ | 2 | [Repo](https://github.com/0x4D696E61/Kiwi), [Website](https://github.com/0x4D696E61/Kiwi) |
 | [micro](https://micro-editor.github.io/) | A modern and intuitive terminal-based text editor | Go | 29.9k | [Repo](https://github.com/micro-editor/micro), [Website](https://micro-editor.github.io/) |
 | [neovim](https://neovim.io) | Vim-fork focused on extensibility and usability | Vim Script | 103k | [Repo](https://github.com/neovim/neovim), [Website](https://neovim.io) |
-| [orbiton](https://roboticoverlords.org/orbiton) | Snappy and configuration-free text editor/IDE for the terminal. | Go | 718 | [Repo](https://github.com/xyproto/orbiton), [Website](https://roboticoverlords.org/orbiton) |
+| [orbiton](https://roboticoverlords.org/orbiton) | Snappy and configuration-free text editor/IDE for the terminal. | Go | 719 | [Repo](https://github.com/xyproto/orbiton), [Website](https://roboticoverlords.org/orbiton) |
 | [ox](https://github.com/curlpipe/ox) | The simple but flexible text editor | Rust | 3.8k | [Repo](https://github.com/curlpipe/ox) |
 | [slap](https://github.com/slap-editor/slap) | Sublime-like terminal-based text editor | JavaScript | 6.2k | [Repo](https://github.com/slap-editor/slap) |
 | [termide](https://termide.github.io) | All-in-one terminal workspace for desktops and servers: editor with LSP, file manager with… | Rust | 185 | [Repo](https://github.com/termide/termide), [Website](https://termide.github.io) |
@@ -321,12 +321,12 @@
 | [AetherTune](https://github.com/nevermore23274/AetherTune) | A terminal-based internet radio player with real-time audio visualization, built in Rust. | Rust | 131 | [Repo](https://github.com/nevermore23274/AetherTune) |
 | [cliamp](http://www.cliamp.stream) | cliamp - Terminal music player inspired by winamp | Go | 4.6k | [Repo](https://github.com/bjarneo/cliamp), [Website](http://www.cliamp.stream) |
 | [cmus](https://cmus.github.io/) | Small, fast and powerful console music player for Unix-like operating systems. | C | 6.3k | [Repo](https://github.com/cmus/cmus), [Website](https://cmus.github.io/) |
-| [gtm](https://gtmd.dev) | 📻 gtm(d) is a feature rich terminal audio player. | Rust | 61 | [Repo](https://github.com/prjctimg/gtm), [Website](https://gtmd.dev) |
+| [gtm](https://gtmd.dev) | 📻 gtm(d) is a feature rich terminal audio player. | Rust | 62 | [Repo](https://github.com/prjctimg/gtm), [Website](https://gtmd.dev) |
 | [kew](https://kewplayer.com) | Music for the Shell. kew is an immersive and fast music player that allows you to listen to music… | C | 3.2k | [Repo](https://github.com/ravachol/kew), [Website](https://kewplayer.com) |
 | [lyrtui](http://masoko.net/lyrtui/) | Fast and good looking TUI for Lyrion Music Server | Rust | 27 | [Repo](https://github.com/hjelev/lyrtui), [Website](http://masoko.net/lyrtui/) |
 | [mocp](http://moc.daper.net) | Music On Console Player | C | 431 | [Repo](https://github.com/jonsafari/mocp), [Website](http://moc.daper.net) |
 | [musikcube](https://musikcube.com) | a cross-platform, terminal-based music player, audio engine, metadata indexer, and server in c++ | C++ | 4.9k | [Repo](https://github.com/clangen/musikcube), [Website](https://musikcube.com) |
-| [Myx](https://github.com/HaseebKhalid1507/Myx) | Spotify player for the terminal. With reactive themes. | Rust | 262 | [Repo](https://github.com/HaseebKhalid1507/Myx) |
+| [Myx](https://github.com/HaseebKhalid1507/Myx) | Spotify player for the terminal. With reactive themes. | Rust | 263 | [Repo](https://github.com/HaseebKhalid1507/Myx) |
 | [ncspot](https://github.com/hrkfdn/ncspot) | Cross-platform ncurses Spotify client written in Rust, inspired by ncmpc and the likes. | Rust | 6.8k | [Repo](https://github.com/hrkfdn/ncspot) |
 | [NoctaVox](https://github.com/Jaxx497/NoctaVox) | Local TUI Music Player | Rust | 382 | [Repo](https://github.com/Jaxx497/NoctaVox) |
 | [rmpc](https://rmpc.mierak.dev) | A modern, configurable, terminal based MPD Client with album art support via various terminal image… | Rust | 3.5k | [Repo](https://github.com/mierak/rmpc), [Website](https://rmpc.mierak.dev) |
@@ -361,7 +361,7 @@
 | [ffuf](https://github.com/ffuf/ffuf) | Fast web fuzzer written in Go | Go | 17k | [Repo](https://github.com/ffuf/ffuf) |
 | [gopass](https://www.gopass.pw/) | The slightly more awesome standard unix password manager for teams | Go | 7.3k | [Repo](https://github.com/gopasspw/gopass), [Website](https://www.gopass.pw/) |
 | [gpg-tui](https://blog.orhun.dev/introducing-gpg-tui/) | Manage your GnuPG keys with ease! 🔐 | Rust | 1.8k | [Repo](https://github.com/orhun/gpg-tui), [Website](https://blog.orhun.dev/introducing-gpg-tui/) |
-| [sherlock](https://sherlockproject.xyz) | Hunt down social media accounts by username across social networks | Python | 101k | [Repo](https://github.com/sherlock-project/sherlock), [Website](https://sherlockproject.xyz) |
+| [sherlock](https://sherlockproject.xyz) | Hunt down social media accounts by username across social networks | Python | 102k | [Repo](https://github.com/sherlock-project/sherlock), [Website](https://sherlockproject.xyz) |
 
 ### DevOps & Cloud
 
@@ -375,7 +375,7 @@
 | [k10s](http://oss.p10node.com) | Kubernetes TUI you can click. Instant search, logs/exec/port-forward, 7 themes, context-aware AI.… | Go | 328 | [Repo](https://github.com/p10node/k10s), [Website](http://oss.p10node.com) |
 | [k9s](https://k9scli.io) | 🐶 Kubernetes CLI To Manage Your Clusters In Style! | Go | 34.9k | [Repo](https://github.com/derailed/k9s), [Website](https://k9scli.io) |
 | [kdash](https://kdash-rs.github.io) | A simple and fast dashboard for Kubernetes | Rust | 2.6k | [Repo](https://github.com/kdash-rs/kdash), [Website](https://kdash-rs.github.io) |
-| [kudu](https://github.com/pythops/kudu) | 📦 TUI VM Manager on Linux | Rust | 206 | [Repo](https://github.com/pythops/kudu) |
+| [kudu](https://github.com/pythops/kudu) | 📦 TUI VM Manager on Linux | Rust | 207 | [Repo](https://github.com/pythops/kudu) |
 | [lazydocker](https://lazydocker.com) | The lazier way to manage everything docker | Go | 53.3k | [Repo](https://github.com/jesseduffield/lazydocker), [Website](https://lazydocker.com) |
 | [process-compose](https://f1bonacc1.github.io/process-compose/) | Process Compose is a simple and flexible scheduler and orchestrator to manage non-containerized… | Go | 2.9k | [Repo](https://github.com/F1bonacc1/process-compose), [Website](https://f1bonacc1.github.io/process-compose/) |
 | [reeve](https://yetidevworks.com/reeve) | A TUI based local web development stack for macOS and Linux. | Rust | 98 | [Repo](https://github.com/yetidevworks/reeve), [Website](https://yetidevworks.com/reeve) |
@@ -403,7 +403,7 @@
 | [sqlmux](https://github.com/kackerx/sqlmux) | A tmux-style terminal database client with Vim keybindings for PostgreSQL, MySQL, SqlServer, Redis,… | Go | 259 | [Repo](https://github.com/kackerx/sqlmux) |
 | [sttr](https://abhimanyu003.github.io/sttr/) | cross-platform, cli app to perform various operations on string | Go | 1.4k | [Repo](https://github.com/abhimanyu003/sttr), [Website](https://abhimanyu003.github.io/sttr/) |
 | [tabiew](https://github.com/shshemi/tabiew) | A lightweight TUI application to view and query tabular data files, such as CSV, TSV, and parquet. | Rust | 3.2k | [Repo](https://github.com/shshemi/tabiew) |
-| [tennis](https://github.com/gurgeous/tennis) | stylish CSV tables in your terminal | Rust | 854 | [Repo](https://github.com/gurgeous/tennis) |
+| [tennis](https://github.com/gurgeous/tennis) | stylish CSV tables in your terminal | Rust | 856 | [Repo](https://github.com/gurgeous/tennis) |
 | [visidata](http://visidata.org) | A terminal spreadsheet multitool for discovering and arranging data | Python | 9.5k | [Repo](https://github.com/saulpw/visidata), [Website](http://visidata.org) |
 | [xan](https://github.com/medialab/xan) | The CSV magician | Rust | 4.6k | [Repo](https://github.com/medialab/xan) |
 | [xleak](https://github.com/bgreenwell/xleak) | A fast terminal Excel viewer with an interactive TUI. | Rust | 1.5k | [Repo](https://github.com/bgreenwell/xleak) |
@@ -444,7 +444,7 @@
 | [claude-code](https://code.claude.com/docs/en/overview) | Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and… | TypeScript | 155k | [Repo](https://github.com/anthropics/claude-code), [Website](https://code.claude.com/docs/en/overview) |
 | [codex](https://github.com/openai/codex) | Lightweight coding agent that runs in your terminal | Rust | 134k | [Repo](https://github.com/openai/codex) |
 | [crush](https://github.com/charmbracelet/crush) | Glamourous agentic coding for all 💘 | Go | 29k | [Repo](https://github.com/charmbracelet/crush) |
-| [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | 49.2k | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
+| [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | 49.3k | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
 | [lazyskills](https://lazyskills.sh) | mission control for agent skills | Go | 336 | [Repo](https://github.com/alvinunreal/lazyskills), [Website](https://lazyskills.sh) |
 | [openclaw](https://openclaw.ai) | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 | TypeScript | 394k | [Repo](https://github.com/openclaw/openclaw), [Website](https://openclaw.ai) |
 | [opencode](https://opencode.ai) | The open source coding agent. | TypeScript | 225k | [Repo](https://github.com/anomalyco/opencode), [Website](https://opencode.ai) |
