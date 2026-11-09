@@ -41,7 +41,7 @@ tags:
 media: https://cmus.github.io/cmus-2.4.3-osx.png
 logo: https://avatars.githubusercontent.com/u/3125757?s=200&v=4
 updated: '2026-11-01'
-repo_stars: 6286
+repo_stars: 6288
 repo_updated: "2026-10-28"
 repo_created: "2012-12-29"
 repo_release: "v2.13.0"

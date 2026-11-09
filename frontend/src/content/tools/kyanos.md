@@ -42,7 +42,7 @@ media: >-
 logo: https://kyanos.io/kyanos.png
 updated: '2026-10-25'
 repo_stars: 5078
-repo_updated: "2026-11-07"
+repo_updated: "2026-11-08"
 repo_created: "2024-04-30"
 repo_release: "v1.6.0"
 repo_release_date: "2026-06-10"

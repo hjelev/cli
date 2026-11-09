@@ -48,7 +48,7 @@ media: >-
   https://raw.githubusercontent.com/mrusme/zeit/refs/heads/master/.README.md/zeit.gif
 logo: https://zeit.observer/images/zeit.png
 updated: '2026-07-21'
-repo_stars: 593
+repo_stars: 594
 repo_updated: "2026-11-03"
 repo_created: "2020-10-10"
 repo_release: "v1.1.0"
