@@ -20,7 +20,7 @@ installation:
   - method: uv
     command: uv tool install linecast
   - method: brew
-    command: brew install ashuttl/linecast/linecast
+    command: brew install linecast
   - method: aur
     command: yay -S linecast
 platforms:
@@ -40,11 +40,11 @@ tags:
   - weather
 media: https://raw.githubusercontent.com/ashuttl/linecast/main/screenshots/hero.png
 logo: https://avatars.githubusercontent.com/u/2095936?v=4
-updated: '2026-11-02'
-repo_stars: 676
-repo_updated: "2026-11-06"
-repo_created: "2026-03-05"
-repo_release: "v2.12.0"
-repo_release_date: "2026-11-06"
+updated: '2026-11-09'
 comments: []
+repo_stars: 676
+repo_updated: '2026-11-06'
+repo_created: '2026-03-05'
+repo_release: v2.12.0
+repo_release_date: '2026-11-06'
 ---
