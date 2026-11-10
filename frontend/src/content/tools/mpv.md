@@ -54,8 +54,8 @@ media: https://mpv.io/images/mpv-screenshot-0935decb.png
 logo: >-
   https://raw.githubusercontent.com/mpv-player/mpv.io/master/source/images/mpv-logo-128.png
 updated: '2026-07-18'
-repo_stars: 38016
-repo_updated: "2026-11-09"
+repo_stars: 38039
+repo_updated: "2026-11-10"
 repo_created: "2012-10-13"
 repo_release: "v0.42.0"
 repo_release_date: "2026-11-05"
