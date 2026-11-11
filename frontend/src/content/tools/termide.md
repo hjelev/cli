@@ -57,7 +57,7 @@ tags:
 media: https://awesometui.com/api/ownership/assets/66
 logo: https://termide.github.io/assets/logo.svg
 updated: '2026-10-20'
-repo_stars: 186
+repo_stars: 187
 repo_updated: "2026-11-08"
 repo_created: "2025-11-20"
 repo_release: "0.49.0"

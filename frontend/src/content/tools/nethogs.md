@@ -42,7 +42,7 @@ tags:
 media: https://raw.githubusercontent.com/raboof/nethogs/main/doc/screenshot.png
 logo: https://avatars.githubusercontent.com/u/131856?v=4
 updated: '2026-11-07'
-repo_stars: 3714
+repo_stars: 3715
 repo_updated: "2026-07-23"
 repo_created: "2013-10-27"
 repo_release: "v0.9.0"

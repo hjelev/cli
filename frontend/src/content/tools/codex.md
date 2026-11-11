@@ -41,9 +41,9 @@ tags:
 media: https://github.com/openai/codex/raw/main/.github/codex-cli-splash.png
 logo: https://avatars.githubusercontent.com/u/14957082?s=200&v=4
 updated: '2026-07-18'
-repo_stars: 134655
-repo_updated: "2026-11-10"
+repo_stars: 134853
+repo_updated: "2026-11-11"
 repo_created: "2025-04-13"
-repo_release: "rust-v0.167.0"
-repo_release_date: "2026-11-06"
+repo_release: "rust-v0.167.1"
+repo_release_date: "2026-11-10"
 ---

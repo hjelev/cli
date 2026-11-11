@@ -40,7 +40,7 @@ tags:
 media: https://raw.githubusercontent.com/makeev/alphai-tui/main/assets/demo.gif
 logo: https://alphai.io/assets/logo-icon.svg
 updated: '2026-10-15'
-repo_stars: 92
+repo_stars: 93
 repo_updated: "2026-11-07"
 repo_created: "2026-07-10"
 repo_release: "v0.40.0"
