@@ -44,8 +44,8 @@ tags:
 media: https://junegunn.github.io/fzf/images/fzf.gif
 logo: https://cli.masoko.net/uploads/fzf/logo.webp
 updated: '2026-10-25'
-repo_stars: 84153
-repo_updated: "2026-11-11"
+repo_stars: 84176
+repo_updated: "2026-11-12"
 repo_created: "2013-10-23"
 repo_release: "v0.75.0"
 repo_release_date: "2026-11-07"
