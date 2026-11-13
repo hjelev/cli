@@ -47,7 +47,7 @@ tags:
 media: https://github.com/gopasspw/gopass/raw/master/docs/showcase.png
 logo: https://github.com/gopasspw/gopass/raw/master/docs/logo.png
 updated: '2026-10-20'
-repo_stars: 7319
+repo_stars: 7321
 repo_updated: "2026-11-09"
 repo_created: "2017-02-02"
 repo_release: "v1.17.4"

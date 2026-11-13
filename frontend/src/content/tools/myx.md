@@ -49,7 +49,7 @@ media: https://cli.masoko.net/uploads/myx/media.gif
 logo: https://avatars.githubusercontent.com/u/57045294?v=4
 updated: '2026-08-10'
 repo_stars: 264
-repo_updated: "2026-10-07"
+repo_updated: "2026-11-13"
 repo_created: "2026-07-23"
 repo_release: "v0.5.0"
 repo_release_date: "2026-09-09"

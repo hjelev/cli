@@ -46,8 +46,8 @@ media: >-
 logo: https://avatars.githubusercontent.com/u/39867122?v=4
 updated: '2026-11-05'
 repo_stars: 174
-repo_updated: "2026-11-10"
+repo_updated: "2026-11-13"
 repo_created: "2026-06-18"
-repo_release: "mdcat-2.20.0"
-repo_release_date: "2026-11-10"
+repo_release: "mdcat-2.20.1"
+repo_release_date: "2026-11-13"
 ---

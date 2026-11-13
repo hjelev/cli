@@ -44,8 +44,8 @@ media: https://raw.githubusercontent.com/yetidevworks/ytunnel/master/ytunnel-scr
 logo: https://avatars.githubusercontent.com/u/220336074?v=4
 updated: '2026-08-21'
 repo_stars: 63
-repo_updated: "2026-11-07"
+repo_updated: "2026-11-13"
 repo_created: "2026-01-20"
-repo_release: "v1.0.0"
-repo_release_date: "2026-08-05"
+repo_release: "v1.1.1"
+repo_release_date: "2026-11-13"
 ---
