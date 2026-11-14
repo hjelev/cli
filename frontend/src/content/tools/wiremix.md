@@ -31,8 +31,8 @@ tags:
 media: https://cli.masoko.net/uploads/wiremix/media.gif
 logo: https://avatars.githubusercontent.com/u/4044033?v=4
 updated: '2026-07-18'
-repo_stars: 1091
-repo_updated: "2026-11-06"
+repo_stars: 1099
+repo_updated: "2026-11-13"
 repo_created: "2025-04-29"
 repo_release: "v0.11.0"
 repo_release_date: "2026-06-05"

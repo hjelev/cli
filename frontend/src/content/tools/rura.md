@@ -33,7 +33,7 @@ tags:
 media: https://cli.masoko.net/uploads/rura/media.gif
 logo: https://github.com/tlipinski/rura/raw/master/rura.svg
 updated: '2026-07-11'
-repo_stars: 342
+repo_stars: 343
 repo_updated: "2026-11-07"
 repo_created: "2026-05-05"
 repo_release: "v1.14.0"

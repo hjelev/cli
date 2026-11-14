@@ -34,8 +34,8 @@ tags:
 media: https://cli.masoko.net/uploads/diffnav/media.gif
 logo: https://cli.masoko.net/uploads/diffnav/logo.png
 updated: '2026-07-18'
-repo_stars: 1628
-repo_updated: "2026-10-27"
+repo_stars: 1638
+repo_updated: "2026-11-14"
 repo_created: "2024-09-18"
 repo_release: "v0.13.1"
 repo_release_date: "2026-10-27"

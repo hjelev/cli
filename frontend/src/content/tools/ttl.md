@@ -56,9 +56,9 @@ tags:
 media: https://raw.githubusercontent.com/lance0/ttl/master/docs/demo.gif
 logo: https://raw.githubusercontent.com/lance0/ttl/master/ttl.png
 updated: '2026-07-13'
-repo_stars: 1493
-repo_updated: "2026-11-05"
+repo_stars: 1499
+repo_updated: "2026-11-14"
 repo_created: "2026-01-12"
-repo_release: "v0.24.1"
-repo_release_date: "2026-10-21"
+repo_release: "v0.25.0"
+repo_release_date: "2026-11-13"
 ---

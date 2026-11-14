@@ -46,8 +46,8 @@ github_stars: 1200
 github_updated: "2026-07-04"
 github_created: "2023-08-28"
 github_release: "v5.3.0"
-repo_stars: 1235
-repo_updated: "2026-10-31"
+repo_stars: 1239
+repo_updated: "2026-11-13"
 repo_created: "2023-08-28"
 repo_release: "v5.4.4"
 repo_release_date: "2026-10-27"

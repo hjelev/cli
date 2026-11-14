@@ -48,9 +48,9 @@ tags:
 media: https://cli.masoko.net/uploads/bencher/media.svg
 logo: https://avatars.githubusercontent.com/u/68773954?s=200&v=4
 updated: '2026-07-21'
-repo_stars: 926
-repo_updated: "2026-11-08"
+repo_stars: 931
+repo_updated: "2026-11-14"
 repo_created: "2020-07-25"
-repo_release: "v0.6.16"
-repo_release_date: "2026-10-31"
+repo_release: "v0.6.17"
+repo_release_date: "2026-11-14"
 ---

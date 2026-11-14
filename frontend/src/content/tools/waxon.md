@@ -35,8 +35,8 @@ tags:
 media: https://github.com/danfry1/waxon/raw/main/demo/recordings/full-tour.gif
 logo: https://github.com/danfry1/waxon/raw/main/assets/logo.png
 updated: '2026-10-30'
-repo_stars: 64
-repo_updated: "2026-11-05"
+repo_stars: 65
+repo_updated: "2026-11-10"
 repo_created: "2026-03-31"
 repo_release: "v1.14.3"
 repo_release_date: "2026-11-05"
