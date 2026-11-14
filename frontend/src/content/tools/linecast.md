@@ -2,12 +2,12 @@
 name: linecast
 category: Media & Entertainment
 short_description: >-
-  Weather, tides, the sun, the moon, and maps, in your terminal. The Old
-  Farmer's Almanac meets Minitel.
+  Weather, tides, the sun, the moon, maps, and a planetarium, in your terminal.
+  The Old Farmer's Almanac meets Minitel.
 description: >-
-  linecast turns free public data into six live, mouse-friendly terminal apps.
-  It is pure Python, has no dependencies, adapts to your terminal theme, and
-  needs no account or API key for its core experience.
+  Seven live terminal apps built on free public data. Pure Python, no accounts
+  or API keys required. Colors come from your terminal theme, and the mouse
+  works. Runs on macOS, Linux, and Windows, over SSH, and in tmux.
 repository_url: https://github.com/ashuttl/linecast
 author: ashuttl
 license: MIT
@@ -34,6 +34,7 @@ tags:
   - radar
   - sunlight
   - terminal
+  - planetarium
   - terminal-ui
   - tides
   - tui
@@ -47,4 +48,9 @@ repo_created: "2026-03-05"
 repo_release: "v2.12.0"
 repo_release_date: "2026-11-06"
 comments: []
+repo_stars: 676
+repo_updated: '2026-11-06'
+repo_created: '2026-03-05'
+repo_release: v2.12.0
+repo_release_date: '2026-11-06'
 ---
