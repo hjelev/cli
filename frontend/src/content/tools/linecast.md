@@ -20,7 +20,7 @@ installation:
   - method: uv
     command: uv tool install linecast
   - method: brew
-    command: brew install ashuttl/linecast/linecast
+    command: brew install linecast
   - method: aur
     command: yay -S linecast
 platforms:
