@@ -31,7 +31,7 @@ media: https://raw.githubusercontent.com/nol00p/Shoin/main/docs/media/hero.gif
 logo: https://avatars.githubusercontent.com/u/63861454?v=4
 updated: '2026-10-27'
 repo_stars: 78
-repo_updated: "2026-11-13"
+repo_updated: "2026-11-14"
 repo_created: "2026-08-28"
 repo_release: "v0.2.3"
 repo_release_date: "2026-11-02"

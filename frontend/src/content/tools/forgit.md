@@ -39,8 +39,8 @@ tags:
 media: https://raw.githubusercontent.com/wfxr/i/master/forgit-glo.png
 logo: https://avatars.githubusercontent.com/u/6105425?v=4
 updated: '2026-08-21'
-repo_stars: 5092
-repo_updated: "2026-11-01"
+repo_stars: 5094
+repo_updated: "2026-11-13"
 repo_created: "2017-11-15"
 repo_release: "26.11.0"
 repo_release_date: "2026-11-01"

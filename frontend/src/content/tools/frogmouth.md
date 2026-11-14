@@ -39,7 +39,7 @@ tags:
 media: https://cli.masoko.net/uploads/frogmouth/media.png
 logo: https://cli.masoko.net/uploads/frogmouth/logo.png
 updated: '2026-11-01'
-repo_stars: 3324
+repo_stars: 3325
 repo_updated: "2024-08-01"
 repo_created: "2023-04-03"
 repo_release: "v0.9.1"
