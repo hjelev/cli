@@ -14,10 +14,9 @@ export const getStaticPaths = (async () => {
 export const GET: APIRoute<{ tool: CollectionEntry<'tools'> }> = async ({ props }) => {
 	const { tool } = props;
 	const { data } = tool;
-	const stars =
-		data.repo_stars !== undefined
-			? `${new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(data.repo_stars)} stars · `
-			: '';
+	const compact = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 });
+	const recent = data.repo_stars_recent ? ` (+${compact.format(data.repo_stars_recent)} in 2 wks)` : '';
+	const stars = data.repo_stars !== undefined ? `${compact.format(data.repo_stars)} stars${recent} · ` : '';
 	const png = await renderOgImage({
 		command: `man ${tool.id}`,
 		title: data.name,

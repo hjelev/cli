@@ -19,8 +19,8 @@ const repoStarsLabel =
 	repoStars !== undefined
 		? new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(repoStars)
 		: null;
-const recentStars = tool.data.repo_stars_recent ?? 0;
-const recentStarsLabel = recentStars > 0 ? formatRecentStars(recentStars) : null;
+const recentStars = tool.data.repo_stars_recent;
+const recentStarsLabel = repoStarsLabel && recentStars !== undefined ? formatRecentStars(recentStars) : null;
 
 // Tags that just restate the tool's own category/language are noise — hide
 // them here, but keep the full raw list in data-search below.
@@ -51,7 +51,7 @@ const hiddenTagCount = displayTags.length - shownTags.length;
 						<span class="badge badge-stars" title={`${repoStars} stars`}>★ {repoStarsLabel}</span>
 					)}
 					{recentStarsLabel && (
-						<span class="badge badge-trending" title={RECENT_STARS_TITLE(recentStars)}>{recentStarsLabel}</span>
+						<span class="badge badge-trending" title={RECENT_STARS_TITLE(recentStars!)}>{recentStarsLabel}</span>
 					)}
 					{tool.data.repo_badge && <span class="badge badge-verified" title={VERIFIED_TITLE}>✓ verified</span>}
 				</span>

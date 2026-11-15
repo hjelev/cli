@@ -305,9 +305,10 @@ async function fetchBadgeStatusAll(tools: ToolFile[]): Promise<Map<string, boole
 	return results;
 }
 
-// repo_stars per tool file as committed at the start of the trending window.
-// Tools missing from that snapshot (listed more recently) get no value, as
-// does everything when history doesn't reach back that far.
+// Baseline repo_stars per tool file: the value committed at the start of the
+// trending window. Tools listed during the window fall back to the earliest
+// repo_stars committed for them (so their count is a floor — stars since
+// listing). Empty when history doesn't reach back that far.
 function starsAtWindowStart(): Map<string, number> {
 	const snapshot = new Map<string, number>();
 	const git = (...args: string[]) => execFileSync('git', args, { cwd: toolsDir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
@@ -323,10 +324,28 @@ function starsAtWindowStart(): Map<string, number> {
 		return snapshot;
 	}
 
+	const starsIn = (rev: string, file: string): number | undefined => {
+		const match = git('show', `${rev}:./${file}`).match(/^repo_stars:\s*(\d+)\s*$/m);
+		return match ? Number(match[1]) : undefined;
+	};
+
 	const oldFiles = git('ls-tree', '--name-only', commit, './').split('\n').filter((file) => file.endsWith('.md'));
 	for (const file of oldFiles) {
-		const stars = git('show', `${commit}:./${file}`).match(/^repo_stars:\s*(\d+)\s*$/m);
-		if (stars) snapshot.set(file, Number(stars[1]));
+		const stars = starsIn(commit, file);
+		if (stars !== undefined) snapshot.set(file, stars);
+	}
+
+	// Newly listed tools: walk the file's commits oldest-first until one has
+	// stats (the submission commit itself usually doesn't).
+	for (const file of files.filter((file) => !snapshot.has(file))) {
+		const revs = git('log', '--reverse', '--format=%H', `${commit}..HEAD`, '--', `./${file}`).split('\n').filter(Boolean);
+		for (const rev of revs) {
+			const stars = starsIn(rev, file);
+			if (stars !== undefined) {
+				snapshot.set(file, stars);
+				break;
+			}
+		}
 	}
 	return snapshot;
 }
@@ -383,8 +402,10 @@ for (const tool of toolFiles) {
 
 	const raw = fs.readFileSync(tool.fullPath, 'utf8');
 
-	// Clamped: net unstars shouldn't read as negative trending.
-	const past = pastStars.get(tool.file);
+	// A repo created inside the window earned all its stars in it. Clamped:
+	// net unstars shouldn't read as negative trending.
+	const createdInWindow = Date.parse(repoStats.created) >= Date.now() - RECENT_STARS_DAYS * 24 * 60 * 60 * 1000;
+	const past = createdInWindow ? 0 : pastStars.get(tool.file);
 	const recentStars = past === undefined ? null : Math.max(0, repoStats.stars - past);
 
 	const newLines = [

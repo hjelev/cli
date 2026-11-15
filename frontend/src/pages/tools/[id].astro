@@ -88,7 +88,7 @@ const youTubeId = data.media ? getYouTubeId(data.media) : undefined;
 					repoStarsLabel && (
 						<span class="badge badge-stars" title={`${repoStars} stars`}>★ {repoStarsLabel}</span>
 					),
-					(data.repo_stars_recent ?? 0) > 0 && (
+					repoStarsLabel && data.repo_stars_recent !== undefined && (
 						<span class="badge badge-trending" title={RECENT_STARS_TITLE(data.repo_stars_recent!)}>{formatRecentStars(data.repo_stars_recent!)}</span>
 					),
 					<span class="chip" title="License">{data.license}</span>,

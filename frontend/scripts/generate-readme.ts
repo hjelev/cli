@@ -94,7 +94,7 @@ for (const [category, categoryTools] of byCategory) {
 		if (tool.website) {
 			links.push(`[Website](${tool.website})`);
 		}
-		return `| [${tool.name}](${nameLink}) | ${formatDescription(tool.short_description)} | ${tool.language} | ${formatStars(tool.repo_stars)} | ${links.join(', ')} |`;
+		return `| [${tool.name}](${nameLink}) | ${formatDescription(tool.short_description)} | ${tool.language} | ${formatStars(tool.repo_stars)}${tool.repo_stars !== undefined && tool.repo_stars_recent ? ` (+${formatStars(tool.repo_stars_recent)})` : ''} | ${links.join(', ')} |`;
 	});
 
 	sections.push(

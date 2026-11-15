@@ -38,6 +38,7 @@ media: https://github.com/Epistates/treemd/raw/main/assets/screenshot.png
 logo: https://avatars.githubusercontent.com/u/225645584?s=200&v=4
 updated: '2026-11-02'
 repo_stars: 735
+repo_stars_recent: 7
 repo_updated: "2026-11-03"
 repo_created: "2025-11-08"
 repo_release: "v0.10.0"

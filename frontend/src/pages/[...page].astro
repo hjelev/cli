@@ -195,8 +195,7 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 
 			const badges = document.createElement('div');
 			badges.className = 'badges';
-			const recent = tool.recent ?? 0;
-			if (tool.stars !== null || recent > 0 || tool.verified) {
+			if (tool.stars !== null || tool.verified) {
 				const topRow = document.createElement('span');
 				topRow.className = 'badge-row';
 				if (tool.stars !== null) {
@@ -206,11 +205,11 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 					starsBadge.textContent = `★ ${compactNumber.format(tool.stars)}`;
 					topRow.append(starsBadge);
 				}
-				if (recent > 0) {
+				if (tool.stars !== null && tool.recent !== null) {
 					const trendingBadge = document.createElement('span');
 					trendingBadge.className = 'badge badge-trending';
-					trendingBadge.title = RECENT_STARS_TITLE(recent);
-					trendingBadge.textContent = formatRecentStars(recent);
+					trendingBadge.title = RECENT_STARS_TITLE(tool.recent);
+					trendingBadge.textContent = formatRecentStars(tool.recent);
 					topRow.append(trendingBadge);
 				}
 				if (tool.verified) {

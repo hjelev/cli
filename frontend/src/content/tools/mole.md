@@ -60,6 +60,7 @@ media: https://raw.githubusercontent.com/tw93/Mole/main/docs/img/big-mole.png
 logo: https://mole.fit/img/mole-mark-de4ad137.png
 updated: '2026-11-15'
 repo_stars: 75177
+repo_stars_recent: 0
 repo_updated: "2026-11-15"
 repo_created: "2025-09-23"
 repo_release: "V1.72.0"

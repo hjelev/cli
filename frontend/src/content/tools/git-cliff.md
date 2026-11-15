@@ -71,6 +71,7 @@ logo: >-
   https://raw.githubusercontent.com/orhun/git-cliff/main/website/static/img/git-cliff-logo.png
 updated: '2026-11-15'
 repo_stars: 12417
+repo_stars_recent: 0
 repo_updated: "2026-11-02"
 repo_created: "2021-05-30"
 repo_release: "v2.14.2"

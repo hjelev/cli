@@ -61,6 +61,7 @@ media: https://raw.githubusercontent.com/sharkdp/fd/master/doc/screencast.svg
 logo: https://avatars.githubusercontent.com/u/4209276?v=4
 updated: '2026-11-15'
 repo_stars: 45069
+repo_stars_recent: 0
 repo_updated: "2026-11-14"
 repo_created: "2017-05-09"
 repo_release: "v10.5.2"

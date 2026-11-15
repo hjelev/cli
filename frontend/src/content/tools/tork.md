@@ -36,6 +36,7 @@ media: https://github.com/melqtx/tork/raw/main/docs/results.png
 logo: https://cli.masoko.net/uploads/tork/logo.png
 updated: '2026-11-05'
 repo_stars: 615
+repo_stars_recent: 178
 repo_updated: "2026-11-15"
 repo_created: "2026-07-07"
 repo_release: "v0.5.1"

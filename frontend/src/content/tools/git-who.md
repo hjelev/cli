@@ -38,6 +38,7 @@ media: https://cli.masoko.net/uploads/git-who/media.png
 logo: https://cli.masoko.net/uploads/git-who/logo.svg
 updated: '2026-11-15'
 repo_stars: 2674
+repo_stars_recent: 0
 repo_updated: "2026-05-28"
 repo_created: "2024-12-07"
 repo_release: "v1.3"

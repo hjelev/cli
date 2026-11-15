@@ -51,6 +51,7 @@ media: https://s3.amazonaws.com/sampler-backend/demo.mp4
 logo: https://sampler.dev/img/favicon.png
 updated: '2026-11-07'
 repo_stars: 14817
+repo_stars_recent: 4
 repo_updated: "2024-02-22"
 repo_created: "2019-01-25"
 repo_release: "v1.1.0"
