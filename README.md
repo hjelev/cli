@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-310-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-311-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**310 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**311 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (18) · [Development Tools](#development-tools) (18) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (19) · [Networking](#networking) (28) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (15) · [Data Processing](#data-processing) (20) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (12) · [Utilities & Other](#utilities--other) (5)
+[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (18) · [Development Tools](#development-tools) (19) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (19) · [Networking](#networking) (28) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (15) · [Data Processing](#data-processing) (20) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (12) · [Utilities & Other](#utilities--other) (5)
 
 ### File Management
 
@@ -187,6 +187,7 @@
 |------|-------------|----------|---------|-------|
 | [act](https://nektosact.com) | Run your GitHub Actions locally 🚀 | Go | 72.7k | [Repo](https://github.com/nektos/act), [Website](https://nektosact.com) |
 | [asciinema](https://asciinema.org) | Terminal session recorder, streamer and player 📹 | Rust | 18k | [Repo](https://github.com/asciinema/asciinema), [Website](https://asciinema.org) |
+| [ast-grep](https://ast-grep.github.io/) | ⚡A CLI tool for code structural search, lint and rewriting. Written in Rust | Rust | – | [Repo](https://github.com/ast-grep/ast-grep), [Website](https://ast-grep.github.io/) |
 | [cloc](https://github.com/AlDanial/cloc) | cloc counts blank lines, comment lines, and physical lines of source code in many programming… | Perl | 23.7k | [Repo](https://github.com/AlDanial/cloc) |
 | [ComChan](https://blog.vaishnavs.is-a.dev/comchan/) | A Blazingly Fast Minimal Serial Monitor with serial plottter TUI and more | Rust | 178 | [Repo](https://github.com/Vaishnav-Sabari-Girish/ComChan), [Website](https://blog.vaishnavs.is-a.dev/comchan/) |
 | [difftastic](https://difftastic.wilfred.me.uk/) | a structural diff that understands syntax 🟥🟩 | Rust | 26.2k | [Repo](https://github.com/Wilfred/difftastic), [Website](https://difftastic.wilfred.me.uk/) |
