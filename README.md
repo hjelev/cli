@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-319-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-320-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**319 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**320 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (18) · [Development Tools](#development-tools) (20) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (23) · [Networking](#networking) (28) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (16) · [Data Processing](#data-processing) (20) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (13) · [Utilities & Other](#utilities--other) (5)
+[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (18) · [Development Tools](#development-tools) (20) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (23) · [Networking](#networking) (28) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (19) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (16) · [Data Processing](#data-processing) (20) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (13) · [Utilities & Other](#utilities--other) (5)
 
 ### File Management
 
@@ -345,6 +345,7 @@
 | [termusic](https://github.com/tramhao/termusic) | Music Player TUI written in Rust | Rust | 2.3k | [Repo](https://github.com/tramhao/termusic) |
 | [waxon](https://waxon.danfry.dev) | A vim-modal Spotify client for the terminal | Go | 65 | [Repo](https://github.com/danfry1/waxon), [Website](https://waxon.danfry.dev) |
 | [wiremix](https://github.com/tsowell/wiremix) | Simple TUI audio mixer for PipeWire | Rust | 1.1k | [Repo](https://github.com/tsowell/wiremix) |
+| [yt-dlp](https://discord.gg/H5MNcFW63r) | A feature-rich command-line audio/video downloader | Python | – | [Repo](https://github.com/yt-dlp/yt-dlp), [Website](https://discord.gg/H5MNcFW63r) |
 
 ### Media & Entertainment
 
