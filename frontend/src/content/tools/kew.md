@@ -50,10 +50,10 @@ tags:
 media: https://kewplayer.com/images/kew-terminal-music-player.gif
 logo: https://kewplayer.com/images/kew.gif
 updated: '2026-11-14'
+repo_stars: 3209
+repo_updated: "2026-11-11"
+repo_created: "2023-05-17"
+repo_release: "v4.4.3"
+repo_release_date: "2026-11-09"
 comments: []
-repo_stars: 3208
-repo_updated: '2026-11-11'
-repo_created: '2023-05-17'
-repo_release: v4.4.3
-repo_release_date: '2026-11-09'
 ---

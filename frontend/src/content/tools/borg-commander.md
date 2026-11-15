@@ -69,5 +69,10 @@ media: https://raw.githubusercontent.com/0xcd21h/borg-commander/main/docs/demo.g
 logo: >-
   https://raw.githubusercontent.com/0xcd21h/borg-commander/main/docs/brand/icon.gif
 updated: '2026-11-14'
+repo_stars: 22
+repo_updated: "2026-11-15"
+repo_created: "2026-10-18"
+repo_release: "v0.11.1"
+repo_release_date: "2026-11-14"
 comments: []
 ---
