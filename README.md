@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-309-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-310-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**309 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**310 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (18) · [Development Tools](#development-tools) (17) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (19) · [Networking](#networking) (28) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (15) · [Data Processing](#data-processing) (20) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (12) · [Utilities & Other](#utilities--other) (5)
+[File Management](#file-management) (20) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (5) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (18) · [Development Tools](#development-tools) (18) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (19) · [Networking](#networking) (28) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (18) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (5) · [DevOps & Cloud](#devops--cloud) (15) · [Data Processing](#data-processing) (20) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (12) · [Utilities & Other](#utilities--other) (5)
 
 ### File Management
 
@@ -199,6 +199,7 @@
 | [jbang](https://jbang.dev) | Unleash the power of java | Java | 1.9k | [Repo](https://github.com/jbangdev/jbang), [Website](https://jbang.dev) |
 | [mise](https://mise.en.dev) | dev tools, env vars, task runner | Rust | 36.2k | [Repo](https://github.com/jdx/mise), [Website](https://mise.en.dev) |
 | [regex-tui](https://github.com/vitor-mariano/regex-tui) | A terminal user interface (TUI) application for testing and visualizing regular expressions in… | Go | 370 | [Repo](https://github.com/vitor-mariano/regex-tui) |
+| [shellcheck](https://www.shellcheck.net) | ShellCheck, a static analysis tool for shell scripts | Haskell | – | [Repo](https://github.com/koalaman/shellcheck), [Website](https://www.shellcheck.net) |
 | [silicon](https://github.com/Aloxaf/silicon) | Create beautiful image of your source code. | Rust | 3.6k | [Repo](https://github.com/Aloxaf/silicon) |
 | [tokei](https://github.com/XAMPPRocky/tokei) | Count your code, quickly. | Rust | 15.1k | [Repo](https://github.com/XAMPPRocky/tokei) |
 | [vhs](https://github.com/charmbracelet/vhs) | Your CLI home video recorder 📼 | Go | 21.3k | [Repo](https://github.com/charmbracelet/vhs) |
