@@ -102,6 +102,7 @@ export const toolSchema = z.object({
 	// Repo-host-derived stats (GitHub or Codeberg), refreshed daily by
 	// scripts/sync-github-stats.ts (see .github/workflows/sync-github-stats.yml).
 	repo_stars: z.number().int().min(0).optional(),
+	repo_stars_recent: z.number().int().min(0).optional(), // stars gained in the last 14 days ("trending"); absent when the host can't tell (Codeberg)
 	repo_updated: z.string().optional(), // ISO YYYY-MM-DD, repo's last push date
 	repo_created: z.string().optional(), // ISO YYYY-MM-DD, repo creation date
 	repo_release: z.string().optional(), // latest release tag name, e.g. "v1.2.3"; falls back to the latest git tag if the repo has no releases
@@ -116,6 +117,7 @@ export const toolFormSchema = toolSchema.omit({
 	updated: true,
 	comments: true,
 	repo_stars: true,
+	repo_stars_recent: true,
 	repo_updated: true,
 	repo_created: true,
 	repo_release: true,
@@ -128,7 +130,7 @@ export type ToolFormData = z.infer<typeof toolFormSchema>;
 // collect via the form — the form only ever produces `ToolFormData`.
 export type PreservedToolFields = Pick<
 	z.infer<typeof toolSchema>,
-	'comments' | 'repo_stars' | 'repo_updated' | 'repo_created' | 'repo_release' | 'repo_release_date' | 'repo_badge'
+	'comments' | 'repo_stars' | 'repo_stars_recent' | 'repo_updated' | 'repo_created' | 'repo_release' | 'repo_release_date' | 'repo_badge'
 >;
 
 // Per-category metadata, keyed by slugified category name (see content/categories/*.md).

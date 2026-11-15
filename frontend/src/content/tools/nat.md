@@ -53,6 +53,7 @@ media: https://github.com/willdoescode/nat/raw/main/assets/example.png
 logo: https://cli.masoko.net/uploads/nat/logo.svg
 updated: '2026-07-18'
 repo_stars: 1265
+repo_stars_recent: 0
 repo_updated: "2021-05-28"
 repo_created: "2020-10-22"
 repo_release: "v2.1.14"

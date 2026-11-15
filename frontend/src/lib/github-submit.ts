@@ -144,6 +144,7 @@ function buildEditedToolFileContent(data: ToolFormData, currentFileText: string)
 	const preserved: PreservedToolFields = {
 		comments: Array.isArray(current.comments) ? (current.comments as PreservedToolFields['comments']) : [],
 		repo_stars: current.repo_stars as PreservedToolFields['repo_stars'],
+		repo_stars_recent: current.repo_stars_recent as PreservedToolFields['repo_stars_recent'],
 		repo_updated: current.repo_updated as PreservedToolFields['repo_updated'],
 		repo_created: current.repo_created as PreservedToolFields['repo_created'],
 		repo_release: current.repo_release as PreservedToolFields['repo_release'],

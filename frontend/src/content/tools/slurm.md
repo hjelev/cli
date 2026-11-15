@@ -38,6 +38,7 @@ media: https://screenshots.debian.net/screenshot/slurm/1693
 logo: https://avatars.githubusercontent.com/u/966147?v=4
 updated: '2026-09-05'
 repo_stars: 425
+repo_stars_recent: 1
 repo_updated: "2026-10-08"
 repo_created: "2011-09-08"
 repo_release: "upstream/0.4.4"

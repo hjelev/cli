@@ -54,6 +54,7 @@ media: https://raw.githubusercontent.com/abhimanyu003/sttr/main/media/demo.gif
 logo: https://abhimanyu003.github.io/sttr/favicon.png
 updated: '2026-08-19'
 repo_stars: 1352
+repo_stars_recent: 0
 repo_updated: "2025-12-25"
 repo_created: "2021-09-18"
 repo_release: "v0.2.30"

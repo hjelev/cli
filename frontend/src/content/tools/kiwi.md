@@ -33,6 +33,7 @@ media: https://raw.githubusercontent.com/0x4D696E61/Kiwi/main/assets/KiwiDemo.gi
 logo: https://raw.githubusercontent.com/0x4D696E61/Kiwi/main/assets/kiwi.png
 updated: '2026-10-02'
 repo_stars: 2
+repo_stars_recent: 0
 repo_updated: "2026-10-05"
 repo_created: "2026-10-01"
 repo_release: "v0.2.08"

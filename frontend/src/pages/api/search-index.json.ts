@@ -21,6 +21,7 @@ export const GET: APIRoute = async () => {
 		tags: filterDisplayTags(tool.data.tags, reservedSlugs),
 		logo: tool.data.logo ?? null,
 		stars: tool.data.repo_stars ?? null,
+		recent: tool.data.repo_stars_recent ?? null,
 		created: tool.data.repo_created ?? null,
 		verified: Boolean(tool.data.repo_badge),
 		search: `${tool.data.name} ${tool.data.short_description} ${tool.data.tags.join(' ')}`.toLowerCase(),

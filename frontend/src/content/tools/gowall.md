@@ -56,7 +56,8 @@ media: https://raw.githubusercontent.com/Achno/gowall/main/assets/custom.png
 logo: >-
   https://raw.githubusercontent.com/Achno/gowall/main/assets/go-sticker-overlay-small.png
 updated: '2026-11-01'
-repo_stars: 2336
+repo_stars: 2334
+repo_stars_recent: 13
 repo_updated: "2026-11-14"
 repo_created: "2024-07-22"
 repo_release: "v0.2.4"

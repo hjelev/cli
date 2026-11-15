@@ -8,6 +8,7 @@ import { getReservedSlugs, filterDisplayTags, getIndexableTagSlugs } from '../..
 import { formatAge } from '../../lib/repo-age';
 import { softwareLd, toolDescription, toolTitle } from '../../lib/seo';
 import { badgeSnippets, VERIFIED_TITLE } from '../../lib/badge';
+import { RECENT_STARS_TITLE, formatRecentStars } from '../../lib/trending';
 import { guidesForTool } from '../../lib/guides';
 import { stripLeadingEmoji } from '../../lib/text';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -86,6 +87,9 @@ const youTubeId = data.media ? getYouTubeId(data.media) : undefined;
 					data.repo_badge && <span class="badge badge-verified" title={VERIFIED_TITLE}>✓ verified</span>,
 					repoStarsLabel && (
 						<span class="badge badge-stars" title={`${repoStars} stars`}>★ {repoStarsLabel}</span>
+					),
+					(data.repo_stars_recent ?? 0) > 0 && (
+						<span class="badge badge-trending" title={RECENT_STARS_TITLE(data.repo_stars_recent!)}>{formatRecentStars(data.repo_stars_recent!)}</span>
 					),
 					<span class="chip" title="License">{data.license}</span>,
 					data.repo_release && <span class="chip" title="Latest release">{data.repo_release}</span>,

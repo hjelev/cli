@@ -40,6 +40,7 @@ tags:
 logo: https://github.com/TabbyML/pochi/raw/main/packages/vscode/assets/icons/logo128.png?raw=true
 media: https://raw.githubusercontent.com/lsd-rs/lsd/assets/screen_lsd.png
 repo_stars: 16290
+repo_stars_recent: 6
 repo_updated: "2026-08-17"
 repo_created: "2018-11-24"
 repo_release: "v1.2.0"

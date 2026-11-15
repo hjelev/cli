@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
@@ -31,6 +32,12 @@ const GITLAB_CONCURRENCY = 8;
 // README fetches are one REST call per repo on every host.
 const README_CONCURRENCY = 8;
 
+// "Trending" window for repo_stars_recent. GitHub hides stargazer timestamps
+// on most repos, so instead we diff against the repo_stars this same script
+// committed RECENT_STARS_DAYS ago — git history is the time series. The
+// workflow deepens its shallow clone far enough to reach that commit.
+const RECENT_STARS_DAYS = 14;
+
 interface RepoStats {
 	stars: number;
 	updated: string; // ISO YYYY-MM-DD, repo's last push date
@@ -48,7 +55,7 @@ interface ToolFile {
 	badge: boolean; // current repo_badge value, kept when the README can't be fetched
 }
 
-const REPO_FIELD_PATTERN = /^repo_(stars|updated|release|release_date|created|badge):/;
+const REPO_FIELD_PATTERN = /^repo_(stars|stars_recent|updated|release|release_date|created|badge):/;
 const COMMENTS_FIELD_PATTERN = /^comments:/;
 
 interface GitHubRepoStats {
@@ -298,6 +305,32 @@ async function fetchBadgeStatusAll(tools: ToolFile[]): Promise<Map<string, boole
 	return results;
 }
 
+// repo_stars per tool file as committed at the start of the trending window.
+// Tools missing from that snapshot (listed more recently) get no value, as
+// does everything when history doesn't reach back that far.
+function starsAtWindowStart(): Map<string, number> {
+	const snapshot = new Map<string, number>();
+	const git = (...args: string[]) => execFileSync('git', args, { cwd: toolsDir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+
+	let commit: string;
+	try {
+		commit = git('rev-list', '-1', `--before=${RECENT_STARS_DAYS} days ago`, 'HEAD').trim();
+	} catch {
+		commit = '';
+	}
+	if (!commit) {
+		console.warn(`⚠️  No commit older than ${RECENT_STARS_DAYS} days in history (shallow clone?), skipping repo_stars_recent`);
+		return snapshot;
+	}
+
+	const oldFiles = git('ls-tree', '--name-only', commit, './').split('\n').filter((file) => file.endsWith('.md'));
+	for (const file of oldFiles) {
+		const stars = git('show', `${commit}:./${file}`).match(/^repo_stars:\s*(\d+)\s*$/m);
+		if (stars) snapshot.set(file, Number(stars[1]));
+	}
+	return snapshot;
+}
+
 const files = fs.readdirSync(toolsDir).filter((file) => file.endsWith('.md'));
 
 const toolFiles: ToolFile[] = [];
@@ -338,6 +371,8 @@ for (const [file, repoStats] of gitlabStats) {
 	stats.set(file, repoStats);
 }
 
+const pastStars = starsAtWindowStart();
+
 let updatedCount = 0;
 for (const tool of toolFiles) {
 	const repoStats = stats.get(tool.file);
@@ -348,8 +383,13 @@ for (const tool of toolFiles) {
 
 	const raw = fs.readFileSync(tool.fullPath, 'utf8');
 
+	// Clamped: net unstars shouldn't read as negative trending.
+	const past = pastStars.get(tool.file);
+	const recentStars = past === undefined ? null : Math.max(0, repoStats.stars - past);
+
 	const newLines = [
 		`repo_stars: ${repoStats.stars}`,
+		...(recentStars !== null ? [`repo_stars_recent: ${recentStars}`] : []),
 		`repo_updated: ${JSON.stringify(repoStats.updated)}`,
 		`repo_created: ${JSON.stringify(repoStats.created)}`,
 		...(repoStats.release ? [`repo_release: ${JSON.stringify(repoStats.release)}`] : []),
@@ -361,7 +401,7 @@ for (const tool of toolFiles) {
 	if (updated !== raw) {
 		fs.writeFileSync(tool.fullPath, updated);
 		updatedCount += 1;
-		console.log(`✅ ${tool.file}: updated (${repoStats.stars}★, ${repoStats.updated}${repoStats.release ? `, ${repoStats.release}${repoStats.releaseDate ? ` (${repoStats.releaseDate})` : ''}` : ''}${badgeStatus.get(tool.file) ? ', badge ✓' : ''})`);
+		console.log(`✅ ${tool.file}: updated (${repoStats.stars}★${recentStars ? ` +${recentStars}` : ''}, ${repoStats.updated}${repoStats.release ? `, ${repoStats.release}${repoStats.releaseDate ? ` (${repoStats.releaseDate})` : ''}` : ''}${badgeStatus.get(tool.file) ? ', badge ✓' : ''})`);
 	}
 }
 

@@ -83,6 +83,7 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			<select id="sort-filter" aria-label="Sort order">
 				<option value="">Recently updated</option>
 				<option value="stars">Most stars</option>
+				<option value="trending">Trending (2 weeks)</option>
 				<option value="verified">Verified only</option>
 			</select>
 		</div>
@@ -104,6 +105,7 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 	<script>
 		import { formatAge } from '../lib/repo-age';
 		import { VERIFIED_TITLE } from '../lib/badge';
+		import { RECENT_STARS_TITLE, formatRecentStars } from '../lib/trending';
 
 		interface ToolIndexEntry {
 			id: string;
@@ -114,6 +116,7 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			tags: string[];
 			logo: string | null;
 			stars: number | null;
+			recent: number | null;
 			created: string | null;
 			verified: boolean;
 			search: string;
@@ -192,7 +195,8 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 
 			const badges = document.createElement('div');
 			badges.className = 'badges';
-			if (tool.stars !== null || tool.verified) {
+			const recent = tool.recent ?? 0;
+			if (tool.stars !== null || recent > 0 || tool.verified) {
 				const topRow = document.createElement('span');
 				topRow.className = 'badge-row';
 				if (tool.stars !== null) {
@@ -201,6 +205,13 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 					starsBadge.title = `${tool.stars} stars`;
 					starsBadge.textContent = `★ ${compactNumber.format(tool.stars)}`;
 					topRow.append(starsBadge);
+				}
+				if (recent > 0) {
+					const trendingBadge = document.createElement('span');
+					trendingBadge.className = 'badge badge-trending';
+					trendingBadge.title = RECENT_STARS_TITLE(recent);
+					trendingBadge.textContent = formatRecentStars(recent);
+					topRow.append(trendingBadge);
 				}
 				if (tool.verified) {
 					const verifiedBadge = document.createElement('span');
@@ -293,6 +304,7 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			const category = categoryFilter.value;
 			const language = languageFilter.value;
 			const sortByStars = sortFilter.value === 'stars';
+			const sortByTrending = sortFilter.value === 'trending';
 			const verifiedOnly = sortFilter.value === 'verified';
 			const filtering = query !== '' || category !== '' || language !== '' || sortFilter.value !== '';
 
@@ -330,9 +342,11 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 				const matchesVerified = !verifiedOnly || tool.verified;
 				return matchesQuery && matchesCategory && matchesLanguage && matchesVerified;
 			});
-			// The index is already in recently-updated order; only stars needs a re-sort.
+			// The index is already in recently-updated order; stars/trending need a re-sort
+			// (trending ties fall back to total stars).
 			// With a query, rank by relevance first; the stable sort keeps the chosen order within a tier.
 			if (sortByStars) matches.sort((a, b) => (b.stars ?? -1) - (a.stars ?? -1));
+			if (sortByTrending) matches.sort((a, b) => (b.recent ?? -1) - (a.recent ?? -1) || (b.stars ?? -1) - (a.stars ?? -1));
 			if (query) matches.sort((a, b) => relevance(b, query) - relevance(a, query));
 
 			results.replaceChildren(...matches.map(renderCard));

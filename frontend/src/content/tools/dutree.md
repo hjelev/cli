@@ -34,6 +34,7 @@ media: https://github.com/nachoparker/dutree/raw/master/resources/dutree_feature
 logo: https://avatars.githubusercontent.com/u/21343324?v=4
 updated: '2026-07-19'
 repo_stars: 876
+repo_stars_recent: 0
 repo_updated: "2022-06-29"
 repo_created: "2018-03-25"
 repo_release: "v0.2.15"

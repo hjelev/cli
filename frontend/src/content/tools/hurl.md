@@ -50,8 +50,9 @@ tags:
 media: https://asciinema.org/a/600691
 logo: https://hurl.dev/assets/img/logo-dark.svg
 updated: '2026-10-29'
-repo_stars: 19324
-repo_updated: "2026-11-14"
+repo_stars: 19325
+repo_stars_recent: 32
+repo_updated: "2026-11-15"
 repo_created: "2020-08-25"
 repo_release: "8.1.0"
 repo_release_date: "2026-10-28"

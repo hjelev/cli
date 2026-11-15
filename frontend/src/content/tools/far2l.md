@@ -39,6 +39,7 @@ media: >-
 logo: https://avatars.githubusercontent.com/u/20957349?v=4
 updated: '2026-07-13'
 repo_stars: 2240
+repo_stars_recent: 10
 repo_updated: "2026-10-27"
 repo_created: "2016-08-10"
 repo_release: "v_2.9.1"

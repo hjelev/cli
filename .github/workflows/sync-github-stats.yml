@@ -16,6 +16,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      # repo_stars_recent diffs against the repo_stars committed 14 days ago,
+      # so pull enough history past the default depth-1 clone to reach it.
+      - name: Fetch recent history
+        run: git fetch --shallow-since="$(date -u -d '21 days ago' +%F)" origin "${{ github.ref_name }}"
+
       - name: Setup Node
         uses: actions/setup-node@v6
         with:

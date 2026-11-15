@@ -711,6 +711,11 @@ textarea {
 	font-weight: 700;
 }
 
+.badge-trending {
+	color: var(--accent-green);
+	font-weight: 700;
+}
+
 .badges .badge-verified,
 .man-meta .badge-verified {
 	border: 1px solid currentColor;
@@ -723,7 +728,9 @@ textarea {
 .badge-stars::before,
 .badge-stars::after,
 .badge-verified::before,
-.badge-verified::after {
+.badge-verified::after,
+.badge-trending::before,
+.badge-trending::after {
 	content: '';
 }
 
@@ -990,6 +997,12 @@ a.chip:hover {
 
 .man-meta .badge-verified {
 	align-self: center;
+}
+
+.man-meta .badge-trending {
+	align-self: center;
+	font-size: 0.8rem;
+	margin-right: 0.2rem;
 }
 
 .man-section {

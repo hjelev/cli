@@ -50,7 +50,7 @@ tags:
 media: https://cli.masoko.net/uploads/tig/media.png
 logo: https://avatars.githubusercontent.com/u/8417?v=4
 updated: '2026-11-15'
-repo_stars: 13381
+repo_stars: 13382
 repo_updated: "2026-11-11"
 repo_created: "2009-03-01"
 repo_release: "tig-2.6.1"

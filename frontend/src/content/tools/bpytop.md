@@ -42,7 +42,8 @@ tags:
 media: https://github.com/aristocratos/bpytop/raw/master/Imgs/main.png
 logo: https://github.com/aristocratos/bpytop/raw/master/Imgs/logo.png
 updated: '2026-10-28'
-repo_stars: 10929
+repo_stars: 10928
+repo_stars_recent: 1
 repo_updated: "2025-06-01"
 repo_created: "2020-07-01"
 repo_release: "v1.0.68"

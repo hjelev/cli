@@ -42,6 +42,7 @@ media: https://github.com/rsdlt/levi/raw/main/docs/demo.gif
 logo: https://github.com/rsdlt/levi/raw/main/docs/logo.svg
 updated: '2026-10-20'
 repo_stars: 8
+repo_stars_recent: 0
 repo_updated: "2026-10-30"
 repo_created: "2026-10-16"
 repo_release: "v0.20.0"

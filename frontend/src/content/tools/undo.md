@@ -37,6 +37,7 @@ media: https://raw.githubusercontent.com/edaywalid/undo/main/assets/demo.gif
 logo: https://cli.masoko.net/uploads/undo/logo.png
 updated: '2026-08-21'
 repo_stars: 403
+repo_stars_recent: 1
 repo_updated: "2026-08-12"
 repo_created: "2026-07-23"
 repo_release: "v0.3.0"

@@ -56,6 +56,7 @@ media: >-
 logo: https://dssh.grolmes.com/_astro/dssh_stripped.D28FK-iO_SMe1d.svg
 updated: '2026-10-20'
 repo_stars: 87
+repo_stars_recent: 0
 repo_updated: "2026-07-24"
 repo_created: "2026-04-01"
 repo_release: "v2.2.1"

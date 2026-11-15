@@ -5,6 +5,7 @@ import { formatAge } from '../lib/repo-age';
 import { MAX_CARD_TAGS } from '../lib/config';
 import { VERIFIED_TITLE } from '../lib/badge';
 import { stripLeadingEmoji } from '../lib/text';
+import { RECENT_STARS_TITLE, formatRecentStars } from '../lib/trending';
 
 interface Props {
 	tool: CollectionEntry<'tools'>;
@@ -18,6 +19,8 @@ const repoStarsLabel =
 	repoStars !== undefined
 		? new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(repoStars)
 		: null;
+const recentStars = tool.data.repo_stars_recent ?? 0;
+const recentStarsLabel = recentStars > 0 ? formatRecentStars(recentStars) : null;
 
 // Tags that just restate the tool's own category/language are noise — hide
 // them here, but keep the full raw list in data-search below.
@@ -46,6 +49,9 @@ const hiddenTagCount = displayTags.length - shownTags.length;
 				<span class="badge-row">
 					{repoStarsLabel && (
 						<span class="badge badge-stars" title={`${repoStars} stars`}>★ {repoStarsLabel}</span>
+					)}
+					{recentStarsLabel && (
+						<span class="badge badge-trending" title={RECENT_STARS_TITLE(recentStars)}>{recentStarsLabel}</span>
 					)}
 					{tool.data.repo_badge && <span class="badge badge-verified" title={VERIFIED_TITLE}>✓ verified</span>}
 				</span>

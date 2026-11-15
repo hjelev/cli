@@ -45,6 +45,7 @@ media: https://raw.githubusercontent.com/yetidevworks/yscan/main/yscan-screensho
 logo: https://avatars.githubusercontent.com/u/220336074?v=4
 updated: '2026-08-21'
 repo_stars: 11
+repo_stars_recent: 0
 repo_updated: "2026-08-04"
 repo_created: "2026-02-26"
 repo_release: "0.1.1"

@@ -65,7 +65,7 @@ tags:
 media: https://cli.masoko.net/uploads/ast-grep/media.png
 logo: https://ast-grep.github.io/logo.svg
 updated: '2026-11-15'
-repo_stars: 16586
+repo_stars: 16588
 repo_updated: "2026-11-14"
 repo_created: "2022-07-01"
 repo_release: "0.51.2"

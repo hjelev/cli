@@ -31,6 +31,7 @@ media: >-
 logo: https://raw.githubusercontent.com/andmarti1424/sc-im/dev/logo.png
 updated: '2026-09-26'
 repo_stars: 5720
+repo_stars_recent: 2
 repo_updated: "2026-10-28"
 repo_created: "2014-10-30"
 repo_release: "v0.8.5"

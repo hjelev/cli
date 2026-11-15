@@ -34,6 +34,7 @@ tags:
 media: https://masoko.net/sb/images/screenshot-1.png
 logo: https://masoko.net/sb/images/favicon.png
 repo_stars: 4
+repo_stars_recent: 0
 repo_updated: "2026-10-31"
 repo_created: "2026-04-15"
 repo_release: "v0.12.2"

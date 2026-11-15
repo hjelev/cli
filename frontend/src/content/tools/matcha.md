@@ -58,8 +58,9 @@ media: >-
 logo: https://matcha.email/assets/logo-transparent.png
 updated: '2026-10-20'
 repo_stars: 1216
+repo_stars_recent: 33
 repo_updated: "2026-11-15"
 repo_created: "2025-07-28"
-repo_release: "v1.4.1"
-repo_release_date: "2026-11-14"
+repo_release: "v1.4.3"
+repo_release_date: "2026-11-15"
 ---
