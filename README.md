@@ -42,7 +42,7 @@
 
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
-| [archivemount](https://github.com/cybernoid/archivemount) | A fuse filesystem for mounting archives in formats supported by libarchive. | C | 244 | [Repo](https://github.com/cybernoid/archivemount) |
+| [archivemount](https://github.com/cybernoid/archivemount) | A fuse filesystem for mounting archives in formats supported by libarchive. | C | 245 | [Repo](https://github.com/cybernoid/archivemount) |
 | [borg-commander](https://0xcd21h.github.io/borg-commander/) | A two-panel file manager with your shell built in. It also shows your containers, processes, ports… | Rust | 22 | [Repo](https://github.com/0xcd21h/borg-commander), [Website](https://0xcd21h.github.io/borg-commander/) |
 | [broot](https://dystroy.org/broot/) | A new way to see and navigate directory trees | Rust | 13.2k | [Repo](https://github.com/Canop/broot), [Website](https://dystroy.org/broot/) |
 | [elio](https://elio-fm.github.io/) | Snappy, batteries-included terminal file manager with rich previews. | Rust | 915 | [Repo](https://github.com/elio-fm/elio), [Website](https://elio-fm.github.io/) |
@@ -187,7 +187,7 @@
 |------|-------------|----------|---------|-------|
 | [act](https://nektosact.com) | Run your GitHub Actions locally 🚀 | Go | 72.7k | [Repo](https://github.com/nektos/act), [Website](https://nektosact.com) |
 | [asciinema](https://asciinema.org) | Terminal session recorder, streamer and player 📹 | Rust | 18k | [Repo](https://github.com/asciinema/asciinema), [Website](https://asciinema.org) |
-| [ast-grep](https://ast-grep.github.io/) | ⚡A CLI tool for code structural search, lint and rewriting. Written in Rust | Rust | – | [Repo](https://github.com/ast-grep/ast-grep), [Website](https://ast-grep.github.io/) |
+| [ast-grep](https://ast-grep.github.io/) | ⚡A CLI tool for code structural search, lint and rewriting. Written in Rust | Rust | 16.6k | [Repo](https://github.com/ast-grep/ast-grep), [Website](https://ast-grep.github.io/) |
 | [cloc](https://github.com/AlDanial/cloc) | cloc counts blank lines, comment lines, and physical lines of source code in many programming… | Perl | 23.7k | [Repo](https://github.com/AlDanial/cloc) |
 | [ComChan](https://blog.vaishnavs.is-a.dev/comchan/) | A Blazingly Fast Minimal Serial Monitor with serial plottter TUI and more | Rust | 178 | [Repo](https://github.com/Vaishnav-Sabari-Girish/ComChan), [Website](https://blog.vaishnavs.is-a.dev/comchan/) |
 | [difftastic](https://difftastic.wilfred.me.uk/) | a structural diff that understands syntax 🟥🟩 | Rust | 26.2k | [Repo](https://github.com/Wilfred/difftastic), [Website](https://difftastic.wilfred.me.uk/) |
@@ -200,8 +200,8 @@
 | [jbang](https://jbang.dev) | Unleash the power of java | Java | 1.9k | [Repo](https://github.com/jbangdev/jbang), [Website](https://jbang.dev) |
 | [mise](https://mise.en.dev) | dev tools, env vars, task runner | Rust | 36.2k | [Repo](https://github.com/jdx/mise), [Website](https://mise.en.dev) |
 | [regex-tui](https://github.com/vitor-mariano/regex-tui) | A terminal user interface (TUI) application for testing and visualizing regular expressions in… | Go | 370 | [Repo](https://github.com/vitor-mariano/regex-tui) |
-| [scc](https://github.com/boyter/scc) | Sloc, Cloc and Code: scc is a very fast accurate code counter with complexity calculations and… | Go | – | [Repo](https://github.com/boyter/scc) |
-| [shellcheck](https://www.shellcheck.net) | ShellCheck, a static analysis tool for shell scripts | Haskell | – | [Repo](https://github.com/koalaman/shellcheck), [Website](https://www.shellcheck.net) |
+| [scc](https://github.com/boyter/scc) | Sloc, Cloc and Code: scc is a very fast accurate code counter with complexity calculations and… | Go | 8.9k | [Repo](https://github.com/boyter/scc) |
+| [shellcheck](https://www.shellcheck.net) | ShellCheck, a static analysis tool for shell scripts | Haskell | 40.3k | [Repo](https://github.com/koalaman/shellcheck), [Website](https://www.shellcheck.net) |
 | [silicon](https://github.com/Aloxaf/silicon) | Create beautiful image of your source code. | Rust | 3.6k | [Repo](https://github.com/Aloxaf/silicon) |
 | [tokei](https://github.com/XAMPPRocky/tokei) | Count your code, quickly. | Rust | 15.1k | [Repo](https://github.com/XAMPPRocky/tokei) |
 | [vhs](https://github.com/charmbracelet/vhs) | Your CLI home video recorder 📼 | Go | 21.3k | [Repo](https://github.com/charmbracelet/vhs) |
@@ -230,8 +230,8 @@
 | [gh](https://cli.github.com) | GitHub’s official command line tool | Go | 47k | [Repo](https://github.com/cli/cli), [Website](https://cli.github.com) |
 | [gh-enhance](https://www.gh-dash.dev/enhance) | A Blazingly Fast Terminal UI for GitHub Actions | Go | 255 | [Repo](https://github.com/dlvhdr/gh-enhance), [Website](https://www.gh-dash.dev/enhance) |
 | [ghgrab](https://ghgrab.readthedocs.io) | A simple, pretty terminal tool that lets you browse and download files from GitHub, GitLab,… | Rust | 1.6k | [Repo](https://github.com/abhixdd/ghgrab), [Website](https://ghgrab.readthedocs.io) |
-| [git-cliff](https://git-cliff.org) | A highly customizable Changelog Generator that follows Conventional Commit specifications ⛰️ | Rust | – | [Repo](https://github.com/orhun/git-cliff), [Website](https://git-cliff.org) |
-| [git-who](https://github.com/sinclairtarget/git-who) | Git blame for file trees | Go | – | [Repo](https://github.com/sinclairtarget/git-who) |
+| [git-cliff](https://git-cliff.org) | A highly customizable Changelog Generator that follows Conventional Commit specifications ⛰️ | Rust | 12.4k | [Repo](https://github.com/orhun/git-cliff), [Website](https://git-cliff.org) |
+| [git-who](https://github.com/sinclairtarget/git-who) | Git blame for file trees | Go | 2.7k | [Repo](https://github.com/sinclairtarget/git-who) |
 | [GitGo](https://pypi.org/project/pygitgo/) | Git workflow CLI that wraps add/commit/push into one command, with stash-aware branch switching and… | Python | 19 | [Repo](https://github.com/Huerte/GitGo), [Website](https://pypi.org/project/pygitgo/) |
 | [gitlogue](https://github.com/unhappychoice/gitlogue) | A cinematic Git commit replay tool for the terminal, turning your Git history into a living,… | Rust | 5.3k | [Repo](https://github.com/unhappychoice/gitlogue) |
 | [gitu](https://github.com/altsem/gitu) | A TUI Git client inspired by Magit | Rust | 3k | [Repo](https://github.com/altsem/gitu) |
@@ -244,8 +244,8 @@
 | [lazygit](https://lazygit.dev/) | simple terminal UI for git commands | Go | 83.9k | [Repo](https://github.com/jesseduffield/lazygit), [Website](https://lazygit.dev/) |
 | [levi](https://github.com/rsdlt/levi) | The fastest blade for your git history. Fuzzy search for you, plain text for your agents. | Rust | 8 | [Repo](https://github.com/rsdlt/levi) |
 | [onefetch](https://onefetch.dev) | Command-line Git information tool | Rust | 12.1k | [Repo](https://github.com/o2sh/onefetch), [Website](https://onefetch.dev) |
-| [serie](https://lusingander.github.io/serie/) | A rich git commit graph in your terminal, like magic 📚 | Rust | – | [Repo](https://github.com/lusingander/serie), [Website](https://lusingander.github.io/serie/) |
-| [tig](https://jonas.github.io/tig/) | Text-mode interface for git | C | – | [Repo](https://github.com/jonas/tig), [Website](https://jonas.github.io/tig/) |
+| [serie](https://lusingander.github.io/serie/) | A rich git commit graph in your terminal, like magic 📚 | Rust | 2.2k | [Repo](https://github.com/lusingander/serie), [Website](https://lusingander.github.io/serie/) |
+| [tig](https://jonas.github.io/tig/) | Text-mode interface for git | C | 13.4k | [Repo](https://github.com/jonas/tig), [Website](https://jonas.github.io/tig/) |
 
 ### Networking
 
@@ -261,18 +261,18 @@
 | [impala](https://github.com/pythops/impala) | 🛜 TUI for managing wifi on Linux | Rust | 2.9k | [Repo](https://github.com/pythops/impala) |
 | [kyanos](https://kyanos.io) | Kyanos is a networking analysis tool using eBPF. It can visualize the time packets spend in the… | C | 5.1k | [Repo](https://github.com/hengyoush/kyanos), [Website](https://kyanos.io) |
 | [lazyssh](https://github.com/Adembc/lazyssh) | A terminal-based SSH manager inspired by lazydocker and k9s - Written in go | Go | 4k | [Repo](https://github.com/Adembc/lazyssh) |
-| [lsoff](https://github.com/yutat23/lsoff) | CLI / TUI that lists listening TCP/UDP ports | Go | 280 | [Repo](https://github.com/yutat23/lsoff) |
+| [lsoff](https://github.com/yutat23/lsoff) | CLI / TUI that lists listening TCP/UDP ports | Go | 281 | [Repo](https://github.com/yutat23/lsoff) |
 | [netop](https://crates.io/crates/netop) | Network Top -- Help you monitor network traffic with bpf | Rust | 267 | [Repo](https://github.com/ZingerLittleBee/netop), [Website](https://crates.io/crates/netop) |
 | [netwatch](https://www.netwatchlabs.com/labs/netwatch) | Real-time network diagnostics in your terminal. One command, zero config, instant visibility. | Rust | 3.6k | [Repo](https://github.com/matthart1983/netwatch), [Website](https://www.netwatchlabs.com/labs/netwatch) |
 | [portop](https://padovanl.github.io/portop/) | htop for your ports. Inspect processes, Docker & systemd, detect port drift, audit Compose, and… | Go | 308 | [Repo](https://github.com/padovanl/portop), [Website](https://padovanl.github.io/portop/) |
 | [rustnet](https://github.com/domcyrus/rustnet#quick-start) | Per-process network monitoring for your terminal with deep packet inspection. Cross-platform,… | Rust | 5.2k | [Repo](https://github.com/domcyrus/rustnet), [Website](https://github.com/domcyrus/rustnet#quick-start) |
 | [shoal](https://github.com/BT10011/shoal) | Terminal LAN discovery that shows its work | Go | 100 | [Repo](https://github.com/BT10011/shoal) |
 | [slurm](http://github.com/mattthias/slurm/wiki/) | yet another realtime network interface monitor | C | 425 | [Repo](https://github.com/mattthias/slurm), [Website](http://github.com/mattthias/slurm/wiki/) |
-| [sping](https://crates.io/crates/sping) | A modern ping for humans. Real-time network diagnostics with latency, jitter, gateway/WAN context,… | Rust | 181 | [Repo](https://github.com/LambdaBytes/sping), [Website](https://crates.io/crates/sping) |
+| [sping](https://crates.io/crates/sping) | A modern ping for humans. Real-time network diagnostics with latency, jitter, gateway/WAN context,… | Rust | 184 | [Repo](https://github.com/LambdaBytes/sping), [Website](https://crates.io/crates/sping) |
 | [sshfs](https://github.com/libfuse/sshfs) | A network filesystem client to connect to SSH servers | C | 7.8k | [Repo](https://github.com/libfuse/sshfs) |
 | [sshs](https://github.com/quantumsheep/sshs) | Terminal user interface for SSH | Rust | 1.6k | [Repo](https://github.com/quantumsheep/sshs) |
 | [termshark](https://github.com/gcla/termshark) | A terminal UI for tshark, inspired by Wireshark | Go | 10.1k | [Repo](https://github.com/gcla/termshark) |
-| [tork](https://github.com/melqtx/tork) | cli for searching and downloading torrents | Go | 613 | [Repo](https://github.com/melqtx/tork) |
+| [tork](https://github.com/melqtx/tork) | cli for searching and downloading torrents | Go | 614 | [Repo](https://github.com/melqtx/tork) |
 | [trippy](https://trippy.rs) | Trippy combines the functionality of traceroute and ping and is designed to assist with the… | Rust | 8.2k | [Repo](https://github.com/fujiapple852/trippy), [Website](https://trippy.rs) |
 | [ttl](https://github.com/lance0/ttl) | Fast, modern traceroute with real-time TUI, per-hop stats, ASN/geo lookup, ECMP detection, and MPLS… | Rust | 1.5k | [Repo](https://github.com/lance0/ttl) |
 | [whosthere](https://github.com/ramonvermeulen/whosthere) | Local Area Network discovery tool with an interactive Terminal User Interface (TUI) written in Go. | Go | 2.5k | [Repo](https://github.com/ramonvermeulen/whosthere) |
@@ -386,11 +386,11 @@
 | [kudu](https://github.com/pythops/kudu) | 📦 TUI VM Manager on Linux | Rust | 209 | [Repo](https://github.com/pythops/kudu) |
 | [lazydocker](https://lazydocker.com) | The lazier way to manage everything docker | Go | 53.3k | [Repo](https://github.com/jesseduffield/lazydocker), [Website](https://lazydocker.com) |
 | [process-compose](https://f1bonacc1.github.io/process-compose/) | Process Compose is a simple and flexible scheduler and orchestrator to manage non-containerized… | Go | 2.9k | [Repo](https://github.com/F1bonacc1/process-compose), [Website](https://f1bonacc1.github.io/process-compose/) |
-| [reeve](https://yetidevworks.com/reeve) | A TUI based local web development stack for macOS and Linux. | Rust | 102 | [Repo](https://github.com/yetidevworks/reeve), [Website](https://yetidevworks.com/reeve) |
+| [reeve](https://yetidevworks.com/reeve) | A TUI based local web development stack for macOS and Linux. | Rust | 103 | [Repo](https://github.com/yetidevworks/reeve), [Website](https://yetidevworks.com/reeve) |
 | [sake](https://sakecli.com) | 🤖 task runner for local and remote hosts | Go | 755 | [Repo](https://github.com/alajmo/sake), [Website](https://sakecli.com) |
 | [sidekick](https://www.sidekickdeploy.com) | Bare metal to production ready in mins; your own fly server on your VPS. | Go | 7.6k | [Repo](https://github.com/mightymoud/sidekick), [Website](https://www.sidekickdeploy.com) |
 | [sofka](https://sofka.rs) | A reimagining of k9s with one generic object pipeline instead of a renderer per resource kind | Rust | 1.9k | [Repo](https://github.com/nklmilojevic/sofka/), [Website](https://sofka.rs) |
-| [zizmor](http://docs.zizmor.sh/) | Static analysis for GitHub Actions (and more) | Rust | – | [Repo](https://github.com/zizmorcore/zizmor), [Website](http://docs.zizmor.sh/) |
+| [zizmor](http://docs.zizmor.sh/) | Static analysis for GitHub Actions (and more) | Rust | 7.1k | [Repo](https://github.com/zizmorcore/zizmor), [Website](http://docs.zizmor.sh/) |
 
 ### Data Processing
 
@@ -455,7 +455,7 @@
 | [crush](https://github.com/charmbracelet/crush) | Glamourous agentic coding for all 💘 | Go | 29.1k | [Repo](https://github.com/charmbracelet/crush) |
 | [herdr](https://herdr.dev) | agent multiplexer that lives in your terminal. | Rust | 51.1k | [Repo](https://github.com/ogulcancelik/herdr), [Website](https://herdr.dev) |
 | [lazyskills](https://lazyskills.sh) | mission control for agent skills | Go | 340 | [Repo](https://github.com/alvinunreal/lazyskills), [Website](https://lazyskills.sh) |
-| [ollama](https://ollama.com) | Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models. | Go | – | [Repo](https://github.com/ollama/ollama), [Website](https://ollama.com) |
+| [ollama](https://ollama.com) | Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models. | Go | 187k | [Repo](https://github.com/ollama/ollama), [Website](https://ollama.com) |
 | [openclaw](https://openclaw.ai) | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 | TypeScript | 395k | [Repo](https://github.com/openclaw/openclaw), [Website](https://openclaw.ai) |
 | [opencode](https://opencode.ai) | The open source coding agent. | TypeScript | 227k | [Repo](https://github.com/anomalyco/opencode), [Website](https://opencode.ai) |
 | [ycrawl](https://yetidevworks.com/ycrawl) | Fetch a web page, get clean markdown, with honest verdicts when a page is blocked. | Rust | 3 | [Repo](https://github.com/yetidevworks/ycrawl), [Website](https://yetidevworks.com/ycrawl) |

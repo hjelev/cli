@@ -43,6 +43,6 @@ updated: '2026-11-01'
 repo_stars: 2193
 repo_updated: "2026-11-15"
 repo_created: "2026-01-28"
-repo_release: "v0.23.0"
-repo_release_date: "2026-11-05"
+repo_release: "v0.25.0"
+repo_release_date: "2026-11-15"
 ---
