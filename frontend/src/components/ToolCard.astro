@@ -20,7 +20,7 @@ const repoStarsLabel =
 		? new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(repoStars)
 		: null;
 const recentStars = tool.data.repo_stars_recent;
-const recentStarsLabel = repoStarsLabel && recentStars !== undefined ? formatRecentStars(recentStars) : null;
+const recentStarsLabel = repoStarsLabel && recentStars ? formatRecentStars(recentStars) : null;
 
 // Tags that just restate the tool's own category/language are noise — hide
 // them here, but keep the full raw list in data-search below.

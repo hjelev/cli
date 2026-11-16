@@ -205,7 +205,7 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 					starsBadge.textContent = `★ ${compactNumber.format(tool.stars)}`;
 					topRow.append(starsBadge);
 				}
-				if (tool.stars !== null && tool.recent !== null) {
+				if (tool.stars !== null && tool.recent) {
 					const trendingBadge = document.createElement('span');
 					trendingBadge.className = 'badge badge-trending';
 					trendingBadge.title = RECENT_STARS_TITLE(tool.recent);
