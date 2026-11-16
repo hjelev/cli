@@ -37,8 +37,8 @@ export const ALTERNATIVES: Alternative[] = [
 		slug: 'top',
 		replaces: 'top / ps',
 		title: 'Modern alternatives to top and ps',
-		intro: 'Process and resource monitors with graphs, mouse support and better defaults than the stock top, plus friendlier process listings than ps.',
-		tools: ['btop', 'htop', 'gtop', 'procs', 'ctop', 'metropolis', 'bpytop'],
+		intro: 'Process, resource and GPU monitors with graphs, mouse support and better defaults than the stock top, plus friendlier process listings than ps.',
+		tools: ['btop', 'htop', 'gtop', 'procs', 'ctop', 'metropolis', 'bpytop', 'bottom', 'glances', 'nvitop'],
 	},
 	{
 		slug: 'du',
@@ -122,14 +122,14 @@ export const ALTERNATIVES: Alternative[] = [
 		replaces: 'Spotify app',
 		title: 'Spotify clients for the terminal',
 		intro: 'Control and stream Spotify from a lightweight terminal UI.',
-		tools: ['spotify-player', 'spotify-tui', 'spotatui', 'myx'],
+		tools: ['spotify-player', 'spotify-tui', 'spotatui', 'myx', 'ncspot'],
 	},
 	{
 		slug: 'obsidian',
 		replaces: 'Obsidian',
 		title: 'Terminal alternatives to Obsidian',
 		intro: 'Markdown note-taking and knowledge bases that live in the terminal.',
-		tools: ['emeraldian', 'ekphos', 'shoin', 'tsuzuri', 'lazymark', 'nb'],
+		tools: ['emeraldian', 'ekphos', 'shoin', 'tsuzuri', 'lazymark', 'nb', 'basalt'],
 	},
 	{
 		slug: 'neofetch',
@@ -142,8 +142,8 @@ export const ALTERNATIVES: Alternative[] = [
 		slug: 'wireshark',
 		replaces: 'Wireshark',
 		title: 'Wireshark TUIs: terminal alternatives to Wireshark',
-		intro: 'Capture, inspect and analyze network packets and connections from a TUI instead of a desktop app — works over SSH on headless servers.',
-		tools: ['termshark', 'kyanos', 'rustnet'],
+		intro: 'Capture, inspect and analyze network packets, connections and HTTP(S) traffic from a TUI instead of a desktop app — works over SSH on headless servers.',
+		tools: ['termshark', 'kyanos', 'rustnet', 'mitmproxy'],
 	},
 	{
 		slug: 'vscode',
@@ -157,14 +157,14 @@ export const ALTERNATIVES: Alternative[] = [
 		replaces: 'Thunderbird / Outlook',
 		title: 'Terminal email clients: alternatives to Thunderbird',
 		intro: 'Read, search and send email from a fast, keyboard-driven terminal client.',
-		tools: ['aerc', 'neomutt', 'himalaya', 'matcha', 'tidemail'],
+		tools: ['aerc', 'neomutt', 'himalaya', 'matcha', 'tidemail', 'tmail', 'meli'],
 	},
 	{
 		slug: 'tail',
 		replaces: 'tail -f / less',
 		title: 'Terminal log viewers: better than tail and less',
 		intro: 'TUI log viewers that follow, filter and search logs from files, journald and remote hosts with highlighting, timelines and queries.',
-		tools: ['lnav', 'lazyjournal', 'nerdlog', 'goaccess'],
+		tools: ['lnav', 'lazyjournal', 'nerdlog', 'goaccess', 'tailspin', 'toolong', 'hl'],
 	},
 ];
 
@@ -173,19 +173,19 @@ export const COLLECTIONS: Guide[] = [
 		slug: 'modern-unix',
 		title: 'Modern Unix: better versions of classic commands',
 		intro: 'Faster, friendlier rewrites of the commands you type every day, from cat and ls to grep, du, ps and cd.',
-		tools: ['bat', 'eza', 'ripgrep', 'zoxide', 'dust', 'duf', 'procs', 'delta', 'btop', 'hyperfine', 'tldr', 'fzf', 'tokei', 'sping', 'doggo', 'mcfly', 'jq'],
+		tools: ['bat', 'eza', 'ripgrep', 'zoxide', 'dust', 'duf', 'procs', 'delta', 'btop', 'hyperfine', 'tldr', 'fzf', 'tokei', 'sping', 'doggo', 'mcfly', 'jq', 'fd'],
 	},
 	{
 		slug: 'tui-git-clients',
 		title: 'TUI git clients',
 		intro: 'Stage, commit, branch and browse history from a terminal UI instead of a GUI, plus jjui for Jujutsu (jj) users.',
-		tools: ['lazygit', 'gitui', 'gitu', 'grv', 'gitwig', 'jjui', 'forgit', 'diffnav'],
+		tools: ['lazygit', 'gitui', 'gitu', 'grv', 'gitwig', 'jjui', 'forgit', 'diffnav', 'tig', 'serie'],
 	},
 	{
 		slug: 'ai-coding-agents',
 		title: 'AI coding agents and tools for the terminal',
 		intro: 'Coding agents that run in your terminal, plus tools to orchestrate and manage them.',
-		tools: ['opencode', 'codex', 'crush', 'herdr', 'backlog-md', 'lazyskills', 'bosun', 'yylo', 'ygrep', 'ycrawl', 'suvadu'],
+		tools: ['opencode', 'codex', 'crush', 'herdr', 'backlog-md', 'lazyskills', 'bosun', 'yylo', 'ygrep', 'ycrawl', 'suvadu', 'claude-code', 'aider', 'abtop'],
 	},
 	{
 		slug: 'kubernetes-tuis',
@@ -203,13 +203,13 @@ export const COLLECTIONS: Guide[] = [
 		slug: 'json-csv-data-tools',
 		title: 'JSON, CSV and data tools for the terminal',
 		intro: 'View, query and transform structured data: JSON processors, CSV viewers and SQL TUIs.',
-		tools: ['jq', 'fx', 'jnv', 'visidata', 'xan', 'csvlens', 'tabiew', 'qo', 'harlequin', 'nothing-less', 'dyff', 'pgcli', 'sc-im', 'xleak', 'sheets'],
+		tools: ['jq', 'fx', 'jnv', 'visidata', 'xan', 'csvlens', 'tabiew', 'qo', 'harlequin', 'nothing-less', 'dyff', 'pgcli', 'sc-im', 'xleak', 'sheets', 'jless', 'tennis'],
 	},
 	{
 		slug: 'network-monitoring',
 		title: 'Network monitoring in the terminal',
 		intro: 'Watch bandwidth, connections, ports and latency live, per interface or per process.',
-		tools: ['rustnet', 'netwatch', 'bmon', 'termshark', 'flow', 'portop', 'netop', 'slurm', 'ttl', 'sping', 'yscan', 'shoal', 'lsoff', 'trippy', 'kyanos', 'whosthere'],
+		tools: ['rustnet', 'netwatch', 'bmon', 'termshark', 'flow', 'portop', 'netop', 'slurm', 'ttl', 'sping', 'yscan', 'shoal', 'lsoff', 'trippy', 'kyanos', 'whosthere', 'bandwhich', 'nethogs'],
 	},
 	{
 		slug: 'ssh-tools',
@@ -221,13 +221,13 @@ export const COLLECTIONS: Guide[] = [
 		slug: 'markdown-tools',
 		title: 'Markdown tools for the terminal',
 		intro: 'Render, write, present and convert Markdown without leaving the shell.',
-		tools: ['glow', 'slides', 'ekphos', 'emeraldian', 'shoin', 'tsuzuri', 'lazymark', 'rayomd', 'nb'],
+		tools: ['glow', 'slides', 'ekphos', 'emeraldian', 'shoin', 'tsuzuri', 'lazymark', 'rayomd', 'nb', 'frogmouth', 'leaf', 'mdcat', 'mcat', 'treemd', 'basalt', 'pandoc'],
 	},
 	{
 		slug: 'terminal-eye-candy',
 		title: 'Terminal eye candy',
 		intro: 'Weather, world maps, animated monitors and cinematic git replays: tools that make the terminal fun to look at.',
-		tools: ['weathr', 'mapscii', 'terrascope', 'ditto', 'gitlogue', 'metropolis', 'fastfetch', 'linecast', 'rust-stakeholder'],
+		tools: ['weathr', 'mapscii', 'terrascope', 'ditto', 'gitlogue', 'metropolis', 'fastfetch', 'linecast', 'rust-stakeholder', 'astroterm'],
 	},
 	{
 		slug: 'linux-desktop-tuis',
@@ -239,19 +239,19 @@ export const COLLECTIONS: Guide[] = [
 		slug: 'self-hosting-homelab',
 		title: 'Self-hosting and homelab tools',
 		intro: 'Deploy to your own servers, expose services, watch containers and logs, and sync storage from the terminal.',
-		tools: ['sidekick', 'ytunnel', 'lazydocker', 'dtop', 'nerdlog', 'rclone', 'cliflux', 'lyrtui', 'process-compose'],
+		tools: ['sidekick', 'ytunnel', 'lazydocker', 'dtop', 'nerdlog', 'rclone', 'cliflux', 'lyrtui', 'process-compose', 'glances'],
 	},
 	{
 		slug: 'personal-organizers',
 		title: 'Personal organizers for the terminal',
 		intro: 'Calendars, todo lists, time tracking, budgets and notes that stay out of the way.',
-		tools: ['chroncal', 'tuxedo', 'zeit', 'countdown', 'bagels', 'lazymark', 'nb'],
+		tools: ['chroncal', 'tuxedo', 'zeit', 'countdown', 'bagels', 'lazymark', 'nb', 'wtf'],
 	},
 	{
 		slug: 'github-gitlab-cli',
 		title: 'GitHub and GitLab from the terminal',
-		intro: 'Work with pull requests, issues, Actions and repositories on GitHub and GitLab without opening a browser.',
-		tools: ['gh', 'glab', 'gh-enhance', 'ghgrab', 'drydock'],
+		intro: 'Work with pull requests, issues and repositories on GitHub and GitLab without opening a browser, and run or audit GitHub Actions workflows locally.',
+		tools: ['gh', 'glab', 'gh-enhance', 'ghgrab', 'drydock', 'act', 'zizmor'],
 	},
 	{
 		slug: 'terminal-text-editors',
@@ -260,10 +260,22 @@ export const COLLECTIONS: Guide[] = [
 		tools: ['neovim', 'vim', 'helix', 'micro', 'edit', 'emacs', 'kakoune', 'fresh', 'ox', 'croft', 'kibi', 'amp', 'orbiton', 'slap', 'ttt', 'cleecode', 'termide', 'toast', 'kiwi', 'ad'],
 	},
 	{
+		slug: 'terminal-file-managers',
+		title: 'Terminal file managers',
+		intro: 'Browse, preview, copy and move files from a TUI: Miller-column managers like yazi and ranger, minimal ones like nnn and lf, and dual-pane commanders like Midnight Commander and far2l.',
+		tools: ['yazi', 'ranger', 'nnn', 'lf', 'superfile', 'joshuto', 'broot', 'xplr', 'vifm', 'mc', 'far2l', 'felix', 'elio', 'tfm', 'borg-commander', 'ytreenova'],
+	},
+	{
+		slug: 'code-analysis',
+		title: 'Code analysis tools for the terminal',
+		intro: 'Lint shell scripts and CI workflows, search and rewrite code by syntax, compare changes structurally, count lines of code, see who owns which files, and benchmark commands.',
+		tools: ['shellcheck', 'ast-grep', 'zizmor', 'difftastic', 'scc', 'tokei', 'cloc', 'git-who', 'hyperfine', 'bencher'],
+	},
+	{
 		slug: 'windows-cli-tools',
 		title: 'CLI and TUI tools for Windows',
 		intro: 'Terminal tools that run natively on Windows and install with winget, scoop or choco — for PowerShell, Windows Terminal and cmd, no WSL needed.',
-		tools: ['psmux', 'cloc', 'dust', 'bat', 'fzf', 'ripgrep', 'zoxide', 'eza', 'delta', 'micro', 'edit', 'helix', 'glow', 'lazygit', 'gh', 'glab', 'jjui', 'onefetch', 'yazi', 'superfile', 'mpv', 'csvlens', 'hyperfine', 'fastfetch', 'k9s', 'lazydocker'],
+		tools: ['psmux', 'cloc', 'dust', 'bat', 'fzf', 'ripgrep', 'zoxide', 'eza', 'delta', 'micro', 'edit', 'helix', 'glow', 'lazygit', 'gh', 'glab', 'jjui', 'onefetch', 'yazi', 'superfile', 'mpv', 'csvlens', 'hyperfine', 'fastfetch', 'k9s', 'lazydocker', 'fd', 'bottom', 'yt-dlp', 'pandoc', 'shellcheck', 'scc'],
 	},
 ];
 

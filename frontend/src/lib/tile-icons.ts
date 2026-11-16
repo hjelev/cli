@@ -151,6 +151,25 @@ export const COLLECTION_ICONS: Record<string, string> = {
 		<path d="M46 43V24a6 6 0 0 0-6-6H29" fill="none" stroke="${PURPLE}" stroke-width="4" stroke-linecap="round" />
 		<polyline points="34 12 28 18 34 24" fill="none" stroke="${PURPLE}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
 		<circle cx="46" cy="49" r="5.5" fill="var(--bg-deep)" stroke="${GREEN}" stroke-width="3.5" />`,
+	// two-pane commander: file lists side by side, a highlighted row in each
+	'terminal-file-managers': `
+		<rect x="8" y="12" width="48" height="40" rx="6" fill="var(--panel)" stroke="var(--border)" stroke-width="2" />
+		<line x1="32" y1="12" x2="32" y2="52" stroke="var(--border)" stroke-width="2" />
+		<path d="M13 18a2 2 0 0 1 2-2h4l2 2.5h6a2 2 0 0 1 2 2V23H13z" fill="${AMBER}" />
+		<path d="M37 18a2 2 0 0 1 2-2h4l2 2.5h6a2 2 0 0 1 2 2V23H37z" fill="${AMBER}" />
+		<rect x="13" y="28" width="14" height="3" rx="1.5" fill="var(--fg-dim)" />
+		<rect x="12" y="34" width="17" height="5" rx="1.5" fill="${BLUE}" />
+		<rect x="13" y="43" width="11" height="3" rx="1.5" fill="var(--fg-dim)" />
+		<rect x="37" y="28" width="12" height="3" rx="1.5" fill="var(--fg-dim)" />
+		<rect x="37" y="35" width="14" height="3" rx="1.5" fill="var(--fg-dim)" />
+		<rect x="36" y="41" width="17" height="5" rx="1.5" fill="${GREEN}" />`,
+	// code brackets under a magnifying glass with a check mark
+	'code-analysis': `
+		<polyline points="16 18 8 28 16 38" fill="none" stroke="${BLUE}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+		<polyline points="34 18 42 28 34 38" fill="none" stroke="${BLUE}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+		<circle cx="36" cy="38" r="12" fill="var(--panel)" stroke="${AMBER}" stroke-width="4" />
+		<line x1="45" y1="47" x2="54" y2="56" stroke="${AMBER}" stroke-width="5" stroke-linecap="round" />
+		<polyline points="30 38 34.5 42.5 42 34" fill="none" stroke="${GREEN}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />`,
 };
 
 // Keyed by slugified category name (see CATEGORIES in lib/schema.ts).
