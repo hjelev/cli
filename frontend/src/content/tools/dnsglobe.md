@@ -9,7 +9,7 @@ description: >-
   compares their answers, and shows the propagation of your record on a world
   map.
 repository_url: https://github.com/514-labs/dnsglobe
-author: Tim Delisle
+author: Nicolas Joseph
 license: MIT
 language: Rust
 installation:
