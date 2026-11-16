@@ -42,9 +42,9 @@ tags:
 media: https://neovim.io/images/showcase/statuscolumn0.12.png
 logo: https://cli.masoko.net/uploads/neovim/media.png
 updated: '2026-07-11'
-repo_stars: 103682
-repo_stars_recent: 384
-repo_updated: "2026-11-15"
+repo_stars: 103686
+repo_stars_recent: 386
+repo_updated: "2026-11-16"
 repo_created: "2014-01-31"
 repo_release: "v0.12.6"
 repo_release_date: "2026-10-09"

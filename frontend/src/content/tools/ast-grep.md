@@ -65,10 +65,10 @@ tags:
 media: https://cli.masoko.net/uploads/ast-grep/media.png
 logo: https://ast-grep.github.io/logo.svg
 updated: '2026-11-15'
-repo_stars: 16588
-repo_stars_recent: 2
-repo_updated: "2026-11-14"
+repo_stars: 16594
+repo_stars_recent: 8
+repo_updated: "2026-11-16"
 repo_created: "2022-07-01"
-repo_release: "0.51.2"
-repo_release_date: "2026-11-11"
+repo_release: "0.51.3"
+repo_release_date: "2026-11-16"
 ---

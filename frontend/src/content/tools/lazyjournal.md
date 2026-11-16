@@ -56,7 +56,7 @@ logo: https://cli.masoko.net/uploads/lazyjournal/logo.png
 updated: '2026-07-13'
 repo_stars: 1452
 repo_stars_recent: 17
-repo_updated: "2026-11-14"
+repo_updated: "2026-11-16"
 repo_created: "2024-11-12"
 repo_release: "0.8.7"
 repo_release_date: "2026-11-05"

@@ -79,8 +79,8 @@ tags:
 media: https://cli.masoko.net/uploads/rayomd/media.png
 logo: https://github.com/Butterski/rayomd/raw/master/docs/assets/branding/rayomd.png
 updated: '2026-10-20'
-repo_stars: 22
-repo_stars_recent: 1
+repo_stars: 23
+repo_stars_recent: 2
 repo_updated: "2026-11-04"
 repo_created: "2026-06-05"
 repo_release: "v5.3.0"

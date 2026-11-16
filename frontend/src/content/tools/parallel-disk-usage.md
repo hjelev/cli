@@ -33,7 +33,7 @@ media: https://asciinema.org/a/416664
 logo: https://avatars.githubusercontent.com/u/11488886?v=4
 updated: '2026-07-19'
 repo_stars: 744
-repo_stars_recent: 5
+repo_stars_recent: 4
 repo_updated: "2026-11-15"
 repo_created: "2021-05-16"
 repo_release: "0.24.0"

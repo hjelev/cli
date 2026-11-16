@@ -41,7 +41,7 @@ media: https://cli.masoko.net/uploads/impala/media.gif
 logo: https://avatars.githubusercontent.com/u/57548585?v=4
 updated: '2026-10-25'
 repo_stars: 2894
-repo_stars_recent: 5
+repo_stars_recent: 4
 repo_updated: "2026-10-07"
 repo_created: "2024-06-09"
 repo_release: "v0.9.0"

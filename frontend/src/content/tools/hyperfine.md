@@ -48,7 +48,7 @@ tags:
 media: https://cli.masoko.net/uploads/hyperfine/media.gif
 logo: https://avatars.githubusercontent.com/u/4209276?v=4
 updated: '2026-07-21'
-repo_stars: 29282
+repo_stars: 29284
 repo_stars_recent: 86
 repo_updated: "2026-11-01"
 repo_created: "2018-01-13"
