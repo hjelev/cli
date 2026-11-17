@@ -46,7 +46,7 @@ media: >-
   https://raw.githubusercontent.com/ramonvermeulen/whosthere/main/.github/assets/demo.gif
 logo: https://avatars.githubusercontent.com/u/18006244?v=4
 updated: '2026-10-25'
-repo_stars: 2473
+repo_stars: 2474
 repo_stars_recent: 8
 repo_updated: "2026-11-16"
 repo_created: "2025-08-20"

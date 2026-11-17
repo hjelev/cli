@@ -41,8 +41,8 @@ media: >-
   https://raw.githubusercontent.com/yylo-dev/yylo/main/assets/yylo-tui-live-session.png
 logo: https://avatars.githubusercontent.com/yylo-dev?s=200&v=4
 updated: '2026-09-26'
-repo_stars: 67
-repo_stars_recent: 1
+repo_stars: 68
+repo_stars_recent: 2
 repo_updated: "2026-11-13"
 repo_created: "2026-01-06"
 repo_release: "cli-v0.2.1-rc.1"

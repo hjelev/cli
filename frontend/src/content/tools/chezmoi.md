@@ -51,9 +51,9 @@ tags:
   - windows
 logo: https://www.chezmoi.io/logo.svg
 updated: '2026-07-21'
-repo_stars: 22283
-repo_stars_recent: 147
-repo_updated: "2026-11-14"
+repo_stars: 22289
+repo_stars_recent: 143
+repo_updated: "2026-11-16"
 repo_created: "2018-11-12"
 repo_release: "v2.74.1"
 repo_release_date: "2026-11-10"

@@ -42,7 +42,7 @@ logo: https://cli.masoko.net/uploads/miru/logo.svg
 updated: '2026-10-22'
 repo_stars: 13
 repo_stars_recent: 1
-repo_updated: "2026-11-14"
+repo_updated: "2026-11-17"
 repo_created: "2026-08-07"
 repo_release: "v0.15.0"
 repo_release_date: "2026-11-06"

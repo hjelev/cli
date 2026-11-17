@@ -52,7 +52,7 @@ media: https://raw.githubusercontent.com/aksakalli/gtop/master/img/demo.gif
 logo: https://avatars.githubusercontent.com/u/1939193?v=4
 updated: '2026-07-08'
 repo_stars: 9936
-repo_stars_recent: 1
+repo_stars_recent: 2
 repo_updated: "2025-11-06"
 repo_created: "2017-08-09"
 repo_release: "v1.1.5"

@@ -33,7 +33,7 @@ logo: https://byobu.org/byobu.svg
 updated: '2026-07-18'
 repo_stars: 1748
 repo_stars_recent: 8
-repo_updated: "2026-11-15"
+repo_updated: "2026-11-17"
 repo_created: "2013-01-15"
 repo_release: "7.23"
 repo_release_date: "2026-10-29"

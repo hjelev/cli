@@ -56,9 +56,9 @@ tags:
 media: https://cli.masoko.net/uploads/hl/media.svg
 logo: https://cli.masoko.net/uploads/hl/logo.svg
 updated: '2026-11-05'
-repo_stars: 3333
-repo_stars_recent: 9
-repo_updated: "2026-11-16"
+repo_stars: 3334
+repo_stars_recent: 10
+repo_updated: "2026-11-17"
 repo_created: "2020-08-04"
 repo_release: "v0.36.5"
 repo_release_date: "2026-10-21"

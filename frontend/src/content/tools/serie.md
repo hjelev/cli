@@ -47,7 +47,7 @@ logo: https://avatars.githubusercontent.com/u/31386431?v=4
 updated: '2026-11-15'
 repo_stars: 2185
 repo_stars_recent: 0
-repo_updated: "2026-11-16"
+repo_updated: "2026-11-17"
 repo_created: "2024-07-28"
 repo_release: "v0.10.2"
 repo_release_date: "2026-11-10"

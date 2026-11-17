@@ -37,7 +37,7 @@ media: https://cli.masoko.net/uploads/sysdig/media.png
 logo: https://cli.masoko.net/uploads/sysdig/logo.png
 updated: '2026-10-28'
 repo_stars: 8318
-repo_stars_recent: 6
+repo_stars_recent: 5
 repo_updated: "2026-04-13"
 repo_created: "2014-01-15"
 repo_release: "0.41.4"

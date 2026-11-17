@@ -53,8 +53,8 @@ tags:
 media: https://cli.masoko.net/uploads/aider/media.svg
 logo: https://cli.masoko.net/uploads/aider/logo.svg
 updated: '2026-11-15'
-repo_stars: 50139
-repo_stars_recent: 6
+repo_stars: 50154
+repo_stars_recent: 21
 repo_updated: "2026-05-22"
 repo_created: "2023-05-09"
 repo_release: "v0.86.0"
