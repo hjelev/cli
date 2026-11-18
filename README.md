@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-332-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-333-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**332 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**333 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (6) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (19) · [Development Tools](#development-tools) (22) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (23) · [Networking](#networking) (28) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (19) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (8) · [DevOps & Cloud](#devops--cloud) (18) · [Data Processing](#data-processing) (19) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (15) · [Utilities & Other](#utilities--other) (7)
+[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (6) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (19) · [Development Tools](#development-tools) (22) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (23) · [Networking](#networking) (29) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (19) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (8) · [DevOps & Cloud](#devops--cloud) (18) · [Data Processing](#data-processing) (19) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (15) · [Utilities & Other](#utilities--other) (7)
 
 ### File Management
 
@@ -271,6 +271,7 @@
 | [netwatch](https://www.netwatchlabs.com/labs/netwatch) | Real-time network diagnostics in your terminal. One command, zero config, instant visibility. | Rust | 3.6k (+34) | [Repo](https://github.com/matthart1983/netwatch), [Website](https://www.netwatchlabs.com/labs/netwatch) |
 | [portop](https://padovanl.github.io/portop/) | htop for your ports. Inspect processes, Docker & systemd, detect port drift, audit Compose, and… | Go | 309 (+2) | [Repo](https://github.com/padovanl/portop), [Website](https://padovanl.github.io/portop/) |
 | [rustnet](https://github.com/domcyrus/rustnet#quick-start) | Per-process network monitoring for your terminal with deep packet inspection. Cross-platform,… | Rust | 5.2k (+36) | [Repo](https://github.com/domcyrus/rustnet), [Website](https://github.com/domcyrus/rustnet#quick-start) |
+| [RustScan](https://github.com/bee-san/RustScan) | 🤖 The Modern Port Scanner 🤖 | Rust | – | [Repo](https://github.com/bee-san/RustScan) |
 | [shoal](https://github.com/BT10011/shoal) | Terminal LAN discovery that shows its work | Go | 101 (+1) | [Repo](https://github.com/BT10011/shoal) |
 | [slurm](http://github.com/mattthias/slurm/wiki/) | yet another realtime network interface monitor | C | 425 (+1) | [Repo](https://github.com/mattthias/slurm), [Website](http://github.com/mattthias/slurm/wiki/) |
 | [sping](https://crates.io/crates/sping) | A modern ping for humans. Real-time network diagnostics with latency, jitter, gateway/WAN context,… | Rust | 192 (+49) | [Repo](https://github.com/LambdaBytes/sping), [Website](https://crates.io/crates/sping) |
