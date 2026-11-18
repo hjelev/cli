@@ -57,7 +57,7 @@ repo_stars: 71
 repo_stars_recent: 9
 repo_updated: "2026-11-18"
 repo_created: "2026-06-08"
-repo_release: "v8.0.2"
+repo_release: "v8.0.3"
 repo_release_date: "2026-11-18"
 repo_badge: true
 comments: []

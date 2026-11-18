@@ -47,8 +47,8 @@ media: https://asciinema.org/a/756853
 logo: >-
   https://asciinema.org/images/logo-red-949d10005bb389d1ae900a13b5ac53d7.svg?vsn=d
 updated: '2026-07-21'
-repo_stars: 17974
-repo_stars_recent: 37
+repo_stars: 17975
+repo_stars_recent: 38
 repo_updated: "2026-11-17"
 repo_created: "2011-11-21"
 repo_release: "v3.2.1"

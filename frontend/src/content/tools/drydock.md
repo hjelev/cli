@@ -41,8 +41,8 @@ tags:
 media: https://raw.githubusercontent.com/yetidevworks/drydock/main/screenshot.png
 logo: https://avatars.githubusercontent.com/u/220336074?v=4
 updated: '2026-08-21'
-repo_stars: 366
-repo_stars_recent: 40
+repo_stars: 368
+repo_stars_recent: 42
 repo_updated: "2026-11-16"
 repo_created: "2026-07-30"
 repo_release: "v1.4.1"

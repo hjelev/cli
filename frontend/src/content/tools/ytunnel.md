@@ -43,8 +43,8 @@ tags:
 media: https://raw.githubusercontent.com/yetidevworks/ytunnel/master/ytunnel-screenshot.png
 logo: https://avatars.githubusercontent.com/u/220336074?v=4
 updated: '2026-08-21'
-repo_stars: 67
-repo_stars_recent: 6
+repo_stars: 70
+repo_stars_recent: 9
 repo_updated: "2026-11-13"
 repo_created: "2026-01-20"
 repo_release: "v1.1.1"

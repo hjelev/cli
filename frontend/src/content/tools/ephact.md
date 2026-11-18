@@ -28,5 +28,10 @@ media: >-
 logo: >-
   https://codeberg.org/avatars/80b799010127422ef3986abab1ab1dadd696aff2b87f6b04cb103d065d5ff6fe
 updated: '2026-11-18'
+repo_stars: 2
+repo_updated: "2026-11-10"
+repo_created: "2026-06-11"
+repo_release: "v0.4.0"
+repo_release_date: "2026-09-29"
 comments: []
 ---

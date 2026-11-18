@@ -52,8 +52,8 @@ tags:
 media: https://superfile.dev/_astro/demo.CvzVaHej_28nrJ.webp
 logo: https://superfile.dev/logo.svg
 updated: '2026-10-30'
-repo_stars: 24108
-repo_stars_recent: 97
+repo_stars: 24110
+repo_stars_recent: 99
 repo_updated: "2026-11-17"
 repo_created: "2024-03-19"
 repo_release: "v1.6.0"

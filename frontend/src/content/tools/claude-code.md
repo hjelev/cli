@@ -41,8 +41,8 @@ tags:
 media: https://github.com/anthropics/claude-code/raw/main/demo.gif
 logo: https://cli.masoko.net/uploads/claude-code/logo.png
 updated: '2026-11-02'
-repo_stars: 156107
-repo_stars_recent: 1630
+repo_stars: 156159
+repo_stars_recent: 1682
 repo_updated: "2026-11-18"
 repo_created: "2025-02-22"
 repo_release: "v2.1.327"

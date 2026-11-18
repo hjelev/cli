@@ -57,4 +57,9 @@ tags:
 media: https://raw.githubusercontent.com/casey/just/master/etc/screenshot.png
 logo: https://cli.masoko.net/uploads/just/logo.png
 updated: '2026-11-18'
+repo_stars: 36743
+repo_updated: "2026-11-15"
+repo_created: "2016-06-17"
+repo_release: "1.59.0"
+repo_release_date: "2026-10-15"
 ---

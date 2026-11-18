@@ -50,8 +50,8 @@ tags:
 media: https://github.com/LargeModGames/spotatui/raw/main/.github/demo.gif
 logo: https://avatars.githubusercontent.com/u/84450916?v=4
 updated: '2026-07-09'
-repo_stars: 1842
-repo_stars_recent: 41
+repo_stars: 1843
+repo_stars_recent: 42
 repo_updated: "2026-11-17"
 repo_created: "2025-11-10"
 repo_release: "v0.48.0"

@@ -53,9 +53,9 @@ tags:
 media: https://burntsushi.net/stuff/ripgrep1.png
 logo: https://cli.masoko.net/uploads/ripgrep/logo.png
 updated: '2026-07-18'
-repo_stars: 70038
-repo_stars_recent: 347
-repo_updated: "2026-11-09"
+repo_stars: 70047
+repo_stars_recent: 356
+repo_updated: "2026-11-18"
 repo_created: "2016-03-11"
 repo_release: "15.2.0"
 repo_release_date: "2026-07-15"

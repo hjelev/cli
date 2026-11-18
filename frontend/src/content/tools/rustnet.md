@@ -52,8 +52,8 @@ tags:
 media: https://github.com/domcyrus/rustnet/raw/main/assets/rustnet.gif
 logo: https://avatars.githubusercontent.com/u/884083?v=4
 updated: '2026-07-22'
-repo_stars: 5245
-repo_stars_recent: 36
+repo_stars: 5246
+repo_stars_recent: 37
 repo_updated: "2026-11-18"
 repo_created: "2025-04-27"
 repo_release: "v1.7.0"
