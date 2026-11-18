@@ -23,6 +23,10 @@ tags:
   - continuous-integration
   - ephemeral
   - rust
-media: https://cli.masoko.net/uploads/ephact/media.gif
-updated: '2026-11-16'
+media: >-
+  https://codeberg.org/gbrennon/ephact/media/branch/main/docs/gifs/tui-github-workflow-demo.gif
+logo: >-
+  https://codeberg.org/avatars/80b799010127422ef3986abab1ab1dadd696aff2b87f6b04cb103d065d5ff6fe
+updated: '2026-11-18'
+comments: []
 ---
