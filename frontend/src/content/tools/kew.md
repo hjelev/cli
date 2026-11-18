@@ -51,8 +51,8 @@ media: https://kewplayer.com/images/kew-terminal-music-player.gif
 logo: https://kewplayer.com/images/kew.gif
 updated: '2026-11-14'
 repo_stars: 3208
-repo_stars_recent: 22
-repo_updated: "2026-11-11"
+repo_stars_recent: 20
+repo_updated: "2026-11-17"
 repo_created: "2023-05-17"
 repo_release: "v4.4.3"
 repo_release_date: "2026-11-09"

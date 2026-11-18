@@ -33,7 +33,7 @@ tags:
 media: https://github.com/prjctimg/gtm/raw/dev/screenshots/1.png
 logo: https://cli.masoko.net/uploads/gtm/logo.png
 updated: '2026-10-22'
-repo_stars: 61
+repo_stars: 62
 repo_stars_recent: 0
 repo_updated: "2026-11-13"
 repo_created: "2026-06-30"

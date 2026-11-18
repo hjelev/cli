@@ -55,9 +55,9 @@ media: >-
 logo: >-
   https://raw.githubusercontent.com/sherlock-project/sherlock/master/docs/images/sherlock-logo.png
 updated: '2026-10-20'
-repo_stars: 113509
-repo_stars_recent: 18047
-repo_updated: "2026-11-17"
+repo_stars: 113999
+repo_stars_recent: 18461
+repo_updated: "2026-11-18"
 repo_created: "2018-12-24"
 repo_release: "v0.16.2"
 repo_release_date: "2026-09-08"

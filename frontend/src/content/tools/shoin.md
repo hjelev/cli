@@ -32,10 +32,10 @@ logo: https://avatars.githubusercontent.com/u/63861454?v=4
 updated: '2026-10-27'
 repo_stars: 79
 repo_stars_recent: 2
-repo_updated: "2026-11-14"
+repo_updated: "2026-11-18"
 repo_created: "2026-08-28"
-repo_release: "v0.2.3"
-repo_release_date: "2026-11-02"
+repo_release: "v0.2.4"
+repo_release_date: "2026-11-17"
 repo_badge: true
 comments: []
 ---

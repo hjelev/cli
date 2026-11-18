@@ -30,9 +30,9 @@ media: >-
   https://raw.githubusercontent.com/tramhao/termusic/master/screenshots/tageditor.png
 logo: https://avatars.githubusercontent.com/u/7751505?v=4
 updated: '2026-07-18'
-repo_stars: 2252
-repo_stars_recent: 8
-repo_updated: "2026-11-17"
+repo_stars: 2254
+repo_stars_recent: 9
+repo_updated: "2026-11-18"
 repo_created: "2021-06-01"
 repo_release: "v0.13.2"
 repo_release_date: "2026-05-06"

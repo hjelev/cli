@@ -34,8 +34,8 @@ tags:
 media: https://github.com/wagoodman/dive/raw/main/.data/demo.gif
 logo: https://avatars.githubusercontent.com/u/590471?v=4
 updated: '2026-07-18'
-repo_stars: 54729
-repo_stars_recent: 34
+repo_stars: 54731
+repo_stars_recent: 33
 repo_updated: "2026-11-17"
 repo_created: "2018-05-13"
 repo_release: "v0.13.1"

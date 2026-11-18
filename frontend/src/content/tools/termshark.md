@@ -45,8 +45,8 @@ github_stars: 9934
 github_updated: "2024-04-30"
 github_created: "2019-04-20"
 github_release: "v2.4.0"
-repo_stars: 10067
-repo_stars_recent: 11
+repo_stars: 10070
+repo_stars_recent: 14
 repo_updated: "2024-04-30"
 repo_created: "2019-04-20"
 repo_release: "v2.4.0"

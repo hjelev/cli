@@ -30,9 +30,9 @@ media: https://raw.githubusercontent.com/paradise-runner/toast/main/toast-demo.g
 logo: https://raw.githubusercontent.com/paradise-runner/toast/main/toast-logo.png
 updated: '2026-09-05'
 repo_stars: 293
-repo_stars_recent: 7
-repo_updated: "2026-11-16"
+repo_stars_recent: 5
+repo_updated: "2026-11-17"
 repo_created: "2026-03-23"
-repo_release: "v0.14.2"
-repo_release_date: "2026-11-09"
+repo_release: "v0.15.1"
+repo_release_date: "2026-11-17"
 ---

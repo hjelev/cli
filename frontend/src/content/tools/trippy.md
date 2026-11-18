@@ -77,9 +77,9 @@ media: >-
 logo: >-
   https://raw.githubusercontent.com/fujiapple852/trippy/master/docs/src/assets/Trippy-Vertical-DarkMode.svg#gh-dark-mode-only
 updated: '2026-10-25'
-repo_stars: 8168
-repo_stars_recent: 36
-repo_updated: "2026-11-15"
+repo_stars: 8171
+repo_stars_recent: 35
+repo_updated: "2026-11-18"
 repo_created: "2022-03-28"
 repo_release: "0.13.0"
 repo_release_date: "2025-05-05"

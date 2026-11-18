@@ -37,7 +37,7 @@ media: https://cli.masoko.net/uploads/pls/media.png
 logo: https://github.com/pls-rs/.github/raw/main/profile/readme_assets/logo.png
 updated: '2026-11-02'
 repo_stars: 973
-repo_stars_recent: 4
+repo_stars_recent: 3
 repo_updated: "2026-11-14"
 repo_created: "2022-02-01"
 repo_release: "v7.0.0-beta.1"
