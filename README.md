@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-326-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-327-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**326 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**327 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (6) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (19) · [Development Tools](#development-tools) (20) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (23) · [Networking](#networking) (28) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (19) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (6) · [DevOps & Cloud](#devops--cloud) (16) · [Data Processing](#data-processing) (19) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (15) · [Utilities & Other](#utilities--other) (7)
+[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (6) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (19) · [Development Tools](#development-tools) (20) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (23) · [Networking](#networking) (28) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (19) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (6) · [DevOps & Cloud](#devops--cloud) (17) · [Data Processing](#data-processing) (19) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (15) · [Utilities & Other](#utilities--other) (7)
 
 ### File Management
 
@@ -392,6 +392,7 @@
 | [lazydocker](https://lazydocker.com) | The lazier way to manage everything docker | Go | 53.4k (+125) | [Repo](https://github.com/jesseduffield/lazydocker), [Website](https://lazydocker.com) |
 | [process-compose](https://f1bonacc1.github.io/process-compose/) | Process Compose is a simple and flexible scheduler and orchestrator to manage non-containerized… | Go | 2.9k (+29) | [Repo](https://github.com/F1bonacc1/process-compose), [Website](https://f1bonacc1.github.io/process-compose/) |
 | [reeve](https://yetidevworks.com/reeve) | A TUI based local web development stack for macOS and Linux. | Rust | 103 (+6) | [Repo](https://github.com/yetidevworks/reeve), [Website](https://yetidevworks.com/reeve) |
+| [restic](https://restic.net) | Fast, secure, efficient backup program | Go | – | [Repo](https://github.com/restic/restic), [Website](https://restic.net) |
 | [sake](https://sakecli.com) | 🤖 task runner for local and remote hosts | Go | 755 (+3) | [Repo](https://github.com/alajmo/sake), [Website](https://sakecli.com) |
 | [sidekick](https://www.sidekickdeploy.com) | Bare metal to production ready in mins; your own fly server on your VPS. | Go | 7.6k (+3) | [Repo](https://github.com/mightymoud/sidekick), [Website](https://www.sidekickdeploy.com) |
 | [sofka](https://sofka.rs) | A reimagining of k9s with one generic object pipeline instead of a renderer per resource kind | Rust | 1.9k (+53) | [Repo](https://github.com/nklmilojevic/sofka/), [Website](https://sofka.rs) |
