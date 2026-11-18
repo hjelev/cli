@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-329-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-330-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**329 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**330 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (6) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (19) · [Development Tools](#development-tools) (22) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (23) · [Networking](#networking) (28) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (19) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (6) · [DevOps & Cloud](#devops--cloud) (17) · [Data Processing](#data-processing) (19) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (15) · [Utilities & Other](#utilities--other) (7)
+[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (6) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (7) · [Notes & Documents](#notes--documents) (19) · [Development Tools](#development-tools) (22) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (23) · [Networking](#networking) (28) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (19) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (6) · [DevOps & Cloud](#devops--cloud) (18) · [Data Processing](#data-processing) (19) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (15) · [Utilities & Other](#utilities--other) (7)
 
 ### File Management
 
@@ -387,6 +387,7 @@
 | [ctop](https://ctop.sh) | Top-like interface for container metrics | Go | 17.9k (+12) | [Repo](https://github.com/bcicen/ctop), [Website](https://ctop.sh) |
 | [dive](https://github.com/wagoodman/dive) | A tool for exploring each layer in a docker image | Go | 54.7k (+33) | [Repo](https://github.com/wagoodman/dive) |
 | [dtop](https://dtop.dev/) | Terminal dashboard for Docker monitoring across multiple hosts with Dozzle integration. | Rust | 1.5k (+12) | [Repo](https://github.com/amir20/dtop), [Website](https://dtop.dev/) |
+| [gws-cli](https://developers.google.com/workspace) | Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin,… | Rust | – | [Repo](https://github.com/googleworkspace/cli/), [Website](https://developers.google.com/workspace) |
 | [k10s](http://oss.p10node.com) | Kubernetes TUI you can click. Instant search, logs/exec/port-forward, 7 themes, context-aware AI.… | Go | 335 (+6) | [Repo](https://github.com/p10node/k10s), [Website](http://oss.p10node.com) |
 | [k9s](https://k9scli.io) | 🐶 Kubernetes CLI To Manage Your Clusters In Style! | Go | 35k (+71) | [Repo](https://github.com/derailed/k9s), [Website](https://k9scli.io) |
 | [kdash](https://kdash-rs.github.io) | A simple and fast dashboard for Kubernetes | Rust | 2.6k (+1) | [Repo](https://github.com/kdash-rs/kdash), [Website](https://kdash-rs.github.io) |
