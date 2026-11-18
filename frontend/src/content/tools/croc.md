@@ -57,6 +57,7 @@ tags:
   - tcp
   - transfer
 media: https://github.com/schollz/croc/raw/main/src/install/customization.gif
-logo: https://raw.githubusercontent.com/schollz/croc/main/web/src/assets/croc.jpg
+logo: https://cli.masoko.net/uploads/croc/logo.png
 updated: '2026-11-18'
+comments: []
 ---
