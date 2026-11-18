@@ -133,13 +133,13 @@ import { renderBadge } from '../lib/badge';
 			submitBtn.disabled = true;
 
 			try {
-				const { prUrl } = await submitTool(token, validation.data, files);
+				const { prUrl, merged } = await submitTool(token, validation.data, files);
 				const link = document.createElement('a');
 				link.href = prUrl;
 				link.target = '_blank';
 				link.rel = 'noopener';
-				link.textContent = 'View your pull request';
-				submitSuccessMessage.replaceChildren('Submitted! ', link, '.');
+				link.textContent = merged ? 'View the merged pull request' : 'View your pull request';
+				submitSuccessMessage.replaceChildren(merged ? 'Submitted and merged — live after the next deploy. ' : 'Submitted! ', link, '.');
 				form.reset();
 				resetInstallationRows(installationRows);
 				formStatus.textContent = '';
