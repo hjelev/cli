@@ -44,7 +44,7 @@ media: >-
   https://github.com/a-shygun/Terrascope/raw/main/docs/images/terrascope-ui-promo.gif
 logo: https://avatars.githubusercontent.com/u/70066717?v=4
 updated: '2026-10-15'
-repo_stars: 442
+repo_stars: 447
 repo_stars_recent: 40
 repo_updated: "2026-10-26"
 repo_created: "2026-09-28"

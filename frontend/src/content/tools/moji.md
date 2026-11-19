@@ -42,7 +42,7 @@ logo: >-
 updated: '2026-09-05'
 repo_stars: 261
 repo_stars_recent: 2
-repo_updated: "2026-11-10"
+repo_updated: "2026-11-18"
 repo_created: "2026-07-10"
 repo_release: "v0.8.1"
 repo_release_date: "2026-11-08"

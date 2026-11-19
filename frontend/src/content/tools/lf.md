@@ -57,7 +57,7 @@ media: https://www.tecmint.com/wp-content/uploads/2024/09/Lf-Terminal-File-Manag
 logo: https://avatars.githubusercontent.com/u/1835672?v=4
 updated: '2026-07-04'
 repo_stars: 9601
-repo_stars_recent: 17
+repo_stars_recent: 13
 repo_updated: "2026-11-17"
 repo_created: "2016-08-13"
 repo_release: "r42"

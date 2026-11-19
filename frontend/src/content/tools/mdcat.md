@@ -45,10 +45,10 @@ media: >-
   https://raw.githubusercontent.com/BIRSAx2/mdcat/main/screenshots/side-by-side.png
 logo: https://avatars.githubusercontent.com/u/39867122?v=4
 updated: '2026-11-05'
-repo_stars: 178
-repo_stars_recent: 14
-repo_updated: "2026-11-13"
+repo_stars: 179
+repo_stars_recent: 15
+repo_updated: "2026-11-19"
 repo_created: "2026-06-18"
-repo_release: "mdcat-2.20.1"
-repo_release_date: "2026-11-13"
+repo_release: "mdcat-2.20.2"
+repo_release_date: "2026-11-19"
 ---

@@ -54,8 +54,8 @@ github_stars: 8290
 github_updated: "2026-07-06"
 github_created: "2016-01-12"
 github_release: "7.25.4"
-repo_stars: 8478
-repo_stars_recent: 16
+repo_stars: 8479
+repo_stars_recent: 17
 repo_updated: "2026-11-11"
 repo_created: "2016-01-12"
 repo_release: "7.25.6"

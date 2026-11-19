@@ -55,7 +55,7 @@ media: https://cli.masoko.net/uploads/spotify-player/media.gif
 logo: https://avatars.githubusercontent.com/u/40011582?v=4
 updated: '2026-07-18'
 repo_stars: 7323
-repo_stars_recent: 24
+repo_stars_recent: 21
 repo_updated: "2026-11-17"
 repo_created: "2021-07-08"
 repo_release: "v0.25.2"

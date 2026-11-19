@@ -31,7 +31,7 @@ media: https://cli.masoko.net/uploads/lsoff/media.png
 logo: https://avatars.githubusercontent.com/u/45997563?v=4
 updated: '2026-08-15'
 repo_stars: 280
-repo_stars_recent: 24
+repo_stars_recent: 23
 repo_updated: "2026-11-13"
 repo_created: "2026-08-14"
 repo_release: "v0.1.6"

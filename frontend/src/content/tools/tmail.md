@@ -38,9 +38,9 @@ tags:
 media: https://raw.githubusercontent.com/tuna4ll/tmail/refs/heads/main/docs/demo.gif
 logo: https://avatars.githubusercontent.com/u/66411462?v=4
 updated: '2026-11-05'
-repo_stars: 67
-repo_stars_recent: 51
-repo_updated: "2026-11-17"
+repo_stars: 68
+repo_stars_recent: 52
+repo_updated: "2026-11-19"
 repo_created: "2026-09-24"
 repo_release: "v1.0.5"
 repo_release_date: "2026-11-16"
