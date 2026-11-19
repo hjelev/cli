@@ -2,9 +2,7 @@
 name: ephact
 category: Development Tools
 short_description: Rust crate that runs supported workflows locally in Linux containers.
-description: >-
-  ephact is a Rust crate that runs supported Forgejo, GitHub, and Woodpecker
-  workflows locally in Linux containers using Docker or Podman.
+description: ephact is a Rust crate that runs supported Forgejo, GitHub, and Woodpecker workflows locally in Linux containers using Docker or Podman.
 repository_url: https://codeberg.org/gbrennon/ephact
 website: https://codeberg.org/gbrennon/ephact
 author: gbrennon
@@ -23,16 +21,17 @@ tags:
   - continuous-integration
   - ephemeral
   - rust
-media: >-
-  https://codeberg.org/gbrennon/ephact/media/branch/main/docs/gifs/tui-github-workflow-demo.gif
-logo: >-
-  https://codeberg.org/avatars/80b799010127422ef3986abab1ab1dadd696aff2b87f6b04cb103d065d5ff6fe
+media: https://codeberg.org/gbrennon/ephact/media/branch/main/docs/gifs/tui-github-workflow-demo.gif
+logo: https://codeberg.org/avatars/80b799010127422ef3986abab1ab1dadd696aff2b87f6b04cb103d065d5ff6fe
 updated: '2026-11-18'
 repo_stars: 2
 repo_stars_recent: 0
-repo_updated: "2026-11-10"
-repo_created: "2026-06-11"
-repo_release: "v0.4.0"
-repo_release_date: "2026-09-29"
-comments: []
+repo_updated: '2026-11-10'
+repo_created: '2026-06-11'
+repo_release: v0.4.0
+repo_release_date: '2026-09-29'
+comments:
+  - user: gbrennon
+    body: I wouldnt expecting this to be listed somewhere! Thank u! That badge is already add ;)
+    date: '2026-11-19T23:24:45.165Z'
 ---
