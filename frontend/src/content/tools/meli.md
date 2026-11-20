@@ -52,8 +52,8 @@ media: >-
   https://raw.githubusercontent.com/meli/meli/refs/heads/master/meli/docs/screenshots/compact.webp
 logo: https://avatars.githubusercontent.com/u/31455639?s=200&v=4
 updated: '2026-11-01'
-repo_stars: 904
-repo_stars_recent: 6
+repo_stars: 903
+repo_stars_recent: 7
 repo_updated: "2026-11-19"
 repo_created: "2019-06-10"
 repo_release: "v0.9.0"

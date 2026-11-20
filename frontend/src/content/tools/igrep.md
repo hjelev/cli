@@ -35,7 +35,7 @@ media: https://raw.githubusercontent.com/konradsz/igrep/main/assets/v1_0_0.gif
 logo: https://avatars.githubusercontent.com/u/25437234?v=4
 updated: '2026-08-19'
 repo_stars: 848
-repo_stars_recent: 0
+repo_stars_recent: 1
 repo_updated: "2026-09-09"
 repo_created: "2020-02-15"
 repo_release: "v1.3.0"

@@ -43,8 +43,8 @@ tags:
 media: https://cli.masoko.net/uploads/iamb/media.gif
 logo: https://cli.masoko.net/uploads/iamb/logo.svg
 updated: '2026-07-21'
-repo_stars: 1332
-repo_stars_recent: 11
+repo_stars: 1331
+repo_stars_recent: 8
 repo_updated: "2026-11-17"
 repo_created: "2021-08-25"
 repo_release: "v0.13.1"

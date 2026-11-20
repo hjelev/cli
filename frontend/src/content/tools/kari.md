@@ -53,12 +53,12 @@ media: https://cli.masoko.net/uploads/kari/media.png
 logo: >-
   https://github.com/Dhairya3391/kari/blob/main/assets/discord/kari_logo.png?raw=true
 updated: '2026-10-25'
-repo_stars: 71
-repo_stars_recent: 9
-repo_updated: "2026-11-18"
+repo_stars: 73
+repo_stars_recent: 10
+repo_updated: "2026-11-19"
 repo_created: "2026-06-08"
-repo_release: "v8.0.3"
-repo_release_date: "2026-11-18"
+repo_release: "v8.1.0"
+repo_release_date: "2026-11-19"
 repo_badge: true
 comments: []
 ---

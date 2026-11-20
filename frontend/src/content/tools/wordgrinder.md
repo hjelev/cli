@@ -39,8 +39,8 @@ media: >-
 logo: https://cowlark.com/wordgrinder/image-selection.jpg
 updated: '2026-08-10'
 repo_stars: 1280
-repo_stars_recent: 3
-repo_updated: "2026-11-18"
+repo_stars_recent: 4
+repo_updated: "2026-11-19"
 repo_created: "2015-06-07"
 repo_release: "dev"
 repo_release_date: "2020-10-22"

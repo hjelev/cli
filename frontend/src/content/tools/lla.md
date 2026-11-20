@@ -35,8 +35,8 @@ tags:
 media: https://linkedlist.org/public/2025/lla-long@1x.jpg
 logo: https://cli.masoko.net/uploads/lla/logo.png
 updated: '2026-07-08'
-repo_stars: 1235
-repo_stars_recent: 1
+repo_stars: 1234
+repo_stars_recent: 0
 repo_updated: "2026-11-18"
 repo_created: "2023-07-31"
 repo_release: "v0.9.0"

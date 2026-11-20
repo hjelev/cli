@@ -37,9 +37,9 @@ tags:
 media: https://raw.githubusercontent.com/bootandy/dust/master/media/demo.gif
 logo: https://avatars.githubusercontent.com/u/311785?v=4
 updated: '2026-09-26'
-repo_stars: 12660
-repo_stars_recent: 82
-repo_updated: "2026-11-01"
+repo_stars: 12666
+repo_stars_recent: 79
+repo_updated: "2026-11-19"
 repo_created: "2018-03-16"
 repo_release: "v1.2.7"
 repo_release_date: "2026-11-01"

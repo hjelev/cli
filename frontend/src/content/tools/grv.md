@@ -36,7 +36,7 @@ tags:
 media: https://raw.githubusercontent.com/rgburke/grv/master/doc/grv-history-view.png
 logo: https://avatars.githubusercontent.com/u/7596018?v=4
 updated: '2026-07-13'
-repo_stars: 4085
+repo_stars: 4083
 repo_stars_recent: 0
 repo_updated: "2019-05-01"
 repo_created: "2017-09-08"

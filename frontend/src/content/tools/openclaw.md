@@ -40,10 +40,10 @@ tags:
 media: https://cli.masoko.net/uploads/openclaw/media.jpg
 logo: https://openclaw.ai/brand/openclaw-mascot.svg
 updated: '2026-11-02'
-repo_stars: 394794
-repo_stars_recent: 854
-repo_updated: "2026-11-19"
+repo_stars: 394878
+repo_stars_recent: 849
+repo_updated: "2026-11-20"
 repo_created: "2025-11-24"
-repo_release: "v2026.11.5"
-repo_release_date: "2026-11-17"
+repo_release: "v2026.11.6"
+repo_release_date: "2026-11-19"
 ---

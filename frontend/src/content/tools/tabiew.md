@@ -32,7 +32,7 @@ media: https://raw.githubusercontent.com/wiki/shshemi/tabiew/gifs/demo.gif
 logo: https://avatars.githubusercontent.com/u/6219240?v=4
 updated: '2026-10-27'
 repo_stars: 3191
-repo_stars_recent: 7
+repo_stars_recent: 8
 repo_updated: "2026-11-18"
 repo_created: "2024-04-27"
 repo_release: "v0.16.0"
