@@ -49,7 +49,7 @@ logo: https://github.com/xyproto/orbiton/raw/main/img/icon_128x128.png
 updated: '2026-07-12'
 repo_stars: 723
 repo_stars_recent: 5
-repo_updated: "2026-11-19"
+repo_updated: "2026-11-20"
 repo_created: "2019-09-30"
 repo_release: "v2.75.0"
 repo_release_date: "2026-11-13"

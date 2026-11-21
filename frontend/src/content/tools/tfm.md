@@ -36,7 +36,7 @@ tags:
 media: https://github.com/clarkarch/tfm-tui/raw/main/screenshot.png
 logo: https://github.com/clarkarch/tfm-tui/raw/main/assets/icons/tfm.svg
 updated: '2026-10-16'
-repo_stars: 362
+repo_stars: 363
 repo_stars_recent: 7
 repo_updated: "2026-11-14"
 repo_created: "2026-08-25"

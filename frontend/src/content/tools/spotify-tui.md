@@ -33,8 +33,8 @@ media: >-
   https://user-images.githubusercontent.com/12150276/75177190-91d4ab00-572d-11ea-80bd-c5e28c7b17ad.gif
 logo: https://avatars.githubusercontent.com/u/12150276?v=4
 updated: '2026-07-18'
-repo_stars: 19434
-repo_stars_recent: 7
+repo_stars: 19435
+repo_stars_recent: 8
 repo_updated: "2024-04-04"
 repo_created: "2019-08-16"
 repo_release: "v0.25.0"

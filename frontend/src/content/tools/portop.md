@@ -48,7 +48,7 @@ media: https://github.com/padovanl/portop/raw/main/docs/assets/demo.gif
 logo: https://github.com/padovanl/portop/raw/main/docs/assets/logo.png
 updated: '2026-10-17'
 repo_stars: 309
-repo_stars_recent: 6
+repo_stars_recent: 7
 repo_updated: "2026-11-07"
 repo_created: "2026-08-15"
 repo_release: "v0.4.0"

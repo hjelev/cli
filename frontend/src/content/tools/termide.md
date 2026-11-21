@@ -59,7 +59,7 @@ logo: https://termide.github.io/assets/logo.svg
 updated: '2026-10-20'
 repo_stars: 189
 repo_stars_recent: 5
-repo_updated: "2026-11-16"
+repo_updated: "2026-11-21"
 repo_created: "2025-11-20"
 repo_release: "0.50.0"
 repo_release_date: "2026-11-16"

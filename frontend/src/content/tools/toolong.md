@@ -37,7 +37,7 @@ tags:
 media: https://cli.masoko.net/uploads/toolong/media.png
 logo: https://cli.masoko.net/uploads/toolong/logo.jpg
 updated: '2026-11-06'
-repo_stars: 3970
+repo_stars: 3971
 repo_stars_recent: 0
 repo_updated: "2024-08-05"
 repo_created: "2024-01-07"

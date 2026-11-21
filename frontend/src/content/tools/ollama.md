@@ -60,10 +60,10 @@ tags:
   - qwen
 logo: https://ollama.com/public/ollama-nav.png
 updated: '2026-11-15'
-repo_stars: 187727
-repo_stars_recent: 687
-repo_updated: "2026-11-19"
+repo_stars: 187808
+repo_stars_recent: 768
+repo_updated: "2026-11-21"
 repo_created: "2023-06-26"
-repo_release: "v0.40.16"
-repo_release_date: "2026-11-09"
+repo_release: "v0.40.17"
+repo_release_date: "2026-11-10"
 ---

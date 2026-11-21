@@ -31,7 +31,7 @@ logo: https://vostride.com/icon.png
 updated: '2026-11-01'
 repo_stars: 819
 repo_stars_recent: 0
-repo_updated: "2026-11-19"
+repo_updated: "2026-11-20"
 repo_created: "2026-05-07"
 repo_release: "v0.3.10"
 repo_release_date: "2026-11-19"

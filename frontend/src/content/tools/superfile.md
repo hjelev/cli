@@ -52,11 +52,11 @@ tags:
 media: https://superfile.dev/_astro/demo.CvzVaHej_28nrJ.webp
 logo: https://superfile.dev/logo.svg
 updated: '2026-10-30'
-repo_stars: 24112
-repo_stars_recent: 92
-repo_updated: "2026-11-20"
+repo_stars: 24114
+repo_stars_recent: 85
+repo_updated: "2026-11-21"
 repo_created: "2024-03-19"
-repo_release: "v1.6.0"
-repo_release_date: "2026-06-07"
+repo_release: "v1.6.1"
+repo_release_date: "2026-11-20"
 comments: []
 ---

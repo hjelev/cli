@@ -45,8 +45,8 @@ tags:
 media: https://raw.githubusercontent.com/knqyf263/pet/main/doc/pet01.gif
 logo: https://raw.githubusercontent.com/knqyf263/pet/main/doc/logo.png
 updated: '2026-07-09'
-repo_stars: 5391
-repo_stars_recent: 11
+repo_stars: 5390
+repo_stars_recent: 9
 repo_updated: "2026-03-13"
 repo_created: "2017-03-11"
 repo_release: "v1.0.1"

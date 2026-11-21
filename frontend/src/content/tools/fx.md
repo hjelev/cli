@@ -35,10 +35,10 @@ tags:
 media: https://fx.wtf/img/preview.gif
 logo: https://fx.wtf/img/favicons/apple-touch-icon.png
 updated: '2026-07-15'
-repo_stars: 20720
-repo_stars_recent: 16
+repo_stars: 20722
+repo_stars_recent: 20
 repo_updated: "2026-11-20"
 repo_created: "2018-01-25"
-repo_release: "40.0.1"
-repo_release_date: "2026-10-22"
+repo_release: "40.0.2"
+repo_release_date: "2026-11-20"
 ---
