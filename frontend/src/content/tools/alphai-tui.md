@@ -42,10 +42,10 @@ logo: https://alphai.io/assets/logo-icon.svg
 updated: '2026-10-15'
 repo_stars: 97
 repo_stars_recent: 5
-repo_updated: "2026-11-15"
+repo_updated: "2026-11-22"
 repo_created: "2026-07-10"
-repo_release: "v0.43.0"
-repo_release_date: "2026-11-15"
+repo_release: "v0.44.0"
+repo_release_date: "2026-11-22"
 repo_badge: true
 comments: []
 ---

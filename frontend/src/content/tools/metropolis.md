@@ -47,7 +47,7 @@ media: https://raw.githubusercontent.com/5c0/metropolis/main/docs/clean.gif
 logo: https://cli.masoko.net/uploads/metropolis/logo.png
 updated: '2026-07-17'
 repo_stars: 323
-repo_stars_recent: 25
+repo_stars_recent: 23
 repo_updated: "2026-11-08"
 repo_created: "2026-03-16"
 repo_release: "v0.1.3"

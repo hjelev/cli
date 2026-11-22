@@ -58,7 +58,7 @@ logo: https://cli.masoko.net/uploads/musikcube/logo.png
 updated: '2026-11-01'
 repo_stars: 4863
 repo_stars_recent: 3
-repo_updated: "2026-11-20"
+repo_updated: "2026-11-22"
 repo_created: "2015-03-18"
 repo_release: "3.0.5"
 repo_release_date: "2025-09-21"

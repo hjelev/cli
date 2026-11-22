@@ -37,7 +37,7 @@ media: https://raw.githubusercontent.com/sminez/ad/develop/screenshot.png
 logo: https://avatars.githubusercontent.com/u/8116092?v=4
 updated: '2026-08-10'
 repo_stars: 753
-repo_stars_recent: 1
+repo_stars_recent: 0
 repo_updated: "2026-11-18"
 repo_created: "2023-09-27"
 repo_release: "0.4.0"

@@ -70,9 +70,9 @@ media: https://git-cliff.org/img/git-cliff-anim.gif
 logo: >-
   https://raw.githubusercontent.com/orhun/git-cliff/main/website/static/img/git-cliff-logo.png
 updated: '2026-11-15'
-repo_stars: 12430
-repo_stars_recent: 13
-repo_updated: "2026-11-02"
+repo_stars: 12431
+repo_stars_recent: 14
+repo_updated: "2026-11-21"
 repo_created: "2021-05-30"
 repo_release: "v2.14.2"
 repo_release_date: "2026-09-18"

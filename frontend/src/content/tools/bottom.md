@@ -51,9 +51,9 @@ tags:
 media: https://raw.githubusercontent.com/ClementTsang/bottom/main/demos/demo.gif
 logo: https://avatars.githubusercontent.com/u/34804052?v=4
 updated: '2026-11-07'
-repo_stars: 14223
-repo_stars_recent: 58
-repo_updated: "2026-11-21"
+repo_stars: 14234
+repo_stars_recent: 69
+repo_updated: "2026-11-22"
 repo_created: "2019-08-28"
 repo_release: "0.15.0"
 repo_release_date: "2026-11-01"

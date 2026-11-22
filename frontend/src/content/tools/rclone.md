@@ -66,8 +66,8 @@ tags:
   - webdav
 logo: https://rclone.org/img/rclone-32x32.png
 updated: '2026-09-05'
-repo_stars: 61146
-repo_stars_recent: 303
+repo_stars: 61171
+repo_stars_recent: 309
 repo_updated: "2026-11-21"
 repo_created: "2014-03-16"
 repo_release: "v1.76.0"

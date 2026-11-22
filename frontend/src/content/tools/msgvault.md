@@ -41,8 +41,8 @@ logo: >-
   https://raw.githubusercontent.com/kenn-io/msgvault/main/.github/assets/msgvault-mark.svg
 updated: '2026-11-01'
 repo_stars: 2207
-repo_stars_recent: 26
-repo_updated: "2026-11-21"
+repo_stars_recent: 24
+repo_updated: "2026-11-22"
 repo_created: "2026-01-28"
 repo_release: "v0.26.0"
 repo_release_date: "2026-11-20"

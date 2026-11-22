@@ -61,7 +61,7 @@ media: https://github.com/da-luce/astroterm/raw/main/assets/SG_2025-01-02.gif
 logo: https://cli.masoko.net/uploads/astroterm/logo.png
 updated: '2026-11-01'
 repo_stars: 2553
-repo_stars_recent: 23
+repo_stars_recent: 19
 repo_updated: "2026-09-11"
 repo_created: "2023-06-16"
 repo_release: "v1.2.0"

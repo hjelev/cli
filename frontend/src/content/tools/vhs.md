@@ -34,8 +34,8 @@ tags:
 media: https://cli.masoko.net/uploads/vhs/media.gif
 logo: https://cli.masoko.net/uploads/vhs/logo.png
 updated: '2026-07-15'
-repo_stars: 21363
-repo_stars_recent: 92
+repo_stars: 21372
+repo_stars_recent: 97
 repo_updated: "2026-11-06"
 repo_created: "2022-07-19"
 repo_release: "v0.12.1"
