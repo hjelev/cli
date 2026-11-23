@@ -35,7 +35,7 @@ tags:
   - system-utilities
 logo: https://avatars.githubusercontent.com/u/16281578?s=200&v=4
 updated: '2026-07-12'
-repo_stars: 7758
+repo_stars: 7760
 repo_stars_recent: 14
 repo_updated: "2026-11-14"
 repo_created: "2015-12-21"

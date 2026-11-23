@@ -34,8 +34,8 @@ media: https://flow-control.dev/devlog/2026/2026-02-13_flow-0.7.0_teaser.mp4
 logo: https://avatars.githubusercontent.com/u/1552770?v=4
 updated: '2026-09-26'
 repo_stars: 2560
-repo_stars_recent: 25
-repo_updated: "2026-11-20"
+repo_stars_recent: 21
+repo_updated: "2026-11-23"
 repo_created: "2024-02-25"
 repo_release: "v0.7.2"
 repo_release_date: "2026-02-14"

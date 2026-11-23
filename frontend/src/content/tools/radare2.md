@@ -60,9 +60,9 @@ tags:
 media: https://raw.githubusercontent.com/radareorg/radare2/master/doc/images/shot.png
 logo: https://www.radare.org/n/r2logo.png
 updated: '2026-11-18'
-repo_stars: 25482
-repo_stars_recent: 32
-repo_updated: "2026-11-22"
+repo_stars: 25494
+repo_stars_recent: 44
+repo_updated: "2026-11-23"
 repo_created: "2012-07-03"
 repo_release: "6.2.6"
 repo_release_date: "2026-11-05"

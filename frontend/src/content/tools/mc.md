@@ -37,9 +37,9 @@ tags:
   - midnight-commander
 logo: https://avatars.githubusercontent.com/u/1191610?v=4
 media: https://midnight-commander.org/img/mc-screenshot-cropped.png
-repo_stars: 1056
-repo_stars_recent: 18
-repo_updated: "2026-11-20"
+repo_stars: 1057
+repo_stars_recent: 17
+repo_updated: "2026-11-23"
 repo_created: "2025-02-27"
 repo_release: "4.8.33"
 repo_release_date: "2025-01-23"

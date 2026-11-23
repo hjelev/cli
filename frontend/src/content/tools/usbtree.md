@@ -48,7 +48,7 @@ media: >-
   https://raw.githubusercontent.com/gnomeria/usbtree/main/docs/screenshots/demo.gif
 logo: https://cli.masoko.net/uploads/usbtree/logo.svg
 updated: '2026-11-07'
-repo_stars: 713
+repo_stars: 715
 repo_stars_recent: 2
 repo_updated: "2026-11-12"
 repo_created: "2026-07-07"

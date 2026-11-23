@@ -43,7 +43,7 @@ media: https://raw.githubusercontent.com/walles/moor/master/screenshot.png
 logo: https://avatars.githubusercontent.com/u/158201?v=4
 updated: '2026-11-05'
 repo_stars: 1187
-repo_stars_recent: 3
+repo_stars_recent: 1
 repo_updated: "2026-11-22"
 repo_created: "2013-10-30"
 repo_release: "v2.19.7"

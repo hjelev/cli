@@ -53,9 +53,9 @@ tags:
 media: https://raw.githubusercontent.com/bensadeh/tailspin/main/assets/main.png
 logo: https://cli.masoko.net/uploads/tailspin/logo.png
 updated: '2026-10-28'
-repo_stars: 8047
-repo_stars_recent: 28
-repo_updated: "2026-11-16"
+repo_stars: 8056
+repo_stars_recent: 35
+repo_updated: "2026-11-23"
 repo_created: "2022-07-03"
 repo_release: "7.0.0"
 repo_release_date: "2026-07-14"

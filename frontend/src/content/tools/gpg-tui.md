@@ -58,8 +58,8 @@ media: >-
 logo: https://cli.masoko.net/uploads/gpg-tui/logo.png
 updated: '2026-07-13'
 repo_stars: 1779
-repo_stars_recent: 2
-repo_updated: "2026-11-20"
+repo_stars_recent: 1
+repo_updated: "2026-11-23"
 repo_created: "2020-12-26"
 repo_release: "v0.11.2"
 repo_release_date: "2026-04-23"

@@ -37,7 +37,7 @@ tags:
 media: https://raw.githubusercontent.com/lusingander/sauva/master/img/demo.gif
 logo: https://avatars.githubusercontent.com/u/31386431?v=4
 updated: '2026-10-20'
-repo_stars: 109
+repo_stars: 110
 repo_stars_recent: 4
 repo_updated: "2026-11-19"
 repo_created: "2026-09-17"

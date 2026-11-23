@@ -40,8 +40,8 @@ tags:
 media: https://codeberg.org/Vaishnav-Sabari-Girish/miru/raw/commit/8f4052f72beac56d7609d01fd7445ea9af406739/miru_img.png
 logo: https://cli.masoko.net/uploads/miru/logo.svg
 updated: '2026-10-22'
-repo_stars: 15
-repo_stars_recent: 2
+repo_stars: 16
+repo_stars_recent: 3
 repo_updated: "2026-11-22"
 repo_created: "2026-08-07"
 repo_release: "v0.16.0"

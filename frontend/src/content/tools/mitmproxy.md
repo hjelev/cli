@@ -63,9 +63,9 @@ tags:
 media: https://www.mitmproxy.org/screenshot.png
 logo: https://avatars.githubusercontent.com/u/4652787?s=200&v=4
 updated: '2026-11-15'
-repo_stars: 47135
-repo_stars_recent: 139
-repo_updated: "2026-11-19"
+repo_stars: 47151
+repo_stars_recent: 155
+repo_updated: "2026-11-23"
 repo_created: "2010-02-16"
 repo_release: "v12.3.1"
 repo_release_date: "2026-10-25"

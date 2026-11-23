@@ -40,7 +40,7 @@ tags:
 media: https://aerc-mail.org/aerc-intro.webm
 logo: https://cli.masoko.net/uploads/aerc/logo.svg
 updated: '2026-10-24'
-repo_stars: 311
+repo_stars: 312
 repo_stars_recent: 3
 repo_updated: "2026-11-17"
 repo_created: "2021-11-14"
