@@ -1,9 +1,7 @@
 ---
 name: croc
 category: Utilities & Other
-short_description: >-
-  Easily and securely send things from one computer to another :crocodile:
-  :package:
+short_description: Easily and securely send things from one computer to another 🐊 📦
 description: >-
   Command-line file transfer: Securely and easily send files and folders
   directly from one computer to another over a fully encrypted end-to-end
@@ -58,12 +56,12 @@ tags:
   - transfer
 media: https://github.com/schollz/croc/raw/main/src/install/customization.gif
 logo: https://cli.masoko.net/uploads/croc/logo.png
-updated: '2026-11-18'
+updated: '2026-11-24'
+comments: []
 repo_stars: 41032
 repo_stars_recent: 54
-repo_updated: "2026-11-23"
-repo_created: "2017-10-17"
-repo_release: "v11.6.6"
-repo_release_date: "2026-11-21"
-comments: []
+repo_updated: '2026-11-23'
+repo_created: '2017-10-17'
+repo_release: v11.6.6
+repo_release_date: '2026-11-21'
 ---
