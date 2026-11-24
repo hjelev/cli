@@ -478,7 +478,7 @@
 
 | Name | Description | Language | ⭐ Stars | Links |
 |------|-------------|----------|---------|-------|
-| [croc](https://getcroc.com) | Easily and securely send things from one computer to another :crocodile: :package: | Go | 41k (+54) | [Repo](https://github.com/schollz/croc), [Website](https://getcroc.com) |
+| [croc](https://getcroc.com) | Easily and securely send things from one computer to another 🐊 📦 | Go | 41k (+54) | [Repo](https://github.com/schollz/croc), [Website](https://getcroc.com) |
 | [fnt](https://github.com/alexmyczko/fnt) | apt for fonts, the missing font manager for macOS/linux | Shell | 657 (+5) | [Repo](https://github.com/alexmyczko/fnt) |
 | [miru](https://blog.vaishnavs.is-a.dev/miru/) | Zooming daemon for wayland | C | 16 (+3) | [Repo](https://codeberg.org/Vaishnav-Sabari-Girish/miru), [Website](https://blog.vaishnavs.is-a.dev/miru/) |
 | [moji](https://moji.micr.dev/docs) | find and download fonts from the terminal | Go | 262 (+1) | [Repo](https://github.com/Microck/moji), [Website](https://moji.micr.dev/docs) |
