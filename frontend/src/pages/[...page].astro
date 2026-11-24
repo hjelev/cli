@@ -146,6 +146,10 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 		const languageFilter = document.getElementById('language-filter') as HTMLSelectElement;
 		const sortFilter = document.getElementById('sort-filter') as HTMLSelectElement;
 		const categoryLinks = document.querySelectorAll<HTMLAnchorElement>('.category-nav a');
+		const categoryCounts = [...categoryLinks].map((link) => {
+			const el = link.querySelector('.count') as HTMLElement;
+			return { link, el, category: link.dataset.category ?? '', total: el.textContent ?? '' };
+		});
 		const filtersSection = document.getElementById('filters') as HTMLElement;
 		const filtersToggle = document.getElementById('filters-toggle') as HTMLButtonElement;
 		const filtersCount = filtersToggle.querySelector('.filters-count') as HTMLElement;
@@ -297,6 +301,18 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			return 0;
 		}
 
+		// Sidebar counts: what each category would show with the search and the other
+		// filters applied. Null restores the built-in totals.
+		function updateCategoryCounts(candidates: ToolIndexEntry[] | null) {
+			const counts = new Map<string, number>();
+			for (const tool of candidates ?? []) counts.set(tool.category, (counts.get(tool.category) ?? 0) + 1);
+			for (const { link, el, category, total } of categoryCounts) {
+				const count = category ? (counts.get(category) ?? 0) : (candidates?.length ?? 0);
+				el.textContent = candidates ? String(count) : total;
+				link.classList.toggle('empty', candidates !== null && count === 0);
+			}
+		}
+
 		// Bumped on every call so a slow index download can't apply stale filters.
 		let filterRun = 0;
 		async function applyFilters() {
@@ -317,6 +333,7 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			}
 
 			if (!filtering) {
+				updateCategoryCounts(null);
 				// Default paginated browsing: show this page's static grid + nav.
 				grid.hidden = false;
 				if (pagination) pagination.hidden = false;
@@ -340,13 +357,15 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 				if (run !== filterRun) return;
 			}
 
-			const matches = tools!.filter((tool) => {
+			// Everything but the category filter, so the sidebar can count the other categories too.
+			const candidates = tools!.filter((tool) => {
 				const matchesQuery = !query || tool.search.includes(query);
-				const matchesCategory = !category || tool.category === category;
 				const matchesLanguage = !language || tool.language === language;
 				const matchesVerified = !verifiedOnly || tool.verified;
-				return matchesQuery && matchesCategory && matchesLanguage && matchesVerified;
+				return matchesQuery && matchesLanguage && matchesVerified;
 			});
+			updateCategoryCounts(candidates);
+			const matches = candidates.filter((tool) => !category || tool.category === category);
 			// The index is already in recently-updated order; stars/trending need a re-sort
 			// (trending ties fall back to total stars).
 			// With a query, rank by relevance first; the stable sort keeps the chosen order within a tier.
