@@ -388,6 +388,18 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 		languageFilter.addEventListener('change', applyFilters);
 		sortFilter.addEventListener('change', applyFilters);
 
+		// Sidebar categories filter in place, so they combine with the search and
+		// the other filters. Modified clicks still open the category's own page.
+		for (const link of categoryLinks) {
+			link.addEventListener('pointerdown', prefetch, { once: true, passive: true });
+			link.addEventListener('click', (event) => {
+				if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+				event.preventDefault();
+				categoryFilter.value = link.dataset.category ?? '';
+				applyFilters();
+			});
+		}
+
 		restoreFromUrl();
 		if (location.search) applyFilters();
 		if (categoryFilter.value || languageFilter.value || sortFilter.value) setFiltersOpen(true);

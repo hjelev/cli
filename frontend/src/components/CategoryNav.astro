@@ -4,9 +4,9 @@ import { CATEGORIES } from '../lib/schema';
 import { slugify } from '../lib/slug';
 import { CATEGORY_ICONS, FALLBACK_ICON } from '../lib/tile-icons';
 
-// Category sidebar shared by the home listing and the category pages. Every
-// link goes to the category's own page; on the home page the highlight also
-// follows the category dropdown (see pages/[...page].astro).
+// Category sidebar shared by the home listing and the category pages. On the
+// home page the links filter in place (see pages/[...page].astro); everywhere
+// else, and without JS, they go to the category's own page.
 interface Props {
 	current?: string;
 }
