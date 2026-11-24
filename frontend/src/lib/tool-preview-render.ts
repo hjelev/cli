@@ -118,7 +118,7 @@ function buildMedia(mediaSrc: string | undefined, name: string): HTMLElement | n
 
 function buildDescription(candidate: PreviewCandidate): HTMLElement {
 	const section = el('section', { className: 'man-section' });
-	section.append(el('h2', { text: 'DESCRIPTION' }));
+	section.append(el('h2', { text: 'Description' }));
 	const description = str(candidate.description);
 	if (description) {
 		section.append(el('div', { className: 'description', html: marked.parse(description, { async: false }) }));
@@ -132,7 +132,7 @@ function buildDescription(candidate: PreviewCandidate): HTMLElement {
 
 function buildInstallation(entries: InstallEntry[]): HTMLElement {
 	const section = el('section', { className: 'man-section' });
-	section.append(el('h2', { text: 'INSTALLATION' }));
+	section.append(el('h2', { text: 'Installation' }));
 
 	if (entries.length === 0) {
 		const empty = el('p');
@@ -219,7 +219,7 @@ function detailRow(dl: HTMLElement, label: string, value: HTMLElement | string |
 
 function buildDetails(candidate: PreviewCandidate): HTMLElement {
 	const section = el('section', { className: 'man-section' });
-	section.append(el('h2', { text: 'DETAILS' }));
+	section.append(el('h2', { text: 'Details' }));
 	const dl = el('dl');
 
 	const repoUrl = str(candidate.repository_url);
@@ -259,7 +259,7 @@ function buildDetails(candidate: PreviewCandidate): HTMLElement {
 
 function buildTags(tags: string[]): HTMLElement {
 	const section = el('section', { className: 'man-section' });
-	section.append(el('h2', { text: 'TAGS' }));
+	section.append(el('h2', { text: 'Tags' }));
 	const ul = el('ul', { className: 'tags' });
 	if (tags.length === 0) {
 		const li = el('li');

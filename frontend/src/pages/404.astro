@@ -2,34 +2,19 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout
-	title="404: not found — The Terminal Index"
-	command="cd /404"
-	mode="ERROR"
-	status="exit 127"
-	backHref="/"
-	noindex={true}
-	breadcrumb={[{ label: '404' }]}
->
-	<header class="hero">
-		<h1>404</h1>
-		<p class="tagline"># page not found</p>
+<BaseLayout title="404: not found — The Terminal Index" narrow noindex={true}>
+	<header class="page-head">
+		<h1>Page not found</h1>
+		<p class="tagline">Nothing lives at this address. The tool may have been renamed or removed from the index.</p>
 	</header>
 
-	<div class="shell-output">
-		<p><span class="caret">$</span> cd <span class="requested-path">/404</span></p>
-		<p class="error">sh: cd: <span class="requested-path">/404</span>: No such file or directory</p>
-		<p class="hero-cmd"><span class="caret">$</span></p>
-	</div>
+	<pre class="code"><code><span class="prompt" aria-hidden="true">$ </span>cd <span class="requested-path">/404</span>
+cd: no such file or directory: <span class="requested-path">/404</span></code></pre>
 
-	<nav class="browse-links">
-		<a href="/">cd ~</a>
-		<a href="/categories/">ls categories/</a>
-		<a href="/tags/">ls tags/</a>
-		<a href="/languages/">ls languages/</a>
-		<a href="/alternatives/">ls alternatives/</a>
-		<a href="/collections/">ls collections/</a>
-		<a href="/submit/">submit --tool</a>
+	<nav class="guide-links not-found-links">
+		<a href="/">Browse all tools</a>
+		<a href="/categories/">Browse by category</a>
+		<a href="/submit/">Submit a tool</a>
 	</nav>
 
 	<script>
@@ -40,18 +25,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			}
 		}
 	</script>
-
-	<style>
-		.shell-output {
-			margin-bottom: 2.5rem;
-		}
-
-		.shell-output p {
-			margin-bottom: 0.5rem;
-		}
-
-		.shell-output .error {
-			color: var(--accent-rust);
-		}
-	</style>
 </BaseLayout>

@@ -42,24 +42,22 @@ const { page, language, description, reservedSlugs } = Astro.props;
 
 <BaseLayout
 	title={pageTitle(`CLI Tools Written in ${language}`, page.currentPage)}
-	command={`ls languages/${slugify(language)}`}
 	description={pagedDescription(
 		description ?? `${page.total} command-line tools written in ${language}, including ${sampleNames(page.data)}.`,
 		page.currentPage,
 		page.lastPage,
 	)}
 	jsonLd={[itemListLd(page.data, page.start)]}
-	backHref="/languages/"
 	editHref={`/languages/${slugify(language)}/edit/`}
 	noindex={page.total < MIN_INDEXABLE_LISTINGS}
-	breadcrumb={[{ label: `${slugify(language)}/` }]}
+	breadcrumb={[{ label: 'Languages', href: '/languages/' }, { label: language }]}
 >
-	<header class="hero tile-hero">
+	<header class="page-head tile-hero">
 		<LanguageTile language={language} size={88} />
 		<div>
 			<h1>{language}</h1>
 			{description && <p class="entity-description">{description}</p>}
-			<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} written in {language}</p>
+			<p class="tagline">{page.total} tool{page.total === 1 ? '' : 's'} written in {language}</p>
 		</div>
 	</header>
 

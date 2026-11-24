@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { renderBadge } from '../lib/badge';
 ---
 
-<BaseLayout title="Submit a tool — The Terminal Index" command="submit --new" backHref="/" noindex>
+<BaseLayout title="Submit a tool — The Terminal Index" noindex narrow>
 	<h1>Submit a tool</h1>
 	<p class="form-note" id="submit-intro">Sign in with GitHub to submit a tool. Submitting opens a pull request from your own fork.</p>
 
@@ -39,7 +39,7 @@ import { renderBadge } from '../lib/badge';
 		<p id="form-status" role="status"></p>
 	</section>
 
-	<nav id="submit-next" class="browse-links" hidden>
+	<nav id="submit-next" class="guide-links" hidden>
 		<a href="/submit/">Submit another listing</a>
 		<a href="/">Back to the home page</a>
 	</nav>

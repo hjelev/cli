@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import { CATEGORIES } from '../lib/schema';
+import { slugify } from '../lib/slug';
+import { CATEGORY_ICONS, FALLBACK_ICON } from '../lib/tile-icons';
+
+// Category sidebar shared by the home listing and the category pages. On the
+// home page the links filter in place (see pages/[...page].astro); everywhere
+// else, and without JS, they go to the category's own page.
+interface Props {
+	current?: string;
+}
+
+const { current } = Astro.props;
+const tools = await getCollection('tools');
+const counts = new Map<string, number>();
+for (const tool of tools) counts.set(tool.data.category, (counts.get(tool.data.category) ?? 0) + 1);
+const categories = CATEGORIES.filter((category) => counts.has(category)).sort((a, b) => a.localeCompare(b));
+---
+
+<nav class="category-nav" aria-label="Categories">
+	<ul>
+		<li>
+			<a href="/" data-category="" aria-current={current ? undefined : 'true'}>
+				<svg viewBox="8 8 48 48" width="20" height="20" aria-hidden="true">
+					<rect x="12" y="14" width="40" height="8" rx="3" fill="var(--accent-green)" />
+					<rect x="12" y="28" width="40" height="8" rx="3" fill="var(--fg-faint)" />
+					<rect x="12" y="42" width="24" height="8" rx="3" fill="var(--accent-rust)" />
+				</svg>
+				<span>All tools</span>
+				<span class="count">{tools.length}</span>
+			</a>
+		</li>
+		{
+			categories.map((category) => (
+				<li>
+					<a
+						href={`/categories/${slugify(category)}/`}
+						data-category={category}
+						aria-current={category === current ? 'true' : undefined}
+					>
+						<svg
+							viewBox="6 6 52 52"
+							width="20"
+							height="20"
+							aria-hidden="true"
+							set:html={CATEGORY_ICONS[slugify(category)] ?? FALLBACK_ICON}
+						/>
+						<span>{category}</span>
+						<span class="count">{counts.get(category)}</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>

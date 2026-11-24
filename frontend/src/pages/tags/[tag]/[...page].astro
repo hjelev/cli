@@ -3,7 +3,6 @@ import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { sortForListing } from '../../../lib/tools';
 import { getReservedSlugs, groupTagsBySlug } from '../../../lib/tag-filter';
-import { slugify } from '../../../lib/slug';
 import { PAGE_SIZE, MIN_INDEXABLE_LISTINGS } from '../../../lib/config';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ToolCard from '../../../components/ToolCard.astro';
@@ -41,13 +40,11 @@ const { page, tag, reservedSlugs } = Astro.props;
 		page.lastPage,
 	)}
 	jsonLd={[itemListLd(page.data, page.start)]}
-	command={`ls tags/${slugify(tag)}`}
-	backHref="/tags/"
-	breadcrumb={[{ label: `${slugify(tag)}/` }]}
+	breadcrumb={[{ label: 'Tags', href: '/tags/' }, { label: tag }]}
 >
-	<header class="hero">
+	<header class="page-head">
 		<h1>#{tag}</h1>
-		<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} tagged {tag}</p>
+		<p class="tagline">{page.total} tool{page.total === 1 ? '' : 's'} tagged {tag}</p>
 	</header>
 
 	<ul id="tool-grid">{page.data.map((tool) => <ToolCard tool={tool} reservedSlugs={reservedSlugs} />)}</ul>

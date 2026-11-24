@@ -23,8 +23,8 @@ const { category, slug, description } = Astro.props;
 <BaseLayout
 	title={`Edit ${category} — The Terminal Index`}
 	noindex
-	command={`man categories/${slug} --edit`}
-	backHref={`/categories/${slug}/`}
+	narrow
+	breadcrumb={[{ label: 'Categories', href: '/categories/' }, { label: category, href: `/categories/${slug}/` }, { label: 'Edit' }]}
 >
 	<h1>Edit {category}</h1>
 	<p class="form-note">Sign in with GitHub to propose an edit. Submitting opens a pull request from your own fork.</p>

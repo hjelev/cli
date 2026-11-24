@@ -15,8 +15,8 @@ const { data } = tool;
 <BaseLayout
 	title={`Edit ${data.name} — The Terminal Index`}
 	noindex
-	command={`man ${tool.id} --edit`}
-	backHref={`/tools/${tool.id}/`}
+	narrow
+	breadcrumb={[{ label: data.name, href: `/tools/${tool.id}/` }, { label: 'Edit' }]}
 >
 	<h1>Edit {data.name}</h1>
 	<p class="form-note">Sign in with GitHub to propose an edit. Submitting opens a pull request from your own fork.</p>
