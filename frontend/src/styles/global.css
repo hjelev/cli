@@ -597,11 +597,6 @@ button[type='submit']:hover,
 	font-size: 0.825rem;
 }
 
-/* No tools left in this category with the current search and filters. */
-.category-nav a.empty:not([aria-current]) {
-	opacity: 0.55;
-}
-
 .category-nav a:hover {
 	color: var(--fg);
 	background: var(--panel);
