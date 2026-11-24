@@ -49,8 +49,8 @@ tags:
 media: https://github.com/psmux/psmux/raw/master/demo.gif
 logo: https://avatars.githubusercontent.com/u/52248669?v=4
 updated: '2026-07-18'
-repo_stars: 3899
-repo_stars_recent: 73
+repo_stars: 3903
+repo_stars_recent: 71
 repo_updated: "2026-11-23"
 repo_created: "2025-11-30"
 repo_release: "v3.4.0"

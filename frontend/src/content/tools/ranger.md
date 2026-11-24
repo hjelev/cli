@@ -41,7 +41,7 @@ tags:
 media: https://ranger.fm/screenshots/screenshot0.png
 logo: https://ranger.fm/ranger_logo.png
 updated: '2026-07-13'
-repo_stars: 17468
+repo_stars: 17469
 repo_stars_recent: 15
 repo_updated: "2026-09-09"
 repo_created: "2009-06-04"

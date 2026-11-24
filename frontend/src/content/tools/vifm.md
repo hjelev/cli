@@ -52,7 +52,7 @@ media: >-
 logo: https://raw.githubusercontent.com/vifm/vifm/master/data/graphics/vifm.svg
 updated: '2026-07-13'
 repo_stars: 3288
-repo_stars_recent: 4
+repo_stars_recent: 3
 repo_updated: "2026-11-17"
 repo_created: "2009-01-21"
 repo_release: "v0.14.5"

@@ -33,7 +33,7 @@ logo: >-
 updated: '2026-07-19'
 repo_stars: 1886
 repo_stars_recent: 0
-repo_updated: "2026-11-23"
+repo_updated: "2026-11-24"
 repo_created: "2019-12-24"
 repo_release: "v0.143.0"
 repo_release_date: "2026-10-30"

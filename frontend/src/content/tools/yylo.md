@@ -43,9 +43,9 @@ logo: https://avatars.githubusercontent.com/yylo-dev?s=200&v=4
 updated: '2026-09-26'
 repo_stars: 69
 repo_stars_recent: 3
-repo_updated: "2026-11-13"
+repo_updated: "2026-11-24"
 repo_created: "2026-01-06"
-repo_release: "cli-v0.2.1-rc.1"
-repo_release_date: "2026-08-29"
+repo_release: "v0.2.15"
+repo_release_date: "2026-11-24"
 comments: []
 ---

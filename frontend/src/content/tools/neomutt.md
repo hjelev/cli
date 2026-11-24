@@ -56,8 +56,8 @@ media: >-
 logo: https://neomutt.org/images/mutt-48x48.png
 updated: '2026-10-24'
 repo_stars: 3865
-repo_stars_recent: 3
-repo_updated: "2026-11-23"
+repo_stars_recent: 2
+repo_updated: "2026-11-24"
 repo_created: "2015-12-21"
 repo_release: "20260616"
 repo_release_date: "2026-06-16"

@@ -42,7 +42,7 @@ media: https://github.com/Veirt/weathr/raw/main/docs/thunderstorm-night.gif
 logo: https://avatars.githubusercontent.com/u/55097092?v=4
 updated: '2026-07-11'
 repo_stars: 3093
-repo_stars_recent: 9
+repo_stars_recent: 8
 repo_updated: "2026-08-12"
 repo_created: "2026-02-08"
 repo_release: "v1.4.0"

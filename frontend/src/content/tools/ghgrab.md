@@ -41,7 +41,7 @@ media: https://github.com/abhixdd/ghgrab/raw/main/assets/ghgrab.gif
 logo: https://avatars.githubusercontent.com/u/71514966?v=4
 updated: '2026-07-12'
 repo_stars: 1629
-repo_stars_recent: 13
+repo_stars_recent: 12
 repo_updated: "2026-11-05"
 repo_created: "2025-12-14"
 repo_release: "v2.3.1"

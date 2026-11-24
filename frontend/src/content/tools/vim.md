@@ -42,10 +42,10 @@ media: https://vim.begin-site.org/screenshots/images/romainl-macvim1.png
 logo: >-
   https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/960px-Vimlogo.svg.png
 updated: '2026-08-10'
-repo_stars: 41423
-repo_stars_recent: 229
-repo_updated: "2026-11-22"
+repo_stars: 41327
+repo_stars_recent: 128
+repo_updated: "2026-11-23"
 repo_created: "2015-08-18"
-repo_release: "v9.2.1393"
-repo_release_date: "2026-11-22"
+repo_release: "v9.2.1398"
+repo_release_date: "2026-11-23"
 ---

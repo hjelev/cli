@@ -36,9 +36,9 @@ tags:
 media: https://raw.githubusercontent.com/AlexsJones/llmfit/main/assets/demo.gif
 logo: https://raw.githubusercontent.com/AlexsJones/llmfit/main/assets/icon.svg
 updated: '2026-11-18'
-repo_stars: 39255
-repo_stars_recent: 171
-repo_updated: "2026-11-23"
+repo_stars: 39279
+repo_stars_recent: 195
+repo_updated: "2026-11-24"
 repo_created: "2026-02-15"
 repo_release: "v1.1.21"
 repo_release_date: "2026-11-23"

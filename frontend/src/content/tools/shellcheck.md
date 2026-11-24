@@ -55,9 +55,9 @@ tags:
 media: https://raw.githubusercontent.com/koalaman/shellcheck/master/doc/terminal.png
 logo: https://cli.masoko.net/uploads/shellcheck/logo.png
 updated: '2026-11-15'
-repo_stars: 40375
-repo_stars_recent: 28
-repo_updated: "2026-11-21"
+repo_stars: 40380
+repo_stars_recent: 33
+repo_updated: "2026-11-23"
 repo_created: "2012-11-17"
 repo_release: "v0.11.0"
 repo_release_date: "2025-08-04"

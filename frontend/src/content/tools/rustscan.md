@@ -56,8 +56,8 @@ media: https://raw.githubusercontent.com/bee-san/RustScan/master/pictures/fast.g
 logo: >-
   https://raw.githubusercontent.com/bee-san/RustScan/master/pictures/rustscan.png
 updated: '2026-11-18'
-repo_stars: 20797
-repo_stars_recent: 48
+repo_stars: 20805
+repo_stars_recent: 56
 repo_updated: "2026-11-04"
 repo_created: "2020-07-11"
 repo_release: "2.4.1"

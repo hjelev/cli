@@ -27,8 +27,8 @@ tags:
 media: https://github.com/jmacdonald/amp/raw/main/screenshot.png?raw=true
 logo: https://amp.rs/docs/images/logo.svg
 updated: '2026-07-11'
-repo_stars: 4146
-repo_stars_recent: 5
+repo_stars: 4145
+repo_stars_recent: 4
 repo_updated: "2026-06-10"
 repo_created: "2015-02-01"
 repo_release: "0.7.1"

@@ -55,7 +55,7 @@ media: >-
 logo: >-
   https://raw.githubusercontent.com/htop-dev/htop-dev.github.io/refs/heads/main/images/htop-small.png
 updated: '2026-07-08'
-repo_stars: 8470
+repo_stars: 8473
 repo_stars_recent: 25
 repo_updated: "2026-11-20"
 repo_created: "2020-08-17"

@@ -40,7 +40,7 @@ logo: https://cleecode.marunja.com/icon-180.png
 updated: '2026-09-05'
 repo_stars: 91
 repo_stars_recent: 0
-repo_updated: "2026-11-19"
+repo_updated: "2026-11-23"
 repo_created: "2026-07-31"
 repo_release: "v0.30.2"
 repo_release_date: "2026-11-19"

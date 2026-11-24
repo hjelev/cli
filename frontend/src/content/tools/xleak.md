@@ -49,7 +49,7 @@ media: https://github.com/bgreenwell/xleak/raw/devel/assets/demo.gif
 logo: https://github.com/bgreenwell/xleak/raw/devel/assets/logo.jpg
 updated: '2026-07-18'
 repo_stars: 1524
-repo_stars_recent: 7
+repo_stars_recent: 6
 repo_updated: "2026-11-23"
 repo_created: "2025-11-06"
 repo_release: "v0.2.6"
