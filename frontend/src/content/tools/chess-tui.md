@@ -40,7 +40,7 @@ logo: https://thomas-mauran.github.io/chess-tui/img/logo.png
 updated: '2026-07-15'
 repo_stars: 1228
 repo_stars_recent: 9
-repo_updated: "2026-11-20"
+repo_updated: "2026-11-24"
 repo_created: "2023-11-14"
 repo_release: "2.9.0"
 repo_release_date: "2026-11-20"

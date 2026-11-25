@@ -37,11 +37,11 @@ tags:
 media: https://raw.githubusercontent.com/bootandy/dust/master/media/demo.gif
 logo: https://avatars.githubusercontent.com/u/311785?v=4
 updated: '2026-09-26'
-repo_stars: 12703
-repo_stars_recent: 95
-repo_updated: "2026-11-19"
+repo_stars: 12713
+repo_stars_recent: 96
+repo_updated: "2026-11-25"
 repo_created: "2018-03-16"
-repo_release: "v1.2.7"
-repo_release_date: "2026-11-01"
+repo_release: "v1.2.8"
+repo_release_date: "2026-11-25"
 comments: []
 ---

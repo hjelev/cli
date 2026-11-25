@@ -51,11 +51,11 @@ tags:
 media: https://raw.githubusercontent.com/zsuroy/ctty/master/images/ctty.gif
 logo: https://raw.githubusercontent.com/zsuroy/ctty/master/images/logo.svg
 updated: '2026-10-20'
-repo_stars: 264
-repo_stars_recent: 3
+repo_stars: 265
+repo_stars_recent: 5
 repo_updated: "2026-11-24"
 repo_created: "2026-08-13"
-repo_release: "v1.3.6"
-repo_release_date: "2026-11-18"
+repo_release: "v1.4.0"
+repo_release_date: "2026-11-24"
 comments: []
 ---

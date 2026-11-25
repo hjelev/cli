@@ -42,10 +42,10 @@ tags:
 media: https://raw.githubusercontent.com/walles/moor/master/screenshot.png
 logo: https://avatars.githubusercontent.com/u/158201?v=4
 updated: '2026-11-05'
-repo_stars: 1188
-repo_stars_recent: 2
-repo_updated: "2026-11-23"
+repo_stars: 1189
+repo_stars_recent: 3
+repo_updated: "2026-11-25"
 repo_created: "2013-10-30"
-repo_release: "v2.19.7"
-repo_release_date: "2026-11-14"
+repo_release: "v2.19.8"
+repo_release_date: "2026-11-25"
 ---

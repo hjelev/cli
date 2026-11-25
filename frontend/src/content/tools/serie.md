@@ -45,8 +45,8 @@ tags:
 media: https://raw.githubusercontent.com/lusingander/serie/master/img/demo.gif
 logo: https://avatars.githubusercontent.com/u/31386431?v=4
 updated: '2026-11-15'
-repo_stars: 2192
-repo_stars_recent: 7
+repo_stars: 2197
+repo_stars_recent: 12
 repo_updated: "2026-11-24"
 repo_created: "2024-07-28"
 repo_release: "v0.11.0"

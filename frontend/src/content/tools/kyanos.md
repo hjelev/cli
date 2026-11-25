@@ -41,7 +41,7 @@ media: >-
   https://github.com/hengyoush/kyanos/blob/main/docs/public/kyanos-demo.gif?raw=true
 logo: https://kyanos.io/kyanos.png
 updated: '2026-10-25'
-repo_stars: 5083
+repo_stars: 5084
 repo_stars_recent: 4
 repo_updated: "2026-11-24"
 repo_created: "2024-04-30"

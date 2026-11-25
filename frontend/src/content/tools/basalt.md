@@ -37,11 +37,11 @@ media: https://basalt.page/assets/dark/demo.avif
 logo: >-
   https://raw.githubusercontent.com/erikjuhani/basalt/refs/heads/main/assets/basalt.png?raw=true
 updated: '2026-11-02'
-repo_stars: 1402
-repo_stars_recent: 13
-repo_updated: "2026-11-23"
+repo_stars: 1403
+repo_stars_recent: 12
+repo_updated: "2026-11-25"
 repo_created: "2023-09-19"
-repo_release: "basalt/v0.13.0"
-repo_release_date: "2026-10-04"
+repo_release: "basalt/v0.14.0"
+repo_release_date: "2026-11-24"
 repo_badge: true
 ---

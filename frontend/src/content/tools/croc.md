@@ -57,11 +57,11 @@ tags:
 media: https://github.com/schollz/croc/raw/main/src/install/customization.gif
 logo: https://cli.masoko.net/uploads/croc/logo.png
 updated: '2026-11-24'
+repo_stars: 41046
+repo_stars_recent: 68
+repo_updated: "2026-11-23"
+repo_created: "2017-10-17"
+repo_release: "v11.6.6"
+repo_release_date: "2026-11-21"
 comments: []
-repo_stars: 41032
-repo_stars_recent: 54
-repo_updated: '2026-11-23'
-repo_created: '2017-10-17'
-repo_release: v11.6.6
-repo_release_date: '2026-11-21'
 ---

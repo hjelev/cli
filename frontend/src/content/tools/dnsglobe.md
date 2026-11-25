@@ -35,8 +35,8 @@ tags:
 media: https://raw.githubusercontent.com/514-labs/dnsglobe/main/demo/demo.gif
 logo: https://avatars.githubusercontent.com/u/140028474?s=200&v=4
 updated: '2026-07-07'
-repo_stars: 1674
-repo_stars_recent: 283
+repo_stars: 1677
+repo_stars_recent: 285
 repo_updated: "2026-09-10"
 repo_created: "2026-07-05"
 repo_release: "v0.5.0"

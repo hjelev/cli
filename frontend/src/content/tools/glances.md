@@ -59,9 +59,9 @@ media: >-
   https://raw.githubusercontent.com/nicolargo/glances/develop/docs/_static/glances-summary.png
 logo: https://avatars.githubusercontent.com/u/776747?v=4
 updated: '2026-11-07'
-repo_stars: 34008
-repo_stars_recent: 80
-repo_updated: "2026-11-23"
+repo_stars: 34013
+repo_stars_recent: 78
+repo_updated: "2026-11-24"
 repo_created: "2011-12-04"
 repo_release: "v4.5.9"
 repo_release_date: "2026-11-07"

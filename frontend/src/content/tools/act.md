@@ -47,8 +47,8 @@ tags:
 media: https://raw.githubusercontent.com/nektos/act/main/docs/img/act-quickstart.gif
 logo: https://github.com/nektos/act/raw/main/docs/img/act-logo.svg
 updated: '2026-11-02'
-repo_stars: 72775
-repo_stars_recent: 150
+repo_stars: 72791
+repo_stars_recent: 149
 repo_updated: "2026-11-19"
 repo_created: "2019-01-02"
 repo_release: "v0.2.98"

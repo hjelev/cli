@@ -28,8 +28,8 @@ media: https://vhs.charm.sh/vhs-ZWwzVXQeM183nMda585zA.gif
 logo: https://avatars.githubusercontent.com/u/57548585?v=4
 updated: '2026-10-30'
 repo_stars: 212
-repo_stars_recent: 5
-repo_updated: "2026-11-22"
+repo_stars_recent: 4
+repo_updated: "2026-11-24"
 repo_created: "2026-07-27"
 repo_release: "v0.6.0"
 repo_release_date: "2026-11-01"

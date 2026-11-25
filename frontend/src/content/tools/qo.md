@@ -52,7 +52,7 @@ media: https://raw.githubusercontent.com/kiki-ki/go-qo/main/doc/demo/demo.gif
 logo: https://cli.masoko.net/uploads/qo/logo.png
 updated: '2026-08-21'
 repo_stars: 406
-repo_stars_recent: 4
+repo_stars_recent: 3
 repo_updated: "2026-11-21"
 repo_created: "2025-11-25"
 repo_release: "v0.5.2"

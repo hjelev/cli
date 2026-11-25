@@ -34,11 +34,11 @@ tags:
 media: https://asciinema.org/a/382738
 logo: https://raw.githubusercontent.com/dundee/gdu/main/gdu.png
 updated: '2026-11-24'
+repo_stars: 6225
+repo_stars_recent: 30
+repo_updated: "2026-11-23"
+repo_created: "2018-02-24"
+repo_release: "v5.39.0"
+repo_release_date: "2026-11-06"
 comments: []
-repo_stars: 6224
-repo_stars_recent: 28
-repo_updated: '2026-11-23'
-repo_created: '2018-02-24'
-repo_release: v5.39.0
-repo_release_date: '2026-11-06'
 ---

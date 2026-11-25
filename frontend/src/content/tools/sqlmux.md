@@ -36,11 +36,11 @@ tags:
 media: https://raw.githubusercontent.com/kackerx/sqlmux/main/assets/demo.gif
 logo: https://cli.masoko.net/uploads/sqlmux/logo.png
 updated: '2026-11-01'
-repo_stars: 330
-repo_stars_recent: 45
-repo_updated: "2026-11-19"
+repo_stars: 331
+repo_stars_recent: 41
+repo_updated: "2026-11-25"
 repo_created: "2026-09-29"
-repo_release: "v0.11.0"
-repo_release_date: "2026-11-19"
+repo_release: "v0.12.0"
+repo_release_date: "2026-11-25"
 repo_badge: true
 ---

@@ -46,7 +46,7 @@ media: >-
 logo: https://raw.githubusercontent.com/homeport/dyff/main/.docs/logo.png
 updated: '2026-07-18'
 repo_stars: 1908
-repo_stars_recent: 3
+repo_stars_recent: 2
 repo_updated: "2026-11-20"
 repo_created: "2018-03-09"
 repo_release: "v1.12.0"

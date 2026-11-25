@@ -46,7 +46,7 @@ logo: https://github.com/o2sh/onefetch/raw/main/assets/onefetch.svg
 updated: '2026-08-18'
 repo_stars: 12083
 repo_stars_recent: 0
-repo_updated: "2026-11-23"
+repo_updated: "2026-11-25"
 repo_created: "2018-09-14"
 repo_release: "3.3.0"
 repo_release_date: "2026-11-21"

@@ -36,8 +36,8 @@ tags:
 media: https://github.com/YS-L/csvlens/raw/main/.github/demo.gif
 logo: https://avatars.githubusercontent.com/u/2175543?v=4
 updated: '2026-07-18'
-repo_stars: 4046
-repo_stars_recent: 10
+repo_stars: 4049
+repo_stars_recent: 12
 repo_updated: "2026-07-04"
 repo_created: "2021-08-14"
 repo_release: "v0.15.1"

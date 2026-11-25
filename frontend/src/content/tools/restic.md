@@ -62,9 +62,9 @@ tags:
 media: https://asciinema.org/a/23554
 logo: https://restic.net/apple-touch-icon-144-precomposed.png
 updated: '2026-11-18'
-repo_stars: 37423
-repo_stars_recent: 129
-repo_updated: "2026-11-22"
+repo_stars: 37446
+repo_stars_recent: 152
+repo_updated: "2026-11-24"
 repo_created: "2014-04-27"
 repo_release: "v0.20.0"
 repo_release_date: "2026-11-19"
