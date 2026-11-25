@@ -35,13 +35,15 @@ tags:
   - Developer-Tools
   - Terminal
   - Automation
-media: https://opencode.ai/_build/assets/opencode-min-CiEsORKQ.mp4
+media: >-
+  https://raw.githubusercontent.com/anomalyco/opencode/dev/services/site/public/v1/docs/assets/lander/screenshot.png
 logo: https://cli.masoko.net/uploads/opencode/logo.png
-updated: '2026-07-18'
+updated: '2026-11-25'
+comments: []
 repo_stars: 229095
 repo_stars_recent: 3076
-repo_updated: "2026-11-25"
-repo_created: "2025-04-30"
-repo_release: "v1.19.6"
-repo_release_date: "2026-11-17"
+repo_updated: '2026-11-25'
+repo_created: '2025-04-30'
+repo_release: v1.19.6
+repo_release_date: '2026-11-17'
 ---
