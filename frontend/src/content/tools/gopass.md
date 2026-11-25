@@ -49,7 +49,7 @@ logo: https://github.com/gopasspw/gopass/raw/master/docs/logo.png
 updated: '2026-10-20'
 repo_stars: 7333
 repo_stars_recent: 14
-repo_updated: "2026-11-24"
+repo_updated: "2026-11-25"
 repo_created: "2017-02-02"
 repo_release: "v1.17.5"
 repo_release_date: "2026-11-22"

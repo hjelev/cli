@@ -46,8 +46,8 @@ tags:
 media: https://raw.githubusercontent.com/hrkfdn/ncspot/main/images/screenshot.png
 logo: https://cli.masoko.net/uploads/ncspot/logo.svg
 updated: '2026-11-01'
-repo_stars: 6822
-repo_stars_recent: 8
+repo_stars: 6823
+repo_stars_recent: 9
 repo_updated: "2026-11-24"
 repo_created: "2018-11-10"
 repo_release: "v1.5.1"

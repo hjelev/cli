@@ -50,4 +50,9 @@ tags:
 media: https://raw.githubusercontent.com/dbcli/mycli/main/doc/screenshots/main.gif
 logo: https://avatars.githubusercontent.com/u/11810727?s=200&v=4
 updated: '2026-11-25'
+repo_stars: 12005
+repo_updated: "2026-11-25"
+repo_created: "2015-04-05"
+repo_release: "v2.32.1"
+repo_release_date: "2026-11-25"
 ---

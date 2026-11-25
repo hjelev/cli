@@ -42,11 +42,11 @@ tags:
 media: https://raw.githubusercontent.com/ashuttl/linecast/main/screenshots/hero.png
 logo: https://avatars.githubusercontent.com/u/2095936?v=4
 updated: '2026-11-02'
-repo_stars: 699
-repo_stars_recent: 19
-repo_updated: "2026-11-21"
+repo_stars: 701
+repo_stars_recent: 21
+repo_updated: "2026-11-25"
 repo_created: "2026-03-05"
-repo_release: "v2.13.0"
-repo_release_date: "2026-11-21"
+repo_release: "v2.13.1"
+repo_release_date: "2026-11-25"
 comments: []
 ---

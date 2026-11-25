@@ -43,8 +43,8 @@ tags:
 media: https://cli.masoko.net/uploads/delta/media.png
 logo: https://cli.masoko.net/uploads/delta/logo.png
 updated: '2026-07-18'
-repo_stars: 32830
-repo_stars_recent: 113
+repo_stars: 32833
+repo_stars_recent: 116
 repo_updated: "2026-11-25"
 repo_created: "2019-06-24"
 repo_release: "0.22.0"

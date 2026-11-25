@@ -54,4 +54,9 @@ tags:
 media: https://raw.githubusercontent.com/orf/gping/main/images/readme-example.gif
 logo: https://avatars.githubusercontent.com/u/1027207?v=4
 updated: '2026-11-25'
+repo_stars: 12757
+repo_updated: "2026-11-20"
+repo_created: "2015-10-17"
+repo_release: "gping-v1.21.0"
+repo_release_date: "2026-08-31"
 ---

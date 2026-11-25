@@ -42,4 +42,9 @@ tags:
 media: https://www.gh-dash.dev/overview.webm
 logo: https://cli.masoko.net/uploads/gh-dash/logo.png
 updated: '2026-11-25'
+repo_stars: 12771
+repo_updated: "2026-11-21"
+repo_created: "2021-10-14"
+repo_release: "v4.26.3"
+repo_release_date: "2026-11-13"
 ---

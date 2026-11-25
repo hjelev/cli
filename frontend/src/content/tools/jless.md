@@ -44,8 +44,8 @@ media: https://cli.masoko.net/uploads/jless/media.gif
 logo: >-
   https://raw.githubusercontent.com/PaulJuliusMartinez/jless/master/logo/mascot.svg
 updated: '2026-11-01'
-repo_stars: 5526
-repo_stars_recent: 7
+repo_stars: 5528
+repo_stars_recent: 9
 repo_updated: "2026-09-07"
 repo_created: "2021-04-24"
 repo_release: "v0.9.0"
