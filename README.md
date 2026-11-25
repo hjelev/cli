@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-334-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-335-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**334 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**335 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (6) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (19) · [Development Tools](#development-tools) (22) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (23) · [Networking](#networking) (29) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (19) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (8) · [DevOps & Cloud](#devops--cloud) (18) · [Data Processing](#data-processing) (19) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (15) · [Utilities & Other](#utilities--other) (7)
+[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (6) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (19) · [Development Tools](#development-tools) (22) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (24) · [Networking](#networking) (29) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (19) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (8) · [DevOps & Cloud](#devops--cloud) (18) · [Data Processing](#data-processing) (19) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (15) · [Utilities & Other](#utilities--other) (7)
 
 ### File Management
 
@@ -234,6 +234,7 @@
 | [DryDock](https://yetidevworks.com/drydock) | What's uncommitted, unpushed, and unreleased across every repo you own. | Rust | 372 (+17) | [Repo](https://github.com/yetidevworks/drydock), [Website](https://yetidevworks.com/drydock) |
 | [forgit](https://github.com/wfxr/forgit) | :zzz: A utility tool powered by fzf for using git interactively. | Shell | 5.1k (+3) | [Repo](https://github.com/wfxr/forgit) |
 | [gh](https://cli.github.com) | GitHub’s official command line tool | Go | 47.2k (+239) | [Repo](https://github.com/cli/cli), [Website](https://cli.github.com) |
+| [gh-dash](https://gh-dash.dev) | A rich terminal UI for GitHub that doesn't break your flow. | Go | – | [Repo](https://github.com/dlvhdr/gh-dash), [Website](https://gh-dash.dev) |
 | [gh-enhance](https://www.gh-dash.dev/enhance) | A Blazingly Fast Terminal UI for GitHub Actions | Go | 255 (+1) | [Repo](https://github.com/dlvhdr/gh-enhance), [Website](https://www.gh-dash.dev/enhance) |
 | [ghgrab](https://ghgrab.readthedocs.io) | A simple, pretty terminal tool that lets you browse and download files from GitHub, GitLab,… | Rust | 1.6k (+15) | [Repo](https://github.com/abhixdd/ghgrab), [Website](https://ghgrab.readthedocs.io) |
 | [git-cliff](https://git-cliff.org) | A highly customizable Changelog Generator that follows Conventional Commit specifications ⛰️ | Rust | 12.4k (+15) | [Repo](https://github.com/orhun/git-cliff), [Website](https://git-cliff.org) |
