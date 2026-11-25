@@ -11,7 +11,7 @@
     </tr>
   </table>
 
-[![Tools](https://img.shields.io/badge/tools-337-f74c00)](https://cli.masoko.net)
+[![Tools](https://img.shields.io/badge/tools-338-f74c00)](https://cli.masoko.net)
 [![Website](https://img.shields.io/badge/website-cli.masoko.net-14151a)](https://cli.masoko.net)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -34,9 +34,9 @@
 
 <!-- TOOLS:START -->
 
-**337 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
+**338 tools** across **23 categories** — browse with screenshots, GitHub stats and comments at [cli.masoko.net](https://cli.masoko.net).
 
-[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (6) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (19) · [Development Tools](#development-tools) (23) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (24) · [Networking](#networking) (30) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (19) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (8) · [DevOps & Cloud](#devops--cloud) (18) · [Data Processing](#data-processing) (19) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (15) · [Utilities & Other](#utilities--other) (7)
+[File Management](#file-management) (21) · [Directory Listing](#directory-listing) (10) · [Disk Usage](#disk-usage) (5) · [Shell & Terminal](#shell--terminal) (21) · [Search](#search) (6) · [System Monitoring](#system-monitoring) (17) · [Productivity](#productivity) (8) · [Notes & Documents](#notes--documents) (19) · [Development Tools](#development-tools) (23) · [HTTP & API Clients](#http--api-clients) (8) · [Git](#git) (24) · [Networking](#networking) (30) · [Email & Messaging](#email--messaging) (11) · [Text Editors](#text-editors) (21) · [Music & Audio](#music--audio) (19) · [Media & Entertainment](#media--entertainment) (11) · [Security](#security) (8) · [DevOps & Cloud](#devops--cloud) (18) · [Data Processing](#data-processing) (19) · [Logs](#logs) (8) · [Games & Fun](#games--fun) (8) · [AI](#ai) (15) · [Utilities & Other](#utilities--other) (8)
 
 ### File Management
 
@@ -484,6 +484,7 @@
 |------|-------------|----------|---------|-------|
 | [croc](https://getcroc.com) | Easily and securely send things from one computer to another 🐊 📦 | Go | 41k (+68) | [Repo](https://github.com/schollz/croc), [Website](https://getcroc.com) |
 | [fnt](https://github.com/alexmyczko/fnt) | apt for fonts, the missing font manager for macOS/linux | Shell | 657 (+5) | [Repo](https://github.com/alexmyczko/fnt) |
+| [goose](http://pressly.github.io/goose/) | A database migration tool. Supports SQL migrations and Go functions. | Go | – | [Repo](https://github.com/pressly/goose), [Website](http://pressly.github.io/goose/) |
 | [miru](https://blog.vaishnavs.is-a.dev/miru/) | Zooming daemon for wayland | C | 16 (+3) | [Repo](https://codeberg.org/Vaishnav-Sabari-Girish/miru), [Website](https://blog.vaishnavs.is-a.dev/miru/) |
 | [moji](https://moji.micr.dev/docs) | find and download fonts from the terminal | Go | 262 | [Repo](https://github.com/Microck/moji), [Website](https://moji.micr.dev/docs) |
 | [Mole](https://mole.fit) | 🐹 Open-source Mac and PC cleaner. Keep your machine clean, light, and running like new. Fast CLI,… | Shell | 76.1k (+969) | [Repo](https://github.com/tw93/mole), [Website](https://mole.fit) |
