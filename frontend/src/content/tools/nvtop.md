@@ -46,8 +46,9 @@ tags:
 media: https://raw.githubusercontent.com/Syllo/nvtop/master/screenshot/NVTOP_ex1.png
 logo: https://avatars.githubusercontent.com/u/2741868?v=4
 updated: '2026-11-25'
-repo_stars: 11176
-repo_updated: "2026-11-25"
+repo_stars: 11181
+repo_stars_recent: 5
+repo_updated: "2026-11-26"
 repo_created: "2017-06-16"
 repo_release: "3.4.0"
 repo_release_date: "2026-11-08"

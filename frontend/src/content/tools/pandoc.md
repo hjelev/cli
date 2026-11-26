@@ -58,9 +58,9 @@ tags:
   - publishing
 logo: https://pandoc.org/pandoc-cartoon.svgz
 updated: '2026-11-15'
-repo_stars: 47082
-repo_stars_recent: 141
-repo_updated: "2026-11-25"
+repo_stars: 47096
+repo_stars_recent: 155
+repo_updated: "2026-11-26"
 repo_created: "2010-03-20"
 repo_release: "3.14"
 repo_release_date: "2026-11-12"

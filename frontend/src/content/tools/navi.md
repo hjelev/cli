@@ -53,7 +53,8 @@ tags:
 media: https://asciinema.org/a/406461
 logo: https://raw.githubusercontent.com/denisidoro/navi/master/assets/icon.png
 updated: '2026-11-25'
-repo_stars: 17898
+repo_stars: 17901
+repo_stars_recent: 3
 repo_updated: "2026-10-16"
 repo_created: "2019-09-20"
 repo_release: "v2.24.0"

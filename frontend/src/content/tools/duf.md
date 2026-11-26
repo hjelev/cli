@@ -53,8 +53,8 @@ tags:
 media: https://raw.githubusercontent.com/muesli/duf/refs/heads/master/duf.png
 logo: https://avatars.githubusercontent.com/u/146378?v=4
 updated: '2026-07-23'
-repo_stars: 15405
-repo_stars_recent: 23
+repo_stars: 15410
+repo_stars_recent: 27
 repo_updated: "2026-11-15"
 repo_created: "2020-09-20"
 repo_release: "v0.9.1"

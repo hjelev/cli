@@ -30,8 +30,8 @@ tags:
 media: https://raw.githubusercontent.com/nol00p/Shoin/main/docs/media/hero.gif
 logo: https://avatars.githubusercontent.com/u/63861454?v=4
 updated: '2026-10-27'
-repo_stars: 89
-repo_stars_recent: 11
+repo_stars: 90
+repo_stars_recent: 12
 repo_updated: "2026-11-25"
 repo_created: "2026-08-28"
 repo_release: "v0.2.5"

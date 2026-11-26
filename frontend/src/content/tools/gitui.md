@@ -39,8 +39,8 @@ tags:
 media: https://github.com/gitui-org/gitui/raw/master/demo.gif
 logo: https://cli.masoko.net/uploads/gitui/logo.png
 updated: '2026-07-13'
-repo_stars: 22687
-repo_stars_recent: 38
+repo_stars: 22691
+repo_stars_recent: 40
 repo_updated: "2026-10-06"
 repo_created: "2020-03-16"
 repo_release: "v0.28.1"

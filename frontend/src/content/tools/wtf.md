@@ -46,9 +46,9 @@ tags:
 media: https://raw.githubusercontent.com/wtfutil/wtf/trunk/images/screenshot.jpg
 logo: https://github.com/wtfutil/wtf/raw/trunk/images/logo_transparent.png?raw=true
 updated: '2026-11-07'
-repo_stars: 17154
-repo_stars_recent: 7
-repo_updated: "2026-11-14"
+repo_stars: 17156
+repo_stars_recent: 8
+repo_updated: "2026-11-25"
 repo_created: "2018-03-29"
 repo_release: "v0.51.0"
 repo_release_date: "2026-09-29"

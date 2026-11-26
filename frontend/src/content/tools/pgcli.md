@@ -40,8 +40,8 @@ tags:
 media: https://github.com/dbcli/pgcli/raw/main/screenshots/pgcli.gif
 logo: https://avatars.githubusercontent.com/u/11810727?s=200&v=4
 updated: '2026-10-25'
-repo_stars: 13461
-repo_stars_recent: 17
+repo_stars: 13462
+repo_stars_recent: 16
 repo_updated: "2026-11-04"
 repo_created: "2014-10-12"
 repo_release: "v4.7.1"
