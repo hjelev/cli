@@ -64,9 +64,9 @@ const numbers = getPageNumbers(currentPage, lastPage);
 	lastPage > 1 && (
 		<nav class="pagination" aria-label="Pagination">
 			{page.url.prev ? (
-				<a class="page-nav" href={page.url.prev} rel="prev">&larr; prev</a>
+				<a class="page-nav" href={page.url.prev} rel="prev">Previous</a>
 			) : (
-				<span class="page-nav disabled">&larr; prev</span>
+				<span class="page-nav disabled">Previous</span>
 			)}
 
 			<ul class="page-numbers">
@@ -84,9 +84,9 @@ const numbers = getPageNumbers(currentPage, lastPage);
 			</ul>
 
 			{page.url.next ? (
-				<a class="page-nav" href={page.url.next} rel="next">next &rarr;</a>
+				<a class="page-nav" href={page.url.next} rel="next">Next</a>
 			) : (
-				<span class="page-nav disabled">next &rarr;</span>
+				<span class="page-nav disabled">Next</span>
 			)}
 		</nav>
 	)

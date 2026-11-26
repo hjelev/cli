@@ -49,9 +49,9 @@ tags:
 media: https://raw.githubusercontent.com/mr-karan/doggo/main/www/static/doggo.png
 logo: https://cli.masoko.net/uploads/doggo/logo.png
 updated: '2026-10-25'
-repo_stars: 4554
-repo_stars_recent: 20
-repo_updated: "2026-11-12"
+repo_stars: 4563
+repo_stars_recent: 10
+repo_updated: "2026-11-21"
 repo_created: "2020-12-09"
 repo_release: "v1.4.2"
 repo_release_date: "2026-10-22"

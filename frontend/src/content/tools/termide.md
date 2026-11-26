@@ -54,13 +54,14 @@ tags:
   - terminal
   - text-editor
   - tui
-media: https://awesometui.com/api/ownership/assets/66
+media: https://termide.github.io/assets/screenshots/agent.gif
 logo: https://termide.github.io/assets/logo.svg
-updated: '2026-10-20'
-repo_stars: 188
-repo_stars_recent: 5
-repo_updated: "2026-11-15"
+updated: '2026-11-25'
+repo_stars: 190
+repo_stars_recent: 3
+repo_updated: "2026-11-25"
 repo_created: "2025-11-20"
-repo_release: "0.49.0"
-repo_release_date: "2026-11-05"
+repo_release: "0.50.0"
+repo_release_date: "2026-11-16"
+comments: []
 ---

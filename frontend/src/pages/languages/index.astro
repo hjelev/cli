@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import { slugify } from '../../lib/slug';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import BrowseLinks from '../../components/BrowseLinks.astro';
 import LanguageTile from '../../components/LanguageTile.astro';
 import { pageTitle } from '../../lib/seo';
 
@@ -30,14 +29,11 @@ const languages = [...bySlug.entries()]
 		.slice(0, 5)
 		.map((l) => l.label)
 		.join(', ')} and more.`}
-	command="ls languages/"
-	backHref="/"
-	breadcrumb={[{ label: 'languages/' }]}
+	breadcrumb={[{ label: 'Languages' }]}
 >
-	<header class="hero">
+	<header class="page-head">
 		<h1>Languages</h1>
-		<p class="tagline"># browse tools by language</p>
-		<BrowseLinks current="languages" />
+		<p class="tagline">The languages these tools are written in, most common first.</p>
 	</header>
 
 	<ul class="dir-grid tile-grid">
@@ -48,7 +44,7 @@ const languages = [...bySlug.entries()]
 						<LanguageTile language={label} />
 						<span class="tile-text">
 							<span class="dir-head">
-								<span class="dir-name">{label}/</span>
+								<span class="dir-name">{label}</span>
 								<span class="count">{count}</span>
 							</span>
 							{descriptions.get(slug) && <span class="dir-desc" title={descriptions.get(slug)}>{descriptions.get(slug)}</span>}

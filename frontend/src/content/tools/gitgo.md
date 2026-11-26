@@ -42,7 +42,7 @@ logo: https://cli.masoko.net/uploads/gitgo/logo.png
 updated: '2026-10-23'
 repo_stars: 19
 repo_stars_recent: 0
-repo_updated: "2026-10-26"
+repo_updated: "2026-11-21"
 repo_created: "2025-09-30"
 repo_release: "v1.11.0"
 repo_release_date: "2026-10-20"

@@ -41,9 +41,9 @@ tags:
 media: https://github.com/Wilfred/difftastic/raw/master/img/reformat.png
 logo: https://cli.masoko.net/uploads/difftastic/logo.png
 updated: '2026-07-18'
-repo_stars: 26186
-repo_stars_recent: 57
-repo_updated: "2026-11-15"
+repo_stars: 26270
+repo_stars_recent: 78
+repo_updated: "2026-11-19"
 repo_created: "2018-12-18"
 repo_release: "0.72.0"
 repo_release_date: "2026-10-29"

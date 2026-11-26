@@ -42,8 +42,8 @@ tags:
 media: https://raw.githubusercontent.com/AppachiTech/suvadu/main/demo/hero.gif
 logo: https://github.com/AppachiTech/suvadu/raw/main/assets/suvadu-logo.svg
 updated: '2026-10-20'
-repo_stars: 129
-repo_stars_recent: 4
+repo_stars: 133
+repo_stars_recent: 6
 repo_updated: "2026-11-11"
 repo_created: "2026-02-13"
 repo_release: "v0.5.3"

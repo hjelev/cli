@@ -40,9 +40,9 @@ media: https://github.com/MathiasDrizzy/lazymark/raw/main/assets/readme/main.gif
 logo: >-
   https://github.com/MathiasDrizzy/lazymark/raw/main/assets/brand/reposo/hero.gif
 updated: '2026-10-15'
-repo_stars: 102
-repo_stars_recent: 0
-repo_updated: "2026-11-15"
+repo_stars: 103
+repo_stars_recent: 1
+repo_updated: "2026-11-22"
 repo_created: "2026-09-29"
 repo_release: "v1.2.2"
 repo_release_date: "2026-10-13"

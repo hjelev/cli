@@ -28,10 +28,10 @@ tags:
 media: https://github.com/gurgeous/tennis/raw/main/assets/screenshot.png
 logo: https://github.com/gurgeous/tennis/raw/main/assets/logo.png
 updated: '2026-11-05'
-repo_stars: 907
-repo_stars_recent: 58
-repo_updated: "2026-11-10"
+repo_stars: 935
+repo_stars_recent: 40
+repo_updated: "2026-11-22"
 repo_created: "2026-02-25"
-repo_release: "v0.8.0"
-repo_release_date: "2026-09-26"
+repo_release: "v0.8.1"
+repo_release_date: "2026-11-22"
 ---

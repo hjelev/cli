@@ -31,8 +31,8 @@ const { language, slug, description } = Astro.props;
 <BaseLayout
 	title={`Edit ${language} — The Terminal Index`}
 	noindex
-	command={`man languages/${slug} --edit`}
-	backHref={`/languages/${slug}/`}
+	narrow
+	breadcrumb={[{ label: 'Languages', href: '/languages/' }, { label: language, href: `/languages/${slug}/` }, { label: 'Edit' }]}
 >
 	<h1>Edit {language}</h1>
 	<p class="form-note">Sign in with GitHub to propose an edit. Submitting opens a pull request from your own fork.</p>
@@ -109,13 +109,13 @@ const { language, slug, description } = Astro.props;
 			submitBtn.disabled = true;
 
 			try {
-				const { prUrl } = await editLanguage(token, languageSlug, languageLabel, validation.data);
+				const { prUrl, merged } = await editLanguage(token, languageSlug, languageLabel, validation.data);
 				const link = document.createElement('a');
 				link.href = prUrl;
 				link.target = '_blank';
 				link.rel = 'noopener';
-				link.textContent = 'View your pull request';
-				formStatus.replaceChildren('Edit submitted! ', link, '.');
+				link.textContent = merged ? 'View the merged pull request' : 'View your pull request';
+				formStatus.replaceChildren(merged ? 'Edit merged — live after the next deploy. ' : 'Edit submitted! ', link, '.');
 			} catch (error) {
 				formStatus.textContent = error instanceof Error ? error.message : 'Submitting the edit failed.';
 			} finally {

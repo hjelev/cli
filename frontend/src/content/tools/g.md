@@ -43,9 +43,9 @@ tags:
 media: https://raw.githubusercontent.com/equationzhao/g/master/asset/screenshot_3.png
 logo: https://equationzhao.github.io/g/favicon.svg
 updated: '2026-07-18'
-repo_stars: 356
+repo_stars: 355
 repo_stars_recent: 0
-repo_updated: "2026-10-31"
+repo_updated: "2026-11-24"
 repo_created: "2023-04-23"
 repo_release: "v0.31.2"
 repo_release_date: "2026-03-23"

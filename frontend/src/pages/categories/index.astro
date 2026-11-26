@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../../lib/schema';
 import { slugify } from '../../lib/slug';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import BrowseLinks from '../../components/BrowseLinks.astro';
 import { pageTitle } from '../../lib/seo';
 import TileIcon from '../../components/TileIcon.astro';
 
@@ -21,14 +20,11 @@ const nonEmptyCategories = CATEGORIES.filter((category) => (counts.get(category)
 <BaseLayout
 	title={pageTitle('Browse CLI Tools by Category')}
 	description={`Browse ${tools.length} terminal tools across ${nonEmptyCategories.length} categories: ${nonEmptyCategories.slice(0, 5).join(', ')} and more.`}
-	command="ls categories/"
-	backHref="/"
-	breadcrumb={[{ label: 'categories/' }]}
+	breadcrumb={[{ label: 'Categories' }]}
 >
-	<header class="hero">
+	<header class="page-head">
 		<h1>Categories</h1>
-		<p class="tagline"># browse tools grouped by category</p>
-		<BrowseLinks current="categories" />
+		<p class="tagline">Every tool has one main category. Pick the job you need done.</p>
 	</header>
 
 	<ul class="dir-grid tile-grid">
@@ -39,7 +35,7 @@ const nonEmptyCategories = CATEGORIES.filter((category) => (counts.get(category)
 						<TileIcon kind="category" slug={slugify(category)} />
 						<span class="tile-text">
 							<span class="dir-head">
-								<span class="dir-name">{category}/</span>
+								<span class="dir-name">{category}</span>
 								<span class="count">{counts.get(category)}</span>
 							</span>
 							{descriptions.get(slugify(category)) && (

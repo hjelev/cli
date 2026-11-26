@@ -4,7 +4,6 @@ import { getCollection } from 'astro:content';
 import { getReservedSlugs, groupTagsBySlug } from '../../lib/tag-filter';
 import { MIN_INDEXABLE_LISTINGS, TAGS_INDEX_PAGE_SIZE } from '../../lib/config';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import BrowseLinks from '../../components/BrowseLinks.astro';
 import Pagination from '../../components/Pagination.astro';
 import { pageTitle, pagedDescription } from '../../lib/seo';
 
@@ -22,7 +21,6 @@ export const getStaticPaths = (async ({ paginate }) => {
 }) satisfies GetStaticPaths;
 
 const { page } = Astro.props;
-const status = page.lastPage > 1 ? `page ${page.currentPage}/${page.lastPage}` : undefined;
 ---
 
 <BaseLayout
@@ -35,23 +33,19 @@ const status = page.lastPage > 1 ? `page ${page.currentPage}/${page.lastPage}` :
 		page.currentPage,
 		page.lastPage,
 	)}
-	command="ls tags/"
-	backHref="/"
-	status={status}
-	breadcrumb={[{ label: 'tags/' }]}
+	breadcrumb={[{ label: 'Tags' }]}
 >
-	<header class="hero">
+	<header class="page-head">
 		<h1>Tags</h1>
-		<p class="tagline"># browse tools by tag</p>
-		<BrowseLinks current="tags" />
+		<p class="tagline">Every topic with at least a few tools, most used first.</p>
 	</header>
 
-	<ul class="links">
+	<ul class="tag-cloud">
 		{
 			page.data.map(({ slug, label, count }) => (
 				<li>
 					<a href={`/tags/${slug}/`}>
-						#{label} <span class="count">({count})</span>
+						{label} <span class="count">{count}</span>
 					</a>
 				</li>
 			))

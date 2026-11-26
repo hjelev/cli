@@ -24,26 +24,24 @@ const reservedSlugs = getReservedSlugs(allTools);
 <BaseLayout
 	title={pageTitle(guide.title)}
 	description={`${guide.intro} ${tools.length} tools compared, including ${tools.slice(0, 3).map((tool) => tool.data.name).join(', ')}.`}
-	command={`ls ${section}/${guide.slug}`}
 	jsonLd={[itemListLd(tools)]}
-	backHref={`/${section}/`}
-	breadcrumb={[{ label: `${section}/`, href: `/${section}/` }, { label: guide.slug }]}
+	breadcrumb={[{ label: section === 'collections' ? 'Collections' : 'Alternatives', href: `/${section}/` }, { label: guide.title }]}
 >
-	<header class="hero tile-hero">
+	<header class="page-head tile-hero">
 		<TileIcon kind={section === 'collections' ? 'collection' : 'alternative'} slug={guide.slug} size={88} />
 		<div>
 			<h1>{guide.title}</h1>
 			<p class="entity-description">{guide.intro}</p>
-			<p class="tagline"># {tools.length} tools, most-starred first</p>
+			<p class="tagline">{tools.length} tools, most-starred first</p>
 		</div>
 	</header>
 
 	<ul id="tool-grid">{tools.map((tool) => <ToolCard tool={tool} reservedSlugs={reservedSlugs} />)}</ul>
 
 	{related.length > 0 && (
-		<section class="man-section man-section-no-hash">
-			<h2>SEE ALSO</h2>
-			<nav class="browse-links guide-links">
+		<section class="man-section">
+			<h2>See also</h2>
+			<nav class="guide-links">
 				{related.map((other) => <a href={`/${section}/${other.slug}/`}>{other.title}</a>)}
 			</nav>
 		</section>

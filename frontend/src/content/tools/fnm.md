@@ -43,8 +43,8 @@ tags:
 media: https://raw.githubusercontent.com/Schniz/fnm/master/docs/fnm.svg
 logo: https://avatars.githubusercontent.com/u/2054772?v=4
 updated: '2026-10-29'
-repo_stars: 27416
-repo_stars_recent: 141
+repo_stars: 27518
+repo_stars_recent: 131
 repo_updated: "2026-10-26"
 repo_created: "2019-01-16"
 repo_release: "v1.39.0"

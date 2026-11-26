@@ -45,10 +45,10 @@ tags:
 media: https://raw.githubusercontent.com/lusingander/serie/master/img/demo.gif
 logo: https://avatars.githubusercontent.com/u/31386431?v=4
 updated: '2026-11-15'
-repo_stars: 2185
-repo_stars_recent: 0
-repo_updated: "2026-11-16"
+repo_stars: 2206
+repo_stars_recent: 21
+repo_updated: "2026-11-24"
 repo_created: "2024-07-28"
-repo_release: "v0.10.2"
-repo_release_date: "2026-11-10"
+repo_release: "v0.11.0"
+repo_release_date: "2026-11-19"
 ---

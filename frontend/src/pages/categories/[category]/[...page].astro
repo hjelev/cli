@@ -7,6 +7,7 @@ import { getReservedSlugs } from '../../../lib/tag-filter';
 import { slugify } from '../../../lib/slug';
 import { PAGE_SIZE, MIN_INDEXABLE_LISTINGS } from '../../../lib/config';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CategoryNav from '../../../components/CategoryNav.astro';
 import ToolCard from '../../../components/ToolCard.astro';
 import Pagination from '../../../components/Pagination.astro';
 import TileIcon from '../../../components/TileIcon.astro';
@@ -39,24 +40,26 @@ const metaDescription = pagedDescription(
 
 <BaseLayout
 	title={pageTitle(`${category} CLI Tools`, page.currentPage)}
-	command={`ls categories/${slugify(category)}`}
 	description={metaDescription}
 	jsonLd={[itemListLd(page.data, page.start)]}
-	backHref="/categories/"
 	editHref={`/categories/${slugify(category)}/edit/`}
 	noindex={page.total < MIN_INDEXABLE_LISTINGS}
-	breadcrumb={[{ label: `${slugify(category)}/` }]}
+	breadcrumb={[{ label: 'Categories', href: '/categories/' }, { label: category }]}
 >
-	<header class="hero tile-hero">
+	<header class="page-head tile-hero">
 		<TileIcon kind="category" slug={slugify(category)} size={88} />
 		<div>
 			<h1>{category}</h1>
 			{description && <p class="entity-description">{description}</p>}
-			<p class="tagline"># {page.total} tool{page.total === 1 ? '' : 's'} in this category</p>
+			<p class="tagline">{page.total} tool{page.total === 1 ? '' : 's'} in this category</p>
 		</div>
 	</header>
 
-	<ul id="tool-grid">{page.data.map((tool) => <ToolCard tool={tool} reservedSlugs={reservedSlugs} />)}</ul>
-
-	<Pagination page={page} />
+	<div class="browse-layout">
+		<CategoryNav current={category} />
+		<div>
+			<ul id="tool-grid">{page.data.map((tool) => <ToolCard tool={tool} reservedSlugs={reservedSlugs} />)}</ul>
+			<Pagination page={page} />
+		</div>
+	</div>
 </BaseLayout>

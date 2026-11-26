@@ -31,6 +31,15 @@ Regenerates the tool table between the `<!-- TOOLS:START -->`/`<!-- TOOLS:END --
 
 CI check for PRs: validates changed tool/category `.md` files against the zod schema (`src/lib/schema.ts`) and checks that `repository_url`/`website`/`media`/`logo` links are reachable. Runs via `.github/workflows/validate-pr.yml`, invoked with `BASE_SHA`/`HEAD_SHA` env vars.
 
+## clean-orphan-uploads.ts
+
+Finds files in `public/uploads/` that nothing in `src/` references any more (an edit swapped an uploaded logo/media for a URL, a re-upload changed the extension, or the listing was removed — the edit flow never deletes old uploads). Runs via `.github/workflows/clean-orphan-uploads.yml` on every push to `master` touching tools or uploads, deleting orphans and committing the removal.
+
+```bash
+npx tsx scripts/clean-orphan-uploads.ts           # list orphans, exit 1 if any
+npx tsx scripts/clean-orphan-uploads.ts --delete  # remove them (and empty slug folders)
+```
+
 ## lib/
 
 Shared helpers used by the scripts above:

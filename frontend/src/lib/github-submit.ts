@@ -237,21 +237,55 @@ async function commitUpload(
 	return buildUploadUrl(slug, field, ext);
 }
 
-async function openPullRequest(token: string, login: string, branch: string, title: string, body: string): Promise<string> {
+async function openPullRequest(
+	token: string,
+	login: string,
+	branch: string,
+	title: string,
+	body: string,
+): Promise<{ prUrl: string; merged: boolean }> {
 	const res = await ghFetch(token, `/repos/${TARGET_OWNER}/${TARGET_REPO}/pulls`, {
 		method: 'POST',
 		body: JSON.stringify({ title, head: `${login}:${branch}`, base: TARGET_BRANCH, body }),
 	});
 	if (!res.ok) throw new Error(await readErrorMessage(res, 'Could not open the pull request.'));
-	const data = (await res.json()) as { html_url: string };
-	return data.html_url;
+	const data = (await res.json()) as { html_url: string; number: number };
+	const merged = login === TARGET_OWNER ? await autoMergeOwnPullRequest(token, data.number, branch) : false;
+	return { prUrl: data.html_url, merged };
+}
+
+// The repo owner's own submissions/edits skip review: merge straight away
+// with the owner's token. Merging as the user (not a bot/GITHUB_TOKEN) matters
+// — the resulting push to master is what triggers deploy.yml and the other
+// push workflows. Best-effort: GitHub often hasn't computed mergeability
+// for a seconds-old PR (405/409), so retry briefly; if it still won't merge,
+// the PR is simply left open for a manual merge rather than failing the
+// submission that already succeeded.
+async function autoMergeOwnPullRequest(token: string, prNumber: number, branch: string): Promise<boolean> {
+	for (let attempt = 0; attempt < 5; attempt++) {
+		if (attempt > 0) await new Promise((resolve) => setTimeout(resolve, 1500 * attempt));
+		const res = await ghFetch(token, `/repos/${TARGET_OWNER}/${TARGET_REPO}/pulls/${prNumber}/merge`, {
+			method: 'PUT',
+			body: JSON.stringify({ merge_method: 'merge' }),
+		}).catch(() => undefined);
+		if (res?.ok) {
+			// The owner's "fork" is the upstream repo itself, so the head branch
+			// lives there — clean it up (the repo doesn't auto-delete merged heads).
+			await ghFetch(token, `/repos/${TARGET_OWNER}/${TARGET_REPO}/git/refs/heads/${branch}`, {
+				method: 'DELETE',
+			}).catch(() => undefined);
+			return true;
+		}
+		if (res && res.status !== 405 && res.status !== 409) return false;
+	}
+	return false;
 }
 
 export async function submitTool(
 	token: string,
 	data: ToolFormData,
 	files?: Partial<Record<UploadableField, File>>,
-): Promise<{ prUrl: string }> {
+): Promise<{ prUrl: string; merged: boolean }> {
 	const login = await getAuthenticatedLogin(token);
 	await ensureFork(token, login);
 	const sha = await getForkBranchSha(token, login);
@@ -283,14 +317,13 @@ export async function submitTool(
 		`Add ${data.name} to the directory`,
 	);
 
-	const prUrl = await openPullRequest(
+	return openPullRequest(
 		token,
 		login,
 		branch,
 		`Add ${data.name}`,
 		`Submitted by @${login} via the directory's submission form.`,
 	);
-	return { prUrl };
 }
 
 // The tool's id/filename never changes here, even if `data.name` did — the
@@ -302,7 +335,7 @@ export async function editTool(
 	toolId: string,
 	data: ToolFormData,
 	files?: Partial<Record<UploadableField, File>>,
-): Promise<{ prUrl: string }> {
+): Promise<{ prUrl: string; merged: boolean }> {
 	const login = await getAuthenticatedLogin(token);
 	await ensureFork(token, login);
 	await syncForkWithUpstream(token, login);
@@ -322,14 +355,13 @@ export async function editTool(
 	const content = buildEditedToolFileContent(resolved, current.text);
 	await commitFile(token, login, branch, path, toBase64Utf8(content), `Update ${data.name}`, current.sha);
 
-	const prUrl = await openPullRequest(
+	return openPullRequest(
 		token,
 		login,
 		branch,
 		`Update ${data.name}`,
 		`Edited by @${login} via the directory's edit form.`,
 	);
-	return { prUrl };
 }
 
 // Unlike editTool, tolerates a missing file: not every category is
@@ -340,7 +372,7 @@ export async function editCategory(
 	categorySlug: string,
 	categoryLabel: string,
 	data: CategoryFormData,
-): Promise<{ prUrl: string }> {
+): Promise<{ prUrl: string; merged: boolean }> {
 	const login = await getAuthenticatedLogin(token);
 	await ensureFork(token, login);
 	await syncForkWithUpstream(token, login);
@@ -363,14 +395,13 @@ export async function editCategory(
 		current?.sha,
 	);
 
-	const prUrl = await openPullRequest(
+	return openPullRequest(
 		token,
 		login,
 		branch,
 		`Update ${categoryLabel} category description`,
 		`Edited by @${login} via the directory's category edit form.`,
 	);
-	return { prUrl };
 }
 
 // Unlike editTool, tolerates a missing file: not every language is
@@ -381,7 +412,7 @@ export async function editLanguage(
 	languageSlug: string,
 	languageLabel: string,
 	data: LanguageFormData,
-): Promise<{ prUrl: string }> {
+): Promise<{ prUrl: string; merged: boolean }> {
 	const login = await getAuthenticatedLogin(token);
 	await ensureFork(token, login);
 	await syncForkWithUpstream(token, login);
@@ -404,12 +435,11 @@ export async function editLanguage(
 		current?.sha,
 	);
 
-	const prUrl = await openPullRequest(
+	return openPullRequest(
 		token,
 		login,
 		branch,
 		`Update ${languageLabel} language description`,
 		`Edited by @${login} via the directory's language edit form.`,
 	);
-	return { prUrl };
 }

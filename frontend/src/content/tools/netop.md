@@ -37,8 +37,8 @@ media: >-
   https://raw.githubusercontent.com/ZingerLittleBee/netop/main/snapshot/dashboard.gif
 logo: https://avatars.githubusercontent.com/u/33377263?v=4
 updated: '2026-09-05'
-repo_stars: 267
-repo_stars_recent: 0
+repo_stars: 268
+repo_stars_recent: 1
 repo_updated: "2026-10-01"
 repo_created: "2022-05-28"
 repo_release: "v0.1.4"

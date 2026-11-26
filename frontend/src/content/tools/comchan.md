@@ -46,9 +46,9 @@ tags:
 media: https://github.com/Vaishnav-Sabari-Girish/ComChan/wiki/videos/normal.gif
 logo: https://cli.masoko.net/uploads/comchan/logo.png
 updated: '2026-07-21'
-repo_stars: 178
+repo_stars: 179
 repo_stars_recent: 1
-repo_updated: "2026-11-16"
+repo_updated: "2026-11-26"
 repo_created: "2025-06-28"
 repo_release: "v0.15.0"
 repo_release_date: "2026-08-26"

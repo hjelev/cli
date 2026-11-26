@@ -37,9 +37,9 @@ logo: https://cli.masoko.net/uploads/lla/logo.png
 updated: '2026-07-08'
 repo_stars: 1235
 repo_stars_recent: 1
-repo_updated: "2026-10-12"
+repo_updated: "2026-11-23"
 repo_created: "2023-07-31"
-repo_release: "v0.6.6"
-repo_release_date: "2026-10-08"
+repo_release: "v0.9.2"
+repo_release_date: "2026-11-20"
 comments: []
 ---

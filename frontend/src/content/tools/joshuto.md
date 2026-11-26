@@ -53,8 +53,8 @@ tags:
 media: https://raw.githubusercontent.com/kamiyaa/joshuto/main/screenshot.png
 logo: https://avatars.githubusercontent.com/u/8345320?v=4
 updated: '2026-11-15'
-repo_stars: 3745
-repo_stars_recent: 0
+repo_stars: 3747
+repo_stars_recent: 2
 repo_updated: "2026-10-26"
 repo_created: "2018-07-13"
 repo_release: "v0.9.9"

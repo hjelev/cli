@@ -58,10 +58,10 @@ tags:
   - yt-dlp
 logo: https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg
 updated: '2026-11-15'
-repo_stars: 208243
-repo_stars_recent: 137
-repo_updated: "2026-11-15"
+repo_stars: 210864
+repo_stars_recent: 2758
+repo_updated: "2026-11-24"
 repo_created: "2020-10-26"
-repo_release: "2026.10.26"
-repo_release_date: "2026-10-26"
+repo_release: "2026.11.23"
+repo_release_date: "2026-11-23"
 ---

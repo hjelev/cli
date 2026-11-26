@@ -44,8 +44,8 @@ tags:
 media: https://raw.githubusercontent.com/imsnif/bandwhich/main/res/demo.gif
 logo: https://avatars.githubusercontent.com/u/795598?v=4
 updated: '2026-11-07'
-repo_stars: 12069
-repo_stars_recent: 16
+repo_stars: 12127
+repo_stars_recent: 54
 repo_updated: "2026-08-01"
 repo_created: "2019-09-06"
 repo_release: "v0.23.1"

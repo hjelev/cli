@@ -57,10 +57,10 @@ media: >-
   https://raw.githubusercontent.com/floatpane/matcha/master/public/assets/demo.gif
 logo: https://matcha.email/assets/logo-transparent.png
 updated: '2026-10-20'
-repo_stars: 1219
-repo_stars_recent: 34
-repo_updated: "2026-11-15"
+repo_stars: 1240
+repo_stars_recent: 25
+repo_updated: "2026-11-26"
 repo_created: "2025-07-28"
-repo_release: "v1.4.3"
-repo_release_date: "2026-11-15"
+repo_release: "v1.5.0"
+repo_release_date: "2026-11-23"
 ---

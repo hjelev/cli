@@ -2,8 +2,8 @@
 name: gowall
 category: Media & Entertainment
 short_description: >-
-  A tool to convert a Wallpaper's color scheme / palette, OCR with VLM's
-  Traditional & Hybrid, Image Compression ,color palette extraction ...
+  Convert any wallpaper to your color scheme (Catppuccin, Nord, Gruvbox and
+  more), plus palette extraction, upscaling, compression and OCR.
 description: >-
   gowall is a fast command-line utility written in Go designed to manage,
   convert, and apply desktop wallpapers.
@@ -57,8 +57,8 @@ logo: >-
   https://raw.githubusercontent.com/Achno/gowall/main/assets/go-sticker-overlay-small.png
 updated: '2026-11-01'
 repo_stars: 2335
-repo_stars_recent: 14
-repo_updated: "2026-11-14"
+repo_stars_recent: 2
+repo_updated: "2026-11-21"
 repo_created: "2024-07-22"
 repo_release: "v0.2.4"
 repo_release_date: "2026-04-09"

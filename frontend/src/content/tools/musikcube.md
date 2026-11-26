@@ -56,9 +56,9 @@ tags:
 media: https://asciinema.org/a/129748
 logo: https://cli.masoko.net/uploads/musikcube/logo.png
 updated: '2026-11-01'
-repo_stars: 4864
-repo_stars_recent: 6
-repo_updated: "2026-03-23"
+repo_stars: 4867
+repo_stars_recent: 5
+repo_updated: "2026-11-26"
 repo_created: "2015-03-18"
 repo_release: "3.0.5"
 repo_release_date: "2025-09-21"

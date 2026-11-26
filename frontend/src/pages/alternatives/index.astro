@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import BrowseLinks from '../../components/BrowseLinks.astro';
 import { ALTERNATIVES } from '../../lib/guides';
 import { pageTitle } from '../../lib/seo';
 import TileIcon from '../../components/TileIcon.astro';
@@ -9,14 +8,11 @@ import TileIcon from '../../components/TileIcon.astro';
 <BaseLayout
 	title={pageTitle('Modern Alternatives to Classic Commands')}
 	description={`Modern terminal replacements for ${ALTERNATIVES.slice(0, 6).map((guide) => guide.replaces).join(', ')} and more, compared side by side.`}
-	command="ls alternatives/"
-	backHref="/"
-	breadcrumb={[{ label: 'alternatives/' }]}
+	breadcrumb={[{ label: 'Alternatives' }]}
 >
-	<header class="hero">
+	<header class="page-head">
 		<h1>Alternatives</h1>
-		<p class="tagline"># modern replacements for classic commands and apps</p>
-		<BrowseLinks current="alternatives" />
+		<p class="tagline">Modern replacements for classic commands and apps.</p>
 	</header>
 
 	<ul class="dir-grid tile-grid">

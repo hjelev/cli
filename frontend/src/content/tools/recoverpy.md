@@ -57,7 +57,7 @@ tags:
 media: https://github.com/PabloLec/RecoverPy/raw/main/docs/assets/demo.gif
 logo: https://raw.githubusercontent.com/PabloLec/RecoverPy/main/docs/assets/logo.png
 updated: '2026-07-18'
-repo_stars: 1798
+repo_stars: 1799
 repo_stars_recent: 2
 repo_updated: "2026-08-03"
 repo_created: "2021-02-24"

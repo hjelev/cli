@@ -58,9 +58,9 @@ tags:
 media: https://cli.masoko.net/uploads/scc/media.png
 logo: https://raw.githubusercontent.com/boyter/scc/master/scc.jpg
 updated: '2026-11-15'
-repo_stars: 8879
-repo_stars_recent: 4
-repo_updated: "2026-11-15"
+repo_stars: 8899
+repo_stars_recent: 24
+repo_updated: "2026-11-24"
 repo_created: "2018-03-01"
 repo_release: "v4.1.0"
 repo_release_date: "2026-09-07"

@@ -49,9 +49,9 @@ media: >-
 logo: >-
   https://raw.githubusercontent.com/DouglasdeMoura/chroncal/master/assets/chroncal-256.png
 updated: '2026-08-21'
-repo_stars: 244
-repo_stars_recent: 10
-repo_updated: "2026-11-10"
+repo_stars: 248
+repo_stars_recent: 5
+repo_updated: "2026-11-24"
 repo_created: "2026-03-31"
 repo_release: "v0.17.5"
 repo_release_date: "2026-11-07"

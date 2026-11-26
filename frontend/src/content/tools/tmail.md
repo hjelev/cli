@@ -38,11 +38,11 @@ tags:
 media: https://raw.githubusercontent.com/tuna4ll/tmail/refs/heads/main/docs/demo.gif
 logo: https://avatars.githubusercontent.com/u/66411462?v=4
 updated: '2026-11-05'
-repo_stars: 62
-repo_stars_recent: 46
-repo_updated: "2026-11-15"
+repo_stars: 74
+repo_stars_recent: 34
+repo_updated: "2026-11-26"
 repo_created: "2026-09-24"
-repo_release: "v1.0.4"
-repo_release_date: "2026-11-15"
+repo_release: "v1.0.5"
+repo_release_date: "2026-11-16"
 comments: []
 ---

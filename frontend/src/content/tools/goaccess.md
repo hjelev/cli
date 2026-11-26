@@ -54,9 +54,9 @@ tags:
 media: https://goaccess.io/images/goaccess-dashboard-2026-2.png
 logo: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/goaccess.svg
 updated: '2026-07-15'
-repo_stars: 21134
-repo_stars_recent: 24
-repo_updated: "2026-11-13"
+repo_stars: 21157
+repo_stars_recent: 27
+repo_updated: "2026-11-20"
 repo_created: "2013-07-14"
 repo_release: "v1.12"
 repo_release_date: "2026-09-16"

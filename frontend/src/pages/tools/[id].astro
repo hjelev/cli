@@ -69,39 +69,41 @@ const youTubeId = data.media ? getYouTubeId(data.media) : undefined;
 	ogImage={`/og/tools/${tool.id}.png`}
 	ogType="article"
 	jsonLd={[softwareLd(tool)]}
-	command={`man ${tool.id}`}
 	editHref={`/tools/${tool.id}/edit/`}
-	backHref="/"
 	breadcrumb={[
-		{ label: slugify(data.category), href: `/categories/${slugify(data.category)}/` },
-		{ label: tool.id },
+		{ label: 'Categories', href: '/categories/' },
+		{ label: data.category, href: `/categories/${slugify(data.category)}/` },
+		{ label: data.name },
 	]}
 >
 	<header class="man-header">
-		{data.logo && <img src={data.logo} alt={`${data.name} logo`} width="64" height="64" />}
-		<div>
-			<h1>{data.name}<span class="num"></span></h1>
+		{data.logo && <img src={data.logo} alt={`${data.name} logo`} width="88" height="88" />}
+		<div class="man-title">
+			<h1>{data.name}</h1>
 			<p class="tagline">{stripLeadingEmoji(data.short_description)}</p>
-			<p class="man-meta chips">
+			<p class="man-meta">
 				{[
-					data.repo_badge && <span class="badge badge-verified" title={VERIFIED_TITLE}>✓ verified</span>,
 					repoStarsLabel && (
-						<span class="badge badge-stars" title={`${repoStars} stars`}>★ {repoStarsLabel}</span>
+						<span class="badge-stars" title={`${repoStars} stars`}>★ {repoStarsLabel}</span>
 					),
 					repoStarsLabel && data.repo_stars_recent && (
-						<span class="badge badge-trending" title={RECENT_STARS_TITLE(data.repo_stars_recent!)}>{formatRecentStars(data.repo_stars_recent!)}</span>
+						<span class="badge-trending" title={RECENT_STARS_TITLE(data.repo_stars_recent!)}>{formatRecentStars(data.repo_stars_recent!)}</span>
 					),
-					<span class="chip" title="License">{data.license}</span>,
-					data.repo_release && <span class="chip" title="Latest release">{data.repo_release}</span>,
-					<a class="chip" href={`/languages/${slugify(data.language)}/`} title="Language">{data.language}</a>,
+					data.repo_badge && <span class="badge-verified" title={VERIFIED_TITLE}>✓ verified</span>,
 					<a class="chip" href={`/categories/${slugify(data.category)}/`} title="Category">{data.category}</a>,
+					<a class="chip" href={`/languages/${slugify(data.language)}/`} title="Language"><LanguageIcon language={data.language} size={14} />{data.language}</a>,
+					data.repo_release && <span class="chip" title="Latest release">{data.repo_release}</span>,
 				].filter(Boolean)}
 			</p>
+		</div>
+		<div class="man-actions">
+			<a class="btn btn-strong" href={data.repository_url} target="_blank" rel="noopener">View repository</a>
+			{data.website && <a class="btn btn-quiet" href={data.website} target="_blank" rel="noopener">Website</a>}
 		</div>
 	</header>
 
 	<section class="man-section install-section">
-		<h2>INSTALLATION</h2>
+		<h2>Install</h2>
 		<div class="install-tabs">
 			{
 				data.installation.length > 1 && (
@@ -130,14 +132,14 @@ const youTubeId = data.media ? getYouTubeId(data.media) : undefined;
 						aria-labelledby={`tab-${i}`}
 						hidden={i !== 0}
 					>
-						<pre class="code"><code>$ {entry.command}</code></pre>
+						<pre class="code"><code><span class="prompt" aria-hidden="true">$ </span>{entry.command}</code></pre>
 						<button
 							type="button"
 							class="copy-btn"
 							data-command={entry.command}
 							aria-label="Copy command to clipboard"
 						>
-							<span class="copy-label" aria-hidden="true">copied</span>
+							<span class="copy-label" aria-hidden="true">Copied</span>
 							<svg class="icon-copy" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
 								<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z" />
 								<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z" />
@@ -159,201 +161,209 @@ const youTubeId = data.media ? getYouTubeId(data.media) : undefined;
 		</div>
 	</section>
 
-	{data.media && (asciinemaId
-		? <script id={`asciicast-${asciinemaId}`} src={`https://asciinema.org/a/${asciinemaId}.js`} data-autoplay="false" async />
-		: youTubeId
-			? <iframe
-					class="media media-embed"
-					src={getYouTubeEmbedUrl(youTubeId)}
-					title={`${data.name} demo video`}
-					loading="lazy"
-					allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin"
-					allowfullscreen
-				/>
-			: getMediaKind(data.media) === 'video'
-				? <video class="media" src={data.media} autoplay loop muted playsinline controls />
-				: <img class="media" src={data.media} alt={`${data.name} demo`} />
-	)}
+	<div class="tool-layout">
+		<div class="tool-main">
+			{data.media && (asciinemaId
+				? <script id={`asciicast-${asciinemaId}`} src={`https://asciinema.org/a/${asciinemaId}.js`} data-autoplay="false" async />
+				: youTubeId
+					? <iframe
+							class="media media-embed"
+							src={getYouTubeEmbedUrl(youTubeId)}
+							title={`${data.name} demo video`}
+							loading="lazy"
+							allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen
+						/>
+					: getMediaKind(data.media) === 'video'
+						? <video class="media" src={data.media} autoplay loop muted playsinline controls />
+						: <img class="media" src={data.media} alt={`${data.name} demo`} />
+			)}
 
-	<section class="man-section">
-		<h2>DESCRIPTION</h2>
-		<div class="description" set:html={descriptionHtml} />
-		<div class="content">
-			<Content />
-		</div>
-	</section>
+			<section class="man-section">
+				<h2>About</h2>
+				<div class="description" set:html={descriptionHtml} />
+				<div class="content">
+					<Content />
+				</div>
+			</section>
 
-	<section class="man-section">
-		<h2>DETAILS</h2>
-		<dl>
-			<dt>Repository</dt>
-			<dd>
-				<svg class="favicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
-					<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
-				</svg>
-				<a href={data.repository_url} target="_blank" rel="noopener">{data.repository_url.replace(/^https?:\/\/(www\.)?(github\.com|codeberg\.org|gitlab\.com)\//, '')}</a>
-				{data.repo_updated && ` (${fmtDate(data.repo_updated)})`}
-			</dd>
-
-			{data.website && (
-				<>
-					<dt>Website</dt>
-					<dd>
-						{faviconUrl && (
+			{githubRepo && (
+				<section class="man-section star-history">
+					<h2>Star history</h2>
+					<a href={`https://www.star-history.com/#${githubRepo}&Date`} target="_blank" rel="noopener">
+						<picture>
+							<source media="(prefers-color-scheme: dark)" srcset={starHistoryChart('dark')} />
 							<img
-								class="favicon"
-								src={faviconUrl}
-								alt=""
-								width="16"
-								height="16"
+								src={starHistoryChart()}
+								alt={`Star history chart for ${githubRepo}`}
 								loading="lazy"
+								onerror="this.closest('section').hidden = true"
 							/>
-						)}
-						<a href={data.website} target="_blank" rel="noopener">{data.website.replace(/^https?:\/\//, '')}</a>
+						</picture>
+					</a>
+				</section>
+			)}
+		</div>
+
+		<aside class="tool-aside">
+			<section class="man-section">
+				<h2>Details</h2>
+				<dl>
+					<dt>Repository</dt>
+					<dd>
+						<svg class="favicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
+							<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+						</svg>
+						<a href={data.repository_url} target="_blank" rel="noopener">{data.repository_url.replace(/^https?:\/\/(www\.)?(github\.com|codeberg\.org|gitlab\.com)\//, '')}</a>
+						{data.repo_updated && ` (${fmtDate(data.repo_updated)})`}
 					</dd>
-				</>
+
+					{data.website && (
+						<>
+							<dt>Website</dt>
+							<dd>
+								{faviconUrl && (
+									<img
+										class="favicon"
+										src={faviconUrl}
+										alt=""
+										width="16"
+										height="16"
+										loading="lazy"
+									/>
+								)}
+								<a href={data.website} target="_blank" rel="noopener">{data.website.replace(/^https?:\/\//, '')}</a>
+							</dd>
+						</>
+					)}
+
+					<dt>Author</dt>
+					<dd>{data.author}</dd>
+
+					<dt>License</dt>
+					<dd>{data.license}</dd>
+
+					<dt>Category</dt>
+					<dd><a href={`/categories/${slugify(data.category)}/`}>{data.category}</a></dd>
+
+					<dt>Language</dt>
+					<dd><a class="lang-link" href={`/languages/${slugify(data.language)}/`}><LanguageIcon language={data.language} /> <span class="lang-label">{data.language}</span></a></dd>
+
+					<dt>Platforms</dt>
+					<dd>{data.platforms.join(', ')}</dd>
+
+		{data.repo_release && (
+						<>
+							<dt>Version</dt>
+							<dd>{data.repo_release}{data.repo_release_date && ` (${fmtDate(data.repo_release_date)})`}</dd>
+						</>
+					)}
+
+					{data.repo_created && (
+						<>
+							<dt>Repo age</dt>
+							<dd title={`Created ${fmtDate(data.repo_created)}`}>{formatAge(data.repo_created)}</dd>
+						</>
+					)}
+				</dl>
+			</section>
+
+			<section class="man-section">
+				<h2>Tags</h2>
+				<ul class="tags">
+					{filterDisplayTags(data.tags, reservedSlugs).map((tag) => (
+						<li>
+							{indexableTagSlugs.has(slugify(tag)) ? <a href={`/tags/${slugify(tag)}/`}>{tag}</a> : tag}
+						</li>
+					))}
+				</ul>
+			</section>
+
+			{(seeAlso.alternatives.length > 0 || seeAlso.collections.length > 0) && (
+				<section class="man-section">
+					<h2>See also</h2>
+					<ul class="see-also">
+						{seeAlso.alternatives.map((guide) => (
+							<li>{data.name} is a modern alternative to <a href={`/alternatives/${guide.slug}/`}>{guide.replaces}</a></li>
+						))}
+						{seeAlso.collections.map((guide) => (
+							<li>Featured in <a href={`/collections/${guide.slug}/`}>{guide.title}</a></li>
+						))}
+					</ul>
+				</section>
 			)}
 
-			<dt>Author</dt>
-			<dd>{data.author}</dd>
+			<section class="man-section">
+				<h2>Badge</h2>
+				{data.repo_badge
+					? <p><span class="badge-verified">✓ Verified.</span> {data.name}'s README links back to this listing, so it's ranked first in the directory.</p>
+					: <p>Maintain {data.name}? Add this badge to your README: listings that link back are marked verified and ranked first in the directory. It's checked once a day.</p>}
+				<p class="badge-preview">
+					<a href={`/tools/${tool.id}/`}><img src={`/badge/${tool.id}.svg`} alt={`${data.name} on The Terminal Index`} height="20" /></a>
+				</p>
+				{!data.repo_badge && (
+					<details class="badge-code">
+						<summary><span class="when-closed">Show the code</span><span class="when-open">Hide the code</span></summary>
+						{[
+							{ label: 'Markdown', snippet: badge.markdown },
+							{ label: 'HTML', snippet: badge.html },
+						].map(({ label, snippet }) => (
+							<div class="snippet">
+								<span class="snippet-label">{label}</span>
+								<div class="tab-panel">
+									<pre class="code"><code>{snippet}</code></pre>
+									<button type="button" class="copy-btn" data-command={snippet} aria-label={`Copy ${label} badge snippet`}>
+										<span class="copy-label" aria-hidden="true">Copied</span>
+										<svg class="icon-copy" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+											<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z" />
+											<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z" />
+										</svg>
+										<svg class="icon-check" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: none">
+											<path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z" />
+										</svg>
+									</button>
+								</div>
+							</div>
+						))}
+					</details>
+				)}
+			</section>
+		</aside>
 
-			<dt>License</dt>
-			<dd>{data.license}</dd>
+		<div class="tool-main">
+			<section class="man-section feedback" id="feedback" data-tool-id={tool.id}>
+				<h2>Comments</h2>
+				<ul class="comment-list" id="comment-list">
+					{comments.map((c) => (
+						<li class="comment">
+							<div class="comment-head">
+								<span class="comment-user">@{c.user}</span>
+								<span class="comment-date">{fmtDate(c.date)}</span>
+							</div>
+							<p class="comment-body">{c.body}</p>
+						</li>
+					))}
+					{comments.length === 0 && <li class="comment-empty">No comments yet. Be the first.</li>}
+				</ul>
 
-			<dt>Category</dt>
-			<dd><a href={`/categories/${slugify(data.category)}/`}>{data.category}</a></dd>
+				<form class="comment-form" id="comment-form" hidden>
+					<textarea id="comment-input" rows="3" maxlength="2000" placeholder="Leave a comment…" required></textarea>
+					<button type="submit">Post comment</button>
+				</form>
 
-			<dt>Language</dt>
-			<dd><a class="lang-link" href={`/languages/${slugify(data.language)}/`}><LanguageIcon language={data.language} /> <span class="lang-label">{data.language}</span></a></dd>
+				<p class="feedback-signin" hidden>
+					<button type="button" class="link-btn feedback-signin-btn">Sign in with GitHub</button> to comment.
+				</p>
 
-			<dt>Platforms</dt>
-			<dd>{data.platforms.join(', ')}</dd>
-
-{data.repo_release && (
-				<>
-					<dt>Version</dt>
-					<dd>{data.repo_release}{data.repo_release_date && ` (${fmtDate(data.repo_release_date)})`}</dd>
-				</>
-			)}
-
-			{data.repo_created && (
-				<>
-					<dt>Repo Age</dt>
-					<dd title={`Created ${fmtDate(data.repo_created)}`}>{formatAge(data.repo_created)}</dd>
-				</>
-			)}
-		</dl>
-	</section>
-
-	{githubRepo && (
-		<section class="man-section star-history">
-			<h2>STAR HISTORY</h2>
-			<a href={`https://www.star-history.com/#${githubRepo}&Date`} target="_blank" rel="noopener">
-				<picture>
-					<source media="(prefers-color-scheme: dark)" srcset={starHistoryChart('dark')} />
-					<img
-						src={starHistoryChart()}
-						alt={`Star history chart for ${githubRepo}`}
-						loading="lazy"
-						onerror="this.closest('section').hidden = true"
-					/>
-				</picture>
-			</a>
-		</section>
-	)}
-
-	<section class="man-section">
-		<h2>TAGS</h2>
-		<ul class="tags">
-			{filterDisplayTags(data.tags, reservedSlugs).map((tag) => (
-				<li>
-					{indexableTagSlugs.has(slugify(tag)) ? <a href={`/tags/${slugify(tag)}/`}>{tag}</a> : tag}
-				</li>
-			))}
-		</ul>
-	</section>
-
-	{(seeAlso.alternatives.length > 0 || seeAlso.collections.length > 0) && (
-		<section class="man-section">
-			<h2>SEE ALSO</h2>
-			<ul class="see-also">
-				{seeAlso.alternatives.map((guide) => (
-					<li>{data.name} is a modern alternative to <a href={`/alternatives/${guide.slug}/`}>{guide.replaces}</a></li>
-				))}
-				{seeAlso.collections.map((guide) => (
-					<li>Featured in <a href={`/collections/${guide.slug}/`}>{guide.title}</a></li>
-				))}
-			</ul>
-		</section>
-	)}
-
-	<section class="man-section">
-		<h2>BADGE</h2>
-		{data.repo_badge
-			? <p><span class="badge-verified">✓ Verified.</span> {data.name}'s README links back to this listing, so it's ranked first in the directory.</p>
-			: <p>Maintain {data.name}? Add this badge to your README: listings that link back are marked verified and ranked first in the directory. It's checked once a day.</p>}
-		<p class="badge-preview">
-			<a href={`/tools/${tool.id}/`}><img src={`/badge/${tool.id}.svg`} alt={`${data.name} on The Terminal Index`} height="20" /></a>
-		</p>
-		{!data.repo_badge && (
-			<details class="badge-code">
-				<summary><span class="when-closed">[+] show code</span><span class="when-open">[−] hide code</span></summary>
-				{[
-					{ label: 'Markdown', snippet: badge.markdown },
-					{ label: 'HTML', snippet: badge.html },
-				].map(({ label, snippet }) => (
-					<div class="snippet">
-						<span class="snippet-label">{label}</span>
-						<div class="tab-panel">
-							<pre class="code"><code>{snippet}</code></pre>
-							<button type="button" class="copy-btn" data-command={snippet} aria-label={`Copy ${label} badge snippet`}>
-								<span class="copy-label" aria-hidden="true">copied</span>
-								<svg class="icon-copy" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-									<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z" />
-									<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z" />
-								</svg>
-								<svg class="icon-check" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: none">
-									<path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z" />
-								</svg>
-							</button>
-						</div>
-					</div>
-				))}
-			</details>
-		)}
-	</section>
-
-	<section class="man-section feedback" id="feedback" data-tool-id={tool.id}>
-		<h2>COMMENTS</h2>
-		<ul class="comment-list" id="comment-list">
-			{comments.map((c) => (
-				<li class="comment">
-					<div class="comment-head">
-						<span class="comment-user">@{c.user}</span>
-						<span class="comment-date">{fmtDate(c.date)}</span>
-					</div>
-					<p class="comment-body">{c.body}</p>
-				</li>
-			))}
-			{comments.length === 0 && <li class="comment-empty">No comments yet. Be the first.</li>}
-		</ul>
-
-		<form class="comment-form" id="comment-form" hidden>
-			<textarea id="comment-input" rows="3" maxlength="2000" placeholder="Leave a comment…" required></textarea>
-			<button type="submit">Post comment</button>
-		</form>
-
-		<p class="feedback-signin" hidden>
-			<button type="button" class="link-btn feedback-signin-btn">Sign in with GitHub</button> to comment.
-		</p>
-
-		<p id="feedback-status" role="status"></p>
-	</section>
+				<p id="feedback-status" role="status"></p>
+			</section>
+		</div>
+	</div>
 
 	{relatedTools.length > 0 && (
-		<section class="man-section man-section-no-hash">
-			<h2>RELATED TOOLS</h2>
+		<section class="man-section">
+			<h2>Related tools</h2>
 			<ul id="tool-grid">{relatedTools.map((t) => <ToolCard tool={t} reservedSlugs={reservedSlugs} />)}</ul>
 		</section>
 	)}

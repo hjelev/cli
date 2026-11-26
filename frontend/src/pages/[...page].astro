@@ -6,7 +6,7 @@ import { getSortedTools, sortByUpdated } from '../lib/tools';
 import { getReservedSlugs } from '../lib/tag-filter';
 import { PAGE_SIZE, MAX_CARD_TAGS } from '../lib/config';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BrowseLinks from '../components/BrowseLinks.astro';
+import CategoryNav from '../components/CategoryNav.astro';
 import ToolCard from '../components/ToolCard.astro';
 import Pagination from '../components/Pagination.astro';
 import { SITE_NAME, itemListLd, pagedDescription, websiteLd } from '../lib/seo';
@@ -27,10 +27,15 @@ const usedCategories = new Set(allTools.map((tool) => tool.data.category));
 const categories = CATEGORIES.filter((category) => usedCategories.has(category)).sort((a, b) => a.localeCompare(b));
 const reservedSlugs = getReservedSlugs(allTools);
 
-const status =
-	page.lastPage > 1
-		? `page ${page.currentPage}/${page.lastPage} · ${page.total} tools`
-		: `${page.total} tools indexed`;
+const countLabel =
+	page.lastPage > 1 ? `${page.total} tools, page ${page.currentPage} of ${page.lastPage}` : `${page.total} tools`;
+
+// The hero's logo wall: the most-starred tools that have a logo.
+const WALL_SIZE = 25;
+const wall = allTools
+	.filter((tool) => tool.data.logo)
+	.sort((a, b) => (b.data.repo_stars ?? 0) - (a.data.repo_stars ?? 0))
+	.slice(0, WALL_SIZE);
 
 const siteDescription = `Discover ${page.total} terminal tools, curated by the developers who rely on them. Browse open-source CLI and TUI apps by category, language and tag.`;
 const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}` : `${SITE_NAME} — Curated CLI & TUI Tools`;
@@ -40,33 +45,45 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 	title={title}
 	description={pagedDescription(siteDescription, page.currentPage, page.lastPage)}
 	jsonLd={[...(page.currentPage === 1 ? [websiteLd(siteDescription)] : []), itemListLd(page.data, page.start)]}
-	command="browse --all"
-	status={status}
 >
-	<header class="hero">
-		<h1>The Terminal Index</h1>
-		<p class="tagline">Discover terminal tools, curated by the developers who rely on them.</p>
-		<div class="hero-meta">
-			<p class="hero-stats">
-				<span><b>{page.total}</b> tools</span>
-				<span class="sep">·</span>
-				<span><b>{usedCategories.size}</b> categories</span>
-				<span class="sep">·</span>
-				<span><b>{languages.length}</b> languages</span>
-			</p>
-			<BrowseLinks />
+	<section class="hero" slot="hero">
+		<div class="hero-inner">
+			<div class="hero-text">
+				<h1>Find your next terminal tool</h1>
+				<p>
+					{page.total} open-source CLI and TUI apps in {usedCategories.size} categories, curated by the developers who rely on them.
+				</p>
+				<label class="search-field">
+					<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true">
+						<circle cx="11" cy="11" r="7"></circle>
+						<path d="m20 20-4-4"></path>
+					</svg>
+					<input id="search" type="search" placeholder="Search by name, task or tag" aria-label="Search tools" />
+					<kbd class="search-key" title="Press / to search">/</kbd>
+				</label>
+			</div>
+			<!-- A pointer shortcut into popular tools; the same pages are all reachable from the list below. -->
+			<ul class="logo-wall" aria-hidden="true">
+				{wall.map((tool) => (
+					<li>
+						<a href={`/tools/${tool.id}/`} title={tool.data.name} tabindex="-1">
+							<img src={tool.data.logo} alt="" width="56" height="56" loading="lazy" decoding="async" />
+						</a>
+					</li>
+				))}
+			</ul>
 		</div>
-	</header>
+	</section>
 
+	<div class="browse-layout">
+	<CategoryNav />
+
+	<div>
 	<section id="filters" class="filters">
-		<label class="search-field">
-			<span class="caret" aria-hidden="true">$</span>
-			<input id="search" type="search" placeholder="Search tools…" aria-label="Search tools" />
-			<kbd class="search-key" title="Press / to search">/</kbd>
-		</label>
+		<p class="result-count" data-status role="status">{countLabel}</p>
 
 		<button type="button" id="filters-toggle" class="filters-toggle" aria-expanded="false" aria-controls="filter-selects">
-			filters<span class="filters-count"></span> <span aria-hidden="true">▾</span>
+			Filters<span class="filters-count"></span>
 		</button>
 
 		<div id="filter-selects" class="filter-selects">
@@ -89,7 +106,7 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 		</div>
 	</section>
 
-	<p id="empty-state" hidden>No tools match your filters.</p>
+	<p id="empty-state" hidden>No tools match. Try a shorter search, or choose all categories and languages.</p>
 
 	<ul id="tool-grid">
 		{page.data.map((tool) => <ToolCard tool={tool} reservedSlugs={reservedSlugs} />)}
@@ -99,6 +116,8 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 	<ul id="search-results" hidden></ul>
 
 	<Pagination page={page} />
+	</div>
+	</div>
 
 	<script type="application/json" id="card-config" set:html={JSON.stringify({ maxTags: MAX_CARD_TAGS })} />
 
@@ -126,6 +145,11 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 		const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
 		const languageFilter = document.getElementById('language-filter') as HTMLSelectElement;
 		const sortFilter = document.getElementById('sort-filter') as HTMLSelectElement;
+		const categoryLinks = document.querySelectorAll<HTMLAnchorElement>('.category-nav a');
+		const categoryCounts = [...categoryLinks].map((link) => {
+			const el = link.querySelector('.count') as HTMLElement;
+			return { item: link.parentElement as HTMLElement, el, category: link.dataset.category ?? '', total: el.textContent ?? '' };
+		});
 		const filtersSection = document.getElementById('filters') as HTMLElement;
 		const filtersToggle = document.getElementById('filters-toggle') as HTMLButtonElement;
 		const filtersCount = filtersToggle.querySelector('.filters-count') as HTMLElement;
@@ -157,6 +181,14 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 		) as { maxTags: number };
 		const compactNumber = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 });
 
+		function span(className: string, text: string, title?: string): HTMLSpanElement {
+			const el = document.createElement('span');
+			if (className) el.className = className;
+			el.textContent = text;
+			if (title) el.title = title;
+			return el;
+		}
+
 		// keep in sync with ToolCard.astro — builds the same markup from the search index.
 		function renderCard(tool: ToolIndexEntry): HTMLLIElement {
 			const li = document.createElement('li');
@@ -167,75 +199,38 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			const a = document.createElement('a');
 			a.href = `/tools/${tool.id}/`;
 
-			const nameWrap = document.createElement('div');
-			nameWrap.className = 'tool-name';
 			if (tool.logo) {
 				const img = document.createElement('img');
+				img.className = 'tool-logo';
 				img.src = tool.logo;
-				img.alt = `${tool.name} logo`;
-				img.width = 44;
-				img.height = 44;
-				nameWrap.append(img);
+				img.alt = '';
+				img.width = 52;
+				img.height = 52;
+				img.loading = 'lazy';
+				a.append(img);
+			} else {
+				const monogram = span('tool-logo', tool.name.slice(0, 1));
+				monogram.ariaHidden = 'true';
+				a.append(monogram);
 			}
-			const nameText = document.createElement('div');
-			nameText.className = 'tool-name-text';
+
+			const text = document.createElement('div');
+			text.className = 'tool-text';
+
+			const name = document.createElement('div');
+			name.className = 'tool-name';
 			const h2 = document.createElement('h2');
 			h2.textContent = tool.name;
-			nameText.append(h2);
-			const languageBadge = document.createElement('span');
-			languageBadge.className = 'badge';
-			languageBadge.textContent = tool.language;
-			nameText.append(languageBadge);
-			nameWrap.append(nameText);
-			a.append(nameWrap);
+			name.append(h2);
+			if (tool.verified) name.append(span('badge-verified', '✓ verified', VERIFIED_TITLE));
 
 			const desc = document.createElement('p');
 			desc.textContent = tool.short;
-			a.append(desc);
 
-			const badges = document.createElement('div');
-			badges.className = 'badges';
-			if (tool.stars !== null || tool.verified) {
-				const topRow = document.createElement('span');
-				topRow.className = 'badge-row';
-				if (tool.stars !== null) {
-					const starsBadge = document.createElement('span');
-					starsBadge.className = 'badge badge-stars';
-					starsBadge.title = `${tool.stars} stars`;
-					starsBadge.textContent = `★ ${compactNumber.format(tool.stars)}`;
-					topRow.append(starsBadge);
-				}
-				if (tool.stars !== null && tool.recent) {
-					const trendingBadge = document.createElement('span');
-					trendingBadge.className = 'badge badge-trending';
-					trendingBadge.title = RECENT_STARS_TITLE(tool.recent);
-					trendingBadge.textContent = formatRecentStars(tool.recent);
-					topRow.append(trendingBadge);
-				}
-				if (tool.verified) {
-					const verifiedBadge = document.createElement('span');
-					verifiedBadge.className = 'badge badge-verified';
-					verifiedBadge.title = VERIFIED_TITLE;
-					verifiedBadge.textContent = '✓ verified';
-					topRow.append(verifiedBadge);
-				}
-				badges.append(topRow);
-			}
-			const metaRow = document.createElement('span');
-			metaRow.className = 'badge-row';
-			const categoryBadge = document.createElement('span');
-			categoryBadge.className = 'badge';
-			categoryBadge.textContent = tool.category;
-			metaRow.append(categoryBadge);
-			if (tool.created) {
-				const ageBadge = document.createElement('span');
-				ageBadge.className = 'badge';
-				ageBadge.title = `Created ${tool.created.slice(0, 10)}`;
-				ageBadge.textContent = formatAge(tool.created);
-				metaRow.append(ageBadge);
-			}
-			badges.append(metaRow);
-			a.append(badges);
+			const meta = document.createElement('div');
+			meta.className = 'tool-meta';
+			meta.append(span('', tool.language), span('', tool.category));
+			if (tool.created) meta.append(span('', formatAge(tool.created), `Created ${tool.created.slice(0, 10)}`));
 
 			const tags = document.createElement('ul');
 			tags.className = 'tags';
@@ -250,7 +245,18 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 				moreLi.textContent = `+${tool.tags.length - maxTags}`;
 				tags.append(moreLi);
 			}
-			a.append(tags);
+			meta.append(tags);
+
+			text.append(name, desc, meta);
+			a.append(text);
+
+			if (tool.stars !== null) {
+				const stats = document.createElement('div');
+				stats.className = 'tool-stats';
+				stats.append(span('badge-stars', `★ ${compactNumber.format(tool.stars)}`, `${tool.stars} stars`));
+				if (tool.recent) stats.append(span('badge-trending', formatRecentStars(tool.recent), RECENT_STARS_TITLE(tool.recent)));
+				a.append(stats);
+			}
 
 			li.append(a);
 			return li;
@@ -295,6 +301,20 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			return 0;
 		}
 
+		// Sidebar counts: what each category would show with the search and the other
+		// filters applied. Null restores the built-in totals.
+		function updateCategoryCounts(candidates: ToolIndexEntry[] | null) {
+			const counts = new Map<string, number>();
+			for (const tool of candidates ?? []) counts.set(tool.category, (counts.get(tool.category) ?? 0) + 1);
+			for (const { item, el, category, total } of categoryCounts) {
+				const count = category ? (counts.get(category) ?? 0) : (candidates?.length ?? 0);
+				el.textContent = candidates ? String(count) : total;
+				// "All tools" and the selected category stay, so there is always a way back.
+				const keep = category === '' || category === categoryFilter.value;
+				item.hidden = candidates !== null && count === 0 && !keep;
+			}
+		}
+
 		// Bumped on every call so a slow index download can't apply stale filters.
 		let filterRun = 0;
 		async function applyFilters() {
@@ -309,8 +329,13 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 
 			syncUrl();
 			updateFiltersCount();
+			for (const link of categoryLinks) {
+				if ((link.dataset.category ?? '') === category) link.setAttribute('aria-current', 'true');
+				else link.removeAttribute('aria-current');
+			}
 
 			if (!filtering) {
+				updateCategoryCounts(null);
 				// Default paginated browsing: show this page's static grid + nav.
 				grid.hidden = false;
 				if (pagination) pagination.hidden = false;
@@ -323,24 +348,26 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 
 			// Active filter: search across ALL tools, ignoring pagination.
 			if (!tools) {
-				if (statusSeg) statusSeg.textContent = 'loading index…';
+				if (statusSeg) statusSeg.textContent = 'Searching…';
 				try {
 					await loadTools();
 				} catch {
-					if (run === filterRun && statusSeg) statusSeg.textContent = 'search unavailable — retry';
+					if (run === filterRun && statusSeg) statusSeg.textContent = 'Search couldn’t load. Check your connection and try again.';
 					return;
 				}
 				// A newer call has taken over (or will, once the index lands).
 				if (run !== filterRun) return;
 			}
 
-			const matches = tools!.filter((tool) => {
+			// Everything but the category filter, so the sidebar can count the other categories too.
+			const candidates = tools!.filter((tool) => {
 				const matchesQuery = !query || tool.search.includes(query);
-				const matchesCategory = !category || tool.category === category;
 				const matchesLanguage = !language || tool.language === language;
 				const matchesVerified = !verifiedOnly || tool.verified;
-				return matchesQuery && matchesCategory && matchesLanguage && matchesVerified;
+				return matchesQuery && matchesLanguage && matchesVerified;
 			});
+			updateCategoryCounts(candidates);
+			const matches = candidates.filter((tool) => !category || tool.category === category);
 			// The index is already in recently-updated order; stars/trending need a re-sort
 			// (trending ties fall back to total stars).
 			// With a query, rank by relevance first; the stable sort keeps the chosen order within a tier.
@@ -353,7 +380,7 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 			if (pagination) pagination.hidden = true;
 			results.hidden = false;
 			emptyState.hidden = matches.length > 0;
-			if (statusSeg) statusSeg.textContent = `${matches.length} match${matches.length === 1 ? '' : 'es'}`;
+			if (statusSeg) statusSeg.textContent = `${matches.length} matching tool${matches.length === 1 ? '' : 's'}`;
 		}
 
 		// Small screens fold the selects behind a toggle; it shows how many are set.
@@ -382,18 +409,17 @@ const title = page.currentPage > 1 ? `${SITE_NAME} — Page ${page.currentPage}`
 		languageFilter.addEventListener('change', applyFilters);
 		sortFilter.addEventListener('change', applyFilters);
 
-		// vim/less-style "/" to jump to search; Escape leaves it.
-		document.addEventListener('keydown', (event) => {
-			if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) return;
-			const target = event.target as HTMLElement;
-			if (target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
-			event.preventDefault();
-			search.focus();
-			search.select();
-		});
-		search.addEventListener('keydown', (event) => {
-			if (event.key === 'Escape') search.blur();
-		});
+		// Sidebar categories filter in place, so they combine with the search and
+		// the other filters. Modified clicks still open the category's own page.
+		for (const link of categoryLinks) {
+			link.addEventListener('pointerdown', prefetch, { once: true, passive: true });
+			link.addEventListener('click', (event) => {
+				if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+				event.preventDefault();
+				categoryFilter.value = link.dataset.category ?? '';
+				applyFilters();
+			});
+		}
 
 		restoreFromUrl();
 		if (location.search) applyFilters();
