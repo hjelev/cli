@@ -13,7 +13,8 @@ description: >-
   distraction-free, focused viewpoint. Fully customizable via a TOML
   configuration file, you can fine-tune parameters such as your preferred zoom
   factor, zoom step, spotlight radius, and dimming intensity to suit your
-  workflow. It also has an annotation mode which allows users to draw shapes like rectangles, ellipses,    circles and even type text.
+  workflow. It also has an annotation mode which allows users to draw shapes
+  like rectangles, ellipses,    circles and even type text.
 repository_url: https://codeberg.org/Vaishnav-Sabari-Girish/miru
 website: https://blog.vaishnavs.is-a.dev/miru/
 author: Vaishnav-Sabari-Girish
@@ -25,11 +26,23 @@ installation:
   - method: aur
     command: paru -S miru-zoom-git
   - method: dnf
-    command: sudo dnf copr enable vaishnavs/miru && sudo dnf install miru 
+    command: sudo dnf copr enable vaishnavs/miru && sudo dnf install miru
   - method: brew
-    command: brew tap Vaishnav-Sabari-Girish/taps https://codeberg.org/Vaishnav-Sabari-Girish/homebrew-taps && brew install Vaishnav-Sabari-Girish/taps/miru
+    command: >-
+      brew tap Vaishnav-Sabari-Girish/taps
+      https://codeberg.org/Vaishnav-Sabari-Girish/homebrew-taps && brew install
+      Vaishnav-Sabari-Girish/taps/miru
   - method: nix
     command: nix profile add git+https://codeberg.org/Vaishnav-Sabari-Girish/miru
+  - method: apk
+    command: >-
+      echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing" | sudo tee -a
+      /etc/apk/repositories && sudo apk update && sudo apk add miru
+  - method: apk
+    command: >-
+      echo "@testing https://dl-cdn.alpinelinux.org/alpine/edge/testing" | sudo
+      tee -a /etc/apk/repositories && sudo apk update && sudo apk add
+      miru@testing
 platforms:
   - Linux
 tags:
@@ -37,15 +50,16 @@ tags:
   - daemon
   - zoom
   - wayland
-media: https://codeberg.org/Vaishnav-Sabari-Girish/miru/raw/commit/8f4052f72beac56d7609d01fd7445ea9af406739/miru_img.png
+media: >-
+  https://codeberg.org/Vaishnav-Sabari-Girish/miru/raw/commit/8f4052f72beac56d7609d01fd7445ea9af406739/miru_img.png
 logo: https://cli.masoko.net/uploads/miru/logo.svg
-updated: '2026-10-22'
+updated: '2026-11-26'
+comments: []
 repo_stars: 13
 repo_stars_recent: 1
-repo_updated: "2026-11-14"
-repo_created: "2026-08-07"
-repo_release: "v0.15.0"
-repo_release_date: "2026-11-06"
+repo_updated: '2026-11-14'
+repo_created: '2026-08-07'
+repo_release: v0.15.0
+repo_release_date: '2026-11-06'
 repo_badge: true
-comments: []
 ---
