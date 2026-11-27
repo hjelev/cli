@@ -39,7 +39,7 @@ media: https://raw.githubusercontent.com/bgreenwell/lstr/main/assets/lstr-demo.g
 logo: https://avatars.githubusercontent.com/u/3777755?v=4
 updated: '2026-07-04'
 repo_stars: 1556
-repo_stars_recent: 5
+repo_stars_recent: 6
 repo_updated: "2026-10-19"
 repo_created: "2025-06-06"
 repo_release: "v0.4.0"

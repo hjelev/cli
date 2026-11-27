@@ -50,8 +50,8 @@ tags:
 media: https://github.com/programmersd21/flow/raw/main/assets/demo.gif
 logo: https://cli.masoko.net/uploads/flow/logo.png
 updated: '2026-07-15'
-repo_stars: 466
-repo_stars_recent: 3
+repo_stars: 467
+repo_stars_recent: 4
 repo_updated: "2026-10-18"
 repo_created: "2026-07-04"
 repo_release: "v0.3.5"

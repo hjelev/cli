@@ -31,8 +31,8 @@ tags:
 media: https://github.com/cantino/mcfly/raw/master/docs/screenshot.png
 logo: https://avatars.githubusercontent.com/u/83835?v=4
 updated: '2026-07-09'
-repo_stars: 7831
-repo_stars_recent: 2
+repo_stars: 7834
+repo_stars_recent: 6
 repo_updated: "2026-11-24"
 repo_created: "2018-07-15"
 repo_release: "v0.9.4"

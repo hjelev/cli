@@ -44,7 +44,7 @@ tags:
 media: https://github.com/bcicen/ctop/raw/master/_docs/img/grid.gif
 logo: https://cli.masoko.net/uploads/ctop/logo.png
 updated: '2026-07-18'
-repo_stars: 17862
+repo_stars: 17861
 repo_stars_recent: 11
 repo_updated: "2024-07-08"
 repo_created: "2016-12-27"

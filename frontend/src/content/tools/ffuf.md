@@ -40,7 +40,7 @@ tags:
 media: https://asciinema.org/a/211350
 logo: https://github.com/ffuf/ffuf/raw/master/_img/ffuf_run_logo_600.png
 updated: '2026-10-20'
-repo_stars: 17122
+repo_stars: 17125
 repo_stars_recent: 78
 repo_updated: "2026-09-26"
 repo_created: "2018-11-08"

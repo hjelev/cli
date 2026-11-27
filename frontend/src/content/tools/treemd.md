@@ -39,7 +39,7 @@ logo: https://avatars.githubusercontent.com/u/225645584?s=200&v=4
 updated: '2026-11-02'
 repo_stars: 739
 repo_stars_recent: 6
-repo_updated: "2026-11-25"
+repo_updated: "2026-11-26"
 repo_created: "2025-11-08"
 repo_release: "v0.11.0"
 repo_release_date: "2026-11-16"

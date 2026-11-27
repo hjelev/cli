@@ -42,8 +42,8 @@ media: https://ranger.fm/screenshots/screenshot0.png
 logo: https://ranger.fm/ranger_logo.png
 updated: '2026-07-13'
 repo_stars: 17468
-repo_stars_recent: 11
-repo_updated: "2026-09-09"
+repo_stars_recent: 7
+repo_updated: "2026-11-26"
 repo_created: "2009-06-04"
 repo_release: "v1.9.4"
 repo_release_date: "2024-11-04"

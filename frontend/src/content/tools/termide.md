@@ -58,7 +58,7 @@ media: https://termide.github.io/assets/screenshots/agent.gif
 logo: https://termide.github.io/assets/logo.svg
 updated: '2026-11-25'
 repo_stars: 190
-repo_stars_recent: 3
+repo_stars_recent: 2
 repo_updated: "2026-11-25"
 repo_created: "2025-11-20"
 repo_release: "0.50.0"
