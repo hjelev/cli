@@ -58,7 +58,7 @@ logo: >-
 updated: '2026-11-01'
 repo_stars: 2335
 repo_stars_recent: 1
-repo_updated: "2026-11-21"
+repo_updated: "2026-11-27"
 repo_created: "2024-07-22"
 repo_release: "v0.2.4"
 repo_release_date: "2026-04-09"

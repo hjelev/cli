@@ -55,8 +55,8 @@ tags:
 media: https://www.youtube.com/watch?v=CVJmqBgxOlU
 logo: https://avatars.githubusercontent.com/u/3708359?s=200&v=4
 updated: '2026-11-18'
-repo_stars: 32545
-repo_stars_recent: 158
+repo_stars: 32550
+repo_stars_recent: 163
 repo_updated: "2026-11-24"
 repo_created: "2026-03-02"
 repo_release: "v0.22.5"

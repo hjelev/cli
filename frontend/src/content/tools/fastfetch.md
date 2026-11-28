@@ -49,10 +49,10 @@ media: >-
   https://raw.githubusercontent.com/fastfetch-cli/fastfetch/dev/screenshots/example1.png
 logo: https://avatars.githubusercontent.com/u/136235211?s=200&v=4
 updated: '2026-10-28'
-repo_stars: 25483
-repo_stars_recent: 132
-repo_updated: "2026-11-26"
+repo_stars: 25496
+repo_stars_recent: 134
+repo_updated: "2026-11-28"
 repo_created: "2021-02-18"
-repo_release: "2.71.0"
-repo_release_date: "2026-11-06"
+repo_release: "2.72.0"
+repo_release_date: "2026-11-28"
 ---

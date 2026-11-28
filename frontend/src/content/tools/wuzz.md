@@ -41,8 +41,8 @@ media: >-
   https://raw.githubusercontent.com/asciimoo/wuzz/master/docs/images/screencast.gif
 logo: https://avatars.githubusercontent.com/u/20240?v=4
 updated: '2026-10-30'
-repo_stars: 10747
-repo_stars_recent: 3
+repo_stars: 10746
+repo_stars_recent: 2
 repo_updated: "2026-08-04"
 repo_created: "2017-01-30"
 repo_release: "v0.5.0"

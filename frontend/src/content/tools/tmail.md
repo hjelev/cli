@@ -39,7 +39,7 @@ media: https://raw.githubusercontent.com/tuna4ll/tmail/refs/heads/main/docs/demo
 logo: https://avatars.githubusercontent.com/u/66411462?v=4
 updated: '2026-11-05'
 repo_stars: 74
-repo_stars_recent: 21
+repo_stars_recent: 17
 repo_updated: "2026-11-26"
 repo_created: "2026-09-24"
 repo_release: "v1.0.5"

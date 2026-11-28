@@ -57,9 +57,9 @@ tags:
   - password
 logo: https://hashcat.net/s/i/hashcat-icon.png
 updated: '2026-11-18'
-repo_stars: 27433
-repo_stars_recent: 54
-repo_updated: "2026-11-27"
+repo_stars: 27436
+repo_stars_recent: 57
+repo_updated: "2026-11-28"
 repo_created: "2015-12-04"
 repo_release: "v8.0.0"
 repo_release_date: "2026-10-25"

@@ -58,7 +58,7 @@ logo: https://cli.masoko.net/uploads/hl/logo.svg
 updated: '2026-11-05'
 repo_stars: 3342
 repo_stars_recent: 11
-repo_updated: "2026-11-27"
+repo_updated: "2026-11-28"
 repo_created: "2020-08-04"
 repo_release: "v0.36.5"
 repo_release_date: "2026-10-21"

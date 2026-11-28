@@ -35,7 +35,7 @@ logo: https://sakecli.com/img/logo.svg
 updated: '2026-09-05'
 repo_stars: 754
 repo_stars_recent: 0
-repo_updated: "2026-05-31"
+repo_updated: "2026-11-27"
 repo_created: "2021-10-09"
 repo_release: "v0.15.1"
 repo_release_date: "2023-09-25"

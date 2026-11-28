@@ -45,9 +45,9 @@ tags:
   - sqlite
 logo: https://raw.githubusercontent.com/pressly/goose/main/assets/goose_logo.png
 updated: '2026-11-25'
-repo_stars: 11780
-repo_stars_recent: 14
-repo_updated: "2026-11-26"
+repo_stars: 11787
+repo_stars_recent: 21
+repo_updated: "2026-11-27"
 repo_created: "2016-02-25"
 repo_release: "v3.30.2"
 repo_release_date: "2026-11-25"

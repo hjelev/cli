@@ -46,8 +46,8 @@ tags:
 media: https://zizmor.sh/assets/zizmor-demo.gif
 logo: https://docs.zizmor.sh/assets/rainbow.svg
 updated: '2026-11-15'
-repo_stars: 7186
-repo_stars_recent: 127
+repo_stars: 7191
+repo_stars_recent: 132
 repo_updated: "2026-11-26"
 repo_created: "2024-08-19"
 repo_release: "v1.33.1"

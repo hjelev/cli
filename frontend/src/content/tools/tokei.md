@@ -43,8 +43,8 @@ tags:
 media: https://cli.masoko.net/uploads/tokei/media.png
 logo: https://avatars.githubusercontent.com/u/4464295?v=4
 updated: '2026-07-10'
-repo_stars: 15140
-repo_stars_recent: 55
+repo_stars: 15149
+repo_stars_recent: 82
 repo_updated: "2026-09-06"
 repo_created: "2015-05-26"
 repo_release: "v15.0.0"

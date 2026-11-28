@@ -56,8 +56,8 @@ tags:
 media: https://github.com/pimalaya/himalaya/raw/master/screenshot.jpeg
 logo: https://github.com/pimalaya/himalaya/raw/master/logo.svg
 updated: '2026-10-21'
-repo_stars: 7724
-repo_stars_recent: 81
+repo_stars: 7735
+repo_stars_recent: 88
 repo_updated: "2026-11-27"
 repo_created: "2020-12-23"
 repo_release: "v3.0.0"

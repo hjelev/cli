@@ -43,8 +43,8 @@ logo: https://github.com/tareqmy/gitwig/raw/master/resources/logo-dark.svg
 updated: '2026-08-21'
 repo_stars: 94
 repo_stars_recent: 1
-repo_updated: "2026-11-27"
+repo_updated: "2026-11-28"
 repo_created: "2025-05-26"
-repo_release: "v2.8.0"
-repo_release_date: "2026-11-27"
+repo_release: "v2.8.2"
+repo_release_date: "2026-11-28"
 ---

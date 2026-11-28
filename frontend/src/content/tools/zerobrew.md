@@ -33,7 +33,7 @@ media: >-
 logo: https://avatars.githubusercontent.com/u/336332407?s=200&v=4
 updated: '2026-10-30'
 repo_stars: 8271
-repo_stars_recent: 5
+repo_stars_recent: 2
 repo_updated: "2026-11-05"
 repo_created: "2026-01-19"
 repo_release: "v0.4.2"

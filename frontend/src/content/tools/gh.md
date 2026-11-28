@@ -47,8 +47,8 @@ tags:
 media: https://cli.masoko.net/uploads/gh/media.png
 logo: https://avatars.githubusercontent.com/u/59704711?s=200&v=4
 updated: '2026-07-21'
-repo_stars: 47255
-repo_stars_recent: 252
+repo_stars: 47293
+repo_stars_recent: 284
 repo_updated: "2026-11-27"
 repo_created: "2019-10-03"
 repo_release: "v2.106.0"

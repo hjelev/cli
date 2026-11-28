@@ -45,9 +45,9 @@ media: >-
 logo: >-
   https://gitlab.com/uploads/-/system/project/avatar/34675721/cli-logo.png?width=48
 updated: '2026-07-21'
-repo_stars: 1143
-repo_stars_recent: 21
-repo_updated: "2026-11-27"
+repo_stars: 1144
+repo_stars_recent: 19
+repo_updated: "2026-11-28"
 repo_created: "2022-03-21"
 repo_release: "v1.133.0"
 repo_release_date: "2026-11-25"

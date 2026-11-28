@@ -33,7 +33,7 @@ tags:
 media: https://github.com/EnhancedJax/Bagels/raw/main/public/screenshots/thumb1.png
 logo: https://cli.masoko.net/uploads/bagels/logo.png
 updated: '2026-07-11'
-repo_stars: 2946
+repo_stars: 2947
 repo_stars_recent: 5
 repo_updated: "2025-07-06"
 repo_created: "2024-11-01"

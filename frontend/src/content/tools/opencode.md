@@ -39,9 +39,9 @@ media: >-
   https://raw.githubusercontent.com/anomalyco/opencode/dev/services/site/public/v1/docs/assets/lander/screenshot.png
 logo: https://cli.masoko.net/uploads/opencode/logo.png
 updated: '2026-11-25'
-repo_stars: 229539
-repo_stars_recent: 2986
-repo_updated: "2026-11-27"
+repo_stars: 229704
+repo_stars_recent: 2946
+repo_updated: "2026-11-28"
 repo_created: "2025-04-30"
 repo_release: "v1.19.6"
 repo_release_date: "2026-11-17"

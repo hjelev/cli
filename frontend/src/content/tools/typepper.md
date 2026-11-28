@@ -38,8 +38,8 @@ media: https://github.com/leodiegues/typepper/raw/main/assets/gifs/hero.gif
 logo: https://cli.masoko.net/uploads/typepper/logo.png
 updated: '2026-10-23'
 repo_stars: 36
-repo_stars_recent: 1
-repo_updated: "2026-11-24"
+repo_stars_recent: 0
+repo_updated: "2026-11-28"
 repo_created: "2026-10-15"
 repo_release: "v0.6.0"
 repo_release_date: "2026-10-25"
